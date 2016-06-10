@@ -1,0 +1,22 @@
+{#views/charactersheets/meikyudays/index.html.twig#}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ pageName }} | {{ commonVariables.siteName }}</title>
+</head>
+<body>
+
+<h1>{{ commonVariables.siteName }}</h1>
+<p><a href="{{ app.request.baseUrl }}/charactersheets/meikyudays/create">[NEW]</a></p>
+<ul>
+    {% for sheet in sheets %}
+        <li>
+            <a href="{{ app.request.baseUrl }}/charactersheets/meikyudays/show/{{ sheet.id }}">{{ sheet.character_name|e }}</a> created by {{ sheet.player_name|e }} <a href="{{ app.request.baseUrl }}/charactersheets/meikyudays/update/{{ sheet.id }}">[EDIT]</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
