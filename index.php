@@ -16,7 +16,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 // doctrine
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
-
+        // TODO: OOOOOOOOOOOOOOOOOOOOOOOOOOPS!
     )
 ));
 
@@ -37,7 +37,6 @@ $app->get('/charactersheets/meikyudays/', function () use ($app) {
     // get sheets
     $getSheetsSql = <<<EOM
 SELECT
-  id,
   hash,
   player_name,
   character_name
@@ -56,17 +55,17 @@ EOM;
 /**
  * Page for data
  */
-$app->get('/charactersheets/meikyudays/show/{id}', function () use ($app) {
+$app->get('/charactersheets/meikyudays/show/{hash}', function () use ($app) {
     $request = $app['request'];
-    $id = $request->attributes->get('id');
+    $hash = $request->attributes->get('hash');
     // get sheets
     $getSheetsSql = <<<EOM
 SELECT *
 FROM sheet
-WHERE id = :id;
+WHERE hash = :hash;
 EOM;
     $stmt = $app['db']->prepare($getSheetsSql);
-    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':hash', $hash);
     $stmt->execute();
     $sheet = $stmt->fetch();
     return $app['twig']->render('charactersheets/meikyudays/show.html.twig', array(
@@ -104,7 +103,6 @@ SET
   character_name       = :character_name,
   gender               = :gender,
   age                  = :age,
-  personality          = :personality,
 
   like1                = :like1,
   like2                = :like2,
@@ -122,14 +120,34 @@ SET
   deposit              = :deposit,
 
   intelligence         = :intelligence,
+  intelligence_i       = :intelligence_i,
+  intelligence_b       = :intelligence_b,
+  intelligence_g       = :intelligence_g,
   charisma             = :charisma,
+  charisma_i           = :charisma_i,
+  charisma_b           = :charisma_b,
+  charisma_g           = :charisma_g,
   survival             = :survival,
+  survival_i           = :survival_i,
+  survival_b           = :survival_b,
+  survival_g           = :survival_g,
   strength             = :strength,
+  strength_i           = :strength_i,
+  strength_b           = :strength_b,
+  strength_g           = :strength_g,
 
   hitpoint             = :hitpoint,
+  hitpoint_i           = :hitpoint_i,
+  hitpoint_b           = :hitpoint_b,
   capacity             = :capacity,
+  capacity_i           = :capacity_i,
+  capacity_b           = :capacity_b,
   dexterity            = :dexterity,
+  dexterity_i          = :dexterity_i,
+  dexterity_b          = :dexterity_b,
   followers            = :followers,
+  followers_i          = :followers_i,
+  followers_b          = :followers_b,
 
   skill1               = :skill1,
   skill1_description   = :skill1_description,
@@ -289,7 +307,6 @@ EOM;
     $stmt->bindParam(':character_name', $sheet['character_name']);
     $stmt->bindParam(':gender', $sheet['gender']);
     $stmt->bindParam(':age', $sheet['age']);
-    $stmt->bindParam(':personality', $sheet['personality']);
 
     $stmt->bindParam(':like1', $sheet['like1']);
     $stmt->bindParam(':like2', $sheet['like2']);
@@ -307,14 +324,34 @@ EOM;
     $stmt->bindParam(':deposit', $sheet['deposit']);
 
     $stmt->bindParam(':intelligence', $sheet['intelligence']);
+    $stmt->bindParam(':intelligence_i', $sheet['intelligence_i']);
+    $stmt->bindParam(':intelligence_b', $sheet['intelligence_b']);
+    $stmt->bindParam(':intelligence_g', $sheet['intelligence_g']);
     $stmt->bindParam(':charisma', $sheet['charisma']);
+    $stmt->bindParam(':charisma_i', $sheet['charisma_i']);
+    $stmt->bindParam(':charisma_b', $sheet['charisma_b']);
+    $stmt->bindParam(':charisma_g', $sheet['charisma_g']);
     $stmt->bindParam(':survival', $sheet['survival']);
+    $stmt->bindParam(':survival_i', $sheet['survival_i']);
+    $stmt->bindParam(':survival_b', $sheet['survival_b']);
+    $stmt->bindParam(':survival_g', $sheet['survival_g']);
     $stmt->bindParam(':strength', $sheet['strength']);
+    $stmt->bindParam(':strength_i', $sheet['strength_i']);
+    $stmt->bindParam(':strength_b', $sheet['strength_b']);
+    $stmt->bindParam(':strength_g', $sheet['strength_g']);
 
     $stmt->bindParam(':hitpoint', $sheet['hitpoint']);
+    $stmt->bindParam(':hitpoint_i', $sheet['hitpoint_i']);
+    $stmt->bindParam(':hitpoint_b', $sheet['hitpoint_b']);
     $stmt->bindParam(':capacity', $sheet['capacity']);
+    $stmt->bindParam(':capacity_i', $sheet['capacity_i']);
+    $stmt->bindParam(':capacity_b', $sheet['capacity_b']);
     $stmt->bindParam(':dexterity', $sheet['dexterity']);
+    $stmt->bindParam(':dexterity_i', $sheet['dexterity_i']);
+    $stmt->bindParam(':dexterity_b', $sheet['dexterity_b']);
     $stmt->bindParam(':followers', $sheet['followers']);
+    $stmt->bindParam(':followers_i', $sheet['followers_i']);
+    $stmt->bindParam(':followers_b', $sheet['followers_b']);
 
     $stmt->bindParam(':skill1', $sheet['skill1']);
     $stmt->bindParam(':skill1_description', $sheet['skill1_description']);
@@ -634,17 +671,17 @@ EOM;
 /**
  * Page for data update
  */
-$app->get('/charactersheets/meikyudays/update/{id}', function () use ($app) {
+$app->get('/charactersheets/meikyudays/update/{hash}', function () use ($app) {
     $request = $app['request'];
-    $id = $request->attributes->get('id');
+    $hash = $request->attributes->get('hash');
     // get sheets
     $getSheetsSql = <<<EOM
 SELECT *
 FROM sheet
-WHERE id = :id;
+WHERE hash = :hash;
 EOM;
     $stmt = $app['db']->prepare($getSheetsSql);
-    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':hash', $hash);
     $stmt->execute();
     $sheet = $stmt->fetch();
     return $app['twig']->render('charactersheets/meikyudays/edit.html.twig', array(
@@ -670,7 +707,6 @@ SET
   character_name       = :character_name,
   gender               = :gender,
   age                  = :age,
-  personality          = :personality,
 
   like1                = :like1,
   like2                = :like2,
@@ -688,14 +724,34 @@ SET
   deposit              = :deposit,
 
   intelligence         = :intelligence,
+  intelligence_i       = :intelligence_i,
+  intelligence_b       = :intelligence_b,
+  intelligence_g       = :intelligence_g,
   charisma             = :charisma,
+  charisma_i           = :charisma_i,
+  charisma_b           = :charisma_b,
+  charisma_g           = :charisma_g,
   survival             = :survival,
+  survival_i           = :survival_i,
+  survival_b           = :survival_b,
+  survival_g           = :survival_g,
   strength             = :strength,
+  strength_i           = :strength_i,
+  strength_b           = :strength_b,
+  strength_g           = :strength_g,
 
   hitpoint             = :hitpoint,
+  hitpoint_i           = :hitpoint_i,
+  hitpoint_b           = :hitpoint_b,
   capacity             = :capacity,
+  capacity_i           = :capacity_i,
+  capacity_b           = :capacity_b,
   dexterity            = :dexterity,
+  dexterity_i          = :dexterity_i,
+  dexterity_b          = :dexterity_b,
   followers            = :followers,
+  followers_i          = :followers_i,
+  followers_b          = :followers_b,
 
   skill1               = :skill1,
   skill1_description   = :skill1_description,
@@ -842,7 +898,7 @@ SET
   consumption          = :consumption,
 
   memo                 = :memo
-WHERE id = :id AND hash = :hash
+WHERE hash = :hash
 EOM;
     $stmt = $app['db']->prepare($updateSql);
 
@@ -852,7 +908,6 @@ EOM;
     $stmt->bindParam(':character_name', $sheet['character_name']);
     $stmt->bindParam(':gender', $sheet['gender']);
     $stmt->bindParam(':age', $sheet['age']);
-    $stmt->bindParam(':personality', $sheet['personality']);
 
     $stmt->bindParam(':like1', $sheet['like1']);
     $stmt->bindParam(':like2', $sheet['like2']);
@@ -870,14 +925,34 @@ EOM;
     $stmt->bindParam(':deposit', $sheet['deposit']);
 
     $stmt->bindParam(':intelligence', $sheet['intelligence']);
+    $stmt->bindParam(':intelligence_i', $sheet['intelligence_i']);
+    $stmt->bindParam(':intelligence_b', $sheet['intelligence_b']);
+    $stmt->bindParam(':intelligence_g', $sheet['intelligence_g']);
     $stmt->bindParam(':charisma', $sheet['charisma']);
+    $stmt->bindParam(':charisma_i', $sheet['charisma_i']);
+    $stmt->bindParam(':charisma_b', $sheet['charisma_b']);
+    $stmt->bindParam(':charisma_g', $sheet['charisma_g']);
     $stmt->bindParam(':survival', $sheet['survival']);
+    $stmt->bindParam(':survival_i', $sheet['survival_i']);
+    $stmt->bindParam(':survival_b', $sheet['survival_b']);
+    $stmt->bindParam(':survival_g', $sheet['survival_g']);
     $stmt->bindParam(':strength', $sheet['strength']);
+    $stmt->bindParam(':strength_i', $sheet['strength_i']);
+    $stmt->bindParam(':strength_b', $sheet['strength_b']);
+    $stmt->bindParam(':strength_g', $sheet['strength_g']);
 
     $stmt->bindParam(':hitpoint', $sheet['hitpoint']);
+    $stmt->bindParam(':hitpoint_i', $sheet['hitpoint_i']);
+    $stmt->bindParam(':hitpoint_b', $sheet['hitpoint_b']);
     $stmt->bindParam(':capacity', $sheet['capacity']);
+    $stmt->bindParam(':capacity_i', $sheet['capacity_i']);
+    $stmt->bindParam(':capacity_b', $sheet['capacity_b']);
     $stmt->bindParam(':dexterity', $sheet['dexterity']);
+    $stmt->bindParam(':dexterity_i', $sheet['dexterity_i']);
+    $stmt->bindParam(':dexterity_b', $sheet['dexterity_b']);
     $stmt->bindParam(':followers', $sheet['followers']);
+    $stmt->bindParam(':followers_i', $sheet['followers_i']);
+    $stmt->bindParam(':followers_b', $sheet['followers_b']);
 
     $stmt->bindParam(':skill1', $sheet['skill1']);
     $stmt->bindParam(':skill1_description', $sheet['skill1_description']);
@@ -1186,7 +1261,7 @@ EOM;
 
     $stmt->bindParam(':memo', $sheet['memo']);
 
-    $stmt->bindParam(':id', $sheet['id']);
+//    $stmt->bindParam(':id', $sheet['id']);
     $stmt->bindParam(':hash', $sheet['hash']);
 
     // update
