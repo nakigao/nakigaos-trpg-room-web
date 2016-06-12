@@ -66,6 +66,7 @@ function processTalk(targetObj) {
         },
         "success": function (result, status, xhr) {
             setDodontofMessages(JSON.stringify(result));
+            targetObj.find('textarea').val('');
         },
         "error": function (xhr, status, error) {
             setDodontofMessages(JSON.stringify(error));
