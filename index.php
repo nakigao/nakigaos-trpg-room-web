@@ -17,6 +17,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         // TODO: OOOOOOOOOOOOOOOOOOOOOOOOOOPS!
+
     )
 ));
 
@@ -39,8 +40,13 @@ $app->get('/charactersheets/meikyudays/', function () use ($app) {
 SELECT
   hash,
   player_name,
-  character_name
-FROM sheet;
+  character_name,
+  level,
+  gender,
+  age,
+  class
+FROM sheet
+ORDER BY id DESC;
 EOM;
     $stmt = $app['db']->prepare($getSheetsSql);
     $stmt->execute();
