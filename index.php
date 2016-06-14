@@ -32,7 +32,17 @@ $app->get('/', function () use ($app) {
 });
 
 /**
- * Page for index
+ * Page for gmsupport
+ */
+$app->get('/gmsupport/', function () use ($app) {
+    return $app['twig']->render('gmsupport/index.html.twig', array(
+        'siteName' => 'nakigao\'s TRPG Room',
+        'pageName' => 'INDEX'
+    ));
+});
+
+/**
+ * Page for charactersheets/meikyudays
  */
 $app->get('/charactersheets/meikyudays/', function () use ($app) {
     // get sheets
