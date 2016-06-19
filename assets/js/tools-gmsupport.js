@@ -67,6 +67,7 @@ function processTalk(targetObj) {
         "success": function (result, status, xhr) {
             setDodontofMessages(JSON.stringify(result));
             targetObj.find('textarea').val('');
+            targetObj.find('input[id^="talk-message"]').val('');
         },
         "error": function (xhr, status, error) {
             setDodontofMessages(JSON.stringify(error));
@@ -281,6 +282,7 @@ $("#add-memo-form button").on('click', function (e) {
         }
     });
 });
+//
 $("#talk-form-1 button").on('click', function (e) {
     processTalk($("#talk-form-1"));
 });
@@ -299,6 +301,7 @@ $("#talk-form-5 button").on('click', function (e) {
 $("#talk-form-6 button").on('click', function (e) {
     processTalk($("#talk-form-6"));
 });
+//
 $("#add-preset-character-form-unknown button").on('click', function (e) {
     processAddPresetCharacter($("#add-preset-character-form-unknown"));
 });
