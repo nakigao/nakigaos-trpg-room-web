@@ -1,684 +1,1280 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta charset="utf-8" />
-      <title>プレイレポート</title>
-      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(212, 215, 214); overflow: auto; background-color: rgb(21, 23, 24); }
-.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
-.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
-.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
-.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
-.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) del { color: rgb(170, 176, 174); }
-.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(212, 215, 214); }
-.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
-.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(170, 176, 174); border-color: rgb(59, 65, 68); border-width: 4px; }
-.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(59, 65, 68); background: none; }
-.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
-.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(59, 65, 68); }
-.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(40, 44, 46); }
-.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(31, 33, 35); }
-.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(59, 65, 68) rgb(59, 65, 68) rgb(45, 49, 51); background-color: rgb(40, 44, 46); }
-.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
-.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
-.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
-.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
-.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
-.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
-.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
-.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
-.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
-.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
-.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
-.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
-.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
-.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
-.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
-.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
-.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
-.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
-.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
-.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
-.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
-.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
-.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
-.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
-.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
-.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
-.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
-.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
-.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
-.markdown-preview[data-use-github-style] dl { padding: 0px; }
-.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
-.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
-.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
-.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
-.markdown-preview[data-use-github-style] table th { font-weight: bold; }
-.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
-.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
-.markdown-preview[data-use-github-style] .emoji { max-width: none; }
-.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
-.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
-.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
-.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
-.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
-.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
-.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
-.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
-.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
-.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
-.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
-.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
-.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
-.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
-.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
-.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
-.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
-.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
-.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
-.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
-.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
-.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
-.markdown-preview[data-use-github-style] code { color: inherit; }
-.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
-.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
-.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
-.markdown-preview { font-family: Meiryo; }
-.bracket-matcher .region {
-  border-bottom: 1px dotted lime;
-  position: absolute;
-}
+<head>
+    <meta charset="utf-8" />
+    <title>プレイレポート</title>
+    <style>.markdown-preview:not([data-use-github-style]) {
+        padding: 2em;
+        font-size: 1.2em;
+        color: rgb(212, 215, 214);
+        overflow: auto;
+        background-color: rgb(21, 23, 24);
+    }
 
-.spell-check-misspelling .region {
-  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
-}
+    .markdown-preview:not([data-use-github-style]) > :first-child {
+        margin-top: 0px;
+    }
 
-.pre.editor-colors,
-.host {
-  background-color: #151718;
-  color: #d4d7d6;
-}
-.pre.editor-colors,
-.host {
-  background-color: #151718;
-  color: #d4d7d6;
-}
-.pre.editor-colors .wrap-guide,
-.host .wrap-guide {
-  background: rgba(245, 250, 255, 0.04);
-}
-.pre.editor-colors .indent-guide,
-.host .indent-guide {
-  color: rgba(245, 250, 255, 0.04);
-}
-.pre.editor-colors .invisible-character,
-.host .invisible-character {
-  color: rgba(255, 255, 255, 0.1);
-}
-.pre.editor-colors .gutter,
-.host .gutter {
-  background-color: #0e1112;
-  color: #404b53;
-}
-.pre.editor-colors .gutter .line-number,
-.host .gutter .line-number {
-  background: #0e1112;
-  color: #404b53;
-  padding-left: 10px;
-}
-.pre.editor-colors .gutter .line-number.cursor-line,
-.host .gutter .line-number.cursor-line {
-  background-color: #060708;
-  color: #55b5db;
-  font-weight: 100;
-}
-.pre.editor-colors .gutter .line-number.cursor-line-no-selection,
-.host .gutter .line-number.cursor-line-no-selection {
-  background-color: #060708 !important;
-  color: #55b5db;
-}
-.pre.editor-colors .gutter .line-number:hover,
-.host .gutter .line-number:hover {
-  background-color: #0e1112 !important;
-  color: #55b5db;
-}
-.pre.editor-colors .gutter .line-number.folded,
-.host .gutter .line-number.folded,
-.pre.editor-colors .gutter .line-number:after,
-.host .gutter .line-number:after,
-.pre.editor-colors .fold-marker:after,
-.host .fold-marker:after {
-  color: #FFF;
-  background: #404b53;
-}
-.pre.editor-colors .invisible,
-.host .invisible {
-  color: rgba(255, 255, 255, 0.1);
-}
-.pre.editor-colors .cursor,
-.host .cursor {
-  border-color: #d4d7d6 !important;
-  border-left: solid 2px;
-}
-.pre.editor-colors .selection .region,
-.host .selection .region {
-  background-color: rgba(85, 181, 219, 0.6);
-}
-.pre.editor-colors .scroll-view,
-.host .scroll-view {
-  padding-left: 10px;
-}
-.pre.editor-colors .line.cursor-line,
-.host .line.cursor-line {
-  background: rgba(0, 0, 0, 0.2) !important;
-}
-.comment {
-  color: #41535b;
-  background: none;
-}
-.keyword {
-  color: #9fca56;
-}
-.keyword.control {
-  color: #9fca56;
-}
-.keyword.operator {
-  color: #9fca56;
-}
-.keyword.other.special-method {
-  color: #9fca56;
-}
-.keyword.other.unit {
-  color: #9fca56;
-}
-.storage {
-  color: #e6cd69;
-}
-.storage.modifier {
-  color: #e6cd69;
-}
-.constant {
-  color: #cd3f45;
-}
-.constant.character.escape {
-  color: #cd3f45;
-}
-.constant.numeric {
-  color: #cd3f45;
-}
-.constant.other.color {
-  color: #cd3f45;
-}
-.constant.other.symbol {
-  color: #cd3f45;
-}
-.variable {
-  color: #9fca56;
-}
-.variable.interpolation {
-  color: #9fca56;
-}
-.variable.parameter.function {
-  color: #55b5db;
-}
-.invalid.illegal,
-.invalid.deprecated {
-  background: none;
-  color: #cd3f45;
-}
-.string {
-  color: #55b5db;
-}
-.string .constant {
-  color: #55b5db;
-}
-.string.regexp {
-  color: #55b5db;
-}
-.string.regexp .constant.character.escape,
-.string.regexp .source.ruby.embedded,
-.string.regexp .string.regexp.arbitrary-repitition {
-  color: #55b5db;
-}
-.string.regexp.group {
-  color: #55b5db;
-}
-.string.regexp.character-class {
-  color: #55b5db;
-}
-.string.regexp .source.ruby.embedded {
-  color: #55b5db;
-}
-.string .variable {
-  color: #9fca56;
-}
-.string.other.link {
-  color: #55b5db;
-}
-.source .string .source,
-.source .string .meta.embedded.line {
-  color: #55b5db;
-}
-.source .string .punctuation.section.embedded {
-  color: #55b5db;
-}
-.source .string .punctuation.section.embedded .source {
-  color: #55b5db;
-}
-.punctuation.terminator {
-  color: #858d8a;
-}
-.punctuation.separator {
-  color: #858d8a;
-}
-.punctuation.definition {
-  color: #858d8a;
-}
-.punctuation.definition.comment {
-  color: #41535b;
-}
-.punctuation.definition.string,
-.punctuation.definition.variable,
-.punctuation.definition.array {
-  color: #55b5db;
-}
-.punctuation.definition.parameters {
-  color: #d4d7d6;
-}
-.punctuation.definition.heading,
-.punctuation.definition.identity {
-  color: #d4d7d6;
-}
-.punctuation.definition.bold {
-  color: #d4d7d6;
-  font-weight: bold;
-}
-.punctuation.definition.italic {
-  color: #d4d7d6;
-  font-style: italic;
-}
-.punctuation.section.embedded {
-  color: #d4d7d6;
-}
-.support {
-  color: #a074c4;
-}
-.support.class {
-  color: #a074c4;
-}
-.support.function {
-  color: #a074c4;
-}
-.support.function.any-method {
-  color: #a074c4;
-}
-.support.constant {
-  color: #cd3f45;
-}
-.support.type.property-name.css {
-  color: #a074c4;
-}
-.source .entity.name.tag,
-.source .entity.other.attribute-name,
-.meta.tag.inline,
-.meta.tag.inline .entity {
-  color: #9fca56;
-}
-.tag,
-.tag .entity {
-  color: #55b5db;
-}
-.html .string {
-  color: #d4d7d6;
-}
-.html .punctuation.definition.tag {
-  color: #55b5db;
-}
-.html .entity.name.tag {
-  text-decoration: done;
-}
-.html .entity.name.tag.structure {
-  color: #55b5db;
-}
-.html .entity.name.tag.block {
-  color: #55b5db;
-}
-.html .entity.other.attribute-name {
-  color: #9fca56;
-}
-.entity {
-  color: #55b5db;
-}
-.entity.name.type {
-  color: #55b5db;
-  text-decoration: none;
-}
-.entity.other.inherited-class {
-  color: #55b5db;
-}
-.entity.name.function {
-  color: #55b5db;
-}
-.entity.name.class,
-.entity.name.type.class {
-  color: #55b5db;
-}
-.entity.name.section {
-  color: #55b5db;
-}
-.entity.name.tag {
-  color: #55b5db;
-  text-decoration: done;
-}
-.entity.other.attribute-name {
-  color: #9fca56;
-}
-.entity.other.attribute-name.id {
-  color: #9fca56;
-}
-.meta.link {
-  color: #d4d7d6;
-}
-.meta.require {
-  color: #d4d7d6;
-}
-.meta.brace.curly {
-  color: #858d8a;
-}
-.meta.brace.round {
-  color: #d4d7d6;
-}
-.meta.comma {
-  color: #858d8a;
-}
-.meta.selector {
-  color: #858d8a;
-}
-.meta.separator {
-  background-color: #858d8a;
-  color: #858d8a;
-}
-.none {
-  color: #d4d7d6;
-}
-.markup.bold {
-  color: #d4d7d6;
-  font-weight: bold;
-}
-.markup.changed {
-  color: #d4d7d6;
-}
-.markup.deleted {
-  color: #d4d7d6;
-}
-.markup.italic {
-  color: #d4d7d6;
-  font-style: italic;
-}
-.markup.heading .punctuation.definition.heading {
-  color: #d4d7d6;
-}
-.markup.inserted {
-  color: #d4d7d6;
-}
-.markup.list {
-  color: #d4d7d6;
-}
-.markup.quote {
-  color: #d4d7d6;
-}
-.markup.raw.inline {
-  color: #d4d7d6;
-}
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-}
-.source.gfm .markup.heading {
-  color: #d4d7d6;
-}
-pre.editor-colors[mini] .scroll-view,
-.host(.mini) .scroll-view {
-  padding-left: 1px;
-}
-.bracket-matcher .region {
-  border-bottom: 1px solid #55b5db;
-  margin-top: 2px;
-}
-.html .meta.tag.any {
-  color: #9fca56;
-}
-.html .entity.name.tag.block,
-.html .entity.name.tag.inline,
-.html .entity.name.tag.name {
-  color: #55b5db;
-}
-.html .entity.other.attribute-name.id.html {
-  color: #9fca56;
-}
-.html .punctuation.separator.key-value {
-  color: #9fca56;
-}
-.html .string.quoted.double {
-  color: #cbe2a4;
-}
-.html .string.quoted.double .punctuation.definition.string.begin,
-.html .string.quoted.double .punctuation.definition.string.end {
-  color: #9fca56;
-}
-.html .string.quoted.double .punctuation.definition.string .separator.key-value.html {
-  color: #9fca56;
-}
-.jade {
-  color: #d4d7d6;
-}
-.jade .comment.jade {
-  color: #41535b;
-}
-.jade .storage.type.function.jade {
-  color: #9fca56;
-}
-.jade .meta.control.flow.jade {
-  color: #cd3f45;
-}
-.jade .source.script .meta.brace.round.js,
-.jade .source.script .meta.brace.curly.js {
-  color: #858d8a;
-}
-.jade .entity.name.tag.jade {
-  color: #55b5db;
-}
-.jade .storage.type.import.include.jade {
-  color: #cbe2a4;
-}
-.jade .variable.control.import.include.jade {
-  color: #9fca56;
-}
-.jade .constant.id {
-  color: #e6cd69;
-}
-.jade .constant.language.js {
-  color: #a074c4;
-}
-.jade .text.jade {
-  color: #d4d7d6;
-}
-.jade .punctuation.separator.key-value.jade {
-  color: #55b5db;
-}
-.jade .string.quoted.jade {
-  color: #d4d7d6;
-}
-.source.json .constant.language {
-  color: #cd3f45;
-}
-.source.json .meta.structure.dictionary.json .string.quoted.json {
-  color: #55b5db;
-}
-.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json {
-  color: #d4d7d6;
-}
-.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json .punctuation.definition.string {
-  color: #d4d7d6;
-}
-.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .string.quoted.json {
-  color: #55b5db;
-}
-.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .string.quoted.json .punctuation.definition.string {
-  color: #55b5db;
-}
-.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json {
-  color: #d4d7d6;
-}
-.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json .punctuation.definition.string {
-  color: #d4d7d6;
-}
-.mustache .meta.tag.template {
-  color: #9fca56;
-}
-.mustache .meta.tag.template .entity.name.tag {
-  color: #cbe2a4;
-}
-.go .variable {
-  color: white;
-}
-.go .support.function.decl {
-  color: #55b5db;
-}
-</style>
-  </head>
-  <body class='markdown-preview' data-use-github-style><h1 id="-">プレイレポート「年貢の納め時」</h1>
-<h2 id="-">ハンドアウトとキャラクター</h2>
+    .markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 {
+        line-height: 1.2;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) h1 {
+        font-size: 2.4em;
+        font-weight: 300;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h2 {
+        font-size: 1.8em;
+        font-weight: 400;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h4 {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h5 {
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) h6 {
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .markdown-preview:not([data-use-github-style]) strong {
+        color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) del {
+        color: rgb(170, 176, 174);
+    }
+
+    .markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code {
+        color: rgb(212, 215, 214);
+    }
+
+    .markdown-preview:not([data-use-github-style]) img {
+        max-width: 100%;
+    }
+
+    .markdown-preview:not([data-use-github-style]) > p {
+        margin-top: 0px;
+        margin-bottom: 1.5em;
+    }
+
+    .markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol {
+        margin-bottom: 1.5em;
+    }
+
+    .markdown-preview:not([data-use-github-style]) blockquote {
+        margin: 1.5em 0px;
+        font-size: inherit;
+        color: rgb(170, 176, 174);
+        border-color: rgb(59, 65, 68);
+        border-width: 4px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) hr {
+        margin: 3em 0px;
+        border-top-width: 2px;
+        border-top-style: dashed;
+        border-top-color: rgb(59, 65, 68);
+        background: none;
+    }
+
+    .markdown-preview:not([data-use-github-style]) table {
+        margin: 1.5em 0px;
+    }
+
+    .markdown-preview:not([data-use-github-style]) th {
+        color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td {
+        padding: 0.66em 1em;
+        border: 1px solid rgb(59, 65, 68);
+    }
+
+    .markdown-preview:not([data-use-github-style]) code {
+        color: rgb(255, 255, 255);
+        background-color: rgb(40, 44, 46);
+    }
+
+    .markdown-preview:not([data-use-github-style]) pre.editor-colors {
+        margin: 1.5em 0px;
+        padding: 1em;
+        font-size: 0.92em;
+        border-radius: 3px;
+        background-color: rgb(31, 33, 35);
+    }
+
+    .markdown-preview:not([data-use-github-style]) kbd {
+        color: rgb(255, 255, 255);
+        border-width: 1px 1px 2px;
+        border-style: solid;
+        border-color: rgb(59, 65, 68) rgb(59, 65, 68) rgb(45, 49, 51);
+        background-color: rgb(40, 44, 46);
+    }
+
+    .markdown-preview[data-use-github-style] {
+        font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+        line-height: 1.6;
+        word-wrap: break-word;
+        padding: 30px;
+        font-size: 16px;
+        color: rgb(51, 51, 51);
+        overflow: scroll;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview[data-use-github-style] > :first-child {
+        margin-top: 0px !important;
+    }
+
+    .markdown-preview[data-use-github-style] > :last-child {
+        margin-bottom: 0px !important;
+    }
+
+    .markdown-preview[data-use-github-style] a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .markdown-preview[data-use-github-style] .absent {
+        color: rgb(204, 0, 0);
+    }
+
+    .markdown-preview[data-use-github-style] .anchor {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+        padding-right: 6px;
+        padding-left: 30px;
+        margin-left: -30px;
+    }
+
+    .markdown-preview[data-use-github-style] .anchor:focus {
+        outline: none;
+    }
+
+    .markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 {
+        position: relative;
+        margin-top: 1em;
+        margin-bottom: 16px;
+        font-weight: bold;
+        line-height: 1.4;
+    }
+
+    .markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link {
+        display: none;
+        color: rgb(0, 0, 0);
+        vertical-align: middle;
+    }
+
+    .markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor {
+        padding-left: 8px;
+        margin-left: -30px;
+        text-decoration: none;
+    }
+
+    .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link {
+        display: inline-block;
+    }
+
+    .markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code {
+        font-size: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] h1 {
+        padding-bottom: 0.3em;
+        font-size: 2.25em;
+        line-height: 1.2;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(238, 238, 238);
+    }
+
+    .markdown-preview[data-use-github-style] h1 .anchor {
+        line-height: 1;
+    }
+
+    .markdown-preview[data-use-github-style] h2 {
+        padding-bottom: 0.3em;
+        font-size: 1.75em;
+        line-height: 1.225;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(238, 238, 238);
+    }
+
+    .markdown-preview[data-use-github-style] h2 .anchor {
+        line-height: 1;
+    }
+
+    .markdown-preview[data-use-github-style] h3 {
+        font-size: 1.5em;
+        line-height: 1.43;
+    }
+
+    .markdown-preview[data-use-github-style] h3 .anchor {
+        line-height: 1.2;
+    }
+
+    .markdown-preview[data-use-github-style] h4 {
+        font-size: 1.25em;
+    }
+
+    .markdown-preview[data-use-github-style] h4 .anchor {
+        line-height: 1.2;
+    }
+
+    .markdown-preview[data-use-github-style] h5 {
+        font-size: 1em;
+    }
+
+    .markdown-preview[data-use-github-style] h5 .anchor {
+        line-height: 1.1;
+    }
+
+    .markdown-preview[data-use-github-style] h6 {
+        font-size: 1em;
+        color: rgb(119, 119, 119);
+    }
+
+    .markdown-preview[data-use-github-style] h6 .anchor {
+        line-height: 1.1;
+    }
+
+    .markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre {
+        margin-top: 0px;
+        margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] hr {
+        height: 4px;
+        padding: 0px;
+        margin: 16px 0px;
+        border: 0px none;
+        background-color: rgb(231, 231, 231);
+    }
+
+    .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol {
+        padding-left: 2em;
+    }
+
+    .markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list {
+        padding: 0px;
+        list-style-type: none;
+    }
+
+    .markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] li > p {
+        margin-top: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] dl {
+        padding: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] dl dt {
+        padding: 0px;
+        margin-top: 16px;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .markdown-preview[data-use-github-style] dl dd {
+        padding: 0px 16px;
+        margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] blockquote {
+        padding: 0px 15px;
+        color: rgb(119, 119, 119);
+        border-left-width: 4px;
+        border-left-style: solid;
+        border-left-color: rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] blockquote > :first-child {
+        margin-top: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] blockquote > :last-child {
+        margin-bottom: 0px;
+    }
+
+    .markdown-preview[data-use-github-style] table {
+        display: block;
+        width: 100%;
+        overflow: auto;
+        word-break: keep-all;
+    }
+
+    .markdown-preview[data-use-github-style] table th {
+        font-weight: bold;
+    }
+
+    .markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td {
+        padding: 6px 13px;
+        border: 1px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] table tr {
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(204, 204, 204);
+        background-color: rgb(255, 255, 255);
+    }
+
+    .markdown-preview[data-use-github-style] table tr:nth-child(2n) {
+        background-color: rgb(248, 248, 248);
+    }
+
+    .markdown-preview[data-use-github-style] img {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .markdown-preview[data-use-github-style] .emoji {
+        max-width: none;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame {
+        display: block;
+        overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame > span {
+        display: block;
+        float: left;
+        width: auto;
+        padding: 7px;
+        margin: 13px 0px 0px;
+        overflow: hidden;
+        border: 1px solid rgb(221, 221, 221);
+    }
+
+    .markdown-preview[data-use-github-style] span.frame span img {
+        display: block;
+        float: left;
+    }
+
+    .markdown-preview[data-use-github-style] span.frame span span {
+        display: block;
+        padding: 5px 0px 0px;
+        clear: both;
+        color: rgb(51, 51, 51);
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center {
+        display: block;
+        overflow: hidden;
+        clear: both;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center > span {
+        display: block;
+        margin: 13px auto 0px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-center span img {
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right {
+        display: block;
+        overflow: hidden;
+        clear: both;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right > span {
+        display: block;
+        margin: 13px 0px 0px;
+        overflow: hidden;
+        text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] span.align-right span img {
+        margin: 0px;
+        text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-left {
+        display: block;
+        float: left;
+        margin-right: 13px;
+        overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-left span {
+        margin: 13px 0px 0px;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-right {
+        display: block;
+        float: right;
+        margin-left: 13px;
+        overflow: hidden;
+    }
+
+    .markdown-preview[data-use-github-style] span.float-right > span {
+        display: block;
+        margin: 13px auto 0px;
+        overflow: hidden;
+        text-align: right;
+    }
+
+    .markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt {
+        padding: 0.2em 0px;
+        margin: 0px;
+        font-size: 85%;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, 0.0392157);
+    }
+
+    .markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after {
+        letter-spacing: -0.2em;
+        content: " ";
+    }
+
+    .markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br {
+        display: none;
+    }
+
+    .markdown-preview[data-use-github-style] del code {
+        text-decoration: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] pre > code {
+        padding: 0px;
+        margin: 0px;
+        font-size: 100%;
+        word-break: normal;
+        white-space: pre;
+        border: 0px;
+        background: transparent;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight {
+        margin-bottom: 16px;
+    }
+
+    .markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre {
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        border-radius: 3px;
+        background-color: rgb(247, 247, 247);
+    }
+
+    .markdown-preview[data-use-github-style] .highlight pre {
+        margin-bottom: 0px;
+        word-break: normal;
+    }
+
+    .markdown-preview[data-use-github-style] pre {
+        word-wrap: normal;
+    }
+
+    .markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt {
+        display: inline;
+        max-width: initial;
+        padding: 0px;
+        margin: 0px;
+        overflow: initial;
+        line-height: inherit;
+        word-wrap: normal;
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after {
+        content: normal;
+    }
+
+    .markdown-preview[data-use-github-style] kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font-size: 11px;
+        line-height: 10px;
+        color: rgb(85, 85, 85);
+        vertical-align: middle;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187);
+        border-radius: 3px;
+        box-shadow: rgb(187, 187, 187) 0px -1px 0px inset;
+        background-color: rgb(252, 252, 252);
+    }
+
+    .markdown-preview[data-use-github-style] a {
+        color: rgb(51, 122, 183);
+    }
+
+    .markdown-preview[data-use-github-style] code {
+        color: inherit;
+    }
+
+    .markdown-preview[data-use-github-style] pre.editor-colors {
+        padding: 0.8em 1em;
+        margin-bottom: 1em;
+        font-size: 0.85em;
+        border-radius: 4px;
+        overflow: auto;
+    }
+
+    .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar {
+        visibility: hidden;
+    }
+
+    .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar {
+        visibility: visible;
+    }
+
+    .markdown-preview {
+        font-family: Meiryo;
+    }
+
+    .bracket-matcher .region {
+        border-bottom: 1px dotted lime;
+        position: absolute;
+    }
+
+    .spell-check-misspelling .region {
+        border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+    }
+
+    .pre.editor-colors,
+    .host {
+        background-color: #151718;
+        color: #d4d7d6;
+    }
+
+    .pre.editor-colors,
+    .host {
+        background-color: #151718;
+        color: #d4d7d6;
+    }
+
+    .pre.editor-colors .wrap-guide,
+    .host .wrap-guide {
+        background: rgba(245, 250, 255, 0.04);
+    }
+
+    .pre.editor-colors .indent-guide,
+    .host .indent-guide {
+        color: rgba(245, 250, 255, 0.04);
+    }
+
+    .pre.editor-colors .invisible-character,
+    .host .invisible-character {
+        color: rgba(255, 255, 255, 0.1);
+    }
+
+    .pre.editor-colors .gutter,
+    .host .gutter {
+        background-color: #0e1112;
+        color: #404b53;
+    }
+
+    .pre.editor-colors .gutter .line-number,
+    .host .gutter .line-number {
+        background: #0e1112;
+        color: #404b53;
+        padding-left: 10px;
+    }
+
+    .pre.editor-colors .gutter .line-number.cursor-line,
+    .host .gutter .line-number.cursor-line {
+        background-color: #060708;
+        color: #55b5db;
+        font-weight: 100;
+    }
+
+    .pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+    .host .gutter .line-number.cursor-line-no-selection {
+        background-color: #060708 !important;
+        color: #55b5db;
+    }
+
+    .pre.editor-colors .gutter .line-number:hover,
+    .host .gutter .line-number:hover {
+        background-color: #0e1112 !important;
+        color: #55b5db;
+    }
+
+    .pre.editor-colors .gutter .line-number.folded,
+    .host .gutter .line-number.folded,
+    .pre.editor-colors .gutter .line-number:after,
+    .host .gutter .line-number:after,
+    .pre.editor-colors .fold-marker:after,
+    .host .fold-marker:after {
+        color: #FFF;
+        background: #404b53;
+    }
+
+    .pre.editor-colors .invisible,
+    .host .invisible {
+        color: rgba(255, 255, 255, 0.1);
+    }
+
+    .pre.editor-colors .cursor,
+    .host .cursor {
+        border-color: #d4d7d6 !important;
+        border-left: solid 2px;
+    }
+
+    .pre.editor-colors .selection .region,
+    .host .selection .region {
+        background-color: rgba(85, 181, 219, 0.6);
+    }
+
+    .pre.editor-colors .scroll-view,
+    .host .scroll-view {
+        padding-left: 10px;
+    }
+
+    .pre.editor-colors .line.cursor-line,
+    .host .line.cursor-line {
+        background: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .comment {
+        color: #41535b;
+        background: none;
+    }
+
+    .keyword {
+        color: #9fca56;
+    }
+
+    .keyword.control {
+        color: #9fca56;
+    }
+
+    .keyword.operator {
+        color: #9fca56;
+    }
+
+    .keyword.other.special-method {
+        color: #9fca56;
+    }
+
+    .keyword.other.unit {
+        color: #9fca56;
+    }
+
+    .storage {
+        color: #e6cd69;
+    }
+
+    .storage.modifier {
+        color: #e6cd69;
+    }
+
+    .constant {
+        color: #cd3f45;
+    }
+
+    .constant.character.escape {
+        color: #cd3f45;
+    }
+
+    .constant.numeric {
+        color: #cd3f45;
+    }
+
+    .constant.other.color {
+        color: #cd3f45;
+    }
+
+    .constant.other.symbol {
+        color: #cd3f45;
+    }
+
+    .variable {
+        color: #9fca56;
+    }
+
+    .variable.interpolation {
+        color: #9fca56;
+    }
+
+    .variable.parameter.function {
+        color: #55b5db;
+    }
+
+    .invalid.illegal,
+    .invalid.deprecated {
+        background: none;
+        color: #cd3f45;
+    }
+
+    .string {
+        color: #55b5db;
+    }
+
+    .string .constant {
+        color: #55b5db;
+    }
+
+    .string.regexp {
+        color: #55b5db;
+    }
+
+    .string.regexp .constant.character.escape,
+    .string.regexp .source.ruby.embedded,
+    .string.regexp .string.regexp.arbitrary-repitition {
+        color: #55b5db;
+    }
+
+    .string.regexp.group {
+        color: #55b5db;
+    }
+
+    .string.regexp.character-class {
+        color: #55b5db;
+    }
+
+    .string.regexp .source.ruby.embedded {
+        color: #55b5db;
+    }
+
+    .string .variable {
+        color: #9fca56;
+    }
+
+    .string.other.link {
+        color: #55b5db;
+    }
+
+    .source .string .source,
+    .source .string .meta.embedded.line {
+        color: #55b5db;
+    }
+
+    .source .string .punctuation.section.embedded {
+        color: #55b5db;
+    }
+
+    .source .string .punctuation.section.embedded .source {
+        color: #55b5db;
+    }
+
+    .punctuation.terminator {
+        color: #858d8a;
+    }
+
+    .punctuation.separator {
+        color: #858d8a;
+    }
+
+    .punctuation.definition {
+        color: #858d8a;
+    }
+
+    .punctuation.definition.comment {
+        color: #41535b;
+    }
+
+    .punctuation.definition.string,
+    .punctuation.definition.variable,
+    .punctuation.definition.array {
+        color: #55b5db;
+    }
+
+    .punctuation.definition.parameters {
+        color: #d4d7d6;
+    }
+
+    .punctuation.definition.heading,
+    .punctuation.definition.identity {
+        color: #d4d7d6;
+    }
+
+    .punctuation.definition.bold {
+        color: #d4d7d6;
+        font-weight: bold;
+    }
+
+    .punctuation.definition.italic {
+        color: #d4d7d6;
+        font-style: italic;
+    }
+
+    .punctuation.section.embedded {
+        color: #d4d7d6;
+    }
+
+    .support {
+        color: #a074c4;
+    }
+
+    .support.class {
+        color: #a074c4;
+    }
+
+    .support.function {
+        color: #a074c4;
+    }
+
+    .support.function.any-method {
+        color: #a074c4;
+    }
+
+    .support.constant {
+        color: #cd3f45;
+    }
+
+    .support.type.property-name.css {
+        color: #a074c4;
+    }
+
+    .source .entity.name.tag,
+    .source .entity.other.attribute-name,
+    .meta.tag.inline,
+    .meta.tag.inline .entity {
+        color: #9fca56;
+    }
+
+    .tag,
+    .tag .entity {
+        color: #55b5db;
+    }
+
+    .html .string {
+        color: #d4d7d6;
+    }
+
+    .html .punctuation.definition.tag {
+        color: #55b5db;
+    }
+
+    .html .entity.name.tag {
+        text-decoration: done;
+    }
+
+    .html .entity.name.tag.structure {
+        color: #55b5db;
+    }
+
+    .html .entity.name.tag.block {
+        color: #55b5db;
+    }
+
+    .html .entity.other.attribute-name {
+        color: #9fca56;
+    }
+
+    .entity {
+        color: #55b5db;
+    }
+
+    .entity.name.type {
+        color: #55b5db;
+        text-decoration: none;
+    }
+
+    .entity.other.inherited-class {
+        color: #55b5db;
+    }
+
+    .entity.name.function {
+        color: #55b5db;
+    }
+
+    .entity.name.class,
+    .entity.name.type.class {
+        color: #55b5db;
+    }
+
+    .entity.name.section {
+        color: #55b5db;
+    }
+
+    .entity.name.tag {
+        color: #55b5db;
+        text-decoration: done;
+    }
+
+    .entity.other.attribute-name {
+        color: #9fca56;
+    }
+
+    .entity.other.attribute-name.id {
+        color: #9fca56;
+    }
+
+    .meta.link {
+        color: #d4d7d6;
+    }
+
+    .meta.require {
+        color: #d4d7d6;
+    }
+
+    .meta.brace.curly {
+        color: #858d8a;
+    }
+
+    .meta.brace.round {
+        color: #d4d7d6;
+    }
+
+    .meta.comma {
+        color: #858d8a;
+    }
+
+    .meta.selector {
+        color: #858d8a;
+    }
+
+    .meta.separator {
+        background-color: #858d8a;
+        color: #858d8a;
+    }
+
+    .none {
+        color: #d4d7d6;
+    }
+
+    .markup.bold {
+        color: #d4d7d6;
+        font-weight: bold;
+    }
+
+    .markup.changed {
+        color: #d4d7d6;
+    }
+
+    .markup.deleted {
+        color: #d4d7d6;
+    }
+
+    .markup.italic {
+        color: #d4d7d6;
+        font-style: italic;
+    }
+
+    .markup.heading .punctuation.definition.heading {
+        color: #d4d7d6;
+    }
+
+    .markup.inserted {
+        color: #d4d7d6;
+    }
+
+    .markup.list {
+        color: #d4d7d6;
+    }
+
+    .markup.quote {
+        color: #d4d7d6;
+    }
+
+    .markup.raw.inline {
+        color: #d4d7d6;
+    }
+
+    .source.gfm .markup {
+        -webkit-font-smoothing: auto;
+    }
+
+    .source.gfm .markup.heading {
+        color: #d4d7d6;
+    }
+
+    pre.editor-colors[mini] .scroll-view,
+    .
+    host
+
+    (
+    .mini
+
+    )
+    .scroll-view {
+        padding-left: 1px;
+    }
+
+    .bracket-matcher .region {
+        border-bottom: 1px solid #55b5db;
+        margin-top: 2px;
+    }
+
+    .html .meta.tag.any {
+        color: #9fca56;
+    }
+
+    .html .entity.name.tag.block,
+    .html .entity.name.tag.inline,
+    .html .entity.name.tag.name {
+        color: #55b5db;
+    }
+
+    .html .entity.other.attribute-name.id.html {
+        color: #9fca56;
+    }
+
+    .html .punctuation.separator.key-value {
+        color: #9fca56;
+    }
+
+    .html .string.quoted.double {
+        color: #cbe2a4;
+    }
+
+    .html .string.quoted.double .punctuation.definition.string.begin,
+    .html .string.quoted.double .punctuation.definition.string.end {
+        color: #9fca56;
+    }
+
+    .html .string.quoted.double .punctuation.definition.string .separator.key-value.html {
+        color: #9fca56;
+    }
+
+    .jade {
+        color: #d4d7d6;
+    }
+
+    .jade .comment.jade {
+        color: #41535b;
+    }
+
+    .jade .storage.type.function.jade {
+        color: #9fca56;
+    }
+
+    .jade .meta.control.flow.jade {
+        color: #cd3f45;
+    }
+
+    .jade .source.script .meta.brace.round.js,
+    .jade .source.script .meta.brace.curly.js {
+        color: #858d8a;
+    }
+
+    .jade .entity.name.tag.jade {
+        color: #55b5db;
+    }
+
+    .jade .storage.type.import.include.jade {
+        color: #cbe2a4;
+    }
+
+    .jade .variable.control.import.include.jade {
+        color: #9fca56;
+    }
+
+    .jade .constant.id {
+        color: #e6cd69;
+    }
+
+    .jade .constant.language.js {
+        color: #a074c4;
+    }
+
+    .jade .text.jade {
+        color: #d4d7d6;
+    }
+
+    .jade .punctuation.separator.key-value.jade {
+        color: #55b5db;
+    }
+
+    .jade .string.quoted.jade {
+        color: #d4d7d6;
+    }
+
+    .source.json .constant.language {
+        color: #cd3f45;
+    }
+
+    .source.json .meta.structure.dictionary.json .string.quoted.json {
+        color: #55b5db;
+    }
+
+    .source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json {
+        color: #d4d7d6;
+    }
+
+    .source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json .punctuation.definition.string {
+        color: #d4d7d6;
+    }
+
+    .source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .string.quoted.json {
+        color: #55b5db;
+    }
+
+    .source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .string.quoted.json .punctuation.definition.string {
+        color: #55b5db;
+    }
+
+    .source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json {
+        color: #d4d7d6;
+    }
+
+    .source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json .punctuation.definition.string {
+        color: #d4d7d6;
+    }
+
+    .mustache .meta.tag.template {
+        color: #9fca56;
+    }
+
+    .mustache .meta.tag.template .entity.name.tag {
+        color: #cbe2a4;
+    }
+
+    .go .variable {
+        color: white;
+    }
+
+    .go .support.function.decl {
+        color: #55b5db;
+    }
+    </style>
+</head>
+<body class='markdown-preview' data-use-github-style>
+<h1>プレイレポート「年貢の納め時」</h1>
+<h2>ハンドアウトとキャラクター</h2>
 <h3 id="pc1-pl-aneko">PC1 ヤマト＝ガラティーン PL:aneko</h3>
 <blockquote>
-<p>推奨クラス：ロード<br>因縁：ファロ子爵<br>推奨感情：メイン「任意」/サブ「任意」<br>　キミはつい最近、騎士見習いとしての修行を終えたばかりだ。<br>騎士叙任を終え、いっぱしの騎士―ロードとなったキミに、徴税官としての任務が与えられた。<br>ブライドルフという、小村からの税収が滞っているそうだ。<br>ケチな仕事だが、新米のメイジが手伝ってくれることになっている。<br>貧乏くじを引いた気分は拭えないが…</p>
+    <p>推奨クラス：ロード<br>因縁：ファロ子爵<br>推奨感情：メイン「任意」/サブ「任意」<br>　キミはつい最近、騎士見習いとしての修行を終えたばかりだ。<br>騎士叙任を終え、いっぱしの騎士―ロードとなったキミに、徴税官としての任務が与えられた。<br>ブライドルフという、小村からの税収が滞っているそうだ。<br>ケチな仕事だが、新米のメイジが手伝ってくれることになっている。<br>貧乏くじを引いた気分は拭えないが…</p>
 </blockquote>
 <ul>
-<li><em>ヤマトについて</em><br>　GMの予想以上に王道主人公キャラクターを演じてくださいました。協力的なプレイングに感謝。</li>
+    <li><em>ヤマトについて</em><br>　GMの予想以上に王道主人公キャラクターを演じてくださいました。協力的なプレイングに感謝。</li>
 </ul>
 <h3 id="pc2-pl-nakigao">PC2 モシノ PL:nakigao</h3>
 <blockquote>
-<p>推奨クラス：メイジ<br>因縁：PC1<br>推奨感情：メイン「任意」/サブ「任意」<br>　キミはつい最近、エーラムのアカデミーを卒業したばかりの魔法師だ。<br>アカデミーからはファロ子爵に仕えるよう命じられているが、ファロ子爵は正式な契約を結ぶつもりが無いように見える。<br>PC1とは知り合いであり、今回はファロ子爵に命じられて、彼(彼女)の仕事に同道することとなった。<br>きちんとロードとの契約を交わし、実績を上げて行きたいところだが…</p>
+    <p>推奨クラス：メイジ<br>因縁：PC1<br>推奨感情：メイン「任意」/サブ「任意」<br>　キミはつい最近、エーラムのアカデミーを卒業したばかりの魔法師だ。<br>アカデミーからはファロ子爵に仕えるよう命じられているが、ファロ子爵は正式な契約を結ぶつもりが無いように見える。<br>PC1とは知り合いであり、今回はファロ子爵に命じられて、彼(彼女)の仕事に同道することとなった。<br>きちんとロードとの契約を交わし、実績を上げて行きたいところだが…</p>
 </blockquote>
 <ul>
-<li><em>モシノについて</em><br>　ハンドアウトに「一方的にPC1を知っている」という情報を混ぜていたが、どうやらそこを拾っていただけた模様。<br>なぜか関係が仇敵ですけど。<br>　ノリノリのRPはけっこう場を盛り上げてくれています。感謝。</li>
+    <li><em>モシノについて</em><br>　ハンドアウトに「一方的にPC1を知っている」という情報を混ぜていたが、どうやらそこを拾っていただけた模様。<br>なぜか関係が仇敵ですけど。<br>　ノリノリのRPはけっこう場を盛り上げてくれています。感謝。</li>
 </ul>
 <h3 id="pc3-pc-kaeru">PC3 ナイア PC:kaeru</h3>
 <blockquote>
-<p>推奨クラス：アーティスト<br>因縁：&quot;行商人&quot;ヒュッカ<br>推奨感情：メイン「庇護」/サブ「任意」<br>　キミは各地を転々としながら仕事をこなして来た放浪人である。<br>半年近くの間、&quot;行商人&quot;ヒュッカの護衛を請け負っていたが、彼女の故郷であるブライドルフが最後の目的地である。<br>その後は、自分にふさわしい君主に仕えてみるのもいいかもしれない…</p>
+    <p>推奨クラス：アーティスト<br>因縁：&quot;行商人&quot;ヒュッカ<br>推奨感情：メイン「庇護」/サブ「任意」<br>　キミは各地を転々としながら仕事をこなして来た放浪人である。<br>半年近くの間、&quot;行商人&quot;ヒュッカの護衛を請け負っていたが、彼女の故郷であるブライドルフが最後の目的地である。<br>その後は、自分にふさわしい君主に仕えてみるのもいいかもしれない…</p>
 </blockquote>
 <ul>
-<li><em>ナイアについて</em><br>　RPはよくわからないが、進行に際してはスムーズに協力して貰えました。感謝。<br>　ただ、顔芸はログに残らない。</li>
+    <li><em>ナイアについて</em><br>　RPはよくわからないが、進行に際してはスムーズに協力して貰えました。感謝。<br>　ただ、顔芸はログに残らない。</li>
 </ul>
-<h2 id="-">シナリオ進行について</h2>
+<h2>シナリオ進行について</h2>
 <ul>
-<li><em>シーン1</em></li>
-</ul>
-<blockquote>
-<p>登場:PC1,PC2,ファロ子爵　混沌レベル：3<br>当シーンのあいだ、ファロ子爵はPC1を適度に、適当に扱うこと。<br>PC1がファロ子爵の元を訪れ、ブライドルフ徴税の任務を言い渡すシーン。<br>この時、ファロ子爵は思い出したようにPC1の騎士叙任式を執り行う。<br>PC2との合流は、PC2の発想に任せること。特に思いつかないようであれば、ファロ子爵からのお目付け役として同行させると良いだろう。<br>多少の会話を演出したあと、ブライドルフ近郊へ視点を移すこと。</p>
-<p>ブライドルフ近郊にて、目標値10の&lt;感覚&gt;判定を行うこと。<br>判定に成功した場合、ブライドルフ方面で混沌の収束を感じ取ることができる。<br>これはすなわち、混沌の具現化現象が発生していることを意味する。<br>この場合、現場に急行するかどうかを選ばせる。<br>「判定に失敗した、または急行しないことを選択した」場合と、「急行した場合」でシーン3の処理に影響がある。</p>
-<p> 結末<br>結果はどうあれ、シーンを切り上げ、次のシーンに移行する。</p>
-</blockquote>
-<ul>
-<li><p><em>シーン1について</em><br>　「導入なのでシリアスな感じで描写したいなー。」と思っていたら、ヤマトがかっこよく乗ってくれました。<br>　シーン自体は予定通りに進行したため、意図的に非協力的な行動をとるPLがいないかぎり、ここで躓くことはないだろう。</p>
-</li>
-<li><p><em>シーン2</em></p>
-</li>
+    <li><em>シーン1</em></li>
 </ul>
 <blockquote>
-<p>登場:PC3,ヒュッカ　混沌レベル：4<br>PC3とヒュッカがブライドルフへ向かっているシーン。<br>少し、PC3とヒュッカとの会話を演出しておく。<br>その後、軽くブライドルフに関する解説をしておく。<br>・鉛の鉱床があること<br>　「前にも言ったかもしれないけど、ブライドルフはあたしの故郷なんだ。」<br>　「大したものはないけどさ、鉛の鉱床があるから、あたしはそれを元手に商売してるってわけさ」<br>・僻地なのであまり注目されていないこと<br>　「生まれ故郷にケチつける気はないけどさぁ、ちょーーーっと田舎すぎるんだよね。」<br>　「今はファロって子爵のもと、自治権を認められてるんだけどね。金やら銀やらじゃないと見向きもしないんだ。おかげでうちの村は、自治という名の放任状態さ。」<br>・交易による利益で、村民は生活には困っていないこと<br>　「とはいっても、鉛はあんまり注目されないけどさ、見る目のある人には有用な金属なのさ！」<br>　「あたしの村は細々と。だけど、近隣の村との付き合いで豊かに生活できてるんだよ。」</p>
-<p>適当なところで会話を切り上げ、エキストラのゴブリンと遭遇する。<br>演出後、PC3にはPC3には&lt;知覚&gt;または&lt;感覚&gt;の判定を行わせる。(目標値8)<br>成否にかかわらず、複数の妖魔と遭遇する。<br>各PCの合流を目的とし、またゴブリン2体及びバグベア1体との戦闘を行うシーン。</p>
-<p><u>前提条件を確認すること。<u></u></u></p>
-<p>・PC1またはPC2が「急行する」を選択した場合、1ラウンド目から合流できること。<br>・PC1またはPC2が「急行する」を選択しなかった場合、2ラウンド目から合流する。</p>
-<p>初期配置はD-2にPC3、ヒュッカ。C-4にゴブリンA,B、D-5にバグベアを配置する。<br>PC1及びPC2の配置は、タイミングにあわせてB7-F7で自由に選択させること。<br>ゴブリンはランダムに近くの敵を攻撃する。<br>戦闘後、結末に移る。</p>
-<p>結末<br>各PCが合流し、パーティを組むことを想定している。<br>ヒュッカと軽く会話を行う。<br>　「(PC3へ向けて)た、助けてくれてありがとよ。ご護衛を依頼した元が、と、とれたってもんだ…情けないな、あたしとしたことが、ちょっとブルっときたよ。」<br>　「(PC1、PC2へ向けて)あんたたちもありがとな。手持ちに金はないから、大したお礼はできないけどさ。ブライドルフってちっこい村なんだけど、時間があるなら一宿一飯くらいはお礼させてくれよな！」<br>このままブライドルフへ向かうこと。</p>
+    <p>登場:PC1,PC2,ファロ子爵　混沌レベル：3<br>当シーンのあいだ、ファロ子爵はPC1を適度に、適当に扱うこと。<br>PC1がファロ子爵の元を訪れ、ブライドルフ徴税の任務を言い渡すシーン。<br>この時、ファロ子爵は思い出したようにPC1の騎士叙任式を執り行う。<br>PC2との合流は、PC2の発想に任せること。特に思いつかないようであれば、ファロ子爵からのお目付け役として同行させると良いだろう。<br>多少の会話を演出したあと、ブライドルフ近郊へ視点を移すこと。</p>
+    <p>ブライドルフ近郊にて、目標値10の&lt;感覚&gt;判定を行うこと。<br>判定に成功した場合、ブライドルフ方面で混沌の収束を感じ取ることができる。<br>これはすなわち、混沌の具現化現象が発生していることを意味する。<br>この場合、現場に急行するかどうかを選ばせる。<br>「判定に失敗した、または急行しないことを選択した」場合と、「急行した場合」でシーン3の処理に影響がある。</p>
+    <p> 結末<br>結果はどうあれ、シーンを切り上げ、次のシーンに移行する。</p>
 </blockquote>
 <ul>
-<li><p><em> シーン2について</em><br>　残りのPCと合流するシーン。PL人数が４人の場合は、ここに追加すると良いだろう。エキストラ戦では軽く殺伐とした雰囲気に変えてもらうことが目的なので、過度なRPを強制しないよう注意。<br>　実プレイでは２，３ラウンド程度だったので、モブエネミー戦力の目安にするとよいだろう。</p>
-</li>
-<li><p><em>シーン3</em></p>
-</li>
+    <li><p><em>シーン1について</em><br>　「導入なのでシリアスな感じで描写したいなー。」と思っていたら、ヤマトがかっこよく乗ってくれました。<br>　シーン自体は予定通りに進行したため、意図的に非協力的な行動をとるPLがいないかぎり、ここで躓くことはないだろう。</p>
+    </li>
+    <li><p><em>シーン2</em></p>
+    </li>
 </ul>
 <blockquote>
-<p>登場:全員　混沌レベル：4<br>ブライドルフへ到着するシーン。<br>ブライドルフの描写は以下のように行う。<br>「時刻は夕刻となり、血のような夕焼けがややまぶしい。<br>ブライドルフは小村にしては立派な、木製の柵と門で囲われた立地だ。<br>街路では衛兵が「閉門時間だ、早く戻れ」などとと叫んでおり、仕事を終えた農夫たちが慌ただしく村へと戻っていく。<br>この時、&lt;知覚&gt;の目標値8で判定を行うこと。成否にかかわらず。背後の森からがさがさと木こりのパトリックが現れる。<br>「・・・おや、旅人さんですかな？」「あ、パトリックさん！」「おぉ、ヒュッカじゃないか。戻ってきたんだねえ。」「話は後にしよう。門が閉まってしまうからね。・・・そちらの方々は？」「あたしの雇った護衛と、道中危ないところを助けてくれた恩人さ」「なるほど、ともあれ、急いで戻りましょう。門が閉まってしまったら、一晩待ちぼうけになってしまいます。」<br>衛兵は君たちの元へもやってくると、「旅人か？ここはもうすぐ閉門する。用があるなら急ぎ入るように。」と告げ、去っていく。<br>ヒュッカは君たちにお礼を良い、夕食と、狭いが部屋を用意する、と申し出てくる。<br>「村一番の酒場があるんだ。一緒にどうかな？」<br>「ヒュッカよ、込み入った話をするなら君の家のほうが安全だよ」<br>「へ・・・？うーん、あんたたちはどっちがいい？」とPCたちに振る。</p>
-<p>・酒場を選択する場合、パトリックは帰宅する。→①<br>・ヒュッカの自宅を選択する場合は、パトリックも同席する。→②<br>・食事を断る場合は結末へ。<br>「PC３，長い間護衛してくれてありがとな！正式な手続きは明日商業ギルドでしよう！」と明るく別れを告げる。</p>
-<p>①パトリックからの情報が得られない以外は、②と同様に処理をする。<br>なお、他の客に話をきくなどで類似情報を収集することは可能。この場合は難しめの判定を行うこと。(情報収集12→話術12など)</p>
-<p>②夕食にはパトリックも同席する。黒焼きの堅パン、玉ねぎとジャーキーを戻したスープ、各地で仕入れた名産のチーズやワインを振る舞ってくれる。<br>「ひっさしぶりに帰ってきて驚いたけどさ、城壁が出来て、郊外には畑が広がってるんだな。我が故郷ながら成長を実感したよ。」と冗談交じりに話してくれる。<br>「そいや、PC1とPC2は何しにこんな村までやってきたんだい？」と、旅の目的をRPしてもらう。<br>「それから、一番気になっているんだけど・・・パトリックさん、なんで木こりなんてやってるの？採掘現場の監督だったよね？」<br>ここでパトリックは言いよどむため、&lt;話術&gt;の目標値10で判定を行う。</p>
-<p>獲得できる情報の一覧</p>
-<ol>
-<li>城壁などは最近急増されたもの。</li>
-<li>城壁などは鉛採鉱技師などが動員されていること。</li>
-<li>クレストをもつ山賊の首領が実質的に領地を管理していること。</li>
-<li>出入りは常に衛兵が監視しており、逃亡や脱走の疑いが経つと騎兵の追撃が送られること。</li>
-</ol>
-<p>また、パトリック経由、酒場経由のどちらの場合でも、具体的な調査項目として、以下を挙げる。</p>
-<ol>
-<li>ツルハシ、斧などの武器になる道具の格納場所</li>
-<li>近隣集落が助力してくれるかもしれないという情報</li>
-<li>地理的な情報をヒュッカから仕入れることができる。</li>
-</ol>
-<p>結末<br>プレッジシーンを挟んだ後、翌朝のシーンへ。</p>
+    <p>登場:PC3,ヒュッカ　混沌レベル：4<br>PC3とヒュッカがブライドルフへ向かっているシーン。<br>少し、PC3とヒュッカとの会話を演出しておく。<br>その後、軽くブライドルフに関する解説をしておく。<br>・鉛の鉱床があること<br>　「前にも言ったかもしれないけど、ブライドルフはあたしの故郷なんだ。」<br>　「大したものはないけどさ、鉛の鉱床があるから、あたしはそれを元手に商売してるってわけさ」<br>・僻地なのであまり注目されていないこと<br>　「生まれ故郷にケチつける気はないけどさぁ、ちょーーーっと田舎すぎるんだよね。」<br>　「今はファロって子爵のもと、自治権を認められてるんだけどね。金やら銀やらじゃないと見向きもしないんだ。おかげでうちの村は、自治という名の放任状態さ。」<br>・交易による利益で、村民は生活には困っていないこと<br>　「とはいっても、鉛はあんまり注目されないけどさ、見る目のある人には有用な金属なのさ！」<br>　「あたしの村は細々と。だけど、近隣の村との付き合いで豊かに生活できてるんだよ。」</p>
+    <p>適当なところで会話を切り上げ、エキストラのゴブリンと遭遇する。<br>演出後、PC3にはPC3には&lt;知覚&gt;または&lt;感覚&gt;の判定を行わせる。(目標値8)<br>成否にかかわらず、複数の妖魔と遭遇する。<br>各PCの合流を目的とし、またゴブリン2体及びバグベア1体との戦闘を行うシーン。</p>
+    <p><u>前提条件を確認すること。<u></u></u></p>
+    <p>・PC1またはPC2が「急行する」を選択した場合、1ラウンド目から合流できること。<br>・PC1またはPC2が「急行する」を選択しなかった場合、2ラウンド目から合流する。</p>
+    <p>初期配置はD-2にPC3、ヒュッカ。C-4にゴブリンA,B、D-5にバグベアを配置する。<br>PC1及びPC2の配置は、タイミングにあわせてB7-F7で自由に選択させること。<br>ゴブリンはランダムに近くの敵を攻撃する。<br>戦闘後、結末に移る。</p>
+    <p>結末<br>各PCが合流し、パーティを組むことを想定している。<br>ヒュッカと軽く会話を行う。<br>　「(PC3へ向けて)た、助けてくれてありがとよ。ご護衛を依頼した元が、と、とれたってもんだ…情けないな、あたしとしたことが、ちょっとブルっときたよ。」<br>　「(PC1、PC2へ向けて)あんたたちもありがとな。手持ちに金はないから、大したお礼はできないけどさ。ブライドルフってちっこい村なんだけど、時間があるなら一宿一飯くらいはお礼させてくれよな！」<br>このままブライドルフへ向かうこと。</p>
 </blockquote>
 <ul>
-<li><em> シーン3について</em><br>　 ブライドルフの現状を認識してもらうシーン。<br>　 パトリックの登場時に空ダイスを振ることで、やや緊張感を高める効果を狙っている。<br>　基本的には、ヒュッカで会話を主導することで、①または②を選択してもらえるはずだ。<br>　（パトリックが信用できないなら①を、信用または驚異とみなされない場合は②を選択するはずだからだ。）<br>　仮に、「村を抜け出し子爵へ連絡する」などの意見が出た場合は、「あなたたちはよそ者だから注意されているし、すぐに騎兵隊が追ってくるだろう」と告げる。それでも敢行する場合は、特殊シーンとしてマスコン(PLvs騎兵Lv1)シーンを挿入し、以後の展開はGMの裁量とする。（ほぼゲームオーバーだろう。）<br>　実プレイでは、ヒュッカもパトリックも信用されたのか、すんなり②を選択された。</li>
+    <li><p><em> シーン2について</em><br>　残りのPCと合流するシーン。PL人数が４人の場合は、ここに追加すると良いだろう。エキストラ戦では軽く殺伐とした雰囲気に変えてもらうことが目的なので、過度なRPを強制しないよう注意。<br>　実プレイでは２，３ラウンド程度だったので、モブエネミー戦力の目安にするとよいだろう。</p>
+    </li>
+    <li><p><em>シーン3</em></p>
+    </li>
+</ul>
+<blockquote>
+    <p>登場:全員　混沌レベル：4<br>ブライドルフへ到着するシーン。<br>ブライドルフの描写は以下のように行う。<br>「時刻は夕刻となり、血のような夕焼けがややまぶしい。<br>ブライドルフは小村にしては立派な、木製の柵と門で囲われた立地だ。<br>街路では衛兵が「閉門時間だ、早く戻れ」などとと叫んでおり、仕事を終えた農夫たちが慌ただしく村へと戻っていく。<br>この時、&lt;知覚&gt;の目標値8で判定を行うこと。成否にかかわらず。背後の森からがさがさと木こりのパトリックが現れる。<br>「・・・おや、旅人さんですかな？」「あ、パトリックさん！」「おぉ、ヒュッカじゃないか。戻ってきたんだねえ。」「話は後にしよう。門が閉まってしまうからね。・・・そちらの方々は？」「あたしの雇った護衛と、道中危ないところを助けてくれた恩人さ」「なるほど、ともあれ、急いで戻りましょう。門が閉まってしまったら、一晩待ちぼうけになってしまいます。」<br>衛兵は君たちの元へもやってくると、「旅人か？ここはもうすぐ閉門する。用があるなら急ぎ入るように。」と告げ、去っていく。<br>ヒュッカは君たちにお礼を良い、夕食と、狭いが部屋を用意する、と申し出てくる。<br>「村一番の酒場があるんだ。一緒にどうかな？」<br>「ヒュッカよ、込み入った話をするなら君の家のほうが安全だよ」<br>「へ・・・？うーん、あんたたちはどっちがいい？」とPCたちに振る。
+    </p>
+    <p>・酒場を選択する場合、パトリックは帰宅する。→①<br>・ヒュッカの自宅を選択する場合は、パトリックも同席する。→②<br>・食事を断る場合は結末へ。<br>「PC３，長い間護衛してくれてありがとな！正式な手続きは明日商業ギルドでしよう！」と明るく別れを告げる。</p>
+    <p>①パトリックからの情報が得られない以外は、②と同様に処理をする。<br>なお、他の客に話をきくなどで類似情報を収集することは可能。この場合は難しめの判定を行うこと。(情報収集12→話術12など)</p>
+    <p>②夕食にはパトリックも同席する。黒焼きの堅パン、玉ねぎとジャーキーを戻したスープ、各地で仕入れた名産のチーズやワインを振る舞ってくれる。<br>「ひっさしぶりに帰ってきて驚いたけどさ、城壁が出来て、郊外には畑が広がってるんだな。我が故郷ながら成長を実感したよ。」と冗談交じりに話してくれる。<br>「そいや、PC1とPC2は何しにこんな村までやってきたんだい？」と、旅の目的をRPしてもらう。<br>「それから、一番気になっているんだけど・・・パトリックさん、なんで木こりなんてやってるの？採掘現場の監督だったよね？」<br>ここでパトリックは言いよどむため、&lt;話術&gt;の目標値10で判定を行う。</p>
+    <p>獲得できる情報の一覧</p>
+    <ol>
+        <li>城壁などは最近急増されたもの。</li>
+        <li>城壁などは鉛採鉱技師などが動員されていること。</li>
+        <li>クレストをもつ山賊の首領が実質的に領地を管理していること。</li>
+        <li>出入りは常に衛兵が監視しており、逃亡や脱走の疑いが経つと騎兵の追撃が送られること。</li>
+    </ol>
+    <p>また、パトリック経由、酒場経由のどちらの場合でも、具体的な調査項目として、以下を挙げる。</p>
+    <ol>
+        <li>ツルハシ、斧などの武器になる道具の格納場所</li>
+        <li>近隣集落が助力してくれるかもしれないという情報</li>
+        <li>地理的な情報をヒュッカから仕入れることができる。</li>
+    </ol>
+    <p>結末<br>プレッジシーンを挟んだ後、翌朝のシーンへ。</p>
+</blockquote>
+<ul>
+    <li><em> シーン3について</em><br>　 ブライドルフの現状を認識してもらうシーン。<br>　 パトリックの登場時に空ダイスを振ることで、やや緊張感を高める効果を狙っている。<br>　基本的には、ヒュッカで会話を主導することで、①または②を選択してもらえるはずだ。<br>　（パトリックが信用できないなら①を、信用または驚異とみなされない場合は②を選択するはずだからだ。）<br>　仮に、「村を抜け出し子爵へ連絡する」などの意見が出た場合は、「あなたたちはよそ者だから注意されているし、すぐに騎兵隊が追ってくるだろう」と告げる。それでも敢行する場合は、特殊シーンとしてマスコン(PLvs騎兵Lv1)シーンを挿入し、以後の展開はGMの裁量とする。（ほぼゲームオーバーだろう。）<br>　実プレイでは、ヒュッカもパトリックも信用されたのか、すんなり②を選択された。</li>
 </ul>
 <p><em>プレッジシーン</em><br>・因縁の取得<br>・誓いの取得<br>特筆する事項はない。メンバーの相談に乗る程度だろう。</p>
 <ul>
-<li><em>シーン4</em></li>
+    <li><em>シーン4</em></li>
 </ul>
 <blockquote>
-<p>登場:全員　混沌レベル：4<br>「では、私は夜明け前には自宅へ戻っておきます。ヒュッカ、この家は空き家ということになっていることを忘れないよう、慎重にな。」<br>暗雲垂れ込めるブライドルフ。そこに暮らす人々を嘲るように、晴れ晴れとした太陽が地を照らす。<br>今日も農奴たちは、己の管理番号を発生しながら、門外の畑仕事や森林活動へ向かっていく。<br>第３シーンでは、ブライドルフ内外で情報収集を行ってもらう。ここまでに提示した情報源に対してより深く調査するのだ。<br>改めて、具体的にどのような情報をどう判定すればよいか、以下に整理する。<br>プレイヤーには下記の調査対象を提示し、「各自、各情報ごとに1回ずつ判定ができる」旨を伝える。</p>
-<ol>
-<li>実際のポルトンの統治について《情報収集》難易度８</li>
-<li>代用武器となりそうな用具の保管場所《情報収集》難易度12</li>
-<li>近隣の集落相手への接触、及び協力の依頼《隠密》難易度10(全員成功)&amp;《話術》10</li>
-<li>地理的情報の収集《情報収集》12</li>
-</ol>
-<p>結末<br>達成した情報ごとに、以下を開示する。</p>
-<ol>
-<li>ポルトンの統治について - 徹底的な管理体制で独裁しているということを強調するだけでよい。パトリックの話と統合し、誅すべき相手と印象付けること。</li>
-<li>代用武器となりそうな用具の保管場所《情報収集》難易度12 - 民兵Lv1のひとつを、歩兵Lv1にアップグレードできる。</li>
-<li>近隣の集落相手への接触、及び協力の依頼《隠密》難易度10(全員成功)&amp;《話術》10 - 騎馬兵Lv1を獲得する。4人PLの場合は、盾兵Lv1も追加すること。</li>
-<li>地理的情報の収集《情報収集》12 - 決戦用マップを選択可能とすること。この判定に失敗した場合は、城門外マップを使用する。</li>
-</ol>
+    <p>登場:全員　混沌レベル：4<br>「では、私は夜明け前には自宅へ戻っておきます。ヒュッカ、この家は空き家ということになっていることを忘れないよう、慎重にな。」<br>暗雲垂れ込めるブライドルフ。そこに暮らす人々を嘲るように、晴れ晴れとした太陽が地を照らす。<br>今日も農奴たちは、己の管理番号を発生しながら、門外の畑仕事や森林活動へ向かっていく。<br>第３シーンでは、ブライドルフ内外で情報収集を行ってもらう。ここまでに提示した情報源に対してより深く調査するのだ。<br>改めて、具体的にどのような情報をどう判定すればよいか、以下に整理する。<br>プレイヤーには下記の調査対象を提示し、「各自、各情報ごとに1回ずつ判定ができる」旨を伝える。</p>
+    <ol>
+        <li>実際のポルトンの統治について《情報収集》難易度８</li>
+        <li>代用武器となりそうな用具の保管場所《情報収集》難易度12</li>
+        <li>近隣の集落相手への接触、及び協力の依頼《隠密》難易度10(全員成功)&amp;《話術》10</li>
+        <li>地理的情報の収集《情報収集》12</li>
+    </ol>
+    <p>結末<br>達成した情報ごとに、以下を開示する。</p>
+    <ol>
+        <li>ポルトンの統治について - 徹底的な管理体制で独裁しているということを強調するだけでよい。パトリックの話と統合し、誅すべき相手と印象付けること。</li>
+        <li>代用武器となりそうな用具の保管場所《情報収集》難易度12 - 民兵Lv1のひとつを、歩兵Lv1にアップグレードできる。</li>
+        <li>近隣の集落相手への接触、及び協力の依頼《隠密》難易度10(全員成功)&amp;《話術》10 - 騎馬兵Lv1を獲得する。4人PLの場合は、盾兵Lv1も追加すること。</li>
+        <li>地理的情報の収集《情報収集》12 - 決戦用マップを選択可能とすること。この判定に失敗した場合は、城門外マップを使用する。</li>
+    </ol>
 </blockquote>
 <ul>
-<li><em> シーン4について</em><br>　各判定の前後に軽くRPを依頼することで、雰囲気を演出できるだろう。失敗した場合でも、ペナルティを儲ける必要はない。<br>　なお、今回のプレイでは「昼夜のどちらかに、どのように行動するか」を宣言してもらった。」RPに詰まるようなら判定を促し、次の処理にすすめること。</li>
+    <li><em> シーン4について</em><br>　各判定の前後に軽くRPを依頼することで、雰囲気を演出できるだろう。失敗した場合でも、ペナルティを儲ける必要はない。<br>　なお、今回のプレイでは「昼夜のどちらかに、どのように行動するか」を宣言してもらった。」RPに詰まるようなら判定を促し、次の処理にすすめること。</li>
 </ul>
 <ul>
-<li><em>シーン5</em></li>
+    <li><em>シーン5</em></li>
 </ul>
 <blockquote>
-<p>登場:全員　混沌レベル：4<br>シーンの最初に、戦力の確認と、マスコン時に率いる舞台の設定、決戦場の選択などを行う。<br>一通りの確認が終わったら、イベント戦闘を発生させる。PCの逗留先に大して、ポルトン勢力から仕掛ける。<br>(おおむね、ヒュッカ宅での戦闘となるだろう。宿屋などでもよい。)<br>内訳は、暗殺者(Lv5アーティスト)×2、山賊(Lv1簡易エネミー)×2とする。</p>
-<p>結末<br>決戦準備が整ったら、プレッジシーンに移行する。</p>
+    <p>登場:全員　混沌レベル：4<br>シーンの最初に、戦力の確認と、マスコン時に率いる舞台の設定、決戦場の選択などを行う。<br>一通りの確認が終わったら、イベント戦闘を発生させる。PCの逗留先に大して、ポルトン勢力から仕掛ける。<br>(おおむね、ヒュッカ宅での戦闘となるだろう。宿屋などでもよい。)<br>内訳は、暗殺者(Lv5アーティスト)×2、山賊(Lv1簡易エネミー)×2とする。</p>
+    <p>結末<br>決戦準備が整ったら、プレッジシーンに移行する。</p>
 </blockquote>
 <p><em>シーン5について</em><br>このイベント戦闘は、マスコン前の最後の通常戦闘であり、またポルトンとの戦闘が不可避であることを印象づけるために行う。<br>メタ的な観点では、経験点調整のために行っているので、状況をみて省いても良い。また、暗殺者Lv5はなかなか凶悪。死人が出かねないので、注意しよう。</p>
 <p><em>プレッジシーン</em><br>・因縁の取得<br>・誓いの取得<br>特筆する事項はない。メンバーの相談に乗る程度だろう。</p>
 <ul>
-<li><em>シーン6</em></li>
+    <li><em>シーン6</em></li>
 </ul>
 <blockquote>
-<p>前夜の襲撃により、もはやポルトンを倒すしかないと決断し、行動にうつすシーン。<br>マスコンを行う。<br>敵側の内訳は以下のとおり。</p>
-<ol>
-<li>首領ポルトン(Lv7) サンプルシナリオ「ザジャブ」のデータを流用</li>
-<li>弓兵Lv1(Lv2)×2</li>
-<li>民兵Lv1(Lv1)×2<br>シーン3において地理的情報の収集を行っていた場合は、以下の4マップから好きなマップを選択可能とする。<br>備考：<br>《城門》について：武器防御10、HP60の障害物とする。<br>《防護盾》について：隣接スクエアにいる場合、射程1sq以上の武器属性ダメージを-5減衰する。同一スクエアに誰かが乗った場合、破壊される。</li>
-</ol>
-</blockquote></body>
+    <p>前夜の襲撃により、もはやポルトンを倒すしかないと決断し、行動にうつすシーン。<br>マスコンを行う。<br>敵側の内訳は以下のとおり。</p>
+    <ol>
+        <li>首領ポルトン(Lv7) サンプルシナリオ「ザジャブ」のデータを流用</li>
+        <li>弓兵Lv1(Lv2)×2</li>
+        <li>民兵Lv1(Lv1)×2<br>シーン3において地理的情報の収集を行っていた場合は、以下の4マップから好きなマップを選択可能とする。<br>備考：<br>《城門》について：武器防御10、HP60の障害物とする。<br>《防護盾》について：隣接スクエアにいる場合、射程1sq以上の武器属性ダメージを-5減衰する。同一スクエアに誰かが乗った場合、破壊される。</li>
+    </ol>
+</blockquote>
+</body>
 </html>
