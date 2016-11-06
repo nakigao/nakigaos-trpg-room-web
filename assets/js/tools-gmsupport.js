@@ -168,6 +168,15 @@ $("#talk-form-system button").on('click', function (e) {
 $("#talk-form-gm button").on('click', function (e) {
     processTalk($("#talk-form-gm"));
 });
+// PL発言に関する
+$("#talk-message-pl").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-pl button").trigger("click");
+    }
+});
+$("#talk-form-pl button").on('click', function (e) {
+    processTalk($("#talk-form-pl"));
+});
 $("#set-room-info-form button").on('click', function (e) {
     var formObj = $("#set-room-info-form");
     var commonData = getCommonFormData();
@@ -282,21 +291,51 @@ $("#add-memo-form button").on('click', function (e) {
         }
     });
 });
-//
+// 汎用トークフォームに関する
+$("#talk-message-1").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-1 button").trigger("click");
+    }
+});
 $("#talk-form-1 button").on('click', function (e) {
     processTalk($("#talk-form-1"));
+});
+$("#talk-message-2").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-2 button").trigger("click");
+    }
 });
 $("#talk-form-2 button").on('click', function (e) {
     processTalk($("#talk-form-2"));
 });
+$("#talk-message-3").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-3 button").trigger("click");
+    }
+});
 $("#talk-form-3 button").on('click', function (e) {
     processTalk($("#talk-form-3"));
+});
+$("#talk-message-4").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-4 button").trigger("click");
+    }
 });
 $("#talk-form-4 button").on('click', function (e) {
     processTalk($("#talk-form-4"));
 });
+$("#talk-message-5").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-5 button").trigger("click");
+    }
+});
 $("#talk-form-5 button").on('click', function (e) {
     processTalk($("#talk-form-5"));
+});
+$("#talk-message-6").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-6 button").trigger("click");
+    }
 });
 $("#talk-form-6 button").on('click', function (e) {
     processTalk($("#talk-form-6"));
