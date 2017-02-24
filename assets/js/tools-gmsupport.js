@@ -30,6 +30,7 @@ function getTalkData(formObj) {
     data.color = formObj.find("[id^='talk-color']").val().replace('#', '');
     data.message = formObj.find("[id^='talk-message']").val();
     data.webif = 'talk';
+    formObj.find("[id^='talk-message']").val('');
     return data;
 }
 /**
@@ -167,6 +168,11 @@ $("#talk-form-system button").on('click', function (e) {
 });
 $("#talk-form-gm button").on('click', function (e) {
     processTalk($("#talk-form-gm"));
+});
+$("#talk-message-gm").on("keydown", function (e) {
+    if (e.keyCode === 13) {
+        $("#talk-form-gm button").trigger("click");
+    }
 });
 // PL発言に関する
 $("#talk-message-pl").on("keydown", function (e) {

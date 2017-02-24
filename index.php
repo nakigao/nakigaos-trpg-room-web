@@ -17,7 +17,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         // TODO: OOOOOOOOOOOOOOOOOOOOOOOOOOPS!
-
     )
 ));
 
@@ -93,7 +92,7 @@ $app->get('/gmsupport/', function () use ($app) {
         array('GeishaGirlwithKatana', 'GeishaGirlwithKatana', false),
         array('GoldenSkyStories', 'GoldenSkyStories', false),
         array('Gorilla', 'Gorilla', false),
-        array('GranCrest', 'GranCrest', false),
+        array('GranCrest', 'グランクレスト', true),
         array('Gundog', 'Gundog', false),
         array('GundogZero', 'GundogZero', false),
         array('Gurps', 'Gurps', false),
@@ -115,7 +114,7 @@ $app->get('/gmsupport/', function () use ($app) {
         array('LiveraDoll', 'LiveraDoll', false),
         array('LogHorizon', 'LogHorizon', false),
         array('LogHorizon_Korean', 'LogHorizon_Korean', false),
-        array('LostRoyal', 'LostRoyal', false),
+        array('LostRoyal', 'ロストロイヤル', true),
         array('MagicaLogia', 'MagicaLogia', false),
         array('MeikyuDays', '迷宮デイズ', true),
         array('MeikyuKingdom', '迷宮キングダム', true),
@@ -133,7 +132,7 @@ $app->get('/gmsupport/', function () use ($app) {
         array('Oukahoushin3rd', 'Oukahoushin3rd', false),
         array('Paranoia', 'Paranoia', false),
         array('ParasiteBlood', 'ParasiteBlood', false),
-        array('Pathfinder', 'Pathfinder', false),
+        array('Pathfinder', 'Pathfinder', true),
         array('Peekaboo', 'Peekaboo', false),
         array('Pendragon', 'Pendragon', false),
         array('PhantasmAdventure', 'PhantasmAdventure', false),
