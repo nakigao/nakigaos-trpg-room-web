@@ -1,8 +1,54 @@
 /*!
- * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+
+body {
+    overflow-x: hidden;
+}
+
+/* scroll-bar customize */
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999999;
+    border: 0 none #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999999;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #999999;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border: 0 none #000000;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #000000;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #000000;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
 
 /* Toggle Styles */
 
@@ -21,12 +67,14 @@
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
+    color: #999999;
+    background: #000000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -56,24 +104,33 @@
     width: 250px;
     margin: 0;
     padding: 0;
+}
+
+.sidebar-nav ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+    text-indent: 1em;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .sidebar-nav li a {
     display: block;
+    min-height: 25px;
     text-decoration: none;
     color: #999999;
+    padding: 11px;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -82,9 +139,7 @@
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 65px;
     font-size: 18px;
-    line-height: 60px;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -96,29 +151,25 @@
     background: none;
 }
 
-/* Sidebar extra Styles */
-
-.sidebar-nav > .sidebar-info {
-    font-size: 10px;
-    padding: 30px 20px 0 20px;
-    text-indent: 0;
-    line-height: normal;
+.sidebar-nav > .sidebar-footer {
+    display: block;
+    font-size: 9px;
+    padding: 15px;
 }
 
-.sidebar-nav > .sidebar-info a{
+.sidebar-nav > .sidebar-footer a {
     display: inline;
-    text-decoration: none;
+    padding: 0;
+    margin: 0;
     color: #999999;
 }
 
-.sidebar-nav > .sidebar-info a:hover {
+.sidebar-nav > .sidebar-footer a:hover {
     color: #fff;
     background: none;
 }
 
-/* media query for small device */
-
-@media(min-width:768px) {
+@media (min-width: 768px) {
     #wrapper {
         padding-left: 250px;
     }
@@ -144,4 +195,35 @@
         position: relative;
         margin-right: 0;
     }
+}
+
+/* main contents */
+
+#page-content-wrapper h1 {
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+}
+
+#page-content-wrapper h2 {
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Orienta', sans-serif;
+}
+
+#page-content-wrapper h3 {
+    color: #343434;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Orienta', sans-serif;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+#page-content-wrapper h4 {
+    color: #343434;
+    font-weight: normal;
+    font-family: 'Orienta', sans-serif;
 }
