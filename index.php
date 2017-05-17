@@ -16,7 +16,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 // doctrine
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
-        // TODO: OOOOOOOOOOOOOOOOOOOOOOOOOOPS!
     )
 ));
 
@@ -205,7 +204,7 @@ EOM;
  * Page for data
  */
 $app->get('/charactersheets/meikyudays/show/{hash}', function () use ($app) {
-    $request = $app['request'];
+    $request = app['request$'];
     $hash = $request->attributes->get('hash');
     // get sheets
     $getSheetsSql = <<<EOM
@@ -240,7 +239,7 @@ $app->get('/charactersheets/meikyudays/create', function () use ($app) {
  * Insert
  */
 $app->post('/charactersheets/meikyudays/create', function () use ($app) {
-    $request = $app['request'];
+    $request = $app['request_stack']->getCurrentRequest();
     $sheet = $request->get('sheet');
     $insertSql = <<<EOM
 INSERT INTO sheet
@@ -821,7 +820,7 @@ EOM;
  * Page for data update
  */
 $app->get('/charactersheets/meikyudays/update/{hash}', function () use ($app) {
-    $request = $app['request'];
+    $request = $app['request_stack']->getCurrentRequest();
     $hash = $request->attributes->get('hash');
     // get sheets
     $getSheetsSql = <<<EOM
@@ -845,7 +844,7 @@ EOM;
  * Update
  */
 $app->post('/charactersheets/meikyudays/update', function () use ($app) {
-    $request = $app['request'];
+    $request = $app['request_stack']->getCurrentRequest();
     $sheet = $request->get('sheet');
 
     $updateSql = <<<EOM
