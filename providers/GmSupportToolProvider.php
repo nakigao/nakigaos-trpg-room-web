@@ -157,8 +157,8 @@ class GmSupportToolProvider implements ControllerProviderInterface
          */
         $controllers->get('/', function () use ($app) {
             return $app['twig']->render('gm-support-tool/index.html.twig', array(
-                'siteName' => 'nakigao\'s TRPG Room',
-                'pageName' => 'INDEX',
+                'commonVariables' => $app['commonVariables'],
+                'pageName' => 'GM SUPPORT TOOL',
                 'diceBotList' => $this->_diceBotList
             ));
         });

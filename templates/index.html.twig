@@ -1,0 +1,31 @@
+{% extends 'layout.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ global.request.baseUrl }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascript %}
+    {#<script src="{{ global.request.baseUrl }}/assets/js/xxxxx.js"></script>#}
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">HOME</h1>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>REPLAYS - リプレイ</h2>
+                    <p>自分が参加したセッションのリプレイ集。</p>
+                    <p><a href="{{ global.request.baseUrl }}/replay">※項目が多くなってきたのでこちらからどうぞ</a></p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>TOOLS - ツール</h2>
+                    <p>TRPGのサポートツール。</p>
+                    <p><a href="{{ global.request.baseUrl }}/gm-support-tool/">TRPG GM SUPPORT TOOLS FOR DodontoF API</a></p>
+                    <p><a href="{{ global.request.baseUrl }}/character-sheet/meikyudays/">迷宮デイズキャラクター保管庫(β)</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

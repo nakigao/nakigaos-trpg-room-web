@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    background-color: #FFFFFF;
+}
+
+/**
+ * scrollbar customize for webkit
+ */
+::-webkit-scrollbar-button {
+    display: none;
+    height: 13px;
+    border-radius: 0;
+    background-color: #AAAAAA;
+}
+
+::-webkit-scrollbar-button:hover {
+    background-color: #AAAAAA;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #EFEFEF;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+.navbar {
+    color: #777777;
+    background-color: #FFFFFF;
+}
+
+.navbar h1{
+    margin-right: 15px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: large;
+}
+
+.navbar p{
+    font-size: xx-small;
+    margin-bottom: 0;
+}
+
+.navbar a {
+    color: #777777;
+    text-decoration: none;
+}
+
+.navbar-fixed-top {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+
+.sidebar ul li {
+    line-height: 24px;
+    /*border-top: 1px solid #37414B;*/
+    /*border-bottom: 1px solid #1F262D;*/
+    /*border-bottom: 1px solid #EEEEEE;*/
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        /*padding: 20px;*/
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #F5F5F5;
+        border-right: 1px solid #EEEEEE;
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    /*margin-bottom: 20px;*/
+    margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #777777;
+    background: #FFFFFF;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    background: #000000;
+    color: #FFFFFF;
+    /*background-color: #428BCA;*/
+}
+
+/* Sidebar navigation(secondary) */
+.nav-sidebar-secondary {
+    /* nothing to do */
+}
+
+.nav-sidebar-secondary > li > a {
+    padding-left: 20px;
+    color: #777777;
+    background: #FFFFFF;
+}
+
+.nav-sidebar-secondary > .active > a,
+.nav-sidebar-secondary > .active > a:hover,
+.nav-sidebar-secondary > .active > a:focus {
+    color: #000000;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+/* ここからカスタム */
+/* ---------------------------------------------------- */
+/* ---------------------------------------------------- */
+
+/* customize for bootstrap tooltip*/
+div.tooltip-inner {
+    max-width: 350px;
+}
+
+.navbar-brand .site-symbol {
+    position: absolute;
+    top: 0;
+    /*right:0;*/
+    width: 50px;
+}
+
+.navbar-brand .site-symbol .symbol {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.navbar-brand .site-symbol .symbol > img {
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    /*right: 0;*/
+}
+
+.navbar-brand .site-symbol .symbol .circle {
+    -webkit-animation-name: flipInY;
+    animation-name: flipInY;
+    -webkit-animation-delay: 1.75s;
+    animation-delay: 1.75s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.navbar-brand .site-symbol .symbol .bright {
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    -webkit-animation-delay: 2.75s;
+    animation-delay: 2.75s;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/* Bootstrap Toggle custom style */
+.toggle.android {
+    border-radius: 0;
+}
+
+.toggle.android .toggle-handle {
+    border-radius: 0;
+}
+
+/* Bootstrap button custom style */
+.btn {
+    border-radius: 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.form-control option {
+    padding: 0.75em;
+}
+
+.form-control-text {
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    padding: 6px 12px 6px 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+}
+
+/* news table */
+
+.news_table {
+
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.entry-img-border-on {
+    border-bottom: 3px solid #888888;
+}
