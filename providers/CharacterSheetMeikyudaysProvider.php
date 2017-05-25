@@ -31,8 +31,10 @@ EOM;
             $stmt->execute();
             $sheets = $stmt->fetchAll();
             return $app['twig']->render('character-sheet/meikyudays/index.html.twig', array(
-                'commonVariables' => $app['commonVariables'],
-                'pageName' => 'INDEX',
+                'commonVariables' => array(
+                    'siteName' => '迷宮デイズキャラクターシート(β)'
+                ),
+                'pageName' => '一覧',
                 'sheets' => $sheets
             ));
         });
@@ -53,7 +55,9 @@ EOM;
             $stmt->execute();
             $sheet = $stmt->fetch();
             return $app['twig']->render('character-sheet/meikyudays/show.html.twig', array(
-                'commonVariables' => $app['commonVariables'],
+                'commonVariables' => array(
+                    'siteName' => '迷宮デイズキャラクターシート(β)'
+                ),
                 'pageName' => '閲覧',
                 'sheet' => $sheet
             ));
@@ -63,7 +67,9 @@ EOM;
          */
         $controllers->get('/create', function () use ($app) {
             return $app['twig']->render('character-sheet/meikyudays/edit.html.twig', array(
-                'commonVariables' => $app['commonVariables'],
+                'commonVariables' => array(
+                    'siteName' => '迷宮デイズキャラクターシート(β)'
+                ),
                 'pageName' => '作成',
                 'nextAction' => 'create',
                 'sheet' => array()
@@ -666,7 +672,9 @@ EOM;
             $stmt->execute();
             $sheet = $stmt->fetch();
             return $app['twig']->render('character-sheet/meikyudays/edit.html.twig', array(
-                'commonVariables' => $app['commonVariables'],
+                'commonVariables' => array(
+                    'siteName' => '迷宮デイズキャラクターシート(β)'
+                ),
                 'pageName' => '更新',
                 'nextAction' => 'update',
                 'sheet' => $sheet

@@ -1,37 +1,60 @@
-{#views/character-sheet/meikyudays/index.html.twig#}
-{% extends 'character-sheet/meikyudays/base.html.twig' %}
+{% extends 'layout.twig' %}
 {% block title %}{{ pageName }} | {{ commonVariables.siteName }}{% endblock %}
 {% block page_header %}{{ pageName }} | {{ commonVariables.siteName }}{% endblock %}
 {% block stylesheets %}{% endblock %}
 {% block javascripts %}{% endblock %}
 
 {% block body %}
-    <div class="form-group row">
-        <div class="col-sm-12">
-            <div class="table-responsive">
-                <table class="table">
-                    <tr>
-                        <th class="col-sm-6">名前</th>
-                        <th>レベル</th>
-                        <th>クラス</th>
-                        <th>性別</th>
-                        <th>年齢</th>
-                        <th>作成者</th>
-                        <th></th>
-                    </tr>
-                    {% for sheet in sheets %}
-                        <tr>
-                            <td>{{ sheet.character_name|e }}</td>
-                            <td>{{ sheet.level|e }}</td>
-                            <td>{{ sheet.class|e }}</td>
-                            <td>{{ sheet.gender|e }}</td>
-                            <td>{{ sheet.age|e }}</td>
-                            <td>{{ sheet.player_name|e }}</td>
-                            <td><a href="{{ global.request.baseUrl }}/character-sheet/meikyudays/update/{{ sheet.hash }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
-                        </tr>
-                    {% endfor %}
-                </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>{{ pageName }} | {{ commonVariables.siteName }}</h1>
+                <p>迷宮デイズ向けのキャラクターシート</p>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row pull-right">
+            <div class="col-sm-12">
+                <a href="{{ global.request.baseUrl }}/character-sheet/meikyudays/create"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>NEW</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <th class="col-sm-6">名前</th>
+                            <th>レベル</th>
+                            <th>クラス</th>
+                            <th>性別</th>
+                            <th>年齢</th>
+                            <th>作成者</th>
+                            <th></th>
+                        </tr>
+                        {% for sheet in sheets %}
+                            <tr>
+                                <td>{{ sheet.character_name|e }}</td>
+                                <td>{{ sheet.level|e }}</td>
+                                <td>{{ sheet.class|e }}</td>
+                                <td>{{ sheet.gender|e }}</td>
+                                <td>{{ sheet.age|e }}</td>
+                                <td>{{ sheet.player_name|e }}</td>
+                                <td><a href="{{ global.request.baseUrl }}/character-sheet/meikyudays/update/{{ sheet.hash }}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p style="font-size: x-small">本Webサイトで紹介させていただいている"迷宮デイズ"および"Make you Days"は、<a target="_blank" href="http://www.bouken.jp/">冒険企画局(Adventure Planning Service)</a>様の著作物です。 </p>
+                </div>
+            </div>
+        </section>
     </div>
 {% endblock %}
