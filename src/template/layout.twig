@@ -8,11 +8,11 @@
     <meta name="description" content="参加したリプレイを中心に、TRPG関連で作ったものをひっそりと置いています。TRPG、リプレイ、ソードワールド2.0リプレイ、ガーデンオーダーリプレイ、マスカレイドスタイルリプレイ、すくぱに♪リプレイ">
     <meta name="author" content="">
     <meta name="keywords" content="">
-    <title>{% block title %}{{ pageName }} | {{ commonVariables.siteName }}{% endblock %}</title>
-    <link href="{{ global.request.baseUrl }}/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ global.request.baseUrl }}/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{ global.request.baseUrl }}/assets/css/layout.css" rel="stylesheet">
-    <link href="{{ global.request.baseUrl }}/assets/css/site.css" rel="stylesheet">
+    <title>{% block title %}{{ page_title }} | {{ site_title }}{% endblock %}</title>
+    <link href="{{ base_url }}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/layout.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/site.css" rel="stylesheet">
     {% block stylesheet %}{% endblock %}
 </head>
 <body>
@@ -27,10 +27,10 @@
         </div>
     </div>
 </div>
-<script src="{{ global.request.baseUrl }}/assets/js/jquery.min.js"></script>
-<script src="{{ global.request.baseUrl }}/assets/js/jquery.jsonp.min.js"></script>
-<script src="{{ global.request.baseUrl }}/assets/js/bootstrap.min.js"></script>
-<script src="{{ global.request.baseUrl }}/assets/js/site.js"></script>
+<script src="{{ base_url }}/assets/js/jquery.min.js"></script>
+<script src="{{ base_url }}/assets/js/jquery.jsonp.min.js"></script>
+<script src="{{ base_url }}/assets/js/bootstrap.min.js"></script>
+<script src="{{ base_url }}/assets/js/site.js"></script>
 {% block javascript %}{% endblock %}
 {% include 'user-local-access-analyze.twig' %}
 </body>

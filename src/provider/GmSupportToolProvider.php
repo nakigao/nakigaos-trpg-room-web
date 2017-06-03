@@ -157,8 +157,8 @@ class GmSupportToolProvider implements ControllerProviderInterface
          */
         $controllers->get('/', function () use ($app) {
             return $app['twig']->render('gm-support-tool/index.html.twig', array(
-                'commonVariables' => $app['commonVariables'],
-                'pageName' => 'GM SUPPORT TOOL',
+
+                'page_title' => 'GM SUPPORT TOOL',
                 'diceBotList' => $this->_diceBotList
             ));
         });

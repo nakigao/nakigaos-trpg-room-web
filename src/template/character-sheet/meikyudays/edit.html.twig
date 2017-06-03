@@ -1,14 +1,14 @@
 {% extends 'layout.twig' %}
 
-{% block title %}{{ pageName }} | {{ commonVariables.siteName }}{% endblock %}
-{% block page_header %}{{ pageName }} | {{ commonVariables.siteName }}{% endblock %}
+{% block title %}{{ page_title }} | {{ site_title }}{% endblock %}
+{% block page_header %}{{ page_title }} | {{ site_title }}{% endblock %}
 {% block stylesheets %}{% endblock %}
 {% block javascripts %}{% endblock %}
 {% block body %}
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>{{ pageName }} | {{ commonVariables.siteName }}</h1>
+                <h1>{{ page_title }} | {{ site_title }}</h1>
                 <p>迷宮デイズ向けのキャラクターシート</p>
             </div>
         </div>
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <form action="{{ global.request.baseUrl }}/character-sheet/meikyudays/{{ nextAction }}" method="post" class="">
+                <form action="{{ base_url }}/character-sheet/meikyudays/{{ nextAction }}" method="post" class="">
 
                     <h2>基本情報</h2>
 
@@ -623,7 +623,7 @@
 
                     {#<input type='hidden' name='sheet[id]' {% if sheet.id is defined %}value='{{ sheet.id }}'{% endif %} />#}
                     <input type='hidden' name='sheet[hash]' {% if sheet.hash is defined %}value='{{ sheet.hash }}'{% endif %} />
-                    <button type="submit" class="btn-lg btn-primary" style="text-align: center;">{{ pageName }}</button>
+                    <button type="submit" class="btn-lg btn-primary" style="text-align: center;">{{ page_title }}</button>
                 </form>
             </div>
         </div>

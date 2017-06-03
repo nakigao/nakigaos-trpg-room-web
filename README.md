@@ -1,12 +1,12 @@
 
-nakigao's TRPG room
+NAKIGAO TRPG ARCHIVES
 ===
 
 SORRY, WEB RESOURCES ARE JAPANESE VERSION ONLY...
 
 This is resource for my personal web site.
 
-[nakigao's TRPG room](http://nakigao.webcrow.jp/)
+[NAKIGAO TRPG ARCHIVES](http://nakigao.webcrow.jp/)
 
 Main contents for web site is below.
 
