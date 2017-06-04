@@ -15,7 +15,7 @@
 body {
     padding-top: 50px;
     background-color: #FFFFFF;
-    font-family: "Sawarabi Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Sawarabi Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -69,31 +69,39 @@ body {
 .navbar {
     color: #777777;
     background-color: #FFFFFF;
+    border: none;
 }
 
-.navbar h1{
+.navbar h1 {
     margin-right: 15px;
     margin-top: 16px;
     margin-bottom: 0;
     font-size: large;
 }
 
-.navbar p{
+.navbar p {
     font-size: xx-small;
     margin-bottom: 0;
 }
 
 .navbar a {
-    color: #777777;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 .navbar-fixed-top {
-    border-bottom: 1px solid #EEEEEE;
+    background-color: rgba(63, 81, 181, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
-#navbar ul.navbar-nav li.active {
-    font-weight: bolder;
+.navbar-fixed-top ul li {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-fixed-top ul li.active {
+    border-bottom: 3px solid #f44336;
 }
 
 /*
@@ -115,7 +123,7 @@ body {
 @media (min-width: 768px) {
     .sidebar {
         position: fixed;
-        top: 51px;
+        top: 56px;
         bottom: 0;
         left: 0;
         z-index: 1000;
@@ -214,67 +222,15 @@ body {
 /* ---------------------------------------------------- */
 /* ---------------------------------------------------- */
 
-/* customize for bootstrap tooltip*/
-div.tooltip-inner {
-    max-width: 350px;
+
+/* Bootstrap Custom style */
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: transparent;
+    font-weight: bolder;
 }
 
-.navbar-brand .site-symbol {
-    position: absolute;
-    top: 0;
-    /*right:0;*/
-    width: 50px;
-}
-
-.navbar-brand .site-symbol .symbol {
-    margin-right: auto;
-    margin-left: auto;
-    width: 50px;
-    height: 50px;
-    position: relative;
-}
-
-.navbar-brand .site-symbol .symbol > img {
-    position: absolute;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    /*right: 0;*/
-}
-
-.navbar-brand .site-symbol .symbol .circle {
-    -webkit-animation-name: flipInY;
-    animation-name: flipInY;
-    -webkit-animation-delay: 1.75s;
-    animation-delay: 1.75s;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.navbar-brand .site-symbol .symbol .bright {
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
-    -webkit-animation-delay: 2.75s;
-    animation-delay: 2.75s;
-    -webkit-animation-duration: .8s;
-    animation-duration: .8s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-/* Bootstrap Toggle custom style */
-.toggle.android {
-    border-radius: 0;
-}
-
-.toggle.android .toggle-handle {
-    border-radius: 0;
-}
-
-/* Bootstrap button custom style */
 .btn {
     border-radius: 0;
 }
@@ -287,30 +243,40 @@ div.tooltip-inner {
     padding: 0.75em;
 }
 
-.form-control-text {
-    display: block;
-    width: 100%;
-    min-height: 34px;
-    padding: 6px 12px 6px 0;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555555;
-}
-
 .input-group-addon {
     border-radius: 0;
 }
 
-/* news table */
-
-.news_table {
-
+.label {
+    border-radius: 0;
 }
 
 .table > tbody > tr > td {
     vertical-align: middle;
 }
 
-.entry-img-border-on {
-    border-bottom: 3px solid #888888;
+/* customize for bootstrap tooltip */
+
+div.tooltip-inner {
+    max-width: 350px;
+}
+
+img.site-symbol {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Bootstrap Toggle custom style */
+
+.toggle.android {
+    border-radius: 0;
+}
+
+.toggle.android .toggle-handle {
+    border-radius: 0;
 }
