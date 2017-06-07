@@ -14,14 +14,12 @@
 {% include 'navbar-top.twig' %}
 <div class="container-fluid" style="margin-top:6px;">
     {% block body %}{% endblock %}
-    <div class="container">
-        <div class="row" style="margin-top: 1.5em;">
-            <div class="col-sm-12">
-                <p>Copyright (C) 2016-{{ "now"|date("Y") }} <a href="https://twitter.com/nakigao">@nakigao</a>. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
 </div>
+<footer class="footer">
+    <div class="container">
+        <p>Copyright (C) 2016-{{ "now"|date("Y") }} <a href="https://twitter.com/nakigao">@nakigao</a>. All Rights Reserved.</p>
+    </div>
+</footer>
 <script src="{{ base_url }}/assets/js/jquery.min.js"></script>
 <script src="{{ base_url }}/assets/js/jquery.jsonp.min.js"></script>
 <script src="{{ base_url }}/assets/js/bootstrap.min.js"></script>

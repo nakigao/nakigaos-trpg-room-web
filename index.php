@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 // app
@@ -18,9 +17,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/src/template',
 ));
 $app['twig']->addGlobal('base_url', $app['config']['base_url']['prd']);
-$app['twig']->addGlobal('css_url', $app['config']['base_url']['prd'] . '/assets/css');
-$app['twig']->addGlobal('js_url', $app['config']['base_url']['prd'] . '/assets/js');
-$app['twig']->addGlobal('img_url', $app['config']['base_url']['prd'] . '/assets/img');
 $app['twig']->addGlobal('site_title', 'NAKIGAO TRPG ARCHIVES');
 $app['twig']->addGlobal('page_title', 'UNDEFINED');
 // doctrine
@@ -47,12 +43,11 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
         'page_title' => $pageTitle,
         'error_message' => $message
     ));
-//    return new Response($message);
 });
 // routing
-$app->mount('/', new Nkgo\IndexProvider());
-$app->mount('/about', new Nkgo\AboutProvider());
-$app->mount('/replay', new Nkgo\ReplayProvider());
-$app->mount('/gm-support-tool', new Nkgo\GmSupportToolProvider());
-$app->mount('/character-sheet/meikyudays', new Nkgo\CharacterSheetMeikyudaysProvider());
+$app->mount('/', new Nkgo\Provider\IndexProvider());
+$app->mount('/about', new Nkgo\Provider\AboutProvider());
+$app->mount('/replay', new Nkgo\Provider\ReplayProvider());
+$app->mount('/gm-support-tool', new Nkgo\Provider\GmSupportToolProvider());
+$app->mount('/makeyoudays', new Nkgo\Provider\MakeyoudaysProvider());
 $app->run();

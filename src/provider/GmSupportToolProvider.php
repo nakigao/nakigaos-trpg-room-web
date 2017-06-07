@@ -1,6 +1,6 @@
 <?php
 
-namespace Nkgo;
+namespace Nkgo\Provider;
 
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
@@ -156,7 +156,7 @@ class GmSupportToolProvider implements ControllerProviderInterface
          *
          */
         $controllers->get('/', function () use ($app) {
-            return $app['twig']->render('gm-support-tool/index.html.twig', array(
+            return $app['twig']->render('gm-support-tool/index.twig', array(
 
                 'page_title' => 'GM SUPPORT TOOL',
                 'diceBotList' => $this->_diceBotList

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nkgo;
+namespace Nkgo\Provider;
 
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
@@ -11,7 +11,7 @@ class IndexProvider implements ControllerProviderInterface
     {
         $controllers = $app['controllers_factory'];
         $controllers->get('/', function () use ($app) {
-            return $app['twig']->render('index.html.twig', array(
+            return $app['twig']->render('index.twig', array(
                 'page_title' => 'HOME'
             ));
         });

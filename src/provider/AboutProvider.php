@@ -1,7 +1,8 @@
 <?php
 
-namespace Nkgo;
+namespace Nkgo\Provider;
 
+use Nkgo\Model\ReplayRuleModel;
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
 
@@ -11,8 +12,10 @@ class AboutProvider implements ControllerProviderInterface
     {
         $controllers = $app['controllers_factory'];
         $controllers->get('/', function () use ($app) {
-            return $app['twig']->render('about/index.html.twig', array(
-                'page_title' => 'ABOUT'
+            $replayRuleModel = new ReplayRuleModel($app);
+            return $app['twig']->render('about/index.twig', array(
+                'page_title' => 'ABOUT',
+                'rule_list' => $replayRuleModel->getRecords()
             ));
         });
         return $controllers;

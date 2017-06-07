@@ -1,59 +1,46 @@
 <?php
 
-namespace Nkgo;
+namespace Nkgo\Provider;
 
+use Nkgo\Model\MakeyoudaysCharacterSheetModel;
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
 
-class CharacterSheetMeikyudaysProvider implements ControllerProviderInterface
+class MakeyoudaysProvider implements ControllerProviderInterface
 {
     public function connect(Application $app)
     {
         $controllers = $app['controllers_factory'];
-        /**
-         * Page for character-sheet/meikyudays
-         */
         $controllers->get('/', function () use ($app) {
-            // get sheets
-            $getSheetsSql = <<<EOM
-SELECT
-  hash,
-  player_name,
-  character_name,
-  level,
-  gender,
-  age,
-  class
-FROM sheet
-ORDER BY id DESC;
-EOM;
-            $stmt = $app['db']->prepare($getSheetsSql);
-            $stmt->execute();
-            $sheets = $stmt->fetchAll();
-            return $app['twig']->render('character-sheet/meikyudays/index.html.twig', array(
-                'site_title' => '迷宮デイズキャラクターシート(β)',
+            return $app->redirect('character-sheet');
+        });
+        $controllers->get('character-sheet', function () use ($app) {
+            $model = new MakeyoudaysCharacterSheetModel($app);
+            $characterSheets = $model->getRecords('DESC');
+            return $app['twig']->render('makeyoudays/character-sheet/index.twig', array(
+                'site_title' => '迷宮デイズキャラクタ保管庫(β)',
                 'page_title' => '一覧',
-                'sheets' => $sheets
+                'sheets' => $characterSheets
             ));
         });
         /**
          * Page for data
          */
-        $controllers->get('/show/{hash}', function () use ($app) {
+        $controllers->get('character-sheet/show/{hash}', function () use ($app) {
             $request = app['request$'];
             $hash = $request->attributes->get('hash');
             // get sheets
             $getSheetsSql = <<<EOM
 SELECT *
-FROM sheet
+FROM makeyoudays_character_sheet
 WHERE hash = :hash;
 EOM;
             $stmt = $app['db']->prepare($getSheetsSql);
             $stmt->bindParam(':hash', $hash);
             $stmt->execute();
             $sheet = $stmt->fetch();
-            return $app['twig']->render('character-sheet/meikyudays/show.html.twig', array(
-                'site_title' => '迷宮デイズキャラクターシート(β)',
+            return $app['twig']->render('makeyoudays/character-sheet/show.twig', array(
+                'site_title' => '迷宮デイズキャラクタ保管庫(β)',
                 'page_title' => '閲覧',
                 'sheet' => $sheet
             ));
@@ -61,9 +48,9 @@ EOM;
         /**
          * Page for data insert
          */
-        $controllers->get('/create', function () use ($app) {
-            return $app['twig']->render('character-sheet/meikyudays/edit.html.twig', array(
-                'site_title' => '迷宮デイズキャラクターシート(β)',
+        $controllers->get('character-sheet/create', function () use ($app) {
+            return $app['twig']->render('makeyoudays/character-sheet/edit.twig', array(
+                'site_title' => '迷宮デイズキャラクタ保管庫(β)',
                 'page_title' => '作成',
                 'nextAction' => 'create',
                 'sheet' => array()
@@ -72,7 +59,7 @@ EOM;
         /**
          * Insert
          */
-        $controllers->post('/create', function () use ($app) {
+        $controllers->post('character-sheet/create', function () use ($app) {
             $request = $app['request_stack']->getCurrentRequest();
             $sheet = $request->get('sheet');
             $insertSql = <<<EOM
@@ -646,27 +633,27 @@ EOM;
             $stmt->execute();
 
             // redirect
-            $url = $request->getSchemeAndHttpHost() . $request->getBasePath() . '/character-sheet/meikyudays/';
+            $url = $request->getSchemeAndHttpHost() . $request->getBasePath() . '/makeyoudays/character-sheet/';
             return $app->redirect($url);
         });
         /**
          * Page for data update
          */
-        $controllers->get('/update/{hash}', function () use ($app) {
+        $controllers->get('character-sheet/update/{hash}', function () use ($app) {
             $request = $app['request_stack']->getCurrentRequest();
             $hash = $request->attributes->get('hash');
             // get sheets
             $getSheetsSql = <<<EOM
 SELECT *
-FROM sheet
+FROM makeyoudays_character_sheet
 WHERE hash = :hash;
 EOM;
             $stmt = $app['db']->prepare($getSheetsSql);
             $stmt->bindParam(':hash', $hash);
             $stmt->execute();
             $sheet = $stmt->fetch();
-            return $app['twig']->render('character-sheet/meikyudays/edit.html.twig', array(
-                'site_title' => '迷宮デイズキャラクターシート(β)',
+            return $app['twig']->render('makeyoudays/character-sheet/edit.twig', array(
+                'site_title' => '迷宮デイズキャラクタ保管庫(β)',
                 'page_title' => '更新',
                 'nextAction' => 'update',
                 'sheet' => $sheet
@@ -675,12 +662,12 @@ EOM;
         /**
          * Update
          */
-        $controllers->post('/update', function () use ($app) {
+        $controllers->post('character-sheet/update', function () use ($app) {
             $request = $app['request_stack']->getCurrentRequest();
             $sheet = $request->get('sheet');
 
             $updateSql = <<<EOM
-UPDATE sheet
+UPDATE makeyoudays_character_sheet
 SET
   player_name          = :player_name,
 
@@ -1248,7 +1235,7 @@ EOM;
             $stmt->execute();
 
             // redirect
-            $url = $request->getSchemeAndHttpHost() . $request->getBasePath() . '/character-sheet/meikyudays/';
+            $url = $request->getSchemeAndHttpHost() . $request->getBasePath() . '/makeyoudays/character-sheet';
             return $app->redirect($url);
         });
         return $controllers;
