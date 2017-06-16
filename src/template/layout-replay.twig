@@ -1,4 +1,4 @@
-{# replay layout #}
+{# layout for replay #}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,13 +14,27 @@
     <div class="row">
         <div class="col-sm-12">
             <div style="margin: 2em 0 1em 0;">
-                <a class="btn btn-default" href="/replay" role="button"><i class="fa fa-home" aria-hidden="true"></i></a>
-                <span style="display:inline-block;width: 28px;text-align: center;"></span>
-                <a id="go-to-prev" class="btn btn-default" href="javascript:void(0);" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="前のリプレイへ(未実装)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                <a id="go-to-top" class="btn btn-default" href="javascript:void(0);" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="START"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
-                {# ここにページアンカーへのジャンプボタンが自動挿入 #}
-                <a id="go-to-bottom" class="btn btn-default" href="javascript:void(0);" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="END"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-                <a id="go-to-next" class="btn btn-default" href="javascript:void(0);" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="次のリプレイへ(未実装)"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <div style="float: left; margin-right: 12px;">
+                    <a class="btn btn-default" href="{{ base_url }}/replay/#{{ rule }}" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="リプレイ目次"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="dropdown" style="float: left; margin-right: 12px;">
+                    {#<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="min-width: 7em;">PART SELECT&nbsp;<span class="caret"></span></button>#}
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="min-width: 7em;">
+                        {% for part in part_list %}
+                            {% if part.is_active == true %}{{ part.part_name }}&nbsp;<span class="caret"></span>{% endif %}
+                        {% endfor %}
+                    </button>
+                    <ul class="dropdown-menu" style="padding: 0;">
+                        {% for part in part_list %}
+                            <li class="{% if part.is_active == true %}active{% endif %}"><a class="" href="{{ base_url }}{{ part.url }}" role="button" style="padding: 12px 24px;">{{ part.part_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div style="float: left;">
+                    <a id="go-to-top" class="btn btn-default" href="javascript:void(0);" style="margin-right: 6px;" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="START"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+                    {# ここにページアンカーへのジャンプボタンが自動挿入 #}
+                    <a id="go-to-bottom" class="btn btn-default" href="javascript:void(0);" role="button" data-toggle="tooltip" data-placement="bottom" data-original-title="END"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -28,8 +42,8 @@
 <section id="replay-header" class="container">
     <div class="row">
         <div class="col-sm-12">
-            <p>{{ replay_rule }}リプレイ&nbsp;/&nbsp;{{ replay_series_title }}</p>
-            <h1 style="margin-top: 0;">{{ replay_title }}{{ replay_menu_title }}</h1>
+            <p>{{ rule_title }}リプレイ&nbsp;/&nbsp;{{ series_title }}</p>
+            <h1 style="margin-top: 0;">{{ episode_prefix }}「{{ episode_title }}」{{ part_title }}</h1>
         </div>
     </div>
 </section>
@@ -48,74 +62,28 @@
     {% endfor %}
 </section>
 {% block body %}{% endblock %}
+<section id="replay-go-to-next-part" class="container text-center">
+    <div class="row">
+        <div class="col-sm-12">
+            {% if next_part %}
+                <a class="btn btn-default" href="{{ base_url }}{{ next_part.url }}" role="button" style="padding: 12px 24px; margin: 64px auto 0 auto;">GO TO NEXT PART&nbsp;&nbsp;<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+            {% endif %}
+        </div>
+    </div>
+</section>
 <footer class="footer">
     <div class="container" style="margin-top: 30px;">
         <p>Copyright (C) 2016-{{ "now"|date("Y") }} <a href="https://twitter.com/nakigao">@nakigao</a>. All Rights Reserved.</p>
     </div>
 </footer>
+{% include 'replay/page-navigate-anchor.mustache' %}
 <script src="{{ base_url }}/assets/js/jquery.min.js"></script>
 <script src="{{ base_url }}/assets/js/bootstrap.min.js"></script>
+<script src="{{ base_url }}/assets/js/mustache.min.js"></script>
 <script src="{{ base_url }}/assets/js/jquery.sticky.js"></script>
 <script src="{{ base_url }}/assets/js/jquery.scrollTo.min.js"></script>
 <script src="{{ base_url }}/assets/js/jquery.waypoints.min.js"></script>
-<script>
-    $(function() {
-        $('#sticky-header').sticky({
-            topSpacing: 0,
-            zIndex: 1000,
-            center: true,
-        });
-        $('#go-to-top').on('click', function(e) {
-            e.preventDefault();
-            $(window).scrollTo(0, 'fast');
-        });
-        $(document).on('click', '[data-role="jump-to-anchor"]', function(e) {
-            e.preventDefault();
-            var targetId = '#page-section-' + $(this).data('id');
-            $(window).scrollTo($(targetId), {
-                offset: -80,
-                duration: 'slow',
-            });
-        });
-        $('#go-to-bottom').on('click', function(e) {
-            e.preventDefault();
-            $(window).scrollTo($(document).height(), 'fast');
-        });
-        var pageSectionIndex = 1;
-        $('h2').each(function() {
-            // セクションボタンの設定
-            var prevId = (pageSectionIndex - 1);
-            var id = pageSectionIndex;
-            var nextId = (pageSectionIndex + 1);
-            $(this).attr('id', 'page-section-' + id);
-            $(this).attr('data-prev-id', prevId);
-            $(this).attr('data-id', id);
-            $(this).attr('data-next-id', nextId);
-            $('#go-to-bottom').before('<a data-prev-id="' + prevId + '" data-next-id="' + nextId + '" data-id="' + id + '" class="btn btn-default" style="margin-right: 4px;" role="button" data-role="jump-to-anchor" data-toggle="tooltip" data-placement="bottom" data-original-title="' + $(this).text() + '">' + pageSectionIndex + '</a>');
-            pageSectionIndex += 1;
-            // waypointの設定
-            var waypoint = new Waypoint({
-                element: $(this),
-                handler: function(direction) {
-                    var prevId = this.element.data('prev-id');
-                    var id = this.element.data('id');
-                    var nextId = this.element.data('next-id');
-                    if (direction == 'up') {
-                        $('#sticky-header').find('[data-id="' + prevId + '"]').addClass('active');
-                        $('#sticky-header').find('[data-id="' + id + '"]').removeClass('active');
-                    } else if (direction == 'down') {
-                        $('#sticky-header').find('[data-id="' + id + '"]').addClass('active');
-                        $('#sticky-header').find('[data-id="' + prevId + '"]').removeClass('active');
-                    }
-                },
-                offset: 100
-            });
-        });
-        $('[data-toggle="tooltip"]').tooltip({
-            'container': 'body',
-        });
-    });
-</script>
+<script src="{{ base_url }}/assets/js/replay.js"></script>
 {% block javascript %}{% endblock %}
 {% include 'user-local-access-analyze.twig' %}
 </body>

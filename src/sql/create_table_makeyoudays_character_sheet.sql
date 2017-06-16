@@ -1,4 +1,4 @@
-CREATE TABLE `makeyoudays_character_sheet` (
+CREATE TABLE IF NOT EXISTS `makeyoudays_character_sheet` (
     id                   BIGINT                              NOT NULL PRIMARY KEY AUTO_INCREMENT,
     password             VARCHAR(255),
     hash                 VARCHAR(255) UNIQUE,

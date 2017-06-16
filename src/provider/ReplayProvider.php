@@ -2,7 +2,8 @@
 
 namespace Nkgo\Provider;
 
-use Nkgo\Model\ReplayModel;
+use Nkgo\Model\VReplayModel;
+use Nkgo\Model\ReplayPartGmPlModel;
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -55,17 +56,28 @@ class ReplayProvider implements ControllerProviderInterface
             $series = $request->get('series');
             $episode = $request->get('episode');
             $part = $request->get('part');
-            $renderTwigPath = 'replay' . '/' . $rule . '/' . $series . '/' . $episode . '/' . $part . '.twig';
-            $replayModel = new ReplayModel($app);
+            $replayModel = new VReplayModel($app);
             $replay = $replayModel->getReplay($rule, $series, $episode, $part);
-            return $app['twig']->render($renderTwigPath, array(
-                'page_title' => $replay['pageTitle'],
-                'replay_rule' => $replay['ruleTitle'],
-                'replay_series_title' => $replay['seriesTitle'],
-                'replay_title' => $replay['title'],
-                'replay_menu_title' => $replay['menuTitle'],
-                'pl_list' => $replay['plNames'],
-                'gm_list' => $replay['gmNames']
+            $partList = $replayModel->getPartList($rule, $series, $episode, $part);
+            $nextPart = $replayModel->getNextPart($rule, $series, $episode, $part);
+            $partGmPlModel = new ReplayPartGmPlModel($app);
+            $gmList = $partGmPlModel->getGmList($rule, $series, $episode, $part);
+            $plList = $partGmPlModel->getPlList($rule, $series, $episode, $part);
+            return $app['twig']->render($replay['render_twig_path'], array(
+                'rule' => $rule,
+                'series' => $series,
+                'episode' => $episode,
+                'part' => $part,
+                'page_title' => $replay['page_name'],
+                'rule_title' => $replay['rule_name'],
+                'series_title' => $replay['series_name'],
+                'episode_prefix' => $replay['episode_prefix'],
+                'episode_title' => $replay['episode_name'],
+                'part_title' => $replay['part_name'],
+                'pl_list' => $plList,
+                'gm_list' => $gmList,
+                'part_list' => $partList,
+                'next_part' => $nextPart
             ));
         });
         return $controllers;

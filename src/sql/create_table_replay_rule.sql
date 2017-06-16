@@ -1,6 +1,6 @@
 -- リプレイのルールブックテーブル
-DROP TABLE `replay_rule`;
-CREATE TABLE `replay_rule` (
+DROP TABLE IF EXISTS `replay_rule`;
+CREATE TABLE IF NOT EXISTS `replay_rule` (
     id            BIGINT NOT NULL PRIMARY KEY,
     unique_id     TEXT,
     name          TEXT,

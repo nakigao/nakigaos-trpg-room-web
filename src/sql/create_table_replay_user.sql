@@ -1,6 +1,5 @@
--- リプレイのユーザーテーブル
-DROP TABLE `replay_user`;
-CREATE TABLE `replay_user` (
+DROP TABLE IF EXISTS `replay_user`;
+CREATE TABLE IF NOT EXISTS `replay_user` (
     id         BIGINT NOT NULL PRIMARY KEY,
     class      TEXT,
     name       TEXT,
