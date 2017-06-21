@@ -22,6 +22,21 @@ INSERT INTO replay_part_gm_pl (rule_unique_id, series_id, episode_sequence_numbe
     ('gror', 1, 1, 2, FALSE, 3, NULL, FALSE),
     ('gror', 1, 1, 2, FALSE, 4, NULL, FALSE),
 
+    ('gror', 1, 1, 3, FALSE, 1, NULL, FALSE),
+    ('gror', 1, 1, 3, TRUE, 2, NULL, FALSE),
+    ('gror', 1, 1, 3, FALSE, 3, NULL, FALSE),
+    ('gror', 1, 1, 3, FALSE, 4, NULL, FALSE),
+
+    ('gror', 1, 1, 4, FALSE, 1, NULL, FALSE),
+    ('gror', 1, 1, 4, TRUE, 2, NULL, FALSE),
+    ('gror', 1, 1, 4, FALSE, 3, NULL, FALSE),
+    ('gror', 1, 1, 4, FALSE, 4, NULL, FALSE),
+
+    ('gror', 1, 1, 5, FALSE, 1, NULL, FALSE),
+    ('gror', 1, 1, 5, TRUE, 2, NULL, FALSE),
+    ('gror', 1, 1, 5, FALSE, 3, NULL, FALSE),
+    ('gror', 1, 1, 5, FALSE, 4, NULL, FALSE),
+
     ('gror', 2, 1, 1, FALSE, 1, NULL, FALSE),
     ('gror', 2, 1, 1, TRUE, 2, NULL, FALSE),
     ('gror', 2, 1, 1, FALSE, 3, NULL, FALSE),
@@ -37,7 +52,65 @@ INSERT INTO replay_part_gm_pl (rule_unique_id, series_id, episode_sequence_numbe
     ('gror', 2, 1, 3, FALSE, 3, NULL, FALSE),
     ('gror', 2, 1, 3, FALSE, 4, NULL, FALSE),
 
+    ('gror', 2, 1, 4, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 1, 4, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 1, 4, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 1, 4, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 1, 5, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 1, 5, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 1, 5, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 1, 5, FALSE, 4, NULL, FALSE),
+
     ('gror', 2, 2, 1, FALSE, 1, NULL, FALSE),
     ('gror', 2, 2, 1, TRUE, 2, NULL, FALSE),
     ('gror', 2, 2, 1, FALSE, 3, NULL, FALSE),
-    ('gror', 2, 2, 1, FALSE, 4, NULL, FALSE);
+    ('gror', 2, 2, 1, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 2, 2, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 2, 2, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 2, 2, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 2, 2, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 2, 3, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 2, 3, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 2, 3, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 2, 3, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 2, 4, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 2, 4, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 2, 4, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 2, 4, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 2, 5, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 2, 5, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 2, 5, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 2, 5, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 3, 1, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 3, 1, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 3, 1, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 3, 1, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 3, 2, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 3, 2, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 3, 2, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 3, 2, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 3, 3, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 3, 3, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 3, 3, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 3, 3, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 3, 4, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 3, 4, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 3, 4, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 3, 4, FALSE, 4, NULL, FALSE),
+
+    ('gror', 2, 3, 5, FALSE, 1, NULL, FALSE),
+    ('gror', 2, 3, 5, TRUE, 2, NULL, FALSE),
+    ('gror', 2, 3, 5, FALSE, 3, NULL, FALSE),
+    ('gror', 2, 3, 5, FALSE, 4, NULL, FALSE)
+
+
+;

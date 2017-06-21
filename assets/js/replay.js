@@ -40,7 +40,7 @@ $(function() {
         });
         $('#go-to-bottom').before(rendered);
         // modify section header name
-        $(this).html('<span class="section-icon"></span>' + pageSectionIndex + '. ' + $(this).text());
+        // $(this).html('<span class="section-icon"></span>' + pageSectionIndex + '. ' + $(this).text());
         // waypointの設定
         pageSectionIndex += 1;
         var waypoint = new Waypoint({

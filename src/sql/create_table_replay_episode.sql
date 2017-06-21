@@ -10,4 +10,5 @@ CREATE TABLE IF NOT EXISTS `replay_episode` (
 INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_deleted) VALUES
     (1, 1, 1, '', '給料日', FALSE),
     (2, 2, 1, '第1話', '燃える校舎', FALSE),
-    (3, 2, 2, '第2話', '栄光のマラソン大会', FALSE);
+    (3, 2, 2, '第2話', '栄光のマラソン大会', FALSE),
+    (4, 2, 3, '第3話', 'あむあいゆあまざー！？', FALSE);

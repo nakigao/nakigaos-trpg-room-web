@@ -7,9 +7,27 @@ CREATE TABLE IF NOT EXISTS `replay_part` (
     is_deleted      BOOL DEFAULT FALSE
 );
 INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALUES
-    (1, 1, 1, '前編', FALSE),
-    (2, 1, 2, '後編', FALSE),
-    (3, 2, 1, '前編', FALSE),
-    (4, 2, 2, '中編', FALSE),
-    (5, 2, 3, '後編', FALSE),
-    (6, 3, 1, '読み切り', FALSE);
+    -- 0話
+    (1, 1, 1, 'トレーラー', FALSE),
+    (2, 1, 2, 'オープニング', FALSE),
+    (3, 1, 3, 'ミドル', FALSE),
+    (4, 1, 4, 'クライマックス', FALSE),
+    (5, 1, 5, 'エンディング', FALSE),
+    -- 1話
+    (6, 2, 1, 'トレーラー', FALSE),
+    (7, 2, 2, 'オープニング', FALSE),
+    (8, 2, 3, 'ミドル', FALSE),
+    (9, 2, 4, 'クライマックス', FALSE),
+    (10, 2, 5, 'エンディング', FALSE),
+    -- 2話
+    (11, 3, 1, 'トレーラー', FALSE),
+    (12, 3, 2, 'オープニング', FALSE),
+    (13, 3, 3, 'ミドル', FALSE),
+    (14, 3, 4, 'クライマックス', FALSE),
+    (15, 3, 5, 'エンディング', FALSE),
+    -- 3話
+    (16, 4, 1, 'トレーラー', FALSE),
+    (17, 4, 2, 'オープニング', FALSE),
+    (18, 4, 3, 'ミドル', FALSE),
+    (19, 4, 4, 'クライマックス', FALSE),
+    (20, 4, 5, 'エンディング', FALSE);
