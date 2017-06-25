@@ -50,13 +50,13 @@
 <section id="replay-user" class="container">
     {% for user in pl_list %}
         <div class="row">
-            <div class="col-sm-2 text-right {{ user.class }}">{{ user.name }}@PL</div>
+            <div class="col-sm-2 name {{ user.class }}">{{ user.name }}@PL</div>
             <div class="col-sm-10">{{ user.pl_comment }}</div>
         </div>
     {% endfor %}
     {% for user in gm_list %}
         <div class="row">
-            <div class="col-sm-2 text-right {{ user.class }}">{{ user.name }}@GM</div>
+            <div class="col-sm-2 name {{ user.class }}">{{ user.name }}@GM</div>
             <div class="col-sm-10">{{ user.gm_comment }}</div>
         </div>
     {% endfor %}
