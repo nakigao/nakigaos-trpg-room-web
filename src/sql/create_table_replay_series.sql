@@ -9,4 +9,6 @@ CREATE TABLE IF NOT EXISTS `replay_series` (
 );
 INSERT INTO replay_series (id, rule_unique_id, is_campaign, sequence_number, name, is_deleted) VALUES
     (1, 'gror', FALSE, 1, '単発', FALSE),
-    (2, 'gror', TRUE, 1, 'ゼロ特学園生活！', FALSE);
+    (2, 'gror', TRUE, 1, 'ゼロ特学園生活！', FALSE),
+    (3, 'lsry', FALSE, 1, '単発', FALSE),
+    (4, 'lsry', TRUE, 1, 'アネコのロストロイヤル', FALSE);

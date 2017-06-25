@@ -1,0 +1,1579 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-evi.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>分岐フェイズについて</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ではおさらい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>・王都が魔王に占領されたので逃げてきたぞ！！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>・傭兵を雇うかどうかで迷ってるぞ！！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>さて</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>これから分岐フェイズというのをやっていきます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>分岐フェイズでは騎士との触れ合いをとおして主君が決断を下すまでのシーンです</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まず・全員が対話シーンを１回行うまで続きます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>そんで・対話シーンの内容は以下の４種類です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>対話シーンの種類命題　日常　教導</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>３種類だった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>命題を選ぶと円卓判定に１点のボーナスがつきます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>日常を選ぶと、主君と騎士のあいだに絆を獲得します</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>教導を選ぶと、主君の「影響値」を２点上げることができます</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>影響値とは？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>「理想の王」にどれだけ近づいてるかの値</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まあ祖国を取り返したときにどんな王になるかを</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>正直どれを選ぶとどうメリットがあるのかよくわからんな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>今のうちから教育しておくわけですな！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>円卓判定に有利になる＝自分の命題を通しやすくなる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>とりあえず絆は持ってるから日常はいらないか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>絆は前回説明したので・・・まあ戦闘で便利</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>影響値は今すぐは特に効果ないです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>なるほど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとは</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>各自【時間】を２点獲得します</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>時間を消費することで番外シーンを行うことが出来ます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>番外シーンはルールサマリーの左下にあるので</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>みて</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>番外シーンは割り込みで使えるので好きなときに割り込んで下さい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なるほど？なんか複雑になってきたな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>対話シーンを各自１回ずつ行うと円卓フェイズに移行します</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>要は対話シーン１回と番外シーンを２回できる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>のだ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>シーンって　選べばいいだけなのかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どれをやるかは選んでいいですよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>質問！酒と歌って何に使うの？</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>フェイトみたいなもんかなっておもってた</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ダメージを肩代わりしたり</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ダイス増加か</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>特殊能力の発動に必要</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ダイスはふえません</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>対話シーン：ティセ「日常」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>やらないと始まんないし　日常シーンにしてみちょう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあシーン表ふってみる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 4</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>世捨て人が居座る四辻</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>王都のスラムで世捨て人が居座っている</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どんなシーンにしますか</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>話しかけてみよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>スラムの日常か</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>誰かシーンに出したい人とかいますか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>俺はいいや</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ちなみに日常シーンは「悩みから少し離れてリラックスする」シーンらしいぞ！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>日常系シーンは癒し</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>なんと！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>主君となかよくなるシーンだしな！</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>でもシーン的にやることがおもいつかんぞ！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあ王子がでてくる</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「王都にもこんな場所があるんだね、ティセ」</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「そうですね…貧富の差というものはどうしても出てきますから。」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>社会派騎士</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「今は力のない僕だけど、きっとよい国にしてみせるから、力をかしてね、ティセ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>ACT LostRoyal :王子アクション表(4[4]) → 道に迷う</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>と言いながら道に迷いました</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「今現状すぐに解決できる問題ではありませんが、やがては解決させていくべきですね。それが王、そして私たちの使命といってもいいでしょう。仰せのままに。」</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>あほのこ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいイベントだな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあティセが探し回ってると世捨て人とお話してる王子をみつけました　めでたし</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>めでたしなのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>絆表振ろうか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>EC LostRoyal : 1D6 => [5] 信頼／嫉妬</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>信頼しよう</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>わしもふれるんだっけ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>触れそう</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>EC LostRoyal : 1D6 => [1] 愛情／殺意</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>愛情しかないぞ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>泥沼化</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>愛に溢れてるなあ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>修羅場エンド</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>皆王子の事好きすぎない？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>忠臣の鑑</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ポジション的にヒロインだからなあ</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>番外シーン1：シュヴェー「決闘」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>次カエル君先どうぞ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>では次の人か</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>いや、ヒロインは王子だな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>番外シーンか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どっちでも</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>じゃあ番外シーンで決闘したい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 1</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>怪しいお店</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>これ相手は誰なん？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>命題で対立してる相手ですね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>つまりティセかモエ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>２対１か？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>俺が選んでいいのか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>決闘なので一対一</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>選んで下さい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ふむ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>じゃあモエで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>怪しいお店にシュヴェーとモエが！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>絵面がやばい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「あらぁ？あなたもこういう店好きなのね？」と網タイツで登場しよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>何屋だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>オカマバーみたいです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ヒエエエエエ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>choice[出る,出ない] LostRoyal : (CHOICE[出る,出ない]) → 出る</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「サービス、しちゃうわよ♡」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「ふん、俺様はこんなものに興味はないんだがな」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「も、モエ・・・なにやってるの・・・」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>ACT LostRoyal :王子アクション表(6[6]) → とんでもないものを買ってくる</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>オカマ楽しいなぁ・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「今日は貴様に一言言いたくて来たのだ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>と鞭とロウソクを買ってきました</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>うああああああ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>王国は死んだ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「あらぁ！？王子はなかなかマニアックなのね・・・」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「一言？愛の告白ならお断りよ」とムチとろうそくを受け取る</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「貴様の奇抜な行動のせいで王子の教育に悪影響が出ている！直ちに改めよ！！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>戦いの気配に身震いして・・・「ごくり」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>王子の持っている装備を指さしながら怒鳴ります</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>なんだこのサメ真面目だ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>まじめなサメ(筋肉）</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「あぁら？大人の遊びも教えないとダメなのよ、ふふふ」ムチピシして身構えました</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあお二人は判定をドウゾ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>判定だけで決着つくんだよな、たぶん</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「これは王国の未来に関わる案件だ、悪いが腕づくでもいう事を聞いてもらうぞ」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>うん</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>鞭ｖｓ筋肉</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>何を振ればいいんだ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>共有メモの判定表においてるやつ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>騎士道判定ですね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>飛んでくる鞭を筋肉で受けるぞ！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>それあかんのじゃあｗ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ＬＲ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>目覚めるか目覚めないか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>LR[1,3,2,0,1,3] LostRoyal : 3D6 => [2,1,5] => (3+1+1) => 5 | 2 chain! (1,2) => 7</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>こんなかんじです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ほう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>君の場合だと032212だね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>nakigaoも騎士道で判定してください</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>LR[0,3,2,2,1,2] LostRoyal : 3D6 => [5,6,1] => (1+2+0) => 3 | 3 chain! (5,6,1) => 6 [スペシャル]</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>LR[1,2,3,1,1,1] LostRoyal : 3D6 => [6,3,4] => (1+3+1) => 5 | 2 chain! (3,4) => 7</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>スペサルにはかてないなぁ・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>スペシャルなのでシュヴェーは酒と歌を１点獲得します</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>なんかスペシャル出た</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>でも出目が大きいのでモエが勝った</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>そうなのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>判定に敗北した場合</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>正義を消費して振り直すことができますけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>しますか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>いやいいや、絆が手に入るし</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ではシュヴェーはモエへの絆を獲得してください</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>モエは【幸運】を獲得しました</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>かたないと変な性格に目覚めそうなんだけど大丈夫か？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「！この鞭の威力侮れん…そうか上に立つ者は時に鞭が必要、それを王子に教えるために…」とか勝手に納得して帰ります</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 5</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>信頼か嫉妬か</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「まったく、なんだったのかしら・・・」とお店の奥に入っていきました</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>じゃあ信頼で</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>対話シーン：モエ「命題」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>では次の人</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>命題シーンやろっかなぁ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>おう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 2</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>娼館への小道</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「モエ、どこに向かってるの？」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なんかまた変なのが・・・</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>リンクしたな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>危険な騎士だ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「ふふ、王子は気にしなくていいのよ・・・ちょっと届ものを、ね」とウィンク</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>いやー国の未来は明るいですね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「ニンジャみたいだね、モエ！」わくわく</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「もう！王子！クノイチと呼んでちょうだい！」とお店に入っていって、ムチとろうそくを返却しよう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「うちの王子にこういうもの渡さないでっていったでしょう！」と文句言って帰る</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>実に健全な卓だ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>意外とまともだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>治安はまもられた</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「この街の人たちは、なんだかしたたかな人が多い気がする・・・」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「あの、ジョンって人も、こんな雰囲気だった」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>傭兵の情報がくるか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>いや命題シーンなんで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>命題の話題しなきゃ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なるほどねぇ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「王子はあたしたちのこともっと信頼してくれていいのよぉん」くねくね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「う、うん・・・」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>ACT LostRoyal :王子アクション表(5[5]) → 深呼吸</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>深呼吸</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「モエたちは強いもんね。もっと頼ってもいいよね！」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>どういうリアクションなんだろうなぁ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>というわけで円卓判定に+1します</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「そうそ、他の2人も結構いいとこあるのよぉん」とどさくさまぎれに手をつないで帰る</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>番外シーン1：ティセ「討伐」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>次の人ー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あ、ちなみに対話シーンは全員１回ずつ必要ですけど番外シーンは必須ではないです</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>偏りすぎて成功するとは思えない　難易度３！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ん？てことは、あれかかえるくんの対話シーンが残ってるってことか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>あれなら　討伐シーンやろうかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どうぞどうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ふむ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>じゃあやろうかね</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>なにを討伐するんだ？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>どうぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>魔族！</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>KOROSU</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d6をどうぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>騎士道判定がさき</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「今こそわが力を見せるとき！」</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>LR[0,1,1,0,4,3] LostRoyal : 3D6 => [3,1,6] => (1+0+3) => 4 | 2 chain! (6,1) => 6</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>成功ですね</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 2</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>ジュバババ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>はぐれ魔族を討伐しました！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>やったぜ</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>番外シーン1：モエ「娯楽」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>次の人ー</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>娯楽だー！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>LR[1,2,3,1,1,1] LostRoyal : 3D6 => [4,3,4] => (1+3+1) => 5 | 2 chain! (3,4) => 7 [ファンブル]</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どんな娯楽だろう・・・・</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ひどい・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ファンブル表はFC</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「たまにはあたしも乙女らしくスタバでラッテでも飲もっと」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>FC LostRoyal : 1D6 => [3] あなたが惹かれたのは好意に付け込む人だった。あなたはその場を去って恋慕の名誉点を１点失うか【正義】を１点減らして礼を尽くすかを選べる。</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>これってさらに討伐することもできるの？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>できますよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あああああああ恋慕があああああ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>恋愛してる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>恋慕か正義のどちらかを-1ですね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>正義にしようかなあ、判定値減るのはいただけないな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>正義でいいかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあ次の人ー</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>酒歌は取得できない感じ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あ、どうぞどうぞ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>成功しなくてもいいのか～</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ふーん、失敗成功とかに関係するわけじゃないんだな、ファンブルもクリティカルも</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あくまで達成値勝負なので</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>成功してるけどファンブルなのね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>さもなければリスクを背負ってまでシーン振る必要ないもんな</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>番外シーン2：シュヴェー「因縁」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>じゃあ因縁をしたい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>これで絆をコンプリートできるし</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ティセに因縁をつけるぜ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>サメが絡んできた</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>おこ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>サメだー！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>場所はどこだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 2</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>娼館への小道</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>そこすきだねぇ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>娼館へ向かってます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>この街娼館多くない？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なんだかんだスキモノのサメ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ここからどうつなげればいいのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ティセはシュヴェーに娼館に呼び出されてしまった・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>それは不味い</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>娼館からの帰り道にティセと会おう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>寄ってる</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>寄ってる</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>会ってみよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「すまない、待たせたか？」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>つやつやしたサメがきた</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>待ち合わせ場所に到着</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>最悪のシチュエーション</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「いや…待ちはしていないが。なんでこんなところに？奴でもさがしてるのか？」と周りを見渡す</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>まあまて、理由はあるんだ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「例の傭兵の情報を探っていた、奴が出入りしている店に入り込んでいたんだ」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>これでセーフやろ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>悪くはないな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ハードボイルドキャラでいくぜ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>いいんじゃないかな</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「ふむ。そういったところに私は浮いてしまうからな。で、どうだったのだ？」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「結果で言えば怪しい所はなかった、奴はシロだな…今のところはだが」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあ騎士道判定しよっか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>だな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>LR[0,3,2,2,1,2] LostRoyal : 3D6 => [2,1,3] => (3+0+2) => 5 | 3 chain! (1,2,3) => 8 [スペシャル]</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>またスペシャル</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>酒をくれー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ティセはシュヴェーが嘘をついていないと感じました</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どうぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>お互いに絆を獲得できるので</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「なるほど、しかし私はまだあいつを信用できないな。情報は助かる。また何かあったら教えてほしい。」と礼を言ってさろう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ECでもどうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ほい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>EC LostRoyal : 1D6 => [4] 興味／侮蔑</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>もう持ってるんだけど</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>どうしよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあなしです</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ふりなおしてもいい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>侮辱に次ぐ侮辱</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>ふりなおそう</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>EC LostRoyal : 1D6 => [4] 興味／侮蔑</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>＾＾</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>興味だな、鎧の下が気になる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>これは侮蔑ですわ</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>番外シーン2：ティセ「討伐」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ではつぎのひとー</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ほい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとは・・・ティセが番外１回、シュヴェーが対話、モエが番外１回残ってるっけ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>モエは２回うごいたかもしれない</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>だね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>時間的にはまだ大丈夫なん？平気なら番外もっかい降るけど</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>もう一度討伐いくか！　はぐれ魔族討伐騎士ティセ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>時間早そうだし（リアル的に）</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ないならカエル君の対話シーン待つわ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>そういうことですね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>対話は教導しようと思ってる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>討伐の後でいいよ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ではティセはサメの魔族と出会いました</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>じゃあ　さくっと騎士道</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>LR[0,1,1,0,4,3] LostRoyal : 3D6 => [3,2,1] => (1+1+0) => 2 | 3 chain! (1,2,3) => 5 [スペシャル]</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>サメの魔族は死にました</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>酒と歌を２点どうぞ！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あと1d6をしてください</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 4</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ごめん１点だわ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>4ね、了解</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>シュヴェーの親戚倒した</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>おやじいいいいいい</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>対話シーン：シュヴェー「教導」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>次の人ー</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>じゃあ王子に教導をしよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 1</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>怪しいお店</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>どうするんだ？判定振ればいいのか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>この街まともな店がないぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>騎士道判定をどうぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>そういえばいってなかったけど基本的に対話シーンは難易度5です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>サメが死んだ・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>LR[0,3,2,2,1,2] LostRoyal : 3D6 => [2,3,4] => (3+2+2) => 7 | 3 chain! (2,3,4) => 10 [スペシャル]</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>つおい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>なんか今日出目がいいな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>戦闘で腐りそうで不安だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>酒と歌を1点どうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「王子いいですか、この国のシンボルをサメにしましょう」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「シュヴェーが英雄になれれば、夢じゃないかもね！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>ACT LostRoyal :王子アクション表(3[3]) → 褒めている</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>褒めている</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>キングオブ無難</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「サメは海の王者ですからね、サメのように強い国を目指しましょう」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>国の宗教がサメ教になりそう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとはー・・・番外シーンする人いますか？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>もういいかな、パス！</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>さっき倒しちゃったよ！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>国民は毎日サメ映画の視聴を義務にしよう</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>円卓シーン</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあ円卓シーンに写ります</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ほい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>「時折、魔族の捜索隊を見かけるようになった。すぐにでもここを起たなければ・・・」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>というわけで主君と騎士全員が登場する円卓シーンです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>王子を3人で囲むシーンだっけ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>輪になって踊ろう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「そろそろ、出なければいけないとおもう・・・みんなの考えを改めて聞かせて欲しい」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>キャンプファイヤーではないです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ダブルクリックで詳細出るかと思ったんだよ・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>おちゃめ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「やはり、ひとまず身を隠すべきかと。今動くのは性急です。ジョンという傭兵もいまだ私は信用できません。」と言おう。</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「同じ意見ね」とティセに便乗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「時をおけば、それだけ魔族の狼藉を許すことになります。ここは傭兵を使い反撃を行う時です！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃ騎士道判定しよっか</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>LR[0,1,1,0,4,3] LostRoyal : 3D6 => [4,2,5] => (0+1+4) => 5 | 2 chain! (4,5) => 7</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>LR[1,2,3,1,1,1] LostRoyal : 3D6 => [6,2,3] => (1+2+3) => 6 | 2 chain! (2,3) => 8</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>やっぱあれだな0がないと平均高くなるね</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>偏りはきつい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>LR[0,3,2,2,1,2] LostRoyal : 3D6 => [2,6,6] => (3+2+2) => 7</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>モエが高いので命題Bの勝利ですね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>負けたー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>シュヴェーは正義をつかって振り直せますが</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どうします？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>いや大丈夫です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>では</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「たしかに、戦力は必要・・・だけど、まずは僕たちが万全の体制にならないといけないよね」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>「ジョンを雇うのはやめておくよ。このまま王都を出よう！」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@モエ</div>
+                <div class='col-sm-10 serif'>「さっすが王子！話がわかるぅ」と青髭でスリスリします</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>「…王子がそうおっしゃるなら仕方ない、俺は王子の判断に従うまでです」</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@ティセ</div>
+                <div class='col-sm-10 serif'>「それが賢明です。戦力は確かに惜しいですが。」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>王子は決断を下したので運命点が１点増加しました！というわけで分岐フェイズは終了です</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

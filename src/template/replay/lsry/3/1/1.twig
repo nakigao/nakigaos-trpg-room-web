@@ -1,0 +1,551 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-evi.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラクターメイク</h2>
+                    <p>※一言プリーズ(なくてもいいよ)</p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあ、はじめまーーーーす。とりあえずキャラメイクだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>では順番に作っていきましょう！まず種族をきめます</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>人間大好き、器用貧乏になろう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>シンプルそうなオルナシスで・・・魚が戦士タイプって珍しいな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>売れ残りデネブでいこう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>シンプルなパーティだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>レンのjemくんは任意の戦力値を2点獲得するので、すきなとこに割り振って</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>武力　速力　魔力を書き込んでください</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ついでに特殊能力も書き込んでください</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>見れば見るほど器用貧乏</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>それからシートの一番下</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>【酒と歌】を獲得するので各自1Dをどうぞ。酒と歌は1dの出目をそのまんまいれてください</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>1d6 DiceBot : (1D6) → 1</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>1d6 LostRoyal : (1D6) → 2　低い！！</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>フゥハハ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>みんな禁欲的だなー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>【正義】はとりあえず全員1です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>それから好きな戦力を選んで、武具値に1って入れてください</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>(戦力＝武力か速力か魔力のことね)</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>これって武力が攻撃力で速力が回避値みたいな認識でいいの？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>武力も速力も魔力もとくに違いはないです！！</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>かえるさんだけかわいそう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>なん…だと</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まあ一点特化も利点はあるので</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>nakigaoとkaeruは好きな戦力の武具値を1にしてね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>ほい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとは・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>戦闘スタイルというのを決めます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>戦闘スタイル攻撃型 攻撃判定によって与える、自身のダメージを2点増やします防御型 攻撃判定によって受ける、自身のダメージを3点減少します作戦型 騎士団側の血路支配点を、＋１点します。（重複しない）</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>この中のどれか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>血路支配ってなんぞ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>血路支配点ってのはイニシアチブだとおもってくれるといい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>なるほど</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ふむふむ・・・</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>誰かが作戦型になるのがいいのかな</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>一緒に戦うんだよね？　戦闘が起きたら</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>そんな気はするね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>うん、血路シートってのがあるんですけど、先陣　本陣　後陣にそれぞれメリットがあるので、自分のキャラクターをどこに配置したいか考えるといいとおもいます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>デネブってかばう系使えるけど、防御型ってこと？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>防御がとくい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なら防御系かな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>kaeruくんが攻撃型になってますね</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>作戦型がいないとどうなるのかわからないし作戦型にするで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>つぎ騎士道ってのを決めます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まずは騎士道の一覧から自分の「信条」を1つ選んで1点獲得します。これはずっと変わらないです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>ほう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>どれが高いと有利とかはないので、好きなのでいいですよ。なんとなく言葉のイメージで選んだらいいと思います！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>戦友にしやした</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ダイスが特徴的だけど、これ成功/失敗どう判定するん？それによってまばらに取るか、特化した方がいいか決まる気がする</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>3d6を振るんですけど、例えば出目が1,3,5だった場合、主君点＋恋慕点＋寛容点が出目になります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお、おもしろいね。んー・・・バランスで期待値を取るか、いちばちするか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとはチェインってのがあって、隣り合う出目があると達成値がちょっと増えます。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'></div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1,3,4だった場合、主君点＋恋慕点＋庇護点＋1。連番だと重複した数だけアップということ。ちなみに1と6もつながってる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>ほうほう、ふーんなるほどなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ただ騎士道はあとはランダムで決まるので、ほんとに運しだいです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ああ、そうなのか操作できないならば・・・恋慕いただき</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>そんで宣誓ってのがあるんですけど、これはオープニングフェイズでとってもらうのでとばす</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>次に足跡なんですけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>各自7d6を振って、出た目に対応する騎士道に+1点します。まあ説明するよりやってみたほうがはやいので誰か振ってみて</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>7d6 DiceBot : (7D6) → 28[3,5,2,4,5,6,3] → 28</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>その出目だと恋慕に2点、寛容に2点、冒険に1点、庇護に1点、戦友に1点。ちなみに最大値は3です</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>えっ！４点超えちゃう！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あふれた場合は次の出目の騎士道に繰り越し、主君があふれたら冒険に入る、冒険もあふれたら恋慕に入る</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>合計3で止まる？それとも信条のとは別？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>信条だけは特別なので信条を置いてるとこは合計4点までいく可能性がある</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>なるほど　あふれなかった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ちなみに「足跡」は「最近の騎士的行い」らしいので</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>nakigaoは主君をほったらかして恋慕してた、あと冒険もした</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>みんな主君ほったらかしてますね…</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ちなみにセッションごとにふりなおします</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>へぇ、ふり直しするんだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとは・・・称号、名前、性別、年齢、理想像、愛用の武器は好き勝手につけていいですよ。ちなみに成人は16歳です</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>ほい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>理想像ってのは「おらの主君はこんな王様がええな～」を書くとこです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>愛用の武器はランダムで決めていいんかなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとなぜか愛用の武器だけ表があるので振ってもいいですよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>(ころころ)・・・変わった斧</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>オーノー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ちなみに世界観なんですが、おおむねアーサー王伝説な世界観です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>英雄王セヴァンが魔王バルタザールを倒してすごい平和になったログレスという島です。セヴァンはアヴァロンという王国を建国したんですけど、円卓の騎士の一人バールゼルに裏切られて死にました。そんで魔王が王都を陥落したので、みんなで逃げてます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>円卓の騎士にまともな奴はいないのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>きみたちも円卓の騎士なんだよ！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>名前をランスロットにしようかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>きみたちは王子派なので、裏切りは許されない</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>結構シリアスな話なんか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まあ・・・シリアスだと思う？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>称号って伯爵とかそんなん？それとも二つ名的なやつ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>二つ名的なやつ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>年齢どうしようかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>迷ったら16＋1dとルルブに書いてあった。ゲーム的に大事じゃなければ進んでいいよ、後で適当に埋める</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>王子がショタっぽいからオカマキャラにしよう、恋慕もなっとくできる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>デネブって優雅系なのにオカマとは残念だな！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>優雅だからオカマぴったりやん？イケメンオカマ枠いこう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あご尖ってそう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ここはぐっと抑えてあごは尖らせない・・・！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>苦渋の決断！</div>
+            </div>
+            <div class="row comment">
+                <div class='col-sm-2 name'></div>
+                <div class='col-sm-10 serif'>(・・・30分後・・・)</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>主君作成</h2>
+                    <p>※一言プリーズ(なくてもいいよ)</p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>そろそろできたかな？じゃあキャラ作成の最後、王子をメイク</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>護衛対象的な？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まあそうです</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>今回の王子はアシュウッド君です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>アシュウッド君のステータスを公開します</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>人物像　「」主君　命数 １性別 男 年齢 12 運命点 １義勇兵 ０ 維持費 3形見 言葉</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>維持費・・・</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>ちなみに維持費は君たちのことだ！義勇兵もいない</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>悲劇的な王子っぽいなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>王子貧弱すぎない？命１って</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>王子は一発食らうと死にます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>それで王子のキャラメイクなんですが、アクション表というのを埋める必要があります。アクション表は王子がなんかするたびに適当にGMが降ってアクションします</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>そのアクション表は1d6の出目の内容になるんですが、君たちが各自1つずつ内容を決めます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>例を挙げると・・・</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>1の目がでたら、「唇をとがらせる」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>2の目がでたら、「顔を赤らめる」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>みたいな</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>evi@アシュウッド</div>
+                <div class='col-sm-10 serif'>１～６の好きなところに各自適当にいれてください</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>じゃあ１が出たら筋トレをする</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>③でひろい食いする</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>５で深呼吸する</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとは・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d3+1d6 LostRoyal : (1D3+1D6) → 1[1]+5[5] → 6</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d3+1d6 LostRoyal : (1D3+1D6) → 3[3]+1[1] → 4</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>1d3+1d6 LostRoyal : (1D3+1D6) → 3[3]+3[3] → 6</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>褒めている　道に迷う　とんでもないものを買ってくる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ACT LostRoyal :王子アクション表(5[5]) → 深呼吸</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>こんな子になりました1:筋トレをする2:拾い食いをする3:褒めている4:道に迷う5:深呼吸6:とんでもないものを買ってくる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>維持費あがりそう・・・というわけでキャラクター作成はおしまいです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>ok、完成</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なんか人じゃないものがいるんですが・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>呼気漏れてますよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@シュヴェー</div>
+                <div class='col-sm-10 serif'>人種差別はカッコ悪いぜ</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
