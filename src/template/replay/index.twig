@@ -32,7 +32,7 @@
 {% endblock %}
 {% block left %}
     <ul id="section-nav" class="nav nav-sidebar">
-        <li><a href="#lsry">ロストロイヤル(3)</a></li>
+        <li><a href="#lsry">ロストロイヤル(4)</a></li>
         <li><a href="#gror">ガーデンオーダー(4)</a></li>
         <li><hr style="width: 60%"></li>
         <li><a href="#sww2">ソードワールド2.0(4)</a></li>
@@ -112,6 +112,20 @@
                             <td>evi, kaeru, naki</td>
                             <td>aneko</td>
                             <td>2017年04月02日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-4"> EP1「王女の決別」</td>
+                            <td class="col-sm-4">
+                                {% set list = [['4/2/1/', 'プリプレイ', '未編集'],['4/22/', '開幕', '未編集'],['4/2/3/', '分岐', '未編集'],['4/2/4/', '戦闘', '未編集'],['4/2/5/', '終幕', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, naki</td>
+                            <td>aneko</td>
+                            <td>2017年06月25日</td>
                         </tr>
                     </table>
                 </div>

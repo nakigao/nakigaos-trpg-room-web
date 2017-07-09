@@ -48,5 +48,11 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (32, 7, 2, '開幕', FALSE),
     (33, 7, 3, '分岐', FALSE),
     (34, 7, 4, '戦闘', FALSE),
-    (35, 7, 5, '終幕', FALSE)
+    (35, 7, 5, '終幕', FALSE),
+    -- lsry/アネコのロストロイヤル/王女の決別
+    (36, 8, 1, 'プリプレイ', FALSE),
+    (37, 8, 2, '開幕', FALSE),
+    (38, 8, 3, '分岐', FALSE),
+    (39, 8, 4, '戦闘', FALSE),
+    (40, 8, 5, '終幕', FALSE)
 ;

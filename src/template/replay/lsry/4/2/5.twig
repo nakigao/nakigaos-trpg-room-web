@@ -1,0 +1,591 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-aneko.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>XXXXX</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>「ふふ・・・ふはははは」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>「サラ様！おはやく！」ボロボロの体で</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>「負けを潔く認めよう、さあわれに止めをさすがよい！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>じゃあ秘孔を突きます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>「・・・・（最初の言葉が無言なんてひどい）」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「簡単には殺さんぞ」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>この流れどっかでみたな・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>でしょ？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「貴様の持っている情報をすべて絞り出し、ボロ雑巾のようにしてやるわ！！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>「あなたをどうするかは親愛なる騎士達に任します。」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@うっうー</div>
+                <div class='col-sm-10 serif'>で、どうすんの？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>またキングがカッコヨク決めてくれそう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「ハッ！お任せください女王陛下」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>あ、キングはペット枠なんで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>今日はベルに任そう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>任せてくれるなら拷問部屋とかに連れていきたい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>何も考えてないんだけど！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>まあもちまわりでもいいね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>毎回キングに任せるのも癪なので・・・お願いします</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお、なら王道でいこう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ちなみに次回はクヮインね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>「・・・」ツカツカと歩いて行って、一発殴ります</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>少数派にまかせていいのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>少数派の意見も大事</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>「これでいい、お前は生き恥をさらして精一杯生きろ。子どもは返してもらうぜ」と踵を返す</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>「・・・何のつもりだ？」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>ほれた</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>トゥンク</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>ほもぉ・・・</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>「・・・・！！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>耳の中に虫が入ってきた</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>一体何が起こってるんですか・・・？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>腕枕ほしい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>ホラー映画かな</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>「（これがサラ王女率いる騎士団・・・。あの方についていけば）」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>百年戦争のフランス騎士くらい簡単に寝返るなこいつら！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>寝返りは基本</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>そんなことがあり、無事に子供を救いだし、街に帰る一方</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>その帰路にて・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>騎士って碌な奴がいねえな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ノブレスオブリージュは死んだ・・・</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>aneko@エンザー</div>
+                <div class='col-sm-10 serif'>「ふははははーまてーまってくれー！！俺も共に忠誠を誓わせてくれー！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>墓標ゲットだぜ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>といったところでこの日は終わりです。</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>絶対いちご味だよ、この人・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>皆さんの絆欄にいれてください</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>墓にはならんぞ！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ふぉい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>さて、終わる気満々でしたがまだありました</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>次回はこいつがさらわれるんでしょ？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>助けに行かないよ？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>男を助けるセッションってのもなかなか・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>儀式シーンがあります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>せめていい風くらいは吹いてほしいね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>場所ダイス振ります</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>1d6+1d6 LostRoyal : (1D6+1D6) → 1[1]+5[5] → 6</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお・・・絵になる組み合わせ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>雨上がりの潮騒の砂浜</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ここで王女の水着シーンはないです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>絵にならなかった！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ということで各自ダイスを振ってください。ベル、クヮイン、キングの順でお願いします</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>WPC LostRoyal : 1D6[5] やや強い風（儀式点プラス１） [合計儀式点 +1 ]</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>風力判定でいいんだよね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ワンモア</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>WPC LostRoyal : 1D6[6] 強い風（龍を幻視、儀式点プラス２） [合計 儀式点 +2 ]</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ええやん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>WPC LostRoyal : 1D6[5] やや強い風（儀式点プラス１） [合計 儀式点 +1 ]</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>WPC LostRoyal : 1D6[3] ゆるやかな風 [合計 儀式点 +0 ]</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>やっぱなんも見えんわー</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>wpc LostRoyal : 1D6[4] ゆるやかな風 [合計 儀式点 +0 ]</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>wpc LostRoyal : 1D6[6] 強い風（龍を幻視、儀式点プラス２） [合計 儀式点 +2 ]</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ええやん</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「竜」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>よ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>６点ですかね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「竜よ願いをかなえておくれー」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>「残念だったな、あの竜が叶えてくれるのはサラ様の願いだけさ」とニヒルな笑い</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>あと記憶点の合計値÷４の数値をプラスするのか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「（ギャルのパンティおくれーーーーー！！）」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>というか「未使用」の記憶点ってなんだ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>記憶点が少ないな・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>なんか漏れがありそう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ああ、外伝シナリオは風力判定がないから、ここでやれってことでしょ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>僕らには関係ない話だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ふむふむ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>合計１０点・・・？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ログ見て確認しとこか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>まあ後でします</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ではきょうのMVP</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>その前に勲章点</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>皆さん+１</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>わーい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>愛用の武具の任意の値+１</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>芋が買える</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>わ～い</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>いえい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>えーMVPはベルです。ぱちぱち</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>独断やな！？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>Eviと自分で２点なので・・・</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>自動成功</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ありがたき幸せ・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>俺もベルに投票するでえ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ペンギンは騎士道に沿った行動してない気がする</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>してるやん！侵害やなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>主君の座を奪おうとしながら主君の騎士道は名乗れないですね・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>MVPにえらばれたベルは主君にして欲しいことをひとつ願えます（アクション表を一つ変更できます）</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あ、忘れてた・・・</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>えー、といったところでEP.1「王女の決別」終了です。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ありがとうございました</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おつかれさ～ん</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>anekoGM</div>
+                <div class='col-sm-10 serif'>ちょっと虫掃除してくる</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>うい、いってら</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>いってらっさい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>あねこくん</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>アクション表のラインナップがどうやってもアイドル向けっぽくなってる気がするけど、そういう方面でいくの、この主君は</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ナキガオがDiscordのほうで質問してるから</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>確認しておいてね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ピン留めしてるんで</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あ、それも忘れてた</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ここで聞いちゃうけど、このセッションはEP1でOK？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>正直アイドルってよくわかんないんだけど、なんかそれっぽいワードない？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>握手会</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>舞台表になっちゃうじゃんそれ、と思ってやめた</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ライブ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>レッスン</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>お、レッスンいいかも</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ダンス</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ローラースケート</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>昭和めいてきた</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>解散騒動</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>不祥事なんだよなぁ・・・</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>独立</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>サイン会</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>歌って踊れて戦えるアイドル</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>独立サイン会というパワーワード</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>Mステ出演</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>お、ぴんときた</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>6「物陰に隠れる」 -> 「それっぽいポーズの練習をしている」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>どうよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>勝利モーションか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>いいね！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>play of the match</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>今日の教訓「魔人を見たら、器と騎士道判定の値を真っ先に見ること」</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

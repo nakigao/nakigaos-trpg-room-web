@@ -152,6 +152,27 @@ INSERT INTO replay_part_gm_pl (rule_unique_id, series_id, episode_sequence_numbe
     ('lsry', 4, 1, 5, FALSE, 1, NULL, FALSE),
     ('lsry', 4, 1, 5, FALSE, 2, NULL, FALSE),
     ('lsry', 4, 1, 5, FALSE, 3, NULL, FALSE),
-    ('lsry', 4, 1, 5, TRUE, 4, NULL, FALSE)
+    ('lsry', 4, 1, 5, TRUE, 4, NULL, FALSE),
+
+    ('lsry', 4, 2, 1, FALSE, 1, NULL, FALSE),
+    ('lsry', 4, 2, 1, FALSE, 2, NULL, FALSE),
+    ('lsry', 4, 2, 1, FALSE, 3, NULL, FALSE),
+    ('lsry', 4, 2, 1, TRUE, 4, NULL, FALSE),
+    ('lsry', 4, 2, 2, FALSE, 1, NULL, FALSE),
+    ('lsry', 4, 2, 2, FALSE, 2, NULL, FALSE),
+    ('lsry', 4, 2, 2, FALSE, 3, NULL, FALSE),
+    ('lsry', 4, 2, 2, TRUE, 4, NULL, FALSE),
+    ('lsry', 4, 2, 3, FALSE, 1, NULL, FALSE),
+    ('lsry', 4, 2, 3, FALSE, 2, NULL, FALSE),
+    ('lsry', 4, 2, 3, FALSE, 3, NULL, FALSE),
+    ('lsry', 4, 2, 3, TRUE, 4, NULL, FALSE),
+    ('lsry', 4, 2, 4, FALSE, 1, NULL, FALSE),
+    ('lsry', 4, 2, 4, FALSE, 2, NULL, FALSE),
+    ('lsry', 4, 2, 4, FALSE, 3, NULL, FALSE),
+    ('lsry', 4, 2, 4, TRUE, 4, NULL, FALSE),
+    ('lsry', 4, 2, 5, FALSE, 1, NULL, FALSE),
+    ('lsry', 4, 2, 5, FALSE, 2, NULL, FALSE),
+    ('lsry', 4, 2, 5, FALSE, 3, NULL, FALSE),
+    ('lsry', 4, 2, 5, TRUE, 4, NULL, FALSE)
 
 ;
