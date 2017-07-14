@@ -16,5 +16,5 @@ INSERT INTO replay_user (id, class, name, pl_comment, gm_comment, color_hex, mem
     (4, 'aneko', 'aneko', '天下一ヒロイン武道会に出たいとかなんとか。とにかくネコとセットで出てくる','本セッションのGMを担当', '2196F3', '', FALSE),
     (5, 'jem', 'jem', 'ふぁいなるでふぁんたじーな世界から。純レギュラーメンバー','本セッションのGMを担当', 'FF4081', '', FALSE),
     (6, 'sukamomo', 'sukamomo', 'コメントください','本セッションのGMを担当', '9C27B0', '', FALSE),
-    (7, 'xino', 'xino', 'コメントください','本セッションのGMを担当', '9E9E9E', '', FALSE)
+    (7, 'xino', 'xino', 'ベテランCoCプレイヤー。柔軟なRPと堅実な技能構成でサポートと探索をそつなくこなす','本セッションのGMを担当', '9E9E9E', '', FALSE)
 ;
