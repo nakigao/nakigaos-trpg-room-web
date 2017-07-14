@@ -173,6 +173,22 @@ INSERT INTO replay_part_gm_pl (rule_unique_id, series_id, episode_sequence_numbe
     ('lsry', 4, 2, 5, FALSE, 1, NULL, FALSE),
     ('lsry', 4, 2, 5, FALSE, 2, NULL, FALSE),
     ('lsry', 4, 2, 5, FALSE, 3, NULL, FALSE),
-    ('lsry', 4, 2, 5, TRUE, 4, NULL, FALSE)
+    ('lsry', 4, 2, 5, TRUE, 4, NULL, FALSE),
+
+    ('cloc', 5, 1, 1, FALSE, 1, NULL, FALSE),
+    ('cloc', 5, 1, 1, TRUE, 6, NULL, FALSE),
+    ('cloc', 5, 1, 1, FALSE, 7, NULL, FALSE),
+    ('cloc', 5, 1, 2, FALSE, 1, NULL, FALSE),
+    ('cloc', 5, 1, 2, TRUE, 6, NULL, FALSE),
+    ('cloc', 5, 1, 2, FALSE, 7, NULL, FALSE),
+    ('cloc', 5, 1, 3, FALSE, 1, NULL, FALSE),
+    ('cloc', 5, 1, 3, TRUE, 6, NULL, FALSE),
+    ('cloc', 5, 1, 3, FALSE, 7, NULL, FALSE),
+    ('cloc', 5, 1, 4, FALSE, 1, NULL, FALSE),
+    ('cloc', 5, 1, 4, TRUE, 6, NULL, FALSE),
+    ('cloc', 5, 1, 4, FALSE, 7, NULL, FALSE),
+    ('cloc', 5, 1, 5, FALSE, 1, NULL, FALSE),
+    ('cloc', 5, 1, 5, TRUE, 6, NULL, FALSE),
+    ('cloc', 5, 1, 5, FALSE, 7, NULL, FALSE)
 
 ;

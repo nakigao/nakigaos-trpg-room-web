@@ -16,4 +16,7 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
     (5, 3, 1, '', '戦争屋の誘い', FALSE),
     (6, 3, 2, '', 'フィギュアイズマイン', FALSE),
     (7, 4, 1, '第0話', '小さな心の大きな一歩', FALSE),
-    (8, 4, 2, '第1話', '王女の決別', FALSE);
+    (8, 4, 2, '第1話', '王女の決別', FALSE),
+
+    (9, 5, 1, '', 'ハロー、ヴィータ', FALSE)
+;

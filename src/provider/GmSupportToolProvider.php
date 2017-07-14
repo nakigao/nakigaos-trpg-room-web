@@ -124,7 +124,7 @@ class GmSupportToolProvider implements ControllerProviderInterface
         array('SharedFantasia', 'SharedFantasia', false),
         array('ShinMegamiTenseiKakuseihen', 'ShinMegamiTenseiKakuseihen', false),
         array('ShinkuuGakuen', 'ShinkuuGakuen', false),
-        array('ShinobiGami', 'ShinobiGami', false),
+        array('ShinobiGami', 'シノビガミ', true),
         array('ShoujoTenrankai', 'ShoujoTenrankai', false),
         array('Skynauts', 'Skynauts', false),
         array('StrangerOfSwordCity', 'StrangerOfSwordCity', false),

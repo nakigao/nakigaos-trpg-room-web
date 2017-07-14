@@ -11,4 +11,6 @@ INSERT INTO replay_series (id, rule_unique_id, is_campaign, sequence_number, nam
     (1, 'gror', FALSE, 1, '単発', FALSE),
     (2, 'gror', TRUE, 1, 'ゼロ特学園生活！', FALSE),
     (3, 'lsry', FALSE, 1, '単発', FALSE),
-    (4, 'lsry', TRUE, 1, 'アネコのロストロイヤル', FALSE);
+    (4, 'lsry', TRUE, 1, 'アネコのロストロイヤル', FALSE),
+    (5, 'cloc', FALSE, 1, '単発', FALSE)
+;

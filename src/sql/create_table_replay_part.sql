@@ -54,5 +54,11 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (37, 8, 2, '開幕', FALSE),
     (38, 8, 3, '分岐', FALSE),
     (39, 8, 4, '戦闘', FALSE),
-    (40, 8, 5, '終幕', FALSE)
+    (40, 8, 5, '終幕', FALSE),
+    -- cloc/単発/ハロー、ヴィータ
+    (41, 9, 1, 'プリプレイ', FALSE),
+    (42, 9, 2, '導入', FALSE),
+    (43, 9, 3, 'Aパート', FALSE),
+    (44, 9, 4, 'Bパート', FALSE),
+    (45, 9, 5, '結末', FALSE)
 ;
