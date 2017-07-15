@@ -1,0 +1,1076 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr class="divider">
+                    <h2><span class="section-icon"></span>探索パート</h2>
+                    <p>※一言プリーズ(なくてもいいよ)</p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では今回は初回なので遭遇判定は無しでエリア描写に移ります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>白井という諸悪の根源さんは常に一緒に行動してるの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はい、ビクビクしながらくっついてますね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>諸悪の根源・・・！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>これ、食堂に戻っても大丈夫なのかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ルール的には大丈夫そうだな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>のれんをくぐった先には、和風のロビーがあります、受付カウンターやラウンジ、玄関があります。玄関の自動ドアからは外の景色もみえていますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ルール的には戻れるよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ナイフが必要なら厨房に行きたい気がする</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>お、開いてんじゃ～ん＾＾</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>行きましょうよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>土産物にあるかもよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>aneko的には短期決着をつけたい感じか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>パーティ的には全員生還を目指したい気はする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>しかしロビーは何かが暴れたかのように荒れ果てていますね、そして下に降りる階段と上に上る階段もあります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>製作＜ナイフ＞で振ったらいいんだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>SANがやばい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>例のソバ人間が暴れた感じか・・・？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>こんなところですね、移動はここでの行動が終わった次のラウンドで行ってね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>というかなんだここ、旅館かなにか？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>このエリアでは目星の探索が２つ用意されています</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はい、蕎麦屋は旅館に併設されているのです</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>あ、そうなの</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>そうか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>とりあえず目星しようかなみやげ物やに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ホテルの中にあるレストランみたいな感じ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なるほどぉ・・・スキル的にランダム探索しかできないな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>んっ、探索になるのかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>行動宣言    ランダムイベント</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>とりあえずみんな目星すればいいんじゃないですかね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=25    Cthulhu : (1D100<=25) → 9 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ほーらなんかみつけた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるやん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>皆が振った後で決めよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はやいな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あとは目安係がなんとかするやろ、ルミの行動宣言に変更はなし</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>もう一戸目星があるんでしょ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>きりんぽは下手に目星すると自殺しかねんからな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では式はフロントでパンフレットと「食材　長いも」を手に入れた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>確かに</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CC<=60    Cthulhu : (1D100<=60) → 70 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>かゆくなりそうだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>生きる爆弾と呼んでいただきたい</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ほらみつけれない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>パンフレットかぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>複数回目星に成功していいことってある？＜GM</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>目星ふるか～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ランダム表を振る人は「sor」と入力してね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>CC<=25 目星    Cthulhu : (1D100<=25) → 67 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はいだめー・・・</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>見つかるものが複数用意されてる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>じゃあ不老</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=95 [目星]    Cthulhu : (1D100<=95) → 6 → スペシャル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>おお</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>世界の真理が見つかった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>すげぇ＾ｑ＾</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ土産物屋で木刀がみつかるぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>1d6+dbの武器だ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>イイネェ、ぶきかぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>武器の受け渡しは自由にしてね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>板倉さんにあげよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「これは・・木刀ですね。私はマイ包丁があるので護身用に誰か持ちますか」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ダメボもってるし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>アイテムリスト作ったので使ってくださいね</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「木刀人の私にこれを！いいですね！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「板倉さん、似合いますね！グッド！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>渡しました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ちなみにパンフレットには温泉旅館「しぐれ」と書いてあり、管内の地図が乗っています</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>長芋は・・・貴重な食料・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>隠して持っておこう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>誰にも渡さない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、いいね地図か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>サバイバルだったんか！？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>背中から芋が出てますよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>後振ってない人は誰だ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>おっと失礼</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>全員完了だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>とろろ蕎麦たべたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>食材はいわゆるやりこみ要素なので、集めると良いことがあります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ととろなら・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>この世全ての悪さんは囮役として使うことに気づいた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ちなみにこのタイミングで陽菜にランダム表を振らせることも出来ます。ただしこれはシナリオ中１回のみです</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>まだいいでしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>振る理由がまだないもんな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>死んだら振れないけどまだ大丈夫そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ではラウンド終了進行度が１上昇します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>玄関ドア開くか一応チェックする？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>おっと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>その前にイベントだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>皆が探索をしていると大きな声が館内に響く</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>何事かと思うと一人の男が階段を駆け下りてきて、そのまますごい勢いで自動ドアから外に飛び出していった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>イベントは終了です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふむぅ？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>なぜ自動ドアが使えることをイベントで教えてくれたのかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>自動ドアをすごい勢いで駆け抜ける</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ウィー..ン</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>これは出た瞬間に確定で待ち受けてるパティーンだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では次の移動先を選んでください、隣接しているエリアならどこでもいいですよ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ペロペオｒ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>カーズ！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ちなみに会談はエリア２と３につながっています</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>3のマップがないねぇ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>３ってどこだ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>地下じゃない？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>いきなり８がある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>よって移動可能なのは２、３、0、８です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>３は2階です移動するならマップを変更します</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>多層構造のマップってことだなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>この旅館は3階建てです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ここは1か・・・</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>エリア２にいっぴょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>二階も木になる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>３に一票</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>外に出る選択肢はないんか？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>さあどうします？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まあ、いいやエリア③で</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>別れたら多数決orダイスor口プレイだ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>2から潰したい、角埋めは基本</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>２と３で分かれたかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>代表で、jemとanekoが1d100振って。おっきい方が勝ち</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>1d100    Cthulhu : (1D100) → 96</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>1d100    Cthulhu : (1D100) → 3</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ひどい・・・</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>か、かてるわけないよぉ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>圧倒的</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ＣＯＣ的には買ってた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>普通のロールなら負けてる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>エリア3へれっつらご</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ３でおｋ？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>基本95までしか振ってないから普段のロールで出なくてよかった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>こんな感じですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふむふむ・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>幸運フルの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>客室の並ぶ廊下だ奥にはスナックが見える</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ではここで遭遇判定です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>幸運を振ってね</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CC<=60    Cthulhu : (1D100<=60) → 76 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=20 [幸運]    Cthulhu : (1D100<=20) → 79 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ふふふ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=60    Cthulhu : (1D100<=60) → 77 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>すごい運が悪いな我ら</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もうだめそうなんだが・・・</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>一応ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>わんちゃんもない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>CC<=60 幸運    Cthulhu : (1D100<=60) → 71 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うわぁ・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>慈悲もない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こんなときこそNPCの出番やな＾＾</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>今運のチャージしてるから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はいでは１ｄ6で4以下が出ると遭遇しますね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>これ振るだけ損ですよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>1d6    Cthulhu : (1D6) → 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>失敗数をだしてるだけなんで</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あーあー＾ｑ＾</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>絶望・・・・ただ・・絶望・・！！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>おまちかねだろ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>別に倒してもかまわんのだろう？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>キリたろうの包丁の射程範囲が視認範囲になっててわろうた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ではあなた達が廊下にいると、スナックの中から蕎麦人間が現れました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>つよいぞ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>「ソソソソソ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>威力しょぼいけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>「5人、いける？」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ではここで遭遇時のルールを</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>遭遇時に取れる行動は3つあります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>皆さん逃げ場がないところにいますねえ・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>1人ずつ・・ヤラレル・・・！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>はいメモにあげました、逃走、隠れる、戦うの３つです</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>完璧に決着つけれるのは最後のラウンドっぽいね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>後ＮＰＣを犠牲にすることでも逃走が出来ます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>kore</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>相手の回避によるけど殴ったほうが被害はでなさそうだ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>確かにね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おおそうなの？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>けど武器は二つしかないぞ、うち一つは伝統の包丁、失ったら職を失う</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>でも一つ言っておくと蕎麦人間は、蕎麦アレルギーに対して有利な技を持っています</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>まあでも事故がおきなければ逃走がいちばん確実ですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>DEXは１４もある</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>まあ事故が起きなければどれでも解決できるようにはなってるね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>DEX12</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>いちばんのろい私でも85%なんで・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>囚人さんはいくつなの？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まぁしかし、さっきの幸運判定を見るに・・・</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>陽菜は判定しないです、ステータスがないので</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>こいつなんでいるんだ(NPCを見ながら)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>じゃあ犠牲符として扱おう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ヒロイン担当だから、癒しだからね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>間に合ってます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@白井陽菜</div><div class='col-sm-10 serif'>「はわわわ、怖いです～」</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>読んだかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>結局どうしよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>逃げる？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>にげるべにげるべ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>進行度もまだ序盤ぬ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>逃げでOK!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>自動成功だった</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>14以上はそうだな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>RESB(12-4)    Cthulhu : (1d100<=90) → 78 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=85    Cthulhu : (1D100<=85) → 62 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>RESB(14-4)    Cthulhu : (1d100<=100) → 自動成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これでええんか？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>RESB(12-4)    Cthulhu : (1d100<=90) → 100 → 致命的失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>おう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>わろたｗｗｗ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>がんこちゃん・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>おうん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>我々3人PTだったきがする</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>たしかに</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>拙者もそんな気がするでござる</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>これはあかん奴やでえ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>描写的にはずっこけた感じかねえ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>早くもヒロインちゃんも出番が着たんじゃない？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そのようだな＾＾</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ヒロインちゃん、いま最高に輝いてるよ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あれやな板倉がずっこけると、なんかピタゴラスイッチ的な仕掛けにより全員コケるという</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ドスーン！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>致し方なし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>戦闘開始かな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>どうする？戦闘に入っていい？それともヒロインを殺すかい？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>戦闘か</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>切り刻んでやる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ん～む、勝てるもんかなぁ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では最初のラウンドは全員コケてるので蕎麦人間からだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ずるくない？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ずるい(確信）</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ルールに書いてるでしょうが</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ヒロインちゃん、いい子だったよ。次のヒロインちゃんよろしくね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>安心してください、ヒロインは戦闘に巻き込まれませんよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>またNPCを探すことができると思う</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では攻撃するぞー</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次は攻撃対象だ、イニシアチブ順で決めるぞ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4    Cthulhu : (1D4) → 2</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ではルミに引っかく攻撃だ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 37 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>死んでしまう！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 29 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>2回とも成功するか</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4+1d4    Cthulhu : (1D4+1D4) → 2[2]+2[2] → 4</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ではルミに4ダメージ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>回避しないんか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>「うどんはかまたま・・・」断末魔</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>11-4=7</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>できんぞこけてるし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>そうか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ひどい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>生蕎麦で引っかかれた</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ずるい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では2ラウンド目</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>鬼！悪魔！外道！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>KPのクズ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>蕎麦ですよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>毎回自分のキャラ絵で笑ってる</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ＤＥＸ順で。何とでもいうがいい！貴様らはここでおしまいよお！！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>「そそそそそそ」笑っている</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>もしかして村正つかえと？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるしかない・・・！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>職を失う覚悟で攻撃しよう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>こいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=50 [ATTACK!!!!!!!!!]    Cthulhu : (1D100<=50) → 5 → スペシャル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>死んだな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>100円拾いました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ｗ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そういえばそんなGMだったな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「この手ごたえ・・・やったか！」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>まあせっかくだしダメージを2倍でいいぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ダメージロール二倍だっけ？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>その前に回避だがな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>しなくていいよ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=8    Cthulhu : (1D100<=8) → 24 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>どうせ死ぬんだし</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>こいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>攻撃回数50って書いてあった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>1d4+1d4    Cthulhu : (1D4+1D4) → 1[1]+4[4] → 5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「打ちすぎ、御免！」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>５か、装甲が１あるので4ダメージ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>無力化ロール</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>何だよ蕎麦の装甲って</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 81 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ぐぬぬ・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そば殻アーマーに違いない</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>生めんだから硬いんだよ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次の方どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>やっぱり麺はバリ硬だよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>パンチしかないんだよなあ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあアイディア振っていいぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>触ると壊死するんじゃない？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>CC<=55 アイディア    Cthulhu : (1D100<=55) → 69 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>全然だめね・・・</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>全員振っていいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=85    Cthulhu : (1D100<=85) → 16 → スペシャル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CC<=70    Cthulhu : (1D100<=70) → 66 → 成功</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ギリギリでいつも生きていたいから～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=50 [あいであ]    Cthulhu : (1D100<=50) → 3 → スペシャル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スペシャル乱舞やなぁ・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>SAN値は低いけどね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあ成功した人は気づく、蕎麦人間の体には大量の蕎麦粉が付いており、素手で振れればただでは済まないだろうことがわかるぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>あかん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>「よぉし！通信カラテで鍛えた一撃お見舞いしちゃうぞ～♪」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>肉切骨断</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダレカトメテ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>まあ攻撃できないわけではないがな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>粉塵爆発って知ってるか？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「いけない、ルミくん、あいつのボディにはそば粉が着いてるZO！」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>「いっけなぁい！思わずなぐっちゃうところだった！」てへぺろ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>待機かなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>上の名前が分からん買ったから下の名前になった</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>武器の調達は戦闘中も触れるで</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>振れる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>目星かなぁ？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>CC<=25 目星    Cthulhu : (1D100<=25) → 56 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>はい・・・いいとこなしおわり</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あ違うぞ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>えーと[sob]や</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>sob</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>sob    Cthulhu :武器調達表(5[5]) → クリスタルガラス灰皿（ダメージ１Ｄ４）</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあルミは灰皿を拾った</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>装備してこのターンは終わり？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ナイフと同じ威力なのが悲しい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>鈍器は強いからね！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>まあドラマで何人紋命を奪ってるし</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「飛天なんちゃら流奥義！ちゅるちゅる面！」木刀ばし～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>オトリヨッセー</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CC<=50    Cthulhu : (1D100<=50) → 90 → 失敗</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>スカ～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かなしいなあ・・・</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>出目高くない？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>今日はＣＯＣの予定じゃなかったのかも</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次の型どうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>蹴り殺してやる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>活人剣ゆえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=25    Cthulhu : (1D100<=25) → 94 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>はずれた</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>外れてよかったな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあこっちの番</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>また１か</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4    Cthulhu : (1D4) → 2</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あーあ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ルミを引っかくぞー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ひっかかれてもなんとも無いのに触ると反撃食らうんだな・・・こわいんだな・・・</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>多分服を引っかいてるからじゃね？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ばっちこい！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>HPは脱衣度だったか</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 16 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 22 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4+1d4    Cthulhu : (1D4+1D4) → 2[2]+4[4] → 6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>即死くるうううううう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう首の皮一枚</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>「わたし、最後に黄金うどんっていううどんが食べたかった・・・」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>7-6=1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>「ソバソバソバソバソバ！！」蕎麦人間のラッシュが決まる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>自動気絶じゃん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>パタリ・・・ロ・・・・</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ふむ次3ラウンド目だが、どうする？12時過ぎたが</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「くっ、助けたいけど蕎麦のせいで・・・」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>きりよくやめよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>せやな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ブレイクブレイク</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>つまり・・・どっちだ！？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ここで中断？倒すまでやる？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>3時間で終わるのだろうか</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>やはりオフセの3時間はオンセだと伸びるな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>後4ダメってきついよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ここで終わりだ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>装甲あるし</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>とはいえ後は探索して情報集めてボス倒すだけだがな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>後一回ぐらい分ありそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ぜんざい食べなくては</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう3時間くらいじゃないかなぁ</div></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>(※日が変わります)</h3>
+                </div>
+            </div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>寒い日はやっぱり蕎麦だよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>今年入ってちゃんとした蕎麦食べてないな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>そんな時は僕の顔をお食べよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>その首、もらったぁ！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>薩摩人かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ナレーター「前回の蕎麦オブ・ザ・デッドは」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>覚えてる？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>うどんより蕎麦派</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>がんこちゃん（仮）役立たず</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2Fを確認すべく、上ったところ、がんこちゃんがすっころんで蕎麦人間が飛び出してきた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そして今は戦闘中</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>まあそんな感じですね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>まさに絶体絶命のピンチです、準備良ければ２ラウンド目行きましょうか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>斬太郎が料理人の座を失った</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>準備よくないので戦闘終了にしませんか</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>その場合は自動的に全滅という事でよろしいか？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>準備よいです</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では始めようウェルカムトゥーヘル</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>２ラウンド目の切太郎からどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>武器探します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>包丁無くなったんですか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>使ったらなくなるという理不尽使用だった気がする</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>使い切りアイテムの可能性</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>なくならないぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>え、そうなの</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>なくなるのは戦闘中に見つけたもの限定だ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>調達した武器は戦闘終了時になくなるとはある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>じゃあ料理人続行だ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>戦闘ちゅう以外に見つけたものはなくならない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>つまり斬太郎は無双できるわけか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>だれにしよっか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「そばさーん、しんでくださーい」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ふふんイタリア料理人では蕎麦には勝てまい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>生粋の江戸っ子ですよ？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=50 [ATTACK!!!!!!!!!]    Cthulhu : (1D100<=50) → 86 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>準備運動はここまでだ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>身体あったまってきましたね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あれですよ包丁なら料理で振ってもいいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>料理の使いみちあった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>さすが</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>そのための推奨だし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=95 [ATTACK!!!!!!!!!（料理技能）]    Cthulhu : (1D100<=95) → 54 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>高いな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>一応回避しよう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=12    Cthulhu : (1D100<=12) → 32 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ダメージどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>1d4 [村正による雅たるダメージ]    Cthulhu : (1D4) → 1</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>1万</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあ装甲で弾かれますね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「あの蕎麦硬すぎでーす、きっとくそまずですな」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>蕎麦のコシは思った以上に硬く、切ることはできなかった</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>「ソソソソソ（笑）」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次の人どうぞ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「まぁ　どんなそばでも食べるのは御免！うどん人だし！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>うどんと言えば福岡ってタモリさんが言ってた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>腕とか半分吹き飛んでるけど、灰皿で殴るね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ルミさん1だから自動気絶だよ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>蕎麦で殴られてとんでもない重症だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>HP3以上にしないと</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>あ、そうなの？じゃあおしまい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次の型どうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>七田式蹴撃の型！！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=25    Cthulhu : (1D100<=25) → 44 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>はずれ！</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>飛ばされた気がした</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>あたっても死にそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ごめんとばした</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CC<=50 ちゅるちゅる面    Cthulhu : (1D100<=50) → 59 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ここでがんこちゃんの汚名返上ですよ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ダメみたいですね…</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>フェイトを使って振り直そう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあ蕎麦人間のばん</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4    Cthulhu : (1D4) → 2</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>がんこちゃ～ん</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>なんか執拗に狙われてる人がいらっしゃる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>白井というスケープゴートは何処</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>脱落したら、リプレイでも編集してるかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>（まな板の上のコイキングのようだ）</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>まな板か</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>脱落したら新キャラを作るか、双子の姉妹を登場させてください</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>同じ出目しかでんぞ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ひっかっく</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>無事死亡</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ルミに攻撃</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>五つ子の斬太郎使ってもいいよSAN値はルミの値で</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>双子でいくかなぁ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 63 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 47 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ダメージ１ｄ4</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4    Cthulhu : (1D4) → 2</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>応急手当判定で最大値出せば生きてるやつ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ノーペナだと緊張感ないから、5ラウンドくらい死んでていい？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>応急手当使える人いたっけ？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>とりあえず死にましたが、そうですね蘇生のめどはあります</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>がんこちゃん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>がんこちゃんに助けてもらおう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>３ラウンド目</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>頼むよがんこちゃん！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>切太郎のかっこいい所が見てみたいー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「そろそろしんでくださーい」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CC<=95 [ATTACK!!!!!!!!!（料理技能）]    Cthulhu : (1D100<=95) → 8 → スペシャル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>前回からよく出るなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>そば粉まで戻してしまいそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>クエストクリアや！</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=12    Cthulhu : (1D100<=12) → 31 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>わ～い</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ダメージきな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>2倍だっけ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>クリティカルじゃないから普通で</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>いや+1してやろう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>せっかくだし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>今度からCCBでふるか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>1d4+1 [村正による雅たるダメージ]    Cthulhu : (1D4+1) → 3[3]+1 → 4</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>３ダメージ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=25    Cthulhu : (1D100<=25) → 74 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>蕎麦はフラフラしていますがまだ動いてますね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次の型どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>戦闘長いな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>（血みどろのコイキングのようだ）</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>次の製麺機</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CCB<=90 応急処置面    Cthulhu : (1D100<=90) → 100 → 致命的失敗</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>＾＾</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>がーんだな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>がんこおおおおおおおおおお</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>「赤の血管と青の血管・・・どっちが正解なんだ！」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>これはもう蘇生不能ですわ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これにはZWZW森の住人も大激怒</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>理科の授業かな？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>放送事故</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>教育番組壊れる</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>スプラッターやで</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「・・・ご臨終です・・・」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>こうなったら一か八かだ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「ルミさん、いい人だったかな・・・？」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>（ちーん）</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>はい、nakiさんは次のキャラかクローンを用意してくださいね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいよ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>これなんてパラノイア？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>我々がお遍路していたところを</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ではエヴィの番</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>逆周りしていたお姉ちゃんが</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>キック</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=25    Cthulhu : (1D100<=25) → 45 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>25％って無理じゃね？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では蕎麦の番</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>切太郎だ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4    Cthulhu : (1D4) → 3</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あちがう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 2</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>こいよ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>これは</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=70    Cthulhu : (1D100<=70) → 73 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では蕎麦人間はその場で震えただけで何も起こりません</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>爆発の前兆かな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>「ソ、ソソソ(´;ω;｀)」</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>切太郎の番です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「ルミさんのかたきでーす」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CCB<=95 [ATTACK!!!!!!!!!（料理技能）]    Cthulhu : (1D100<=95) → 36 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=12    Cthulhu : (1D100<=12) → 64 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>きな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>1d4 [MURAMASA DAMEGE!!]    Cthulhu : (1D4) → 1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>あう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ノーダメ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そろそろ戦闘終わらない？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>じゃあこのラウンドで最後にしよう可</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>GUDAGUDA</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>一人やったし</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>次の方どうぞ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>1d6+1d4 ちゅるちゅる胴    Cthulhu : (1D6+1D4) → 4[4]+2[2] → 6</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CCB<=50 ちゅるちゅる面    Cthulhu : (1D100<=50) → 88 → 失敗</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>間違えた　</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>だめみたお</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ける</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=25    Cthulhu : (1D100<=25) → 58 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>がんこちゃんいりょくは高いな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>がんこちゃんだし</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>切太郎</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 84 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d100<=50    Cthulhu : (1D100<=50) → 44 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>すべてを捨ててかかって鯉</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ひっかく</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>回避ドウゾ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CCB<=28 [回避]    Cthulhu : (1D100<=28) → 40 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>1d4    Cthulhu : (1D4) → 4</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>おしい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>ここで最大値か</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>４ダメージ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>では</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>aneko@贅沢斬太郎に4のダメージ！（HP    13->9）</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>蕎麦人間が切太郎をひっかいたスキを狙って陽菜が影から襲い掛かり蕎麦人間を倒しました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@白井陽菜</div><div class='col-sm-10 serif'>「ちぇすとーーーーー」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>新手か</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>最初からやれ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>これはひどい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>こんなに長引くとは思ってなかった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>長引くとは思っていた</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>kaeru@蕎麦人間</div><div class='col-sm-10 serif'>倒れた蕎麦人間は溶けるように消えてしまい、あとには蕎麦の打ち粉だけが残ってました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@白井陽菜</div><div class='col-sm-10 serif'>「皆さん大丈夫ですか？」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>戦闘は終了です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>（無事ではない）</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>「白井さん・・・最初からお願いしますよ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>埋葬しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>あ、仲間が死んだのでＳＡＮチェックお願いし魔ｓ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ニコ・・・！（冷や汗）</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=59    Cthulhu : (1D100<=59) → 69 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CCB<=15 [SAN]    Cthulhu : (1D100<=15) → 9 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>余裕だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>成功は１シッパイは１ｄ6で</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>1d    Cthulhu : (1D6) → 6</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>人の死など見慣れている</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>へるなぁ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CC<=60    Cthulhu : (1D100<=60) → 23 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>aneko@贅沢斬太郎のSANを1減少（SAN    15->14）</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ここぞの余裕</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>また不定の狂気</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>式はアイディアも振ってね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>いやー頭いいからなー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=85    Cthulhu : (1D100<=85) → 67 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>気づいちゃったんだぜ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>なににだ・・・？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では１次的狂気</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>1d10    Cthulhu : (1D10) → 9</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あなたの肩に見知らぬ人の手が・・・</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では式は感覚がマヒし、現実感がなくなり無謀な行動を起こすようになります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>蕎麦かな？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>初発狂だからクトゥ神技能もらえそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>さっきから無謀な行動してた気がする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>クトゥルフ技能を３揚げよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そういえばこっちももらえてもおかしくないのか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>何も変わらない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>既に狂人だったか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>戦闘が終わったのでこのエリアの探索が行えます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>どうしますか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>死体をどうしよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ルミのあつかいはどうなるの</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>おっとそういえば描写をしてなかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>えーと望むならこのエリアの探索中に適当な部屋にnakiさんはキャラを配置してごうりゅうしてください</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ルミは死にました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、そういう合流の仕方？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>せめてもう3ターンくらい待ってるわ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ次のエリアにしましょうか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>寄って進めてていいよ、キャラはクローンね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ずっとうんこ我慢してたもんね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>スナックから探索しようかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>このエリアは客室とスナックで構成されていますが、殆どの客室には何もなくガランとしています</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>探索ですなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ガランとしてない客室もあると</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>しかし204号室だけは生活感があり、物が色々とおいてあります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ここでは204号室とスナックで図書館による探索が可能です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あやしいな・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>２０００４いくわ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ミスった方いきます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>スナックで探索します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CC<=61    Cthulhu : (1D100<=61) → 27 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では描写を</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>この部屋は男性の一人部屋のような感じがするが、最近は使われていないようだ。本棚にはマンガや高校の教科書や医学書が納められている</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>住んでる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>蕎麦人間に違いない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>逃げてった人物のものじゃないか？（マジレス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そして式はそれらの本を調べているうちに気付く、毎週買っていたであろう週刊誌の最新刊は１２年前の物だ、そして教科書には利根川たかしと名前が書いてあった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>情報は以上です</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>漫画＝子供　高校の教科書＝思春期　医学書＝大学生以上　だからずっと住んでんじゃねえかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、なるほどなるほど？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>深いな</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>深みある</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>深イイ話になったし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ハッピーエンド</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なにも解決してないぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>切太郎と板倉はどうする？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>スナック探索します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CCB<=95 [目星]    Cthulhu : (1D100<=95) → 77 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なにができるかは共有メモをみてね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はいでは描写を</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>スナックの探索は図書館でね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ノット推奨技能！！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあ図書館使うのここくらいだし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CCB<=25 [図書館]    Cthulhu : (1D100<=25) → 37 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スナックに図書館・・・？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>おしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>スナックの中の棚にはお酒がなく代わりに様々な書物が納められ本棚になっている、内容は蕎麦の作りかたやアレルギー、オカルト関連の本が詰められていた</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CCB<=50 図書がんこ    Cthulhu : (1D100<=50) → 48 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>やるう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では板倉はその中から一冊の本を見つけるぞ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「本ですよ！本！」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ほーん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>本のタイトルは「ソバコノミコン」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>内容は蕎麦の料理レシピのようだが、よく見ると邪悪なカルト儀式や冒涜的な料理、邪神との契約の仕方などが書いてある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ほんまや！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>冒涜的な料理って、ご飯にマヨネーズとか？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「ほげ～！！　なんじゃこりゃ～！」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>宗教戦争に勃発しそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>https://retrip.jp/articles/6180/</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>特定したわ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>変な日本語・・・</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>さてこの本を読むには進行度を２点増加させなければならないがどうします？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>よもう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>誰が読む？全員？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>白井さん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>オカルトならあるけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>いらないなら元気なひと</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>もう一人　復活させてから読んでもいい気がする！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>いちおう言っとくけど魔道書だからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>隣のエリアに移動して</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>探索箇所が1つしかなかったとして</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>一人が探索して一人が読んでたら</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>2ラウンド進行は短縮されますか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>本を読む進行は短縮されませんね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>み～んなで読めばこわくなぁ～い！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>じゃあさっさと読んじゃえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>私が読みたいです！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>今ならなんでも出来る</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では式が読むという事でＯＫ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>なぜなら！狂っているから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>たしかに</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ハーロォーゲェン</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ぼー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ではまず冒涜的な知識によるＳＡＮチェックをどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CCB<=53    Cthulhu : (1D100<=53) → 33 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>成功は１の損失</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>さらにクトゥルフ神話技能を+6</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>斬太郎が読んだら危なかった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>いい技能</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>さらに２つの魔術を取得する、「動物の魅了」Ｐ274、「麺棒に魔力を付与する」オリジナル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>麺棒を包丁にしよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>魔剣になりそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>木刀でいいんじゃないかな！</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>あたらなさそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>麺棒に魔力を付与する、この魔力が付与された麺棒で蕎麦を打つと蕎麦に魂を込めることが出来る。儀式には二日かかりコストとして１ｄ4の正気度と１ＰＯＷを消費する</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>情報は以上ですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>呪いの綿棒によって打たれた蕎麦が蕎麦人間に・・・</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>あっ(察し）</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>正義のソバになる可能性もある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>麺棒はまだどこかにあるのだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では以上でこのラウンドは終了、本と合わせて進行度を+3します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>3階に行くか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>次は何処に行きますか？階段を昇ればエリア5、廊下を進めばエリア４です</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>３回のＭＡＰがみた～い～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>エリア５でよろしいか？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>階段を3団飛びで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあとりあえずマップ変更</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ぐきっ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>イイね風呂か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>このままエリア５の探索をしますか？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そうだな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>お風呂にいこう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そろそろサービスカットが必要な時間なのだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>お風呂はエリア７なので次のラウンドですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>斬り太郎が一肌脱ぐか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>じゃあ探索するか。。。</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>しましょう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>その前に描写を一応</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ニコ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>といっても特にないか、客室が並んでどの扉も閉まってますね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>C4でドアを破壊します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>好きな部屋を開けて調べてください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>じゃあ302</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>結果を見て行動しよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>をC4で破壊します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>一人で入る？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>303にいるからそうしよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ソロでいく</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>今の私は無敵だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では302号室の部屋に入ると、中には血まみれの男がいた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ルミとどっちが血まみれ？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>部屋は暴れまわったようにボロボロで凄惨な状況だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>どっこいどっこい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>こんな光景をみたあなたはＳＡＮチェックだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>-1で応急手当ファンブルしたくらいかー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>しょぼそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>CCB<=52    Cthulhu : (1D100<=52) → 55 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>失敗は１ｄ3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>この子グロはだめなようだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 1</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>入らないようにしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>男はかろうじて息をしているが、意識は内容だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>無いよう</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>がんこちゃん　過労死しちゃうよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>応急手当か医学で治療ができるぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>がんこちゃーんお客さんだよ—</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふぁーんぶる！ふぁーんぶる！</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>呼ばれた気がした！「わぁ！なにこれ！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>患者は砕け散った！</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CCB<=60    Cthulhu : (1D100<=60) → 94 → 失敗</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>1d3    Cthulhu : (1D3) → 2</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>やっとＳＡＮが初期値になった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>メンタルお化けかな</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>CCB<=90 応急処置面    Cthulhu : (1D100<=90) → 40 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では男は目を覚ますぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>「う、ここは？」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>蛍光色ついてますよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>生贄が増えたぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>手当を見て「君たちが助けてくれたのか？」</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「うむす！」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>「ありがとう、大したお礼も出来ないが…そうだ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>大した礼をしてもらおうかあ！？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>「せめてこれを上げよう」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>盾になって</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>そういって男は懐から出したものを渡します</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>おめでとう、「食材；油揚げ」をゲットしました</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>もらえるものはもらう</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ふところびちょびちょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>命の変わりが油揚げ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>「私にできる事など大したことはないが、何かしてほしいことはあるか？」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>蕎麦殺せる？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>大体なんで血まみれで倒れてたんだ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>「気が付いたらこの旅館にいて、あの蕎麦人間に襲われたのさ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>彼は被害者のＮＰＣです</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>「とりあえず、一緒に脱出できるようついてきてください！」(いけにえ）</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ルール的には他のＮＰＣと同じようにランダム表を１回振ってくれます。しかしとある理由により同行は出来ません</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>？？？？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>「すまないな、膝に蕎麦を受けてしまってな…ここから動けそうにない」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ほっておくか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>お好きにどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>同行はできないと？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ランダム表を振るタイミングはあるの？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>油揚げの人（記憶</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>この場で振れる</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>男はタダのランダム表発生器の役割なので</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>あと油揚げ渡す係</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>一回振ってもらおうかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>何が出るかな、何が出るかな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>じゃあ誰かsorで振っていいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>麺棒出せ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>sor    Cthulhu :ランダムイベント表(7[5,2]) → 菓子鉢の中にまだ封の開いていない「きのこの山」を見つけた。    『正気度ポイントを１点回復する』</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったじゃん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>おめでとう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@男</div><div class='col-sm-10 serif'>全員正気度を1回復していいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>はるかによいです</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>うめ・・・うめ・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>もうこの人は用済みかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では板倉はダイスをふったので、式と切太郎は探索をしてください</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そーですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>あとnakiも登場してもいいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>SAN値減らない場所に行きたいなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ武器を探すかランダム表でいいんじゃない？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>風呂とかサスペンスでは大体人が死んでるイメージだし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>もしくは回復か</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>風呂に行くか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あと2ターンは待つよ。ペナなしはHPの意味がない</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>風呂はエリア７ですぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>だから風呂は別エリアだって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>だから風呂は別エリアだって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>すまぬ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あとは、301と303かな？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>301かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>301にいきます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>CCB<=95 [目星]    Cthulhu : (1D100<=95) → 76 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>早い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では301号室はガランとしていましたが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>切太郎は「アドレナリン注射薬」を見つけました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ますますパラノイアめいてきた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>早速打つか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>これは蕎麦アレルギーによるアナフィラキシーショックを緩和する薬だね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>効果は蕎麦によるダメージを２ｄ3回復するというもの</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>意外と実用的</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>当然使用できるのは１回</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そんなんより発狂を直す幸せになる薬がほしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>パラノイアにいってくださいな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>この部屋は以上だね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>というかこのエリアは以上なので、式は探索以外をできるよ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>消えた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>戻ってくるまで少し休憩すっぺか？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>というかnakiはいつでも復帰してええで、ペナルティでゲームが出来んと本末転倒なきもするし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>見てるのも楽しいけどなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>寝たのかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そんな気もする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>このタイミングでか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダメそうだな＾ｑ＾</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>霊圧がきえた・・・？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>セッション中に消えるのは珍しいな</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ぷ～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>きっと疲れておったんじゃろうて</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>今進行度いくつなん？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>しょうがないっすな今日は解散かな？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあしょうがないかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>だな、中断セーブといこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なんだったら次回までに新キャラ作ってもいいのよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>あれ、キャラこのまんまだったけどダメだった？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>エリア5をすべて終わったところでセーブ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>意識がとんでいた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>お、大丈夫か？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>どっちでも大丈夫よ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>生き返った</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>まあきりのいいとこまでやろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>疲れてるならここでセーブしとくかい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>後このエリアで行動できるのはエヴィだけだし、それで終わりにしよう可</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいよ～</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ほいさ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>まだ探索してなかったか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ランダム表振るか回復するかぐらいかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>おっさん生き返らせただけだしな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>確かに302いってたね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>図書館？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>って聞こうとしたことは覚えている！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>警戒移動、回復、武器の調達、ランダム表くらいかなできるのは</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>あ　探し者ないのね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>もう全部見つけましたので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ここにはおっさんと注射しか用意されてませんでしたので</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>じゃ武器でも探そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>武器はsobね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>sob    Cthulhu :武器調達表(3[3]) → 木彫りの熊（ダメージ１Ｄ２）</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ビミョーな奴や</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>素手よりはましかね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>北海道だったのか・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よくあるアレ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>噛みついてくれる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ今回はここまでにしときましょうか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そばには強い</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほい、おつかれ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ファーイ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>次回も土曜日かなぁ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>来週の土曜日は私がいるかもしれないしいないかもしれない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>まあその時にならんとわからないこともある</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>私はいない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>http://meity.jp/s/zs5180</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>さきをこされた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んまぁ、これ入れておけば適当にスケジュールするかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>3人でなんかできるのないかなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>一応土曜日予定ということで</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いういう～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>金曜はニョッキがいないのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>めずらしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>３人か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>金曜疲れてるからやめようかなって思ってるわ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう歳でのう・・・（よぼよぼ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>おじいちゃんLoLのしすぎで・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>まあいまのところ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>nakigaoKPとkaeruKPのセッションしか仕掛りがないから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>フルメンバー揃わないと続きはできないのであった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こまったなぁ・・・僕のセッションだけど、今度は4人でもやっちゃおうかなって思ってるわ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>coc？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>他にネタがなければね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そうそう、ミステリーのやつ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>体よく部屋はあるから、引きこもってもらえば違和感ないし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>kaeru君が不審者のキャラをやっているシナリオだよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>っていうとどれのことか分からないはず</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>あの手品士が犯人のやつね</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>別げーの兼ね合いでいないことがおおくてすまぬ・・・すまぬ・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>コナンみたい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう謎が解けちゃってるんだよなぁ＾＾；</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まぁ、他に予定がある場合はどうしようもないからなぁ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>シナリオがスタックすればするほど、忘れて死ぬということがわかったので、そういうのもありかなぁと</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>信念だし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>また雪が積もりだした</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>はっ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>新年だし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>一度精算したいですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>こっちは雨雲ないなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うん、すっきりさせたいところ。リプレイもあげなきゃなあ、重い腰上げるかぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>リプレイをあげられると</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>明日は滑りながら会社に行かないと</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>EviくんがGMをさぼってるのがバレてしまう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そうだっけ？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルミ</div><div class='col-sm-10 serif'>Eviはスケジュールとか新作もってきてくれてるじゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>アヴァンドナーとロストロイヤルと・・・あとなんかあったっけ・・・</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>わしがなにもしていない　やってるＦＦ14参考に何か作るかぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>割とＫＰ多いイメージだけどなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>こっちも大してやってない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>肉サイコロはanekoに投げたし・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>アリアンやった記憶がかすかにある</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>スライムにぼこされた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>アヴァンドナーしたじゃん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>それはJemさんのだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>そういえば</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>それでnakicocはどうする？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>いなかった人もいるけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>nakigaoが「デッドリーでヘビーなダンジョンしたいぜ！Fooooo！」っていってたから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>pathfinderやります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>(そのうち)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>フリーのやつだっけか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>nakicocは、日曜日にしようかなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ルールくそ重いです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>土曜は3人っぽいし？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>僕あのシステムしきぃ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>すきぃ</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>（使いこなせるとは言ってない）</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>日曜は自分がいない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>やっぱ5人そろってるときにしよう・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ダンジョンを金！暴力！SEX！で乗り切るゲーム</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>Pathfinderの予習ミニセッションにするか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>予習いいですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>どうせレベル1はカスみたいな感じだし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>レベル2スタートにしようとおもったし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ここはチュートリアル山賊団の出番だな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>そうそう、そういうの</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>Lv1ならデスダンジョンでもこまらないし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そーなのか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>できれば1セッションで終わりに・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>までも</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>キャラメイクだけでおわりそうだけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>ですよね～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあ経験者が多いなら色々教えてもらえそうだしいいかもね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>日曜にキャラメイクするとしてaneko君だけ金曜あたりに作りますか？</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>ＨＦＯの出番やな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>というかキャラメイクだけなら金曜でもええんじゃね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>そうだね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>たっぷり4時間つかってキャラクターをつくれる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>なんて素敵な時間だ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>3時間だった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>寝るかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>とりあえず</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ナキガオが賛成してくれるなら</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>金曜はみんなでキャッキャしながらpathfinderのキャラをつくろう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>いいんじゃないかなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>土曜日は僕おらんかもなのでなんか適当にアレして</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>僕もいたらいくわ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>日曜はなしかチュートリアル山賊団との戦闘で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>了解</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>了解です</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>らじゃ～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>おっけ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>googleカレンダーから招待状おくったので</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>確認しておいてね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>昨日病院行き忘れてお薬がない・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>つらい・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>ねよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>リプレイ動画でも探して勉強するか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@贅沢斬太郎</div><div class='col-sm-10 serif'>おやすみんみん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>おやむんむん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ解散でおやすみー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>D&D3.5のリプレイも</div></div>
+            <div class='row jem'><div class='col-sm-2 name'>jem@板倉仮</div><div class='col-sm-10 serif'>おやおや</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>よいとおもいます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>おやぽみ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>なきちゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>高額医療費制度ってくわしい・・・？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>その辺もう忘れちゃったよｗ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ですよねー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>それこそ病院に聞いた方がいいかも</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>そうしてみるかー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>パスファインダー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>キャンペーンにしたい？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>んー、どうしようかなぁ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ルシ</div><div class='col-sm-10 serif'>キャンペでもいいし、結局デスシナリオにするならキャンペというよりはやり切りの方がいいのかなぁって気はする</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>ふむふむ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>じゃあその中間にしよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@式</div><div class='col-sm-10 serif'>(´～｀)モグモグ</div></div>
+        </section>
+    </div>
+{% endblock %}

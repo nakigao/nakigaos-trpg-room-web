@@ -18,5 +18,8 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
     (7, 4, 1, '第0話', '小さな心の大きな一歩', FALSE),
     (8, 4, 2, '第1話', '王女の決別', FALSE),
 
-    (9, 5, 1, '', 'ハロー、ヴィータ', FALSE)
+    (9, 5, 1, '', '美味しいワインの造り方', FALSE),
+    (10, 5, 2, '', '都近一族殺人事件', FALSE),
+    (11, 5, 3, '', '蕎麦屋 OF THE DEAD', FALSE),
+    (12, 5, 4, '', 'ハロー、ヴィータ', FALSE)
 ;

@@ -225,11 +225,13 @@
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
-                            <td class="col-sm-4">「美味しいワインの造り方」(旧フォーマット)</td>
                             <td class="col-sm-4">
-                                {% set list = [['20160709.html', '第1幕', '未編集'], ['20160710.html', '第2幕', '未編集'], ['20160715.html', '第3幕', '未編集'], ['20160716.html', '第4幕', '未編集'], ['20160723.html', '第5幕', '未編集'], ['20160730.html', '第6幕', '未編集'], ['20160731.html', '第7幕', '未編集']] %}
+                                「美味しいワインの造り方」
+                            </td>
+                            <td class="col-sm-4">
+                                {% set list = [['cloc/5/1/1', 'プリプレイ', '未編集'], ['cloc/5/1/2', '導入', '未編集'], ['cloc/5/1/3', 'Aパート', '未編集'], ['cloc/5/1/4', 'Bパート', '未編集'], ['cloc/5/4/5', '結末', '未編集']] %}
                                 {% for item in list %}
-                                    <a href="{{ base_url }}/replays/coc/{{ item.0 }}">{{ item.1 }}</a>
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
                                     {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
                                     {% if loop.last == false %}/{% endif %}
                                 {% endfor %}
@@ -239,11 +241,13 @@
                             <td>2016年07月09日</td>
                         </tr>
                         <tr>
-                            <td class="col-sm-4">「都近一族殺人事件」(旧フォーマット)</td>
                             <td class="col-sm-4">
-                                {% set list = [['20161216.html', 'HANDOUT', '未編集'], ['20161217.html', 'CONSTRUCTION', '未編集'], ['20161219.html', 'OPENING', '未編集'], ['20170107.html', 'MIDDLE', '未編集'], ['20170108.html', 'ENDING', '未編集']] %}
+                                「都近一族殺人事件」
+                            </td>
+                            <td class="col-sm-4">
+                                {% set list = [['cloc/5/2/1', 'プリプレイ', '未編集'], ['cloc/5/2/2', '導入', '未編集'], ['cloc/5/2/3', 'Aパート', '未編集'], ['cloc/5/2/4', 'Bパート', '未編集'], ['cloc/5/25', '結末', '未編集']] %}
                                 {% for item in list %}
-                                    <a href="{{ base_url }}/replays/coc/{{ item.0 }}">{{ item.1 }}</a>
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
                                     {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
                                     {% if loop.last == false %}/{% endif %}
                                 {% endfor %}
@@ -254,11 +258,28 @@
                         </tr>
                         <tr>
                             <td class="col-sm-4">
+                                「蕎麦屋 OF THE DEAD」<br>
+                                （出典:<a href="http://seesaawiki.jp/trpgyarouzu/d/%A1%DA%D3%BD%B7%EC%C2%EE%A1%DB%B6%BE%C7%FE%B2%B0%20OF%20THE%20DEAD%A1%DAKP%3A%A5%CA%A5%CA%A5%E4%A1%DB">蕎麦屋 OF THE DEAD</a>）
+                            </td>
+                            <td class="col-sm-4">
+                                {% set list = [['cloc/5/3/1', 'プリプレイ', '未編集'], ['cloc/5/3/2', '導入', '未編集'], ['cloc/5/3/3', 'Aパート', '未編集'], ['cloc/5/3/4', 'Bパート', '未編集'], ['cloc/5/3/5', '結末', '未編集']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>aneko, evi, jem, naki</td>
+                            <td>kaeru</td>
+                            <td>2017年01月19日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-4">
                                 「ハロー、ヴィータ」<br>
                                 （出典:<a href="http://seesaawiki.jp/nokosaretashuki/d/%A5%CF%A5%ED%A1%BC%A1%A2%A5%F4%A5%A3%A1%BC%A5%BF">ハロー、ヴィータ</a>）
                             </td>
                             <td class="col-sm-4">
-                                {% set list = [['cloc/5/1/1', 'プリプレイ', ''], ['cloc/5/1/2', '導入', ''], ['cloc/5/1/3', 'Aパート', ''], ['cloc/5/1/4', 'Bパート', ''], ['cloc/5/1/5', '結末', '']] %}
+                                {% set list = [['cloc/5/4/1', 'プリプレイ', ''], ['cloc/5/4/2', '導入', ''], ['cloc/5/4/3', 'Aパート', ''], ['cloc/5/4/4', 'Bパート', ''], ['cloc/5/4/5', '結末', '']] %}
                                 {% for item in list %}
                                     <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
                                     {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
@@ -268,29 +289,6 @@
                             <td>evi, xino</td>
                             <td>sukamomo</td>
                             <td>2017年7月11日</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h4>シリーズ「XXXXXXXXXX」</h4>
-                <div class="table-responsive">
-                    <table class="table">
-                        <tr>
-                            <td class="col-sm-4">「蕎麦屋 OF THE DEAD」(旧フォーマット)</td>
-                            <td class="col-sm-4">
-                                {% set list = [['20170109.html', '読み切り', '未編集']] %}
-                                {% for item in list %}
-                                    <a href="{{ base_url }}/replays/coc/{{ item.0 }}">{{ item.1 }}</a>
-                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
-                                    {% if loop.last == false %}/{% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>aneko, evi, jem, naki</td>
-                            <td>kaeru</td>
-                            <td>2017年01月19日</td>
                         </tr>
                     </table>
                 </div>

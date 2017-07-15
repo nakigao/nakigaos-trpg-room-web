@@ -1,0 +1,894 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr class="divider">
+                    <h2><span class="section-icon"></span>トレーラー</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        とある事業で巨額の富を得た資産家、都近平蔵(ときんへいぞう)。<br>
+                        都近一族の知り合いである君たちは、彼の69歳の誕生日パーティに招かれた。<br>
+                        そのパーティが血に染まった「ある計画」の発端であることも知らずに・・・。
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr class="divider">
+                    <h2><span class="section-icon"></span>シナリオインフォ</h2>
+                    <p>参加者向け。ミステリーしたいなー、とづまりすとこ</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-3">使用ルール</th>
+                            <td>
+                                クトゥルフ神話TRPG(無印)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>追加サプリメントの使用</th>
+                            <td>
+                                <span class="ctag on">許可</span>
+                                <span class="ctag off">不許可</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>シナリオ要素</th>
+                            <td>
+                                <span class="ctag on">協力</span>
+                                <span class="ctag off">対決</span>
+                                <span class="ctag off">PVP</span>
+                                <span class="ctag on">非PVP</span>
+                                <span class="ctag off">戦闘</span>
+                                <span class="ctag on">探索</span>
+                                <span class="ctag off">中性</span>
+                                <span class="ctag off">近代</span>
+                                <span class="ctag on">現代</span>
+                                <span class="ctag off">近未来</span>
+                                <span class="ctag off">未来</span>
+                                <span class="ctag off">ダンジョン</span>
+                                <span class="ctag on">ミステリー</span>
+                                <span class="ctag off">ホラー</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>シナリオ難易度</th>
+                            <td>
+                                <span class="ctag off">簡単</span>
+                                <span class="ctag on">普通</span>
+                                <span class="ctag off">難しい</span>
+                                <span class="ctag off">オワタ式</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PCレベルキャップ</th>
+                            <td>
+                                <span class="ctag on">0</span>
+                                <span class="ctag off">1</span>
+                                <span class="ctag off">2</span>
+                                <span class="ctag off">3</span>
+                                <span class="ctag off">4</span>
+                                <span class="ctag off">5</span>
+                                <span class="ctag off">6</span>
+                                <span class="ctag off">7</span>
+                                <span class="ctag off">8</span>
+                                <span class="ctag off">9</span>
+                                <span class="ctag off">10</span>
+                                <span class="ctag off">11</span>
+                                <span class="ctag off">12</span>
+                                <span class="ctag off">13</span>
+                                <span class="ctag off">14</span>
+                                <span class="ctag off">15</span>
+                                <span class="ctag off">制限なし</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PL人数</th>
+                            <td>
+                                <span class="ctag off">1</span>
+                                <span class="ctag off">2</span>
+                                <span class="ctag on">3</span>
+                                <span class="ctag on">4</span>
+                                <span class="ctag off">5</span>
+                                <span class="ctag off">制限なし</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PLレベル</th>
+                            <td>
+                                <span class="ctag off">入門者</span>
+                                <span class="ctag on">初心者</span>
+                                <span class="ctag on">中級者</span>
+                                <span class="ctag off">上級者</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>予定セッション時間</th>
+                            <td>
+                                <span class="ctag off">1</span>
+                                <span class="ctag off">3</span>
+                                <span class="ctag off">6</span>
+                                <span class="ctag on">9</span>
+                                <span class="ctag on">12</span>
+                                <span class="ctag on">15</span>
+                                <span class="ctag off">18</span>
+                                <span class="ctag off">21</span>
+                                <span class="ctag off">24</span>
+                                <span class="ctag off">27</span>
+                                <span class="ctag off">30</span>
+                                <span class="ctag off">制限なし</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ハウスルール</th>
+                            <td>
+                                時間管理は4時間毎に宣言する<br>
+                                行動にはHPを消費する<br>
+                                HP回復は睡眠で可能とする
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>備考</th>
+                            <td>GMが初心者なので、ルール援護してね</td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(治療)</th>
+                            <td>
+                                <span class="ctag on">医学</span>
+                                <span class="ctag off">応急手当</span>
+                                <span class="ctag on">精神分析</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(知識)</th>
+                            <td>
+                                <span class="ctag off">化学</span>
+                                <span class="ctag off">物理学</span>
+                                <span class="ctag on">生物学</span>
+                                <span class="ctag on">薬学</span>
+                                <span class="ctag off">地質学</span>
+                                <span class="ctag off">考古学</span>
+                                <span class="ctag off">博物学</span>
+                                <span class="ctag on">心理学</span>
+                                <span class="ctag off">人類学</span>
+                                <span class="ctag off">電子工学</span>
+                                <span class="ctag off">天文学</span>
+                                <span class="ctag off">Cthulhu神話</span>
+                                <span class="ctag off">オカルト</span>
+                                <span class="ctag off">経理</span>
+                                <span class="ctag off">法律</span>
+                                <span class="ctag off">歴史</span>
+                                <span class="ctag off">芸術</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(探索)</th>
+                            <td>
+                                <span class="ctag on">目星</span>
+                                <span class="ctag on">聞き耳</span>
+                                <span class="ctag on">図書館</span>
+                                <span class="ctag off">コンピュータ</span>
+                                <span class="ctag off">鍵開け</span>
+                                <span class="ctag off">写真術</span>
+                                <span class="ctag off">隠す</span>
+                                <span class="ctag off">隠れる</span>
+                                <span class="ctag off">忍び歩き</span>
+                                <span class="ctag off">追跡</span>
+                                <span class="ctag off">母国語</span>
+                                <span class="ctag off">ほかの言語</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(交渉)</th>
+                            <td>
+                                <span class="ctag off">言いくるめ</span>
+                                <span class="ctag off">説得</span>
+                                <span class="ctag off">信用</span>
+                                <span class="ctag off">変装</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(格闘)</th>
+                            <td>
+                                <span class="ctag off">こぶし/パンチ</span>
+                                <span class="ctag off">頭突き</span>
+                                <span class="ctag off">キック</span>
+                                <span class="ctag off">組みつき</span>
+                                <span class="ctag off">Mアーツ</span>
+                                <span class="ctag on">回避</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(射撃)</th>
+                            <td>
+                                <span class="ctag off">投擲</span>
+                                <span class="ctag off">拳銃</span>
+                                <span class="ctag off">ショットガン</span>
+                                <span class="ctag off">Sマシンガン</span>
+                                <span class="ctag off">マシンガン</span>
+                                <span class="ctag off">ライフル</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>推奨技能(その他)</th>
+                            <td>
+                                <span class="ctag off">運転</span>
+                                <span class="ctag off">機械修理</span>
+                                <span class="ctag off">電気修理</span>
+                                <span class="ctag off">重機械操作</span>
+                                <span class="ctag off">乗馬</span>
+                                <span class="ctag off">水泳</span>
+                                <span class="ctag off">製作</span>
+                                <span class="ctag off">操縦</span>
+                                <span class="ctag off">跳躍</span>
+                                <span class="ctag off">登攀</span>
+                                <span class="ctag off">ナビゲート</span>
+                                <span class="ctag off">値切り</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr class="divider">
+                    <h2><span class="section-icon"></span>プレイヤー向けハンドアウト</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>PC1「誕生日会に招かれた人1」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>導入・動機</th>
+                            <td>誕生日パーティに招かれた</td>
+                        </tr>
+                        <tr>
+                            <th>推奨ロール</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>PC間因縁</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>NPC間因縁</th>
+                            <td>洋館に集まったいずれかの人物と関係がある(関係は任意)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>PC2「誕生日会に招かれた人2」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>導入・動機</th>
+                            <td>誕生日パーティに招かれた</td>
+                        </tr>
+                        <tr>
+                            <th>推奨ロール</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>PC間因縁</th>
+                            <td>PC1の肉親または知り合い(関係は任意)</td>
+                        </tr>
+                        <tr>
+                            <th>NPC間因縁</th>
+                            <td>特になし</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>PC3「誕生日会に招かれた人3」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>導入・動機</th>
+                            <td>誕生日パーティに招かれた</td>
+                        </tr>
+                        <tr>
+                            <th>推奨ロール</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>PC間因縁</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>NPC間因縁</th>
+                            <td>洋館に集まったいずれかの人物と関係がある(関係は任意)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>PC4「誕生日会に招かれた人4」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>導入・動機</th>
+                            <td>誕生日パーティに招かれた</td>
+                        </tr>
+                        <tr>
+                            <th>推奨ロール</th>
+                            <td>特になし</td>
+                        </tr>
+                        <tr>
+                            <th>PC間因縁</th>
+                            <td>PC3の肉親または知り合い(関係は任意)</td>
+                        </tr>
+                        <tr>
+                            <th>NPC間因縁</th>
+                            <td>特になし</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr class="divider">
+                    <h2><span class="section-icon"></span>NPCハンドアウト</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPC「都近 平蔵(ときん へいぞう)」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">性別</th>
+                            <td class="col-sm-2">男</td>
+                            <th class="col-sm-2">年齢</th>
+                            <td class="col-sm-2">68</td>
+                            <th class="col-sm-2">職業</th>
+                            <td class="col-sm-2">資産家</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">外見</th>
+                            <td class="col-sm-10" colspan="5">年相応のおじいちゃん。眼光は鋭い</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td class="col-sm-10" colspan="5">一代で富を築いた資産家</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPC「都近 風真(ときん ふうま)」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">性別</th>
+                            <td class="col-sm-2">男</td>
+                            <th class="col-sm-2">年齢</th>
+                            <td class="col-sm-2">43</td>
+                            <th class="col-sm-2">職業</th>
+                            <td class="col-sm-2">資産家</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">外見</th>
+                            <td class="col-sm-10" colspan="5">中肉中背、普通の人って印象を受けます</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td class="col-sm-10" colspan="5">資産家で現在独身。前妻とは死別している</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPC「都近 春(ときん はる)」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">性別</th>
+                            <td class="col-sm-2">女</td>
+                            <th class="col-sm-2">年齢</th>
+                            <td class="col-sm-2">38</td>
+                            <th class="col-sm-2">職業</th>
+                            <td class="col-sm-2">主婦</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">外見</th>
+                            <td class="col-sm-10" colspan="5">見た目は20代くらいに見える。妖艶って感じ</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td class="col-sm-10" colspan="5">平蔵の2人目の奥さん。風真とは血のつながりはない</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPC「都近 靖彦(ときん やすひこ)」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">性別</th>
+                            <td class="col-sm-2">男</td>
+                            <th class="col-sm-2">年齢</th>
+                            <td class="col-sm-2">25</td>
+                            <th class="col-sm-2">職業</th>
+                            <td class="col-sm-2">警察関係者</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">外見</th>
+                            <td class="col-sm-10" colspan="5">年相応の青年です</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td class="col-sm-10" colspan="5">親戚。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPC「細流 芽依(せせらぎ めい)」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">性別</th>
+                            <td class="col-sm-2">女</td>
+                            <th class="col-sm-2">年齢</th>
+                            <td class="col-sm-2">22</td>
+                            <th class="col-sm-2">職業</th>
+                            <td class="col-sm-2">使用人</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">外見</th>
+                            <td class="col-sm-10" colspan="5">丁寧な感じを受ける印象</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td class="col-sm-10" colspan="5">館の使用人。3年ほど勤務している</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPC「都近 ほむら(ときん ほむら)」</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-2">性別</th>
+                            <td class="col-sm-2">女</td>
+                            <th class="col-sm-2">年齢</th>
+                            <td class="col-sm-2">18</td>
+                            <th class="col-sm-2">職業</th>
+                            <td class="col-sm-2">学生</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">外見</th>
+                            <td class="col-sm-10" colspan="5">元気いっぱいな少女</td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-2">ハンドアウト</th>
+                            <td class="col-sm-10" colspan="5">風真と前妻の間に生まれた一人娘。平蔵の孫にあたる</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr class="divider">
+                    <h2><span class="section-icon"></span>キャラクターコンストラクション</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">eviとkaeruは先に登場・・・。GMの方はまだ全然準備ができていなかったりしてる</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>何時代なん</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>現代だよ～。ミステリーやってみたいって感じだから、CoCあんま関係ないかも。戦闘スキルはいらない予定</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>推奨技能とかある？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>目星聞き耳図書館医学応急手当精神分析回避・・・こんなもんかなぁ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>回避・・・！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>ほう、じゃあ医者でもやろうかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>CoCマスタリング初心者だから、あんまり難しいのできないからそのつもりで頼む</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>そういえばルルブはどれを使っていいの？2010とか2015はあり？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>GMがもってないから、NOにしたいんだけどなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>ならばしょうがない</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>ぼくも2010は無くした！！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>なら2015を買おう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>(ダイスコロコロ・・・)生ごみみたいな能力値だ。やっぱり職業はエンターテイナーにします。なので医学系は他の人に任せます</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">anekoが合流・・・</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>こん、楽しみにしてた。キャラ作ろうかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>実験的なあれだからあんま期待せんといてー。レギュレーションは共有メモ見てね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>皆はどのハングアウト選んだんだろう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>その辺のすり合わせはまだかなぁ。あ、そういえばanekoはミステリー系詳しい人？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>アガサはそして誰もいなくなったとアクロイド殺ししか持ってないです</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>名作じゃないか</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>ミステリーは一時期はまってました</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>anekoは結構ミステリーはいけそうだなあ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>けど推理しながら呼んだことは一度もないので大丈夫</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>なんでそんなこと聞くかといえば、トリックを引っ張ってきてるから、知ってる話だとちょっとなぁ・・・ってだけなんだけどね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>知ってる話だったら、適当にするーするか、サブマスみたいに振舞ってくれると嬉しい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>アガサって殺されたんじゃ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>だったっけ？小説自体は実は読んだことがないっていう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>(ハンドアウトを見て)医者になろう</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">続けてjemが合流・・・</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>YO! キャラでそろってるならサンプルください</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>まだ全然できてないんじゃないかなぁ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>じゃあ、作ろうかな？いつまでとかあります？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>23時までで自己申告で完了おしえてー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>回避が要るってだけで怖い・・・興味ポイント回避にガンぶりしていいですか＜GM</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@森林木</div>
+                <div class='col-sm-10 serif'>ボクサーかな？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>医者だよ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>特にそういう制限はないから、ふっていいけど・・・戦闘、ない（予定）よ？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>ということはトラップ系があるのかな？まあ別の技能にポイントを割こう</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">そうこうしている間に、kaeruのマジシャン少女と、eviの砂漠のほこりにまみれて戦ってそうなキャラができあがる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>キャラ完成</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>医者キャラがかぶったか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>そんなに医者いたっけ？・・・私もできたよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>自分はエンターテイナーです、推奨技能は回避と目星と聞き耳だけです。あ、GM持ち物書いたんで、ダメなものがあったら教えてください</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>(XXXXX(手品)って書いてあるもので道具欄が埋め尽くされている)・・・手品道具ねぇ、武器は模造品だし、手品っていって魔法みたいなことが起こらないなら全部OK</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@森林木</div>
+                <div class='col-sm-10 serif'>持ち物ランすげえ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>基本全部演出用です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ全部OK</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>ありがたい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>(イリュージャの立ち絵を見て)なんでこの子、まりももってるの？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@森林木</div>
+                <div class='col-sm-10 serif'>天然記念物だから</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>何のことだ？この♰ダークネスフレイム♰こと？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>？</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">anekoのおじいちゃんドクターができあがり・・・</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>でけた</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>怖い</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@森林木</div>
+                <div class='col-sm-10 serif'>強そう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>きっと古流武術とか使うんだ。じいさんヒーラーだったのか、ありがてえ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>医者だよ</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">最後にjemの眠りながら推理そうな名探偵風キャラができあがる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>つよそう・・・</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>毛利さんがいたら万事解決しそうだ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>むしろ人が確実に死にそう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>そうしたら儲かるから万々歳</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@毛利スラ郎</div>
+                <div class='col-sm-10 serif'>どうも　名探偵（刑事）の毛利スラ郎です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>普段からその肌の色(緑色)なんですかねえ・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>医者の出番じゃない？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>金くれたら肌の色を変えてあげよう</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">間にハウスルールの説明したりして・・・23時</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>導入のスタート地点は、船の上です</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@森林木</div>
+                <div class='col-sm-10 serif'>俺とは相性がわるいな！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>船の上なら多少吹っ掛けてもよさそうだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、あと、jemとkaeruは、アンケート教えてほしい。ミステリー好き？とアガサ読んだことある？みたいな。どんだけヒント出すかに影響する質問</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@毛利スラ郎</div>
+                <div class='col-sm-10 serif'>あるかもだけど　覚えてないかなぁ　脳死勢だからミステリーとか読んでもストーリーを楽しんでるだけ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>ミステリーはあんまり読んでないな、ホームズとうみねこくらいかな。アガサは読んだことないっす。火サスの犯人の正解率2割くらいの推理力です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おっけ、アンケさんきゅ～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>お手柔らかにお願いしやす</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@毛利スラ郎</div>
+                <div class='col-sm-10 serif'>おねがいしやす</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んー、まあanekoがいるから大丈夫かなぁ。ノーヒント気味でいくわ。やりにくかったら教えて</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>いざとなれば犯人をでっち上げよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@森林木</div>
+                <div class='col-sm-10 serif'>犯人はこの中にいる(願望)</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>(森林は)顔を隠してて見るからに怪しいぞー。途中で殺されて入れ替わられそう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@伯明</div>
+                <div class='col-sm-10 serif'>俺が犯人だ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>斬新・・・</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@イリュージャ</div>
+                <div class='col-sm-10 serif'>痴呆かな？</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
