@@ -78,5 +78,11 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (57, 12, 2, '導入', FALSE),
     (58, 12, 3, 'Aパート', FALSE),
     (59, 12, 4, 'Bパート', FALSE),
-    (60, 12, 5, '結末', FALSE)
+    (60, 12, 5, '結末', FALSE),
+    -- shnb/単発/シノビガミ育成計画
+    (61, 13, 1, 'プリプレイ', FALSE),
+    (62, 13, 2, 'オープニング', FALSE),
+    (63, 13, 3, 'メイン', FALSE),
+    (64, 13, 4, 'クライマックス', FALSE),
+    (65, 13, 5, 'エンディング', FALSE)
 ;

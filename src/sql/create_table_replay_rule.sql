@@ -24,4 +24,6 @@ INSERT INTO replay_rule (id, unique_id, name, name_short, name_en, name_en_short
     (10, 'onwh', '片道勇者TRPG', '片道勇者', 'ONE WAY HERO TRPG', 'onewayherotrpg', 'https://ssl.fujimi-trpg-online.jp/freepage/324', '', FALSE),
     (11, 'ptfi', 'パスファインダー', 'パスファ', 'PATHFINDER', 'pathfinder', 'http://paizo.com/pathfinderRPG/prd/', '', FALSE),
     (12, 'scpn', 'すくぱに♪', 'すくぱに', 'SCHOOL PANIC', 'schoolpanic', 'http://inga.dtiblog.com/', '', FALSE),
-    (13, 'sww2', 'ソードワールド2.0', 'SW', 'SWORD WORLD 2.0', 'sw2.0', 'https://ssl.fujimi-trpg-online.jp/contents/sw', '', FALSE);
+    (13, 'sww2', 'ソードワールド2.0', 'SW', 'SWORD WORLD 2.0', 'sw2.0', 'https://ssl.fujimi-trpg-online.jp/contents/sw', '', FALSE),
+    (14, 'shnb', 'シノビガミ', 'ビガミ', 'SHINOBIGAMI', 'bigami', 'http://www.bouken.jp/pd/sg/', '', FALSE)
+;

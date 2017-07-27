@@ -262,6 +262,26 @@ INSERT INTO replay_part_gm_pl (rule_unique_id, series_id, episode_sequence_numbe
     ('cloc', 5, 4, 4, FALSE, 7, NULL, FALSE),
     ('cloc', 5, 4, 5, FALSE, 1, NULL, FALSE),
     ('cloc', 5, 4, 5, TRUE, 6, NULL, FALSE),
-    ('cloc', 5, 4, 5, FALSE, 7, NULL, FALSE)
+    ('cloc', 5, 4, 5, FALSE, 7, NULL, FALSE),
 
+    ('shnb', 6, 1, 1, FALSE, 1, NULL, FALSE),
+    ('shnb', 6, 1, 1, FALSE, 2, NULL, FALSE),
+    ('shnb', 6, 1, 1, TRUE, 3, NULL, FALSE),
+    ('shnb', 6, 1, 1, FALSE, 4, NULL, FALSE),
+    ('shnb', 6, 1, 2, FALSE, 1, NULL, FALSE),
+    ('shnb', 6, 1, 2, FALSE, 2, NULL, FALSE),
+    ('shnb', 6, 1, 2, TRUE, 3, NULL, FALSE),
+    ('shnb', 6, 1, 2, FALSE, 4, NULL, FALSE),
+    ('shnb', 6, 1, 3, FALSE, 1, NULL, FALSE),
+    ('shnb', 6, 1, 3, FALSE, 2, NULL, FALSE),
+    ('shnb', 6, 1, 3, TRUE, 3, NULL, FALSE),
+    ('shnb', 6, 1, 3, FALSE, 4, NULL, FALSE),
+    ('shnb', 6, 1, 4, FALSE, 1, NULL, FALSE),
+    ('shnb', 6, 1, 4, FALSE, 2, NULL, FALSE),
+    ('shnb', 6, 1, 4, TRUE, 3, NULL, FALSE),
+    ('shnb', 6, 1, 4, FALSE, 4, NULL, FALSE),
+    ('shnb', 6, 1, 5, FALSE, 1, NULL, FALSE),
+    ('shnb', 6, 1, 5, FALSE, 2, NULL, FALSE),
+    ('shnb', 6, 1, 5, TRUE, 3, NULL, FALSE),
+    ('shnb', 6, 1, 5, FALSE, 4, NULL, FALSE)
 ;
