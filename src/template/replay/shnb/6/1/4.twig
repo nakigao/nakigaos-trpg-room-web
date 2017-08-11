@@ -1,0 +1,888 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/shnb-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>クライマックスフェイズ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>クライマックス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ニンジャがたくさんあつまるんだろうなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>たのしみ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>何人いるかなーーー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>これ、ヒコが集まりにいくのはおかしくなりそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このルールでシノビガミになるってことは、バトロアに勝利しないといけないってことか・・・？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>この儀式で最後の一人になったものはシノビガミになれる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ヒコは既に脱落してるけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ってことか、うーんきつそうだなぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>じゃあ不参加か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>目的が儀式の中止と黒幕の抹殺だから殴りこんでも問題ない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>むしろ殴りこまないといけない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>一般人ですよ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>鬼！悪魔！蛙！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>上司「ヒコよ一刻も早く黒幕を殺すのです！！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「やめさせてください」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>上司「抜け忍になるというのか！！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「別の派閥に行きます」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ぬけにんじゃあああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>大胆裏切り発言</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>これは追手に殺されるパターンですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>さて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>再開しようと思いますが</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいよ～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なんで草加がいるんですかねえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあいいや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあクライマックス始めます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>幻覚じゃない？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>一人しか見えないし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では皆さんのスマホに運営から連絡が来ます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ええ・・だれだよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@ハットリ君</div><div class='col-sm-10 serif'>「いよいよ、シノビガミ育成計画も大詰めでござる、今から指定する場所に来るでござる」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>マヂ勘弁</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@ハットリ君</div><div class='col-sm-10 serif'>そんな感じで全員が一か所に集められます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@ハットリ君</div><div class='col-sm-10 serif'>最初に集合したビルの屋上でいいかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>もうアバターないんですが・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>がんばって！応援してるぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@ハットリ君</div><div class='col-sm-10 serif'>生身で突撃してください</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@ハットリ君</div><div class='col-sm-10 serif'>では場所を変えまして</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>誰が来てんだ？オマツリニンジャーいるんだけど</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>言ってることが滅茶苦茶すぎるよー＞＜</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>闇夜に浮かぶビルの上そこには４人の人影があります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>あなた達ＰＣと</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>プリエがいました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>PCって本体の方？アバターの方？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>まあ心はアバターじゃないと来れないしね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけおけ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>ヒコ以外はアバターでしょうね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>もしアバターがなかったらどうしてたの？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>そこは救済措置を一応作ってた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>自動的に脱落じゃない？たたかえないもん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ヒコには？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「4人か・・・？」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>ヒコは本体が強いから必要ないじゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>屋上に集まった４人がにらみ合っていると</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ええ・・・</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>何処からともなく拍手が聞こえてくる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>天然権限使えば一人消せるね！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>屋上の死角になっていた影から一人の男が現れた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「よくぞ集まってくれた、生き残りの諸君」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>でも君だけは消せないからね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>うん、天然の天敵的なキャラで設定作ったからＰＣ２は</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>敵ではないけどね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「残る３にんで…おや？一人多いね？」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「あなた・・・どっかで見たような・・・」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「まあいい…ここまで生き残った君たちには感謝を込めてこの状況を説明してあげよう」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>敬意とかじゃないのか・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「酷いなあ、一応君たちのクラスの担任だよ、仮だけどね」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「私にはいくつか名前があるんだけど、君たちにはこの名前がわかりやすいかな、僕はハットリ君だよ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>夢実もつれてきていることにしていいかな？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>なんで！？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ストーカーしてるんでしょ？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お、黒幕が出てきちゃったじゃん！</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>してるけど、一般人だから忍者には追い付けないぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>無事黒幕も見れたし、使命達成だ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>返るか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「天然君、いや野口君、この姿では初めましてかな？」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@野口秀雄</div><div class='col-sm-10 serif'>「ぼくは草加だけど？」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>君の使命見て達成じゃないでしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>キャラ崩壊どころの話じゃない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「語るに落ちてるぞ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@野口秀雄</div><div class='col-sm-10 serif'>「ええ・・・」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>まじか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「死んでください、忍者ハットリくん」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「まあ待ちたまえ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「説明はよ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>殺意◎</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「君たちが生き残ってきたこのシノビガミ育成計画はねえ、本当は私がシノビガミになる為に仕組んだ儀式なのさ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「ついでに辞世の句もはよ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>な、なんだってえええ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「それって・・・ずるくない？」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「・・・」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「ソイヤ！ソイヤ！」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「私が考案したゲームだ、ＧＭ権限というものさ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「うそ。。。シノビガミのなりかた、簡単すぎ・・・」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「そう、すべては私の計画だということだ！」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もどして；；</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「わーはめられたー」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ライダーになる人は顔芸できないといけない決まりでもあるの？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「ここで君たちを始末すれば儀式は完成する！！さあ最後のゲームを始めようか！！」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>必須技能だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ライダーが多いから、印象付けが必要なのである</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんとなく納得できてしまうのが・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@野口秀雄</div><div class='col-sm-10 serif'>「許さないぞー！」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>というわけで最終決戦始めようと思うがいいかな？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>やべえ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいよ～</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>結局こっちの使命は</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>では反抗的な君たちに対して威嚇するぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>天然を狙うのは間違いだったということ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>黒幕は鳥取県だからねえ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「私に逆らうとは愚かなり」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ぼくは巻き込まれた一般人だから</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>黒幕は２人だからどっちか倒せば使命は達成です</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>２人倒せばボーナスがあります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>じゃあ皆殺そう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ん？結局天然はそっちサイドってこと？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>戦闘の前にデータをのせるぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>いやまあこいつは天然も殺すつもりです</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>わたしも全部殺すつもりです</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>裏切った感じです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どのみち、生き残らないといけないことに変わりはないってことか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>せやな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>戦闘前に</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>データをのせるぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>https://character-sheets.appspot.com/shinobigami/edit.html?key=ahVzfmNoYXJhY3Rlci1zaGVldHMtbXByFgsSDUNoYXJhY3RlckRhdGEYhPuabAw</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>こいつは上忍なので強いです</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>階級間違ってますよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>多分</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>あ、ほんとだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>かたまった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>かたまった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ではプロットしますか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>特技5個しかないけど大丈夫ですか？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ん～む、どう動くかなぁ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>あれ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ああ一つ足りない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あと悲しいお知らせがあるけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>お知らせすべきか悩むな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>どれぐらい悲しい？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>うーん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>なんだい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>まあ特技6個にしてよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>修正したよｐ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>えっと</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>機忍ちゃんと読んだ？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>読んだつもり</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>機忍でとった忍法は全部からくり術ですよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ああ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>マジだ治します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>やさしさに全米がないた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ビガミはやっぱデータが大変だなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あと接近戦攻撃の指定特技が指定されてない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>そこも併せて治しました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>基本的なところで申し訳ないんだけど、間合いってどこから計算始まるの？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>自分のベロシティが0とする？それとも1とする？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>自分のいるところが0</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけおけ、ありがとう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>全員プロット用意できた？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>あ、こっちも指定特技していないわ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ええで～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>自分が0</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>さて</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>獣化してくるからプロット3以上か</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>エヴィのダイスがないぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>幻術でいいか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>メタ読みが怖い</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>じゃあいくぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>iiyo</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「真　黒土」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は6(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>はやい</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は2(6面ダイス)です。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ファンブル値があがるんだっけ～？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>プロット値＝ファンブル地</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>プロット値以下でファンブルってことよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>正確にはプロット値以下じゃないの？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>はいそうです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけ～、だいたいわかった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>じゃあ初手はエヴィか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>さて・・・読みを外したしパスで</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>そうなのか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>つぎお祭りニンジャー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>プリエのプロット忘れてたー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>次から参戦します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>お手付きはプロット0</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>次のターンでかけつけた呈</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>夢見もいない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>射撃戦攻撃を黒土に。痛打と陽炎をのせて</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>合計コストが2なんだけど、こういう場合ってファンブル値も上がる？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>夢美はしらん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あがらない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>メニュー名みたい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>痛そうなメニューだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>陽炎と痛打と射撃戦攻撃の3回判定しないといけない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>射撃戦なのに刀で判定していいのだろうか・・・剣圧？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>命中時だから1回でいいんじゃないかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>それぞれ判定が必要なのか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ニンジャだから大抵のものは気合でなんとかなる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>サポート忍法は発動に判定がいるんだよー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>指定特技があるってことはそういうことなんだな？なるほどなるほど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>装備忍法はいらない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>判定に成功したらとか書いてあるはず</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>サポート忍法がアクティブアビリティで装備忍法がパッシブアビリティ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    刀術）射撃戦攻撃    ShinobiGami : (2D6>=5) → 6[2,4] → 6 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ああ、この判定って攻撃判定のことかと思ってた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>順番としてはサポート忍術を先にするのが正しい・・・けどどうせ全部5だからどうでもいいけど</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>というか対象だれだ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>黒土っていってたよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>射撃戦攻撃を黒土に。痛打と陽炎をのせて</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>回避判定を待つ感じかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>陽炎発動！痛打発動！射撃戦いくぜーーーってイメージなので</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ああ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>サポート忍法も発動判定しないといけない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>うむ先にお願い</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お、ほんとだ命中判定前ね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    壊器術）痛打    ShinobiGami : (2D6>=5) → 6[1,5] → 6 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    刀術）陽炎    ShinobiGami : (2D6>=5) → 8[2,6] → 8 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>いまログが勝手に戻ったのかと思った</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>これはつよい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>うげ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>回避-2か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>回避-2の、当たればダメージが2かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>サポート乗っけ丼は高プロットで失敗してしまうとかなしいことになるので注意だ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>刀術だったよね？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うん、刀</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>懐器術から6だいや8か</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=8    ShinobiGami : (2D6>=8) → 4[1,3] → 4 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>らっき～</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>当たる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「ピーヒャラドンドン！」刀を振るう音</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>２ダメージ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>上忍だから追加ＨＰが減る</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>次はおれか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>獣化を使用する</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=5    ShinobiGami : (2D6>=5) → 8[3,5] → 8 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>成功して終わり</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ハムスターに変わるとは小癪な！</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>つぎどうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かわいくてなぐれな～い</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>神になりました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>何の神？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>さあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>小指の甘皮</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>新世界じゃない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>へー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>じゃあ紙に接近攻撃</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>痛打も一緒に</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ぽけっとてぃっしゅー！</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>くそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>こいやあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=5 [幻術] 接近術    ShinobiGami : (2D6>=5) → 11[5,6] → 11 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=5 [衣装術] 痛打    ShinobiGami : (2D6>=5) → 5[2,3] → 5 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>魔界工学いれても8で回避ですね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>８かあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>諦めてもいいんだよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>8    ShinobiGami : (2D6>8) → 4[1,3] → 4 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>まじかあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2点の接近戦ダメージだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「ハットリ君より私のほうが可愛いから・・・」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ダメージ決めるか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>幻術で相手を眩ましたのち膝かっくんします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(6,5) → 『妖術』結界術</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(5,4) → 『戦術』野戦術</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>妖術と戦術か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このゲーム、戦闘は集中攻撃するとアレなんだね・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>そうですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>まあ回避が腐ってるのもある</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「ばかな！神である私が傷つくなど！！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「私も神だからしょうがない」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっと、HP共通だったな、直しました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ちなみに奥義ってどのタイミングで使うの？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>最後プリエは動きません</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>自分の番かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>クリティカルヒット　範囲攻撃　不死身は自分の手番</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>奥義にもよるけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>判定妨害　完全成功は判定に割り込む感じ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ふむふむ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>さて</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>１２時だがどうします？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>きりいいし、ここまでかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>また来週</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>こいつ耐久型だから長い</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>まあラスボスがそう簡単にしんでも困るでしょ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>まあでは今日はここまでで</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほい、おつかれ～</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>続きはまた来週で</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ラスボスは私だ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>https://meity.jp/s/zs5180</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>お前だったか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>土曜かな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ういっす</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>せやね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ではまた土曜日</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ん、おつかれさーん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>discordのtopicsにお仕事おいてるんで</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>やっといてください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>kaeruとaneko</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>みとく</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>りょーかい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>よろしく</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ではおやすみ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ろぐもぐぅ！</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>おやすみー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>おやすー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ディスコにいるぜ！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>草加を倒す！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>そんなー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>はろー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ろはー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>こん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ようこそ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>私のフィールドへ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ねこだまり卓のデータをセーブしようとしたら4時間たってもされなかったぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>揃ったかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>じゃあこっちでしとこう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>いいかげんＰＣを買い替えなよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>PCの問題なの？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>じゃないの？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あいだをとってkaeruのせいで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>地球が悪い</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>その通り全ては私の手の内田</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>PCに謝って</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>だが断る</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>そろそろ始めますか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>点呼開始！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>準備完了！（1/3）</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>準備完了！（2/3）</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>あと今日はボイチャ使いますのでつなげてね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>第一声が鼻息だった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>つなげーた！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>きたないVCだなあ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>前回までのあらすじ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>鋼の錬金術し面白い</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>一度も見たこと無いでござる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ボスを倒したところまで覚えてる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あれ？倒したような・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>出落ちだったよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>今第二形態でしょ？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>ゲームを仕組んだ黒幕はなんと君たちのクラス担任黒土だったのだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いつの間にか話数すごい進んでる感ありますね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>コメダの生き別れの赤の他人</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>最初からみなおさなきゃ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>な。なんだってーー！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そんなぁ；；</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>だった気がする</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>草加がいる</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。(1→3)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。(3→1)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「プリエ」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これ、変更したかどうかもわかっちゃうから、微妙だな・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「プリエ」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>同じ値にしても変更しましたってでるから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>全員変更されましたってでたらプロットオッケーでいいんじゃない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>出るよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、ほんとだ、わざわざブラフは挟まなくていいわけだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>した記憶がアルフォンス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいよ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>蒸発</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「真　黒土」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は4(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「プリエ」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>見事に固まったなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まじ？！何するんだっけ、殴るか黒土を</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>後の先もってるのにプロット高めなオマツリニンジャー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@武之心♂</div><div class='col-sm-10 serif'>射撃戦で、つうだ、えんようをのせて（前と同じ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それも作戦なのさ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@武之心♂</div><div class='col-sm-10 serif'>2D6>=5 （判定    壊器術）痛打    ShinobiGami : (2D6>=5) → 5[2,3] → 5 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@武之心♂</div><div class='col-sm-10 serif'>2D6>=5 （判定    刀術）陽炎    ShinobiGami : (2D6>=5) → 9[3,6] → 9 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@武之心♂</div><div class='col-sm-10 serif'>2D6>=5 （判定    刀術）射撃戦攻撃    ShinobiGami : (2D6>=5) → 5[2,3] → 5 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>完璧</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@武之心♂</div><div class='col-sm-10 serif'>回避-2で、当たったらダメージ2ね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=8    ShinobiGami : (2D6>=8) → 6[1,5] → 6 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ナイスだね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ダメージ2対かってえぐいよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>追加</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>黒土くんもう瀕死？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(3,5) → 『忍術』盗聴術</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>そうだね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これが囲んで叩くってやつ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「おのれ！私に逆らうとは！！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>イヤフォンが虚空に消え去った</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>歯並び◎</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>草加？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>何術ですか？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まぎらわしいんだけどって笑う</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>2d6>=5    ShinobiGami : (2D6>=5) → 5[2,3] → 5 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2D6>=7 （判定    刀術）    ShinobiGami : (2D6>=7) → 3[1,2] → 3 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あふん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(4,6) → 『謀術』詐術</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「…あの時の借りを返す」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>まるで問題ない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>人違いじゃない？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>逆凪じゃないかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>わたしは</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まるで別人のようだぁ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>なのでパス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>黒土を殴る</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>回避は逆凪しないのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>じゃあ動けるマン</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>文曲を黒土</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2D6>=5 （判定    用兵術）    ShinobiGami : (2D6>=5) → 7[2,5] → 7 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ほかのキャラを狙う理由ないしなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>黒幕が野口だけだったら野口だったけどね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>戦術以外の分野で避けたら接近戦が1点追加されます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>うれしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>男は度胸、何でも試してみるものさ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=7    ShinobiGami : (2D6>=7) → 8[2,6] → 8 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>遁甲符とかつかってええんやで</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ぼくもってないけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、そういえばアイテムあったな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>黒土くんのキャラシみたいな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>https://character-sheets.appspot.com/shinobigami/edit.html?key=ahVzfmNoYXJhY3Rlci1zaGVldHMtbXByFgsSDUNoYXJhY3RlckRhdGEYhPuabAw</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ありがと</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>有能PL</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>特技がほぼかぶってるのが本当にいやらしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>嫌がらせかな？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>出てくるキャラ多かったしなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>攻撃特技は全部隣接してるぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>流派がね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>黒土に接近戦はできるんだっけ？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>黒土に攻撃します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>プラスの感情修正をします</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>痛打も使うね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=4 [幻術] 接近術    ShinobiGami : (2D6>=4) → 8[3,5] → 8 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>nakiもずっと間違えてる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=4 [衣装術] 痛打    ShinobiGami : (2D6>=4) → 7[3,4] → 7 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>今回は間違えてないって～、先に使ってるよ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>説明文見て間違えてるから大丈夫！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ほんとだ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=8    ShinobiGami : (2D6>=8) → 12[6,6] → 12 → スペシャル(生命点1点か変調1つ回復)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>シツレイをした</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ボスのスペシャルはなかったことにしよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>よけながら回復する変態</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>嬉しそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>嬉しそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>一般人に攻撃しないよね？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「目障りな奴だ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>こい、ド三流</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>目からビームかな？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふむふむ・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>あ、からくりとってる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>絶対武器破壊するぞって攻撃ってことか、これ！？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=5 武器破壊 懐器術    ShinobiGami : (2D6>=5) → 8[2,6] → 8 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=5 きゅうせい 絡繰術    ShinobiGami : (2D6>=5) → 6[1,5] → 6 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=5 ドグラ 仕込み    ShinobiGami : (2D6>=5) → 8[2,6] → 8 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=9 [衣装術]     ShinobiGami : (2D6>=9) → 7[3,4] → 7 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>くらった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>くらってしまうのか・・・・？？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>結果はよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんてメンドクサイ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(3,5) → 『忍術』盗聴術</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>追加生命があったわ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こりゃあ、やっかいだな、先につぶさないと・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「フハハハハハ！これこそがゲームマスターの力だ！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ひこって、このシナリオ悪い目しかあってないよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>それだったらもうゲームクリアしてる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は2(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「プリエ」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「真　黒土」がダイスをオープンしました。出目は6(6面ダイス)です。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んー、こっちきたかぁ・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>追加生命って回復できるの？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいよ！</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=5 ドグラ 仕込み    ShinobiGami : (2D6>=5) → 4[2,2] → 4 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>逆凪ですね！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>女性だけ厳しいホモの鏡</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ホモだったんか！？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=5 ドグラ 仕込み    ShinobiGami : (2D6>=5) → 9[4,5] → 9 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ホモなんだよなぁ・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>強い・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>だってアイコンがオマツリニンジャみてにやけてるもん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>仕込みはどうやっても回避できないな、こりゃあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=8 （判定    走法）    ShinobiGami : (2D6>=8) → 6[1,5] → 6 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>あたり～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>チューチュー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>割り込み？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「…させない」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かばうって忍術なんだね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>2d6>=5    ShinobiGami : (2D6>=5) → 6[2,4] → 6 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>シャベッタ！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「な、どうして！？」と驚いておこう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「貴方の望みは私が叶える」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>マゾなんじゃない？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>2d6>=5     ShinobiGami : (2D6>=5) → 8[4,4] → 8 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>2d6>=5 ドグラ 仕込み    ShinobiGami : (2D6>=5) → 9[4,5] → 9 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>つよぉい！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>流石我が弟子</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>さす弟子</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「おのれ、そろいもそろって邪魔ばかりしおって」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>師匠を守ってよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>オマツリのターン？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、わし・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どするかなぁ・・・黒土君に攻撃で！（同じ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>近接でいけそうだな・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>近接にも射撃戦ダメージ+1って適応されるん？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>なぜか忍具3つ持ってた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>後の先は有効</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>後の先の効果なんだけどね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ああ、じゃあ、それも乗って・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>違った、個数書いてないだけだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    壊器術）痛打    ShinobiGami : (2D6>=5) → 10[4,6] → 10 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    刀術）陽炎    ShinobiGami : (2D6>=5) → 5[1,4] → 5 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    騎乗術）近接攻撃    ShinobiGami : (2D6>=5) → 6[1,5] → 6 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>いいね！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>お神輿</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>何でもいいからねえ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=8    ShinobiGami : (2D6>=8) → 5[2,3] → 5 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>8とかそうそうでないし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これで・・・回避-2の攻撃が3かな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=8    ShinobiGami : (2D6>=8) → 8[3,5] → 8 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんだってえええ！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「今の神輿を避けるとは・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>でかすぎたんや・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>遁甲符ないのか！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>なさそうだけど</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「私の計画に不可能はない」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ないね！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>うまい棒</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>オマツリ君終わり</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「手伝う」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>めっちゃ援護してくれる</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>2d6>=5 近接攻撃 怪力    ShinobiGami : (2D6>=5) → 7[1,6] → 7 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6<=7    ShinobiGami : (2D6<=7) → 6[1,5] → 6 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>1足りませんねぇ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(3,12) → 『忍術』第六感</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「ぐぁあああ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>回復アイテム使って終わり</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>忍具はいつでもつかえるからよろしく</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>しない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>やることないので・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>私もパス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>敵が遠い</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>？</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「真　黒土」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「プリエ」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は2(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「真　黒土」がダイスをオープンしました。出目は6(6面ダイス)です。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2分された感がある！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>寝て終わりだ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「貴様らがいくら攻撃しても無駄だ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>で、でたああ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>こっちに害がないなら使ってもいいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>不死身・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>いっていいの？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ゾンビ化して、戦線離脱する奥義だっけ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>追加忍法のほうじゃないですかね・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>結構回復する奥義</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>1d6    ShinobiGami : (1D6) → 1</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>1d6-1ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>最初は０らしい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このダイス運である</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>使った回数の値が</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>kaeru君しんだ。。。？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ゴミ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ちなみに何術ですか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「おかしいこんなはずでは」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>一回目は最低1回復するはず</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>しないよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>最低値が0で1d6-1からスタートして</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>そうなの</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>使用回数だけ-が増えていく</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>だから初回は最低0最大5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>最初は0ってそういう意味か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>後先でつぶそう！当たれええ！（前と同じ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    壊器術）痛打    ShinobiGami : (2D6>=5) → 3[1,2] → 3 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ああああああああああ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>次使ったら1d6-1-1になってそのつぎは1d6-1-2</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>なにしてん・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さかなぎってなんなん？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    刀術）陽炎    ShinobiGami : (2D6>=5) → 12[6,6] → 12 → スペシャル(生命点1点か変調1つ回復)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ダイスが振れなくなる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、めんどい制限だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>奥義は使える</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ん？もうここでおわりってこと？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ、ターンエンド！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>痛打の発動に失敗したからおわりだね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>発動に失敗というか痛打の発動で逆凪したから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>撃てない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>神通・・・うーん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>プリエに殴られた場合同プロット値だから回避はできる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>使うか、ここで落としておかないと話進まなさそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ころせーーーーー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>1個使うね、今神通0</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もっかい、上からやるよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    壊器術）痛打    ShinobiGami : (2D6>=5) → 8[2,6] → 8 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>陽炎はよろし？おっけおけ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    騎乗術）近接攻撃    ShinobiGami : (2D6>=5) → 6[2,4] → 6 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>かげろうが読めないパーティー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うし、避けられなければ・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あんがとー・・・妖術が回復！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>はよしね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>2d6>=8    ShinobiGami : (2D6>=8) → 7[1,6] → 7 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>第1部完！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>控えめに言って弱かったな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「バカなこの私が！ありえない」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「神輿は・・・往復する・・・」キメゼリフ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>こっちは一般人ですよ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ズンドコズンドコ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「何かの間違えだ！！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>みこしは二度来る</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ぴーひょろろ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>騎乗術だしなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>騎乗術だし、多少はね？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>神輿に乗ってる</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@真黒土</div><div class='col-sm-10 serif'>「私は！不滅だーーーーー！！」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>騎乗A</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>きょうてきだったな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>黒土アウト</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>NPCに粘られても困る</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>後はプリエを倒して終わりだね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>GMは私になんの恨みがあるんですか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>技の名前かっこいいね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>GM権限使うか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>垢BAN！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>というかアカウント持ってるけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>数えてないからわからない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>私は3つしかもってない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>そんなことしてないよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>それはそうね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>奪われはしたけどね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>力がほしいか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>あれ、恨みあるじゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>あとで返すから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>プリエ殺せるなら使うよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>わーい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>じゃあBAN！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>味方が；；</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@プリエ・ブークリエ</div><div class='col-sm-10 serif'>「…うっ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>どくさいスイッチ～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「誰かは知らぬが！大丈夫か！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>悲しいけどこれ、戦争なのよね・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「黒夜はん！？」とそれ見てひょっとこ顔で驚こう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>「私の事は気にしないで…戦って…」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>僕でしょ？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>セリフの一人称には厳しい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うまい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>オマツリニンジャーに文曲</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>戦ってという鬼畜応援</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2D6>=5 （判定    用兵術）    ShinobiGami : (2D6>=5) → 5[1,4] → 5 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>分曲ってなんだっけ！？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>範囲広いんだね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>戦術分野以外の特技で回避すると</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>接近戦ダメージが1点追加される</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>そんな射撃戦攻撃</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ、戦術で・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=7 （判定    見敵術）    ShinobiGami : (2D6>=7) → 5[2,3] → 5 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>だめだあああ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>射撃戦1ダメージ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>まだいけるよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>どれ選んでもいいんだっけ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>命賭して！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>忍術にダメージ受けました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>おわり</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>ひこは目的を失って戦意喪失しています</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「く、やらねば・・・やられる！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「もう、かえりたい・・・」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「ニンジャは二人もいらぬ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>おわり</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>終局を見届けよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>おっと</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>奥義を使うぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>戦意喪失？なんだろう、敵対する気がないなら離脱してほしいかも。後から復帰されても困る</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>奥義名は「ここでは何ですので」　効果は追加忍法</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>追加忍法の内容は誘導(P.82)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふむふむふむ？</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2D6>=5 （判定    遁走術）    ShinobiGami : (2D6>=5) → 5[2,3] → 5 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>戦場を極地に変更します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>極地の効果は下の戦場表みてね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どれどれ・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ちなみに誘導が成功した時点で極地の効果は適用される</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>フィールド全体に罠トラップ的な？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>1d6    ShinobiGami : (1D6) → 5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>一般人にはきついですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ん～、なるほど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>セーフだね！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>じゃプロットどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>「黒夜　信二」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、なるほど！？自爆ってわけじゃないのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>わたしだけ・・・きかない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>アネコのキャラは結局どうすんの？攻撃していいの？</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は6(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「kaeru@GM」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は3(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は4(6面ダイス)です。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>オマツリニンジャーに文曲だ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2D6+1>=5 （判定    遁走術）    ShinobiGami : (2D6+1>=5) → 3[1,2]+1 → 4 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>回避回避！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>お金を1個載せて成功にする</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=7 （判定    見敵術）    ShinobiGami : (2D6>=7) → 9[4,5] → 9 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>残り2個</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>よけられたか。。。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>セーフ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>次どうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ちょっとアネコの回答まってからにする</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>あ、残りますよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけ、じゃあ攻撃はしていいってことか・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>殺意をかんじる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>6,5,4。。。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ここは、カヒに攻撃だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>草加置いてるとそれだけで攻撃されそうだからかえよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>近接攻撃で、琲珈を攻撃。痛打、陽炎をのせて</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ひこだった、珈琲の逆だったんだな名前</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「悪く思うなよ！」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>2D6>=5 （判定    壊器術）痛打    ShinobiGami : (2D6>=5) → 4[2,2] → 4 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んもーーーー！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これ同値はファンブル？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>なんかやった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>^q^</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>じゃあ、ターンエンドです・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>回避できなくなったオマツリニンジャー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>祭りは戦いだ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ワッショイ！ワッショイ！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「危ない・・・」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>お祭りに近接攻撃します。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>回避回避！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>先に痛打しよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、そうだった！？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=5 [衣装術] 痛打    ShinobiGami : (2D6>=5) → 10[5,5] → 10 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=5 [幻術] 接近術    ShinobiGami : (2D6>=5) → 9[3,6] → 9 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2点はいたいよぉ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>デュクシ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(4,10) → 『謀術』傀儡の術</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(4,6) → 『謀術』詐術</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「幻影すごいパーンチ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ワンモア</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>同じのは振り直し？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(3,5) → 『忍術』盗聴術</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(2,4) → 『体術』手裏剣術</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>蔵馬から体術がきえたぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「うぐぅ！」かわいく啼きます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう戦闘できないです・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>黒夜生きとったんか！？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>大丈夫だった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>2d6>=5 近接攻撃 怪力    ShinobiGami : (2D6>=5) → 6[2,4] → 6 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>とおい・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>変装術で11ですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>2d6>=11 [変装術]    ShinobiGami : (2D6>=11) → 8[3,5] → 8 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>追加ー１</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>「…あの人を気づつける者は許さない」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>忘れてもらっては困るなあ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>1d6    ShinobiGami : (1D6) → 5</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>はいる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>えぐい・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>接近戦だから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ランダム</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>choice[ki,sen,you]    ShinobiGami : (CHOICE[KI,SEN,YOU]) → YOU</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(3,3) → 『忍術』潜伏術</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>妖術1点もらいますた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>RTT    ShinobiGami : ランダム指定特技表(6,7) → 『妖術』言霊術</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あと2点しかないよぉ！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>もう次のラウンドからは</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@PL」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>極地の効果で毎ラウンド入るんで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>よろしく</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>「黒夜　信二」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は1(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「黒夜　信二」がダイスをオープンしました。出目は6(6面ダイス)です。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もうこの時点で戦いの決着がついてそうなんだけど・・・</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「naki@PL」がダイスをオープンしました。出目は1(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は5(6面ダイス)です。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>指定特技生きてるかぁ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ひこにゃんからだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、そうか天然は奥義ないんだっけ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>もう使ったからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>誘導を</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>たくさん撃てる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うーん、なるほど、どうしようかなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>クリティカルヒットがこわいんですよね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ヒコは不死身かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>黒じゃないの？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>じゃ奥義使おう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>不死身ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>1d6-1    ShinobiGami : (1D6-1) → 6[6]-1 → 5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>全快した</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>どうでもいいけどプロット0にいる相手にはどこからでも攻撃できる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほほー、そうなんだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>本来このキャラで戦闘する気はなかったから耐久よりなのだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>（これは・・・）</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>次行動どっち？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「うまい棒うまし」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>じゃあ黒夜に文曲</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>2D6>=5 （判定    用兵術）    ShinobiGami : (2D6>=5) → 8[3,5] → 8 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>+1わすれてたけど成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@黒夜信二</div><div class='col-sm-10 serif'>2d6>=10    ShinobiGami : (2D6>=10) → 9[3,6] → 9 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>まあ台詞的には黒くんは敵だもんね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>おじゃまぷよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んー・・・では・・・</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>体術に矢を受けてしまってのう・・・戦線離脱する！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>って可能？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>だよね、ちょっと先行きを見たくなってきた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@オマツリニンジャー</div><div class='col-sm-10 serif'>「（ごめん信二君・・・）」そのままスッと姿を消します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>信二くん・・・</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>1点どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>追加生命</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>「Evi@天然 痘」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」のダイスシンボルの値が変更されました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>追加生命も回復するってすごいな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>黒土さんの武器破壊が私のためになっている</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「Evi@天然 痘」がダイスをオープンしました。出目は1(6面ダイス)です。</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>「aneko@籠雫 琲珈　」がダイスをオープンしました。出目は6(6面ダイス)です。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>くらうがよい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>離脱します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>脱落された</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>「敵がいなくなった・・・」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>プリエ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>黒なんとかもいたけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>プリエですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>クライマックスで戦果って</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>勝者とかの概念を忘れてた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>そんなん黒土のアカウントやろ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それはいい戦果だな！</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>ないならオマツリニンジャーのアカウントでもとるか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そんなぁ；；</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はいよー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@天然痘</div><div class='col-sm-10 serif'>プライズうっはうはやで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@籠雫琲珈</div><div class='col-sm-10 serif'>プライズって価値あるの？</div></div>
+        </section>
+    </div>
+{% endblock %}

@@ -23,5 +23,9 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
     (11, 5, 3, '', '蕎麦屋 OF THE DEAD', FALSE),
     (12, 5, 4, '', 'ハロー、ヴィータ', FALSE),
 
-    (13, 6, 1, '', 'シノビガミ育成計画', FALSE)
+    (13, 6, 1, '', 'シノビガミ育成計画', FALSE),
+
+    (14, 7, 1, '', 'ブラッドシアター', FALSE),
+
+    (15, 5, 5, '', 'ドキッ！不快だらけのホラーハウス', FALSE)
 ;

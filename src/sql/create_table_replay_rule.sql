@@ -25,5 +25,6 @@ INSERT INTO replay_rule (id, unique_id, name, name_short, name_en, name_en_short
     (11, 'ptfi', 'パスファインダー', 'パスファ', 'PATHFINDER', 'pathfinder', 'http://paizo.com/pathfinderRPG/prd/', '', FALSE),
     (12, 'scpn', 'すくぱに♪', 'すくぱに', 'SCHOOL PANIC', 'schoolpanic', 'http://inga.dtiblog.com/', '', FALSE),
     (13, 'sww2', 'ソードワールド2.0', 'SW', 'SWORD WORLD 2.0', 'sw2.0', 'https://ssl.fujimi-trpg-online.jp/contents/sw', '', FALSE),
-    (14, 'shnb', 'シノビガミ', 'ビガミ', 'SHINOBIGAMI', 'bigami', 'http://www.bouken.jp/pd/sg/', '', FALSE)
+    (14, 'shnb', 'シノビガミ', 'ビガミ', 'SHINOBIGAMI', 'bigami', 'http://www.bouken.jp/pd/sg/', '', FALSE),
+    (15, 'akgn', 'エースキラージーン', 'AKG', 'ACE KILLER GENE', 'akg', 'http://www.fear.co.jp/akg/index.htm', '', FALSE)
 ;
