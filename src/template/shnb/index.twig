@@ -1,0 +1,55 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+    <style type="text/css">
+        .table-borderless > tbody > tr > td,
+        .table-borderless > tbody > tr > th,
+        .table-borderless > tfoot > tr > td,
+        .table-borderless > tfoot > tr > th,
+        .table-borderless > thead > tr > td,
+        .table-borderless > thead > tr > th {
+            border: none;
+        }
+    </style>
+{% endblock %}
+{% block javascript %}
+    <script src="{{ base_url }}/assets/js/shnb.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ site_title }}</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>シノビメイクのお共に</p>
+            </div>
+        </div>
+        <table class="table table-borderless">
+            <tr>
+                <th class="col-sm-1"><a href="javascript:void(0);" class="btn btn-info" role="button" data-trigger="update-all"><i class="fa fa-refresh" aria-hidden="true"></i></a></th>
+                <th class="col-sm-2"></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0);" class="btn btn-default" role="button" data-trigger="update-full-name"><i class="fa fa-refresh" aria-hidden="true"></i></a></td>
+                <td>フルネーム</td>
+                <td><span id="full-name"></span></td>
+            </tr>
+
+            <tr>
+                <td><a href="javascript:void(0);" class="btn btn-default" role="button" data-trigger="update-ketumei"><i class="fa fa-refresh" aria-hidden="true"></i></a></td>
+                <td>血盟</td>
+                <td><span id="ketumei"></span></td>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0);" class="btn btn-default" role="button" data-trigger="update-ougi"><i class="fa fa-refresh" aria-hidden="true"></i></a></td>
+                <td>奥義</td>
+                <td><span id="ougi"></span></td>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0);" class="btn btn-default" role="button" data-trigger="update-omotenokao"><i class="fa fa-refresh" aria-hidden="true"></i></a></td>
+                <td>表の顔</td>
+                <td><span id="omotenokao"></span></td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

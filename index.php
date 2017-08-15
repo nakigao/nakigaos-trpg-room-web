@@ -5,7 +5,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 // app
 $app = new Silex\Application();
-$app['debug'] = false;
+$app['debug'] = true;
 $app['config'] = array(
     'base_url' => array(
         'prd' => 'http://nakigao.webcrow.jp',
@@ -19,11 +19,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app['twig']->addGlobal('base_url', $app['config']['base_url']['prd']);
 $app['twig']->addGlobal('site_title', 'NAKIGAO TRPG ARCHIVES');
 $app['twig']->addGlobal('page_title', 'UNDEFINED');
+$app['twig']->addGlobal('rule_title', null);
 // doctrine
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-
-    )
 ));
 // error handling
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
@@ -46,8 +44,9 @@ $app->error(function (\Exception $e, Request $request, $code) use ($app) {
 });
 // routing
 $app->mount('/', new Nkgo\Provider\IndexProvider());
-$app->mount('/about', new Nkgo\Provider\AboutProvider());
-$app->mount('/replay', new Nkgo\Provider\ReplayProvider());
-$app->mount('/gm-support-tool', new Nkgo\Provider\GmSupportToolProvider());
-$app->mount('/makeyoudays', new Nkgo\Provider\MakeyoudaysProvider());
+$app->mount('/about/', new Nkgo\Provider\AboutProvider());
+$app->mount('/replay/', new Nkgo\Provider\ReplayProvider());
+$app->mount('/gm-support-tool/', new Nkgo\Provider\GmSupportToolProvider());
+$app->mount('/makeyoudays/', new Nkgo\Provider\MakeyoudaysProvider());
+$app->mount('/shnb/', new Nkgo\Provider\ShnbProvider());
 $app->run();

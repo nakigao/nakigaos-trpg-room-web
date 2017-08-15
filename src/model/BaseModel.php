@@ -72,6 +72,25 @@ EOM;
     }
 
     /**
+     * @return int
+     */
+    public function getRecordsCount()
+    {
+        $sql = <<<EOM
+SELECT count(*) AS count
+FROM {$this->table}
+EOM;
+        $stmt = $this->app['db']->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll();
+        if (empty($records[0]['count'])) {
+            return 0;
+        } else {
+            return $records[0]['count'];
+        }
+    }
+
+    /**
      * @param array $ids
      * @param string $order
      *
