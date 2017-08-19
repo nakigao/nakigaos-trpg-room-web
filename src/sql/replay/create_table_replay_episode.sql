@@ -27,5 +27,10 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
 
     (14, 7, 1, '', 'ブラッドシアター', FALSE),
 
-    (15, 5, 5, '', 'ドキッ！不快だらけのホラーハウス', FALSE)
+    (15, 5, 5, '', 'ドキッ！不快だらけのホラーハウス', FALSE),
+
+    (16, 6, 2, '', 'ザ・ミスト', FALSE),
+
+    (17, 2, 4, '第4話', '事件No.90993', FALSE)
+
 ;
