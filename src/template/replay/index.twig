@@ -34,8 +34,8 @@
     <ul id="section-nav" class="nav nav-sidebar">
         <li class="header">新リプレイ</li>
         <li><a href="#cloc">クトゥルフ神話TRPG(5)</a></li>
-        <li><a href="#lsry">ロストロイヤル(4)</a></li>
         <li><a href="#gror">ガーデンオーダー(5)</a></li>
+        <li><a href="#lsry">ロストロイヤル(4)</a></li>
         <li><a href="#shnb">シノビガミ(2)</a></li>
         <li><a href="#akgn">AKG(1)</a></li>
         <li><hr style="width: 60%"></li>
@@ -126,7 +126,7 @@
                         <tr>
                             <td class="col-sm-8">
                                 <b>「ドキッ！不快だらけのホラーハウス」</b><br>
-                                {% set list = [['cloc/5/5/1', 'プリプレイ', '未編集'], ['cloc/5/5/2', '導入', '未編集'], ['cloc/5/5/3', 'Aパート', '未編集'], ['cloc/5/5/4', 'Bパート', '未編集'], ['cloc/5/5/5', '結末', '未編集']] %}
+                                {% set list = [['cloc/5/5/1', 'プリプレイ', ''], ['cloc/5/5/2', '導入', ''], ['cloc/5/5/3', 'Aパート', ''], ['cloc/5/5/4', 'Bパート', ''], ['cloc/5/5/5', '結末', '']] %}
                                 {% for item in list %}
                                     <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
                                     {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
@@ -138,87 +138,6 @@
                             <td class="col-sm-2">2017年08月06日</td>
                         </tr>
 
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="rule-book">
-        <div class="row">
-            <div class="col-sm-12 rule-book-header">
-                <h3 id="lsry">ロストロイヤルリプレイ</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h4>単発</h4>
-                <div class="table-responsive">
-                    <table class="table">
-                        <tr>
-                            <td class="col-sm-8">
-                                <b>「戦争屋の誘い」</b><br>
-                                {% set list = [['3/1/1/', 'プリプレイ', ''],['3/1/2/', '開幕', ''],['3/1/3/', '分岐', ''],['3/1/4/', '戦闘', '未編集'],['3/1/5/', '終幕', '']] %}
-                                {% for item in list %}
-                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
-                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
-                                    {% if loop.last == false %}/{% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>jem, kaeru, naki</td>
-                            <td>evi</td>
-                            <td class="col-sm-2">2017年01月19日</td>
-                        </tr>
-                        <tr>
-                            <td class="col-sm-8">
-                                <b>「フィギュアイズマイン」</b><br>
-                                {% set list = [['3/2/1/', 'プリプレイ', ''],['3/2/2/', '開幕', ''],['3/2/3/', '分岐', ''],['3/2/4/', '戦闘', ''],['3/2/5/', '終幕', '']] %}
-                                {% for item in list %}
-                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
-                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
-                                    {% if loop.last == false %}/{% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>aneko, evi</td>
-                            <td>naki</td>
-                            <td class="col-sm-2">2017年02月24日</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h4>シリーズ「アネコのロストロイヤル」</h4>
-                <div class="table-responsive">
-                    <table class="table">
-                        <tr>
-                            <td class="col-sm-8">
-                                <b>EP0「小さな心の大きな一歩」</b><br>
-                                {% set list = [['4/1/1/', 'プリプレイ', ''],['4/1/2/', '開幕', ''],['4/1/3/', '分岐', '未編集'],['4/1/4/', '戦闘', '未編集'],['4/1/5/', '終幕', '']] %}
-                                {% for item in list %}
-                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
-                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
-                                    {% if loop.last == false %}/{% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>evi, kaeru, naki</td>
-                            <td>aneko</td>
-                            <td class="col-sm-2">2017年04月02日</td>
-                        </tr>
-                        <tr>
-                            <td class="col-sm-8">
-                                <b>EP1「王女の決別」</b><br>
-                                {% set list = [['4/2/1/', 'プリプレイ', '未編集'],['4/22/', '開幕', '未編集'],['4/2/3/', '分岐', '未編集'],['4/2/4/', '戦闘', '未編集'],['4/2/5/', '終幕', '']] %}
-                                {% for item in list %}
-                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
-                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
-                                    {% if loop.last == false %}/{% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>evi, kaeru, naki</td>
-                            <td>aneko</td>
-                            <td class="col-sm-2">2017年06月25日</td>
-                        </tr>
                     </table>
                 </div>
             </div>
@@ -313,6 +232,87 @@
                             <td>evi, kaeru, aneko</td>
                             <td>naki</td>
                             <td class="col-sm-2">2017年08月19日</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rule-book">
+        <div class="row">
+            <div class="col-sm-12 rule-book-header">
+                <h3 id="lsry">ロストロイヤルリプレイ</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>単発</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>「戦争屋の誘い」</b><br>
+                                {% set list = [['3/1/1/', 'プリプレイ', ''],['3/1/2/', '開幕', ''],['3/1/3/', '分岐', ''],['3/1/4/', '戦闘', '未編集'],['3/1/5/', '終幕', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>jem, kaeru, naki</td>
+                            <td>evi</td>
+                            <td class="col-sm-2">2017年01月19日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>「フィギュアイズマイン」</b><br>
+                                {% set list = [['3/2/1/', 'プリプレイ', ''],['3/2/2/', '開幕', ''],['3/2/3/', '分岐', ''],['3/2/4/', '戦闘', ''],['3/2/5/', '終幕', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>aneko, evi</td>
+                            <td>naki</td>
+                            <td class="col-sm-2">2017年02月24日</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>シリーズ「アネコのロストロイヤル」</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>EP0「小さな心の大きな一歩」</b><br>
+                                {% set list = [['4/1/1/', 'プリプレイ', ''],['4/1/2/', '開幕', ''],['4/1/3/', '分岐', '未編集'],['4/1/4/', '戦闘', '未編集'],['4/1/5/', '終幕', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, naki</td>
+                            <td>aneko</td>
+                            <td class="col-sm-2">2017年04月02日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>EP1「王女の決別」</b><br>
+                                {% set list = [['4/2/1/', 'プリプレイ', '未編集'],['4/22/', '開幕', '未編集'],['4/2/3/', '分岐', '未編集'],['4/2/4/', '戦闘', '未編集'],['4/2/5/', '終幕', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, naki</td>
+                            <td>aneko</td>
+                            <td class="col-sm-2">2017年06月25日</td>
                         </tr>
                     </table>
                 </div>
