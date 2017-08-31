@@ -49,4 +49,5 @@ $app->mount('/replay/', new Nkgo\Provider\ReplayProvider());
 $app->mount('/gm-support-tool/', new Nkgo\Provider\GmSupportToolProvider());
 $app->mount('/makeyoudays/', new Nkgo\Provider\MakeyoudaysProvider());
 $app->mount('/shnb/', new Nkgo\Provider\ShnbProvider());
+$app->mount('/nvnv/', new Nkgo\Provider\NvnvProvider());
 $app->run();

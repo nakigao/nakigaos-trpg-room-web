@@ -1,0 +1,126 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascript %}
+    <script src="{{ base_url }}/assets/js/mustache.min.js"></script>
+    <script src="{{ base_url }}/assets/js/nvnv.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ site_title }}</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>どどんとふでカード類が揃うまでのつなぎ。<br>重複管理してないので、同じの出たらもっかい引いて。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>1. Player Character Card</h3>
+                <select name="" id="" data-action="select-pc-card">
+                    <option value="0">SELECT YOUR ROLE</option>
+                    {% for pc_card in pc_cards %}
+                        <option value="{{ pc_card.id }}">{{ pc_card.role|e }}</option>
+                    {% endfor %}
+                </select>
+                <div class="" data-action="pc-card-description"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>2. Introduction Card</h3>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-introduction-card">LET'S DRAW</a>
+                <div class="" data-action="introduction-card-description"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>3. Secne Card</h3>
+                <div class="row">
+                    {% for i in 0..3 %}
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-scene-card">LET'S DRAW</a>
+                            <div class="" data-action="scene-card-description"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>4-1. Light Card</h3>
+                <div class="row">
+                    {% for i in 0..2 %}
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-light-card">LET'S DRAW</a>
+                            <div class="" data-action="light-card-description"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>4-2. Darkness Card</h3>
+                <div class="row">
+                    {% for i in 0..2 %}
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-darkness-card">LET'S DRAW</a>
+                            <div class="" data-action="darkness-card-description"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>5. Climax Card</h3>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-climax-card">LET'S DRAW</a>
+                <div class="" data-action="climax-card-description"></div>
+            </div>
+        </div>
+    </div>
+    {% verbatim %}
+    <script id="template-pc-card-description" type="x-tmpl-mustache">
+        [ROLE] {{role}}<br>
+        [GENDER] {{gender}}<br>
+        [POWER] {{power}}<br>
+        [TECHNIC] {{technic}}<br>
+        [SKILL NAME] {{skill_name}}<br>
+        [SKILL TIMING] {{skill_timing}}<br>
+        [SKILL DESCRIPTION] {{skill_description}}
+    </script>
+    <script id="template-introduction-card-description" type="x-tmpl-mustache">
+        [TITLE] {{title}}<br>
+        [DESCRIPTION] {{description}}<br>
+        [IS HORROR] {{is_horror}}
+    </script>
+    <script id="template-scene-card-description" type="x-tmpl-mustache">
+        [TITLE] {{title}}<br>
+        [DESCRIPTION] {{description}}<br>
+        [JUDGEMENT TYPE] {{judgement_type}}<br>
+        [JUDGEMENT DESCRIPTION] {{judgement_description}}<br>
+        [IS HORROR] {{is_horror}}
+    </script>
+    <script id="template-light-card-description" type="x-tmpl-mustache">
+        [TITLE] {{title}}<br>
+        [DESCRIPTION] {{description}}<br>
+        [EFFECT TYPE] {{effect_type}}<br>
+        [EFFECT DESCRIPTION] {{effect_description}}<br>
+        [IS HORROR] {{is_horror}}
+    </script>
+    <script id="template-darkness-card-description" type="x-tmpl-mustache">
+        [TITLE] {{title}}<br>
+        [DESCRIPTION] {{description}}<br>
+        [EFFECT TYPE] {{effect_type}}<br>
+        [EFFECT DESCRIPTION] {{effect_description}}<br>
+        [IS HORROR] {{is_horror}}
+    </script>
+    <script id="template-climax-card-description" type="x-tmpl-mustache">
+        [TITLE] {{title}}<br>
+        [DESCRIPTION] {{description}}<br>
+        [JUDGEMENT] {{judgement}}<br>
+        [IS HORROR] {{is_horror}}
+    </script>
+    {% endverbatim %}
+{% endblock %}
