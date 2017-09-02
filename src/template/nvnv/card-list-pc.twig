@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <tr>
+                <th class="col-sm-1">ID</th>
+                <th class="col-sm-2">ROLE</th>
+                <th class="col-sm-1">GENDER</th>
+                <th class="col-sm-1">POWER</th>
+                <th class="col-sm-1">TECHNIC</th>
+                <th>SKILL NAME</th>
+                <th>SKILL TIMING</th>
+                <th>SKILL DESCRIPTION</th>
+            </tr>
+            {% for card in cards %}
+                <tr data-action="go-to-edit-card" data-url="{{ base_url }}/nvnv/card-edit/horror/pc/{{ card.id }}">
+                    <td>{{ card.id }}</td>
+                    <td>{{ card.role }}</td>
+                    <td>{{ card.gender }}</td>
+                    <td>{{ card.power }}</td>
+                    <td>{{ card.technic }}</td>
+                    <td>{{ card.skill_name }}</td>
+                    <td>{{ card.skill_timing }}</td>
+                    <td>{{ card.skill_description|truncate(20) }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>

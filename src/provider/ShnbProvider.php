@@ -135,11 +135,11 @@ class ShnbProvider implements ControllerProviderInterface
         $name = $nameModel->getRecordById(mt_rand(1, $nameRecordsCount));
         // return values
         return array(
-            'family_name' => $familyName[0]['name'],
-            'family_name_kana' => $familyName[0]['name_kana'],
-            'name' => $name[0]['name'],
-            'name_kana' => $name[0]['name_kana'],
-            'sex' => $name[0]['sex'],
+            'family_name' => $familyName['name'],
+            'family_name_kana' => $familyName['name_kana'],
+            'name' => $name['name'],
+            'name_kana' => $name['name_kana'],
+            'sex' => $name['sex'],
         );
     }
 
@@ -154,7 +154,7 @@ class ShnbProvider implements ControllerProviderInterface
         $recordsCount = $model->getRecordsCount();
         $omotenokao = $model->getRecordById(mt_rand(1, $recordsCount));
         return array(
-            'name' => $omotenokao[0]['name']
+            'name' => $omotenokao['name']
         );
     }
 
@@ -201,8 +201,8 @@ class ShnbProvider implements ControllerProviderInterface
         $postfixRecordsCount = $postfixModel->getRecordsCount();
         $postfix = $postfixModel->getRecordById(mt_rand(1, $postfixRecordsCount));
         return array(
-            'name' => ($prefix[0]['name'] . $postfix[0]['name']),
-            'name_kana' => ($prefix[0]['name_kana'] . $postfix[0]['name_kana']),
+            'name' => ($prefix['name'] . $postfix['name']),
+            'name_kana' => ($prefix['name_kana'] . $postfix['name_kana']),
         );
     }
 
@@ -269,8 +269,8 @@ class ShnbProvider implements ControllerProviderInterface
         $postfixRecordsCount = $postfixModel->getRecordsCount();
         $postfix = $postfixModel->getRecordById(mt_rand(1, $postfixRecordsCount));
         return array(
-            'name' => ($prefix[0]['name'] . $postfix[0]['name']),
-            'name_kana' => ($prefix[0]['name_kana'] . $postfix[0]['name_kana']),
+            'name' => ($prefix['name'] . $postfix['name']),
+            'name_kana' => ($prefix['name_kana'] . $postfix['name_kana']),
         );
     }
 }

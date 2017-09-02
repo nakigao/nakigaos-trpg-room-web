@@ -11,26 +11,69 @@
         <h1 class="page-header">{{ site_title }}</h1>
         <div class="row">
             <div class="col-sm-12">
-                <p>どどんとふでカード類が揃うまでのつなぎ。<br>重複管理してないので、同じの出たらもっかい引いて。</p>
+                <p>重複管理してないので、同じの出たらもっかい引いて。</p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
+                <form name="server-information">
+                    <div class="form-group" style="display: none;">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {#<label for="xxxxx">URL</label>#}
+                                <input type="text" class="form-control" id="xxxxx" name="url" placeholder="" value="http://web-evi.sakura.ne.jp/trpg/dodontof/DodontoFServer.rb" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                                {#<label for="xxxxx">ROOM NUMBER</label>#}
+                                <input type="number" class="form-control" id="xxxxx" name="room" placeholder="" value="4" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                                {#<label for="xxxxx">PASSWORD</label>#}
+                                <input type="text" class="form-control" id="xxxxx" name="password" placeholder="NOTHING" value="" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                                {#<label for="xxxxx">DICE BOT</label>#}
+                                <input type="text" class="form-control" id="xxxxx" name="dice_bot" placeholder="NOTHING" value="" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="xxxxx">君の名は。</label>
+                                <input type="text" class="form-control" id="xxxxx" name="your_name" placeholder="キミの名は" value="7743@PL">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
                 <h3>1. Player Character Card</h3>
-                <select name="" id="" data-action="select-pc-card">
-                    <option value="0">SELECT YOUR ROLE</option>
-                    {% for pc_card in pc_cards %}
-                        <option value="{{ pc_card.id }}">{{ pc_card.role|e }}</option>
-                    {% endfor %}
-                </select>
-                <div class="" data-action="pc-card-description"></div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <select name="" id="" class="form-control" style="width: 80%;float:left;" data-action="select-pc-card">
+                                <option value="0">SELECT YOUR ROLE</option>
+                                {% for pc_card in pc_cards %}
+                                    <option value="{{ pc_card.id }}">{{ pc_card.role|e }}</option>
+                                {% endfor %}
+                            </select>
+                            &nbsp;<a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-character" data-card-type="introduction" data-role-name="{# via ajax #}"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="pc-card-description"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <h3>2. Introduction Card</h3>
-                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-introduction-card">LET'S DRAW</a>
-                <div class="" data-action="introduction-card-description"></div>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-introduction-card">DRAW</a>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="introduction"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                <div class="card-description" data-action="introduction-card-description"></div>
             </div>
         </div>
         <div class="row">
@@ -39,8 +82,9 @@
                 <div class="row">
                     {% for i in 0..3 %}
                         <div class="col-sm-3">
-                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-scene-card">LET'S DRAW</a>
-                            <div class="" data-action="scene-card-description"></div>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-scene-card">DRAW</a>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="scene"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="scene-card-description"></div>
                         </div>
                     {% endfor %}
                 </div>
@@ -52,8 +96,9 @@
                 <div class="row">
                     {% for i in 0..2 %}
                         <div class="col-sm-3">
-                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-light-card">LET'S DRAW</a>
-                            <div class="" data-action="light-card-description"></div>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-light-card">DRAW</a>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="light"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="light-card-description"></div>
                         </div>
                     {% endfor %}
                 </div>
@@ -65,8 +110,9 @@
                 <div class="row">
                     {% for i in 0..2 %}
                         <div class="col-sm-3">
-                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-darkness-card">LET'S DRAW</a>
-                            <div class="" data-action="darkness-card-description"></div>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-darkness-card">DRAW</a>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="darkness"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="darkness-card-description"></div>
                         </div>
                     {% endfor %}
                 </div>
@@ -75,52 +121,46 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3>5. Climax Card</h3>
-                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-climax-card">LET'S DRAW</a>
-                <div class="" data-action="climax-card-description"></div>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-climax-card">DRAW</a>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="climax"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                <div class="card-description" data-action="climax-card-description"></div>
             </div>
         </div>
     </div>
     {% verbatim %}
     <script id="template-pc-card-description" type="x-tmpl-mustache">
-        [ROLE] {{role}}<br>
-        [GENDER] {{gender}}<br>
-        [POWER] {{power}}<br>
-        [TECHNIC] {{technic}}<br>
-        [SKILL NAME] {{skill_name}}<br>
-        [SKILL TIMING] {{skill_timing}}<br>
-        [SKILL DESCRIPTION] {{skill_description}}
+[ROLE] {{role}}<br>
+[力] {{power}} / [技] {{technic}}<br>
+[SKILL] {{skill_name}} ({{skill_timing}})<br>
+{{{skill_description}}}
     </script>
     <script id="template-introduction-card-description" type="x-tmpl-mustache">
-        [TITLE] {{title}}<br>
-        [DESCRIPTION] {{description}}<br>
-        [IS HORROR] {{is_horror}}
+[INTRO] {{title}}<br>
+{{{description}}}
     </script>
     <script id="template-scene-card-description" type="x-tmpl-mustache">
-        [TITLE] {{title}}<br>
-        [DESCRIPTION] {{description}}<br>
-        [JUDGEMENT TYPE] {{judgement_type}}<br>
-        [JUDGEMENT DESCRIPTION] {{judgement_description}}<br>
-        [IS HORROR] {{is_horror}}
+[SCENE] {{title}}<br>
+{{{description}}}<br>
+[{{judgement_type}}]<br>
+{{{judgement_description}}}
     </script>
     <script id="template-light-card-description" type="x-tmpl-mustache">
-        [TITLE] {{title}}<br>
-        [DESCRIPTION] {{description}}<br>
-        [EFFECT TYPE] {{effect_type}}<br>
-        [EFFECT DESCRIPTION] {{effect_description}}<br>
-        [IS HORROR] {{is_horror}}
+[LIGHT] {{title}}<br>
+{{{description}}}<br>
+[{{effect_type}}]<br>
+{{{effect_description}}}
     </script>
     <script id="template-darkness-card-description" type="x-tmpl-mustache">
-        [TITLE] {{title}}<br>
-        [DESCRIPTION] {{description}}<br>
-        [EFFECT TYPE] {{effect_type}}<br>
-        [EFFECT DESCRIPTION] {{effect_description}}<br>
-        [IS HORROR] {{is_horror}}
+[DARKN] {{title}}<br>
+{{{description}}}<br>
+[{{effect_type}}]<br>
+{{{effect_description}}}
     </script>
     <script id="template-climax-card-description" type="x-tmpl-mustache">
-        [TITLE] {{title}}<br>
-        [DESCRIPTION] {{description}}<br>
-        [JUDGEMENT] {{judgement}}<br>
-        [IS HORROR] {{is_horror}}
+[CLIMX] {{title}}<br>
+{{{description}}}<br>
+[DEAD OR ALIVE]<br>
+{{{judgement}}}
     </script>
     {% endverbatim %}
 {% endblock %}

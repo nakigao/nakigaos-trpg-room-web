@@ -20,6 +20,7 @@ $app['twig']->addGlobal('base_url', $app['config']['base_url']['prd']);
 $app['twig']->addGlobal('site_title', 'NAKIGAO TRPG ARCHIVES');
 $app['twig']->addGlobal('page_title', 'UNDEFINED');
 $app['twig']->addGlobal('rule_title', null);
+$app['twig']->addExtension(new Twig_Extensions_Extension_Text());
 // doctrine
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 ));

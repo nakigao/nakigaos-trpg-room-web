@@ -51,7 +51,11 @@ EOM;
         );
         $stmt = $this->app['db']->prepare($sql);
         $stmt->execute($params);
-        return $stmt->fetchAll();
+        $record = $stmt->fetchAll();
+        if (!empty($record)) {
+            $record = $record[0];
+        }
+        return $record;
     }
 
     /**
@@ -113,6 +117,17 @@ EOM;
         $stmt = $this->app['db']->prepare($sql);
         $stmt->execute($params);
         return $stmt->fetchAll();
+    }
+
+    /**
+     * Update
+     *
+     * @param int $id
+     * @param array $params
+     */
+    public function update($id = 0, $params = array())
+    {
+        // override plz
     }
 
 }
