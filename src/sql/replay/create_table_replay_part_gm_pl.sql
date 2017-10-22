@@ -367,6 +367,14 @@ INSERT INTO replay_part_gm_pl (rule_unique_id, series_id, episode_sequence_numbe
     ('gror', 2, 4, 5, FALSE, 1, NULL, FALSE),
     ('gror', 2, 4, 5, TRUE, 2, NULL, FALSE),
     ('gror', 2, 4, 5, FALSE, 3, NULL, FALSE),
-    ('gror', 2, 4, 5, FALSE, 4, NULL, FALSE)
+    ('gror', 2, 4, 5, FALSE, 4, NULL, FALSE),
+
+    ('nvnv', 8, 1, 1, FALSE, 1, NULL, FALSE),
+    ('nvnv', 8, 1, 1, FALSE, 2, NULL, FALSE),
+    ('nvnv', 8, 1, 1, FALSE, 3, NULL, FALSE),
+
+    ('nvnv', 8, 2, 1, FALSE, 1, NULL, FALSE),
+    ('nvnv', 8, 2, 1, FALSE, 2, NULL, FALSE),
+    ('nvnv', 8, 2, 1, FALSE, 3, NULL, FALSE)
 
 ;

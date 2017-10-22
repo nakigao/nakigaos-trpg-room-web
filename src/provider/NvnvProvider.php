@@ -19,14 +19,14 @@ class NvnvProvider implements ControllerProviderInterface
     public function connect(Application $app)
     {
         $controllers = $app['controllers_factory'];
-        $controllers->get('/', function (Application $app) {
-            $pcCards = $this->getCards($app, 'horror', 'pc');
-            return $app['twig']->render('nvnv/index.twig', array(
-                'site_title' => 'のびのびTRPGサポートツール(β)',
-                'page_title' => 'INDEX',
-                'pc_cards' => $pcCards
-            ));
-        });
+//        $controllers->get('/', function (Application $app) {
+//            $pcCards = $this->getCards($app, 'horror', 'pc');
+//            return $app['twig']->render('nvnv/index.twig', array(
+//                'site_title' => 'のびのびTRPGサポートツール(β)',
+//                'page_title' => 'INDEX',
+//                'pc_cards' => $pcCards
+//            ));
+//        });
 //        $controllers->get('/card-list/{supplement}/{type}/', function (Application $app, $supplement, $type) {
 //            $cards = $this->getCards($app, $supplement, $type);
 //            return $app['twig']->render('nvnv/card-list.twig', array(
@@ -77,20 +77,20 @@ class NvnvProvider implements ControllerProviderInterface
 //                'message' => 'success'
 //            ));
 //        });
-        $controllers->get('/get-card/{supplement}/{type}/{id}', function (Application $app, $supplement, $type, $id) {
-            return $app->json(array(
-                'status' => true,
-                'message' => 'success',
-                'card' => $this->getCard($app, $supplement, $type, $id)
-            ));
-        });
-        $controllers->get('/get-random-card/{supplement}/{type}', function (Application $app, $supplement, $type) {
-            return $app->json(array(
-                'status' => true,
-                'message' => 'success',
-                'card' => $this->getRandomCard($app, $supplement, $type)
-            ));
-        });
+//        $controllers->get('/get-card/{supplement}/{type}/{id}', function (Application $app, $supplement, $type, $id) {
+//            return $app->json(array(
+//                'status' => true,
+//                'message' => 'success',
+//                'card' => $this->getCard($app, $supplement, $type, $id)
+//            ));
+//        });
+//        $controllers->get('/get-random-card/{supplement}/{type}', function (Application $app, $supplement, $type) {
+//            return $app->json(array(
+//                'status' => true,
+//                'message' => 'success',
+//                'card' => $this->getRandomCard($app, $supplement, $type)
+//            ));
+//        });
         return $controllers;
     }
 

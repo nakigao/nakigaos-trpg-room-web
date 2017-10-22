@@ -14,5 +14,7 @@ INSERT INTO replay_series (id, rule_unique_id, is_campaign, sequence_number, nam
     (4, 'lsry', TRUE, 1, 'アネコのロストロイヤル', FALSE),
     (5, 'cloc', FALSE, 1, '単発', FALSE),
     (6, 'shnb', FALSE, 1, '単発', FALSE),
-    (7, 'akgn', FALSE, 1, '単発', FALSE)
+    (7, 'akgn', FALSE, 1, '単発', FALSE),
+    (8, 'nvnv', FALSE, 1, '単発', FALSE),
+    (9, 'sww2', FALSE, 1, '飯！飯！飯！', FALSE)
 ;

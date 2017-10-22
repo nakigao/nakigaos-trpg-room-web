@@ -1,0 +1,235 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/shnb-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascript %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>※未編集</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあエンディングしますか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>エンディングしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>簡単な人から行こうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>天然君</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>なにかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>戦闘終了後のシーンだが、君の足元には気絶した剣崎 真宵が転がってるけどどうする?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>アイテム欄にいれて持って帰る</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>四次元ポケットかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>了解</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では場所は御伽学園生徒会室</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>「任務達成ご苦労様」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>「いやー今回も強敵だった」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>「正直、彼女は死んでると思ってたんだが、生きて連れ戻すとはさすがだね」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>きみ薄情やな?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>「まあニンジャは死なないから・・・」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>感謝して</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>「どうも彼女は何らかの暗示をかけられていたらしい、記憶があいまいになっているようだ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>「魔剣の呪いだね。そのうち元の彼女に戻るだろう。」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>「ああ、今は療養中だが2、3日もすれば任務に出れるだろう」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>はやない?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>ニンジャだし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>万能言葉</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>インフルエンザ以下かよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>「元凶となった魔剣自体は知り合いが預かってくれているから安心してほしい」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>ヒコさんにありがとうのポーズしよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>にこっ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>「ほう、それはありがたい」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>「さて、帰ってきてそうそうで悪いが、次の仕事の話をしよう」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>その笑顔は斬太郎!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>「」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>絶句してしまった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>って感じでフェードアウトしようか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>生徒会は激務だからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>ゲホゲホ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>持病のエボラ出血熱が・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「生徒会長」 早乙女剣</div><div class='col-sm-10 serif'>ニンジャ免疫で無効だよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>次は十眼衛かな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいあい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>シーンの指定は?ないなら勝手にやるよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>「任務ご苦労だったね十眼衛君」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@十眼衛</div><div class='col-sm-10 serif'>「・・・いえ、結局何も力になれず・・・」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>あ、ニンム報告で</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>「確かに、黒井の不正の証拠は見つからなった…しかし黒井自身が死んだことにより、最悪の結果だけは防げた」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@十眼衛</div><div class='col-sm-10 serif'>「それはなにより・・・」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>「まさか日本の政治家の中にまで妖魔が入り込んでいたとはな」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>「浮かない顔だな、任務の事以外にも何かあったか?」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@十眼衛</div><div class='col-sm-10 serif'>「いえ、とくには・・・。ところで局長、お話があります」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>「なんだ?」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@十眼衛</div><div class='col-sm-10 serif'>十眼衛は真剣な顔でそう言うと、『公安隠密局』と書かれたバッヂを机に置きます。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>!?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@十眼衛</div><div class='col-sm-10 serif'>「探さねばならないものがあります。では、わたしはこれで・・・。」そのまま音もなく部屋を後にしました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@十眼衛</div><div class='col-sm-10 serif'>こう、後始末を自分でつける的なエンドがやりたかった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>探索者になった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>流石に驚いたな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>次回どうしよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>まあフリーランスの忍者もいるもんね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>ではこれでフェードアウトかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>唐突にハグレモノになるのか・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>はぐれ者に転向</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んむ・・・ヌケニンってどういう扱いなんだこの世界は</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>弱点以外はダメージ0</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>ハグレモノっていう抜け忍のグループがある</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んだば、そこに居候かな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「局長」 麻生雅人</div><div class='col-sm-10 serif'>まあまた次回だなその辺は</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>背景というのがありまして</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>P.125に弱点として載ってますよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>ああ、あったね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>最後は琲珈だね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>琲珈も任務の報告をするわけだが</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>ディムロスどうしようかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、おお、追手がいるのか。やっぱヌケニンはダメなんだな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>なんつう名前だ・・・</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>君はプライスを2つもってるけど正直に報告する?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>どういうふうに報告するかを聞きたい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>「任務通り、例の資料を手に入れました。今回は変な乱入者もいましたが、危なげなく遂行できました。はい」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>「流石ね、優秀な部下をもつと、仕事が捗るわね」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>ペラペラと資料を見ます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>「あら?」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>「お褒めいただいて光栄です(棒読み)」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>「この資料に制作中の魔剣があるって書いてあるのだけど、黒井の所で見かけなかった?」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>「どうしました、おば・・・ジョーシサン」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>まだ29やぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>「ああ、変な乱入者が持って帰ってたのはそれかな?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>「ああん、惜しいわね、是非とも解剖したり実験したりしてみたかったのに」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>「今度見たら奪ってきますよ。保障はしませんが」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>「まあいいわ、ともかくお疲れ様、また何かあったら頼むわね」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>「はい(電話かえよ)」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@「MM研主席研究員」 大槌理个</div><div class='col-sm-10 serif'>職場に突撃するから関係ないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあこんな感じかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>職場も変えよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ヌケニンはいいぞ^～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>またヌケニンかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>職業選択の自由</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>それは幻想だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>何で現実って残酷なの</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おつかれちゃん?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>功績点をよこせ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>とまあこんな感じですがシナリオ「迷いを断つ剣」終了です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>せっかちやな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>剣でてきた?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おつかれちゃん!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>O2</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>おつかれさま</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>成果</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>クライマックス残留はエヴィだけかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>そうですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>アネコはプライズを2つ得たので2点ね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>使命の達成はエヴィとアネコの2人が達成</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>ところで戦闘の終了条件ってなんだったの?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>クライマックスはシナリオギミックが無い限り最後の一人になるまで続くよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>クライマックスなら1人になるまでじゃない?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>流儀はどうだろうな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>全員達成だな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>これNPCは死亡させることができるらしいね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>出来るよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>いや、一応殺した感じでRPしてたけど普通に気絶扱いだったから気になってて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ロールプレイも全員達成でいいか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>あ、殺してたの!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>掘削殺法</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>エヴィさん剣崎死んでたらしいっすよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>兵糧丸食べさせたら生き返ったよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>琴線は投票なのでみんな教えてね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ解決だな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>そろそろこっちの番になってもいいはず</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>琴線ねぇ、うーん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>何が?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>いや、琴線ポイント</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んじゃあ、ヒコに1票!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>だってき君キャラがぶれてるんだもの</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>どこが?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たぶん話の筋に絡んでたのがヒコだけだった気がした</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>キャラが幻術で出来てる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>だいたいGMの使命が悪い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ヒコも投票教えてくれい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>天然で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>じゃあ参考までに次回はどんな使命がいい?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>一番のダメージソースだったから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>伝説のコーヒー豆を見つけるとか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>ライバル店の店員を滅ぼすとか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあたまにはギャグ系のシナリオもいいかもね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>ギャグで滅ぼされる店員・・・</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>妖魔がもってる巨匠のコーヒーミルを奪うとか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>経験店 天然 痘7点  籠雫 琲珈8点  満 十眼衛3点</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>こんな感じかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいよ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>ところで僕上忍喰らいって背景もってて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>自分より強い敵に勝利したら+2点なんだけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>つく?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>リュウかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>中級妖魔は確かに格上だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>ちなみに中級妖魔は中忍二人分らしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>中忍頭だとどうだろうな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>1.5人分かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあつけていいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>やったー</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>感想戦</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>ところで秘密は公開しないんですか?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>ぼくPC1使命:私立御伽学園の生徒「剣崎 真宵」が行方不明になった。貴方の使命は「剣崎 真宵」の行方を捜索し、生きていれば連れ戻し、死んでいれば犯人の抹殺を行う事である。秘密 今回貴方に秘密はない、使命を達成するように頑張りましょう。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>せやねネタばれタイムにしようか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあたまには秘密なしとかも面白いかなと思って作りました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>ああ、だから死亡されてはちょっと困ったのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>今度からはNPCの死亡確認をちゃんと取りますので</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>あと、クライマックスの戦闘終了条件も提示してね♡</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>殺してたらヒコさん殺すのが使命になってたのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>基本最後の1人までだよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>せやね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>儀式系のシナリオじゃないかぎり最後の一人までつづくよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>特別な終了条件がある場合は提示します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>そうなのね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>ところでこのディムロスは次回イベントではなくなってるの?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>あと僕が調べた秘密はNPC:剣崎(カリバー)秘密:最近貴方は剣の修行に行き詰っていた、ある日貴方は1つの剣に出会った、この剣さえあればもう迷うことは無いそう確信したNPC:???(モルガン)秘密:実は貴方の正体は剣崎真宵である。貴方は現在魔剣の呪いにより自我を失っている状態だ。解除するには魔剣を手放すしかない。奥義:クリティカルヒット、呪術</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>せやな次回のシナリオ次第だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>多分継続して所持することになるとは思う</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>十眼衛の秘密は?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>PC3使命 国会議員の「黒井 幽冥」が影で違法な実験をしているという噂がある。貴方の使命はその噂の証拠を見つけ出し上司に渡すことである。秘密 最近「霧ヶ峰 霧子」が行方不明になった、本来貴方には関係ないことだがこのまま放っておくことは出来ないと考えている、貴方のもう一つの使命は「霧ヶ峰 霧子」の救出である。(注:今回は2つの使命の達成を目指してもらいます)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>こんな感じ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>きつくない?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>きついねぇ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>しかも自分とかぶってるし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>上手くすれば経験点がっぽりだった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>戦闘に勝つ必要はないから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そこは抜け道用意してたんだけどねえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>まあ・・・ってかんじか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>貴方の本当の使命は「黒井 幽冥」が持つとされるプライズ「研究資料」を手に入れて上司に渡すことである。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>こっちの使命</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>前回のシナリオもそうだけど、対立してるように見えて、うまいことやれば全員協力して任務達成できるようにシナリオは作ってるんだけどねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>やっぱり情報しっかり出さないときついなと思いました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>PCの数と情報の数が・・・</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そうだね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>各PC1回ずつ感情判定にいくと過程して作らないと余ります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ちなみに今回の事件の流れは、議員の正体が剣匠で影で魔剣の材料の確保のために人間を誘拐。それを知ったそれぞれの組織が動き出したみたいな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@痘</div><div class='col-sm-10 serif'>解説されんとわからんやつ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあじゃあ自由解散で、おやすみ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほい、おやすみ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@琲珈</div><div class='col-sm-10 serif'>おやすみ</div></div>
+        </section>
+    </div>
+{% endblock %}

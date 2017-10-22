@@ -31,6 +31,12 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
 
     (16, 6, 2, '', 'ザ・ミスト', FALSE),
 
-    (17, 2, 4, '第4話', '事件No.90993', FALSE)
+    (17, 2, 4, '第4話', '事件No.90993', FALSE),
 
+    (18, 8, 1, '', '体験卓1回目', FALSE),
+    (19, 8, 2, '', '体験卓2回目', FALSE),
+
+    (20, 9, 1, '第1話', '水源を求めて', FALSE),
+    (21, 6, 3, '', '迷いを断つ剣', FALSE),
+    (22, 4, 3, '', '守るべきもの、失うもの', FALSE)
 ;
