@@ -113,7 +113,6 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (86, 18, 1, '読み切り', FALSE),
     -- nvnv/単発/体験卓2回目
     (87, 19, 1, '読み切り', FALSE),
-
     -- sww2/飯！飯！飯！/水源を求めて
     (88, 20, 1, 'トレーラー', FALSE),
     (89, 20, 2, 'オープニング', FALSE),
@@ -131,6 +130,17 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (99, 22, 2, '開幕', FALSE),
     (100, 22, 3, '分岐', FALSE),
     (101, 22, 4, '戦闘', FALSE),
-    (102, 22, 5, '終幕', FALSE)
-
+    (102, 22, 5, '終幕', FALSE),
+    -- cloc/XXXXXXXXXX/XXXXXXXXXX
+    (103, 23, 1, 'プリプレイ', FALSE),
+    (104, 23, 2, '導入', FALSE),
+    (105, 23, 3, 'Aパート', FALSE),
+    (106, 23, 4, 'Bパート', FALSE),
+    (107, 23, 5, '結末', FALSE),
+    -- gror/キャンペーン/5話/絶対！オレが！一番花嫁！
+    (108, 24, 1, 'トレーラー', FALSE),
+    (109, 24, 2, 'オープニング', FALSE),
+    (110, 24, 3, 'ミドル', FALSE),
+    (111, 24, 4, 'クライマックス', FALSE),
+    (112, 24, 5, 'エンディング', FALSE)
 ;

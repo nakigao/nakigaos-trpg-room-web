@@ -38,5 +38,10 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
 
     (20, 9, 1, '第1話', '水源を求めて', FALSE),
     (21, 6, 3, '', '迷いを断つ剣', FALSE),
-    (22, 4, 3, '', '守るべきもの、失うもの', FALSE)
+    (22, 4, 3, '', '守るべきもの、失うもの', FALSE),
+
+    (23, 10, 1, '第1話', 'XXXXXXXXXX', FALSE),
+
+    (24, 2, 5, '第5話', '絶対！オレが！一番花嫁！', FALSE)
+
 ;
