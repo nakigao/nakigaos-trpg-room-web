@@ -6,7 +6,7 @@ use Nkgo\Model\DodontofDiceBotModel;
 use Silex\Application;
 use Silex\Api\ControllerProviderInterface;
 
-class GmSupportToolProvider implements ControllerProviderInterface
+class PlSupportToolProvider implements ControllerProviderInterface
 {
     /**
      * @param Application $app
@@ -21,8 +21,8 @@ class GmSupportToolProvider implements ControllerProviderInterface
          */
         $controllers->get('/', function () use ($app) {
             $diceBotList = new DodontofDiceBotModel($app);
-            return $app['twig']->render('gm-support-tool/index.twig', array(
-                'page_title' => 'GM SUPPORT TOOL',
+            return $app['twig']->render('pl-support-tool/index.twig', array(
+                'page_title' => 'PL SUPPORT TOOL',
                 'diceBotList' => $diceBotList->getRecords()
             ));
         });

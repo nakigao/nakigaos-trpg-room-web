@@ -9,7 +9,7 @@ use Silex\Api\ControllerProviderInterface;
 
 class GrorProvider implements ControllerProviderInterface
 {
-    const DEFAULT_SITE_TITLE = 'ガーデンオーダーキャラクタ保管庫(β)';
+    const DEFAULT_SITE_TITLE = 'ガーデンオーダーキャラクターDB(β)';
 
     public function connect(Application $app)
     {
