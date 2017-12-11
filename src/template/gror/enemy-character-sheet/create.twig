@@ -1,0 +1,264 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    <style>
+        .table {
+            font-size: x-small;
+        }
+
+        .table td input,
+        .table td textarea,
+        .table td select {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ page_title }} | {{ site_title }}</h1>
+        <form action="{{ base_url }}/gror/enemy-character-sheet/create" method="post">
+            <input type="hidden" name="sheet[id]" value="{{ sheet.id }}">
+            <input type="hidden" name="sheet[hash]" value="{{ sheet.hash }}">
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-1">ランク</th>
+                                <th class="col-sm-1">タイプ</th>
+                                <th class="col-sm-1">MOB</th>
+                                <th class="col-sm-3">名前</th>
+                                <th class="col-sm-6">説明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" name="sheet[rank]" value="{{ sheet.rank }}"></td>
+                                <td><input type="text" name="sheet[type]" value="{{ sheet.type }}" autocomplete="off"></td>
+                                <td>
+                                    <select name="sheet[is_mob]">
+                                        <option value="0" {% if sheet.is_mob is empty %}selected{% endif %}>NO</option>
+                                        <option value="1" {% if sheet.is_mob is not empty %}selected{% endif %}>YES</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="sheet[name]" value="{{ sheet.name }}" autocomplete="off"></td>
+                                <td><textarea name="sheet[memo]" rows="6">{{ sheet.memo }}</textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-1">身体</th>
+                                <th class="col-sm-1">感覚</th>
+                                <th class="col-sm-1">知力</th>
+                                <th class="col-sm-1">意志</th>
+                                <th class="col-sm-1">魅力</th>
+                                <th class="col-sm-1">行動値</th>
+                                <th class="col-sm-1">移動力</th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" name="sheet[sintai]" value="{{ sheet.sintai }}"></td>
+                                <td><input type="number" name="sheet[kankaku]" value="{{ sheet.kankaku }}"></td>
+                                <td><input type="number" name="sheet[tiryoku]" value="{{ sheet.tiryoku }}"></td>
+                                <td><input type="number" name="sheet[isi]" value="{{ sheet.isi }}"></td>
+                                <td><input type="number" name="sheet[miryoku]" value="{{ sheet.miryoku }}"></td>
+                                <td><input type="number" name="sheet[koudouti]" value="{{ sheet.koudouti }}"></td>
+                                <td><input type="number" name="sheet[idouryoku]" value="{{ sheet.idouryoku }}"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-1">疲労</th>
+                                <th class="col-sm-1">軽傷</th>
+                                <th class="col-sm-1">重傷</th>
+                                <th class="col-sm-1">致命傷</th>
+                                <th class="col-sm-1">死亡</th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" name="sheet[hirou]" value="{{ sheet.hirou }}"></td>
+                                <td><input type="number" name="sheet[keishou]" value="{{ sheet.keishou }}"></td>
+                                <td><input type="number" name="sheet[jyuusyou]" value="{{ sheet.jyuusyou }}"></td>
+                                <td><input type="number" name="sheet[timeishou]" value="{{ sheet.timeishou }}"></td>
+                                <td><input type="number" name="sheet[sibou]" value="{{ sheet.sibou }}"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-1">切断</th>
+                                <th class="col-sm-1">銃撃</th>
+                                <th class="col-sm-1">衝撃</th>
+                                <th class="col-sm-1">灼熱</th>
+                                <th class="col-sm-1">冷気</th>
+                                <th class="col-sm-1">電撃</th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" name="sheet[setudan]" value="{{ sheet.setudan }}"></td>
+                                <td><input type="number" name="sheet[jyuugeki]" value="{{ sheet.jyuugeki }}"></td>
+                                <td><input type="number" name="sheet[shougeki]" value="{{ sheet.shougeki }}"></td>
+                                <td><input type="number" name="sheet[shakunetu]" value="{{ sheet.shakunetu }}"></td>
+                                <td><input type="number" name="sheet[reiki]" value="{{ sheet.reiki }}"></td>
+                                <td><input type="number" name="sheet[dengeki]" value="{{ sheet.dengeki }}"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-1">特性</th>
+                                <th class="col-sm-1">当身</th>
+                                <th class="col-sm-1">近接武器</th>
+                                <th class="col-sm-1">銃器</th>
+                                <th class="col-sm-1">飛び道具</th>
+                                <th class="col-sm-1">回避</th>
+                                <th class="col-sm-1">探索</th>
+                                <th class="col-sm-1">抵抗</th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                                <th class="col-sm-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="number" name="sheet[tokusei]" value="{{ sheet.tokusei }}"></td>
+                                <td><input type="number" name="sheet[atemi]" value="{{ sheet.atemi }}"></td>
+                                <td><input type="number" name="sheet[kinsetubuki]" value="{{ sheet.kinsetubuki }}"></td>
+                                <td><input type="number" name="sheet[jyuuki]" value="{{ sheet.jyuuki }}"></td>
+                                <td><input type="number" name="sheet[tobidougu]" value="{{ sheet.tobidougu }}"></td>
+                                <td><input type="number" name="sheet[kaihi]" value="{{ sheet.kaihi }}"></td>
+                                <td><input type="number" name="sheet[tansaku]" value="{{ sheet.tansaku }}"></td>
+                                <td><input type="number" name="sheet[teikou]" value="{{ sheet.teikou }}"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th class="col-sm-2">名前</th>
+                                <th class="col-sm-1">判定</th>
+                                <th>タイミング</th>
+                                <th>対象</th>
+                                <th>射程</th>
+                                <th class="col-sm-1">制限</th>
+                                <th class="col-sm-1">コスト</th>
+                                <th class="col-sm-1">属性</th>
+                                <th class="col-sm-2">効果</th>
+                                <th class="col-sm-2">追加</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for skill in skills %}
+                                <tr>
+                                    <td>
+                                        <input type="hidden" name="skills[{{ loop.index0 }}][id]" value="{{ skill.id }}">
+                                        <input type="hidden" name="skills[{{ loop.index0 }}][enemy_character_sheet_hash]" value="{{ skill.enemy_character_sheet_hash }}">
+                                        <input type="hidden" name="skills[{{ loop.index0 }}][priority]" value="{{ skill.priority }}">
+                                        {{ skill.priority }}
+                                    </td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][name]" value="{{ skill.name }}" autocomplete="off"></td>
+                                    <td>
+                                        {#<input type="text" name="skills[{{ loop.index0 }}][hantei]" value="{{ skill.hantei }}" autocomplete="off">#}
+                                        <select name="skills[{{ loop.index0 }}][hantei]">
+                                            <option value="" {% if skill.hantei is empty %}selected{% endif %}></option>
+                                            <option value="1" {% if skill.hantei == 1 %}selected{% endif %}>特性能力</option>
+                                            <option value="2" {% if skill.hantei == 2 %}selected{% endif %}>当身</option>
+                                            <option value="3" {% if skill.hantei == 3 %}selected{% endif %}>近接武器</option>
+                                            <option value="4" {% if skill.hantei == 4 %}selected{% endif %}>銃器</option>
+                                            <option value="5" {% if skill.hantei == 5 %}selected{% endif %}>飛び道具</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][taimingu]" value="{{ skill.taimingu }}" autocomplete="off"></td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][taishou]" value="{{ skill.taishou }}" autocomplete="off"></td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][shatei]" value="{{ skill.shatei }}" autocomplete="off"></td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][seigen]" value="{{ skill.seigen }}" autocomplete="off"></td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][kosuto]" value="{{ skill.kosuto }}" autocomplete="off"></td>
+                                    <td>
+                                        {#<input type="text" name="skills[{{ loop.index0 }}][zokusei]" value="{{ skill.zokusei }}" autocomplete="off">#}
+                                        <select name="skills[{{ loop.index0 }}][zokusei]">
+                                            <option value="" {% if skill.zokusei is empty %}selected{% endif %}></option>
+                                            <option value="1" {% if skill.zokusei == 1 %}selected{% endif %}>切断</option>
+                                            <option value="2" {% if skill.zokusei == 2 %}selected{% endif %}>銃弾</option>
+                                            <option value="3" {% if skill.zokusei == 3 %}selected{% endif %}>衝撃</option>
+                                            <option value="4" {% if skill.zokusei == 4 %}selected{% endif %}>灼熱</option>
+                                            <option value="5" {% if skill.zokusei == 5 %}selected{% endif %}>冷却</option>
+                                            <option value="6" {% if skill.zokusei == 6 %}selected{% endif %}>電撃</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][kouka]" value="{{ skill.kouka }}" autocomplete="off"></td>
+                                    <td><input type="text" name="skills[{{ loop.index0 }}][tuika]" value="{{ skill.tuika }}" autocomplete="off"></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr>
+                    <button type="submit" class="btn btn-primary">SAVE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
