@@ -17,7 +17,7 @@
 
     </style>
 {% endblock %}
-{% block javascript %}
+{% block javascripts %}
     <script src="{{ base_url }}/assets/js/jquery.smooth-scroll.min.js"></script>
     <script>
         $('a[href^="#"]').smoothScroll({
@@ -34,7 +34,7 @@
     <ul id="section-nav" class="nav nav-sidebar">
         <li class="header">新リプレイ</li>
         <li><a href="#cloc">クトゥルフ神話TRPG(6)</a></li>
-        <li><a href="#gror">ガーデンオーダー(5)</a></li>
+        <li><a href="#gror">ガーデンオーダー(6)</a></li>
         <li><a href="#lsry">ロストロイヤル(5)</a></li>
         <li><a href="#shnb">シノビガミ(3)</a></li>
         <li><a href="#nvnv">のびのびTRPG(2)</a></li>
@@ -144,13 +144,13 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h4>シリーズ「XXXXXXXXXX」</h4>
+                <h4>シリーズ「魔女の図書館」</h4>
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
                             <td class="col-sm-8">
-                                <b>「XXXXXXXXXX」</b><br>
-                                {% set list = [['cloc/10/1/1', 'プリプレイ', '未編集'], ['cloc/10/1/2', '導入', '未編集'], ['cloc/10/1/3', 'Aパート', '未編集'], ['cloc/10/1/4', 'Bパート', '未編集'], ['cloc/10/1/5', '結末', '未編集']] %}
+                                <b>「奇妙なビブリオマニア」</b><br>
+                                {% set list = [['cloc/10/1/1', 'プリプレイ', ''], ['cloc/10/1/2', '導入', ''], ['cloc/10/1/3', 'Aパート', ''], ['cloc/10/1/4', 'Bパート', ''], ['cloc/10/1/5', '結末', '']] %}
                                 {% for item in list %}
                                     <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
                                     {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
@@ -258,8 +258,8 @@
                         </tr>
                         <tr>
                             <td class="col-sm-8">
-                                <b>第5話「絶対！オレが！一番花嫁！」</b><br>
-                                {% set list = [['gror/2/5/1', 'トレーラー', ''], ['gror/2/5/2', 'オープニング', '未編集'], ['gror/2/5/3', 'ミドル', '未編集'], ['gror/2/5/4', 'クライマックス', '未編集'], ['gror/2/5/5', 'エンディング', '未編集']] %}
+                                <b>第5話「絶対！あたいが！一番花嫁！」</b><br>
+                                {% set list = [['gror/2/5/1', 'トレーラー', ''], ['gror/2/5/2', 'オープニング', ''], ['gror/2/5/3', 'ミドル', ''], ['gror/2/5/4', 'クライマックス', ''], ['gror/2/5/5', 'エンディング', '']] %}
                                 {% for item in list %}
                                     <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
                                     {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}

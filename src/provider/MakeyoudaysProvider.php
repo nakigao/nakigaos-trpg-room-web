@@ -27,7 +27,7 @@ class MakeyoudaysProvider implements ControllerProviderInterface
          * Page for data
          */
         $controllers->get('character-sheet/show/{hash}', function () use ($app) {
-            $request = app['request$'];
+            $request = $app['request'];
             $hash = $request->attributes->get('hash');
             // get sheets
             $getSheetsSql = <<<EOM
