@@ -63,6 +63,17 @@ class ConvertSupportToolProvider implements ControllerProviderInterface
                 // 成形1: 全角 -> 半角
                 $name = mb_convert_kana($name, 'as', 'UTF-8');
                 $serif = mb_convert_kana($serif, 'as', 'UTF-8');
+                // 成形2: 文末の『。」』を『」』に変更
+                $serif = preg_replace("/(。」)/", "」", $serif);
+                // 成形3: 『ダッシュ(―)』の繰り返しを『ダッシュx2(――)』に変更
+                $serif = preg_replace("/(―){1,}/", "――", $serif);
+                // 成形4-1: 『三点リーダー(…)』の繰り返しを『三点リーダーx2(……)』に変更
+                $serif = preg_replace("/(…){1,}/", "……", $serif);
+                // 成形4-2: 『・』の1回以上の繰り返しを『三点リーダーx2(……)』に変更
+                $serif = preg_replace("/(・){2,}/", "……", $serif);
+                // 成形4-3: 『.』の1回以上の繰り返しを『三点リーダーx2(……)』に変更
+                $serif = preg_replace("/(\.){2,}/", "……", $serif);
+                // 格納
                 $convertedLines[] = array(
                     'name' => $name,
                     'serif' => $serif

@@ -6,6 +6,11 @@ $(function() {
     clipboard.on('error', function(e) {
     });
 
+    // toggle convert descriptions
+    $('[data-trigger="toggle-convert-descriptions"]').on('click', function() {
+        $('#convert-descriptions').toggle('fast');
+    });
+
     // execute convert
     $('#file-form').on('change', function() {
         var formdata = new FormData($('#file-form').get(0));
