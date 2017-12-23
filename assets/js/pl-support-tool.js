@@ -32,6 +32,12 @@ function setDodontofMessages(message) {
  * @returns {boolean}
  */
 function processTalk($targetObj) {
+    // 送信中でも終わり
+    if ($targetObj.find('[data-trigger="submit-talk"]').hasClass('sending')) {
+        return false;
+    }
+    // set status "sending"
+    $targetObj.find('[data-trigger="submit-talk"]').addClass('sending');
     // エラークリア
     var hasError = false;
     $targetObj.find('[name="talk-name"]').css('background-color', 'rgb(255, 255, 255)');
@@ -60,6 +66,8 @@ function processTalk($targetObj) {
         hasError = true;
     }
     if (hasError) {
+        // remove status "sending"
+        $targetObj.find('[data-trigger="submit-talk"]').removeClass('sending');
         return false;
     }
     $.jsonp({
@@ -82,6 +90,10 @@ function processTalk($targetObj) {
         'error': function(xhr, status, error) {
             setDodontofMessages(JSON.stringify(error));
         },
+        'complete': function(){
+            // remove status "sending"
+            $targetObj.find('[data-trigger="submit-talk"]').removeClass('sending');
+        }
     });
 }
 
