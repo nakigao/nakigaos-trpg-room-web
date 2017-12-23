@@ -142,5 +142,11 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (109, 24, 2, 'オープニング', FALSE),
     (110, 24, 3, 'ミドル', FALSE),
     (111, 24, 4, 'クライマックス', FALSE),
-    (112, 24, 5, 'エンディング', FALSE)
+    (112, 24, 5, 'エンディング', FALSE),
+    -- lsry/アネコのロストロイヤル/非常なる現実
+    (113, 25, 1, 'プリプレイ', FALSE),
+    (114, 25, 2, '開幕', FALSE),
+    (115, 25, 3, '分岐', FALSE),
+    (116, 25, 4, '戦闘', FALSE),
+    (117, 25, 5, '終幕', FALSE)
 ;

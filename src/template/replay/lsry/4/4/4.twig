@@ -1,0 +1,404 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-aneko.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>※未編集</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ズンドコズンドコ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ぱっと行きました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>パタパタパタポン</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>城攻めじゃああああ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>破城槌と投石器を用意しなきゃ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>カタパルトでペンギンを射出すればそのまま滑空して城内に侵入できるのでは?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かしこい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>その弾はどうなるのだろうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>侵入した後どうするのだろうか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ササミになった姿が後日発見される</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>城門あけてくれればいいから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>あとは二階級特進</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>場内はどんな感じなんだぁ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>では皆が城に突入したところ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>騎士の2階級特進ってなんだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>一階大広間にどこかで見た人が立っていました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>入れるんだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>呼び出したのだから入れますよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>無血開城</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>門番に挨拶して</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>悪魔は律儀だからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>アポがあることを説明して</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>通してもらった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「ようこそいらっしゃいました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>前のセッションでドラゴンに薙ぎ払われた魔人だっけか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「あなたたちも、相変わらずの善人ですね」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>先手必勝で突撃したいな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「岸田からな」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>騎士は名乗らないと</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「あのボレミアという者の為にここまでできるとはね」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>変身中とムービー中は攻撃しちゃいけません!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>騎士</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>メルかな?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>「そこが魔人と人間の違いってことだ、ボレミアのこと知ってるなら話してもらおうか」と低めの声で言います</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「それは……私が言う必要はありませんね」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「ならば貴様に用はない、地獄に落ちろ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>中指立てます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>手羽先!?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>手羽先!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そういうと二階に続く階段から一人の人間が降りてきます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>「久しぶりだな……皆」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「誰だ!貴様」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>鳥頭かな?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>間違いない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>「悪いが騎士達、貴様達には死んでもらおう」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「お前もかブルータス」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>「ど、どういうことだってばよ!?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>といったところで戦闘が始まりますが</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ボレミア君二度目の裏切り</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>……なんでこいつのために命賭けてんだ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>松永久秀かよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>もう処刑しかないやん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>各自、宣戦布告に対して名乗ってもいいですよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>信長でも許さんよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>今回ですが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>魔群はおらず、魔人2体との戦闘となります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>「姫の……御心を考えたことがあるのかボレミアァ!」といって槍を構えて宣戦布告</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>勝利条件は</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>naki@ベル 正義+ (正義:5->6)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>魔人一体の撃破となります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うぃ、ステェイタスおしえてちょうだい!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>情報は今から入れていきますので少々お待ちを</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「堕ちたなボレミア、貴様に騎士の心が僅かでもあるならば、自害せよ!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>「ボレミア、魔人にも劣る畜生外道ですね。死を以って償う以外、未来はないと思いなさい」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>名乗りで正義か</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>満場一致で死罪だな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>毎回名乗るのもあれだし、宣戦布告って名言してOKにしてもらうってどう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>それでもいいですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ありがとなす!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>寂しいけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そしてルールですが</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>え、寂しいのか……?なら名乗るけど……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>今回は王女を狙ってはきません。理由は秘密です。メタいことを一つ言うと、血路取られた瞬間に死ぬからです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>「サラ姫の涙はもうながさせねぇ!一番槍ベル!いかせてもらうぜぇ!」名乗り。こんなもんかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>二回行動二人は……しぬ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なるほど……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>またもう一つ追加ルールとして</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>インドーを渡してくれる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>今回の戦闘に限って、キャラロストはありません</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>不死身の騎士か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おそろしいぞ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>死を超越してしまったか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>死にはしませんが、騎士側全員のHPが0になると戦闘が終了します</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それが唯一の敗北条件ってことでいいのかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そうなります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このゲーム、モノローグっていって死んでも戦い続けるルールがあるんだけど、その辺はどうするんだい?HP0の時点で脱落?それともモノローグルールは適応?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そのルールは今までどおり適用します</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけい～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>魔人の器と騎士判定値もおしえてくーださい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ということで大丈夫ですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>器はその他欄に復活回数として書いています</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ころすぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>騎士判定値は</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どっちも2……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[2,1,1,3,1,3]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [4,4,6] => (3+3+3) => 9</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LR[2,1,1,3,1,3]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [5,4,5] => (1+3+1) => 5 | 2 chain! (4,5) => 8 [ファンブル]</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>つまるところ、どっちも一緒か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ほんまや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>あ、ごめんちがった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[1,3,2,2,2,1]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [4,6,4] => (2+1+2) => 5</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>こっちです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>何か質問ありますか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うん、あとは大丈夫</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>明日のお弁当のおかずはなんですか?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>卵焼きは確定</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>他は大丈夫ですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>僕のだよ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>ボレミアは自害しますか?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>この戦闘を終わらせたら分かる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>戦闘終わったら令呪を使って命じよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>では開始です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>こちらの血路判定は1d6ですのでご安心を</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>「頼む、姫様と私の為に死んでくれ!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>1d6 [血路ルール]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LostRoyal : (1D6) → 1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>確定失敗じゃないか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃぁ～ん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ホホホ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>じゃあ振ろうかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>1d6+2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>LostRoyal : (1D6+2) → 6[6]+2 → 8</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ここでは狂気は使わんよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>結局結露支配に正義使えるハウスルールでしたっけ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>毎回わすれる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>このアンパン腐ってるわ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>無駄な6を出してしまった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>るるぶがない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>とりあえず樹縛</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>サイクル開始時に使用を宣言し、【酒と歌】を1点消費する。サイクル終了までの間、魔群の戦闘値が1点低いものとみなす。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んー……これはどうしようかなぁ。EviとKaeruはどっち倒すのがいいと思う?個人的にはクリストファーをつぶしたいんだけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>あ、魔群かこれ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>つかうのやめます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>二人に効果あることにします</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>樹縛</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>勝手に戦闘システム変えてスキルが死ぬなんてひどいからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>るるぶがないから……声援か援護をベルにしたいんだけど……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>どっちがどっちだっけ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>能力的にはクリストファーの方が戦いやすいな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んじゃあ、2v?で決まりだな。クリストファーを攻撃します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>援護が達成値+1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>声援が正義を1点譲渡らしい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>じゃあ援護</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>絆も増えましたよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そして絆+1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、キズナ合計してないやん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>絆の合計値ってどこで管理してるん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>各自管理。今回はまだしてない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そういえば今回してないな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>わたしは今ので合計8になりました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>絆4</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>任意で使う系は各自で管理してくれるとGMが助かります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>キングが3でいいのかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>絆は合算して使うから……GMが管理するのが一番いいと思う……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>いや4だな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>+1なら、現在値16って感じ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>16かぁ……クヮイン攻撃しないの?たぶん3ターンぴったしで終わるで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>16ですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ベルさんが屠ってくれるでしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>当たらなさそうだから、手数がほすぃ。まあ、いいや</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>じゃあ、クリストファーに攻撃ね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>今回騎士道弱いからクリちゃんに勝てる気がしない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>判定は武力</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>LR[1,1,0,3,2,3] 攻撃判定(先陣+1, 援護+1)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [1,5,6] => (1+2+3) => 6 | 3 chain! (5,6,1) => 9 [スペシャル]</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいねぇ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[1,3,2,2,2,1]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [2,5,2] => (3+2+3) => 8</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>達成値は11</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>高いね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>クヮインはチェインがないと6なんで</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>殴ると殴り返される</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>初手スペシャルはいいね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>KOUYOU</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゅなんちゃらで、武力は6ってことでええんだよな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>出先がいい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>酒歌もいらないかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>ダメージ算出 = 達成値差分(+5) + 戦闘スタイル(攻撃型+2) + 自身の戦力値(武力+8) + 酒歌(+N*2)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>15点ダメージで1回死亡?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そうですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>即死ですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>「———っ!」鋭い槍の一突きで、魔人のみぞおちを貫いた!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>復活タイミングってどうなるんじゃろか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>魔人のアクション時になります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ういうい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>終わり</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「ぐっ、なかなかやりますね」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>つまり私のあとだから即復活やな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>(死んでないのか、こいつ!?)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>行動回数使って復活するんだっけ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「1回でダメなら、死ぬまで殺してやんよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>アクションで復活って書いてるから復活して終わりっぽい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>行動回数減らさなくても良かったかな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「まだまだこれからですよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>クリスの番終わり</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このまま完封したいなぁ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>続いてボレミア</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>「クワィンがやっかいだな!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>名前間違えた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>クヮインに攻撃します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>なにもしてないでおじゃる!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>発音すればだいたい同じだから大丈夫さ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>魔力だ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LR[2,1,1,3,1,3]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [5,5,5] => (1+1+1) => 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>LR[3,1,2,1,2,1]</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [2,3,4] => (1+2+1) => 4 | 3 chain! (2,3,4) => 7 [スペシャル]</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はぇ^～、すっごい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ちょっと待って</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>所詮裏切り者の剣などこんなものよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>魔力ですけどね!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>まつ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>7点で差分が3だから4+8で12ダメージか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>狂気使います</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>あ、はい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LR[2,1,1,3,1,3]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [4,2,2] => (3+1+1) => 5</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ひくいぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かなしいなぁ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>樹縛で魔力2になってるから……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ちょうど死んだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>7-5の2点と8点の10に高揚効果で2ダメージのせて12点です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃぁ～ん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>とおもったけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>復活して強化されるほうが厄介なきがしてきたので</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>効用効果は酒と歌を2点ゲットにします</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そういえば刻印増えましたね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ボレミアは1点のこれ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GOOD判断だね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>超音波で脳に直接ダメージを与えるニルヴァーナの秘術だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>即死しそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>酒歌のこり14点</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>1d6 刻印</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : (1D6) → 6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お、ちょうどほしいやつ来た感</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>行動回数が増えました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>末期の日本兵状態</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>負ける突撃</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>次、ベルに攻撃します</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>武力で受けます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>続けて同じ対象に攻撃できないからね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LR[2,1,1,3,1,3]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [1,6,1] => (2+3+2) => 7 | 2 chain! (6,1) => 10 [ファンブル]</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>たまげるなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>悪路ォ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>受けるときって、先陣と援護の効果もっててもいいのけ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>オッケーのはず</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>ボレミアもう動かないほうがいいんじゃなかろか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>LR[1,1,0,3,2,3] 攻撃判定(先陣+1, 援護+1)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [1,1,1] => (1+1+1) => 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ほう……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>達成値5。振り直し梨</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ほっ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>10点は遠い</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まあ、倒しちゃうのはよくないし、十分受けれるから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ダメないじゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>あったわ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>7ダメ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>うーん、そのまま受けます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>命点10 -> 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>かばいましょうか?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>いいか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まだいいかな、うん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>酒歌数みてたら勝てる気がしない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>次ペンギン</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>大丈夫さあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>おk</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>でもキングと呼んでくれ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>こっちも1回復活するようなもんだし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>イーブンだな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>クリストファーに攻撃速力</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>LR[3,3,1,4,2,1]</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [5,6,2] => (2+1+3) => 6 | 2 chain! (5,6) => 8</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[1,3,2,2,2,1]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [5,1,3] => (2+1+2) => 5</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいぞいいぞ～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>狂気ィ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[1,3,2,2,2,1]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [3,5,3] => (2+2+2) => 6</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>みんな本気だそ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>遅いなあ、そんなんじゃあ3年早いぜ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダイス極端だね、アネコロストは……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>また死んだやん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>我々普段包囲されてる状態で戦ってるから……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>魔人クリストファーに11のダメージ!(酒と歌:11->0)</div></div>
+            #NAME?
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>キングのくちばしはクリストファーの眉間を貫いた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ということでモノローグ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>いたそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「速……!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>回想+1ぐらいかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さっき投石器で飛ばしたのがやっと届いたのかぁ～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>では2ターン目</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>血路お願いします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>1d6-2 [血路ロール]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>LostRoyal : (1D6-2) → 1[1]-2 → -1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>わぁ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>たまげるなあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>これ振らなくてもいいのでは?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>参謀変えたほうがいいよ。。。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>悦に浸ることが出来る</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>1d6+2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>LostRoyal : (1D6+2) → 6[6]+2 → 8</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>わぁ……!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>あ、はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>差分9って一生見ること無さそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もうこのターン4回くらい余計に行動できてもいいのでは?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>樹縛!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>実質待機になっちゃったな。ま、待機で</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>クリちゃんまだ生きてるのでは?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>復活してないから、倒せないと思われる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>今粉上</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>粉状</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>粉末かあ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>御ペンギンにすべてを任せる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>じゃあベルに援護しとこ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>絆をかせごうね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>絆はもういらないよおおお</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ベルへの絆が4もある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>絆のインフレ化が……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ラミレスビーチの誓いしとこ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>親しい関係かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>崇拝してるからね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>絆なのか妄信なのかもうこれわかんねぇな……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>私もなんもできないんで魔人のターンですよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「ふふふ……」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>復活</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>もう笑うしかないのかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>クリストファー君のデスマーチが今、始まる——。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>1d6 刻印</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : (1D6) → 3</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>魔力+3</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>魔力です……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>がんばって!!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>クヮインに攻撃</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>魔力ガード</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[1,3,2,2,2,1]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [3,3,5] => (2+2+2) => 6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>LR[3,1,2,1,2,1]</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [4,1,2] => (1+3+1) => 5 | 2 chain! (1,2) => 7</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どういうことなの……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>狂気ぃ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LR[1,3,2,2,2,1]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>LostRoyal : 3D6 => [5,2,5] => (2+3+2) => 7</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>同値は……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>なんだ?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>受け優先か?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>騎士勝ち</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>じゃあ絆載せて殴りますね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ボゴォ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>負けたんじゃが</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2ターンでけりがついてしまったような……?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@魔人クリストファー</div><div class='col-sm-10 serif'>「ふふっ、いい戦いだったよ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「雑魚はすっこんでろ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>いい戦いだったか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>このままボレミアも倒せそうだな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>クリストファーは消滅しました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>EVI卓史に残る名勝負だった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@ボレミア</div><div class='col-sm-10 serif'>「クリストファー……奴ほどのものが負けるとは……」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>強かった……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>負けるかと思った……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>魔群って強いなって思いました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>敵作ろうとして</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>データ少なすぎて逆に不安になる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>てか、そうか、魔群でパラメータ増加させるから、いないとこうなっちゃうのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>勉強になりもうした</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>魔人のバフも魔群に対してだからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>まあ、そもそも魔人2体だすのがおかしいだけなんですが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>ストーリー演出的にね……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>クリストファーェ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>クリストファーは2度死ぬ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>3回死んだよ</div></div>
+        </section>
+    </div>
+{% endblock %}

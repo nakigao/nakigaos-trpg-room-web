@@ -35,7 +35,7 @@
         <li class="header">新リプレイ</li>
         <li><a href="#cloc">クトゥルフ神話TRPG(6)</a></li>
         <li><a href="#gror">ガーデンオーダー(6)</a></li>
-        <li><a href="#lsry">ロストロイヤル(5)</a></li>
+        <li><a href="#lsry">ロストロイヤル(6)</a></li>
         <li><a href="#shnb">シノビガミ(3)</a></li>
         <li><a href="#nvnv">のびのびTRPG(2)</a></li>
         <li><a href="#akgn">AKG(1)</a></li>
@@ -364,6 +364,20 @@
                             <td>evi, kaeru, naki</td>
                             <td>aneko</td>
                             <td class="col-sm-2">2017年10月14日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>EP3「非常なる現実」</b><br>
+                                {% set list = [['4/4/1/', 'プリプレイ', '未編集'],['4/4/2/', '開幕', '未編集'],['4/4/3/', '分岐', '未編集'],['4/4/4/', '戦闘', '未編集'],['4/4/5/', '終幕', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/lsry/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, naki</td>
+                            <td>aneko</td>
+                            <td class="col-sm-2">2017年12月XX日</td>
                         </tr>
                     </table>
                 </div>
