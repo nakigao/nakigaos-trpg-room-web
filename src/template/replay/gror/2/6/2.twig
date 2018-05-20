@@ -1,0 +1,309 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラクター成長</h2>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>レベルあっぽできるはずだから、なにあっぽするか考えておいちくり。配布経験点は23点ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>最終章だから使い切ったほうがいい感じかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>って感じでいいよ、死ぬ気で使い切って!</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">成長報告「藤堂栄」</p>
+                        引継経験点 + 02点<br>
+                        獲得経験点 + 23点 (計25点)<br>
+                        消費経験点 - 25点 特技:調達、魅力+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>できた、購入の暴力が完成した</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>初志貫徹って感じやな</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">成長報告「豺虎鶫」</p>
+                        引継経験点 + 00点<br>
+                        獲得経験点 + 23点 (計23点)<br>
+                        消費経験点 - 23点 銃撃強化
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>悩んだけど銃器に全部つぎ込みました、ようやく200%超えれたよ。その分他の技能は全く成長しなかったな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よくよく考えると、5回もやると全員銃器とか200%超えることもできるって恐ろしいよね</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">成長報告「鶯餡子」</p>
+                        引継経験点 + 16点<br>
+                        獲得経験点 + 23点 (計39点)<br>
+                        消費経験点 - 30点 特性能力Lv6→7<br>
+                        消費経験点 - 09点 回避66→75
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>今回5回目だっけ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES、通算6回目のセッション。成長回数でいくと5回って感じかな</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>スタイル決定</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [ソロスタイル] 豺虎鶫<br>
+                        [バディスタイル] 鶯餡子 & 藤堂栄<br>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>オープニング1「無数の銃口」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 全員<br>
+                        [場所] 郊外の建設途中の建物の前<br>
+                        [時間] 夜<br>
+                        <br>
+                        キミ達は目の前で瞬く無数のマズルフラッシュを見た。<br>
+                        次の瞬間には、その数と同じだけの弾丸がキミ達に降り注ぐことも容易に予想できる。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ぺたりこ。というわけで、この場から逃げ出すシーンから始まります。方法は問わないので、RPするなり相談して決めてくだちゃい。状況把握できてない人いたら教えてね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>先生が壁になればすべて解決するよねこれ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>総大将ぞ、そちが盾になれい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>紙装甲ぞあたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>たまには後衛が盾になるってのもいいよね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>初期からいるキャラが離脱する展開でしょこれ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>全員そうでしょうが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>やはり誰かが死ぬしか……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ウインドバリアで銃弾を鶫にそらそう。まあ常に発動しているのですが</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まあこっちも重力バリア的なもので弾丸をそらしますよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ぺろんもいるんだっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ペロンはまだ合流してない、次のシーンで餡子に迎えに行ってもらう予定。他の2人は、地下施設に先にいってもらう予定。そういう相談を銃弾避けながらやった！な演出だと素晴らしい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあ逃げても問題ないか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>逃げるが正解</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあにげよう。きっとへんな挙動してるサイコに目線が釘付けになるはずだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ウィンドバリアを展開しながら銃弾を鶫にそらしつつ、先生と逃げるぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員A</div><div class='col-sm-10 serif'>「あ、背は小さいけど目立つやつがいる～。先にねらっちゃうぞ～」と銃口は鶫に向かいました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「鶫ちゃん、流れ弾が来ると思うから、重力で銃弾を全部落としてね♡」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「お嬢は相変わらず無茶をいいやがる。けどなあ、あたいに喧嘩売るなら死ぬ覚悟はできてるんだろうな、てめえら」弾丸は全部重力で叩き落しますね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>これ失敗したら死にそうだな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、そうだね特性判定よろしくぅ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO100 特性能力</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 7 → クリティカル</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>よっしゃああああ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えぇ……またこの展開かよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>もう敵ごと全部叩き潰しますよ重力で</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員A</div><div class='col-sm-10 serif'>「報告通り、いやそれ以上か!?ひるむな、撃ち続けろ!」銃撃はなおも続きます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ウィンドバリアは常時発動スキルだけど、振ったほうがいいです?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>銃弾を銃弾で撃ち落とすなんて……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>こっちも撃ち返すよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>常時発動ならいいけど、うまく弾丸がそれたかの判定ほしいな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO205 銃器</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=205@41 → 65 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO100 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 9 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ん?またクリティカルお祭りなの^q^;</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>精度良好でつぐみは死ぬ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員A</div><div class='col-sm-10 serif'>んじゃあ、鶫の反撃で数名の隊員が倒れる気配がします</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>とうとう人をあやめてしまったのか、もうあともどりはできない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員B</div><div class='col-sm-10 serif'>「あいつらどうなってるんだ!?」とさすがに驚愕する隊員たち</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>自分はそらしただけだから問題なし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「雑魚どもがあ、てめえら三下じゃ相手になんないよ!!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員C</div><div class='col-sm-10 serif'>「だがここで逃がすと後が厄介だ、あいつも撃ち抜け、盾しょってるやつだ!」そういうと、栄君の方に弾が飛んできます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>盾しょってるからほっといたも大丈夫だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>一人くらいダメージくらってもいいでしょ、こいや</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員C</div><div class='col-sm-10 serif'>GO70 アサルトライフル(銃撃)/MAIN/単/近/-/-/銃弾</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員C</div><div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 35 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あれ、けどこれだと貫通しないかもしれん……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>大丈夫か!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ダメージロールこい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員C</div><div class='col-sm-10 serif'>1d10+15 銃撃</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@謎の組織隊員C</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 10[10]+15 → 25</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>DCBL5</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : 負傷表 銃弾[5] → 軽傷2 | 腕部損傷 …… 銃弾が腕をかすめた。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>いたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おほほ、ふるコンボだドン!今回はGMもダイスはしってんで!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>死人が出そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>こんなところかな、殿勤める栄君が多少負傷したみたいだけど、3人はその場から撤退しました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>他にやりたいRPとかあるかい?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>薬局に軽傷治療スプレーを買いに行きたいです!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>夜の薬局は……空いてるか。OPだけど予想外のダメージ出し、購入判定して成功したら回復していいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GO168</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=168@33 → 95 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、栄君は鶫とわかれて薬局でスプレー買って回復しました。都合がいいので、ここでマスターシーン入ります</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        栄が薬局から出てきたところで、ものすごい爆音が聞こえた。<br>
+                        続けて、夜の空が少し赤くなり、あちこちから火の手があがったのがわかる。<br>
+                        学園都市内は阿鼻叫喚の地獄絵図。逃げ惑う人々。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>「いったいなにごと……」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>派手にやるじゃねぇか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>コマンドーでも攻め込んできたかな</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>オープニング2「鶯家邸宅にて」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] あんこ<br>
+                        [場所] 鶯家邸宅<br>
+                        [時間] 夜<br>
+                        <br>
+                        餡子はペロンの無事を確かめるべく、家路を急いだ。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子1人だけのシーンね。他の2人は都合上、登場できません</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「ペ～ロ～ン～ちゃ～ん」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@耀漢</div><div class='col-sm-10 serif'>「おお、餡子、今帰ったのか?」食卓にいた餡子の父親である耀漢が餡子に気がつくと振り向きます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ペロン</div><div class='col-sm-10 serif'>「おねえちゃん、おかえり!」そういうペロンはもぐもぐと何かのお刺身をほおばっている</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@耀漢</div><div class='col-sm-10 serif'>「一体どうした、そんなに血相を変えて、お前の分のお刺身もちゃんとあるぞ」とニッコリしている耀漢</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「刺身はいいわ。ペロンちゃん、でかけるわよ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ペロン</div><div class='col-sm-10 serif'>「ええ、どういうことなのおねえちゃん!?」ともぐもぐしながら言います</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「理由は移動しながら言うわ。学校に行くわよ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ペロン</div><div class='col-sm-10 serif'>「うん、うん?ペロン、おねえちゃんと一緒にいるよ」と言ってついていきます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「パパ、もしかしたらこの家は危険かもしれない。今すぐ場所を移ることをお勧めするわ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んでは、それを受けて父ちゃんの耀漢さんは……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@耀漢</div><div class='col-sm-10 serif'>「餡子、オレたちのような世界の住人にはどうしても譲っちゃならんときがある。それは今かもしれん。何か協力できることがあるなら遠慮なく言うんだぞ」耀漢はうむと頷くと、餡子の肩にそっと手を置いた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>手をよけてから、「分かったわ、パパ」といって家を出ます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、家の中からは号泣する男の声が聞こえたような気がしました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>小さな声で「ありがとう」とでも言っておこう</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>オープニング3「学園地下施設」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 鶫、栄<br>
+                        [場所] 学園の校門前<br>
+                        [時間] 夜<br>
+                        <br>
+                        餡子と分かれた鶫と栄は、学園地下にあると言われる演習施設を確保しに学園に急いだ。<br>
+                        学園に着くと、校門前で重い金属の柵、つまりは学園の正門を締めている人物と遭遇する。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>「あいやまたれい!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「お、おお、栄先生じゃないか」とその人物、まあ校長先生なんだけど、は振り向きました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「いやあ、はっは、当直の先生が急病で早退しちゃってね、私が代わりに学園を締めているところだよ。ところで、キミたちは、なんぞ用事かね?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>校長はもうずいぶん薄くなった頭をぽりぽりとかきながらキミ達に言った。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>「俺のラヂヲを聴いてください!」ワンセグでニュース速報をみよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、俺のラヂヲからは学園都市全体に外出禁止特例が出されたことをしきりに放送してたよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>情報操作かな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ラヂヲ</div><div class='col-sm-10 serif'>「市民のみなさんはくれぐれも外に出ないようにしてください。繰り返します――」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「これは……いったい……?」と校長先生も目を丸くしている感じです</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>「なんですかねぇ……物騒じゃて」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「残念ながら説明してる時間はねぇんだ、さっさとそこをどきやがれ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「いやいや、これはよくない。キミ達、特に鶫君はすぐに自宅に帰りたまへ」と急いで正門を閉じようとします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「それともなにかね、なにか探し物かね?急いでいるなら、協力してもいいが……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「いいからさっさとどきな!こっちは急いでんだよ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>これは退学だわ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>不良は退学を恐れないからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よし、どうするかはPL2人の判断に任せよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>「めう殿を探しておるのじゃ(直球)」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>めうちゃん出番ある予定なかったんだけど、よく覚えてたね^q^;</div></div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        めう殿とは、<a href="http://nakigao.webcrow.jp/replays/mdays/20160611.html">迷宮デイズリプレイ「その名はめいきう部！」</a>で出てきたキャラ。<br>
+                        同じ学園を舞台にしたクロスオーバーものだったので、思い出してくれた模様
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>鶫的にはさっさと校門乗り越えようとするぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「めう?ああ、めいきう部の?って、おい、キミぃ!栄先生、彼女を止めてくれえ!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>「あの女の子は止まりませんよ(死んだ魚の眼)」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>鶫はそのまま学園内に消えていってくれて大丈夫。後追う展開でいこう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「あーばよーせんこう」空飛んで行くぞ、障害物は破壊していくぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>下手に空飛ぶとイージスシステムに狙い落とされるぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「そんな死んだ魚のような瞳をしてないで、追いかけますよ!」とってちってた～と走って追いかけました</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>オープニング4「最終段階」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] なし(マスターシーン)<br>
+                        [場所] 不明<br>
+                        [時間] 不明<br>
+                        <br>
+                        様々なパイプが繋がれ、何かの液体で満たされた巨大な容器。<br>
+                        淡く光る容器の中には人のようなものが浮いている。<br>
+                        それを恍惚とした表情で見つめる白衣の男が一人。<br>
+                        <br>
+                        「さあ、お目覚めの時間ですよ」<br>
+                        <br>
+                        白衣の男は手元にあった複雑なパネルを操作する。<br>
+                        すると、容器はわずかに振動し、中にいた人のようなものが、静かに両目を開けるのだった。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ってところで、導入シーンはおしまいです。休憩しましょう、30分くらいまででいいかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>おk</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>今までの展開で分かんないところあったら教えてね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ヒロインが多すぎて困っちゃうな～～～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>メインヒロインは一人だけどね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>たしかに</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>毒キノコちゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あと、次のシーンは独自ルールで進めるので、暇があるなら一度目を通しておいてほしいかも>共有メモの防衛戦のルール参照</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ガーデンオーダーらしからぬ強面の追加ルールだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もう別のゲームでもええやんって言っちゃダメよ。概ね、普通のタワーディフェンスゲームだと思ってくれればいいから</div></div>
+        </section>
+    </div>
+{% endblock %}
