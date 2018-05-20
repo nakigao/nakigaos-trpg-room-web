@@ -1,0 +1,1779 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/dlhr-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン1</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>PC達は面識があっても初対面でもいいよ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>アデル氏とは研究仲間もしくはライバル的な面識あるとおもろいかも</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいね、同じヒーロータイプだもんね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>マイティは何歳って設定です?アデルは12歳なんです</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>コナ〇かな</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>21、スパイディ的に学生しながらのヒーローとか。卒研に追われながらも兵器の開発がやめられないの><</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>じゃあ頼りになる先輩的な存在にしよう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「マイティさん、厄介なことになりましたね。けど僕のドローンにかかれば簡単に解決すると思いますけどね」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>自信満々だな</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「だね。ちゃんと試験はしたやつだろうね?」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「タリメーだろにゃわん」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「OK。ならさくっとヴィランを倒しにいきますか」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ちなみにマイティはいつの間にかアイアンマンよろしくごついアーマーをまとってます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>実にアメコミ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>このシナリオでは2回のチャレンジがあります、チャレンジとは決められた技能で判定を行い全部成功することでクリアとなります。失敗すると最終決戦シーンにとんだ上で難易度が上がります。一応リトライという残機があるので2回までやり直せます。がんばりましょう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>がんばっちゃうんだから!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>2回のやり直せるなんてヌルゲーですね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>わざと失敗していきなりボス戦に挑戦するRTA</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>どんなドローンチャレンジがあるのだろうか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>実績:ドローンを5時間操縦しろ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ではまず敵のアジトを見つけるために知覚で判定してもらいましょう。誰か一人を選んでね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>知覚なんてない</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>チームで協力するんだよ、まあ理由をつけてくれれば他の技能でもいいよ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ジャスティカの人いなかったっけ?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>いないなあ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>レベル1だからってのもあるけど、結構シビアだよね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>知覚過敏の人いない?精神が一番高い人は……?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>「まかせてください！」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ん～、イチかバチかでいくか?集中使って45になる、誰か支援する人おる?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>全員で一人を支援すれば結構成功率あがるからな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>実はペース配分がわからんのだよな。チャレンジ2回+戦闘ってことでしょ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>テストキャラはテクノの人はクレジット大目に持ってるから打てそうだな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>じゃあ花音に支援しよう</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ででででっででー「この精神集中マシーンを使ってくれ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>こちらも、ビットコインをマイニングしてクレジットを減らす</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>花音は集中使います。40点加算されて……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>加算点がやべえ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>「ありがとう、みんな!」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:75%) → 1D100[4,2]=42 → 42 → 成功</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「やったにゃわん」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>なぞのサイエンスパワーがスピリチュアルなエナジーでサポートしてくれましたね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>「この力を使えば、ふふ、ふふふ……」SAN値喪失RP</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>Power is money</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>不思議な力と機械とドローンを使ってヴィランの基地が一発特定</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあ魔法的なちからでなんでもありよな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>正直魔法少女イメージしてたのに鬼の腕って見てビックリしたのは内緒</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン2</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>では工業地帯の廃倉庫にマッドが潜んでいることがわかりました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>倉庫を燃やして終わりやね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>花火は出荷前に点火よ～</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>その場合花火に引火して町が吹き飛びますね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「ヴィランはここにいるんですね……(ゴクッ)」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「どれ、フルファイアでも……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>「爆弾を無力化するための液体窒素をもってきたぞ!」とドラム缶を100個ばかしもってこよう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>どうやって運んでんだよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ドローンだよ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>それをマイティの肩のカタパルトで</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「ここから先は後方支援しますよ!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「俺の出番にゃわん」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>もちろん現代火器で武装して突撃しますよ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ドローン引き連れて突撃だ!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>では工場の奥ではマッドと他に複数の男たちが荷物の運び出しをしていました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「そこまでにゃん!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>「何者だ!!」覆面の男たちが一斉に振り向き銃を構えます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>まぎれもなくヤツさ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「にがさないからな!」がっしゃんうぃーんがっしゃん</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「おやおや、こんなところにお客様とはね。何か用かな?これでもボクらは忙しいんだよ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「貴女……たちはもう既に包囲されてます。観念してください」複数人いるとは思わなかったから、たちを付け加えた所存</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>「お前たちは完全に包囲されている!」ドラム缶を並べながら</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「おやおやおや、君たちはもしかしてヒーローなのかな?」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「ああ、HEROさ。だからおとなしく観念しろ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「しねにゃん」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>痛烈な語尾ですら隠すことができない殺意すこ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ところでドローンって喋るの?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>しらんがな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>こんなこともあろうかとスピーカーを付けておいたぜ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>自作自演だった……?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>このタイミングでクエリーを行おうと思います。クエリーとはヒーローに対する問いかけです、これに答えられるとグリッドがもらえます</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>クエリーは各個人に対してあるの?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>そだよ。今回はアデルと光回線使いに問いかけます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「いやいや少なくとも君たち二人はヒーローじゃなかったね」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あはん、いい伏線回収ですね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>そう言いながらマッドはタブレットを操作して一つの動画を見せつけます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>タブレットからはファイアワークスのかわいらしい子供時代の映像が……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ええやん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>結婚式かよ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>そこには冒頭の街角爆破の映像が映っていました、そして市民を助けようとして届かなかった2人のヒーローの姿が映っていました</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「くっくっく、誰も救えないヒーローなんて、ヒーローとは呼べないよねえ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>「ぐうのねもでない」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>アキラメンナヨ!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「ヒーローってのは世界を、平和を、命を救う存在だよ。君たちごときが語っていいものじゃあないんだよ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>これに対してビシッと言ってやってください</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「痛いことを言ってくれるね。ああ、ヒーローだって万能ではないのさ。けどさ、それを決めるのは市民達だ。あんた等悪者じゃない」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「だからてめーらは死ぬにゃわん」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>「終わり良ければ総て良し!!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>おお、ではグリットを2本上げましょう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ウェーイ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいね、当たりがでたぞぉ!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「なるほどねえ、でも悪いけどこっちは君たちに付き合ってるほど暇じゃないんだ、失礼するよ」そう言ってその場を立ち去ろうとしますね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>準備してるのに立ち去っちゃダメでしょ!?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>しかしファイヤーワークスの背後にはドラム缶が</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「にがさん!」ロケットブーストでおいかける</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>ではその時</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「待ってください!!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ヒーローとマッドの間に一人の女性が現れました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>誰に対して言ってる。テレポートかな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>下からせり上がってきたのかもしれないぞ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>いや近くの通路から飛び出た感じ。ヒーローの方を向いてるよ。</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「お願いします、その人に手をださないで」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>マイティとぶつかるぅ!?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ぐちゃああああ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>死んだな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>これがドローンに撮影されており、のちに交通事故の教材として使われる</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>きゅうぶれーきい</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>一般人を殺したらクレジットマイナス100くらいしますね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「なぜ庇うんです?その人が何をしたかわかっているんですか?」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>そうだそうだー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「庇うのなら同罪にゃわん」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ビル爆破なんてテロリストのやることだぞー</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「それは、わかってますでもダメなんです!あの子が、あの子が!!」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いわゆるコラテラルダメージというやつとかいって、それを聞いたマッチョマンがテレビ局に押し入りそう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「じゃーねーヒーロー、せいぜいそのおもちゃと仲良く遊びな」そう言ってマッドは工場の奥へと消えていきます</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「まて!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>女性はかなり混乱しており、ひたすら道を通せんぼしています</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>女性一人に通せんぼされるヒーロー四人</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>だって乱暴にどかせないじゃん。女性を落ち着かせるには交渉を判定してください</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>誰か持ってる?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ないです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>うーん、交渉もってるけど、テクノマンサー組の方が高いかもしれない</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>まあグリットも増えてるしやりようはあるよね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>振りなおしで使うか、プラスして使うか……振りなおし使用って何回でも出来るの?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>何回でもいよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>37なら3回降ればいけるでしょ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>この判定も代表1名?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>うん</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>素で振っていい?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ちょいまち。せっかく歓迎セッションだから、ゆーとさんに振ってもらうのはいかがか</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>確かにそうだ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>了解しました。振ります</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:37%) → 1D100[0,0]=100 → 100 → 失敗 → ファンブル! パワーの代償2倍&振り直し不可</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>わろた</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>なける</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>あはん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>GJ!!!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>おう</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>もうしわけなさ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>豪運の持ち主だということがわかった</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>グリッド使わなくて良かったと考えればむしろ僥倖</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>えーとこの場合はグリットは使えないからリトライを消費かな。ではどなたか再度交渉……時間だからここまでにするか</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>んむ、次回リトライから再開だあ!</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>了解です!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>次は女性を叩き潰すぞ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>この人は一般人なのでダメだよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>やはり立ちはだかるモノを叩き潰してこそのヒーロー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>悪を庇うものは悪</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        次の日……
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>どこまでいってたっけ、なんかのファンブルで終わってた気がする</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ヴィランが逃げて、追いかけようとしたら女性に止められたところですね。説得しようとして失敗しました</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ヒーローは説得に失敗するのか?否</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>最悪おねんねしてもらおう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>一般人に手を上げるのか!?否</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>人を駄目にするソファをあげるのですがなにか?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>説得は交渉でお願いしますね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>こっちがすればいいのかな。とりま一回振ろうかな、応援くれても良いのよ。集中しよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>応援しちゃう。なんで説得の支援をしたらお金が減るんですか!!!</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>説得にお金……賄賂?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>スポンサー費とかじゃない?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ヒーローが賄賂なんて……ははは</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>あ、応援するする</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>がんばれー!(いうだけである)</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>+30か、いけるやろ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>これはいけるやろ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:67%) → 1D100[8,2]=82 → 82 → 失敗</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>腐ってるな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あるある</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「機械には人を説得することは出来ないにゃわん」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>やってしまったな。さて、再挑戦するには、リトライかグリッドを減らす必要があるがどうしますか?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>その場合はダイス判定値はどうなる?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>支援とかは切れますね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>皆さん、この説得に価値があると思います?</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ふぃぢかるで押しとおってはだめ?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>まあ訳ありそうだからなぁ。TRUEエンド狙いなら、ぜひ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>価値のあるなしとかではなく、乗り越えるべき試練なので。内容によるが例えばなにで判定するか提案してみてくれ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>試練だったのか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>名無しのMOBに試される我々</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ヒーローの敵は市民ってそれ一番言われてるから</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>てことはこれ、失敗すると即GAMEOVERって認識でいいの?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>リトライが無い状態で失敗すると、最終決戦に強制移動します。その場合ヒーロー側に色々と不利な状態で始まります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>じゃあ、選択肢はないな。リトライがなくなるまでリトライだ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>俺はとまらねえからよ……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>消費するのはリトライの方でいい?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>うん</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>とまるんぢゃねえ……</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>グリッドは前回のファンブルで使用不可能なんじゃないの、てか今回のダイスも正確にはリトライ消費してるのでは</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>リトライでやり直してるから、今回はグリッドが使えるよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>グリッドは5個?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>そーだね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>じゃあ使うしかないか。グリッドって戦闘でも使うの?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>戦闘というか色々使える。ダイス目の強化や振り直しとか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>それで禁止薬物の見た目なんだな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>まあ一個消費しますか</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あ、これグリッド消費は判定の後でもできそうだから、2つ使って成功扱いにしちゃおう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>お、その手があったな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>本当だ、直後って書いてる</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ナイス</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「お姉さん、僕達を信じてください。必ずや改心させてみせますよ」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>と市民に禁止薬物を飲ませるヒーローたちの図</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>絶対完璧に安心デース。急性アルコール中毒で障害を排除!</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>これは実績解除ですわ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ほい、では</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「……そうですね、確かにこのままではあの子もきっと……すみませんお願いがあります!!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「なんですか。お聞きしましょう(行動するとは言っていない)」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「実は私の子供がさっきのヴィランに攫われたんです!!それでいう事を聞かないと子供を爆殺すると!!」つまりこの女性は脅されてヒーローの妨害をしていました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>友人とかではなかったのか。どうせもう……なパターンじゃない</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「お願いします!あの子を、私の子供をどうか助けてください!!」女性は泣きながら土下座をしますね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>女性は爆弾マニアで、子どもとは爆弾のことだった!みたいな展開希望</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>誰が得するんだそれ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ヒーロー?</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>マッドサイエンティストかな?爆弾魔?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>バッドエンド教の人</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>爆弾のタイマーが0になる直前に人の心に目覚める展開でしょ?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>泣けるね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>折角だし、これをクエリーにするか。ではここはマイティに決めてもらおう。女性の頼みに答えてくれればいい</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「まかせろぉ!」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>正義の味方がNOといえるわないんだよなぁ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>当たり前だよなぁ!?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>あつううい!!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ご要望にお答えしたいのは山々なのですが、当社の規定で……</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>依頼された業務内容に含まれてませんなんていわないよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>まともな感情を持つ人は大事やなって</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ではその言葉を聞いて女性はひたすら涙を流しながら「ありがとうございます」と感謝をします</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「しょうがないですね。乗りかかった船です。沈むまでお供しますよ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「おうともさ」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>無償奉仕上等やってやらぁ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>では女性は道をゆずると覚悟の決まった顔でヒーローに言います</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「どうかあの子に伝えてください……強く生きてほしいと……それだけが私の望みだと」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>そう言うと女性はヒーロー達から離れますね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>なんで死にそうになってるんだ?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>自爆するんじゃねえぞ……!多分どっちかが爆発するようになってるんでしょ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>素敵!!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「あいつは裏切り者をゆるさない……私はもうここで……」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なんじゃとぉ!?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>もうハッピーエンドはないんだね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>そう言うと女性は服の袖をまくる。そこには腕時計のようなものがまかれ、そのタイマーは残り10秒をきっていた</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>それは裏切っても裏切らなくても爆発していたのでは?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>かもしれないが、ここは科学で判定をお願いしたい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おあつらえ向きの職種がいるじゃなぁい!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>しょうがないなあ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ファンブルのぢっせきあるんで遠慮したいところ、アデルにぽーい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>あ、支援します。クレジット6 -> 2</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>じゃあ集中しよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>なんかここは失敗してもいいきがするから支援しないでおこう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ヒーローなら爆弾の解体なんて5秒でできるはず</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>決めて進ぜよう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:77%) → 1D100[2,6]=26 → 26 → 成功</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>かっこいい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいぞ〜</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>では爆弾を好きなように料理してくださいな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「あきらめるな!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「!?」女性が驚いた顔で見ますね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「たべてあげるにゃん」なんか食べた</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>た、たべる……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>亜空間につながってるんでしょ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「……嘘……私、生きてる?」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>しんでんじゃない展開</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「あの子のために、あなたも生きる義務があるんですよ。何早々にあきらめてるんですか!」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>アデルが紳士すぎて全米がないた</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>「うう……ごめんなさい、私もう二度とあの子には会えないって思って……うう。お願いします、もう一度あの子に合わせてください」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あの世でなぁ!(ゲス顔</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ヴィランかな?</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>てか犯人は俺たちが近づいてる時に爆破すればよかったんぢゃ……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>まあ時限式だったんで、ではこれにてチャレンジ1は終了だな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ないすでーす。クエリー成功したから、なんかもらえるんじゃなかったけ。</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>おおグリッド1追加しとくね、現在4です</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@女性</div>
+                <div class='col-sm-10 serif'>ではこのままシーンを変えてチャレンジ2に行くことになるが、忘れてるといけないので、リマークについてもう一回説明するね。ゲーム中プレイヤーは1回だけ任意のタイミングで、シーンを行ってもいい。これをリマークという、リマークを使うとグリッドが1貰える。これを忘れてゲームを終えると、損した気分になるので気を付けてね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あ、こんなルールがシステムとして用意されてるんだね</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>今のママさん救出ってそれになるのかな?放置してもよかったわけだし</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>いまのは違うよ、普通にチャレンジの一環です</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>シーンというかRPって感じだけどな、シーンレベルまでできちゃっていいのけ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>その辺は割とGM次第だけど、言ってくれればシーンは用意するし、回想シーンでもいいし</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ぢゃあ俺が急に昔ぢぶんの母親を救えなかった話をしてもいいわけか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>それはもちろんいいよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいね。なんか決め台詞でも考えとくか</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン3</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>では2つ目のチャレンジ、追跡シーンにいこうか</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ほい</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>いえあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ちなみにヴィランは車で逃げてるけど、そっちはどうやって追いかける?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>飛行機</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>持ってんのかよ、頼むから地上を走ってくれ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>マイティに乗ってこう</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>アイアンマン的に鉄腕アトム的に</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>全員はむりでしょう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ドローンに地を這い蹲れとな?</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>這い寄れドローンさん</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ヒーローの移動手段って世界観的には、どんなのがあるの?みんな飛べたりする?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>飛べるヒーローも飛べないヒーローもいるよ。具体的には飛行適正もってるかどうかだけど</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あー、飛行適正か、あるなあ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>筋肉マンとかワリオみたいに飛びたい。なぜか飛べる系ヒーローみたいな感じ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>アデルドローンで一人、マイティジェットで一人は?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあいいですよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>じゃあ、そっちでいこう</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「よし、俺につかまれ!とばすけぇな!」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>いきなりお国訛りが</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>「うえぇ……あんまりゆらさないで」と青ざめながら</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「喋ると舌噛み切ってしんじまうぜ!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ではヴィラン達は複数の車両で逃げていましたが、途中で2手に分かれました。一つは巨大花火を乗せたトラック、もう一つは何台かのバイクの集団です。どっちを誰が追うか決めてね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ファイヤー花子がいる方にいく。でっかい花火を打ち上げてやるぜ!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>わいも花火師になるーーー</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ぢゃあマイティはバイクで</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>マイティの腕にぶら下がってる係する</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>じゃあアデルと光回線、マイティと花音のペアね。ではまずトラックの方から</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「待つんだにゃわん!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ドローンがトラックを追いかけていると、その荷台に人影が現れます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「君たちもしつこいねえ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「撃ちます」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>はやいよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>まさに問答無用</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>言っとくけど誘爆したら町が吹っ飛ぶよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>それもまた乙なり</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「俺に帰る場所なんてないにゃん!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「全くこれだから野蛮な奴は嫌だよねえ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「あきらめなさい、ファイヤー……?なんとか!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「君たちの相手は後でやってあげるさ、準備が整ってからね」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>「準備なんていらねえ!いつだって俺らは本番にゃん!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデルドローン</div>
+                <div class='col-sm-10 serif'>撃ちます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>ムービーシーンなので撃てません</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ムービーはスキップする派なんで……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「お互い忙しい身だ、こんな追いかけっこよりもやるべきことがあるだろう?」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>そう言うとヴィランは指を鳴らします、それと同時にトラックの荷台にセットされていた大砲から何かが発射されました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>プレゼントかな?乙な怪人じゃん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>きれいな花火でしょ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>それはヒュルルルルという、飛翔音を上げながら上昇し、ポンッと少し拍子抜けする音を出してはじけます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「さて、綺麗な花が咲くかどうかは君たち次第だよ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>花を育てきったことないから不安だなあ……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>たーまやー</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>そう言って上空を指さします。つられて上空を見上げるとそこには</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>花火となったマッドファイヤーが!</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>もうクリアですかぁ!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@市民</div>
+                <div class='col-sm-10 serif'>「ぎゃあああああ!たすけてーーーー」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@市民</div>
+                <div class='col-sm-10 serif'>複数の市民が空から落下してくる光景でした</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>これが……輝ける命の奔流</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>花火関係ない……南斗人間大砲は作者が怒ったからNG</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>「世にも珍しい、人間落下花火だ、楽しんでくれたまえ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>花火とは?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>汚え花火も世の中ににはあるし。さて本来は運動で市民を助けるんだが、ドローンなら操縦もありなのかな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>操縦低いんだよなあ、説得より低いってどういうこと</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>というか一応確認しますが市民を助けるよね?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>当たり前の事聞かないでよ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>じゃあ本来の運動でもいいよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>運動はないです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ないです。肉体は35です</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>ならもうグリッドドーピングしかないね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>操縦より高いじゃん、肉体お願い</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>よぉし、やったれやったれ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>じゃあ……支援してくれるかな?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>いいとも!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>aneko@アデルのクレジットが4減少(クレジット:16->12)</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>子供の小遣いががが</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ではパワーのミリオンパワーを使って判定に+10%</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ライフ2点</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>集中もつかって+10%</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>サニティ4点</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>これはすごいパワーを感じる</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:65%) → 1D100[5,1]=51 → 51 → 成功</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>さす光</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>では見事空中で市民を全員助けれたよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>米俵みたいにかついでふわっと着地してしまう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いいじゃなぁい</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>イラストからは想像できないな、まあ見事市民を助けた二人ですが、ヴィランはそのすきに消えていますね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>「流石、光回線さん!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>このヴィランやることが小物くさい</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>まあ大物じゃあないし。じゃあ次はバイク組いきましょう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>準備よろし!</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>バヒューン(飛んでく音)</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>分かれたバイクたちは分散して町のあちこちのビルに向かっているようです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>マイティ!分身だ!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>できるのか!</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>一度高く飛んでからスコープ的なアイでそろじょれどこに行くか見ます。どんどん離れてく感じですか?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>まあ、町中に散っていく感じ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>人手がたりないよぉ、市民くんたすけてえ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>とりあえず手近なバイクを止めることは出来そうです。その場合は白兵か射撃で判定してね</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>誘導弾を各バイクに打てません?背部のバックパックからどどどどみたいな感じで</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>誘導弾か、じゃあ科学で判定してみて</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>集中するじぇ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>支援はできませえん!がんばれ!</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:67%) → 1D100[2,0]=20 → 20 → 成功</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>全員くたばれぇぇ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>おお、では近くにいたバイクは全て誘導弾で撃破されます。地面に倒れて呻いていますね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>「ぐはあああ、」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>これ必中攻撃ってすごいな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>やるやない</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>割と多いのよねこのゲーム必中</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>怖いなそれ、敵にもってことでしょ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>まあその辺はバランス調整してますから</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>「おーい、いきてますかー」ぺちぺちと倒れた隊員のほほをたたきます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>「くそ、ふざけたヒーロー気取りどもめ、地獄へ落ちろ!」覆面の男はあなた達に向かって毒づきます</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ブシュー(ホバリングしながら着地)</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>口割りそうだな、なんか教えてもらえそう?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>この男は下っ端なので、どこどこのビルに爆弾を仕掛けてこいという命令しか受け取っていません。なので敵の狙いを正確に知るには、作戦で判定してもらいます</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>47あるが</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>作戦……24、マイティ頼んだ!例のごとく支援はできませぇん!</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>ただこれ以上さにてぃつかうのきびいじぇ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>金が……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>グリッドも使えるぜ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>とりあえず振ってから、グリッドかな?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>そうね、グリッドも使えそうなら。反対側が成功してるから、こっちはミスってもいいんじゃないか。というわけで、リソース不安なら素振りでいいよ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : 行為判定(成功率:47%) → 1D100[3,5]=35 → 35 → 成功</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>神かな?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>やるじゃなぁい!</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>やりますねえ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>賽が良い日</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「よし花音!この作戦でいこう!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@テロリスト</div>
+                <div class='col-sm-10 serif'>ではマイティは仕掛けられた爆弾の位置や町中に散らばった敵、そして敵の思考を読み。見事敵の目的を暴きます</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>「この任務の成功確率は98パーセントだ」確率言えば頭よさそうとかおもってる</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>「おお〜!」と感心してます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>kaeru@マッドファイヤーワークス</div>
+                <div class='col-sm-10 serif'>ヴィランの目的は町のビルの土台を順番に爆破し、ビルでドミノ倒しを行い、町を壊滅させることでした。ではマイティは見事敵の作戦をつぶす作戦を行いましたね。本来は最終決戦で敵がこれを使ってヒーローに精神ダメージを与える予定だった。切り札を一つ潰されてしまった</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお、じゃあ成功しといてよかったじゃない</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>上空から誘導弾で撃破とかマジロマン。もうこのセッションに悔いないわ</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン4</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>この後はいよいよ最終決戦ですが、その前に、リトライが1残ってるので休息ができます。やりますか?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>しよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>社員旅行の時間だーーーー</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あ、そうかリソースの回復できるんだっけか。残しといても意味がないって認識でいいのかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあチャレンジでしか使わないしな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@花音</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : (1D6) → 4</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : (1D6+1D6+1D6) → 3[3]+3[3]+1[1] → 7</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : (1D6) → 4</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : (1D6) → 1</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : (1D6) → 6</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : (1D6+1D6+1D6) → 3[3]+3[3]+3[3] → 9</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@マイティナイヴスタスク</div>
+                <div class='col-sm-10 serif'>クレがMAXになったしよしとするか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>全然サイコロふってないけどまんべんなく減ってた</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>友情パワー消費の証さ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>よっし、休憩おわって決戦だー!</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

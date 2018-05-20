@@ -1,0 +1,512 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/dlhr-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラクターメイキング</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>はろ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>hihi</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>やほう</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>あ、どどんとふってこんなかんぢなんですね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ドーモ初めましてユートさん、よろしくお願いします</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>よろしく</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>よろ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>evi卓へようこそ～</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>よろしくです</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>とりあえずメモに張ってあるURLからプレイヤー用セットを見てくれれば、ほぼゲームのルールはわかるはず。判定はクトゥルフと同じ感じですので、問題ないかと</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお、D100なんだね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>りょ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>同じところに完成済みのPCデータがあるので、適当に好きなものを選んでいただければと思います。ちなみに、今回はヒーローをやってもらいますが、色々と種類があるので簡単に説明します</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">ヒーローの特徴</p>
+                        <p class="header">サイオン</p>
+                        いわゆるミュータント、超人種、進化した人類系。例、Xメンとかヒロアカ系<br>
+                        <p class="header">エンハンスド</p>
+                        改造人間や事故によって後天的に超人になった系。例、仮面ライダー、スパイダーマン<br>
+                        <p class="header">ミスティック</p>
+                        超能力者や魔法使い等の不思議パワー系。例、魔法少女、ヒーローズ<br>
+                        <p class="header">テクノマンサー</p>
+                        パワードスーツやロストテクノロジーなアイテム等特殊な道具で戦う系。例、アイアンマン、仮面ライダーG3<br>
+                        <p class="header">ジャスティカ</p>
+                        特殊能力の無い普通の人間、努力と根性でヒーローをしてる系。例バットマン、ウォッチメン、一条刑事<br>
+                        <p class="header">ハービンジャー</p>
+                        そもそも地球の人間じゃない、神様とか宇宙人とか系。例、マイティーソー、ウルトラマン
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>キャラシはサンプルキャラクターって書いてある中から選んでね、基本ルールブックの方</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>プレイヤーセットの中にある奴のサンプル?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>いやダウンロードページにあるやつ、プレイヤーセットの下の方</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>おすすめは?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>個人的にはジャスティカ系のヒーローが好きです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>ドローンマスターってただの操縦士じゃないの?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>ラジコン戦士は子供たちのあこがれやぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>鉄人28号みたいなもんやろ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>というか本当にドローン使うのか、自分でもなれそう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ドローンでも銃とかついてる系のやつだよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>他の人の意見を聞きたいけど、ドローンマスターになりたい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>光線使いにしよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ジャスティカいいなぁ、こういう設定好きなんだよね。ヒーローズのオタクもやりたいんだよなあ、なやましい。ん、ミスティックでいこう</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>ではテクノマンサーで</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>サイオン、ミスティック、テクノマンサー、テクノマンサーって感じ?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>かな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>そうですね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>光る人はエヴィ君がやるし、鬼の腕にしようかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ピッピカー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>こっちはさっき言ってたドローンマスター使います</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあ選んだら、キャラクター名やイラスト、正義の味方としてのスタンスとか考えといてください</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>スタンスってなにー?パパー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>なんかそのキャラの信念とかヒーローやってる理由とか、要はキャラクターです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>黒歴史を積み上げていこう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>積み歴史</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>キャラクターの設定は脳内妄想フォルダを開ければいくらでも</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>舞台はどこ?現代日本?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>日本のどっかの街です</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>日本か……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>一応迷ったらヒーローネームチャートとかあるよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ああ、いいね使おう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>おいどんもつかおう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>これ、チャットに表示する名前はヒーロー名と本名どっちがいいの?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>うーむ、ヒーロー名かな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : ヒーローネームチャート: 1D10[4] → ベースB+ベースC → ( ベースB(1D10[8]) → [攻撃] → 1D10[3] → 「ブロウ」 + ベースC(1D10[4]) → 「ライダー」 ) → 「ブロウライダー」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>絶妙にださい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : ヒーローネームチャート: 1D10[4] → ベースB+ベースC → ( ベースB(1D10[7]) → [光] → 1D10[7] → 「トーチ」 + ベースC(1D10[3]) → 「マスク/フード」 ) → 「トーチマスク/フード」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : ヒーローネームチャート: 1D10[6] → ベースA+ベースB×2回 → ( ベースA(1D10[7]) → [強さ] → 1D10[5] → 「マイティ」 + ベースB(1D10[2]) → [武器] → 1D10[1] → 「ナイヴス」 + ベースB(1D10[2]) → [武器] → 1D10[6] → 「タスク」 ) → 「マイティナイヴスタスク」</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>なんかすごいのでたwww</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>マイティは強キャラの証</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>マイティは主人公の証</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>DeadlineHeroes : ヒーローネームチャート: 1D10[10] → 任意</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>任意</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>振らせるやな!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>ダイスはお前を見放した!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ふざけてる?考えよう……まあアデルでいいや。そういえば言い忘れていましたが、自分は女子高生です</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>これヒーローって年齢設定とかあるの、世界観的に</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>なにもわからないあしたもみない</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ないよ、ヒーローの心があれば誰でもヒーローさ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>カエルさん言葉に涙腺が……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>そろそろ大丈夫かな、始めても</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いーよ!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>よい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>世界観の説明</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>では最初に世界観の説明を</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        デッドラインヒーローズとは人々の中から常人とは違う力をもつ人類が増え始める。<br>
+                        力を手にすればそれを悪事に使う者たちも現れる、それがヴィランだ。<br>
+                        そして闇があれば光があるようにヴィランと戦う者たちが現れる、それがあなた達ヒーローだ。<br>
+                        その後なんやかんやあって、世界中のヒーロー達がほぼ死にました。<br>
+                        現状ヴィランの数に対してヒーローが足りず世界はほぼ終わりです。<br>
+                        故にこのゲームはデッドラインヒーローズと言います。<br>
+                        この絶望的な状況も真のヒーローなら救えるはずなので頑張ってください。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>こんな感じのゲームです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>初手絶望</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>そりゃ光回線使いにもなるわ</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>デッドラインてそーゆーことかwww</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ほんまやで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>割と週間で世界が滅びかける世界観です</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>世界が滅んだら何しようかなー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>北斗の拳ごっこする</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>テーレッテー</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>世紀末覇王でんせつ、ゆあーしょっく</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>アイムショック</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>GM的には世界が滅んだら何してほしいですか?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>滅ぼさないようにしてほしいですが、滅んだらネクロニカでもしましょう</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">ヒーローのステータスについて</p>
+                        基本的な判定は技能の数値を使って1d100します。<br>
+                        あまり高くないと思うんで、失敗したくないときは集中や支援、グリッドなどをうまく使ってください。<br>
+                        HP的なものはライフが該当しますが、0になっても死にはしません。<br>
+                        ただしライフがマイナスになるとデスチャートを振ってもらい、出目によっては死にます。<br>
+                        なので運がよければHPマイナスなのに動き続けるゾンビヒーローになれます。<br>
+                        ちなみにサニティやクレジットがマイナスになってもチャートを振ります。<br>
+                        その場合出目によって廃人になったり、ヒーロー失格になったりします。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あら死なないの</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>なんだって……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>なら大丈夫だな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>死んだり死ななかったりしろ!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>スタントマン急募!!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>サニティはともかくクレジットでもか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>クレジットはヒーローとしての信用を表すそうです、なので信用がマイナスになるとヒーローではいられなくなります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>世知辛い</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>あの人は今</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>NPCになったりすることもあるのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>あるね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>なにか質問などはあるかな?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>まだ何が分からないか分からない状況、問題ないね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>そうだね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあ習うより慣れろデスよ、ゲームの目的自体は単純だし。ヴィランが現れるので倒す!それだけです。もちろんヒーローらしく行動してくださいね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>約束しよう!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>簡単だね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>囲んで棒でたたく</div>
+            </div>
+            <div class='row yuto'>
+                <div class='col-sm-2 name'>yuto@PL</div>
+                <div class='col-sm-10 serif'>把握</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ちなみにマップの左下にあるグリットは共用の資産です、自由に使ってください、初期で3点あります</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>レッドブルに見える</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ヒーローのエネルギーを可視化したものです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ヒーローエネルギーは自販機で売っていた……?</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>それは面白い設定だな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>高いわりにすぐ効果を実感できなくなる液体</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>ちゃんと注射で摂取してる?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@光回線使い</div>
+                <div class='col-sm-10 serif'>適切な角度で自販機を殴るとスロットが必ず当たりになって出てくるんだよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@アデル</div>
+                <div class='col-sm-10 serif'>え、今度自販機で試してみよ</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
