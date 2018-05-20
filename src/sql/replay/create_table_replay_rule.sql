@@ -27,5 +27,6 @@ INSERT INTO replay_rule (id, unique_id, name, name_short, name_en, name_en_short
     (13, 'sww2', 'ソードワールド2.0', 'SW', 'SWORD WORLD 2.0', 'sw2.0', 'https://ssl.fujimi-trpg-online.jp/contents/sw', '', FALSE),
     (14, 'shnb', 'シノビガミ', 'ビガミ', 'SHINOBIGAMI', 'bigami', 'http://www.bouken.jp/pd/sg/', '', FALSE),
     (15, 'akgn', 'エースキラージーン', 'AKG', 'ACE KILLER GENE', 'akg', 'http://www.fear.co.jp/akg/index.htm', '', FALSE),
-    (16, 'nvnv', 'のびのびTRPG', 'のびのび', 'NOVI NOVI TRPG', 'nvnv', 'http://frontierpub.jp/books/novi-trpg/', '', FALSE)
+    (16, 'nvnv', 'のびのびTRPG', 'のびのび', 'NOVI NOVI TRPG', 'nvnv', 'http://frontierpub.jp/books/novi-trpg/', '', FALSE),
+    (17, 'dlhr', 'デッドラインヒーローズ', 'デッドラ', 'DEAD LINE HEROES', 'dlh', 'https://fujimi-trpg-online.jp/game/dlh.html', '', FALSE)
 ;

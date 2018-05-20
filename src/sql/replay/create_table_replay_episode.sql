@@ -44,6 +44,16 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
 
     (24, 2, 5, '第5話', '絶対！あたいが！一番花嫁！', FALSE),
 
-    (25, 4, 4, '第3話', '非常なる現実', FALSE)
+    (25, 4, 4, '第3話', '非常なる現実', FALSE),
+
+    (26, 2, 6, '最終話', 'ゼロを超える絆', FALSE),
+    (27, 2, 7, '', 'おまけ', FALSE),
+
+    (28, 10, 2, '第2話', '異世界探偵魔術師クリスティーナの事件簿', FALSE),
+    (29, 10, 3, '第3話', 'Alice''s Adventures in Wonderland', FALSE),
+
+    (30, 11, 1, '', 'XXXXXXXXXX', FALSE),
+
+    (31, 4, 5, '最終話', '世界の終幕', FALSE)
 
 ;

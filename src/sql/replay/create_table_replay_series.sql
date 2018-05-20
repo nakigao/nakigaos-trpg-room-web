@@ -17,5 +17,6 @@ INSERT INTO replay_series (id, rule_unique_id, is_campaign, sequence_number, nam
     (7, 'akgn', FALSE, 1, '単発', FALSE),
     (8, 'nvnv', FALSE, 1, '単発', FALSE),
     (9, 'sww2', FALSE, 1, '飯！飯！飯！', FALSE),
-    (10, 'cloc', TRUE, 1, '魔女の図書館', FALSE)
+    (10, 'cloc', TRUE, 1, '魔女の図書館', FALSE),
+    (11, 'dlhr', FALSE, 1, '単発', FALSE)
 ;
