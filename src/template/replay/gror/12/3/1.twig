@@ -1,0 +1,120 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>プリプレイ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>レベルアップ処理</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ちょうどお時間。ちょっと準備してる間に先にレベルアップ処理お願いします。配布経験点は18点</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>18なら今回は保留にしておこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それもまたよし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>レベルアップは10点で近接戦闘をとったよ。これで隣の人にクロスボウ撃てる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ういうい、さっそく修正してきたな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ボウを持って戦おう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>打撃系弓使いの鑑だなぁ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>銃剣でいくか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>こっちは精密攻撃を取りました。これで手術(物理)が捗ります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>今まで魔法だったのかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ特性能力は活用してたね</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>バディ決定</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>今回、バディどうしやす?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>自分のバディになったら回避+20のデバフをあげれる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>デバフってどういうことなの^q^</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>こっちは回復量があがるな。ソロだと戦闘力が上がるけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>武器で殴る人にしか効果がないんですよねえ。エンハンスがランク+1になるから、攻撃力と防御力が+1する</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ地味だな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>結構いい気もする</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ前回バディだしソロでもいいぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>さあグラント選ぶんだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>じゃソロで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>皆ソロか……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>グラントのソロってなんだっけ能力</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あー、それはそれでありかも? オールソロ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>このパーティに協調性はないのだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>バディモノっても、バディじゃなきゃあ、が作れないとダメなんだよね。今回は……あるにはあるけど、最後の方だけかも。オールソロでええかな?　GM的にはどっつぃでもいいぞう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>時にはオールソロでもいいかも</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>初めてだなオールソロ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>今後もずっとそうなる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>愛などいらぬ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけ、じゃあオールソロでいきます!</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>グラントのキーパーソンの設定について</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>で、最後にグラントに質問で。娘の設定なんだけど、髪の毛短いのと、長いの、どっちがいい?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>みじかいの</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>断髪シーンがなくなった……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そんなシーンない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うぃ、むっしゅ。では、スタートしやす</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>トレーラー</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　城内での襲撃者を撃退し、試験交流都市『グリーンゴールド』に向けて出発した白の旅団。道中、黒派の追撃はなく、旅は順調そのものだった。<br>
+                        <br>
+                        　白の旅団の主戦力である異世界からの旅人が三人。そのうちの一人、ベテランオーダーとして戦場のサポートを行うグラント・後藤。彼は、馬車に揺られながら不思議な夢を見る。<br>
+                        <br>
+                        　どこか遠い場所、どこか懐かしい雰囲気のある少女が、グラントに助けを求めるようにして手を伸ばしている。<br>
+                        　グラントは、その手を取ろうとして右手を伸ばすのだが――。<br>
+                        <br>
+                        　夢は、そこで唐突に終わる。どこからともなく聞こえた悲鳴に、現実に引き戻されてしまったからだ。<br>
+                        　荷台の上から身を乗り出して見てみると、巨大な生物と、それに襲われる少女の姿があった。<br>
+                        <br>
+                        　コウモリのような二つの翼、大型トラックよりもさらに大きな体躯、ワニのような巨大な咢と鱗――『ドラゴン』という単語が脳裏をよぎった。<br>
+                        <br>
+                        <br>
+                        ガーデンオーダーTRPG<br>
+                        シリーズ「GOとぅあなざーわーるど！」<br>
+                        第二話「つらぬく矢」<br>
+                        <br>
+                        ――――大切なものは、なんですか<br>
+                        <br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>予告通り、グラントのピックアップ回だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>大切なもの……金かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もう少しヒーローっぽいものでお願いしますっ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>富と名誉</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>安定した職業</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もう少し少年誌向けのでお願いしますぅ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ワンピース</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>近くなってきた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ命ですかねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>トレーラーは共有メモに貼ってある通りです。読んだら教えてください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>シャンタク鳥さん!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やっとドラゴンが出たかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ファンタジー味を出したかったんだよね、やっとドラゴンがでるよー!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ドラゴニックハンター!!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、というわけで、少女がドラゴンに襲われているシーンから開始します!</div></div>
+        </section>
+    </div>
+{% endblock %}

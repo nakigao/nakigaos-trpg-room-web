@@ -1,0 +1,364 @@
+{% extends 'layout-replay-no-replay-user.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>コンセプト</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    ガーデンオーダー　＋　ハイファンタジー。<br>
+                    「んー、異世界転移！」<br>
+                    非無双、非ハーレム、ハイファンタジー（世界観は <a href="http://paizo.com/pathfinderRPG/prd/">Pathfinder Roleplaying Game</a> ベース）になる予定。怒られたらやめます。<br>
+                    <s>それなんて <a href="https://www.chaosium.com/runequest/">RuneQuest Roleplaying</a> ？</s><br>
+                    ネタかぶり上等。
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>使用ルールブック</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-sm-3">ベース</th>
+                            <td>
+                                <a href="http://www.fear.co.jp/gorder/">バディアクションTRPG　ガーデンオーダー</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>サプリメント</th>
+                            <td>
+                                <span class="ctag off">OK</span>&nbsp;<span class="ctag on">NG</span>&nbsp;ガーデンオーダー 上級ルールブック<br>
+                                <span class="ctag off">OK</span>&nbsp;<span class="ctag on">NG</span>&nbsp;ガーデンオーダー アルスノトリア<br>
+                                <span class="ctag off">OK</span>&nbsp;<span class="ctag on">NG</span>&nbsp;その他<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-3">ハウスルール</th>
+                            <td>
+                                <a href="http://nakigao.webcrow.jp/replay/gror/12/1/2/">ハウスルール</a>（※次のページ）
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-3">参考資料</th>
+                            <td>
+                                <a href="http://paizo.com/pathfinderRPG/prd/">Pathfinder Roleplaying Game</a>（英語）
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャンペーンインフォ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th  class="col-sm-3">ジャンル</th>
+                            <td>
+                                <span class="ctag on">中世</span>
+                                <span class="ctag off">近代</span>
+                                <span class="ctag on">現代</span>
+                                <span class="ctag off">近未来</span>
+                                <span class="ctag off">未来</span><br>
+                                <span class="ctag on">ダンジョン</span>
+                                <span class="ctag on">シティ</span>
+                                <span class="ctag off">ミステリー</span>
+                                <span class="ctag off">ホラー</span><br>
+                                <span class="ctag on">HIGH-F</span>
+                                <span class="ctag on">LOW-F</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>要素</th>
+                            <td>
+                                <span class="ctag on">協力</span>
+                                <span class="ctag off">対決</span><br>
+                                <span class="ctag off">PVP</span>
+                                <span class="ctag on">非PVP</span><br>
+                                <span class="ctag on">戦闘</span>
+                                <span class="ctag on">探索</span><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>難易度</th>
+                            <td>
+                                <span class="ctag off">簡単</span>
+                                <span class="ctag on">普通</span>
+                                <span class="ctag off">難しい</span>
+                                <span class="ctag off">オワタ式</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PL人数</th>
+                            <td>
+                                <span class="ctag off">1</span>
+                                <span class="ctag off">2</span>
+                                <span class="ctag on">3</span>
+                                <span class="ctag on">4</span>
+                                <span class="ctag off">5</span>
+                                <span class="ctag off">制限なし</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>プレイレベル</th>
+                            <td>
+                                <span class="ctag off">入門者</span>
+                                <span class="ctag off">初心者</span>
+                                <span class="ctag on">中級者</span>
+                                <span class="ctag off">上級者</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Lvキャップ（初期値）</th>
+                            <td>
+                                <span class="ctag on">5</span>
+                                <span class="ctag off">6</span>
+                                <span class="ctag off">7</span>
+                                <span class="ctag off">8</span>
+                                <span class="ctag off">9</span>
+                                <span class="ctag off">10</span>
+                                <span class="ctag off">制限なし</span>
+                            </td>
+                        </tr>
+                        {#<tr>#}
+                            {#<th>予定セッション時間</th>#}
+                            {#<td>#}
+                                {#<span class="ctag off">1</span>#}
+                                {#<span class="ctag off">3</span>#}
+                                {#<span class="ctag off">6</span>#}
+                                {#<span class="ctag on">9</span>#}
+                                {#<span class="ctag on">12</span>#}
+                                {#<span class="ctag on">15</span>#}
+                                {#<span class="ctag off">18</span>#}
+                                {#<span class="ctag off">21</span>#}
+                                {#<span class="ctag off">24</span>#}
+                                {#<span class="ctag off">27</span>#}
+                                {#<span class="ctag off">30</span>#}
+                                {#<span class="ctag off">制限なし</span>#}
+                            {#</td>#}
+                        {#</tr>#}
+                        <tr>
+                            <th>備考</th>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>推奨・非推奨</h2>
+                    <p>※非推奨、もちろん使ってもいいけどネタプレイしたい人向け（例：アンチマテリアルライフルで『殴る』）</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table  class="table">
+                        <tr>
+                            <th class="col-sm-3">クラス</th>
+                            <td>
+                                <span class="ctag on">発火能力</span>
+                                <span class="ctag on">精神投影</span>
+                                <span class="ctag on">風候操作</span>
+                                <span class="ctag on">電磁操作</span>
+                                <span class="ctag on">光波干渉</span>
+                                <span class="ctag on">重力操作</span>
+                                <span class="ctag on">感覚強化</span>
+                                <span class="ctag on">氷結能力</span>
+                                <span class="ctag on">物質転移</span>
+                                <span class="ctag on">身体強化</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="col-sm-3">技能</th>
+                            <td>
+                                <span class="ctag on">特性能力</span>
+                                <span class="ctag on">当て身</span>
+                                <span class="ctag on">近接武器</span>
+                                <span class="ctag off">銃器</span>
+                                <span class="ctag on">飛び道具</span>
+                                <span class="ctag on">回避</span>
+                                <span class="ctag on">威圧</span>
+                                <span class="ctag off">運転</span>
+                                <span class="ctag on">運動</span>
+                                <span class="ctag on">応急手当</span>
+                                <span class="ctag on">隠密</span>
+                                <span class="ctag on">解錠</span>
+                                <span class="ctag on">観察</span>
+                                <span class="ctag off">機械修理</span>
+                                <span class="ctag on">交渉</span>
+                                <span class="ctag off">COMPUTER</span>
+                                <span class="ctag on">捜索</span>
+                                <span class="ctag on">調査</span>
+                                <span class="ctag on">追跡/逃走</span>
+                                <span class="ctag on">抵抗力</span>
+                                <span class="ctag off">SP機械操作</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>特技</th>
+                            <td>
+                                <span class="ctag on">格闘技：～</span>
+                                <span class="ctag on">精密攻撃</span>
+                                <span class="ctag on">部位狙い</span>
+                                <span class="ctag on">近接戦闘</span>
+                                <span class="ctag on">狙撃</span>
+                                <span class="ctag off">重火器</span>
+                                <span class="ctag off">爆発物</span>
+                                <span class="ctag on">軽業</span>
+                                <span class="ctag on">芸術：～</span>
+                                <span class="ctag on">情報：～</span>
+                                <span class="ctag on">水泳</span>
+                                <span class="ctag on">推測</span>
+                                <span class="ctag on">専攻：～</span>
+                                <span class="ctag off">操縦：～</span>
+                                <span class="ctag on">知識：～</span>
+                                <span class="ctag on">調達</span>
+                                <span class="ctag on">治療</span>
+                                <span class="ctag off">ハッキング</span>
+                                <span class="ctag off">飛行</span>
+                                <span class="ctag off">Mechatronics</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>武器（近距離）</th>
+                            <td>
+                                <span class="ctag on">素手<br>&nbsp;</span>
+                                <span class="ctag on">素手<br>（打撃）</span>
+                                <span class="ctag on">素手<br>（組手）</span>
+                                <span class="ctag on">ナックル<br>ダスター</span>
+                                <span class="ctag on">特殊警棒<br>&nbsp;</span>
+                                <span class="ctag off">スタンガン<br>&nbsp;</span>
+                                <span class="ctag on">ナイフ<br>&nbsp;</span>
+                                <span class="ctag on">コンバット<br>ナイフ</span>
+                                <span class="ctag on">カラン<br>ビット</span>
+                                <span class="ctag on">S<br>ナイフ</span>
+                                <span class="ctag on">スレッジ<br>ハンマー</span>
+                                <span class="ctag on">木刀<br>&nbsp;</span>
+                                <span class="ctag on">ソード<br>&nbsp;</span>
+                                <span class="ctag on">刀<br>&nbsp;</span>
+                                <span class="ctag on">大太刀<br>&nbsp;</span>
+                                <span class="ctag on">グレート<br>ソード</span>
+                                <span class="ctag off">レーザー<br>ブレード</span>
+                                <span class="ctag on">手斧<br>&nbsp;</span>
+                                <span class="ctag on">斧<br>&nbsp;</span>
+                                <span class="ctag on">薙刀<br>&nbsp;</span>
+                                <span class="ctag off">チェーン<br>ソー</span>
+                                <span class="ctag off">高周波<br>ブレード</span>
+                                <span class="ctag on">ライオット<br>シールド</span>
+                                <span class="ctag on">B<br>シールド</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>武器（遠距離）</th>
+                            <td>
+                                <span class="ctag off">拳銃<br>（9mm）</span>
+                                <span class="ctag off">拳銃<br>（.38口径）</span>
+                                <span class="ctag off">拳銃<br>（.45口径）</span>
+                                <span class="ctag off">拳銃<br>（.50口径）</span>
+                                <span class="ctag off">サブ<br>マシンガン</span>
+                                <span class="ctag off">PDW<br>&nbsp;</span>
+                                <span class="ctag off">アサルト<br>ライフル</span>
+                                <span class="ctag off">ショット<br>ガン</span>
+                                <span class="ctag off">レール<br>ガン</span>
+                                <span class="ctag off">レーザー<br>ライフル</span>
+                                <span class="ctag off">スナイパー<br>ライフル</span>
+                                <span class="ctag off">AM<br>ライフル</span>
+                                <span class="ctag off">グレネード<br>ランチャー</span>
+                                <span class="ctag on">アーチェリ<br>（遠距離）</span>
+                                <span class="ctag on">和弓<br>（遠距離）</span>
+                                <span class="ctag on">クロスボウ<br>（遠距離）</span>
+                                <span class="ctag off">汎用機関銃<br>&nbsp;</span>
+                                <span class="ctag off">ロケット<br>ランチャー</span>
+                                <span class="ctag off">手りゅう弾<br>&nbsp;</span>
+                                <span class="ctag off">C4<br>&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>防具</th>
+                            <td>
+                                <span class="ctag on">カジュアル<br>ウェア</span>
+                                <span class="ctag on">フォーマル<br>ウェア</span>
+                                <span class="ctag on">制服<br>&nbsp;</span>
+                                <span class="ctag on">バトル<br>ドレス</span>
+                                <span class="ctag on">防弾<br>ベスト</span>
+                                <span class="ctag on">防刃<br>ベスト</span>
+                                <span class="ctag on">Resistive<br>ジャケット</span>
+                                <span class="ctag on">耐熱<br>ジャケット</span>
+                                <span class="ctag on">耐寒<br>ジャケット</span>
+                                <span class="ctag on">耐電<br>ジャケット</span>
+                                <span class="ctag on">オーダー<br>ジャケット</span>
+                                <span class="ctag off">Sneaking<br>スーツ</span>
+                                <span class="ctag off">Tactical<br>スーツ</span>
+                                <span class="ctag off">パワード<br>スーツ</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>携帯品</th>
+                            <td>
+                                <span class="ctag on">疲労回復剤<br>&nbsp;</span>
+                                <span class="ctag on">軽傷治療<br>スプレー</span>
+                                <span class="ctag on">重傷治療<br>キット</span>
+                                <span class="ctag off">通信端末<br>&nbsp;</span>
+                                <span class="ctag off">携行端末<br>&nbsp;</span>
+                                <span class="ctag off">ペンライト<br>&nbsp;</span>
+                                <span class="ctag off">暗視装置<br>&nbsp;</span>
+                                <span class="ctag on">工具セット<br>&nbsp;</span>
+                                <span class="ctag off">サポート<br>Software</span>
+                                <span class="ctag on">専門書<br>&nbsp;</span>
+                                <span class="ctag off">マルチ<br>センサー</span>
+                                <span class="ctag on">ピッキング<br>キット</span>
+                                <span class="ctag on">バッジ<br>ケース</span>
+                                <span class="ctag on">ファッション</span>
+                                <span class="ctag off">デジタル<br>カメラ</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>所持品</th>
+                            <td>
+                                <span class="ctag on">自転車<br>&nbsp;</span>
+                                <span class="ctag off">オートバイ<br>&nbsp;</span>
+                                <span class="ctag off">乗用車<br>&nbsp;</span>
+                                <span class="ctag off">SUV<br>&nbsp;</span>
+                                <span class="ctag off">カー<br>Navigation</span>
+                                <span class="ctag off">車両搭載用<br>AI</span>
+                                <span class="ctag on">セーフ<br>ハウス</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>レッド = 火薬、石油、電気、電子機器（異世界の法則と物理法則との相性が悪い。持ち込めるが異世界では基本的には動かない）</p>
+                    <p>イエロー = 超技術（なぁにこれぇ）</p>
+                    <p>グリーン = 化学繊維・プラスティック（持ち込める、服が突然溶けたりしない）</p>
+                    {#<p>メモ：Flexboxで見た目整えたいところ</p>#}
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
