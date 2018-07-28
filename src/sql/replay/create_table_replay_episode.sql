@@ -54,6 +54,16 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
 
     (30, 11, 1, '', 'XXXXXXXXXX', FALSE),
 
-    (31, 4, 5, '最終話', '世界の終幕', FALSE)
+    (31, 4, 5, '最終話', '世界の終幕', FALSE),
+
+    (32, 12, 1, '', 'プリプレイ', FALSE),
+    (33, 12, 2, '第一話', '白のエルフ姫', FALSE),
+    (34, 12, 3, '第二話', 'つらぬく矢', FALSE),
+
+    (35, 10, 4, '第4話', '河童', FALSE),
+
+    (36, 8, 3, '', '体験卓3回目', FALSE),
+
+    (37, 10, 5, '第5話', 'オールドグリモワール', FALSE)
 
 ;

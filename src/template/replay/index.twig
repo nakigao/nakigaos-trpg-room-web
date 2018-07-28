@@ -33,11 +33,11 @@
 {% block left %}
     <ul id="section-nav" class="nav nav-sidebar">
         <li class="header">新リプレイ</li>
-        <li><a href="#cloc">クトゥルフ神話TRPG(8)</a></li>
-        <li><a href="#gror">ガーデンオーダー(7)</a></li>
+        <li><a href="#cloc">クトゥルフ神話TRPG(10)</a></li>
+        <li><a href="#gror">ガーデンオーダー(9)</a></li>
         <li><a href="#lsry">ロストロイヤル(7)</a></li>
         <li><a href="#shnb">シノビガミ(3)</a></li>
-        <li><a href="#nvnv">のびのびTRPG(2)</a></li>
+        <li><a href="#nvnv">のびのびTRPG(3)</a></li>
         <li><a href="#akgn">AKG(1)</a></li>
         <li><a href="#sww2">ソードワールド2.0(1)</a></li>
         <li><a href="#dlhr">デッドラインヒーローズ(1)</a></li>
@@ -190,6 +190,34 @@
                             <td>kaeru</td>
                             <td class="col-sm-2">2018年01月21日</td>
                         </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>「河童」</b><br>
+                                {% set list = [['cloc/10/4/1', 'プリプレイ', '未編集'], ['cloc/10/4/2', '導入', '未編集'], ['cloc/10/4/3', 'Aパート', '未編集'], ['cloc/10/4/4', 'Bパート', '未編集'], ['cloc/10/4/5', '結末', '未編集']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, naki</td>
+                            <td>kaeru</td>
+                            <td class="col-sm-2">2018年03月18日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>「オールドグリモワール」</b><br>
+                                {% set list = [['cloc/10/5/1', 'プリプレイ', '未編集'], ['cloc/10/5/2', '導入', '未編集'], ['cloc/10/5/3', 'Aパート', '未編集'], ['cloc/10/5/4', 'Bパート', '未編集'], ['cloc/10/5/5', '結末', '未編集']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, naki</td>
+                            <td>kaeru</td>
+                            <td class="col-sm-2">2018年07月07日</td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -326,6 +354,57 @@
                             <td></td>
                             <td></td>
                             <td class="col-sm-2"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>シリーズ「GOとぅあなざーわーるど！」</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>第零話「準備」</b><br>
+                                {% set list = [['gror/12/1/1', 'レギュレーション', ''], ['gror/12/1/2', 'ハウスルール', ''], ['gror/12/1/3', 'ハンドアウト', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, aneko</td>
+                            <td>naki</td>
+                            <td class="col-sm-2">2018年05月26日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>第一話「白のエルフ姫」</b><br>
+                                {% set list = [['gror/12/2/1', 'トレーラー', ''], ['gror/12/2/2', 'オープニング', ''], ['gror/12/3/3', 'ミドル', ''], ['gror/12/4/4', 'クライマックス', ''], ['gror/12/5/5', 'エンディング', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, aneko</td>
+                            <td>naki</td>
+                            <td class="col-sm-2">2018年05月26日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>第二話「つらぬく矢」</b><br>
+                                {% set list = [['gror/12/3/1', 'トレーラー', ''], ['gror/12/3/2', 'オープニング', ''], ['gror/12/3/3', 'ミドル', ''], ['gror/12/3/4', 'クライマックス', ''], ['gror/12/3/5', 'エンディング', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>evi, kaeru, aneko</td>
+                            <td>naki</td>
+                            <td class="col-sm-2">2018年06月16日</td>
                         </tr>
                     </table>
                 </div>
@@ -551,6 +630,20 @@
                             <td>evi, kaeru, naki</td>
                             <td>*</td>
                             <td class="col-sm-2">2017年09月03日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>「体験卓3回目」</b><br>
+                                {% set list = [['nvnv/8/3/1', '読み切り', '未編集']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>aneko, bcf, evi, kaeru, naki</td>
+                            <td>*</td>
+                            <td class="col-sm-2">2018年07月22日</td>
                         </tr>
                     </table>
                 </div>
