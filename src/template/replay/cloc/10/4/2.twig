@@ -1,0 +1,157 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>XXXXXX</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ではいつもの用に図書館への呼び出しを食らう探索者一行</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>呼び出しすら省略されたか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>あなた達はいつもの用に魔女の図書館へと招かれる、そしていつもと同じ景色を目にする。魔女の姿はあなた達と出会った時と全く変わらずに席にすわり本を読んでいる、まるで一枚の絵画のように変わらない。唯一魔女がめくる本のページの音のみが過ぎる時間を物語っている。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>まあそろそろ何時もので通じるでしょう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>(いつも同じ服着てますわね……)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>引きこもりだから</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「(今日の本の題名は、なんスかねぇ)」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>気になるなら目星してもいいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>目星でわかるのか!?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>目星でわかるのか!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>CCB<=25 [目星]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D100<=25) → 38 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>わかるよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>CCB<=25 [目星]</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>Cthulhu : (1D100<=25) → 70 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>教えて♡</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>まかせてくれ、目星は得意なんだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>全然ダメ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>CCB<=70</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D100<=70) → 39 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さす故人</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>さすとむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>流石趣味で故人してる人は違うな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>ではトムはタイトルが見えました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>タイトル「芥川龍之介作品集」です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>河童の初版本もってる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>捨てちまえそんなもん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>すげえな初版本って</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>すごいな、見たことないよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>本当かどうか知らないけど</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>では探索者に気が付いた館長が話しかけてきます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「やっと来たわね、さっそくだけどあなた達にお願いしたいことがあるの」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「(あんだけ頭の中ガンガンされて、ふふっ、呼んだだけだよ♡とかやられたら怒るっス)」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「なんでしょう(どうせまた変な依頼でしょ)」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「これを見て頂戴」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>と言って館長は読んでいた本の1ページを開いて見せます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>そのページは芥川龍之介の「河童」という小説の最後のページでした</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お?大当たりか?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>ここで知識を振れば河童のあらすじを教えます、必要なければそのまま進めます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>未来予知しちゃったかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>CCB<=90 [知識]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D100<=90) → 26 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>初版持ってるまりが全部言ってくれるはず</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>メス河童は性欲強いってことしか覚えてない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>パッパ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>ではまあ簡単なあらすじを</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>有名なんだ? 実はよくわからないんだけど、龍之介君</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>とある青年が山の中で河童に出会い、そのまま河童の国に行き過ごす話。河童の国で過ごすうちに河童と仲良くなりつつ、人間とのカルチャーギャップに苦労したりする。その後青年は人間の国に帰るが、今度は人間と馴染めずに奇行が増え、最終的に精神病院に入院させられてしまう。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>浦島太郎の河童版……?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>まさにSAN値を無くした探索者みたいな話だと思いました。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>あとカメレオンみたいに体の色が変化する</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>実際その通りだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ぶっ飛んでるなぁ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>双子の兄貴が宇宙飛行士ので1年宇宙で過ごしたら弟とDNA一致しなくなったニュース見たんですよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>怖いよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>それ本物の兄貴?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>MUが好きそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>それ入れ替わってますわ、ショゴスですわ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>まあ話を進めます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まりちゃん分かったからなんか、カッコイイセリフ言ってよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>分からないに一票</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>どういうことなの</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>まあいいや</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>館長が示したページにはこんな文があります</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'> それからこの本も哲学者のマツグがわざわざ持つて来てくれたものです。ちよつと最初の詩を読んで御覧なさい。いや、あなたは河童の国の言葉を御存知になる筈はありません。では代りに読んで見ませう。これは近頃出版になつたトツクの全集の一冊です。——</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「この文がどうしました」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>これは精神病院にいる主人公が河童の国にいった証拠だと言って、医者に河童の国の書物を読んで聞かせるシーンです</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「私まだこの本持ってないのよね」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なるほど?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「まさか……?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「だから是非とも図書館に加えたいの。つまり探してきた欲しいのよ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>きて</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>今回の依頼はこちらになりますね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「こ、こんなの無理っスよぉ! だって、架空の本、じゃないんっスか!?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>河童の国の本を探してこいと</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「(現実と虚構の区別が出来ない痛い子ですわね)」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>「ここはゲームの世界じゃないんですよ!あるわけないでしょ!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「世間的には知られてないけど……この作品実は現実にあった事件をもとにしてるのよ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「ま、まさかぁ……っす」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「事実よ、私は竜ちゃん……いや芥川龍之介から聞いたことがあるから」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「それは興味深いですね(もし本当にあったら次回の一面は決まったわね)」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>くるりんぱって芸しそうな名前ですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>それなら今でも聞けるね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はぁ!? 名探偵あらわる!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>今はもう死んでるけどな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>いや、芸しそうな人の話</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんかこう、ごにょごにょって魔法唱えてよみがえらせられないの、ヴォォーって鳴く感じで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>魔法使いじゃないから無理でしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そっかぁ、残念だなぁ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>死霊術は専門外なので</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>自称魔法使いの痛々しい子だからね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>MPポーションや魔石をもらっても魔女とは認めないのか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>一度も使われてないし、ただの石とか野菜ジュースかもしれないし!実際、レッドブ……って書いてあるし!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>使ってないですし……なんなら栄養ドリンク飲んでも同じ効果ありそうだし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>anekoとはいい友達になれそうだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>マイフレンド</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「ま、館長さんが言うなら、探しに行くッスけど。どこか心当たりないんすか? 手がかりがないんじゃあ、とてもとても」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>実際マジックアイテムはアリアンロッド参考にしてるからレッドブルでも同じ効果だよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>現代によみがえるアーティファクト</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「安心して、もちろん手がかりはあるわ。竜ちゃんがこの作品を書くために取材にいった村があるの。おそらくそこが河童の国につながる場所だと思うわ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「なんて村ですかね……」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「村の名前はたしか「兵主部(ひょうすべ)村」だったかしら」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ぐぐるか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あれ、それ妖怪の名前じゃなかったけ。鬼太郎で見たことある</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「行く方法は何時もみたいに扉をつなげるから心配いらないわ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>まあ割と有名な名前ですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ぐぐってもでてこなかった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「ほっ、至れりつくせりッス」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>あえてググらない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>というわけで今回は村での探索になりますが、何か準備したいことはありますか?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>無ければ移動です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ハンドガンかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おっけー、移動しちゃえ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>拳銃かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>トムはもってそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>警察官だから持ってるだろうけど</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>弾はそんなに持てないはず</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>エリート警察官なのに?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>全部空砲</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>空砲いれて6発じゃなかったっけ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>奥さんの分もってきてほしいなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>嫁つれていくか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>機動戦艦嫁、発進!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>NPCを事件に巻き込むのか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>なんか人気みたいだし、次回あたり再登場させようかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>近代兵器は時空転移するとぶっ壊れるのがお約束だから、まあGMの好きにしていいんじゃない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>戦力はほしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ごー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>200年以上前からある技術なんだよなぁ……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>ではいつもの用に扉をくぐると</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>リボルバーはローテク</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ハイテク兵器は?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そもそも火薬が存在しないこともあるんやで!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>風呂場か</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>火薬なんて戦国時代からある</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>河童の国にはありそうですか?(震え</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>芥川龍之介によると河童の技術は人間を超えてるらしいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どう越えてるかが問題だ</div></div>
+        </section>
+    </div>
+{% endblock %}
