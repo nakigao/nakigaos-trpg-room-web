@@ -1,0 +1,1076 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/nvnv-common.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>PL達の控室</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、いつの間にか時間になってた。もそもそ始めましょう～。では、bcf歓迎のびのびTRPGはじまりはじまり～</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@PL</div><div class='col-sm-10 serif'>よろしくお願いします</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>たーまやー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@PL</div><div class='col-sm-10 serif'>ぱち</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ルールわからない人どのくらいいます?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@PL</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@PL</div><div class='col-sm-10 serif'>覚えてない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>http://frontierpub.jp/books/novi-trpg-hor/rule.html</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ、このページを読んでもらいませう。読んだらおせーて</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@PL</div><div class='col-sm-10 serif'>読みました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@PL</div><div class='col-sm-10 serif'>俺は思い出したぞ。用語説明が軽くていいね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>基本的にカードに書いてあることをするだけだから簡単</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はいはい、なんとくなくでいいです。ルールはとても簡単なので。基本的にはGM持ち回りの大喜利システムです。お酒片手に適当に楽しみましょ～</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@PL</div><div class='col-sm-10 serif'>進行はなんとなくしかわからないですが、やることはわかりましたー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はい、ではどんどんいきましょう。3回GMやってもらったらクライマックス。今回はそこで終わりになる予定でよろ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラメイク</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>キャラ絵はdefaultの使ってもいいし、自分で見つけてきてもいいよ。あとは素敵な名前もつけてあげよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@PL</div><div class='col-sm-10 serif'>「aneko@女子高校生」をキャラクターとして追加しました。</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@PL</div><div class='col-sm-10 serif'>「bcf@記者」をキャラクターとして追加しました。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>「kaeru@フリーター」をキャラクターとして追加しました。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「evi@看護師」をキャラクターとして追加しました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@男子大学生」をキャラクターとして追加しました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よぉし、これでいくぞー。次に席順を決めると……。D100して、小さい人から順番に決めましょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>DiceBot:(1D100)→22</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@PL</div><div class='col-sm-10 serif'>DiceBot:(1D100)→25</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>DiceBot:(1D100)→15</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>DiceBot:(1D100)→21</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>DiceBot:(1D100)→34</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>今日はひくい日だ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>勝ったと思ったのにぃ。Eviちゃん、好きな席にどうぞ。最初GMは、bcfさんにやってもらおうかな。一番カードひく回数多いので。おつぎはbcfさんの席決め、どこでもいいよ。基本的に右回りに順番が回ってきます</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>次は、aneko、最後にkaeruくんね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>りょうかーい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ここ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほい、では最初PCはアネコになる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>世界征服したんぞ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>イントロ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>イントロひくのは誰でしょうかね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>イントロ引くのは、最初GMのbcfさん</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>イントロ引きます?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うん、ひいてくださー</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[INTRO] VRの筺</p>
+                        新手のバーチャルリアリティ・アトラクションにやってきたPCたち。<br>
+                        美少女や男前の出迎えで、華やかなショーと刺激的なゲームを心行くまで楽しめるが、ちょっと様子がおかしくなってきたぞ。<br>
+                        このアトラクションは……いつ終わるんだ?
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>どっこでみた気が……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たしかに……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>SA○的な</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>アトラクションっていうんだから、なんかPC同士に関係性がほしいね。独りで来るのはさみしかろう(遠い目</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>しかし見事に職種がわかれてるからな……全員既に死んでるとか?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>なんで死んでることにしようとするんだ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ならこのVR世界は天国やな。ゲームクリアは死を表す</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>お前は既にお星さまになってるしな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>じゃあミッ○ーの中の人のバイトだったことにしよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、いいね……しかしVRなのでは</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>VRアルバイター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>NPCの中の人やってるんでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>こっちからしたら皆はお客様だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>そう言うタイプってB級ホラーで最初に糾弾されるタイプだな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>みんなぼくの患者</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>墓守くん男?女?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>男でした</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>兄ちゃんになってくれ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>いいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ、兄ちゃんと一緒に噂のアトラクションにやってきた系男子だ。兄弟でアトラクションってのも悲しいな……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>フリーター生活に嫌気がさして、ここならつかの間の現実を忘れられるんじゃないかと入り浸ってる設定にしよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>VR機器を買う余裕はあるフリーター</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>現実逃避がはやってるのかな?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>大流行だよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>フレーバーはこんなもんでいいかな? bcfさんもなんかあったら適当に付け足してくれていいよ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>了解です</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>一周目</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ、続けてbcfさんはシーンカードをひいてもらいましょう。1枚ひいて、自分の手札にして、チャットに引用して、右側に置いといてください</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]日記</p>
+                        机の上に古ぼけたノートが転がっている。どうやら、ここの住人が書き残した日記らしい。内容は……君たちより先に、君たちと同じようなひどい目に遭ったってことがよーくわかるものだった。後半になると錯乱した文章やら断末魔やらべっとりしたものとかが載っているので、ショックを受けたかどうか判定すること。/[判定]/[技:13]以上で成功する。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ホラーじゃん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ホラー系のVRやる人って素直に尊敬するわ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たしかに……</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ホラー無理</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このカードは判定技13なので、これをanekoのキャラのすたあが、技13以上出せば成功です。このとき、GM以外は持ってるスキルを使うことができます。なお、基本ダイスは2d6です^^</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>キッツ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>取りあえず判定ロールしたらいいかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>他のPCがサポート系の能力持ってないなら、もう素振りするしかない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>こっちのスキルはけっこうリスキーすぎる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>補助はないな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>ぼくはいるだけでみんなに+1をばらまくから、うふふ(にっこり)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ墓守の+1がサポートとして入るかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>じゃあ、+1して振ります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はい、どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>2d6+4+1[技ロール]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>DiceBot:(2D6+4+1)→6[1,5]+4+1→11</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ダメみたいですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、こんな感じでGMの番の人が進めてくれればいいので。仕事取ってしまったごめんさい</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>了解です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあ、この結末をGMが描写!PC勢は適当にRP!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>闇カードを引くんだっけ?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そうね、失敗したら『闇カード』。成功したら『光カード』。引くのはPCの番の人です</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[DARKN]呪われた血</p>
+                        君の半身は闇と同化しており、目が赤く光ったり右手が暴走したりする。怪異に対しては強力な武器になるが、闇に飲まれ切ってはいけない。/[SKILL]/判定に[+4]のボーナスを得る。ただし[2D]した目がゾロ目でなかった場合、判定の成功失敗にかかわらず君は「闇」カードを得る。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>すごいカード出てきたな^q^;</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>すたあがですすたあになる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>明けの明星(ルシフェル)って名乗っていいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんか日記読んで目覚めちゃったんじゃなぁい?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>魔導書かな(VR)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>合流シーンやりたいから、それっぽいシーン描写してみてよあねこ。大喜利だからギャグでもシリアスでもなんでもいいぞう、ネタかぶりもどっかでみたな～でもいいし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「なんだかこの日記を見てきたら闇の世界(ダークネスワールド)の真理に至りそうです!」取りあえずその辺の人に真理について布教したい衝動に駆られます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「兄貴、あっちになんか変な女の人がいる!行ってみよう!」とってちってたー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ま、こんな感じで適当にね。タイプ遅い場合は、今打ってますアピールしてくれればいいので</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>自分は大体打ってます</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「大丈夫ですか、変なオーラ出てますよ!」とすたあに</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「このVR世界は新しい世界の幕開にすぎません」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>彼女は日記を打って変わってしまった</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>(日記って打てるんだ)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「なんだか怪しげな波動を感じマース」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>じゃあこっちがGMですかね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そうだね、右回りに順繰りにどうぞ～。次はGMあねこ、PCかえるです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>どんとこい</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]おののく仲間</p>
+                        立て続けの怪異にさらされ、君の仲間がついに、心身ともに限界を迎えてしまう。(仲間はその場に座り込んで頭を抱え、「もういやあ!」とか叫ぼう)勇気づける一言が必要な時だ!/[ROLEPLAY]/場面PCは限界を迎えた仲間をどうにか元気づけよう。元気が出たら「光」カード、いまいち効き目がなかったら「闇」カードを得る。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>メンタル弱すぎなんだよなぁ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>君に仲間はいないよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>どいつだろう?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「もういやあ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>お前かよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「モウイヤアアアアアアア!ヤアアダアアアア!」とカワイクぶりっ子します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「皆様、おちつくのです」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「すたあ様!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>まさかの複数人パターン</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>トム以外が発狂しかけてるんだよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>そして全員トムをみてSANチェック失敗しました。トム絶対許さねえ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>先手とったから、トムは墓守を勇気づけるということにするか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「あきらめんなよ!!お前ならやれるって!ここから出られるって!怖いと思うから怖いんだ!!出来る出来るやれうやれるネバーギブアップ!!今日からお前は富士さんだ!!!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>頭おかしい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>SAN値ピンチ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>これはパーフェクトコミュニケーション</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「いや墓守さんです」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>(カリスマガードをして隅っこでうづくまる)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「立ち去りなさい、化け物!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「(´△`)」こういう顔で眺めてる</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>化け物扱いカワイソス</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「ウガーーーー!そういう人種差別はヨクアリマセーン!!職場に通報シマスヨー」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>しかし修〇ネタは懐かしいなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>あれももう14年前か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お米食べろならワンチャン元気出てた可能性ある</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>初めて聞いたのは胎児のころだったなあ……(しみじみ)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>こういうときは投票機能で決めていいんじゃない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>賢い、判断はGMに任せる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>そういえばGMだった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>こっちが投票したらおかしくなるからkaeruくん投票お願い</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>投票を開始しました:パーフェクトコミュニケーション?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>賛成。(1/4)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>賛成。(2/4)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>賛成。(3/4)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>反対。(4/4)</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@どどんとふ</div><div class='col-sm-10 serif'>投票結果 賛成3、反対:1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>判定結果をGMと怯えていた人は演出!適度なところでバトンタッチ!トロールに何がつくかなぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「皆様、望みを捨ててはなりません。神は私たちを絶対見捨てたりはしません。皆共に戦いましょう!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>戦乙女めいてきた</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「うおおおおおおおおおお!!!!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>よっしゃ光あれ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]考古学者(NPC)</p>
+                        「そう、この現象、この場所……すべてはこの地古来の伝説と関係があったのじゃ!解決の鍵は伝説の物語、伝説の墓碑、伝説の継承者、などなどが握っておる!探すのじゃ、わずかだが、希望の手掛かりはおぬしたちの行く先にある!」/[BONUS]/技+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>えぇ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>インディジョ〇ンズ枠だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>VR世界でなにいってだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>古の民が残したVRオーパーツだった……?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>古代文明人はVR技術をすでに開発してたんだよなあ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>VRでトロールが出て恐れおののく面々を予言していたというのか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>皆共通の敵(トム)を持つことにより、一心同体に近づきましたね。では次お願いします</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>考古学者を倒さなければ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>闇の世界に落ちた教祖をしんじるな!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>闇教祖を信じるか、トロール教授を信じるか……</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>教祖のほうがまだ親しみやすい件</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おし、ばんばんすすめてこ!次は、GMかえる、PCなきです。はい、じゃあGM係はシーンカードをどうぞ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]バリケード</p>
+                        奴らから生活を守るために築かれたバリケードが、今は君たちの行く手を阻んでいる。どこかに進むためには、あえて防壁を破らないといけないこともある。人生ってそういうものだよね?/[判定]/[力:10]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>出たなバリケード。えにわん、さぽーと?墓守くんだけ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>人類の希望を人類の手で壊す。そんなストーリー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>墓守の加護</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>死にそうな加護だ。ともあれバリケードをどうにかしないと死にますね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>力は得意なんだよなぁ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「兄ちゃんの気持ちが流れ込んでくる!くだけろ、バリケード!うおおおお!」と鉄拳</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>2d6+5+1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>DiceBot:(2D6+5+1)→11[6,5]+5+1→17</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>余裕だっぜ!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>つっよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>こわい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ふっ、通信カラテをやっていたかいがあった……」光カードひきま</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>大学生つよいなー</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>男子大学生の腕力凄いな。わいは大学生のときハシくらいしか持てなんだぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>わしの筋力なんて0じゃぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>その箸何十キロでしたか……?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ま、ざっと3トンくらいかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>筋肉もりもりマッチョマンじゃないですか</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]導く声</p>
+                        君の頭の中に声が響く。どこか懐かしいその声は、君を安全な道へ導いてくれるようだ。周りからはちょっと変な目でみられるかもだけど、とりあえず悪い声じゃないっぽい。/[BONUS]/技+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「聞こえる……この声……!」ぶつぶつ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「オーウ狂人めいたアトモスフィアをカンジルネー」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>次は、GMなき、PCえヴぃ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]ダイスの信奉者</p>
+                        君の目の前に、危ない目をした狂信者が現れる。(場面PC以外のプレイヤーは全員、狂信者に扮すること)「ダイスだ、ダイスを振れ」「ダイスは神の言葉だ」「お前もダイスの声を聞くのだ」口々に叫び襲い掛かってくる。/[判定]/場面PCは狂信者と1人ずつダイス勝負に挑む(具体的なルールはGMが考えること)。全員に勝利すれば「光」カードを、さもなくば「闇」カードを得る。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こいつあぁ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「ですすたあ殿……?」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>もうすでに狂信者なんですがそれは</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「あの骸骨は私たちの敵です!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「そんなことないアル!!」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「ダイスの声が……聞こえる……!!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@狂信者N</div><div class='col-sm-10 serif'>「ダイスだ、ダイスを振れ……」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「私の闇の炎に抱かれて消えなさい」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「それはダイスが決める事だ!!さあダイス信のさばきを受けるのだ!!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ルールは、1d100の対抗判定にしようかな。下方ロールで低い方が勝ちね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>かかってこいや</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ラウンドワン!狂信者BCFvs墓守!ファイト!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>死神の鎌を構えます(激ウマギャグによりダイスに補正)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>(一同爆笑)</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「ではダイスロールどうぞ(冷静)」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「あの方を改心させてあげましょう!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>1d100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>DiceBot:(1D100)→86</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>勝ったな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>負　け　濃　厚</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>勝てそう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>1d100</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>DiceBot:(1D100)→4</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ひえっ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>圧勝</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>記者によって丸裸にされてしまった……///</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あわれ墓守君は、ダイスの狂信者たちに囲まれダイスのダークサイドに堕ちてしまうのだった……</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「ダイスの声を聴かぬからだ愚か者め」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「文々さん、流石ですね。これであの方も改心してくれるでしょう」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「ありがたきお言葉」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「一時的な気の迷いは誰にでもあることです。さあ、みなで墓守さんを励ましましょう」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダイス教の教祖だったのか!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>闇世界ダイス教とかもうわかんねぇな</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[DARKN]犬(NPC)</p>
+                        「君がボクのご主人様だよ!ボクがご主人様を守るよ!さあ、こっちこっち!行こうよこっち!ボクたちならきっとうまくやってけるさ!」/[BONUS]/技+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>なんかケルベロスついてきたんじゃけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なん……だと……。じゃあ、ダイスに負けたけどどこからともなく現れた犬に懐かれました。適当に名前を付けて非常食にしても良い。では次のかた～。GMえヴぃ、PC文々</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>えーとシーンカードか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そだね、適当の進めてもらっていいぞう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>オナシャス</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>このPTやばいなー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>大体カードのせい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>びっくりするほどサポートがないね!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>こっちは信者の信仰を集める能力だからなあ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]妖怪</p>
+                        薄暗い竹林に差し掛かったとき、ゆるりと霧が渦を巻き、巨大な生物に姿を変えた。雷鳴のような大音声が響く。「人間だ……人間の匂いがする……腹が減って仕方がない……どこだどこだ、食らってくれる」悪名高い人食いの妖怪だ!こんな天気にはよく出没するんだ。さいわい竹林に紛れて君たちの姿はまだ見つかっていない。/[判定]/[力:13]または[技:13]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>化けモンしかいない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>トム～戻っておいで～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それはトムだったのだ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「UGAAAAAA!!」と林を掻き分けて登場しようかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>正体あらわしたね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「トム!トムじゃないか!!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>トムが犯人ならブンブンさんのスキル使えそうだなぁ!?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「我はトムにしてトムにあらず!!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「トムさん、貴方は背教者になりさがったのですか……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>これはトムの中に眠る怪物の魂が顕現したものだからトムじゃナイノデース</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>じゃあ殴っても問題ないね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>VR空間で魂とかいわれてもなぁ～?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「聞いたことがある……トムは夕闇に差し掛かると内なる魂が目覚めると……」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「な、なんだってーっ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「GYOGAAAAAAA!!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>バーチャル夕方のせいで凶暴化するトム</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「皆の力でトムさんを救済(死)してあげましょう」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>13はきついね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>聞いたことがあるので+2します(粛々)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GMが許可すればよい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>すべての因果はトムに通ずるからね。+2ですよ!!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>いいね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>どうでもいいけどフリーターはGM説得しないといけないけど記者はその必要ないんだな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんでもかんでもGM係りが判断すればいいと思うよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>墓守もこっちサイドだからな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>派閥が出来ていく</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>2d6+4+2</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>DiceBot:(2D6+4+2)→2[1,1]+4+2→8</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そんなばななーっ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>。。。</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ザッコ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トムの勝ちデース</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ダメだ、文々さんにげてーっ!」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>これは肉塊ですね間違いない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「あの方はもうだめです。退散しましょう」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「見捨てないでぇ!!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@狂信者N</div><div class='col-sm-10 serif'>「おお、ダイス。おお、ダイス……」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「教祖様ぁああ!!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>こうしてトムの暗黒に飲み込まれる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>トムへのヘイトが高まった(ぴろろん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>闇カード引いてねー</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[DARKN]因縁がある</p>
+                        今回の怪異と君には切っても切れない因縁がある。過去を清算するためには、この因縁から自由な仲間の力を借りる必要がある。/[SKILL]/わけを知る者[他者の技判定]この因縁に関わる判定に[+2]のボーナスを与える。思わせぶりなことを言おう。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さっそく因縁にしていくスタイル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>トムに囚われてる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>怪異扱い</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>扱いがひどいの巻き</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>自分から言い出したと思うのですが</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なんか適当な因縁を創る必要があるってことだな</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「覚えてろ……地べたを這いドロ水すすってでももどってきてやる……」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>まあすぐ隣にいるんですけどね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>復讐劇始まったな……さて、ここらで一周しました。ちょっと休憩しよう(45分くらいまで)と思いますが、どうですか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>りょ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>バジリ〇クトイレタイム</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>ふぁーい</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>二周目</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たいむいずかみーんぐ。では、第二節初めていきたいですが、生きてますか、生きてますね。GMはBCF、PCは教祖すたあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>お手柔らかに頼む</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]水場の牙</p>
+                        地下深く、研究所にたどり着いた君たち。コンクリートの通路が、やけに湿気に満ちている……と思ったら、行く先が腰くらいの水に満ちている。そして信じられないことに、怪物化したサメがゆっくりと泳いでいる!なにも準備せずに入ったら、餌になってしまいそうだ。/[判定]/[力:15]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>15!? 教祖の道はいつも険しい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「サ、サメダーーーーー!」※どこかで見た</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「皆様、落ち着いてください。さめの倒し方なら私知っています」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「おお!?」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>いざ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>2d6+3+1[力ロール]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>DiceBot:(2D6+3+1)→7[2,5]+3+1→11</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「何とかできるとは言っていません」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「犬のようなものがあれば囮にできるかもしれません!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>犬……はっ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ピンポイントだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>と言うかスキル使えばよかった</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>悲しいなぁ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[DARKN]妄想しがち</p>
+                        君は火のないところに煙を見て、枯れ尾花を見て幽霊を見た気になって、2人組を見るとなにかとドキドキする能力の持ち主だ。もしかして、今の事件も君の妄想だってことは……。いやいや。/[BONUS]/技+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>教祖はサメのエサになる恐怖を植え付けられました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>突然の現実逃避</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「主よ、なぜこんな険しい道ばかりなのでしょう」とさめを見ながら空ろにぼやくよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>キリスト教だったのか……</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>教祖は空の星を眺めダイス神の救いを求めるのでした</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>中二病患者は大抵似非キリスト教だから</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「全て仮想現実だったということか!なんてリアルな……」みたいな?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よぉし、ねくぅすと!GMすたあ、PCかえる</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]巨大な怪物</p>
+                        そこに立ち入った君たちの足元が、突如崩れる。轟音と共に現れたのは、異形が寄り集まった山のごとき巨大な怪物だ!逃げ場所はない。命を賭して、この脅威に立ち向かうしかない!/[判定]/[力:15]または[技:15]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うおお、モンスターラッシュだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>マウンテントム</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トムならやれる</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>自分が現れた!!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「トムさん、貴方の親を打ち倒すのです!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「どっちが本物のトムさんなんだ!?」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>親だったかー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>業を背負いますねくぉれは……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>異形しかおらんやん</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>冒険者とはかくあるべし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「安心しろ俺はバイトでモンハンのレベル上げをしてG級ハンターまで昇りつめた男よ!この程度茶飯インシデントよ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>スキルバイト経験を使います</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>え?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ゲームじゃあなぁ(渋い判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>VRゲームだから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>確かに、いいですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃん!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ちゃんと反応してくるあたりさすが教祖</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>本物のトムが決まる一戦</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>じゃあ大剣装備で力を貯めるぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>勝った方を味方にしよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「この一撃で決める!!」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ファイっっ!!!!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>トムなら誰でもいいし最悪トムじゃなくてもいい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>2d6+6+3+1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>DiceBot:(2D6+6+3+1)→7[4,3]+6+3+1→17</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるじゃない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>やるやん、じゃあ大きいほうを味方にしよう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>やりますやん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「トム・ザ・スラッシュリッパー!!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>弱いものいじめはよくない</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>イジメイクナイ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>怪物の首はみじん切りになった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ああ、トムさーーーん!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「トムさん、貴方の犠牲は忘れません。そしてこんにちは、ニュートムさん」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ニュートンみたい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>怪物のことトムって言うのやめてくんない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>自分から言い出したじゃん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>トムは可能性の数だけいるから……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ともあれ光の力を得たぞ!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>てかよくクリアした!カードをひけえええ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>教祖に感謝してね</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]勇気100倍</p>
+                        一般人に比べると君の勇気は無限大だ。恐怖しないのではない、恐れを知ってなお先に進む力、それが勇気というものだ。/[SKILL]/勇気あるふるまい[自身の判定]今の場面に対し、「勇気があればいいことがある」とGMを説得できたら、判定に[+2]のボーナスを得る。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トムの主人公属性よ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>また強化されたぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>汚いア〇パンマン</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>とにかくGMを説得しないといけないトム</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>外国人で考古学者で勇気を持つ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>一番の戦力かもしれないなぁ、これ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>殴るなら任せろって感じになってきた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ハリウッド系主人公で行こう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ハ〇クとかいうマ〇ブルヒーロー</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>似てる(確信)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「SCENECARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]雨と調べ物</p>
+                        激しい雨で、この暗い部屋から外に出ることができない。ぼうっと光場面に照らされたのは、パソコンで調べ物をしている君の顔だ。調べ物、うまくいってる?集中しすぎていると……雨音にまぎれて迫り来る、奴の足音に気付くことはできないぞ。/[判定]/[技:10]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>突然の引き籠り</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ウィキペディア閲覧中</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>10なら余裕だね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>よゆーよゆー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「カタカタカタ、ッターン!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>何が近づいてきてるのこれ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トムじゃない?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やっぱりモンスターだった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>化け物扱いして欲しいのかどうなのか</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>こわひ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>2d6+5+1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>DiceBot:(2D6+1+1)→9[3,6]+1+1→11</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「キーボードが壊れても情報を得るっ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>見事検索成功</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]霊刀</p>
+                        君はどうしてか刀を持っている(君が侍でなければ、かなり珍しいことだ)。単なる武器ではない、これは何らかの象徴であり、鍵だ。いきなり光ったりするぞ。/[BONUS]/力+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どこから持ってきたのか……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トムが託したのだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>amaz○nで買ったのかかな?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ブォンブォン鳴るセイバーのようなものを手に入れたぞ!」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>見えない剣かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>カタナなのか鍵なのかはっきりしなさい</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>キーブレードです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>デ〇ズニー、お許しください!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「この刀は君にこそ相応しい、君ならきっと奴を倒せる」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ト、トムさん……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>やはり勇者だったか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さくっと、次の方へパース!GMnaki、PC墓守</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]侵食</p>
+                        そんなわけで闇に飲まれてしまった君は、身体に異様な文様が浮かび、目は赤く輝き、セリフの半分がカタカナになってしまう。このまま闇に侵食されたら、君はひとならざるモノになってしまう。負けるな、仲間の声を聞いて。帰ってくるんだ!/[判定]/[技:14]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>姿かたちにピッタリじゃないか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「トリアエズ感覚でヤミに放り込むな」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@闇の侵食</div><div class='col-sm-10 serif'>「シャッチョサン、シャッチョーサン」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>信者完全体ができあがりそう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>この力は……!?かつてのトムの!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よしいけ、技ならいける!頑張れ墓守!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>という因縁で+2です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>因縁許可します。+2でどうぞ>墓守</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「既に闇に飲み込まれてしまった……俺の手でいま楽にしてやる」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>トムのキャラが安定してなくないですかねぇ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>たしかに</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>いつのまにか人語喋ってるし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そうだよ(便乗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>最初から喋ってるぞ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>がんばってー!!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>2d+5+2</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>DiceBot:(2D6+5+2)→5[2,3]+5+2→12</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>たらへん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふふ……失敗だな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>たらへんよ!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>おしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>声援が足りなかったか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@闇の侵食</div><div class='col-sm-10 serif'>「オー、ヤスクシトクヨー!」あわれ墓守は闇の侵食に飲み込まれてしまった。しばらくすると戻ってくるけどね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>墓守が闇に飲まれるのカッコイイな</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[DARKN]追跡する難敵(NPC)</p>
+                        恐るべき凶器を持ち、君をひたすらに追いかける難敵。撃退するのは困難で、基本逃げるしかない。あらゆる障害をふっ飛ばしてやってくるので、場合によっては利用できるかも。/[SKILL]/お邪魔します[自身の判定]難敵が乱入してくる。この場面を強制的に[判定:力13以上]に変更する。GMはこのスキルの発動を無効化してもよい。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>人生敵だらけだよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>難敵いったい何者なんだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かあちゃん?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>親フラかあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んでは、お次の方～。GMEvi、PC文々</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]あの闇の彼方に</p>
+                        恐るべき体験を乗り越え、君たちは高台にたどり着いた。闇が渦巻くその先に、ぼんやりと見えるものがある。「あれは……?」仲間が呟く。君にはわかる、あれこいそ、自分たちが向かわなければならない場所だ。すべてはあそこで明らかになる。ところで、あれってなんだろう?/[判定]/[技:8]以上で成功する。成功すれば、闇を見通し、目的地の正体を宣言することができる。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>いけるな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>クライマックス前にこれひくとかすごない?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>カッコイイ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「あれは?」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「古のVR機関の心臓部……」パソコンで調べた結果を見ながら言います</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>あれの名は</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そこはカエル君がお得意の中二病風名称つけてよかっこいいのでたのむ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>いつもの病気を今ここで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>カオスエデンにしよう(提案)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かっこいいじゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>世界観イミフ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ランダムなんだからこじつけたもん勝ちさぁ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>素直な女子高生キャラならカオスはなかった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>カオスの源みたいな女子高生おる?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>欲望を生み出す釜(デザイアハート)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>出たな中二病</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>カッコイイ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>汚染はすでに広がっていた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>VRは欲の化身だった</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>まあ間違ってはない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>欲でありエデンであり深層でもある</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「聞いたことがある……。その心臓部に達すると深層ネットへの道が開けるというが、果たして」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>GM情報通判定承認オナシャス+2</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>記者強いよ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>いいよー</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ありがとナス!振ります</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>2d6+3+2</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>DiceBot:(2D6+3+2)→9[5,4]+3+2→14</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>デ〇ズニーランドか。ぶっちぎってるなあ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ナイス!ウォ〇ルト先生、お許しください!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「この先が終着点か、どんな秘密が待ってるんだろうな」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]猫(NPC)</p>
+                        「大変そうだねぇ。僕たち猫は気楽なものさ、高い所に寝てればいいんだから」……と猫が肩に乗ってくる。目的があるのかないのか、ごろごろいって眠りだした。/[BONUS]/技+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>犬と猫が揃ったか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まさか動物シリーズが揃うとは……!?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>かわいい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>犬と猫が混ざり最強になる</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>記者に猫って素敵じゃない?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>絵になる。一本小説書けそう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>生涯の相棒にしよう</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>三周目</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>と、行ったところで2周終わりました。ラスト30分だけど、クライマックスいく?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>微妙な時間やなあ。どうなんだろういけるんかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>RPとかナシなら、さくっと1周してもいい気はする。やっちゃうか、ちょっと集中してやっちゃおう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>うぃす</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>成功するぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>もういっそ闇で揃えちゃえよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それはそれでキャラが立つ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]UFO</p>
+                        闇の奥、一条の光が走ったのを君は見逃さなかった。仲間が口々に聞いてくる。あれはなんだ!?君はこう答えるだろう。「未確認飛行物体……そう……これまでの事件は……、すべて宇宙人の仕業だったんだよ!!!」仲間を納得させるためには、力ずくでUFOの痕跡を発見するほかない。/[判定]/[力:11]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほらほら、UFOの痕跡見せつけて!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>力ずくで発見とな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「あれは……UF〇テーブル!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>11は余裕でしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>2d6+3+1[力ロール]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>DiceBot:(2D6+3+1)→9[3,6]+3+1→13</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>作画がすごそう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>やった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるじゃん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「皆さん、ここは徳島県です」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>!?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「納得できる!あれはUFOだ!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>バーチャル徳島</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「間違いない」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>誰得やねん</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]おねえさん</p>
+                        言動に年上のおねえさんっぽい雰囲気を漂わせる君は、存在するだけで周りを安心させてしまう。なにものをもってしても、いい女にはかなわないものさ。/[BONUS]/技+1
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>教祖様に磨きがかかるな</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>教祖ランク上がりそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「全てこのお姐さんにまかせない!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>かみまみた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「姉力があふれて見えるぅううう」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>おめでとう!!教祖はランクが上がって司教になった!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ヒロイン待ったなし!さあ、次いけ次—。どんどんいけー</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]動きそうな鎧</p>
+                        冷たく殺風景な通路を、足音を反響させながら進む……。行く先の壁に大柄な人影が映り、ぎょっとして君たちは足を止めた。鎧だ。全身鎧の置物が斧を抱えて立っている。先に進むには、まず場面PCが、この怪しげな鎧の前を通り過ぎるしかない……。/[判定]/場面PCは2Dを振り、出た目の合計が「6」以上なら鎧が襲い掛かってくる。[力:4+今振った2Dの値]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ついにトムが討伐されるときが来た</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「動きそうなよろいはたいてい動く。お姐さんが言うなら間違いないです」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「イグザクトリー」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>DiceBot:(2D6)→10[6,4]→10</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>きたーっ!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>たっか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ほほほ、本当に動いてますよ、あの鎧ーっ!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「ほら、動きました!やった」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「事実は小説より奇なりとか言ってる場合じゃないー!!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>いうて14か……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そうね、力14で勝てばいいだけだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「あれは中世のイギリスで使われていたタイプの鎧だ、昔バイトで作ったことがあるから弱点も熟知している」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>バイト経験を使うぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>普通に振ってね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>渋いGMサマだった!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>なぜだ!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GM様は絶対なのです(菩薩顔</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>トムだから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>ワンパターンだった</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>バイト経験にワンパターンとか言われても!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほれいけ!トムならいける!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>じゃあ勇気100倍を使います</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スキルはワンシーン、一回までー!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>一人で鎧と戦うんだからそれぐらいは……あう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>2d6+6+1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>DiceBot:(2D6+6+1)→10[4,6]+6+1→17</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ッシャコラー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かっこよさすらある</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>やるやん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>鎧風情がトムに勝てるわけないだろう!!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「せっかくなので着たらどうです、トムさん?」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ああ、貴重な鎧が!」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]愛こそすべて</p>
+                        ちょっと危険な場面だって恋を盛り上げるし、事件の真相にはきっと悲しい恋愛が絡んでるし、これから素敵な出会いがあるかもしれないし、君の見た世界は恋愛でいっぱいだ。/[SKILL]/オンリーラブワールド[自身の判定]今の場面を恋愛に関連付けられたら、GMの許可を得たうえで、判定に[+2]のボーナスを得る。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もうキャラ崩壊とかいうレベルではない……美女と野獣にするしかないよなぁ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>愛と勇気だけが友達さ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ア〇パンマンやんけ!!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トム=アンパンQED</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]電波塔</p>
+                        なにかを受信するのか、それとも発信できるのか……君たちは高い軋み音を立てる、禍々しい電波塔を目指している。やがて見えた鉄の骨格に、びっしりと獰猛なカラスがとまっている。なぜ獰猛だとわかったのかというと、何かする間もなくそいつらが襲い掛かってきたからだ!/[判定]/[力:9]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「カラスごときにぃ!!!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>敵が弱いなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>後半になるほど難易度下がっていってる……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>キーブレード(R)で攻撃しました。今度は力でいいよな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>2d6+5+1+1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>DiceBot:(2D6+5+1+1)→5[2,3]+5+1+1→12</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ずんばらり!」おわり!</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]ショットガン</p>
+                        中盤で手に入る武器。段数の少なさがネックだが、攻撃範囲が広く、多数を相手取るときに真価を発揮する。持っているだけでただものではないオーラがにじみ出るぞ。/[BONUS]/力+2
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「ジャコンッ!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>中盤らしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>カード様が中盤と言ったら中盤だ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>シャッガン好き</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]逃れ逃れて</p>
+                        逃亡の果て、君は寂れた漁港にたどり着いた。ここなら危険はないはず。しかし……。スナックのママが残した言葉が頭に響く。「あなた、過去を捨て損ねた顔をしているわ」戻るべきなのか、あそこに?/[ROLEPLAY]/場面PCは過去と直面する一言を告げ、「闇」カードを得てから、戻るんだ。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>くらええええ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>出たなスナックのママ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>出たスナックのまま、因縁がありそう。VRスナック</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>闇の魂の生まれる場所</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「あの場所……ワタシが死んだ場所……」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>っていうか何やっても闇ルートじゃん!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>残念だったな、ダークサイドに落ちるがいい……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>約束されし闇カード</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>キャラにあってていいのでは</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たしかにぃ～</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>かっこよすぎ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[DARKN]不老不死</p>
+                        君はこう見えてもいくつもの時代を超えて生きてきた、不老のモノである。このくらいの修羅場に動じる君ではない(たぶん)。長生きしてきたってことは、それだけで大きな力だ。/[SKILL]/任せておけんのう[他者の判定]君が持つ[自身の判定]スキルを、仲間の判定にいい感じに適用できる。裁量はGMが行うこと。このスキルは連続した場面で使用できない。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>草</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>えぇ……</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ほんまキャラ出来上がりすぎでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>まあ見た目でね……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ここで、突然賢者キャラになってしまうのか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>死んでるように見えるけど錯角だった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>墓守くんの判定スキルとかないし……死にスキルじゃん!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>お邪魔しますがありますよ!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はい、次の人ぉー!</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[SCENE]洋館の入口</p>
+                        君たちが命からがらたどり着いたのは……。ピシャゴロゴロゴロ!雷鳴をバックに真っ黒にそびえ立つ、巨大な洋館だ。君が代表して巨大な玄関のドアを開けようとすると……なんと開かない。なんでもいいから早く中に入らないと、ろくなことにならないぞ!/[判定]/[力:12]または[技:10]以上で成功する。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>もうろくなことになってないぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>最初からろくなことないしね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>既にだいぶ激しいんだよなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>なんと開かない。というよりなんか開かない。じゃね?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「嵐が強くなってきました!」ビュオーゴロゴロドッシャーン</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>バリバリバシャーンビュオーゴゴゴゴゴ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>ヴィーピピピ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>ガーガーガーガーバババババ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ウィーンゴーガッシャーンピーゴロゴロ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>タンゴダウンタンゴダウン!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>エネミーETA1ミニッツ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ワーワー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>ママーーー!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>アレクセイ!ハリー!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>シット!ジャーマニータンク!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>テキノセンシャヲヤッチマッタゾ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>インカミーーーーーーン</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「聞いたことがある……。この洋館にはVR空間の統合システムが眠っているって」</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>+2承認お願いします</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>OK!ゴーサージェント!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>文々黒幕説あるぞこれ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>実際知りすぎてるよね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>お前は知りすぎた</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>記者なんでVRについてちゃんと下調べしてきているのですよ(言い訳)</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>2d6+3+2+1</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>DiceBot:(2D6+3+2+1)→6[2,4]+3+2+1→12</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>あぶな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるじゃん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>皆成功ばかりだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>(勝手に閉まるドア、遠ざかる戦闘音)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こうして、迷い込んだ5人は洋館の中へ足を踏み入れたのだった……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>初代バイオだったらOPが終わったところですね……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ゾンビ犬でてきそう</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[LIGHT]剛運</p>
+                        圧倒的に運のいい人っているよね。キミがまさにそうで、ここまで来たのは、すべての厄をはねのけてきたからだ。このまま運に任せて生き伸びてしまおう。/[SKILL]/凶星返し[常時]このスキルは自動的に発動し、他スキルと重複できる。君が振ったダイスが「1」の目だった場合、ひっくり返して「6」にする。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>運命変転を手に入れてしまうのか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ヒューマンだった</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>そういうスキル好き</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>これもう主人公が誰かわかんねえな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>わしじゃよ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>エイトエピックスってボードゲーム思い出す</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>クライマックス</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>良い感じに盛り上がってるじゃん。時間ないし、このままクライマックスいってみよー。最初GMのBCFさん、クライマックスカードをどうぞ!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">[CLIMX]閉ざされた心</p>
+                        ……怪異の果て、少女の瞳からは輝きが失せ、一切の心が閉ざされてしまう。彼女を救うためにはその精神世界に潜り、心を縛る暗闇の網を破らねばならない。「危険だ」と誰かが言うが、ここまできて、諦められるものか。/[DEADORALIVE]/みんなで合計5Dを振り、[17+PC人数]以上で成功する。場に出ている「光」カードの枚数を判定のボーナスに加えることができる。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>「あれがこの空間の支配者……」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「こ、これが……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>だれだ少女って。PCにもNPCにも少女なんていなかったじゃないか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そりゃあ、少女といったら少女だよ。VR空間の最深部とかには必ずいるじゃない、あの少女だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ラスボス的少女か</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>洋館に入ったら部屋にポツンと椅子に座った少女が!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、絵になる絵になる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「迷子がいるわね、救済してあげなくては」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@少女</div><div class='col-sm-10 serif'>「ねえ、私ともっと遊んで。一人にしないで……」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>光カードの枚数</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>こっちは、3枚ある</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>2枚</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>俺も3枚だ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>1枚</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>一人闇の深い奴がいるな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>闇しかなくてすまんな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>闇の説得力がすごい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>合計5Dって一人1D?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>でしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ってことになるね>5D</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>まあいけるか。というかスキルは使えるのか?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スキルは使えないらしい。指定がない場合は、だけど</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>常時とすべての判定ってくくりのものは使える</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>なるほど、やるしかないな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほんで、光カード合計は……9か、楽勝でしょう。目標値は17+5=22</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>負ける要素無さそう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>あ、豪運使える</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>みんな3だせばいいね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>じゃあ皆さん1d6振りましょう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>ユイをぶちころがすぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ういー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>DiceBot:(1D6)→3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>平均!平均!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>DiceBot:(1D6)→3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>いいかんじ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>DiceBot:(1D6)→6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>よしきたあああ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>いけるいける</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>盛り上がりが</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>DiceBot:(1D6)→4</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>DiceBot:(1D6)→1</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ww</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>^q^</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>剛運使います――よって6!!!!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>キターーーこれは熱い</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるじゃない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>3+3+6+4+6+光ボーナス9 = 31</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>少女は砕け散った</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「またひとり救済されてしまいましたね……」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んじゃあ、GMが描写して終わりかなぁ?さあ、フィナーレを!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>少女は何かを告げようと口をパクパクさせているが、声は聞き取れず世界は光に包まれ、プレイヤーたちの意識も白く途絶えていった</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>目を覚ますといつも通りの日常が広がっていた。ずいぶん長い間VR空間に潜っていたようだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>(フ〇ミチキください)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「う、うーん、ここは……」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>「無事ですかこもりん」と顎の関節音で喋ります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@こもりん</div><div class='col-sm-10 serif'>「兄さん、顔が怖いです」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「は!わたしはなにを」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「ここは……いったい。そうか、戻ってきてしまったか」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>アバターのままの人が二人もいんよー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>「何か悪い夢……いえ、いい夢を見ていたような気がします」とミッ〇ーマウスのきぐるみを着た少女は言います</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>この女子高生頭おかしい</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>どうい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>「あの世界でなら俺はきっと……戻ろう帰るべき場所に」もう一度VRマシンを装着します</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>現実世界にトロールいたら怖いもんね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>仲間と過ごした記憶がいい夢なのさ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>トロール討伐戦</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>トロールじゃなくてヒューマンなんだよなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>一体何体のトムを倒しましたか……?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>時間もかなり経過している、おなかがすいた。そうだ、コンビニでフ〇ミチキでも買って来よう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>～Fin～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>良いエンドロールでござった!以上!BCF歓迎のびのびTRPGおーしまい!おつかれさまでしたー!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>おつううううかれええええさまああああ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>おつー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>おおおおおつ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>おつつつつつつつつ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>感想戦</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いやー、楽しかった楽しかった。BCFさんは楽しめました?</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ランダムシナリオでも結構楽しめると思いましたマル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>こういうノリです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いやほんと、よくできてるゲームだよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>シンプルなのは時々やりたくなるよね</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>こじつければ何とかやっていける前提条件がいい感じでした</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>結局スキルの存在を最後まで忘れていた</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>改造したくはなりましたけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>まああんまり使わなかったね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>女子高生の能力は使いどころがなぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>女子高生のスキルは使いにくいからなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ドンドン改造してこ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>1週目カード群、2週目カード群、3週目カード群に分けるともっとゲームバランスよく楽しめると思いましたナリ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>最後まで完全ランダム故の弊害が</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、確かにそっちの方がドラマティックになりそうだね。そこはほら、ユーザーの創意工夫とこじづけて物語にしちゃえばいいのさ。良くも悪くもメンバー次第ってやつ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>序盤キツくて終盤ぬるいみたいな感じだったので、後半戦キツイほうが突破した感があるかと思いました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>たしかにそうですね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>まあ段階ごとにイベントやカード弄ったほうが話にも矛盾が無いしな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>即興で歌詞を作るカードはあるのかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>歌詞はないけど、創作ダンスするってのは前やったときにカエル君が引いてたよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ダンスしたの?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そろそろYOUTUBEにあげてくれてるはずだよ、カエル君が</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>カエルさん7本くらい動画抱えてるからなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>闇世界開拓教ダンスはよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>応援するよ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>闇世界開拓ダイス教だゾ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>人生決定を全て運任せにする宗教かな?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>ダイスで人生を選んでみたとか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>岐路に立つたびざわざわする宗教</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>456サイを使ったものは極刑</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>バレなきゃイカサマじゃないんですよお</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>サーバー管理者だ!お前を逮捕する!</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ダイス教徒の目は厳しいですよぉ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>ぜんぶ1のサイコロも作ろう</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>一瞬でばれそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>YOUBAN</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>CoC卓しか経験ないので今晩は本当に楽しかったです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、それはよかったです。同じくめっちゃ楽しめました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@墓守</div><div class='col-sm-10 serif'>やっぱ人数がいるといーね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>確かに、にぎやかだったね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>確かに、この人数ならパーティ組んだ時幅が出そうだ</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>ボードゲームが好きなことくらいしか取り柄がありませんが今後もよろしくお願いします</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@星</div><div class='col-sm-10 serif'>よろしくお願いします</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@トム</div><div class='col-sm-10 serif'>よろしくう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こちらこそ～。マイペースでのんびりどうぞ～。あ、GMも是非</div></div>
+            <div class='row bcf'><div class='col-sm-2 name'>bcf@文々</div><div class='col-sm-10 serif'>GMも是非やりたいと思っているので、ご教授お願いします(CoCしか知らない新参ですが)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったぜ～楽しみにしてます</div></div>
+        </section>
+    </div>
+{% endblock %}
