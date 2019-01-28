@@ -64,6 +64,7 @@ INSERT INTO replay_episode (id, series_id, sequence_number, prefix, name, is_del
 
     (36, 8, 3, '', '体験卓3回目', FALSE),
 
-    (37, 10, 5, '第5話', 'オールドグリモワール', FALSE)
+    (37, 10, 5, '第5話', 'オールドグリモワール', FALSE),
 
+    (38, 1, 2, '', '不可視の闇', FALSE)
 ;

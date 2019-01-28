@@ -34,7 +34,7 @@
     <ul id="section-nav" class="nav nav-sidebar">
         <li class="header">新リプレイ</li>
         <li><a href="#cloc">クトゥルフ神話TRPG(10)</a></li>
-        <li><a href="#gror">ガーデンオーダー(9)</a></li>
+        <li><a href="#gror">ガーデンオーダー(10)</a></li>
         <li><a href="#lsry">ロストロイヤル(7)</a></li>
         <li><a href="#shnb">シノビガミ(3)</a></li>
         <li><a href="#nvnv">のびのびTRPG(3)</a></li>
@@ -247,6 +247,20 @@
                             <td>evi, kaeru, aneko</td>
                             <td>naki</td>
                             <td class="col-sm-2">2016年01月30日</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-8">
+                                <b>「不可視の闇」</b><br>
+                                {% set list = [['gror/1/2/1', 'トレーラー', ''], ['gror/1/2/2', 'オープニング', ''], ['gror/1/2/3', 'ミドル', '未編集'], ['gror/1/2/4', 'クライマックス', '未編集'], ['gror/1/2/5', 'エンディング', '']] %}
+                                {% for item in list %}
+                                    <a href="{{ base_url }}/replay/{{ item.0 }}">{{ item.1 }}</a>
+                                    {% if item.2 != '' %}<i class="fa fa-exclamation-triangle text-warning" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" data-original-title="未編集"></i>{% endif %}
+                                    {% if loop.last == false %}/{% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>プレイヤー4名</td>
+                            <td>evi</td>
+                            <td class="col-sm-2">2019年01月某日</td>
                         </tr>
                     </table>
                 </div>

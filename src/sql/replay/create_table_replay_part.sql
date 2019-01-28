@@ -210,6 +210,11 @@ INSERT INTO replay_part (id, episode_id, sequence_number, name, is_deleted) VALU
     (164, 37, 2, '導入', FALSE),
     (165, 37, 3, 'Aパート', FALSE),
     (166, 37, 4, 'Bパート', FALSE),
-    (167, 37, 5, '結末', FALSE)
-
+    (167, 37, 5, '結末', FALSE),
+    -- gror/外部卓/単発
+    (168, 38, 1, 'トレーラー', FALSE),
+    (169, 38, 2, 'オープニング', FALSE),
+    (170, 38, 3, 'ミドル', FALSE),
+    (171, 38, 4, 'クライマックス', FALSE),
+    (172, 38, 5, 'エンディング', FALSE)
 ;
