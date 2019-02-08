@@ -1,0 +1,2497 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>クライマックスフェイズ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 全員(場合によっては遅れて合流)<br>
+                        [場所] 郊外の古びた洋館<br>
+                        [時間] 夕方ごろ<br>
+                        キミ達は情報にあった郊外の古びた洋館にたどり着いた。<br>
+                        庭は荒れ、とても人が住んでいるようには見えない。<br>
+                        [必要技能] なし<br>
+                        [ボーナス要件] なし<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>合流シーンは適当に3人で考えてくれていいよ、道中で会うでもいいし、現地で集合しちゃったでもいいし</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>チャリできた</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>とりあえず車で派手に突っ込みたいな、ピンチに窓から登場すると燃える</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>応援してます</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>徒歩で行く</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>一緒に乗ろうぜ!折角乗用車にしたし</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>運転できるの?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>一応運転判定がある……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>40あるし大丈夫っしょ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'><b>小学生じゃ原付も乗れないよ</b></div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'><b>マリオカートは得意だから</b></div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ん～じゃあ、栄が館にたどり着いたところからシーンが始まります。餡子と鶫はいいところで突入してきていいよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>了解</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>栄君が洋館にたどり着くと……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>やべー奴が来る</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「君……栄くん?おぉきくなったね、ははは、感動だぁ」と髪の長いひょろりとした人物が洋館から現れた。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「……誰だ」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「知らない?知らないよねぇ!だって君、ちいさかったから、こんなにねえ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ミジンコぐらいかな?</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「そうだ、お礼を言わなくちゃ!君の……いや、君たち藤堂家のみなさんのおかげでぇ、僕の研究は完成したんだよぉ!」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「プロジェクトFI……」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>空気がシリアスなのに立ち絵が……</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「知ってる?知ってるんだね、栄君!けどね、バカなやつらがいたんだぁ、この最高の研究を凍結するだなんてぇ!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>どんどんしゃべらそう</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「邪魔ばっかりだ!そう、この女みたいに、ねっ!」といって物陰に隠してあったであろう、ぐったりした女性の身体を蹴飛ばす</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ぐったりにゃんこ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@秘書犬塚</div>
+                <div class='col-sm-10 serif'>「……うっ」動けないみたいです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>だれだ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>死んでる!!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「六門氏を手にかけたのはあんたか?」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「違う違う、ぼくじゃないよ、僕は手を貸してあげただけ～。親切でしょ?僕、親切でしょ?」とカラカラと笑います</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「だけどね、もう誰かに邪魔されるのは嫌なんだ。この僕の研究をね?」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>男はにたりと笑うと、ピンク色の液体の入ったアンプルを取り出した。</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「だから僕は決めたよぉ……」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>そしてそれを、自分の首筋に突き刺した。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「お前、何を!」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「あぁ……実に……!そうさ、僕が僕自身の研究の最高傑作になるんだよぉ!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'><b>こっちも鶫に刺しとくか</b></div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>おあいこやね</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        男は大げさに両腕を広げる。<br>
+                        ――次の瞬間、男の身体があらぬ方向に曲がり、膨らみ、みるみるうちに異形と化していく。<br>
+                        <br>
+                        「Aarrrgghhh……」<br>
+                        <br>
+                        声にならない雄叫びをあげた姿は、もはや人と呼べたものではない。<br>
+                        キミたちの目の前には、4メートルは超えようかという巨大で醜悪な肉の塊。<br>
+                        ドロドロと不完全な肉体は崩れ落ち、それでもなお巨大に膨れ上がろうとしている。<br>
+                        肉の塊についていた無数の瞳らしきモノ達が、キミ達を見て笑った気がした――。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「(あれ思ってたよりだいぶ派手だぞこれ)」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>完全にバイオのラスボスのノリで異形化しやがった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>やっぱ謎のアンプルはこう使わなくっちゃ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>とりあえず負けそうになったら鶫に刺せばいいと言う事はわかった</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>犬塚ァ!に刺すかと思った</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>その手があったね!戦力も増えるし、ヒロイン候補も消えるし一石二鳥</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>TRUEルートに入っちゃったので、それはまた別のルートで……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>そろそろ乱入してきてもいいんだよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>じゃあ出るか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>そうなんだよ、早くきてくれよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>体と一体化したバリスティックシールドを構えます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>じゃあ館の窓ガラスを破って車が飛び込んでくるぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>やることがはでだねぇ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>そして徒歩で来た餡子</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>常備化しないってそういうことなんですか?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>そのまま怪物と先生の間で止まる</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>じゃあ怪物と先生で挟み撃ちする</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「ようセンコー、待たせたかい?」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>異形の怪物は一瞬たじろいだかのようにも見えた</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「とりあえず運転してる写真とってネットにアップしようっと」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>味方はいないんですか!?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「(他人のフリしなきゃ)」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>他人のふりしても肩を叩きながら気軽に話しかけるぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「それで、こいつはどんな状況だ?」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>さっそくカオス空間が広がっておりますが、異形君は元気です</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「ネフィリムが現れたので、宜しければ一緒に倒してください」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「なるほど、いつも通りってことか」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「あら、お邪魔したらしいわね」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「餡子!鶫のコントローラは常に持ってロッテ!!」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「お嬢、良いところに。パーティーは今からだぜ」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「あら、か弱い生徒の頼みを断った先生じゃないですか。ごめんなさい、あの子はもう人間じゃないので……」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>意外と根に持ってらっしゃる。後、私は人間です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>寝るまでは忘れないよ。寝たら忘れる、人間だもの</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「ヒャッハーーー!!」銃声を奏でながらバトル始めますか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>うい、各員登場したので戦闘開始です!</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド1</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>鶫は間にでてきたんだっけか、適当に配置してください。Eに出てきた方が都合良い?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>いや普通に離れて配置したい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>突っ込んでいったのなら目の前だよね^^</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>殺したいのか?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>Hが玄関かな?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>そうね、Hが玄関でいこう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>じゃあH</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>はい、初期配置が決まったところで……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>死んだら死んだでおいしいぞ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : (CHOICE[D,E,F,G,H,I]) → E</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : (CHOICE[D,E,F,G,H,I]) → H</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>E地点とH地点に、異形から崩れ落ちた肉塊が意思を持ったかのようにうごめいている</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>肉?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>うまそう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>これも敵です。2ターン毎にランダムな位置に出現するので気をつけてね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>死んだ魚のような目をしてらっしゃる</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>何か前にも似たようなことがあったきがする……。イニシアチブですかね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>イニチアシブもいいよ。セットアップもよろしく</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+7) → 8[8]+7 → 15</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+5) → 8[8]+5 → 13</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+11-2) → 6[6]+11-2 → 15</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ほいおっけー、じゃあメインプロセスどうぞう!餡子から～</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>突撃するしか能がないので、Eに移動して主任にエアカッター……いや、レーザーブレードにしよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>全力移動なので、達成値/2です～</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO45 [近接武器]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=45@9 → 39 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 6 → クリティカル</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>避けました～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>やべえ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>次、鶫!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>じゃあ主任を撃ちますね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あいよ～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>新必殺トリプル射撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 100 → ファンブル</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 69 → 失敗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 74 → 失敗</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>お、おう……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>爆発</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>この目立ちたがり屋さんめ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>どういう事だってばよ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>全部外れだあ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>つぐみは次から二回行動にしよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>3回攻撃はロマンなのに</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「チッ、ジャムッた」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ファンブル処理なしかい?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>このゲーム、戦闘中ファンブルないと思ってたんだけどあったっけ……?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>行為判定にファンブルの定義があるからあるかも?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>命中判定ステップのファンブルは命中/回避に関わるだけかも。表にもないし</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>そもそもファンブルに関して96以上でファンブルな!としか書いてないので具体的な処理は丸投げ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>だよね。まあ、なしでいいよ。じゃあ栄君どうぞ～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>私はそうだなあ、じゃあ様子見で近くの魚にマインドブラストします</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>魚肉</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>はい、どうぞ～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO100 防御力を無視して1d10+[ランク*2]のダメージ コスト/軽傷1</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>Evi@栄の軽傷を4した (軽傷:5->4)</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 35 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊2</div>
+                <div class='col-sm-10 serif'>GO20 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊2</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=20@4 → 43 → 失敗</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>1d10+12</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 5[5]+12 → 17</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊2</div>
+                <div class='col-sm-10 serif'>当たり!防御無視か……即死です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>先生が頼り</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>む、魚なら固定値で死ぬじゃん、魚まつりじゃ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>モンスターって微妙にしゃべれないから辛い……。ん～、じゃあ主任かな</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>近くにいるキャラクター(攻撃対象は餡子)に【マルチプルアーム】で2回攻撃を行う!</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、ちなみにこの敵。データはルルブのP247の「ランク7ヘカトンケイル」と同じなので、参照して大丈夫です</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ヤバそうなのキター</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO75 多腕の拳(当身/単/至近/衝撃)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 2 → クリティカル</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO75 多腕の拳(当身/単/至近/衝撃)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 81 → 失敗</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>回避判定どうぞう。クリティカル1が出れば避けれる</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO66 [回避]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=66@13 → 80 → 失敗</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>死にました</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>2d10+30+6</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : (2D10+30+6) → 7[6,1]+30+6 → 43</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>切断弱点かー</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>あ～あ……満点入っちゃったぜ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>餡子さんなにがなんでも守らなきゃ(傍観)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCIM43</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>衝撃[43] → 致命傷2/DOT:重傷1 | 内臓損傷 …… 衝撃が身体の芯まで届き、内臓がいくつか傷ついたようだ。</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>何で前衛なんだろう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ん!?ホントにあんこちゃん死んだ?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>しんだよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>致命傷2だから死亡はへらんでしょ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>まさかの即死!?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>いや、死んでないや。後一回食らったら死ぬ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>最期にお魚だけど、餡子に攻撃</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>じゃあ倒れます</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「悪い夢……いや、いい夢だったわ……」ばた</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>GO70 肉弾(銃撃/近/単/銃弾)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 3 → クリティカル</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>えぇ……ダイス走りすぎだろこれ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>殺意高いですね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>出目やばない?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>鉄砲魚</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>1d10+10</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 4[4]+10 → 14</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO66 [回避]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=66@13 → 63 → 成功</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>無理かあ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>DCBL14</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>銃弾[14] → 重傷1 | 肩負傷 …… 肩を貫かれる。骨が砕けたようだ。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>DOTで重症1が確定でしょ?やばいね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>MOBもダイスが走ればつよぉい……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>恨むならダイスを恨んでくれ!ではクリンナップ。DOT持ってる人は、ダメージ計算してから解除判定よろり</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ちょっと質問、クリティカルの防御点無視ってウィンドバリアのダメージ軽減:遠距離も無視?お魚の攻撃が遠距離かどうかしらないけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おっと忘れてた、けど近距離攻撃なのだ、弾ってかいてあるけど……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>おk!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO80 抵抗力</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 55 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>解除OK</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド2</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>1d10+11-2 「先制判定」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+11-2) → 10[10]+11-2 → 19</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>やる気に満ち溢れておる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>死に瀕してその力を発揮するのがヒロイン</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+7 イニシアチブ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+7) → 5[5]+7 → 12</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>1d10+5</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+5) → 3[3]+5 → 8</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>これは助けられませんわ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>敵に背中を見せるぐらいなら華々しく散って見せようぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>その意気やよし!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>先に雑魚を倒した方がいいのかな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>主任にエアカッター</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO100 [特性能力]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 72 → 成功</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>お魚で死ぬことはないとおもうけど……サイコロだからね</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 78 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>当たり!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>オーバーブーストします</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>全力やなぁ……いいぞいいぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>命削ってるなあ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>オバブしたら致命傷くらって死なない?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>できないや</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあダメ!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>オーバーブーストの致命傷コストはバディが代わりに受けられる。おぼえておくことだ(そそのかし)</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>バディよ代わりに死んでくれぇ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>2d10+5*3 「エアカッター 疲+1 切 単 近」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (2D10+5*3) → 5[2,3]+5*3 → 20</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>防御点3ひいて……</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCSL17</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>切断[17] → 重傷1/DOT:軽傷1 | 腕部負傷 …… 腕に大きな傷を受ける。</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「ただでは……死なないわよ……」ガクッ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>まだまだ全然元気。主任の攻撃……だけど、普通にやってしまいそうなんだが……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>避けろ!ナッパ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>死ななきゃ安い</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>避けるからへーきへーき</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>焼き尽くすか……まだこっちの方がやさしそう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>優しさが痛い</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO80 多眼光線(特性能力/単/近/灼熱)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 62 → 成功</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO66 [回避]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=66@13 → 1 → クリティカル</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>さっき出してくれええ!?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>なんかおそい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>覚醒してる!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>運命力ゥ……ですかね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>死に瀕して強さを発揮するのが(ry。では、鶫～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>どうする?タイやっとく?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>3発うてば1発くらいタイにあたるでしょ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>このイチかバチか感</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>じゃあ肉塊攻撃するか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 1 → クリティカル</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 42 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 94 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>GO20 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=20@4 → 28 → 失敗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ダメージ出す?</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉塊1</div>
+                <div class='col-sm-10 serif'>ダメージはいいです、死にました</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「ヒャッハーミンチにしてやるぜ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>1回ごとに攻撃対象選べること忘れてそう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>そういえばそうだった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おお、対象って選べるんだ。ラスト栄～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>全力移動してエンゲージしてサイオニックヒーリングです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO50</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 14 → 成功</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>やったぜ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ありがたやー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>メイン盾来た!これでかつる!?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>〈特性能力〉で判定。「対象:単」「射程:至近～ 近」のキャラクターの負傷を合計で[ランク+2]ポイ ント分まで回復することができる。[ランク+2]から、[軽傷]1ポイン ト、[重傷]2ポイント、[致命傷]3ポイントで回復内容を選択。</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>致命傷回復はうれしい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>治療の特技があるので……致命傷、致命傷、重症を回復</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>強くない?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>つよい(確信</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「内臓が生き返るわ～」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>コストは疲労2!おわりです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>先生辞めて医者になろう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>医者いらないなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ほい、クリンナップ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO50 抵抗力</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 21 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>軽傷1点もらって、解除</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ハーフタイム</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>次回でけりが付くかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ランク7とかつよいよ～～</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>強いな～……4セッション目相当の敵なんだけど、なんかおかしいんだよな……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>餡子が肉餡子になるところだった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>戦闘バランスをルルブに任せたらコレですわよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>まあ前衛1と盾1の2人体制だから、むりがある</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、回復する能力あるんだけど、それはない設定にしてあるから、少しだけ安心してね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>回復薬いないとすぐ死にそう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>さすがにクリティカル出すぎだよ……これが怖いんだよなぁ。まあ、いずれにせよ、次回なるようになる。あとは自由解散でどうぞ～</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        次の日……
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>きみは……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>はて……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>この物語のヒロインだよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>私がヒロインです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>大丈夫?死にそうな感じだけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ヒロインが多くてすばらしい。大丈夫、私は気が付いたのだ、あの敵キャラがなぜランク7なのか……きっと君たちも気が付いてくれるはずだ(テノヒラクルー</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">ここまでのあらすじ</p>
+                        藤堂高虎から事件の解決を依頼された栄。<br>
+                        栄の殺人容疑(?)の真相を確かめようとしていたら、いつの間にか謎のアンプル事件を追いかけることになった餡子と鶫。<br>
+                        打ち捨てられた郊外の古い洋館、2つの事件はそこでつながることになる。<br>
+                        <br>
+                        3人が目にしたのは、醜い肉の塊に豹変したプロジェクトFIの元主任と、傍らで力なく倒れる秘書犬塚。<br>
+                        一番槍宜しく突撃した餡子は、肉の塊から繰り出された巨大な拳の前に瀕死の重傷を負ってしまう。<br>
+                        <br>
+                        はたしてゼロ特の運命やいかに――。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>やる気だせおら</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>時には鶫も特攻しよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>自分近距離攻撃できないんで無理っす。お嬢が死んだら後の事は任せてくれ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あらすじはいいかな、ではラウンド3行く前に……ちょっとルルブのP247ヘカトンケイル、フレーバーテキストと攻撃手段をじっくり読んでくれ。読んだら教えてくれ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>弱いよね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ヘカトンケイルと聞くとピチピチタイツ着ているイメージが思い浮かんだ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>なんで……?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>昔やってたゲームの影響</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド3</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おっけい、じゃあいくでぇ!の前に……肉腫君を増殖させよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>choice[1,2,3,4,5,6]</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>GardenOrder : (CHOICE[1,2,3,4,5,6]) → 5</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>なんかヘカトンケイルから離れたお肉が形を伴って君に襲ってきます。性能は1ターン目で出てきた奴と同じね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>なんか攻撃された記憶があるようなないような</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>イニシアチブどうぞう!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>Evi@栄のイニシアティブ値を14(1d10+5->9+5)した</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+7 イニシアチブ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+7) → 2[2]+7 → 9</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>1d10+11-2 「先制判定」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+11-2) → 2[2]+11-2 → 11</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おっけい、ではいこう、栄から～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>必勝戦法する?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>是非</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>いや餡子が遅いからここはたえるか……。とりあえずマインドブラスト</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>go100</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 45 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 92 → 失敗</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>防御力を無視して1d10+[ランク*2]のダメージ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>1d10+12</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 2[2]+12 → 14</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>やさしい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ソロなんで放心もセットです</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCIM12</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>衝撃[12] → 軽傷2、疲労2 | 平衡感覚喪失 …… 衝撃で三半規管にダメージを受ける。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>疲労がなくなるのはいやらしいな……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>化け物にあるのか三半規管</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>放心つきぃ!疲労削るのが一番うれしい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あい、おっけ～……放心は判定の成功率1/2と</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>サイコ倒すときは放心重要だな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>主人の盾にならない下僕なんて要らない</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>なんか酷い会話を聞いたぞ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>ここは遠慮なく……</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO60 多眼光線+マルチレーザーアイ(特性能力/範/近/灼熱)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 95 → 失敗</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>びーーーむ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>は、1/2でも失敗だわ……。疲労が-2しただけ……、次の方どうぞ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>エアカッターしよう。ヘカトンくんに</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO100 [特性能力]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 39 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 53 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>当たり～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>いいぞ～</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>2d10+5*3 「エアカッター 疲+1 切 単 近」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (2D10+5*3) → 10[1,9]+5*3 → 25</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCSL22</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>切断[22] → 重傷2 | 腹部負傷 …… 腹部を深く切り裂かれる。</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「切れ味はどうかしら?」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>「ugggoooggg」声にならない叫び</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>オーバーブーストはまだ温存しよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>腹ぁ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>どうせなら腕きって減らしてほしかった</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>次の肉腫ちゃんは、鶫に近づいてなんか飛ばしてきます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>肉汁やな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>汚物は消毒しないと</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>GO70 肉弾(銃撃/近/単/銃弾)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 100 → ファンブル</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>なんじゃこりゃあ……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>がんばってよー</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>あらぬ方向に飛んでいきました。次の方～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>私だ。どうするかな、本体攻撃するか、へかちゃんに3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 70 → 失敗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 30 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 37 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 68 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 91 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>あたりのあたり～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>結果オーライ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>手数が増えるの怖えなあ、やっぱ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>とんでもないことですよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+19</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+19) → 6[6]+19 → 25</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+19</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+19) → 4[4]+19 → 23</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>どっちも9引いて……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ハチの巣の出来上がり</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCBL14</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>銃弾[14] → 重傷1 | 肩負傷 …… 肩を貫かれる。骨が砕けたようだ。</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCBL12</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>銃弾[12] → 軽傷4/スロウ:-3 | 胴部負傷 …… 胴部に銃弾をくらう。痛みで動きが鈍くなる。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>いまいちだなあ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>スロウだ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>軽傷ゲージなくなりました</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>でもどうせ回復するんでしょ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>疲労で回復されるしなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、ごめん、回復能力は失ってる設定</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>強すぎると思って失った能力が……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ん、んむ……。んでは、クリンナップ。ダメージ受けてるの敵だけじゃあん……放心解消</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>おれは しょうきに もどった!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>会話したら仲魔になるかなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>そのまま人間に戻って</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド4</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>セットアップよろしく!</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>スロウ分遅くなってます。スロウ解消</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>Evi@栄のイニシアティブ値を15(1d10+5->10+5)した</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>はやいぜ!放心させてやるぜ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+7 イニシアチブ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+7) → 9[9]+7 → 16</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>1d10+11-2 「先制判定」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+11-2) → 7[7]+11-2 → 16</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>なんでや!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>放心いらなそうですね……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>もうまたなにもできないでおわっちゃいそうだあ^q^</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>がんばってMOB1!!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>MOB1のいいとこ見てみたい!</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>まあMOBを放っておくと第二第三の……鶫からどうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>よっしゃここで決めよう、必殺3段撃ち</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 78 → 失敗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 94 → 失敗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 39 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おしい</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 34 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>当たり～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>おしい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>がんばれよお!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>そしてさっき忘れてた部位狙いを使うぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+19 重機関銃ダメージ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+19) → 3[3]+19 → 22</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ダメージ表は繰り上げね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>13だめ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCBL13</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>銃弾[13] → 軽傷4/スロウ:-3 | 胴部負傷 …… 胴部に銃弾をくらう。痛みで動きが鈍くなる。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>これが1個上がって肩損傷かな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>だね</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>重傷1点もらいます。これで重症ゲージもゼロォ……次餡子</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>これでお前の残り肩は後5つだ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>とにかくひたすらファイナルエアカッター</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO100 [特性能力]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 54 → 成功</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>主任は死ぬ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 19 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>避けました～^^</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>やめてね。疲労減らします</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>次、栄～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>マインドおおブラストおお</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO100</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 55 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 53 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>当たり～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>Evi@栄の軽傷を2した (軽傷:3->2)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>回避30じゃあさすがにな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>1d10+12</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 9[9]+12 → 21</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>aneko@餡子の疲労を1回復(疲労:6->5)</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>放心つき</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCIM21</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>衝撃[21] → 軽傷5/放心 | 頭部痛打 …… 頭部にクリーンヒット。意識がもうろうとする。</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>うおお……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>いたそう……ゆるせ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>繰り上がって致命傷が-1</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>地味に自動回復ないのが聞いてる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>(もともとの能力であった)回復あっても何とかなったかな?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>対処法を知ってるか知ってないかで強さが大変動する</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んじゃあ、最後っ屁じゃないけど、餡子殴るよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>攻撃はずしたのに……</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO75 多腕の拳(当身/単/至近/衝撃)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 6 → クリティカル</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO75 多腕の拳(当身/単/至近/衝撃)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 77 → 失敗</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>またこれかぁ……回避よろしく</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO66 [回避]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=66@13 → 56 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>当たり</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>2d10+30+6</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : (2D10+30+6) → 8[2,6]+30+6 → 44</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>かばーーーーりんぐ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>鶫助けて死んで</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ごめん届かないや</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>栄に衝撃貫通の44でいいかな?カバーリングってなんだっけ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>わしがダメージをうける であってる</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>おっけおっけ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>って貫通するんですか、一撃死しそう</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>そりゃあクリティカルだもん</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCIM44</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>衝撃[44] → 致命傷2/DOT:重傷1 | 内臓損傷 …… 衝撃が身体の芯まで届き、内臓がいくつか傷ついたようだ。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>先生なら生徒を庇うはず</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>栄先生こそバディ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>40ってもうカンストじゃん、まあいい食らおう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>Evi@栄の致命傷を0した (致命傷:2->0)</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「先生……私のことをかばって……ううっ」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>い……生きてる……!?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>バリスティックシールドが……効かない……!?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>俺の生徒に手をだすなって言ってほしい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>もう出た後だからなんとも</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DOTもついてるけんね!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>重傷なら大丈夫。いけ!MOB!きみならやれる!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>がんばれ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>私の味方ってどこにいるんだろう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>一人だけ生緩い戦いしてるので、渇を入れてあげたい</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>謎の応援に感動する次第。次の肉腫君は鶫にお肉を飛ばします</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>GO70 肉弾(銃撃/近/単/銃弾)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 19 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO90 回避</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=90@18 → 33 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>当たり～</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>当たるか</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>1d10+10</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 5[5]+10 → 15</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>結局これ何が飛んできてるんだ?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>概念</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>そりゃあ肉だよ肉。自分の一部を飛ばしてる</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>DCBL14</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>銃弾[14] → 重傷1 | 肩負傷 …… 肩を貫かれる。骨が砕けたようだ。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>重症残り3</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>いたそう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>なんか痛そう……クリンナップ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ほっといたら体なくなって死なないかな</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@増殖する肉腫1</div>
+                <div class='col-sm-10 serif'>増殖するするわけだから、自分で増えるよ増えちゃうよ!ワカメだよ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>エコですね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>DOT受ける人は受けて、解消判定よろしく</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO40</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 89 → 失敗</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>だめぽ。抵抗力40だからなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おもしろくなってきたんじゃない、これ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>モブの攻撃が意外と強い</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド5</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>セットアップ!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>Evi@栄のイニシアティブ値を7(1d10+5->2+5)した</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+7 イニシアチブ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+7) → 10[10]+7 → 17</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>1d10+11-2 「先制判定」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+11-2) → 9[9]+11-2 → 18</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>なにこれは……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>これはお陀仏ですね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>餡子さんどうぞ……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>オーバーブラストハートしたい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>魔法少女が出しそうな技名ですね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>私のキャラ設定になにがなんでもカバーリングするってあるんで殺しきってくださいね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>当てなきゃ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO100 [特性能力]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 46 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 60 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>あたっちゃ……ったああああ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>オーバーブラストファイナルエアカッターします</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>2d10+5*3+10 「エアカッター 疲+1 切 単 近」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : (2D10+5*3+10) → 16[7,9]+5*3+10 → 41</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>カンストぉ!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>MAX行ったあ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>致命傷-1</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>aneko@餡子の疲労を1回復(疲労:5->4)</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCSL38</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>切断[38] → 致命傷2 | 胸部切断 …… 傷が肺にまで達し、喀血する。</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>よってあとは死亡ゲージが1です。これは見せ場やってきましたよ!!</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>最後は任せろ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>嫌な予感がする</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>こけて</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>もちろん3段撃ちフルコースだ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 44 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 2 → クリティカル</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO51 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=51@10 → 33 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>フルコンボだどん</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>かったな、風呂入ってくる(二回目)</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>許されない……!これは許されない!</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 21 → 成功</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 70 → 失敗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GO30 回避</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 36 → 失敗</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>クリティカルと通常HIT</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「ひき肉にしてやんよ!!」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>最後に鶫を倒して終わりかな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>クリティカルにおーばブースト</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+19+10 重機関銃ダメージ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+19+10) → 1[1]+19+10 → 30</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>1d10+19 重機関銃ダメージ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : (1D10+19) → 2[2]+19 → 21</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>1と2がみえる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ここの出目は酷いな</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>DCBL21</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>銃弾[21] → 重傷2/マヒ | 脚部貫通 …… 脚を銃弾に貫かれ、その場でひざまずく。</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@元プロジェクト主任</div>
+                <div class='col-sm-10 serif'>たえられまへぇ～ん^q^</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「やったか!?」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「お前の狂った研究は終わりだ」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>餡子のエアカッターに切り刻まれ、鶫の凶弾より、醜い肉の塊はうごめくのをやめた……</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>===== テッテレー!キミ達は戦闘に勝利した! =====</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

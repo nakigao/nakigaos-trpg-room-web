@@ -1,0 +1,457 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>漆黒紋様の輝き</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　オーダー達の熾烈な攻撃により、その巨大な風竜は塔の最上階の床に倒れこんだ。大量の砂埃が舞い上がる。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「ふぅ……いい運動になったぜ」足がたがた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「無茶しすぎね、ドクターストップよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もうちょっとだけ続くんじゃよ^^</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        「今じゃ! クリスタルを――」<br>
+                        　後ろからアステルの声が聞こえたかと思うと、巨大な風竜の首の付け根にあった漆黒の紋様の輝きが急激に増した。<br>
+                        　ぐらりと小山ほどもある巨大な身体を起こし、大きく咆哮する巨竜。<br>
+                        　正気を失った目には、三人のオーダーの姿がハッキリと映っている。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@風竜(成体)</div><div class='col-sm-10 serif'>「グオオオオオオオオオ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「……後は任せなさい」前にでよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「グラントさん、後は任せた」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>さんづけだったけか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>旦那じゃなかったけ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>だんなぁ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>グラタンってよばれてるよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ぐらたぁぁん!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(ぐぅ～……)お腹の鳴る音</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　竜は、翼を大きくはためかせた。翼からは、今までとは比べ物にならないほどの暴風が発生し、オーダー達は身体を固定するため地面にひざまずいた。<br>
+                        　その一瞬の隙をついて、その巨体は雲の上まで一気に上昇し、そのまま姿を消す。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「ど……どうなったのじゃ?」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　時間にして数秒後、塔のすぐ近くを巨大な影が通り過ぎたかと思うと、不連続な爆発音ともに身を切り裂くような突風が吹き荒れる。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ここで誰かが知識判定!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>知力?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、それそれ。ネフィリムのっけてもいいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=90@18 → 84 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、ゲンゾは</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　あの音と衝撃は、飛翔体が音速を超えた際に発生する空気の波『ソニックブーム』であることがわかる
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「あ、これ、やばいやつ」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　再び姿を現した巨大な風竜は、決して速度を緩めることなく大空を飛び回る。漆黒の封竜紋は輝きを増し、さらに速度を上昇させる。<br>
+                        　オーダーに残された必殺の技、限界能力の発露という最後の手段『オーバーブースト』。空を飛ぶ巨大な風竜は、今まさにそれと同じ状態であるような気がした。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と、ここで～……</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">プレイヤーアクション - 超音速で飛ぶ風竜を撃ち落とせ</p>
+                        なんとか撃ち落としてください。<br>
+                        <br>
+                        作戦を考えたら実行に移す前に教えてください。<br>
+                        トドメはグラント君がさします(最後の分岐演出のため)、これだけは決定事項です。<br>
+                        ラストの締めシーンなのでめっちゃかっこよくお願いします!<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、こんな感じで前置き完了です。ちなみにこのワンシーンで、このシナリオのBAD,GOOD,TRUEが決まります</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>これは自爆の術</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>音速はむりじゃああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>レールガンショットで旦那をぶっ飛ばすか。効果は光速で移動する代わりに旦那が死ぬ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>グラントが撃ち落とすってそういう意味?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>次元斬を使うときが来たかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>でも撃ち落せって言われても、正直困るよね。なんもないぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>飛んでる敵に何が出来るのだろうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ダイアモンドダストしかこっちも攻撃無いしな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>君たちは三人いるでしょ～? 一人でなんとかできなくても、三人ならぁ～?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やっぱりレールガンブーストか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ソロが3人いてもソロなんだよ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そんなぁ;;</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>幻蔵クエストだったらレールガンで終わってた可能性が……?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>塔の近くを飛んでるならパーマフロストで動きを止められないかな?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>世界をとめろ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うん、いいんじゃないかな。ゆっくりくらいにはなるかも</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>我々の能力シナジーなくない……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンゾウは? なんかイベントアイテムもってなかたった?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>風竜だんごかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>それ思ったけどギャグシーンになるからやめた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>どこまで重要アイテムなのあの団子</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>相当重要なアイテムなのじゃ!　本当はあの牙の矢も大事だったんだけど、不思議なことにいらなくなったのだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>とりあえず空中に氷の塊を出して飛行の邪魔をしよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>じゃあこっちもレールガン当てて敵の行動を鈍らせよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いいね、ヒョウカの行動承認、ゲンゾの行動承認</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>トドメをさすのだ!グラント</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>しょうがないにゃあ……。いうてクロスボウしか無いんですけど……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>竜関係の矢かなんか無かったけか?　あのデビルウーマンがパクったお供え物</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あったけど置いてきた気がする</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>捨てたよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>そんな気もしてた</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>つらぬく矢</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　氷華と幻蔵によって飛行する軌道を誘導された風竜は、グラントと一直線の位置で対峙する。<br>
+                        <br>
+                        　風竜は、いっそう強く羽ばたいた。その瞬間、空気の壁が発生するのが肉眼で確認できた。<br>
+                        　音速はをはるかに凌駕する速度で空気を切り裂くその姿は、今まさに、巨大な風の砲弾となって、グラントに襲いかかろうとしていた。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>(これあれだ、GMはすごいシンプルなのを望んでたけど我々が勝手に困ってただけのやつ)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>こっから、総製作費うん億円のムービーシーン入るので、キューしたら最後にグラントの選択をどうぞ</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <br>
+                        　グラントがトリガーに指をかけたとき、脳裏に浮かぶ姿があった。<br>
+                        　それは、祠の前で必死に祈るエリィの姿。<br>
+                        <br>
+                        「お願いです、風竜様。風の御遣い様達が、どうか無事に戻ってきますように……」<br>
+                        <br>
+                        　その姿が、どこか遠い景色の、別の少女と重なる。<br>
+                        <br>
+                        「――さん。どうか無事に……」<br>
+                        <br>
+                        　エリィに似た姿のその少女は、祈りながら泣いていた。<br>
+                        　<br>
+                        　グラントは、持っていたクリスタルが急激に熱くなるのを感じた。<br>
+                        　それと同時に、つがえていた矢から『風の流れ』が生じる。<br>
+                        　自然の風や、目の前から迫る突風ではない。確かに、矢の先端から、意志を持ったかのように風が吹いていた。<br>
+                        <br>
+                        　グラントは確信する。<br>
+                        <br>
+                        　風が、二人の少女の祈りが、力を貸してくれている。<br>
+                        　この一撃は、決して外れることはない。悪意をつらぬくための矢に成った、と。<br>
+                        <br>
+                        　グラントは目を見開いて、クロスボウのトリガーを――<br>
+                        <br>
+                        <br>
+                        <br>
+                        　[[[ ROLL FOR YOUR FATE ]]]<br>
+                        <br>
+                        <br>
+                        <br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>じゃあSHOTだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 55 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>クリティカルでろや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>問題なっしぃん。グラントは実にいいフラグを立てていったのです</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <br>
+                        　――引いた。<br>
+                        <br>
+                        　グラントの放った矢は、寸分たがわず、風竜の首の付け根にあるクリスタルに向かって飛んで行く。<br>
+                        　一条の風の弾丸となったその矢は、近くの風を吹き飛ばしながら猛進する。<br>
+                        <br>
+                        　風竜の生み出した強力な風の壁をも無効化し、ただ真っすぐに進み続ける。<br>
+                        <br>
+                        　――矢は、操竜紋の中央にあるクリスタルをつらぬいた。<br>
+                        <br>
+                        　パシンッという、何かが砕ける音と共に、風竜の突進スピードが目に見えて落ちる。そのまま、グラリ、と竜の姿勢が崩れ、その巨体がグラントの脇を通過し、後ろの壁に激突した。<br>
+                        　激しい振動と共に、タワーが揺れる。<br>
+                        <br>
+                        　半ば壁に埋まるようにしていた巨大な風竜からは、シュウシュウと瘴気が立ち上り、空に消えていく。<br>
+                        　しばらく経つと、風竜は一人の男性の姿に変化したのだった。<br>
+                        <br>
+                        （シーンエンド）
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ついでに首も貫こう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>男になったから! おとうさん元に戻ったから!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>でも角が無いと困るからもう一度竜になってもらおう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>たしかに、取りあえず縄で絞めとこう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「ダンナァ!空から男が!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「お義父さん!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>漢字の当て方よのう……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@風竜だったおじさん</div><div class='col-sm-10 serif'>「……う、うーん」と息はある感じ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「竜から人になった?面白いわね……調べたい」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じゃあ治療(解剖)しますね。体に異常がないか調べますよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ひょうかにクロスボウを撃たなきゃ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「大丈夫か、あんた!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@風竜だったおじさん</div><div class='col-sm-10 serif'>「あ、だ、大丈夫だ。わたしは……」とガクッとそのまま意識を失うね。背負って帰ってください</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ふうりゅうおじさーん!!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>背負うか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>略してプー太郎にしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どう略したの!?　んでは、暗転して、エンディングになります</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>TRUE END</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 全員<br>
+                        [場所] クエルテールの町<br>
+                        [季節・時間・天気] 初夏、夕方、晴れ
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>「御遣い様ー!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>町の入口で、宿屋の娘エリィが大きく手を振っている。戻ってくるのをずっと待っていたようだ。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>エリィは、グラントの背中に背負われている男に気がつくと、血相を変えて走ってきた。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>「お、おとうさん!?」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>俺は帰ってきた!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「娘よ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ややこしいわw</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@風竜だったおじさん</div><div class='col-sm-10 serif'> 背中の男は、弱弱しく笑うと、心配かけてすまない、ただいま、と言った。それを聞いて、エリィは一筋の涙を流す。</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　町に入ると、グラントたちは町の人々に囲まれ、様々な感謝の言葉が投げかけられる。<br>
+                        <br>
+                        「ありがとう、御遣い様！」<br>
+                        「治ったんだぜ、うちの息子の呪いが！」<br>
+                        「庭で取れたキノコです、受け取ってください！」<br>
+                        <br>
+                        　やんややんやと盛り上がる町は、まるでお祭り当日のような賑わいだ。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>3人目は帰れ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>KINOKOにきー</div></div>
+
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　町が喧騒に包まれる中、一行は宿に戻った。<br>
+                        　宿では、エリィの面影をもった女性、呪いが解かれ本来の姿に戻った母親ローザと、宿で待機していたシロノ姫とローグのルオに出迎えられる。<br>
+                        　ローザは、夫の無事を確認すると、ありがとうありがとうと、何度もお礼をのべていた。<br>
+                        <br>
+                        　エリィの父親をベッドで休ませ、一行は出発の準備を整える。<br>
+                        　かなりの時間を消費してしまったが、和平交渉には十分間に合うはずだ。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>フラグかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んでは、グラント君</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>「風の御遣い様」去り際、エリィがグラントに声をかけてきた。「ありがとうございました。おかあさんの呪いを解いてくれて、町を救ってくれて、おとうさんまで……。私、なんとお礼を言っていいのか。……け、結婚、しますか?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と聞かれます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>求婚娘</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>キャラを貫徹せねば……!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「先も申したとおり、一所に縛られぬもの。私は旅を続けますので、そのような申し出に応じることはできません」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>クールってか、なんかやっぱダンディだよな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'> 真っ赤になったエリィは、ハッとしてから、ぺろりと悪戯っぽく舌を出す。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>「ち、違いましたね。そ、そうです、こっちを約束したんでした」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'> そういうと、はにかみながら小指を立てて笑って見せる。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>にぎにぎ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>中指?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ハードボイルドギャグになるぅうう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@エリィ</div><div class='col-sm-10 serif'>「けどちょっと残念、かも。なんて……えへへ……」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　グラントは、その笑顔をどこかで見たことがある気がしていた。脳裏に『エリ・後藤』という単語が浮かんで、すぐに消えた。<br>
+                        　クリスタルがキラリと輝く。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ダサい名前だなあ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>変えたい場合は、あとで言ってくれていいよ^q^;</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　エリィ達に最後の別れを告げてから、一行は馬車に乗り込んだ。<br>
+                        　パシンと馬に鞭を入れるアステル。馬車は、ゆっくりと進みだす。<br>
+                        <br>
+                        　街道へと去っていく馬車を見ながら、少女エリィは祈った。<br>
+                        　これからの旅路、風の御遣い様達に幸せが訪れますように――。<br>
+                        <br>
+                        <br>
+                        　ガーデンオーダーTRPG<br>
+                        　シリーズ「GOとぅあなざーわーるど！」<br>
+                        　第二話「つらぬく矢」<br>
+                        <br>
+                        　おしまい<br>
+                        <br>
+                        <br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と、いうわけで……見事TRUEENDでおしまいです! おつかれさまでしたー!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>おつかれさまです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>オツカレー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>やったぜよ!</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>感想戦</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>時間になっちゃったんだけど、あとは個別エンドかな。 何かRPしたいエンディングがある場合は、どうぞ。GMは付き合える、なんかある?　なければ、このまま自由解散でどうぞ～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ手に入れた竜の死体で実験でもしてますね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>幻蔵はこの町で一体何をしたのだろうか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>まんじゅうをてにいれた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>本当にそれしか覚えてない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>何だかんだで戦闘で大活躍だしいいんじゃない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>最後ほとんど一騎打ちだったもんなぁ。あ、あとルオとのフラグも建ったよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>忍者VSドラゴン。ドラゴンライダーGENZOになるか、ドラゴンの子供はいませんか……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ないです^q^</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>冒険の書</h2>
+                    <p>これまでの冒険を記録しますか？　▼はい　いいえ</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th></th>
+                                <th class="col-sm-2">グラント・後藤</th>
+                                <th class="col-sm-2">鏡 氷華</th>
+                                <th class="col-sm-2">日隠 幻蔵</th>
+                            </tr>
+                            <tr>
+                                <th>セッションに最後まで参加した(5)</th>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>シナリオの目的を達成した(10)</th>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>TRUEエンドボーナス(2)</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>よいロールプレイをした(1)</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>他のプレイヤーを助けた(1)</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>セッションの進行を助けた(1)</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>場所の手配、連絡を行った(2)</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>ナイスダンディ(2)</th>
+                                <td>2</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>回復したで賞(2)</th>
+                                <td>-</td>
+                                <td>2</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>焼き団子ボーナス(2)</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>総獲得経験値</th>
+                                <td><b>22</b></td>
+                                <td><b>22</b></td>
+                                <td><b>22</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">冒険の書</div>
+                <div class="col-sm-10 serif">「記録しました。ゆっくり休んでくださいね」</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

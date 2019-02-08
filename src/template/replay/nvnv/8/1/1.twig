@@ -1,0 +1,633 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/nvnv-common.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>PL達の控室</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>はろう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>たろう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じろう。21時から開始ね、ルルブでも読んでてください。あと、絵は無印ののびのびだけど、手に入ったのはホラーののびのびなのであしからず</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>ルルブなんてないぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>しっけい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>共有メモ参照</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>こいつは手ごわそうだぜ……!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>このメンツだから言うけど、ぶっちゃけすくぱに</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>友達を作るゲーム</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>職業どうしようかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>暗殺者がいない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲームが進むと勝手に暗殺者になるゲーム。それがのびのび</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>なら安心だ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>正直自分が細かいルール把握できてないんで、辺だったら教えて</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃ、はじめよっかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>のびのびTRPG体験卓。はじまりはじまり～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>のびる～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>でだ、ルールはほぼすくぱにです。GMと場面PCが毎シーン変わるちょっと変わったタイプのゲーム</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>大喜利めいた内容がおおいので、頑張ってネタを絞り出してください</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>時間的に2回くらいできたらいいかなと思う</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>強敵なのでは</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んじゃあ、さっそく自分のアバターを作成していただきましょう。キャラクター選択して、Wifiボタンを押下よろしく</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>アイコンまでは用意できなかったから、適当に用意してね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「naki@教授」をキャラクターとして追加しました。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>教授もーらい!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@記者</div><div class='col-sm-10 serif'>「Evi@記者」をキャラクターとして追加しました。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>キャラの能力見たけどよくわからんな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>勝ち狙うゲームじゃないから、フィーリングで大丈夫。1回やればすべて理解できるくらいには簡単</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>「kaeru@アイドル」をキャラクターとして追加しました。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>ヒロインが不足していると見た</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>一応性別設定があるけど、男子XXとかっていうのじゃなければ、適当に性別詐称しても大丈夫だと思う</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>アイコンと名前くらいは決めてもらおうかな。15分までくらいでよろ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@記者</div><div class='col-sm-10 serif'>とりあえず頭に女を付けてみたけど女フリーターだけはどうやっても微妙だなと思った</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>サーバーに送信された内容は、全部左上に出てくるから見つかんなかったら、左上に探しに行ってね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>準備できた人は、自分の席について手札置き場を作成して待っててください</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>スーパーとかでめちゃくちゃレジ打ち早いおねいさんとかそういう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>アイドルのステータスヤバくね?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@記者</div><div class='col-sm-10 serif'>kawaiiを目指そう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ちょうじょうきゅうしゃむけ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@PL</div><div class='col-sm-10 serif'>これは守ってもらわないと死にますね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>一度でいいからやってみたかった超常現象の教授</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>これがkawaiiだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>出典がわからぬ……妄想代理人とかその系統にも見えるが</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>セクシーなまつげ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>できた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>左上にいるっていってるじゃああん!>カエル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>あいつは言うことを聞かないからな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>またへんてこなパーティになったなぁ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>今回はドジっ子属性がついてるからな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>PLについてても嬉しくないんだよなぁ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>キャラを演じるにはまず自分から演じなくてはな</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>イントロダクション</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よし、ではアイコンも出お揃ったので、いくかー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>2でぃー6して、最初のGMを決めよう。大きい人がGMだ</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>===== GM決定 =====</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>DiceBot : (2D6) → 9[4,5] → 9</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>廊下出たら寒くてワロタ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (2D6) → 5[2,3] → 5</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (2D6) → 7[5,2] → 7</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう秋の様相だぜ。では、最初は自分がGM。時計回りに場面PCの人でよろ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>こんな感じね、ではイントロダクションカードをひきます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>高みの見物だぜ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「INTRODUCTION CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>読んでどうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[INTRO] 廃墟の街 /砕けたアスファルト、灯らない信号、赤錆びた看板、カビて腐敗した建物、黒ずんだ血痕……ここは何らかの理由で打ち捨てられた無人の街だ。  君たちはそれぞれの理由でここを訪れた。 面白半分なのか、過去の因縁によるものか、何かに呼ばれたのか。  やがて訪れる長い夜の果てに、PCたちは何を見るのか?/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんで集まってきちゃったんでしょうね……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「今日のライブ会場はここかしら?」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>迷子かな?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>2人ともファンなんでしょ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>誰君</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>写真と違わない?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>しんらつぅ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>期待の新生アイドルカリーノでーす!!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>写真では替え玉使ってますので</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「最近噂のヤバい系アイドルのコンサート会場は……なるほど、いきなりヤバそうだ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>写真と違いすぎやろ!</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>1週目</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よし、次は場面カードを退くと</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[SCENE] 巨大な怪物 /そこに立ち入った君たちの足元が、突如崩れる。 轟音と共に現れたのは、異形が寄り集まった山のごとき巨大な怪物だ!  逃げ場所はない。 命を賭して、この脅威に立ち向かうしかない! /[判定] /[力:15]または[技:15]以上で成功する。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>わぁ、いきなり大変なのがきちゃったなぁ^q^;</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>15……15?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@怪物</div><div class='col-sm-10 serif'>「アイドルダイスキーーーーーー!」どーん!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>というわけで、15判定宜しくね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「キャハ!アリガトー( ´∀` )」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>同値成功の2d6+xxxだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>66がでても足りないんですけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@怪物</div><div class='col-sm-10 serif'>「センザイシャシン ト チガイスギル!ニンキド サゲマス!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「教授!こいつはいったい!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>アキオ君にサポート系のスキルがなければ、これは自動失敗かな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「あわわわ、あわわわわわ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ないですねぇ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>判定で切り抜けるかRPで切り抜けるか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>もうおしまいだあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>選ぶんじゃないんですか?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>カードに書いてあるんだ、判定かロールプレイかってね。今回の場合は[判定] = ダイス</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>どうしようもないじゃあないですか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、カリーノさんは怪物のあまりの剣幕に圧されて腰が抜けちゃいました。怪物はぷりぷりと帰っていきます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>カリーノの魂を賭けよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>「闇」のカードをひいて自分の手札に加えてください。公開してOK</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「DARKNESS CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>左上ね左上。右クリックすると操作メニュー出るよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>闇の力を手に入れた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あっ(察し</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>キャラにもあってる気がする</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>やっぱり危ない人だった</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>実は自分をアイドルだと思ってる一般人です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ほんまやで。BONUSってのは、パッシブ的な何かです。これ以降技+1できます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>アイドルガミ目指してます?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>もちろん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「カリーノくん、君……今の怪物は……」と助けてあげます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「私のファンだったみたい、おっきい人だったね!!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「キャハ!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ギョパ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>(慈愛のまなざし)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んでは、GMと場面PCが移動します。流れはわかったかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「でもこのイベントはコスプレNGなのに」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>シーンこい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>私がGMか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>でいいのか?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES、GM。SCENEカードをひいて、公開するべし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>私がGMになったからには生かして返さんぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[SCENE] ショッピングモール /重苦しいシャッターが轟音を立てて開き、潜り込んだ先は……果て無き広さのショッピングモールだった。 ここにはなんにでもあるが、目当てのものを見つけるには少しだけ広すぎる。  案内図にたどり着くためには方向感覚と徘徊する異形を回避する素早さが必要だ。 /[判定] /[技:11]以上で成功する。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、それっぽいのきたやん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>何探してんねん!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>チェーンソーじゃないの?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「うんわぁ、ひろぉ～い、ひろいですぞ～」とはしゃぐ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>もしくはバールかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>応援いる?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GMは応援できぬ!……だったと思う</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>まじか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んー、けど他者の判定だからしてもいいかな。していいでいいや</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>じゃあ可哀想なアキオさんを応援してあげよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「(この規模のショッピングモールならきっとでかい金庫があるはずだ)」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>大泥棒めいてきた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「キャハ!がんばってアキオッチ、そのうちいいことあるよ!!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>現代の盗掘者</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>出目に+1できるよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>あ、はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>2d6+3+1>=11</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (2D6+3+1>=11) → 10[5,5]+3+1 → 14 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>あったよ金庫が!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やるやん!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>この人ただの火事場泥棒では?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>成功した場面PCは光カードを1枚どうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>https://blogs.yahoo.co.jp/katada_dayagari2/64385958.html</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>/[LIGHT] 勇気100倍 /一般人に比べると君の勇気は無限大だ。 恐怖しないのではない、恐れを知ってなお先に進む力、それが勇気というものだ。 /[SKILL] /勇気あるふるまい[自身の判定] 今の場面に対し、「勇気があればいいことがある」とGMを説得できたら、判定に[+2]のボーナスを得る。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「よしでかした!!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>スキルが増えた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いきなり主人公補正手に入れてませんかねぇ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>望んだものが手に入る人生が良かった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>次へいこう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>勇気があれば……いいことあるさ(肩に手を置き</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よし、いつでもいいぞー!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>泥棒をする勇気</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>/[SCENE] 墓地 /よく見ると……その暮石には君の名前が刻まれている! そのことに気が付いた瞬間、地面から手が伸び、君の足首を引きずり込もうとする!  このままでは、気の早い墓碑銘が役に立ってしまうぞ! /[判定] /[力:12]以上で成功する。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「わたしの名前じゃああないかあああああ!うーーーわーーーーー!」と取り乱します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>マドハンドだ!殺せ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「勇気だ!教授!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これ研究突破いけそうだな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>応援いる?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「ん?これは……」とマドハンドを見て言います</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>応援もしてして</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>オカルト記者とオカルト教授の二人体制で霊対策もばっちり</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 4</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>+1でーす</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「わたしは実は手首研究家として名をはせていたのだ。日本手首研究学会の会員でもある。この手首は!この手首は数年前に研究所から失われたうんぬんかんぬん」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「地面から手が出るわけアリマセーン、きっとツチノコデース」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どう?>GM</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>手首の専門家をお招きしているから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>番組的にも大丈夫</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よしでかした!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>2d6+7+1<=12</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>DiceBot : (2D6+7+1<=12) → 6[5,1]+7+1 → 14 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>あー!?。。。と思ったら矢印逆らしい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>成功でいい?いいよね?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>いいでしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>矢印への反逆もロックだよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>また謎の設定が生えてきた……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>手首料理人かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ショッピングモール寄りましたからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>完璧でしょ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「んほおお、この手首!この手首、いい!是非持って帰るべきだ」といってポケットにいれました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>どこぞの殺人鬼かな</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>2週目</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ネクストGM</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、言い忘れてたけど。全員が3回GMやったらクライマックスフェイズ突入です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>コノパーティヤバイ人しかいない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[SCENE] 怨霊 /恨みを持った魂が強力な霊的怪物と化し徘徊している。 場面PCの向かい側のプレイヤーがこれから怨霊役になるので(なにかてきとうに恨み言をぼやこう)、襲い掛かってきた亡霊を撃退するのだ。 /[判定] /怨霊役は4Dを振る。 場面PCは、その合計を目標とした「力」判定に挑むこと。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>楽しそうなの当たった。亡霊役さんから一言</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>わしまともなんじゃが</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>しかも力か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>アイドルだけに闇を抱えるようにできている……?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>怨霊「もっと痩せたい……」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>4d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (4D6) → 12[4,1,2,5] → 12</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんかリアルっぽい恨み言出てきたぞ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>怨霊「手加減してやるざます」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「ヘーイ!痩せたい人はアタシのブートキャンプDVDを買うがイイネー!!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ご飯ネタ使えそうだったけど、GM自分だしなぁ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「今日は-1.4kgでした……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>正直支援がないときつい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>自分を応援したいくらいだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「最近のアイドルは、色々手広くやってるんですね……」慈愛の目</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んじゃ、12で力判定どうぞ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>2d6+2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (2D6+2) → 9[4,5]+2 → 11</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おしいいいい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>①足りない!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>DVD効果で成仏しそうな怨霊でしたが、やっぱり痩せなかったのでダメでした。闇カードをどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>怨霊「あんた細いわね……死ぬわよ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「DARKNESS CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>やばい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[DARKN] 妄想しがち /君は火のないところに煙を見て、枯れ尾花を見て幽霊を見た気になって、2人組を見るとなにかとドキドキする能力の持ち主だ。 もしかして、今の事件も君の妄想だってことは……。 いやいや。 /[BONUS] /技+1/</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>被ったぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それ破棄して、もう1回ひいて</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>そーなのか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「DARKNESS CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>結局やばいな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[DARKN] 感染者 /君はやばいものに感染している! やばい力が湧いてくるが、ほっとくとやばいことになりそうだ。 治療手段を探そう。 /[BONUS] /力+2/技-1/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>やっぱりヤバイ系アイドルだった!?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「オーウ、お薬飲みすぎたカナ?変なものがミエルヨー」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>なんで一人だけホラーやってるんですかね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「カリーノさん……君、背中から何かキノコのようなものが生え……いや、なんでもない」と目をそらす</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「最近ガーデニングに凝ってるのデース」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>(珍しい栽培方法もあったものだ……)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んではGM/PCスワップ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さあひけシーンカードをひけ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[SCENE] 妖怪 /薄暗い竹林に差し掛かったとき、ゆるりと霧が渦を巻き、巨大な生物に姿を変えた。 雷鳴のような大音声が響く。 「人間だ……人間の匂いがする……腹が減って仕方がない……どこだどこだ、食らってくれる」 悪名高い人食いの妖怪だ! こんな天気にはよく出没するんだ。 さいわい竹林に紛れて君たちの姿はまだ見つかっていない。 /[判定] /[力:13]または[技:13]以上で成功する。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほんとにハードなのばっかり出るな……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>その妖怪カリーノじゃない?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>応援しようか?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>じゃあください</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「はっ!?竹林……竹林と言えば竹のこ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>+3だ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「このタケノコがあれば、美味しいご飯が作れる!」※料理人チャレンジ>GM</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「アッキーオさん頑張ってくださいねー」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>いいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「あれは……ついに見つけたぞ!あれこそ私のターゲット、霧の巨人!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>んじゃボーナス+2追加でどうぞ>アキオ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>情報通>GM</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>なるほどいいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃぁん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「対面したら逃げるべしだが、これはチャンスだ……正体を探るために追うぞ!」勇気あるふるまい>GM</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>アキオ君は何かと戦ってきたというのか……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>勇者アキオの覚醒、おk</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「いや、だめだアキオ君!ここは危ない、落ち着いてタケノコ食べよう?な?」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「食べながら追うぞ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>それは伝説のタケノコソード!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「ムシャムシャ!まってよアキオモーン!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>体力回復しながら攻撃できる優れもの</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ローグライク系でありそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>2d6+4+2+2+3+2>=13(力+情報通+勇気+応援+たけのこご飯)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>2d6+4+2+2+3+2>=13</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (2D6+4+2+2+3+2>=13) → 5[4,1]+4+2+2+3+2 → 18 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう何も怖くない状態</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「( ´ー`)フゥー……つい、殺っちまったぜ……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>勇者アキオの勇気が世界を救うと信じて……ご愛読ありがとうございました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「うっ……」とリバースタケノコ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>/[LIGHT] 高みから見渡して /君は電柱の上に立ち、眼下の光景を悲し気に見つめている。 まるでこれから起こる運命を知っているように……。 /[SKILL] /よじのぼる[自身の判定] 君はすごい勢いで高い所に登ることができる。 そのよじのぼる力をもってこの局面をなんとかできるとGMを説得できたら、判定に+2]のボーナスを得る。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どうみても主人公なんですが……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>勝ち確だよなぁ～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>覚醒してるなあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>こっちだって負けてないぞ!!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>妄想癖の感染者は高みから見下ろす勇者に負けない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>/[SCENE] 水場の牙 /地下深く、研究所にたどり着いた君たち。 コンクリートの通路が、やけに湿気に満ちている……と思ったら、行く先が腰くらいの水に満ちている。 そして信じられないことに、怪物化したサメがゆっくりと泳いでいる!  なにも準備せずに入ったら、餌になってしまいそうだ。 /[判定] /[力:15]以上で成功する。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>見下されてませんかねそれ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「サ、サメダーーーー!!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ゾンビに追われて高いとこに逃げて一安心のシーンじゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>サメだーーー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>サメにはワニで対抗するんだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>人あるところにサメあり</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「いやまておちつけ、まだ空から降ってきてないだけマシだ。いける、このまま突破する!シンガリはまかせたまへ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>どうしてサメはこうも人間を魅了するのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「教授!あの背びれは!このまま進むとまずいですよ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>応援いるー?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>教授が勇気を出しても恩恵がないのであった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「アイドルがいればなんでもできる。いけばわかるさ、いってみよう」イノキ顔</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>されないとサメにやられる。応援してして</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 4</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>+1です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>研究ネタ行くか……なんか思いつくかな……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「教授ーベストを尽くせば何とかなるねー」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ここは天丼狙いで……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>サメの性体に詳しければ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「は!あのサメは!実はわたくし日本鮫肌でわさびをすろう学会の会長を務めていたこともありまして……はは、おはずかしい。あのサメ肌は一級品ですよ、ぜひおもちかえりして、ワサビをすりたい、ははは」※研究突破チャレンジ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>サメ肌の有効活用にイイネを贈ります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>いかが?>GM</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったぜ。じゃあ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それでもダメそうだなぁ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>2d6+7+1>=15 研究突破と応援</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>DiceBot : (2D6+7+1>=15) → 7[6,1]+7+1 → 15 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「応援ありがとー!」チャー研風</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>してねぇよ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1足りた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「サメ肌はこう!サメに背後を取り、そして……一気に剥ぐ!!」べりり!当たりは血の海になります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ワイルド!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>そしてポケットに入れて意気揚々と立ち去ります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>なんかさあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[LIGHT] 科学的 /今起こっていることはすべてオカルトに過ぎない。 科学とは、あらゆる現象に説明不可能な法則を見出そうとする姿勢そのものである。 だいたいはプラズマと地磁気のせいだ。 /[SKILL] /種明かし[自身の判定] 今の場面の原因を科学的に解説して、みんなが納得したら、判定に[+3]のボーナスを得る。/</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>光と闇の対立がはじまりそうだね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>キャラ立ってきた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>別の教授になったぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ぜんぶプラズマァ～～～のせいにすればOKという最強のスキルでは?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>PC権をどうぞ>カリーノ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>プラズマ万能説</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>パチパチパチパチ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>3週目</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[SCENE] 演舞 /赤い月が陰る夜、君はうっかり村の奇祭に踏み込んでしまった。 村人が熱に浮かされたような目で、なにやら手拍子を打っている。 (周りのプレイヤーは手拍子を始めること)  奇祭の踊りを即興で成功させなければ、村人に捕らえられてしまうぞ! /[判定] /[技:13]以上で成功する。 場面PCはダイスを振る代わりに踊ってもいい。 成否は周りのみんなで決めること。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>出たはいいが……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>踊る?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>アイドルの本分だしな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>怨霊「このあいだ会ったとき全開の頼み込み見せてくれなかったしなー」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>今めっちゃ踊ってるよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どんな踊りを踊っているんだい!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>10分あげるから動画はよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>EDM</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「あれは……あれはなんというか、すごいヤバい系の踊りだ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>不思議な踊りを踊った</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@村人</div><div class='col-sm-10 serif'>「あぁ～ありがたやありがたや……死んだばあちゃんの踊りにそっくりだべ～」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>支援をくれーーーー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>そんなスキルないし……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>GMだし……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>やってやるぜ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>2d6+2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (2D6+2) → 11[5,6]+2 → 13</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>しゃああ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えぇ、すごい……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>世界よこれがアイドルだ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「ああみんなが私を見ている!そう、これこそが私のあるべき姿!!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>奇祭「ツインテールってリアルでやると微妙だよね」は、アイドルカリーノの奇妙な踊りで大盛り上がりのまま、幕を閉じた。光カードをどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>これがマジカルミライ 2017ですか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>アイドルはリアルじゃないからセーフ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>https://www.youtube.com/watch?v=mn91vqkBDdQ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[LIGHT] 簡易結界 /やっかいごとを避けるための手段を君はもっている。 君や仲間がなにかにさらされたときは、微力ではあるが、結界の技が役に立つかもしれない。 /[SKILL] /結界[すべての判定] やっかいごとから身を守る必要がある場合、判定に[+1]のボーナスを得る(与える)。/</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>魔法少女アイドルになった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>すごいアイドル出てきたなぁ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>多分今の踊りがなんかの儀式だったんだろう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>それ奇行のせいで近寄りがたいだけでは?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あっ(察し</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>結界だつってんだろう!!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[SCENE] 炎に巻かれた! /小さな炎はたちまち膨れ上がり、君たちの周囲を完全に包囲してしまった。 このままでは蒸し焼きになってしまう!  そのとき「こっち、こっちだ!」と、聞き覚えのある声がした。 まさか、あの人が? /[判定] /[技:12]以上で成功する。/</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>早速結界の出番な</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「ファイヤー!!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あの人は今……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>応援もあげよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 4</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>さらに結界で+2だな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「この火力……!この火力があればパサッパサ、まるで本格中華料理店で出てきそうなチャーハンが作れる!これで美味しいご飯を作ることができる!」※料理人チャレンジ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「さあ勇者アキオいくのデース、炎を恐れずに」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>おk</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「く!炎に巻かれてしまった……下にはサメだ。こうなったら、電信柱をよじのぼって逃げ延びるしかないぞ!」>勇気&高み</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>火力は大事だよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>+2どうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>実際大事</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>いいよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「ジャッジャ!」※炎の調理人めいて中華鍋をふるう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ウォー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>あいつチャーハン食いながらでんしんばしら上ってる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>勇者アキオは咆哮(ほ)えた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>2d6+1+1+2+2+2+3>=12</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (2D6+1+1+2+2+2+3>=12) → 9[6,3]+1+1+2+2+2+3 → 20 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>つよすぎぃ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>まるで余裕だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>あいつチャーハン口からこぼれてる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>これは……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>/[LIGHT] おねえさん /言動に年上のおねえさんっぽい雰囲気を漂わせる君は、存在するだけで周りを安心させてしまう。 なにものをもってしても、いい女にはかなわないものさ。 /[BONUS] /技+1/</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>一人だけチートキャラすぎません</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あぁ!?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ここに来てネタに走るのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「ふう……ホットな現場はいやね」(メンソールに火をつける)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>最期の最期でキャラが立ってしまうのか……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>というかそれは私によこしなさい!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>(まるで何年も新宿2丁目のママをやっているかのような立ち振る舞いだ……)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>力と技が4/4になったぜ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>このままヒロインの座まで奪う気か!!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「あら、お鬚……やあね」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>(手帳で隠すしぐさ)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>マツゲが長いのはこのための布石だった……?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「ママ、そう。ママと呼ばせてもらってもいいか、アキオママ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「アキコって呼んでくれなきゃ、やぁよ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「おお……」何とも言えぬ感動を覚えた教授</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@PL</div><div class='col-sm-10 serif'>「SCENE CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ラストシーンカードかなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>/[SCENE] バリケード /奴らから生活を守るために築かれたバリケードが、今は君たちの行く手を阻んでいる。 どこかに進むためには、あえて防壁を破らないといけないこともある。 人生ってそういうものだよね? /[判定] /[力:10]以上で成功する。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>楽勝じゃああん!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>最後になんか優しいのが来たね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>力こそパワー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「なぜ……なぜベストを尽くさないのか!」バリケードを前に仁王立ち</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>応援と結界を上げようか?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>防壁が障害となっているのに結界はおかしいとおもいまーす!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>結界で防壁をを殴るんだよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>もしくは結界で拳を保護とか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「人生とはいわば壁の連続!この程度の壁など……ん?そういえば、このバリケードとして積まれた机の角度。実にすばらしい。物体がもっとも安定する角度である黄金比で詰まれているようだ」※科学的チャレンジ>GM</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>身を守る用途だけっぽいから……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>くれるならどっちもちょうだい!>結界と防壁</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>盾に武器としてのデータないから……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>防壁?応援だわ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ある場合もあるじゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>教授それ防壁破りにくくなるよ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>とりあえず応援</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あー!ソンナバカナー!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>君の簡易結界スキルにはどうみても防御の意志しか感じられない!出直してきなさい!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「カリーノくんの応援で力がみなぎってきた!いや、これは心のそこからファンである、そんなような気分だ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「教授のちょっといい所見てみたい!!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>+3だね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それだけで十分だろう、よしいくぞー!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>a</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>科学はいいとおもいました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>築城の名手は攻城の達人なり</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>今こそ必殺のサイエンスナックルだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、まじ、じゃあさらに+3</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>2d6+3+3>=10 応援、科学的</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>DiceBot : (2D6+3+3>=10) → 7[6,1]+3+3 → 13 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>超大型巨人が門をぶち壊してくれた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「しかし……机のこの一点を殴れば……!」バキィ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どっからでてきた巨人!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>GMが出した</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>最初のやつかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GMが出すなら仕方ない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ゆえに出る</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「LIGHT CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[LIGHT] エージェント /君は政府の命令を受けて、この事件を行うエージェントである。 ただものでない雰囲気を漂わせている(黒ずくめだったりサングラスだったり)が、ひどい目にあうときはあってしまう。 頑張ろう。 /[SKILL] /政府の影[他者の判定] このスキルは自動的に発動し、他スキルと重複できる。 他者の判定に[+1]ボーナスを与える。 自分がGM時、政府の陰謀により判定を困難にしてもよい。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かっこいいけど、なんでこのタイミングでサポート系が……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>なんだこれ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「おっとと、サングラスをかけわすれていたよ。ふふ、ただモノではない雰囲気だろう?」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「それブルーライトカットのやつですか」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「うん、夜寝る前とかにつけると、いいよね。ぐっすり眠れるよ、うん」と嬉しそうに話してくれます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>これの説明文みると</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>スキルって重複しないんかなあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「キャハ!できる男って感じデスネー」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スキルは基本1回だけ使用できるから、そういうことだね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ボーナスは重複していい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>圧倒的出目だったから問題なかったけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>私はルールミスを冒していた……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>普通に応援と結界療法使ってたな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>すまない……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>気が付かなかった我々もよくないのだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>まぁ大人になると苦労するわよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>楽しければよし!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>アキコ出てますよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>出してんのよ!</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>クライマックス</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んでは、3週したので、クライマックス突入します!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「CLIMAX CARD」を追加しました。(カードを自分の管理にして、公開しましょう)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>/[CLIMX] UFOエンド /突如閃光があたりを覆いつくし、これまで遭遇した怪異の後ろから、未知の乗り物に乗った宇宙的知性体が降り立ってくる。 ――お前の仕業だったのか! このまま処理されるわけにはいかない。奴の弱点を突き、地球の力を見せよ! /[DEAD OR ALIVE] /みんなで合計5Dを振り、[25]以上で成功する。 場にある「闇」カードの中から1枚を選び、「そのカードに書かれた数字ひとつx5」をボーナスに加える。/</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうすんだこの結末……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>怪物だ、怨霊だ、サメだ、UFOだぁ!?!?!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と、いうわけで闇カードを1枚選出しましょう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>サイレントヒルかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>闇カード持ってる人はどっかに並べて見やすくしてちょうだい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>闇なら任せろ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>下に置いた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>えぇ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[DARKN] 妄想しがち /君は火のないところに煙を見て、枯れ尾花を見て幽霊を見た気になって、2人組を見るとなにかとドキドキする能力の持ち主だ。 もしかして、今の事件も君の妄想だってことは……。 いやいや。 /[BONUS] /技+1/</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>/[DARKN] 感染者 /君はやばいものに感染している! やばい力が湧いてくるが、ほっとくとやばいことになりそうだ。 治療手段を探そう。 /[BONUS] /力+2/技-1/</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>感染者を捨てるチャンス</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>感染者の方がいいかな?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>って感じかな。てことでボーナスは+2で判定できます。なお感染者は捨てれませ～ん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>エイリアンがウイルスに負ける宇宙戦争パターン</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>2×5じゃないの?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んじゃあ、カリーノから合計5回ダイス振ってくかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>常時とすべての判定以外のスキルは使えないのか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、ほんとだ2x5で10か</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>みんなで合計5Dって</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これたぶんスキルとか載せれないと思うんだよね、特に書いてないけど。ようするに5D+10をしてねってこと</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>15d6なのか5d6なのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>どっちですかね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そう考えると割とシビアだな……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>5d6じゃないの?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>いや</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>一人ずつ5dじゃなくて</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>全員で5dじゃない?この文面</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>5d6、3人合わせてダイスを5回振れるで間違いない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>とりあえず1振るよ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>おっすお願いしまーす</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んむ、よろしく</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>すまぬ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>根性出せ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次アキコ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 5</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ふふん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2丁目は伊達じゃない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>へたれたあああああああああ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>カリーノどうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>まだまだあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>うわあああああああ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>根性出せ!!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>もうだめかもわからんね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>DiceBot : (1D6) → 6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>おらおら</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>つよすぎぃ!?</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>2+5+1+2+6+10</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>さすが有社</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>合計26ポイント!UFOは撃退されたあああああああああああああ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>1足りた!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ママあああああああああ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ヒャッホー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>「ほほほ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「さあ、エイリアンさんも私の踊りを見るのでスー」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@下田教授</div><div class='col-sm-10 serif'>「アキコママ……おそろしい人だ……」と恍惚</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@宇宙人</div><div class='col-sm-10 serif'>「ア!アノ、ムスメ!ヤバイノニ、カンセンシテル!ニゲロ!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@宇宙人</div><div class='col-sm-10 serif'>「マ、ママ～」常連になります</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>「ミンナ……ファンダヨ……ミンナ……タノシイ……ウマ……カユ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と、いうわけでこの冒険物語は一幕。感想戦をどうぞ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>感想戦</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ママ最強</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>休憩入れて次のセッションにいくかどうかって感じ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうだった?結構面白かったと思うわ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>サクサク行くね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次のイントロはあのカードで決まりですね……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>そしてアイドルは厳しい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>RPもそこそこやれて1時間30分前後って感じか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>けど正直応援なかったら闇抱えてた場面結構あったで</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>ぼくは出目がよかった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>大活躍じゃん。カードもいいの揃ってたし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>完全に主役だったよね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ヒロインは私だけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>何気にロールプレイ判定が1度も出てなかったんだなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>少ないんかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>カリーノさんのっけから飛ばしすぎでしょ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>映画の終盤で教授の正体がエージェントだと判明するのは暑いと思う</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>15とか……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>RP判定の奴は結構オンラインだと難しい内容が多くて少し安心してる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>そーなのか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>周りが濃かっただけで教授も割と属性もってたんだなぁ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>みんな踊れええ!とかとてもじゃないけど難しい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ところでもう1戦行く?2ループくらいでクライマックスでちょうどかなって思ってる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@カリーノ</div><div class='col-sm-10 serif'>ええよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>Eviちゃんは?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@アキオ</div><div class='col-sm-10 serif'>いいわよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>やったわよ。じゃあ23時までに次のキャラ作成よろぴく</div></div>
+        </section>
+    </div>
+{% endblock %}

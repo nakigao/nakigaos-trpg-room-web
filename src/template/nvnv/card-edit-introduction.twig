@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-sm-12">
+        <a href="{{ base_url }}/nvnv/card-list/horror/introduction" class="btn btn-default" role="button">Back</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <form name="card-edit-form">
+            <input type="hidden" name="supplement" value="horror">
+            <input type="hidden" name="type" value="introduction">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="xxxxx">ID</label>
+                        <input type="number" class="form-control" id="xxxxx" name="id" placeholder="" value="{{ card.id }}" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="xxxxx">TITLE</label>
+                        <input type="text" class="form-control" id="xxxxx" name="title" placeholder="" value="{{ card.title }}" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="xxxxx">DESCRIPTION</label>
+                        <textarea class="form-control" id="xxxxx" name="description" rows="5">{{ card.description }}</textarea>
+                    </div>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="btn btn-warning" role="button" data-action="card-save-and-go" data-next-url="{{ base_url }}/nvnv/card-edit/horror/introduction/{{ card.id - 1 }}">Save and Prev</a>
+            <a href="javascript:void(0);" class="btn btn-primary" role="button" data-action="card-save">Save</a>
+            <a href="javascript:void(0);" class="btn btn-warning" role="button" data-action="card-save-and-go" data-next-url="{{ base_url }}/nvnv/card-edit/horror/introduction/{{ card.id + 1 }}">Save and Next</a>
+        </form>
+    </div>
+</div>

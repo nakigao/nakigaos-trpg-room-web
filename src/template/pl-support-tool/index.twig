@@ -1,0 +1,161 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    <link href="{{ base_url }}/assets/css/palette-color-picker.css" rel="stylesheet">
+    {#<link href="{{ base_url }}/assets/css/gm-support-tool.css" rel="stylesheet">#}
+    <style>
+        .table {
+            font-size: small;
+            border: none;
+            margin: 0;
+        }
+
+        .table td input,
+        .table td textarea,
+        .table td select {
+            width: 100%;
+            height: 100%;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            border: none;
+        }
+
+        /* デフォルト上書き */
+        .palette-color-picker-button {
+            width: 25%;
+            height: 23px;
+            margin: 1px 0 0 0;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        /* 各ベンダープレフィックスが取れた標準版！！(http://caniuse.com/#search=placeholder-shown) */
+        :placeholder-shown {
+            color: rgba(21, 21, 21, 0.25);
+        }
+
+        /* Google Chrome, Safari, Opera 15+, Android, iOS */
+        ::-webkit-input-placeholder {
+            color: rgba(21, 21, 21, 0.25);
+        }
+
+        /* Firefox 18- */
+        :-moz-placeholder {
+            color: rgba(21, 21, 21, 0.25);
+        }
+
+        /* Firefox 19+ */
+        ::-moz-placeholder {
+            color: rgba(21, 21, 21, 0.25);
+        }
+
+        /* IE 10+ */
+        :-ms-input-placeholder {
+            color: rgba(21, 21, 21, 0.25);
+        }
+
+    </style>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ base_url }}/assets/js/palette-color-picker-custom.min.js"></script>
+    <script src="{{ base_url }}/assets/js/pl-support-tool.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">TRPG PL SUPPORT TOOLS FOR DodontoF API</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>Ver.1.46.00用 ... 複数キャラを運用したい、けどデフォルトのチャパレ使いにくいよなってとき用</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="dodontof-messages">
+                    <pre style="width: 100%; height: 120px;">no messages...</pre>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <form id="common-form" action="">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="col-sm-6">URL<input type="text" name="url" value="http://web-evi.sakura.ne.jp/trpg/dodontof/DodontoFServer.rb" autocomplete="off"></td>
+                                <td colspan="2" class="col-sm-2">ROOM#<input type="number" name="room" value="5" autocomplete="off"></td>
+                                <td colspan="4" class="col-sm-4">PASS<input type="password" name="password" value="" autocomplete="off"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="col-sm-6">
+                                    DICE BOT
+                                    <select name="dice">
+                                        <option value="" class="">&nbsp;-&nbsp;</option>
+                                        {% for diceBot in diceBotList %}
+                                            {% if diceBot[2] == true %}
+                                                <option value="{{ diceBot[0] }}" class="">{{ diceBot[1] }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </td>
+                                <td colspan="6" class="col-sm-6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered">
+                    <tbody>
+                        {# まとめて指定するようなので、別に #}
+                        <tr id="talk-form-0">
+                            <td class="col-sm-4">
+                                <div style="display:inline-flex; width: 100%">
+                                    <input type="text" name="talk-name-all" value="" placeholder="" style="text-align: right">
+                                    <input disabled type="text" name="" value="@" style="text-align: center; width: 2em">
+                                    <input disabled type="text" name="" value="" placeholder="ROLE">
+                                    <div class="palette-color-picker-button" data-target="xxxxx" style="background: rgb(255, 255, 255); cursor: inherit;"></div>
+                                </div>
+                            </td>
+                            <td class="col-sm-9">
+                                <div style="display:inline-flex; width: 100%">
+                                    {#<input disabled type="text" name="" value="" placeholder="messages">#}
+                                    {#<button type="button"></button>#}
+                                </div>
+                            </td>
+                        </tr>
+                        {# 個別フォーム #}
+                        {% for diceBot in 1..8 %}
+                            <tr id="talk-form-{{ loop.index }}">
+                                <td class="col-sm-4">
+                                    <div style="display:inline-flex; width: 100%">
+                                        <input type="text" name="talk-name" value="" placeholder="player name" style="text-align: right" class="danger">
+                                        <input disabled type="text" name="" value="@" style="text-align: center; width: 2em">
+                                        {% if loop.index == 1 %}
+                                            <input type="text" name="talk-role" value="PL" placeholder="role name">
+                                        {% else %}
+                                            <input type="text" name="talk-role" value="" placeholder="role name">
+                                        {% endif %}
+                                        <input type="text" name="talk-color-{{ loop.index }}" data-role="color-picker" value="212121" style="display: none;">
+                                    </div>
+                                </td>
+                                <td class="col-sm-9">
+                                    <div style="display:inline-flex; width: 100%">
+                                        <input type="text" name="talk-message" value="" placeholder="messages">
+                                        <button type="button" data-trigger="submit-talk">Go!</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

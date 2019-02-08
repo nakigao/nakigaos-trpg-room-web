@@ -1,0 +1,504 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>PL達の控室</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">まずは集まってくれてありがとう。GMのnakigaoです、よろしく。今日は作品紹介の日としてガーデンオーダーTRPGやってもらいます。今のところシンプルなルールでコンパクトにまとまってるし、設定に癖がないのでオンセ向きかなと思って、みんなに紹介したかったのです。</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">どんぱふ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@PL</div>
+                <div class="col-sm-10 serif">わーーー</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">みんなにアンケートなんだけど時間的余裕が2時間くらいしかないのでオープニングさくっとやって、ミドルフェイズをすっとばして、クライマックスフェイズ(戦闘)だけにしたいんだけど、どうかな？</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">いいかもかも</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@PL</div>
+                <div class="col-sm-10 serif">いいですとも</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">どっちでもええで</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>皆さんには突然告知して集まってもらいました、感謝感謝</blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>作品紹介</h2>
+                    <p>今回このメンバーで初めてのガーデンオーダープレイだったので、作品紹介から！</p>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">まず初めての人も多いと思うので、ガーデンオーダーの座学です。</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">ガーデンオーダー？</p>
+                        FEARさんから去年出たばっかりの現代異能モノTRPG。<br>
+                        現代世界のパラレルワールドを舞台に、特性能力と呼ばれる超能力を駆使して大活躍しよう！そんなコンセプトのTRPG。<br>
+                        <p class="header">世界観？</p>
+                        現代とほぼ同じだけど、WW2が中断を余儀なくされて、日本やドイチュが負けてないしっていうパラレルワールド。<br>
+                        超能力使う人が一般的に認知されてたり、わけのわかんない生命体が人類をパクパクしてて、実際コワイ。<br>
+                        それから、とんでも超科学的なものもたくさん存在しているみたい。<br>
+                        <p class="header">公式冒頭の世界観(引用)</p>
+                        『GO』の舞台は、我々の地球……それも我々が生きている現代とよく似た世界である。<br>
+                        そこに住んでいる人たちも、周囲の風景もほとんど差異はない。<br>
+                        だが、ほんの少しだけ違う点があるがため、世界の様子は大きく異なるものとなっている。<br>
+                        それが人類の天敵たるネフィリム、そしてオーダーと呼ばれる特殊な力を持つ者たちの存在である。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">よんだ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">要するに第二次世界大戦中に人類共通の敵がでてきたことになっている。そんな現代だ、現代日本だ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@PL</div>
+                <div class="col-sm-10 serif">ダイタイワカッタ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">で、今回みんなにやってもらうのは、その世界観の中でも中核に位置している……</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">オーダー？</p>
+                        ネフィリムという謎の生命体に呼応するように<br>
+                        人類の中に現れた超能力みたいなもの(特性能力)が使える人達のこと。<br>
+                        戦後70年たつけど、いまいち研究が進んでない。<br>
+                        <p class="header">公式冒頭のオーダー(引用)</p>
+                        特性能力と呼ばれる特殊な能力を使用できる者のこと。<br>
+                        Obligate Rarity Differential Extra-Raceの略。<br>
+                        日本では偏性異能特性体と呼ばれている。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">オーダーのPCでプレイしてもらいます</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">おーらら</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">つまり超能力人間が頑張る2010年代だ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">手から火出したり、コインでレールガン撃てば……まぁ勝てるから頑張ろう</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@PL</div>
+                <div class="col-sm-10 serif">腕がなりますな</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">100円玉を500円玉に変えたい</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">ゼイタクは敵だ</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>プリプレイ</h2>
+                    <p>作品の雰囲気と世界観のコンセンサスが取れた？ところで、実際のプレイに突入！</p>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">今回のシナリオの「トレーラー」はこんな感じ</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">トレーラー</p>
+                        けだるい午後の昼下がり<br>
+                        どこからともなくかかってきた電話から伝えられた依頼は……<br>
+                        <br>
+                        「キミ達には、銀行強盗をしてきていただきたい」<br>
+                        <br>
+                        単発セッション「給料日」<br>
+                        今日はみんなで Let's Do This!
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">セッションインフォ</p>
+                        セッション時間: 4時間くらい<br>
+                        PL人数: ～4人<br>
+                        難易度: easy<br>
+                        セッション傾向: 探索、戦闘、非PvP
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">警察エンドか……</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">星条旗なマスクを用意しないと</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">これを2時間に短縮して運用します、ついてきてね＾ｑ＾(※結局4時間くらいかかります……orz)</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">まかせろ</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">いえっさー</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">GMしかルールしらないからルール論争もおきない！最強！</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>プレイヤーの3人はソードワールドとかインセインとかオンセでやってるベテラン勢です、たのもすぃ！</blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">じゃあ、どんどんいくよー！次は、ハンドアウトを渡すね</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        シナリオハンドアウト「共通」<br>
+                        <br>
+                        あなたは、小さなアンダーグラウンド組織の一員です。<br>
+                        仲間と共にあやしげな依頼を受けて日々の生計を立てています。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif"><b>国連(非合法)</b>だった</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">次にPCのハンドアウトね。どれか一つ選んでちょうだい</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        シナリオハンドアウト「PC1」<br>
+                        <br>
+                        キャラクター背景: ※任意<br>
+                        コードネーム(推奨): ダラス
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        シナリオハンドアウト「PC2」<br>
+                        <br>
+                        キャラクター背景: ※任意<br>
+                        コードネーム(推奨): ホクストン
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        シナリオハンドアウト「PC3」<br>
+                        <br>
+                        キャラクター背景: ※任意<br>
+                        コードネーム(推奨): チェインズ
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        シナリオハンドアウト「PC4」<br>
+                        <br>
+                        キャラクター背景: ※任意<br>
+                        コードネーム(推奨): ウルフ
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">ホクストンで</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@PL</div>
+                <div class="col-sm-10 serif">ウルフで</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@PL</div>
+                <div class="col-sm-10 serif">ダラーーーース</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        もし、ピンッときてしまった方がいた場合、申し訳ないのですが……。<br>
+                        特に元ネタとは関係ないのでご了承ください。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ハンドアウト決定っと……次～、今回のセッションで使用するPCの作成を行います。と言いたいところなのですが、お試しセッションなので、プリセットキャラを利用します。<a href="http://www.fear.co.jp/gorder/dlc.html">GOの公式サイト</a>の中から、サンプルキャラクターを選んで報告してください。</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">スノウエッジがいい</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">氷結(<b>キリンビール</b>)</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@PL</div>
+                <div class="col-sm-10 serif">コードネームの改名か</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">あ、コードネーム変えても全然いいよ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">じゃあバウンサーデ、ウルフっぽい能力だしね</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">殴るキャラすきねぇ、おっけー</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ソードブレイカーはかぶるし、ミーティアは探索系っぽいからクロスファイアにしとこう。『携帯品：スナイパーライフル』。どうなってやがる</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>折り畳みスナイパーライフルとか携帯に便利なやつ……</blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">PC決定完了～っと。んでは、マップ上にキャラアイコン配置してくだされ。45分までね～</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>この後、元ネタ知ってるevi@PLは星条旗マスクのコマ、kaeru@PLはスターナントカから連れてきたオオカミ君のコマ、aneko@PLはすごいイケメンのコマを作りました</blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">じゃあ、次のステップ「プレイスタイルの決定！」に進みまーす。先ほど選択したキャラクターのプレイスタイルを決定します。</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">ほうほう</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ガーデンオーダーでは、能力にバディというパートナーを選ぶと使えるものがあったりするのです。みんなで相談してバディでプレイかソロでプレイか決定してください。ちょうど3人なので、一人ソロになるといいかも。別にバディなくてもいいです。元々、RPとかキャラ立ちを促進する目的で導入した仕組みみたいなので……</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">ウルフといえばソロかな、一匹狼なのです</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">バウンサーはバディがいたほうがいいとおもうけど</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">まあ狼は群れを作るし、バディでもいいよ。というか俺と組みたいやついる？</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ソロで……(<b>変態の相方</b>はこりごり)</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">変な戦後後遺症が……</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">勝手に変態扱いされてるなあ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">あのヘンタイはPCじゃなくてPLだったか……</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>とあるSWセッションで、aneko@PLはkaeru@PLの相棒的ポジションをやってましたが、kaeru@PLのPCはそれはもう……(笑</blockquote>
+                </div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">親方！一匹狼の群体が！</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">もうわかんねぇなこれ……</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ダラスくん至近距離型のガンナーのようだからかばってもらおう</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">いいよ、ダラスと組みましょう</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">世界をトルドー</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">プレイスタイルが決定したので、お次はPC間コネクションの決定～。皆さんで相談して、PC間コネクションを決定してください。決まったら、結ぶ対象を宣言して、D100してください。結果は、こちらからお伝えします</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">対象宣言するということは、片思い相手を決めれば良いのか</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">両思いでもいいよ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">まあバディだしダラスかな</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">関係表 -> DiceBot : (1D100) → 52 …… 好意、ウルフはダラスに好意を抱いている</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">好意ねえ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">まあウルフ君で</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">関係表 -> DiceBot : (1D100) → 67 …… 借り、ダラスはウルフにいつか返す借りをもっている</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">そういうタッグか……</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">覚えてろよ系ともとれる</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>┌（＾o＾ ┐）┐</blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">じゃあダラスで</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">関係表 -> DiceBot : (1D100) → 40 …… 庇護、ホクストンはダラスのことを護ってあげたくてしょうがない</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「あいつはそそっかしいからね」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">モテモテだな</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ダッちゃんはダウンしたときにEキー長押しで起こしてもらわないといけないの</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">このチームのアイドルダラス！</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">コネクション決定！よし、パーティーができました～。最後に、PCの自己紹介……といったところなんですけど、今回あんまりRPできなさそうなので、割愛していいかな？＞ALL</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ぶっちゃけ自分の特殊能力とかよくわかんないしな！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">けっこう考えるのに時間取られそうだからいいよ～</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">いいよー</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">おっけー、プリプレイ終了！</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

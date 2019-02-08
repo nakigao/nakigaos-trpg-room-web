@@ -1,0 +1,44 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascripts %}
+    {#<script src="{{ base_url }}/assets/js/xxxxx.js"></script>#}
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">ABOUT</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>このサイト？</h2>
+                <p>
+                    NAKIGAO TRPG ARCHIVES<br>
+                    参加したリプレイを中心に、TRPG関連で作ったものをひっそりと置いています。
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>管理人？</h2>
+                <p>ご意見ご感想などはTwitterのアカウント(<a href="https://twitter.com/nakigao">@nakigao</a>)にリプライ送るか、DMください。</p>
+                <p>
+                    TRPGが好きな電脳世界の住人。<br>
+                    もともとゲームの設定集とかをボーっと眺めているのが趣味でした。<br>
+                    友人の勧めでルールブック(D&De3.5)を手に取り、今ではどっぷりTRPGにはまっています。<br>
+                    鬼門とされる学園モノがうまい生物になりたいです。<br>
+                    <br>
+                    主な出現場所は時間帯夜のオンラインセッション。<br>
+                    好きなジャンルは『現代異能学園モノ』。<br>
+                    プレイングモットーは『チームみんなのキャラ立ち重点』。<br>
+                    マスタリングモットーは『ルール7割、ノリ3割』。<br>
+                </p>
+                <p>メインでやってるルール</p>
+                <ul>
+                    {% for rule in rule_list %}
+                        <li><a href="{{ rule.url }}" target="_blank">{{ rule.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

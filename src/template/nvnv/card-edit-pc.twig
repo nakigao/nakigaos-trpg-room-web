@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-sm-12">
+        <a href="{{ base_url }}/nvnv/card-list/horror/pc" class="btn btn-default" role="button">Back</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <form name="card-edit-form">
+            <input type="hidden" name="supplement" value="horror">
+            <input type="hidden" name="type" value="pc">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="xxxxx">ID</label>
+                        <input type="number" class="form-control" id="xxxxx" name="id" placeholder="" value="{{ card.id }}" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="xxxxx">ROLE</label>
+                        <input type="text" class="form-control" id="xxxxx" name="role" placeholder="" value="{{ card.role }}" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="xxxxx">GENDER</label>
+                        <input type="text" class="form-control" id="xxxxx" name="gender" placeholder="" value="{{ card.gender }}" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="xxxxx">POWER</label>
+                        <input type="number" class="form-control" id="xxxxx" name="power" placeholder="" value="{{ card.power }}" readonly>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="xxxxx">TECHNIC</label>
+                        <input type="number" class="form-control" id="xxxxx" name="technic" placeholder="" value="{{ card.technic }}" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="xxxxx">SKILL NAME</label>
+                <input type="text" class="form-control" id="xxxxx" name="skill_name" placeholder="" value="{{ card.skill_name }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="xxxxx">SKILL TIMING</label>
+                <input type="text" class="form-control" id="xxxxx" name="skill_timing" placeholder="" value="{{ card.skill_timing }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="xxxxx">SKILL DESCRIPTION</label>
+                <textarea class="form-control" id="xxxxx" name="skill_description" rows="5">{{ card.skill_description }}</textarea>
+            </div>
+            <a href="javascript:void(0);" class="btn btn-warning" role="button" data-action="card-save-and-go" data-next-url="{{ base_url }}/nvnv/card-edit/horror/pc/{{ card.id - 1 }}">Save and Prev</a>
+            <a href="javascript:void(0);" class="btn btn-primary" role="button" data-action="card-save">Save</a>
+            <a href="javascript:void(0);" class="btn btn-warning" role="button" data-action="card-save-and-go" data-next-url="{{ base_url }}/nvnv/card-edit/horror/pc/{{ card.id + 1 }}">Save and Next</a>
+        </form>
+    </div>
+</div>

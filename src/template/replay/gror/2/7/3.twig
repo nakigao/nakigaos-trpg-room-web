@@ -1,0 +1,346 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>拡張ルール『防衛戦』のコンセプト</h2>
+                    <p>最終話で使った防衛戦ルールです。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>拠点や重要人物を守るシナリオのミドルフェイズ向け。</p>
+                    <p>よくあるタワーディフェンスをガーデンオーダーでやってみるか、みたいなコンセプト。</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>1ターンの流れ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        1. ターン開始<br>
+                        2. 敵軍(GM)の行動<br>
+                        3. 自軍(PL)の行動<br>
+                        4. 遭遇戦<br>
+                        5. ターン終了<br>
+                        6. ※1～5を繰り返す
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>敵軍(GM)の行動</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        1. 自軍ユニットの配置初期化(PCのユニットを防衛ラインまで戻します。NPCユニットは動かしません)<br>
+                        2. 敵軍ユニットの配置(進行方向にs1d3で決定、この段階での配置はPLには秘匿にしておきます)<br>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>自軍(PL)の行動</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        1. 準備フェイズ<br>
+                        2. 配置フェイズ
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>準備フェイズ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        以下の行動を準備フェイズにつき1回行えます。<br>
+                        <br>
+                        [情報収集]<br>
+                        スクエアを指定して、そのスクエアに関する情報を収集します。<br>
+                        判定方法は、調査、コンピューター、捜索のいずれかで行います。<br>
+                        スキルの対象になるかの判断はGOの標準ルールの『情報収集』と同じです。<br>
+                        失敗 = スクエアに敵軍ユニットが存在するかわかります<br>
+                        成功 = スクエアに敵軍ユニットがいた場合、その戦力値がわかります<br>
+                        クリティカル = 成功時の成果に加え、もう一度情報収集が可能になります。二度目のクリティカルは無効になります<br>
+                        <br>
+                        [補給]<br>
+                        NPCユニットの補給を行います。<br>
+                        判定方法は、交渉、威圧のいずれかで行います。<br>
+                        スキルの対象になるかの判断はGOの標準ルールの『購入判定』と同じです。<br>
+                        失敗 = なにも入手できません<br>
+                        成功 = リストのうちからランダムでNPCユニットを入手できます<br>
+                        クリティカル = リストのうちから選択してNPCユニットを入手できます<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>配置フェイズ</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        以下の行動を配置フェイズにつき1回行えます<br>
+                        <br>
+                        [PCおよびNPCユニットの配置]<br>
+                        スクエアにPCおよびNPCユニットを配置します。<br>
+                        <br>
+                        [待機]<br>
+                        戦力を一時温存します。<br>
+                        次の『遭遇戦』を解決する際に『PCの再配置』を行うことが可能になります。<br>
+                        <br>
+                        [治療]<br>
+                        自分の耐久力ゲージを回復することができます。<br>
+                        『治療』を選択した場合、他の行動は一切取れません<br>
+                        判定方法は「1d3」で、1の場合は軽傷ゲージ+1、2の場合は軽傷ゲージ+2、3の場合は重傷ゲージ+1回復できます。<br>
+                        繰り上げ処理はありませんが、繰り下げ処理はしても良いことにします。(例：3が出た場合、重傷1、軽傷2、軽傷1のいずれか1つを回復できる)
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>遭遇戦</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        GMが遭遇戦が発生するか確認します。<br>
+                        同じスクエア内に敵軍ユニットと自軍ユニットがいた場合、遭遇戦が発生します。<br>
+                        遭遇戦の勝敗は、敵軍の戦力値 vs 自軍の戦力値の対抗判定で行います。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>戦力値の公開</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        このとき、伏せられた状態の敵軍ユニットと同一スクエアに自軍ユニットが存在していた場合、戦力値が伏せられた状態の敵軍ユニットの戦力値を公開します。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>PCの再配置</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        配置フェイズで『待機』を選択していた場合、自軍ユニットが存在するスクエアに対し『登場判定』に成功する事でPCを再配置することが可能です。<br>
+                        自軍ユニットが存在しないスクエアに再配置は行えません。<br>
+                        NPCユニットの再配置は行えません。<br>
+                        PCユニットの再配置は、PC1人に対し遭遇戦ごとに1回行えます。
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>戦力値について</h2>
+                    <p>ユニットにはあらかじめ『戦力値』が設定されています。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>敵軍ユニット</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        基本値は1ユニットに対し10です。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>自軍ユニット</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        PCユニットの基本値は1ユニットに対し10で、命中判定に成功する毎に5、クリティカルする毎に10加算されます。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>NPCユニット</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        NPCユニットは固有の戦力値を持ちます。<br>
+                        NPCユニットはPCユニットと同様フィールドに配置することが可能ですが、遭遇戦で1回使用すると結果にかかわらずフィールドから取り除かれます。
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>撃破について</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>敵軍ユニット</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        『自軍側の戦力値 < 敵軍の戦力値』<br>
+                        敵軍ユニットの戦力値が減少し、敵軍ユニットは継続してフィールドに残ります。<br>
+                        <br>
+                        『自軍側の戦力値 >= 敵軍の戦力値』<br>
+                        敵軍ユニットはフィールドから取り除かれます。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>自軍ユニット</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        基本的にPC/NPCユニットには撃破の概念はありません。<br>
+                        代わりに戦力値の対抗判定の結果に対して、耐久力ゲージにダメージを受けることになります。<br>
+                        これは次のクライマックスフェイズまで持ち越されます。<br>
+                        <br>
+                        00〜10 -> 軽傷ゲージ-1<br>
+                        11〜15 -> 軽傷ゲージ-2<br>
+                        16以上 -> 重傷ゲージ-1
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>敵軍勢力が最終防衛ラインに到達した場合</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        クライマックスフェイズのMOBが、戦力値/10(切り上げ)だけ増えます。
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>APPENDIX: 敵軍ユニットのリスト</h2>
+                    <p>実際使った敵軍ユニットの戦力値リストです。取得経験点100のPC3人に対しては少し力不足のようでした</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        敵軍総戦力値 = 260<br>
+                        <br>
+                        Wave1(60)<br>
+                        敵軍ユニット1 = 10<br>
+                        敵軍ユニット2 = 20<br>
+                        敵軍ユニット3 = 30<br>
+                        <br>
+                        Wave2(80)<br>
+                        敵軍ユニット4 = 20<br>
+                        敵軍ユニット5 = 20<br>
+                        <br>
+                        Wave3(120)<br>
+                        敵軍ユニット6 = 10<br>
+                        敵軍ユニット7 = 30<br>
+                        敵軍ユニット8 = 80
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>APPENDIX: 補給リスト</h2>
+                    <p>準備フェイズの[補給]の際に利用できる補給リストのサンプルです。PCやNPCに合わせて名称変更してください</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        <p class="header">補給リストA(購入判定-30%)</p>
+                        1,2 = バリケード(戦力値5)<br>
+                        3,4 = ドルマークの入ったたい焼き詰め合わせ(戦力値5)<br>
+                        5,6 = オカ研のそれっぽい魔法陣(戦力値10)<br>
+                        <br>
+                        <p class="header">補給リストB(購入判定-60%)</p>
+                        1,2 = 多重バリケード(戦力値15)<br>
+                        3,4 = 委員長特製キノコジュース(戦力値15)<br>
+                        5,6 = 演習用オートマタ(戦力値20)<br>
+                        <br>
+                        <p class="header">補給リストC(購入判定-90%)</p>
+                        1,2 = 藤堂印の入った侵入者迎撃装置(戦力値25)<br>
+                        3,4 = 鶯組の方々(戦力値25)<br>
+                        5,6 = 日本国家警察OS一課強襲チーム(戦力値30)
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>APPENDIX: 防衛戦用のどどんとふ用MAP</h2>
+                    <p>どどんとふで高さ17、幅23でぴったりになるマップです</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="{{ base_url }}/assets/img/replay/gror/2/7/go_map_defence_battle_W23_H17.png" class="img-responsive" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

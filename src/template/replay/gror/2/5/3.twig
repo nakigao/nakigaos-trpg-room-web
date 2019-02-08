@@ -1,0 +1,1232 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>第1種目「水着審査」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ、ミドルフェイズ。水着審査に行く前に、なんか自由行動をどうぞ～。順番は誰からでもOK</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>いきなり水着審査か。準備ってなんだろう?ダイエット?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>賄賂渡したり、脅したりする時間だよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ああ賄賂か</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>なんでいきなり選挙法違反なんだ……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、言い忘れてた。水着審査の判定方法は「魅力」判定なので、その辺強化するアイテムとかあると有利かも</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>80もあれば余裕余裕。魅力挙げる手段ってなにがあるの?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>RPしてもいいし、これをこうしてこうみたいな説明だけでもOK</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>鶫と餡子の自由行動</h3>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ああじゃあ「危ないビキニ」を買いに、光モールに行くとしよう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>法的に危なそう、棘とかついてんでしょ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>肩パッドつきビキニ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>大丈夫かなぁ^q^;</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>店員にドラ〇エの説明書見せて「この防具が欲しいんだけど」って言おう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@店員さん</div>
+                <div class='col-sm-10 serif'>「こ、これは……!」と言ってお店の奥からおどろおどろしい水着を出してきました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>清楚アピールするために白いワンピースでも調達しよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ、2人とも購入判定かな。-10%でよろしく。成功したら追加点どうぞ。失敗したら手に入るけど、追加点はなしです</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>魅力だっけ?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>威圧か交渉でよろしく。コンテストシーンの前の自由行動シーンってテコ入れ中だから魅力はまだいらない</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO67 威圧</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=67@13 → 37 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>鶫OK、危ない水着と追加点5点</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO48 [購入判定]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=48@9 → 26 → 成功</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>大丈夫だった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ナイスデース!じゃあ、餡子も清楚な白ワンピと追加点5獲得</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>栄の自由行動</h3>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>じゃあ携帯品にあるファッションを買ったらなんか補正つきますか?アイテム説明的には何も効果ないけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んー、ちなみにどんなファッション買います?(※審査員の性格が設定してあって、好みの演出だとボーナスが出る仕組み)</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>うーん、鶫を美容院に連れて行こう。ヘッドスパして髪型変えてこいや</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>これ鶫を連れて行くって事?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>そうだぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>おお流石先生、生徒への貢をわすれない</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>貢?貢だったのか～^q^;</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>施しであるぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>とりあえず、この時点で追加点5が栄につくのは確定してるので、コンテストのときの成功値に影響するます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ありがたい</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@ヘッドスパ屋さん</div>
+                <div class='col-sm-10 serif'>「あらいらっしゃい!どんな感じの髪型にするの?」と聞いてきます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>同席してるだろうから、栄が指定しても、鶫が指定してもいいよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「この店で一番高い髪形でお願いします」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>髪型に値段はねえよ。いや盛りまくればあるのかもしれんが</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>そういえば髪を盛るのが流行ってるんだったか</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>一時期変なのがはやってたね、世紀末の写真を渡そう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>小児だからナチュラル系でいいでしょ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>おかっぱにしよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>金髪のおかっぱって違和感半端ない気がする</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>お?ドラ〇エ5の勇者娘にケンカうってるんか!お!?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>もうドレッドヘアーでいい?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>最終判断は鶫に任せました(丸投げ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>うーむ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>悩むぐらいなら全部なくそう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>すごい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ペガサスアゲアゲで。金髪おかっぱやドレッドよりはマシでしょ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@ヘッドスパ屋さん</div>
+                <div class='col-sm-10 serif'>「ぺ、ペガサス……!ペガサスを……!?」と卒倒しそうでしたが、スパ屋さん全員で完璧なまでに仕上げてくれました</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>はい、では、自由行動は終わり。コンテスト一種目目のシーンに時間が戻ります</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>コンテスト会場にて</h3>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 全員<br>
+                        [場所] コンテスト会場<br>
+                        [時間] 昼頃<br>
+                        「花嫁さんと言ったら!やっぱり見目麗しくなくちゃあ!」<br>
+                        コンテスト第1種目は「水着審査」。<br>
+                        ステージには、予選を通過した数名の女性が、水着姿でズラッと並んでいる。<br>
+                        もちろんその中には鶫もいるわけだが……。<br>
+                        <br>
+                        [必要技能] 魅力<br>
+                        [ボーナス要件] PC2名以上が関わるそれっぽいシーン演出で+20%<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>殺戮者のエントリーだ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ワンピースとはなんだったのか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>浜辺でワンピースとか普通やろ。ぼーなすって二人が同じような行動しないといけないんですか?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>支援行動って感じかな。鶫がなんかするときにリアクションするとかそういう程度で大丈夫ぅ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「今のところの最高得点は、美ヶ原ちゃんのスクミズでのポールダンス!見るものを圧倒するその姿は、高い芸術点を叩き出しました!」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>これ女子限定じゃないのか!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>え?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>美ヶ原ちゃんはオンナノコのようなものかもしれないだろぉ!?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「さあ、ツグミちゃんは美ヶ原ちゃんに打ち勝つことができるのか!期待が高まります!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>って感じ。さて、鶫はどう戦いますか?他の2人も行動宣言をどうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>戦う!?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>コンテスト参加者にとって、ステージの上は戦場(渋い声</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>審査員のところにいきます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>「あなたも美ヶ原先生は素晴らしいと思いますか?」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@審査員A</div>
+                <div class='col-sm-10 serif'>「ええ、もちろん、あれはすごかった……///」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ならば喰らえ、特性能力ブレインウォッシュ。エキストラ1名を操って鶫に票をいれさせる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ああ栄先生の能力って不正し放題だもんな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>出たなトンデモ特性能力……!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>清き一票を獲得したぞ。鶫基準での清さなので、清い一票です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>トルネードするかな。風を使って水を餡子の周りに舞わせよう。いわゆるストームブリンガーの使用</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>じゃあ重力操作してエアポールダンスでもしようかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>やることが派手だねぇ!はい、3人とも余裕でボーナスですよ。魅力+30で判定してOKにします。コンテストの判定自体は鶫がやってほしい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO120 魅力</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=120@24 → 3 → クリティカル</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>えぇ……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>正に美の化身なのでは?</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「あーっと、これはぁ!?!?」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>鶫のエアポールダンスと餡子の演出により会場にどよめきが広がります。栄に籠絡された審査員も文句なしで鶫に票を入れました</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「第1種目1位通過はツグミちゃんできまりだーっ!」ワーワーって感じで15点獲得(現在合計30点)です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「なかなかやるわね。鶫ちゃん」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「ふふん、まああたいが本気をだせばこんなものよ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ブレインウォッシュは1シーン中だけだからすぐ我に返るけどな!次は他の手を考えよう。あのちんちくりんを勝たせるために何をすればいいんだ……胃薬を飲みます</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>先生の心労を察したい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んでは、ちょいとマスターシーンをば</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">マスターシーン</p>
+                        同時刻、会場内のとある場所では――。<br>
+                        <br>
+                        「……へへへ、こいつは、へへへ……」<br>
+                        「あの、狂犬様が、ねぇ……」<br>
+                        <br>
+                        サングラスとマスクをしたいかにもアヤシイ2人の男は、ニヤニヤと下品な笑いを浮かべ、ステージの方を眺めているのだった。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ロリコンかな?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>うーーーーーーん、病気</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>客席に銃弾ぶち込んで事故扱いで始末できないかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>事故ならいいとおもってらっしゃる</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>銃弾ぶち込んで事故扱いにするってすごい文面だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>えらいことになりますよそれはあ!</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>第2種目「料理審査」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>先に第2種目の描写だけ</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        コンテスト第2種目は「料理審査」。<br>
+                        参加選手が工夫を凝らし、和洋中様々な料理を作成している。<br>
+                        会場内はおいしそうな匂いで包まれていた。<br>
+                        <br>
+                        [必要技能] 感覚<br>
+                        [ボーナス要件] PC2名以上が関わるそれっぽいシーン演出で+20%<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>って感じ。事前の自由行動も同じようにできるので、今のうちにアイディア練っておいてちょうだい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ようやく花嫁要素がでてきた、みんなただの水着コンテストだと思ってましたよ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>そんな～</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ほかの出場者に下剤でも混ぜるか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>感覚は微妙なんだよなあ、1番高い冷凍食品でも買いに行こうかな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>あ、作るほうか。よく食べることこそいい嫁……いや、悪くはないけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>食べる方のコンテストって発想はなかったわ!?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>料理漫画で読んだけど、料理に麻薬を仕込んで依存性を出すって技があったな……それで行くかな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>屋台アイスかなんかでしてた。ニュースで見たことある。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>星新一のSSにあったな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ジャンプでもあったな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>おそろしいぞ……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>というか昔のコカイン入ってたコカコーラとか普通にそれなのでは</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>コカコカコーラ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、あれは元気が出るだけだし!はい、あやしい食事ルートに若干不安を覚えつつ、自由行動のプロットいきましょう</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>餡子の自由行動</h3>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>風を使って鶫以外の料理に塩を大量に送ろう。そして自分の料理は辛さでごまかす</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>審査員に死人がでそうなんですが^q^;</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>上杉作戦</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>敵に塩を送るのか</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>言おうとしたけど止めた言葉</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んだば、餡子は大量の塩を手に入れられたかどうか購入判定をどうぞ。成功で追加点5です。補正は0でOK</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO48 [購入判定]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=48@9 → 14 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ほい、OK。餡子は大量の塩を入手することに成功しました</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>塩餡子</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@日比谷</div>
+                <div class='col-sm-10 serif'>「お、お嬢。こんなにたくさんの塩、どうするんです?」と心配そうに</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「絶対的に美味しい必要はありません。相対的に美味しければいいのです」</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>鶫と栄の自由行動</h3>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>事前準備か、うーん……重力操作で鍋を圧力鍋にするぞ!!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>重力の問題なのか?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>何をどうするんだろう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>これで豚の角煮がすぐに作れる!!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>煮崩れしそう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>鍋の中だけ圧力を増やすとか</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>審査員たちがどんな料理がお好みなのか＜交渉＞で調べよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>なるほどなるほど……。鶫は特性能力で判定よろ。栄もそれで判定してOK</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO100 特性能力</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 76 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>鶫は鶫謹製超重力圧力鍋を入手、ついでに追加点5</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO135 交渉</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=135@27 → 91 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>素で130もあるのかよぉ……審査員は「フランス料理」が好きだとわかりました。ついでに追加点5</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>伊達で特化してないぜ。あやうくスターゲイジー・パイを作らせるところだったぜ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>初めて聞く料理だけどなんかすごそう……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>イギリスの有名な料理ですよ</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>コンテスト会場にて</h3>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>よし、では第二種目いってみよ～</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「花嫁さんと言ったら!やっぱりおいしい料理!料理なくして花嫁は語れませんよね!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「なお、現在の料理審査での最高得点は、委員長ちゃんの『捧腹絶倒キノコスープ～七色の彩も添えて～』でした!食べると何故か笑いが止まらない!笑いも止まらないけど、箸も止まらない!そんな素晴らしい料理だったようです!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「さあ、他の参加者が作る料理はいかなるものなのか!期待が高まります!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ってわけで、行動宣言後、鶫は感覚で判定よろしく</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>土壌が心配だ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>七色の食べ物。まずそうだ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>青色は食力減退効果が……では圧力鍋で「和風ポトフ」を作ろう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO65</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=65@13 → 24 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>和風ポトフ……ニクジャガーと呼ばれる伝説の家庭料理では……?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>フランス人のニック・ジャガーが伝えたという伝説の料理です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ほんとぉ?いずれにせよ成功で10点</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ピリ辛麻婆豆腐を作ろう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO65 [感覚ロール」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=65@13 → 30 → 成功</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>勝ちそうでわらた</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>割とデッドヒートしてる感ある。栄はなにかやる?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>じゃあ軽傷治療スプレーでも買っとく</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>判定どんぞ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>判定は……いらないよね!</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ファンブルするかもしれないし……!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>スプレー飲ませればよかったかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO135</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=135@27 → 21 → クリティカル</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>「増量中」って書いてあるスプレーが手に入りました(効果は同じです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>100円拾いましたレベルの裁定</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>良裁定なんだよなぁ^q^</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「料理審査は……甲乙つけがたい感じ!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@審査員B</div>
+                <div class='col-sm-10 serif'>「このポトフを作ったのは誰だ!」偉そうっぽい人がなにかわめきつつ終了……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>それ怒られるパターンな気が</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ここでもっかいマスターシーン……</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">マスターシーン</p>
+                        同時刻、会場内のとある場所では――。<br>
+                        <br>
+                        「おい、しっかり撮っておけよ」<br>
+                        <br>
+                        背の低い男が、背の高い男の方を小突く。<br>
+                        <br>
+                        「へ、へい」<br>
+                        <br>
+                        小突かれた背の高い男は、家庭用のビデオカメラをステージに向けているようだった。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>犯罪臭しかしない</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>サル!カメラもてぇ!</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>現在合計55点。おし、続けてラスト種目やっちゃおう</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>第3種目「破壊審査」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>先に描写だけ</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        コンテスト第3種目は「破壊審査」。<br>
+                        ステージ上には、大小さまざまなガラクタがこれでもかという具合に積み重なり、まさに山のようになっていた。<br>
+                        「花嫁さんと言ったら!やっぱり破壊活動!今時の花嫁さんは、破壊衝動くらい標準装備だよね!」<br>
+                        <br>
+                        [必要技能] 特性能力<br>
+                        [ボーナス要件] PC2名以上が関わるそれっぽいシーン演出で+20%
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>なにこれ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>得意分野だな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>このコンテストに出てる女性はだめなんだなってわかるわ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>気が付いてしまいましたか……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>か弱い乙女には無理です><</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>そのレーザーブレードをしまいなさい!うわ、なにをするやめろぉ!</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>さすがにガラクタジェンガに手は出せんなぁ</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>鶫の自由行動</h3>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>まあ普通にソロエフェクトで銃弾の威力を上げようかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ええんじゃなかろうか、特性判定でどうぞ。成功で追加点5</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO100 特性能力</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 76 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>鶫おっけ～。派手にぶっこわす演出でも考えておいてちょうだい</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>餡子の自由行動</h3>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>ゴリウー系女子をよばなきゃ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>餡子は、召喚の儀をするには交渉か威圧でどうぞ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO48 [購入判定]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=48@9 → 95 → 失敗</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>バーサーカーの召還に失敗した</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>CEOが出た</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>何が足りなかったんだろうか?石?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ゴリウー女子は現れなかった!追加点も0</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>栄の自由行動</h3>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>手榴弾でも差し入れする?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ありかも。-20でどうぞ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>こいつはきついぜ……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>まるで入手できない図が見えない</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GO115</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=115@23 → 28 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ、手りゅう弾を手に入れて、追加点5</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>C4でも95%で買える……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>すごい陳情力だよねしかし……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>引退したら武器商人になろう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>先生になったことが失敗だと思うの</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>というか先生がでてもコンテスト勝ち抜けそうな内容だよね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>魅力も感覚もあるけど破壊は苦手ですぅ><</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ～、これは鶫しかいないなぁ、花嫁なぁ～</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>コンテスト会場にて</h3>
+                </div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「ですが……なんたることでしょう!ORDERが捨てた廃棄物やら、出所不明の超硬化物質などが混ざっており、今までのチャレンジャーは1人もこの山を崩すことができていません!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「さあ、最後のチャレンジャーであるツグミちゃんは、見事期待に応えることができるのか!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>先に餡子と栄の行動をどうぞ。最後に鶫の特性判定よろしく～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>鶫に手榴弾を渡しておわり</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「このエクスカリバー(レーザーブレード)で社会のごみを抹殺してあげます」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>すごいシーンな気がしないでもない</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>エクスカリバー(片刃)</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@親衛隊</div>
+                <div class='col-sm-10 serif'>「ANKO!ANKO!ANKO!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んだば～、ボーナス+30つけて、鶫さん最後に判定どうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>任された</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>手榴弾を残骸に投げつけつつ、機関銃を全弾発射で</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO60 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 51 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO60 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 60 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GO60 銃器3回攻撃</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 31 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>うおおおおおおお</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>初めて3回攻撃成功したんじゃない!?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>こっちは判定していいの</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>餡子も判定していいよ～</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GO100 [特性能力]</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 100 → ファンブル</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>すごい展開になってきた</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>鶫でも切っておこう?</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>いつものノリで斬りつける</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>ファンブルっていうかそれ発狂してない?</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>社会のゴミじゃなく、組のゴミを切りつけてしまうファンブル。大丈夫、ファ○通で買ったエクスカリバーだから</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>流れるような展開さすがです</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「うおおおっと、げほっ!ほご!煙で見えないですけど!ツグミちゃん、見事に瓦礫の山を吹き飛ばしたー!」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んじゃあ、成功3回だけど、クリティカルは出てないから10点かしら</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>結果発表</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「結果はっぴょ～～～～!」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「見事三種目を勝ち抜き、今年の花嫁一番コンテストを制したのは……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「学園からきたツグミちゃんでしたー!」ワーワーパチパチ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>「僅差だったわね」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「……あたいが優勝かあ、まあ当然かなあ、あはははは」ちょっと照れてます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「ツグミさんには、偉い人より優勝賞品が渡されます」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>じゃあ受け取りますね。枝を受け取るってシュールだな</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「では最後に、花嫁らしい一言をツグミちゃんから!」マイクが向けられます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>「あたいを嫁にしたいやつは掛かってきな!あたいが直々に採点してやんよ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@司会</div>
+                <div class='col-sm-10 serif'>「くぅ～、花嫁なのかケンカ屋なのかわかりませんが!どうもありがとうございましたー!」ワーワー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>そんなこんなで、今年の花嫁一番コンテストは、大盛況のうちに終わったのだった……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>12歳でも結婚できるの?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>何時になったら同級生だと認識してくれるのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>愛さえあれば法律なんて……法律なんてぇ!ってところでマスタースィーン</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">マスターシーン</p>
+                        同時刻、会場内のとある場所では――。<br>
+                        <br>
+                        「よし、撤収だ、ボスのところへ急ぐぞ」<br>
+                        <br>
+                        サングラスとマスクをしたいかにもアヤシイ2人の男は、そそくさと会場を後にした。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>職質とかされませんかねえそいつら</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>色んな人がいる会場だからなぁ!</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>職質なんて概念あったらこんな大会やらないよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>部外者もフリーではいれるから</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>キリがいいから、ここまでかなぁ～?次回はクライマックスフェイズから始まるます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>鶫の銃はうなるの?</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>うなってくれるはず……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@栄</div>
+                <div class='col-sm-10 serif'>ほんとかなぁ?</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@鶫</div>
+                <div class='col-sm-10 serif'>伝説のトリプルクリティカルをたたき出す予定です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@餡子</div>
+                <div class='col-sm-10 serif'>1ターンキル期待してますよ</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

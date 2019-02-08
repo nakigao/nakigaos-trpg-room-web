@@ -1,0 +1,367 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-aneko.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>舞台設定</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">舞台設定</p>
+                        妖魔の手により祖国は滅ぼされ、サラ王女と愉快な仲間達は途方もなく旅をしていた。<br>
+                        齢12という年で君主となったサラ。<br>
+                        その幼き心は祖国が滅んだその日から大きくゆり動いていた。<br>
+                        信頼できる家来達とともにアヴァロンの再興を目指すべきだろうか、それとも国のことは諦め、新たな人生を歩むか。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>一応儀式タイプのシナリオです。察していると思いますが、選択次第でこの後が大きく変わるので、EP2のシナリオは影しかありません</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ふんむふんむ……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>どっちに転んでも良いキャラにしとこう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>コウモリ野郎がいる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ペット役は必要</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>癒しポジだったか……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>ペンギンです！！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>とりあえず始まり</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ワー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>妖魔の手から逃れたサラ一行は、グラナテル地方に身を潜めることにしました。その道中から始まります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>北のフィヨルド地帯かな、寒いのかしらね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>冬だもんね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>「お父様……お母様……うう……」なんかないてる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「姫！おいたわしや、さあ俺様の胸で存分に泣くがいい！！」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ベル</div>
+                <div class='col-sm-10 serif'>「ありがとう！思う存分泣かせてもらおう！」と代わりにキングの胸で男泣き</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>「これからどうしたらいいんだろう……」</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>PC達の自己紹介</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>というところで各自イニシ順に自己紹介をしてください。軽い役割紹介も入れていい感じです</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">ベルの自己紹介</p>
+                        「オレの名前はベル、酒が大好きなのさ！あと、一番槍はまかせとけ！」と神槍タケヤリを構えます<br>
+                        <br>
+                        能力的には、武力が一番高くて、武力を使えないと死んじゃうキャラ<br>
+                        戦闘での役割は、攻撃型前衛はまかせて
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>つおそうだなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>フランベルジュは強い！（確信）</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>速力が使えないから、判定負けするとたぶんなにもできないんじゃないかな……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>では次、クヮイン</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">クヮインの自己紹介</p>
+                        「サラ様のお付き見習いのクヮイン。例え貴方様になにがあろうと、私は貴女を身を挺して守ります。盲ておりますが、私の魔力の篭った声はあらゆる敵を惑わすでしょう」<br>
+                        「具体的には魔群の戦力値を-1してご覧にいれます。私は見えないですけど」<br>
+                        <br>
+                        蔦には及ばず……"若草"等と呼ばれております<br>
+                        魔群戦に特化してるから魔人は苦手。武力も0！(いちおう☓はついてないので武力パンチも可能)
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>すごいつよそう……ニルヴァーナも(この卓では)初登場かな、こりゃ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>22歳のニルヴァーナ、以上です</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>次、ペンちゃん</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">キングの自己紹介</p>
+                        「我が名はキング！まさに世界の頂点に立つことを宿命づけられた男！！何れはアヴァロンの皇帝になろうと思っているがその前に魔族どもを皆殺しにせねばなるまいて」<br>
+                        <br>
+                        能力値は速度特化で特殊能力のせいで死にやすいぞ。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>これは獅子身中の虫というのでは……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>大丈夫かな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>真面目な話守りが手薄なんですよね。魔人が2回攻撃とかしてきたら……1ラウンドでかばえるのは1回だけだから、私だけでは庇え無い……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>姫攻撃されたら終わりなうえに、魔人は２回攻撃ガデフォだからねえ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>やられる前にやるのだ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ノウキンパ楽しいし、いいと思う！……あれ？かばうって制限あるんだっけ？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>そうなんですよ、1回だけなんです。ちなみに前回のセッションは特に2回殴られることはなかったので大丈夫でした</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>じゃあ俺が姫様の影武者になろう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>へんだなあ、そうするとプレイヤー側って勝てなくないかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>3人推奨だとおもう。そこからデネブの白鳥の湖で後陣からのペナルティ無し身代わりと、本陣の防御型騎士の身代わりでカキンカキン。何にせよこのゲームシビアですよ　サプリでどうなったのか知らないけど</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>隣接マスにいればできるってあるから、大丈夫かな？ペナルティはあるけども……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>まあやってみなけりゃ分かるまい</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>戦闘は毎ターン包囲を０にしていかないと、基本的には王女が二回攻撃されると思っていいです</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>オープニング</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>サラと愉快な仲間たちはグラテナル地方にあるスゴクアマイ市街に行き着きました</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>すごくあまい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>相変わらず甘そうな土地名だぜ……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>「姫様、久方ぶりの市街地です。今夜はゆっくりできそうですね」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>「そうだね……はあ」文字で起こすと、ただの悩めるお供みたいだ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ACT LostRoyal :姫様アクション表(2[2]) → 鼻歌を歌う</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「姫様……姫様のお望みは分かっております、すべてこのキングにお任せください！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>一応宣誓ハンドアウトは選んでるけど、オープニングだからなにか事件がおきるはずだ……</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>こんな平和な街で事件なんて……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>市街に着くと、多くの市民が王女に近づいてきました</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@市民A</div>
+                <div class='col-sm-10 serif'>「王女様！アヴァロンは大丈夫なんですか！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@市民B</div>
+                <div class='col-sm-10 serif'>「王女様、アヴァロン復興期待してますよ！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@市民C</div>
+                <div class='col-sm-10 serif'>「王女様、今日もかわいいですね！」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>この市民はダメなにおいがするな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>とまあ、市民は王女に励ましの言葉？を掛けてきます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>支持率高そう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>王女はログレスの中では知らない人がいないぐらい有名な方です。日本で言う天皇家のご息女様みたいな……まあ当たり前といえば当たり前</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>王女の反応は？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>王女の反応ですが……やさしく微笑んで皆に手を振っています。まるで皇族のような素振りです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>握手会だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>しかし、長年付き添ってきた仲間たちには、無茶をしていることが丸わかりです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>じゃあ俺も隣で手を振る</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@市民N</div>
+                <div class='col-sm-10 serif'>「わー！ぺんぎんだー！羽むしらせてー！」むしりむしり</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「ぶち殺すぞ！ヒューマン！！」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@市民N</div>
+                <div class='col-sm-10 serif'>「きゃー！」と無邪気に喜んでいます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>ヒューマン……どんな種族だろう……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>髪の毛をむしってやろうかな</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>「皆さん、私たちは妖魔に追われる身、どうか少しでも人目につかない休息所を探してくれませんか」と騎士たちに言ってきます。ロストロ共通の設定で、彼女らは賞金首なんです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>血筋を絶たねば魔軍に平和は訪れない……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@クヮイン</div>
+                <div class='col-sm-10 serif'>「市民たち、姫様は精鋭たる我々をお連れになり、忍ばれつつもここへ到着致しました。あまり騒がれないように」と呼びかけよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>「姫！ありましたぞ！隠れ家が！！」その辺の家のカギを開けて借りよう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@サラ王女</div>
+                <div class='col-sm-10 serif'>では、キングが見つけてきた？隠れ家を暫くの宿ということにしました。そして翌日になります……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@キング</div>
+                <div class='col-sm-10 serif'>好感度ポイント上がったかな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>さすぺん</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

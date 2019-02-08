@@ -1,0 +1,180 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>XXXXXX</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>いあー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>なくなっている……?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>[墓]</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>いつ死んだんだろう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>もう覚えてない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>あぁいむほーむ、遅れてごめんねー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>ゆるすだす</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>だむす</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>えぇ!? 今日はウィスキー飲んでもいいのか!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>酒かすでもよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>いあいあはすたー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んめんめっ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>全員そろったかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>点呼開始!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>準備完了!(1/3)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>じゃあアサヒの中瓶あけちゃう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>準備完了!(2/3)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>準備完了!(3/3)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>全員準備完了しましたっ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では始めますかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どんぱふー。魔女狩りだっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>狩らないからね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>異端なるセイレム</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>昔話でもいい魔女とかいるじゃない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>裁判しましょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>トムはいつまで死んでるんですかねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>今回のシナリオを始める前に</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>前回のシナリオの後処理が終わっていないのでそこからしましょう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>へいどうぞ～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まずシナリオクリアの報酬でSAN値を2d6回復してどうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>2d6 SAN回復</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>Cthulhu : (2D6) → 11[5,6] → 11</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (2D6) → 4[3,1] → 4</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>幸先いいねぇ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (2D6) → 3[1,2] → 3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>正義を使うか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>sanが3点ってね!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>社は黒字かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>君たちに正義はないよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>aneko@マリのSANを+4した</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>37 -> 48</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>次は魔女からの報酬だな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>魔女退治という大義のもと、いざ更新する</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>報酬については共有メモに張ってます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>きめ台詞での誤字ははずいね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>3種類のうち好きなものを選びなさい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>キャラシの事だと思ってた>更新</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>マジックアイテムというゴミを混ぜるのはNG</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お?魔女ガチャってなんだ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>そういうことにしよう>更新</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>どれも現世では手に入らないものばかりなんですよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>魔女ガチャは魔石2つで1回できます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>強力なマジックアイテムが手に入ります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>マジックアイテムもらうか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>きっと、大きな魔石とかだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ガチャでエクスカリバーもらうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>それかIBM</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>戦闘要員だったっけ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>COCでも戦闘要員とは……?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>才能をふるー!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>での</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d6 才能表</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>Cthulhu : (1D6) → 4</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d6 マジックゴミアイテム</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D6) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>社の才能の4は</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>(アニマルフェロモン)動物に好かれやすくなる。ただし動物に見つかりやすくもなる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>これです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>キャラシに加えといてください</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>また変な特徴を……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>ぶっちゃけお金って意味ある?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>お金持ちのロールプレイが出来るよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>これどんだけ危険な目にあっても10万円しかくれないんでしょ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>才能もらお</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>マリのマジックアイテム3は</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>才能ってそういうことか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>1d6 さいの</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D6) → 4</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>社のハーレム物語が始まる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>MPポーション MPを2d6回復する</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ごみだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>トムも社と同じフェロモンですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どうやらトムとはフェロモンの強さを競う必要があるようだな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>タバコ臭いけどよろしくね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なんでトムと社は毎回同じ出目なのk</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>SAN回復は違ったんだだよなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>謎だけど。所詮は15%だから、結構かぶるんじゃない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>期待値ですからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>さいですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>マリはアイテム欄に書いといてねポーション</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>かいたよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>初心者の魔法職なら必須ものだよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあ前回の処理はこんな所かな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>突っ立ってれば自然と回復するから大丈夫大丈夫</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ではEP4始めますか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>けー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>はーい</div></div>
+
+
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>実は前回忘れてた事がありまして</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>このシナリオ開始時に成長ロールをしてませんでしたので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>3回ほどロールをしてください</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>成長ロールはメモのハウスルールに張ってます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>拳銃でもあげようかなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そして今回のおすすめ技能は水泳です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>水泳かぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>拳銃上げてもいいけどマリは所持してないからな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>水泳あげるかぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>水着持ってないしなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>え?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>トムからもらった気がするけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあ水泳イベントが来るかどうかは探索者しだいなので、ほかを上げても大丈夫ではある</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>撃てばいいの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>トムは一丁しか拳銃を持ってません</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>何をだよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d100 水泳25</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>DiceBot : (1D100) → 76</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d10 水泳成長</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>DiceBot : (1D10) → 1</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d100>25 [水泳]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D100>25) → 48 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>全く成長を感じられない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d10</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D10) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあこのゲーム1%で泣いたり笑ったりすることもあるし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>結構あがったから他のをあげよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d100> [目星]</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>なんにしようかなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d100>25 [目星]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D100>25) → 67 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d10</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D10) → 7</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d100>20 [拳銃]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D100>20) → 52 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d100 水泳26</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>DiceBot : (1D100) → 1</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d100 水泳26</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>DiceBot : (1D100) → 3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d10</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D10) → 4</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダメだこりゃ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>そのダイス目は水泳振るときに欲しいね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>拳銃にするか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>二人でぶっ放そうぜ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>1d100>80</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D100>80) → 80 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>1d100>80</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D100>80) → 58 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>一般人の拳銃の訓練ってどうやるんだろうか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>1d100>80</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D100>80) → 11 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>うーむ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>手当たり次第に撃った</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>何気にトムは拳銃上手いんだな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では成長も終わったところで</div></div>
+
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,631 @@
+{% extends 'layout-1column.twig' %}
+
+{% block title %}{{ page_title }} | {{ site_title }}{% endblock %}
+{% block page_header %}{{ page_title }} | {{ site_title }}{% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block javascriptss %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="page-header">{{ page_title }} | {{ site_title }}</h1>
+                <p>迷宮デイズ向けのキャラクターシート</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="{{ base_url }}/makeyoudays/character-sheet/{{ nextAction }}" method="post" class="">
+
+                    <h2>基本情報</h2>
+
+                    <div class='form-group row'>
+                        <label for='sheet[character_name]' class='col-sm-1 form-control-label'>PC名</label>
+                        <div class='col-sm-8'><input type='text' class='form-control' id='' name='sheet[character_name]' placeholder='' {% if sheet.character_name is defined %}value='{{ sheet.character_name }}'{% endif %}></div>
+                        <label for='sheet[level]' class='col-sm-1 form-control-label'>レベル</label>
+                        <div class='col-sm-2'><input type='number' class='form-control' id='' name='sheet[level]' placeholder='' {% if sheet.level is defined %}value='{{ sheet.level }}'{% endif %}></div>
+                    </div>
+
+                    <div class='form-group row'>
+                        <label for='sheet[gender]' class='col-sm-1 form-control-label'>性別</label>
+                        <div class='col-sm-2'><input type='text' class='form-control' id='' name='sheet[gender]' placeholder='' {% if sheet.gender is defined %}value='{{ sheet.gender }}'{% endif %}></div>
+                        <label for='sheet[age]' class='col-sm-1 form-control-label'>年齢</label>
+                        <div class='col-sm-2'><input type='number' class='form-control' id='' name='sheet[age]' placeholder='' {% if sheet.age is defined %}value='{{ sheet.age }}'{% endif %}></div>
+                        <label for='sheet[class]' class='col-sm-1 form-control-label'>クラス</label>
+                        <div class='col-sm-5'><input type='text' class='form-control' id='' name='sheet[class]' placeholder='' {% if sheet.class is defined %}value='{{ sheet.class }}'{% endif %}></div>
+                    </div>
+
+                    <div class='form-group row'>
+                        <label for='sheet[used_exp]' class='col-sm-1 form-control-label'>使用済み経験点</label>
+                        <div class='col-sm-2'><input type='number' class='form-control' id='' name='sheet[used_exp]' placeholder='' {% if sheet.used_exp is defined %}value='{{ sheet.used_exp }}'{% endif %}></div>
+                        <label for='sheet[total_exp]' class='col-sm-1 form-control-label'>総経験点</label>
+                        <div class='col-sm-2'><input type='number' class='form-control' id='' name='sheet[total_exp]' placeholder='' {% if sheet.total_exp is defined %}value='{{ sheet.total_exp }}'{% endif %}></div>
+                        <label for='sheet[player_name]' class='col-sm-1 form-control-label'>PL名</label>
+                        <div class='col-sm-5'><input type='text' class='form-control' id='' name='sheet[player_name]' placeholder='' {% if sheet.player_name is defined %}value='{{ sheet.player_name }}'{% endif %}></div>
+                    </div>
+
+                    <div class='form-group row'>
+                        <label for='sheet[deposit]' class='col-sm-1 form-control-label'>預金</label>
+                        <div class='col-sm-5'><input type='number' class='form-control' id='' name='sheet[deposit]' placeholder='' {% if sheet.deposit is defined %}value='{{ sheet.deposit }}'{% endif %}></div>
+                        <label for='sheet[consumption]' class='col-sm-1 form-control-label'>消費傾向</label>
+                        <div class='col-sm-5'><input type='text' class='form-control' id='' name='sheet[consumption]' placeholder='' {% if sheet.consumption is defined %}value='{{ sheet.consumption }}'{% endif %}></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th class='col-sm-1'></th>
+                                        <th>合計</th>
+                                        <th>初期値</th>
+                                        <th>BONUS</th>
+                                        <th>成長</th>
+                                    </tr>
+                                    <tr>
+                                        <th>才覚</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[intelligence]' placeholder='' {% if sheet.intelligence is defined %}value='{{ sheet.intelligence }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[intelligence_i]' placeholder='' {% if sheet.intelligence_i is defined %}value='{{ sheet.intelligence_i }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[intelligence_b]' placeholder='' {% if sheet.intelligence_b is defined %}value='{{ sheet.intelligence_b }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[intelligence_g]' placeholder='' {% if sheet.intelligence_g is defined %}value='{{ sheet.intelligence_g }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <th>魅力</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[charisma]' placeholder='' {% if sheet.charisma is defined %}value='{{ sheet.charisma }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[charisma_i]' placeholder='' {% if sheet.charisma_i is defined %}value='{{ sheet.charisma_i }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[charisma_b]' placeholder='' {% if sheet.charisma_b is defined %}value='{{ sheet.charisma_b }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[charisma_g]' placeholder='' {% if sheet.charisma_g is defined %}value='{{ sheet.charisma_g }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <th>探索</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[survival]' placeholder='' {% if sheet.survival is defined %}value='{{ sheet.survival }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[survival_i]' placeholder='' {% if sheet.survival_i is defined %}value='{{ sheet.survival_i }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[survival_b]' placeholder='' {% if sheet.survival_b is defined %}value='{{ sheet.survival_b }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[survival_g]' placeholder='' {% if sheet.survival_g is defined %}value='{{ sheet.survival_g }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <th>武勇</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[strength]' placeholder='' {% if sheet.strength is defined %}value='{{ sheet.strength }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[strength_i]' placeholder='' {% if sheet.strength_i is defined %}value='{{ sheet.strength_i }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[strength_b]' placeholder='' {% if sheet.strength_b is defined %}value='{{ sheet.strength_b }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[strength_g]' placeholder='' {% if sheet.strength_g is defined %}value='{{ sheet.strength_g }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <th>HP</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[hitpoint]' placeholder='' {% if sheet.hitpoint is defined %}value='{{ sheet.hitpoint }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[hitpoint_i]' placeholder='' {% if sheet.hitpoint_i is defined %}value='{{ sheet.hitpoint_i }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[hitpoint_b]' placeholder='' {% if sheet.hitpoint_b is defined %}value='{{ sheet.hitpoint_b }}'{% endif %}></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>器</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[capacity]' placeholder='' {% if sheet.capacity is defined %}value='{{ sheet.capacity }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[capacity_i]' placeholder='' {% if sheet.capacity_i is defined %}value='{{ sheet.capacity_i }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[capacity_b]' placeholder='' {% if sheet.capacity_b is defined %}value='{{ sheet.capacity_b }}'{% endif %}></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>回避値</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[dexterity]' placeholder='' {% if sheet.dexterity is defined %}value='{{ sheet.dexterity }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[dexterity_i]' placeholder='' {% if sheet.dexterity_i is defined %}value='{{ sheet.dexterity_i }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[dexterity_b]' placeholder='' {% if sheet.dexterity_b is defined %}value='{{ sheet.dexterity_b }}'{% endif %}></td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>配下</th>
+                                        <td><input type='number' class='form-control' id='' name='sheet[followers]' placeholder='' {% if sheet.followers is defined %}value='{{ sheet.followers }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[followers_i]' placeholder='' {% if sheet.followers_i is defined %}value='{{ sheet.followers_i }}'{% endif %} readonly></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[followers_b]' placeholder='' {% if sheet.followers_b is defined %}value='{{ sheet.followers_b }}'{% endif %}></td>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <div class="row">
+                            <label for='sheet[like1]' class='col-sm-1 form-control-label'>好きなもの</label>
+                            <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[like1]' placeholder='' {% if sheet.like1 is defined %}value='{{ sheet.like1 }}'{% endif %}></div>
+                            {#<label for='sheet[like2]' class='col-sm-1 form-control-label'>好きなもの2</label>#}
+                            <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[like2]' placeholder='' {% if sheet.like2 is defined %}value='{{ sheet.like2 }}'{% endif %}></div>
+                            {#<label for='sheet[like3]' class='col-sm-1 form-control-label'>好きなもの3</label>#}
+                            <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[like3]' placeholder='' {% if sheet.like3 is defined %}value='{{ sheet.like3 }}'{% endif %}></div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class="row">
+                            <label for='sheet[hate1]' class='col-sm-1 form-control-label'>嫌いなもの</label>
+                            <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[hate1]' placeholder='' {% if sheet.hate1 is defined %}value='{{ sheet.hate1 }}'{% endif %}></div>
+                            {#<label for='sheet[hate2]' class='col-sm-2 form-control-label'>嫌いなもの2</label>#}
+                            <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[hate2]' placeholder='' {% if sheet.hate2 is defined %}value='{{ sheet.hate2 }}'{% endif %}></div>
+                            {#<label for='sheet[hate3]' class='col-sm-2 form-control-label'>嫌いなもの3</label>#}
+                            <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[hate3]' placeholder='' {% if sheet.hate3 is defined %}value='{{ sheet.hate3 }}'{% endif %}></div>
+                        </div>
+                    </div>
+                    <div class='form-group row'>
+                        <label for='sheet[memo]' class='col-sm-1 form-control-label'>メモ</label>
+                        <div class='col-sm-11'><textarea class='form-control' id='' name='sheet[memo]' placeholder='' rows='6' cols='40'>{% if sheet.memo is defined %}{{ sheet.memo }}{% endif %}</textarea></div>
+                    </div>
+
+                    <h2>スキル</h2>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th class="col-sm-3">名称</th>
+                                        <th class="col-sm-9">説明</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill1]' placeholder='' {% if sheet.skill1 is defined %}value='{{ sheet.skill1 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill1_description]' placeholder='' {% if sheet.skill1_description is defined %}value='{{ sheet.skill1_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill2]' placeholder='' {% if sheet.skill2 is defined %}value='{{ sheet.skill2 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill2_description]' placeholder='' {% if sheet.skill2_description is defined %}value='{{ sheet.skill2_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill3]' placeholder='' {% if sheet.skill3 is defined %}value='{{ sheet.skill3 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill3_description]' placeholder='' {% if sheet.skill3_description is defined %}value='{{ sheet.skill3_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill4]' placeholder='' {% if sheet.skill4 is defined %}value='{{ sheet.skill4 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill4_description]' placeholder='' {% if sheet.skill4_description is defined %}value='{{ sheet.skill4_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill5]' placeholder='' {% if sheet.skill5 is defined %}value='{{ sheet.skill5 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill5_description]' placeholder='' {% if sheet.skill5_description is defined %}value='{{ sheet.skill5_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill6]' placeholder='' {% if sheet.skill6 is defined %}value='{{ sheet.skill6 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill6_description]' placeholder='' {% if sheet.skill6_description is defined %}value='{{ sheet.skill6_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill7]' placeholder='' {% if sheet.skill7 is defined %}value='{{ sheet.skill7 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill7_description]' placeholder='' {% if sheet.skill7_description is defined %}value='{{ sheet.skill7_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill8]' placeholder='' {% if sheet.skill8 is defined %}value='{{ sheet.skill8 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill8_description]' placeholder='' {% if sheet.skill8_description is defined %}value='{{ sheet.skill8_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill9]' placeholder='' {% if sheet.skill9 is defined %}value='{{ sheet.skill9 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill9_description]' placeholder='' {% if sheet.skill9_description is defined %}value='{{ sheet.skill9_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill10]' placeholder='' {% if sheet.skill10 is defined %}value='{{ sheet.skill10 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill10_description]' placeholder='' {% if sheet.skill10_description is defined %}value='{{ sheet.skill10_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill11]' placeholder='' {% if sheet.skill11 is defined %}value='{{ sheet.skill11 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill11_description]' placeholder='' {% if sheet.skill11_description is defined %}value='{{ sheet.skill11_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill12]' placeholder='' {% if sheet.skill12 is defined %}value='{{ sheet.skill12 }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[skill12_description]' placeholder='' {% if sheet.skill12_description is defined %}value='{{ sheet.skill12_description }}'{% endif %}></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>アイテム</h2>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th class="col-sm-3">名称</th>
+                                        <th class="col-sm-2">個数</th>
+                                        <th class="col-sm-7">説明</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item1]' placeholder='' {% if sheet.item1 is defined %}value='{{ sheet.item1 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[item1_count]' placeholder='' {% if sheet.item1_count is defined %}value='{{ sheet.item1_count }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item1_description]' placeholder='' {% if sheet.item1_description is defined %}value='{{ sheet.item1_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item2]' placeholder='' {% if sheet.item2 is defined %}value='{{ sheet.item2 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[item2_count]' placeholder='' {% if sheet.item2_count is defined %}value='{{ sheet.item2_count }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item2_description]' placeholder='' {% if sheet.item2_description is defined %}value='{{ sheet.item2_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item3]' placeholder='' {% if sheet.item3 is defined %}value='{{ sheet.item3 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[item3_count]' placeholder='' {% if sheet.item3_count is defined %}value='{{ sheet.item3_count }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item3_description]' placeholder='' {% if sheet.item3_description is defined %}value='{{ sheet.item3_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item4]' placeholder='' {% if sheet.item4 is defined %}value='{{ sheet.item4 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[item4_count]' placeholder='' {% if sheet.item4_count is defined %}value='{{ sheet.item4_count }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item4_description]' placeholder='' {% if sheet.item4_description is defined %}value='{{ sheet.item4_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item5]' placeholder='' {% if sheet.item5 is defined %}value='{{ sheet.item5 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[item5_count]' placeholder='' {% if sheet.item5_count is defined %}value='{{ sheet.item5_count }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item5_description]' placeholder='' {% if sheet.item5_description is defined %}value='{{ sheet.item5_description }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item6]' placeholder='' {% if sheet.item6 is defined %}value='{{ sheet.item6 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[item6_count]' placeholder='' {% if sheet.item6_count is defined %}value='{{ sheet.item6_count }}'{% endif %}></td>
+                                        <td><input type='text' class='form-control' id='' name='sheet[item6_description]' placeholder='' {% if sheet.item6_description is defined %}value='{{ sheet.item6_description }}'{% endif %}></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>素材</h2>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th class="col-sm-2">1なし</th>
+                                        <th class="col-sm-2">2なし</th>
+                                        <th class="col-sm-2">3肉</th>
+                                        <th class="col-sm-2">4牙</th>
+                                        <th class="col-sm-2">5鉄</th>
+                                        <th class="col-sm-2">6魔素</th>
+                                    </tr>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material3]' placeholder='' {% if sheet.material3 is defined %}value='{{ sheet.material3 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material4]' placeholder='' {% if sheet.material4 is defined %}value='{{ sheet.material4 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material5]' placeholder='' {% if sheet.material5 is defined %}value='{{ sheet.material5 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material6]' placeholder='' {% if sheet.material6 is defined %}value='{{ sheet.material6 }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-sm-2">7機械</th>
+                                        <th class="col-sm-2">8衣料</th>
+                                        <th class="col-sm-2">9木</th>
+                                        <th class="col-sm-2">10火薬</th>
+                                        <th class="col-sm-2">11情報</th>
+                                        <th class="col-sm-2">12革</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material7]' placeholder='' {% if sheet.material7 is defined %}value='{{ sheet.material7 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material8]' placeholder='' {% if sheet.material8 is defined %}value='{{ sheet.material8 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material9]' placeholder='' {% if sheet.material9 is defined %}value='{{ sheet.material9 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material10]' placeholder='' {% if sheet.material10 is defined %}value='{{ sheet.material10 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material11]' placeholder='' {% if sheet.material11 is defined %}value='{{ sheet.material11 }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[material12]' placeholder='' {% if sheet.material12 is defined %}value='{{ sheet.material12 }}'{% endif %}></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>感情値</h2>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th class="col-sm-3">人物名</th>
+                                        <th class="">忠義</th>
+                                        <th class="">友情</th>
+                                        <th class="">愛情</th>
+                                        <th class="">怒り</th>
+                                        <th class="">不信</th>
+                                        <th class="">敵意</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling1_name]' placeholder='' {% if sheet.feeling1_name is defined %}value='{{ sheet.feeling1_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling1_loyalty]' placeholder='' {% if sheet.feeling1_loyalty is defined %}value='{{ sheet.feeling1_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling1_friendship]' placeholder='' {% if sheet.feeling1_friendship is defined %}value='{{ sheet.feeling1_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling1_love]' placeholder='' {% if sheet.feeling1_love is defined %}value='{{ sheet.feeling1_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling1_rage]' placeholder='' {% if sheet.feeling1_rage is defined %}value='{{ sheet.feeling1_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling1_distrust]' placeholder='' {% if sheet.feeling1_distrust is defined %}value='{{ sheet.feeling1_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling1_hostility]' placeholder='' {% if sheet.feeling1_hostility is defined %}value='{{ sheet.feeling1_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling2_name]' placeholder='' {% if sheet.feeling2_name is defined %}value='{{ sheet.feeling2_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling2_loyalty]' placeholder='' {% if sheet.feeling2_loyalty is defined %}value='{{ sheet.feeling2_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling2_friendship]' placeholder='' {% if sheet.feeling2_friendship is defined %}value='{{ sheet.feeling2_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling2_love]' placeholder='' {% if sheet.feeling2_love is defined %}value='{{ sheet.feeling2_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling2_rage]' placeholder='' {% if sheet.feeling2_rage is defined %}value='{{ sheet.feeling2_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling2_distrust]' placeholder='' {% if sheet.feeling2_distrust is defined %}value='{{ sheet.feeling2_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling2_hostility]' placeholder='' {% if sheet.feeling2_hostility is defined %}value='{{ sheet.feeling2_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling3_name]' placeholder='' {% if sheet.feeling3_name is defined %}value='{{ sheet.feeling3_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling3_loyalty]' placeholder='' {% if sheet.feeling3_loyalty is defined %}value='{{ sheet.feeling3_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling3_friendship]' placeholder='' {% if sheet.feeling3_friendship is defined %}value='{{ sheet.feeling3_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling3_love]' placeholder='' {% if sheet.feeling3_love is defined %}value='{{ sheet.feeling3_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling3_rage]' placeholder='' {% if sheet.feeling3_rage is defined %}value='{{ sheet.feeling3_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling3_distrust]' placeholder='' {% if sheet.feeling3_distrust is defined %}value='{{ sheet.feeling3_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling3_hostility]' placeholder='' {% if sheet.feeling3_hostility is defined %}value='{{ sheet.feeling3_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling4_name]' placeholder='' {% if sheet.feeling4_name is defined %}value='{{ sheet.feeling4_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling4_loyalty]' placeholder='' {% if sheet.feeling4_loyalty is defined %}value='{{ sheet.feeling4_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling4_friendship]' placeholder='' {% if sheet.feeling4_friendship is defined %}value='{{ sheet.feeling4_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling4_love]' placeholder='' {% if sheet.feeling4_love is defined %}value='{{ sheet.feeling4_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling4_rage]' placeholder='' {% if sheet.feeling4_rage is defined %}value='{{ sheet.feeling4_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling4_distrust]' placeholder='' {% if sheet.feeling4_distrust is defined %}value='{{ sheet.feeling4_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling4_hostility]' placeholder='' {% if sheet.feeling4_hostility is defined %}value='{{ sheet.feeling4_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling5_name]' placeholder='' {% if sheet.feeling5_name is defined %}value='{{ sheet.feeling5_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling5_loyalty]' placeholder='' {% if sheet.feeling5_loyalty is defined %}value='{{ sheet.feeling5_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling5_friendship]' placeholder='' {% if sheet.feeling5_friendship is defined %}value='{{ sheet.feeling5_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling5_love]' placeholder='' {% if sheet.feeling5_love is defined %}value='{{ sheet.feeling5_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling5_rage]' placeholder='' {% if sheet.feeling5_rage is defined %}value='{{ sheet.feeling5_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling5_distrust]' placeholder='' {% if sheet.feeling5_distrust is defined %}value='{{ sheet.feeling5_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling5_hostility]' placeholder='' {% if sheet.feeling5_hostility is defined %}value='{{ sheet.feeling5_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling6_name]' placeholder='' {% if sheet.feeling6_name is defined %}value='{{ sheet.feeling6_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling6_loyalty]' placeholder='' {% if sheet.feeling6_loyalty is defined %}value='{{ sheet.feeling6_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling6_friendship]' placeholder='' {% if sheet.feeling6_friendship is defined %}value='{{ sheet.feeling6_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling6_love]' placeholder='' {% if sheet.feeling6_love is defined %}value='{{ sheet.feeling6_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling6_rage]' placeholder='' {% if sheet.feeling6_rage is defined %}value='{{ sheet.feeling6_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling6_distrust]' placeholder='' {% if sheet.feeling6_distrust is defined %}value='{{ sheet.feeling6_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling6_hostility]' placeholder='' {% if sheet.feeling6_hostility is defined %}value='{{ sheet.feeling6_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling7_name]' placeholder='' {% if sheet.feeling7_name is defined %}value='{{ sheet.feeling7_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling7_loyalty]' placeholder='' {% if sheet.feeling7_loyalty is defined %}value='{{ sheet.feeling7_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling7_friendship]' placeholder='' {% if sheet.feeling7_friendship is defined %}value='{{ sheet.feeling7_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling7_love]' placeholder='' {% if sheet.feeling7_love is defined %}value='{{ sheet.feeling7_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling7_rage]' placeholder='' {% if sheet.feeling7_rage is defined %}value='{{ sheet.feeling7_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling7_distrust]' placeholder='' {% if sheet.feeling7_distrust is defined %}value='{{ sheet.feeling7_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling7_hostility]' placeholder='' {% if sheet.feeling7_hostility is defined %}value='{{ sheet.feeling7_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling8_name]' placeholder='' {% if sheet.feeling8_name is defined %}value='{{ sheet.feeling8_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling8_loyalty]' placeholder='' {% if sheet.feeling8_loyalty is defined %}value='{{ sheet.feeling8_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling8_friendship]' placeholder='' {% if sheet.feeling8_friendship is defined %}value='{{ sheet.feeling8_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling8_love]' placeholder='' {% if sheet.feeling8_love is defined %}value='{{ sheet.feeling8_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling8_rage]' placeholder='' {% if sheet.feeling8_rage is defined %}value='{{ sheet.feeling8_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling8_distrust]' placeholder='' {% if sheet.feeling8_distrust is defined %}value='{{ sheet.feeling8_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling8_hostility]' placeholder='' {% if sheet.feeling8_hostility is defined %}value='{{ sheet.feeling8_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling9_name]' placeholder='' {% if sheet.feeling9_name is defined %}value='{{ sheet.feeling9_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling9_loyalty]' placeholder='' {% if sheet.feeling9_loyalty is defined %}value='{{ sheet.feeling9_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling9_friendship]' placeholder='' {% if sheet.feeling9_friendship is defined %}value='{{ sheet.feeling9_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling9_love]' placeholder='' {% if sheet.feeling9_love is defined %}value='{{ sheet.feeling9_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling9_rage]' placeholder='' {% if sheet.feeling9_rage is defined %}value='{{ sheet.feeling9_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling9_distrust]' placeholder='' {% if sheet.feeling9_distrust is defined %}value='{{ sheet.feeling9_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling9_hostility]' placeholder='' {% if sheet.feeling9_hostility is defined %}value='{{ sheet.feeling9_hostility }}'{% endif %}></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type='text' class='form-control' id='' name='sheet[feeling10_name]' placeholder='' {% if sheet.feeling10_name is defined %}value='{{ sheet.feeling10_name }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling10_loyalty]' placeholder='' {% if sheet.feeling10_loyalty is defined %}value='{{ sheet.feeling10_loyalty }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling10_friendship]' placeholder='' {% if sheet.feeling10_friendship is defined %}value='{{ sheet.feeling10_friendship }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling10_love]' placeholder='' {% if sheet.feeling10_love is defined %}value='{{ sheet.feeling10_love }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling10_rage]' placeholder='' {% if sheet.feeling10_rage is defined %}value='{{ sheet.feeling10_rage }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling10_distrust]' placeholder='' {% if sheet.feeling10_distrust is defined %}value='{{ sheet.feeling10_distrust }}'{% endif %}></td>
+                                        <td><input type='number' class='form-control' id='' name='sheet[feeling10_hostility]' placeholder='' {% if sheet.feeling10_hostility is defined %}value='{{ sheet.feeling10_hostility }}'{% endif %}></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='form-group row'>
+                        <label for='sheet[onesided1]' class='col-sm-1 form-control-label'>片思い</label>
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[onesided1]' placeholder='' {% if sheet.onesided1 is defined %}value='{{ sheet.onesided1 }}'{% endif %}></div>
+                        {#<label for='sheet[onesided2]' class='col-sm-2 form-control-label'>片思い2</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[onesided2]' placeholder='' {% if sheet.onesided2 is defined %}value='{{ sheet.onesided2 }}'{% endif %}></div>
+                        {#<label for='sheet[onesided3]' class='col-sm-2 form-control-label'>片思い3</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[onesided3]' placeholder='' {% if sheet.onesided3 is defined %}value='{{ sheet.onesided3 }}'{% endif %}></div>
+                    </div>
+                    <div class='form-group row'>
+                        <label for='sheet[sweetheart1]' class='col-sm-1 form-control-label'>恋人</label>
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[sweetheart1]' placeholder='' {% if sheet.sweetheart1 is defined %}value='{{ sheet.sweetheart1 }}'{% endif %}></div>
+                        {#<label for='sheet[sweetheart2]' class='col-sm-2 form-control-label'>恋人2</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[sweetheart2]' placeholder='' {% if sheet.sweetheart2 is defined %}value='{{ sheet.sweetheart2 }}'{% endif %}></div>
+                        {#<label for='sheet[sweetheart3]' class='col-sm-2 form-control-label'>恋人3</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[sweetheart3]' placeholder='' {% if sheet.sweetheart3 is defined %}value='{{ sheet.sweetheart3 }}'{% endif %}></div>
+                    </div>
+                    <div class='form-group row'>
+                        <label for='sheet[bestfriend1]' class='col-sm-1 form-control-label'>親友</label>
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[bestfriend1]' placeholder='' {% if sheet.bestfriend1 is defined %}value='{{ sheet.bestfriend1 }}'{% endif %}></div>
+                        {#<label for='sheet[bestfriend2]' class='col-sm-2 form-control-label'>親友2</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[bestfriend2]' placeholder='' {% if sheet.bestfriend2 is defined %}value='{{ sheet.bestfriend2 }}'{% endif %}></div>
+                        {#<label for='sheet[bestfriend3]' class='col-sm-2 form-control-label'>親友3</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[bestfriend3]' placeholder='' {% if sheet.bestfriend3 is defined %}value='{{ sheet.bestfriend3 }}'{% endif %}></div>
+                    </div>
+                    <div class='form-group row'>
+                        <label for='sheet[monarch1]' class='col-sm-1 form-control-label'>忠義</label>
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[monarch1]' placeholder='' {% if sheet.monarch1 is defined %}value='{{ sheet.monarch1 }}'{% endif %}></div>
+                        {#<label for='sheet[monarch2]' class='col-sm-2 form-control-label'>忠義2</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[monarch2]' placeholder='' {% if sheet.monarch2 is defined %}value='{{ sheet.monarch2 }}'{% endif %}></div>
+                        {#<label for='sheet[monarch3]' class='col-sm-2 form-control-label'>忠義3</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[monarch3]' placeholder='' {% if sheet.monarch3 is defined %}value='{{ sheet.monarch3 }}'{% endif %}></div>
+                    </div>
+                    <div class='form-group row'>
+                        <label for='sheet[rival1]' class='col-sm-1 form-control-label'>ライバル</label>
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[rival1]' placeholder='' {% if sheet.rival1 is defined %}value='{{ sheet.rival1 }}'{% endif %}></div>
+                        {#<label for='sheet[rival2]' class='col-sm-2 form-control-label'>ライバル2</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[rival2]' placeholder='' {% if sheet.rival2 is defined %}value='{{ sheet.rival2 }}'{% endif %}></div>
+                        {#<label for='sheet[rival3]' class='col-sm-2 form-control-label'>ライバル3</label>#}
+                        <div class='col-sm-3'><input type='text' class='form-control' id='' name='sheet[rival3]' placeholder='' {% if sheet.rival3 is defined %}value='{{ sheet.rival3 }}'{% endif %}></div>
+                    </div>
+
+
+                    {#<div>戦争調停2<input type='checkbox' name='sheet[peace]' value='2' /></div>#}
+                    {#<div>戦争調停3<input type='checkbox' name='sheet[peace]' value='3' /></div>#}
+                    {#<div>戦争調停4<input type='checkbox' name='sheet[peace]' value='4' /></div>#}
+                    {#<div>戦争調停5<input type='checkbox' name='sheet[peace]' value='5' /></div>#}
+                    {#<div>戦争調停6<input type='checkbox' name='sheet[peace]' value='6' /></div>#}
+                    {#<div>戦争調停7<input type='checkbox' name='sheet[peace]' value='7' /></div>#}
+                    {#<div>戦争調停8<input type='checkbox' name='sheet[peace]' value='8' /></div>#}
+                    {#<div>戦争調停9<input type='checkbox' name='sheet[peace]' value='9' /></div>#}
+                    {#<div>戦争調停10<input type='checkbox' name='sheet[peace]' value='10' /></div>#}
+                    {#<div>戦争調停11<input type='checkbox' name='sheet[peace]' value='11' /></div>#}
+                    {#<div>戦争調停12<input type='checkbox' name='sheet[peace]' value='12' /></div>#}
+                    {#<div>戦争調停13<input type='checkbox' name='sheet[peace]' value='13' /></div>#}
+                    {#<div>戦争調停14<input type='checkbox' name='sheet[peace]' value='14' /></div>#}
+                    {#<div>戦争調停15<input type='checkbox' name='sheet[peace]' value='15' /></div>#}
+                    {#<div>戦争調停16<input type='checkbox' name='sheet[peace]' value='16' /></div>#}
+                    {#<div>戦争調停17<input type='checkbox' name='sheet[peace]' value='17' /></div>#}
+                    {#<div>戦争調停18<input type='checkbox' name='sheet[peace]' value='18' /></div>#}
+                    {#<div>戦争調停19<input type='checkbox' name='sheet[peace]' value='19' /></div>#}
+                    {#<div>戦争調停20<input type='checkbox' name='sheet[peace]' value='20' /></div>#}
+                    {#<div>戦争調停21<input type='checkbox' name='sheet[peace]' value='21' /></div>#}
+                    {#<div>難病治療2<input type='checkbox' name='sheet[cure]' value='2' /></div>#}
+                    {#<div>難病治療3<input type='checkbox' name='sheet[cure]' value='3' /></div>#}
+                    {#<div>難病治療4<input type='checkbox' name='sheet[cure]' value='4' /></div>#}
+                    {#<div>難病治療5<input type='checkbox' name='sheet[cure]' value='5' /></div>#}
+                    {#<div>難病治療6<input type='checkbox' name='sheet[cure]' value='6' /></div>#}
+                    {#<div>難病治療7<input type='checkbox' name='sheet[cure]' value='7' /></div>#}
+                    {#<div>難病治療8<input type='checkbox' name='sheet[cure]' value='8' /></div>#}
+                    {#<div>難病治療9<input type='checkbox' name='sheet[cure]' value='9' /></div>#}
+                    {#<div>難病治療10<input type='checkbox' name='sheet[cure]' value='10' /></div>#}
+                    {#<div>難病治療11<input type='checkbox' name='sheet[cure]' value='11' /></div>#}
+                    {#<div>難病治療12<input type='checkbox' name='sheet[cure]' value='12' /></div>#}
+                    {#<div>難病治療13<input type='checkbox' name='sheet[cure]' value='13' /></div>#}
+                    {#<div>難病治療14<input type='checkbox' name='sheet[cure]' value='14' /></div>#}
+                    {#<div>難病治療15<input type='checkbox' name='sheet[cure]' value='15' /></div>#}
+                    {#<div>難病治療16<input type='checkbox' name='sheet[cure]' value='16' /></div>#}
+                    {#<div>難病治療17<input type='checkbox' name='sheet[cure]' value='17' /></div>#}
+                    {#<div>難病治療18<input type='checkbox' name='sheet[cure]' value='18' /></div>#}
+                    {#<div>難病治療19<input type='checkbox' name='sheet[cure]' value='19' /></div>#}
+                    {#<div>難病治療20<input type='checkbox' name='sheet[cure]' value='20' /></div>#}
+                    {#<div>難病治療21<input type='checkbox' name='sheet[cure]' value='21' /></div>#}
+                    {#<div>迷宮破壊2<input type='checkbox' name='sheet[destroy]' value='2' /></div>#}
+                    {#<div>迷宮破壊3<input type='checkbox' name='sheet[destroy]' value='3' /></div>#}
+                    {#<div>迷宮破壊4<input type='checkbox' name='sheet[destroy]' value='4' /></div>#}
+                    {#<div>迷宮破壊5<input type='checkbox' name='sheet[destroy]' value='5' /></div>#}
+                    {#<div>迷宮破壊6<input type='checkbox' name='sheet[destroy]' value='6' /></div>#}
+                    {#<div>迷宮破壊7<input type='checkbox' name='sheet[destroy]' value='7' /></div>#}
+                    {#<div>迷宮破壊8<input type='checkbox' name='sheet[destroy]' value='8' /></div>#}
+                    {#<div>迷宮破壊9<input type='checkbox' name='sheet[destroy]' value='9' /></div>#}
+                    {#<div>迷宮破壊10<input type='checkbox' name='sheet[destroy]' value='10' /></div>#}
+                    {#<div>迷宮破壊11<input type='checkbox' name='sheet[destroy]' value='11' /></div>#}
+                    {#<div>迷宮破壊12<input type='checkbox' name='sheet[destroy]' value='12' /></div>#}
+                    {#<div>迷宮破壊13<input type='checkbox' name='sheet[destroy]' value='13' /></div>#}
+                    {#<div>迷宮破壊14<input type='checkbox' name='sheet[destroy]' value='14' /></div>#}
+                    {#<div>迷宮破壊15<input type='checkbox' name='sheet[destroy]' value='15' /></div>#}
+                    {#<div>迷宮破壊16<input type='checkbox' name='sheet[destroy]' value='16' /></div>#}
+                    {#<div>迷宮破壊17<input type='checkbox' name='sheet[destroy]' value='17' /></div>#}
+                    {#<div>迷宮破壊18<input type='checkbox' name='sheet[destroy]' value='18' /></div>#}
+                    {#<div>迷宮破壊19<input type='checkbox' name='sheet[destroy]' value='19' /></div>#}
+                    {#<div>迷宮破壊20<input type='checkbox' name='sheet[destroy]' value='20' /></div>#}
+                    {#<div>迷宮破壊21<input type='checkbox' name='sheet[destroy]' value='21' /></div>#}
+                    {#<div>地域発展2<input type='checkbox' name='sheet[growth]' value='2' /></div>#}
+                    {#<div>地域発展3<input type='checkbox' name='sheet[growth]' value='3' /></div>#}
+                    {#<div>地域発展4<input type='checkbox' name='sheet[growth]' value='4' /></div>#}
+                    {#<div>地域発展5<input type='checkbox' name='sheet[growth]' value='5' /></div>#}
+                    {#<div>地域発展6<input type='checkbox' name='sheet[growth]' value='6' /></div>#}
+                    {#<div>地域発展7<input type='checkbox' name='sheet[growth]' value='7' /></div>#}
+                    {#<div>地域発展8<input type='checkbox' name='sheet[growth]' value='8' /></div>#}
+                    {#<div>地域発展9<input type='checkbox' name='sheet[growth]' value='9' /></div>#}
+                    {#<div>地域発展10<input type='checkbox' name='sheet[growth]' value='10' /></div>#}
+                    {#<div>地域発展11<input type='checkbox' name='sheet[growth]' value='11' /></div>#}
+                    {#<div>地域発展12<input type='checkbox' name='sheet[growth]' value='12' /></div>#}
+                    {#<div>地域発展13<input type='checkbox' name='sheet[growth]' value='13' /></div>#}
+                    {#<div>地域発展14<input type='checkbox' name='sheet[growth]' value='14' /></div>#}
+                    {#<div>地域発展15<input type='checkbox' name='sheet[growth]' value='15' /></div>#}
+                    {#<div>地域発展16<input type='checkbox' name='sheet[growth]' value='16' /></div>#}
+                    {#<div>地域発展17<input type='checkbox' name='sheet[growth]' value='17' /></div>#}
+                    {#<div>地域発展18<input type='checkbox' name='sheet[growth]' value='18' /></div>#}
+                    {#<div>地域発展19<input type='checkbox' name='sheet[growth]' value='19' /></div>#}
+                    {#<div>地域発展20<input type='checkbox' name='sheet[growth]' value='20' /></div>#}
+                    {#<div>地域発展21<input type='checkbox' name='sheet[growth]' value='21' /></div>#}
+                    {#<div>世界革命2<input type='checkbox' name='sheet[revolution]' value='2' /></div>#}
+                    {#<div>世界革命3<input type='checkbox' name='sheet[revolution]' value='3' /></div>#}
+                    {#<div>世界革命4<input type='checkbox' name='sheet[revolution]' value='4' /></div>#}
+                    {#<div>世界革命5<input type='checkbox' name='sheet[revolution]' value='5' /></div>#}
+                    {#<div>世界革命6<input type='checkbox' name='sheet[revolution]' value='6' /></div>#}
+                    {#<div>世界革命7<input type='checkbox' name='sheet[revolution]' value='7' /></div>#}
+                    {#<div>世界革命8<input type='checkbox' name='sheet[revolution]' value='8' /></div>#}
+                    {#<div>世界革命9<input type='checkbox' name='sheet[revolution]' value='9' /></div>#}
+                    {#<div>世界革命10<input type='checkbox' name='sheet[revolution]' value='10' /></div>#}
+                    {#<div>世界革命11<input type='checkbox' name='sheet[revolution]' value='11' /></div>#}
+                    {#<div>世界革命12<input type='checkbox' name='sheet[revolution]' value='12' /></div>#}
+                    {#<div>世界革命13<input type='checkbox' name='sheet[revolution]' value='13' /></div>#}
+                    {#<div>世界革命14<input type='checkbox' name='sheet[revolution]' value='14' /></div>#}
+                    {#<div>世界革命15<input type='checkbox' name='sheet[revolution]' value='15' /></div>#}
+                    {#<div>世界革命16<input type='checkbox' name='sheet[revolution]' value='16' /></div>#}
+                    {#<div>世界革命17<input type='checkbox' name='sheet[revolution]' value='17' /></div>#}
+                    {#<div>世界革命18<input type='checkbox' name='sheet[revolution]' value='18' /></div>#}
+                    {#<div>世界革命19<input type='checkbox' name='sheet[revolution]' value='19' /></div>#}
+                    {#<div>世界革命20<input type='checkbox' name='sheet[revolution]' value='20' /></div>#}
+                    {#<div>世界革命21<input type='checkbox' name='sheet[revolution]' value='21' /></div>#}
+                    {#<div>環境保全2<input type='checkbox' name='sheet[preserve]' value='2' /></div>#}
+                    {#<div>環境保全3<input type='checkbox' name='sheet[preserve]' value='3' /></div>#}
+                    {#<div>環境保全4<input type='checkbox' name='sheet[preserve]' value='4' /></div>#}
+                    {#<div>環境保全5<input type='checkbox' name='sheet[preserve]' value='5' /></div>#}
+                    {#<div>環境保全6<input type='checkbox' name='sheet[preserve]' value='6' /></div>#}
+                    {#<div>環境保全7<input type='checkbox' name='sheet[preserve]' value='7' /></div>#}
+                    {#<div>環境保全8<input type='checkbox' name='sheet[preserve]' value='8' /></div>#}
+                    {#<div>環境保全9<input type='checkbox' name='sheet[preserve]' value='9' /></div>#}
+                    {#<div>環境保全10<input type='checkbox' name='sheet[preserve]' value='10' /></div>#}
+                    {#<div>環境保全11<input type='checkbox' name='sheet[preserve]' value='11' /></div>#}
+                    {#<div>環境保全12<input type='checkbox' name='sheet[preserve]' value='12' /></div>#}
+                    {#<div>環境保全13<input type='checkbox' name='sheet[preserve]' value='13' /></div>#}
+                    {#<div>環境保全14<input type='checkbox' name='sheet[preserve]' value='14' /></div>#}
+                    {#<div>環境保全15<input type='checkbox' name='sheet[preserve]' value='15' /></div>#}
+                    {#<div>環境保全16<input type='checkbox' name='sheet[preserve]' value='16' /></div>#}
+                    {#<div>環境保全17<input type='checkbox' name='sheet[preserve]' value='17' /></div>#}
+                    {#<div>環境保全18<input type='checkbox' name='sheet[preserve]' value='18' /></div>#}
+                    {#<div>環境保全19<input type='checkbox' name='sheet[preserve]' value='19' /></div>#}
+                    {#<div>環境保全20<input type='checkbox' name='sheet[preserve]' value='20' /></div>#}
+                    {#<div>環境保全21<input type='checkbox' name='sheet[preserve]' value='21' /></div>#}
+                    {#<div>贅沢三昧2<input type='checkbox' name='sheet[luxury]' value='2' /></div>#}
+                    {#<div>贅沢三昧3<input type='checkbox' name='sheet[luxury]' value='3' /></div>#}
+                    {#<div>贅沢三昧4<input type='checkbox' name='sheet[luxury]' value='4' /></div>#}
+                    {#<div>贅沢三昧5<input type='checkbox' name='sheet[luxury]' value='5' /></div>#}
+                    {#<div>贅沢三昧6<input type='checkbox' name='sheet[luxury]' value='6' /></div>#}
+                    {#<div>贅沢三昧7<input type='checkbox' name='sheet[luxury]' value='7' /></div>#}
+                    {#<div>贅沢三昧8<input type='checkbox' name='sheet[luxury]' value='8' /></div>#}
+                    {#<div>贅沢三昧9<input type='checkbox' name='sheet[luxury]' value='9' /></div>#}
+                    {#<div>贅沢三昧10<input type='checkbox' name='sheet[luxury]' value='10' /></div>#}
+                    {#<div>贅沢三昧11<input type='checkbox' name='sheet[luxury]' value='11' /></div>#}
+                    {#<div>贅沢三昧12<input type='checkbox' name='sheet[luxury]' value='12' /></div>#}
+                    {#<div>贅沢三昧13<input type='checkbox' name='sheet[luxury]' value='13' /></div>#}
+                    {#<div>贅沢三昧14<input type='checkbox' name='sheet[luxury]' value='14' /></div>#}
+                    {#<div>贅沢三昧15<input type='checkbox' name='sheet[luxury]' value='15' /></div>#}
+                    {#<div>贅沢三昧16<input type='checkbox' name='sheet[luxury]' value='16' /></div>#}
+                    {#<div>贅沢三昧17<input type='checkbox' name='sheet[luxury]' value='17' /></div>#}
+                    {#<div>贅沢三昧18<input type='checkbox' name='sheet[luxury]' value='18' /></div>#}
+                    {#<div>贅沢三昧19<input type='checkbox' name='sheet[luxury]' value='19' /></div>#}
+                    {#<div>贅沢三昧20<input type='checkbox' name='sheet[luxury]' value='20' /></div>#}
+                    {#<div>贅沢三昧21<input type='checkbox' name='sheet[luxury]' value='21' /></div>#}
+                    {#<div>その他2<input type='checkbox' name='sheet[other]' value='2' /></div>#}
+                    {#<div>その他3<input type='checkbox' name='sheet[other]' value='3' /></div>#}
+                    {#<div>その他4<input type='checkbox' name='sheet[other]' value='4' /></div>#}
+                    {#<div>その他5<input type='checkbox' name='sheet[other]' value='5' /></div>#}
+                    {#<div>その他6<input type='checkbox' name='sheet[other]' value='6' /></div>#}
+                    {#<div>その他7<input type='checkbox' name='sheet[other]' value='7' /></div>#}
+                    {#<div>その他8<input type='checkbox' name='sheet[other]' value='8' /></div>#}
+                    {#<div>その他9<input type='checkbox' name='sheet[other]' value='9' /></div>#}
+                    {#<div>その他10<input type='checkbox' name='sheet[other]' value='10' /></div>#}
+                    {#<div>その他11<input type='checkbox' name='sheet[other]' value='11' /></div>#}
+                    {#<div>その他12<input type='checkbox' name='sheet[other]' value='12' /></div>#}
+                    {#<div>その他13<input type='checkbox' name='sheet[other]' value='13' /></div>#}
+                    {#<div>その他14<input type='checkbox' name='sheet[other]' value='14' /></div>#}
+                    {#<div>その他15<input type='checkbox' name='sheet[other]' value='15' /></div>#}
+                    {#<div>その他16<input type='checkbox' name='sheet[other]' value='16' /></div>#}
+                    {#<div>その他17<input type='checkbox' name='sheet[other]' value='17' /></div>#}
+                    {#<div>その他18<input type='checkbox' name='sheet[other]' value='18' /></div>#}
+                    {#<div>その他19<input type='checkbox' name='sheet[other]' value='19' /></div>#}
+                    {#<div>その他20<input type='checkbox' name='sheet[other]' value='20' /></div>#}
+                    {#<div>その他21<input type='checkbox' name='sheet[other]' value='21' /></div>#}
+
+                    <hr>
+
+                    <div class='form-group row'>
+                        <label for='sheet[password]' class='col-sm-1 form-control-label'>password</label>
+                        <div class='col-sm-3'><input type='password' class='form-control' id='' name='sheet[password]' placeholder='' {% if sheet.password is defined %}value='{{ sheet.password }}'{% endif %}></div>
+                    </div>
+
+                    {#<input type='hidden' name='sheet[id]' {% if sheet.id is defined %}value='{{ sheet.id }}'{% endif %} />#}
+                    <input type='hidden' name='sheet[hash]' {% if sheet.hash is defined %}value='{{ sheet.hash }}'{% endif %} />
+                    <button type="submit" class="btn-lg btn-primary" style="text-align: center;">{{ page_title }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

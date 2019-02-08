@@ -1,0 +1,393 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div class="container">
+        <section>
+            <div class="row warning">
+                <div class="col-sm-12">
+                    <p>WARNING: このリプレイは、同人シナリオ「<a href="http://www.toranoana.jp/mailorder/article/04/0030/44/45/040030444590.html" target="_blank">蕎麦屋 OF THE DEAD</a>」を使用しています。ネタバレが苦手、またはプレイ予定の方は閲覧をお控えください。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>PL達の控室</h2>
+                    <p>へい、らっしゃい</p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>hi</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>はろ～、今日ここ？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>ニンジャー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>haroaro</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>daaa</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ようこそ地獄へ、早めに来た人はキャラクター作っててもいいよ</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラクターメイク</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">レギュレーション等</p>
+                        [ルルブ] クトゥルフ2015までOK<br>
+                        [舞台] 現代日本<br>
+                        [推奨技能] ※どどんとふのメモ参照<br>
+                        [ハウスルール] ※どどんとふのメモ参照
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>今回のシナリオは戦闘もあるし、致死率も高いのでご注意を</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>致死率高いのかぁ……公式シナリオなんだよね</div>
+            </div>
+            {#<div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ナイフか料理かあ</div></div>#}
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>公式っていうか同人だけどね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお、同人シナリオかぁそれはあつい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあ最悪無くても、運が良ければ何とかなるよ。ちなみにリプレイでは3人中1人死亡でした</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>……2人は死ぬなこりゃあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>あと、希望があれば探索者の特徴表を振ってあげるから、特徴が欲しい人は言ってね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>じゃあふって</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>同じく振って！</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>わたしもだ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>1d6+1d10 Cthulhu : (1D6+1D10) → 1[1]+9[9] → 10 …… 「一族伝来の宝物を持っている」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>1d6+1d10 Cthulhu : (1D6+1D10) → 1[1]+4[4] → 5 …… 「オシャレ」なのでＡＰＰを+1</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>1d6+1d10 Cthulhu : (1D6+1D10) → 1[1]+6[6] → 7 …… 「強固な意思」だそうなので最大正気度と現在正気度を+5</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>こんな結果になったのでキャラ付けにでも使ってね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>SAN値20でもこの先生きていけていけますか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>オイオイオイそりゃあ死ぬぞ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ジャーナリストでいこうかなぁ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>芸術家枠でりょうりにんになろうかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>なんでみんな料理したがってるんだ？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>料理必須って書いてあるから</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>ほんとだ。コックといえばセガール……クリアだな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>我が家伝統の包丁、村正を持っている</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>必須技能は、全員が持ってなくても、1人か2人でいいぞ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>またきたないキャラができそう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>包丁持ってれば料理もナイフもできるじゃないか※ただしSAN値20</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>今日の占いは超心理学者</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>じゃあ、心理学はまかせた</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>心理学とかいらんでしょ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>いらる</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>武器は命中50ってことは、50までは振っても意味がないということ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>そうだね</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>目星は90振ります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ようわからんから、みんなのスキルが決まってから能力きーめよっと、足りないところフォローすりゃいいでしょ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>私、放浪者。隠れる、忍び歩きは、90ふる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>既にカオスな予感</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>こっちも隠れるは80ふった、あと忍びに20。趣味は100しか振れないからこれで終わり</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>スニーキングミッションなのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>どっちかというと逃げ回る系です</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>先生！日本一周の旅中けがとか大変なんで、職業技能で応急処置いいですか！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>まあいいでしょう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>包丁の威力はナイフと同じ扱いでいい？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>せやな1d4+DBで</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        ここで突然始まる性別決定ロール
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>choice[♂,♀] Cthulhu : (CHOICE[♂,♀]) → ♂</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>choice[♂,♀] Cthulhu : (CHOICE[♂,♀]) → ♀</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@PL</div>
+                <div class='col-sm-10 serif'>choice[♂,♀] Cthulhu : (CHOICE[♂,♀]) → ♀</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>choice[♂,♀] Cthulhu : (CHOICE[♂,♀]) → ♀</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>なんだこれは</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>思し召し</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>何処かで見た流れだ</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        ぼちぼちキャラもできあがり
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>にこ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@式</div>
+                <div class='col-sm-10 serif'>スタンド使えそう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>余裕で使える</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>写真術多すぎだな、こりゃメモキャラにしよっと。てかスキルすり合わせしなくていいの？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@式</div>
+                <div class='col-sm-10 serif'>精神分析がほしいなあ……くらい？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>確かに精神分析してくれないと早々とリタイアしそう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@式</div>
+                <div class='col-sm-10 serif'>君は精神分析あっても死ぬんじゃないかな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>SAN値へらないよね？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>がっつり減るよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@式</div>
+                <div class='col-sm-10 serif'>4減ったら不定の狂気だよきみ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>5分の１だからそうだね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>精神分析、僕が取ればいい？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>お願いします</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@式</div>
+                <div class='col-sm-10 serif'>PC4は気楽でいいなあ</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@板倉仮</div>
+                <div class='col-sm-10 serif'>で～きたできたできたできたではい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>(jem君のキャラを見て)おいすでに人外がいるぞ……スペック高い！！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@式</div>
+                <div class='col-sm-10 serif'>思い出せそうで思い出せない</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@板倉仮</div>
+                <div class='col-sm-10 serif'>ちな、ナイフと料理は持ってません</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>ナイフは皆50あるから大丈夫と踏んだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>斬り太郎がいるから大丈夫かな……多分。死んだら知らない</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あとは……3人で隠れると言いくるめとコンピューターがかぶってるかも</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>隠れるは皆とったほうが良いと思う</div>
+            </div>
+            <div class='row jem'>
+                <div class='col-sm-2 name'>jem@板倉仮</div>
+                <div class='col-sm-10 serif'>コンピーターもってない</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>(ま、ええか)おっけ～、キャラ絵は後でつけるわ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>kaeru@GM</div>
+                <div class='col-sm-10 serif'>ほい、では始めますねー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@贅沢斬太郎</div>
+                <div class='col-sm-10 serif'>どすどす</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>よろしく～</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

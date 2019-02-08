@@ -1,0 +1,324 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラクターメイク</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>(´～｀)モグモグ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>はろ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ時間だから始めるね。シナリオの性質としては、外伝シナリオのエピソード0です。要するにやり切りのセッションって感じ</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">今回の予告</p>
+                        ※特になし
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">背景</p>
+                        数週間前陥落した王都から脱出した騎士団一行は、魔王を打ち砕くことができるとされる伝説の武器を求め旅を続けていました。<br>
+                        そんなある日、物資補給のため街道沿いにある小さな町に立ち寄ります。<br>
+                        「もしもし、そこの強そうな旅の人、お願いがあります！」<br>
+                        キミたちを見かけるなりこう声をかけてきた青年はマックスと名乗ります。<br>
+                        「このお金で、この先にある『アキバラの街』で限定販売している『みこちゃんフィギュア』を買ってきてほしいのです！」<br>
+                        人の良い主君は、マックスのあまりの勢いに気おされ、お金を受け取ってしまいます。<br>
+                        「ああ、よかった！街道は魔物の群れがいっぱいで、僕ではどうしようもなかったんです！それではお願いしましたよ！あー、楽しみだなぁ！」<br>
+                        そういうとマックスは猛スピードでどこかに消えてしまいました。<br>
+                        <br>
+                        ……『アキバラの街』へ行くには、今来た道を戻る必要があることに、主君はまだ気が付いていないようです。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>って、舞台設定です。読んだら教えてね、質問もいいよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>マックスは不敬罪が怖くないのですか！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>しゅくん？本物かどうかあやしいものだなぁ！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>おのれー</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>騎士に頼むことなのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>王政は崩壊してる世界観で間違いないよな？その復権を目指すってシステム全体のストーリーと思ってるんだけど……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>革命軍</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">世界観の補足</p>
+                        主君のいる騎士団は、身分を偽ってるんだよね。魔軍を討伐した先王が、ヴァルキュリーとの約束を破って、魂持ってかれて、王都が魔軍に侵攻されて堕ちてます<br>
+                        その唯一の子孫が、キミ達騎士団が守ってる主君ってわけ<br>
+                        もちろん常に魔軍によって命を狙われているから、身分を大っぴらにはできないんだね
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>嫁を人質にとられて諦める先王様</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あれ？嫁さんってまだ生きてるんだっけ？死んだと思ってたわ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>とくに王妃の生命については言及されていない</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>続編をはようはよう（読者</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-12">ロストロの世界観すきです。ラノベ化してください</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>白鳥族(デネブ)になろう……(ころころ……ランダムチョイスは性別女性)……時には女性キャラをしろというお告げ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>人間つよいなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>個人的にはフランベルジュが好き（名前的に</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>人数少ないとすぐ死にそうな種族だ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>anekoくん特殊能力どれにするの</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あ、そうだ、先に命題を提示しておくね</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">命題A「約束を守り買ってくるべきなのか？」</p>
+                        理由 約束は守らなければならないから<br>
+                        予感 見つかった！<br>
+                        <br>
+                        <p class="header">命題B「無視して先を急いでいいのか？」</p>
+                        理由 主君を危険にさらすことはできないから<br>
+                        予感 ネコババだ！<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>んでもってその宣誓</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">我は 庇護 の騎士道に殉じ、命題 A こそ正しいと宣誓する。</p>
+                        or<br>
+                        <p class="header">我は 主君 の騎士道に殉じ、命題 B こそ正しいと宣誓する。</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>して、キミ達の宣誓はどっちにする？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>Bです！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@PL</div>
+                <div class='col-sm-10 serif'>Aのフィギュア買ってくる！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>AとBね、じゃあそれぞれ宣誓点を1点ずつどうぞ。割れちゃったので主君スカーレットさん的には、どっちにしようかなぁって感じ……(ころころ)……ランダムチョイスはB。ってことで、Bに傾いてます。ヴァルキリーウォークは一旦Bの側にあることにします</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>＾＾</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>正しい姿だ</div>
+            </div>]
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        ルール確認しつつ、キャラメイクは30分くらいで完了
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>キャラクター紹介「マリウス」</h3>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>絆を獲得……したいのでキャラクター紹介をどうぞ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>百人隊長だったけど王国が滅んだので近衛に昇格したマリウスです</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'><b>やっぱりローマ人</b>じゃないか……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>武力と速力と魔力が高いです！気軽にセンチュリオンとか呼んでください！防御型と作戦型をもってるので本陣で姫を守るぞ！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>亀戦士が気になる</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'><a href="https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%B9%E3%83%88%E3%82%A5%E3%83%89" target="_blank">テストゥド - Wikipedia</a></div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>これこれ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>すごいつよそう</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>キャラクター紹介「ミルカ」</h3>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>次、anekoのキャラどうぞ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>戦うことでしか存在を示せない私に、生きることの素晴らしさを教えてくれたスカ様に付いて行きます。一生。はい。だから皆首を出せ。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'><b>愛情が重いタイプの人</b>だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>頼もしいんだか恐ろしいんだか、なんか魔人になりそうで怖い</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>種族がてら素足で行動するのがチャームポイント。武力低めだけど何とかがんばる。武器は斧。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>種族設定を取り入れててすばらしい！てかスキルの光翼めっちゃ強そうなんだけど……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>攻撃型なら急降下に変えてもいいかなと思ったけど、速力高めだったからそのまま光翼にした</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>時間が経つほど強くなるけど、じり貧は大敵だからそのへんがどうなるかきになるね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>亀さんが倒れるころには、無敵になってそうなんだよなぁ……</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>キャラクター紹介「主君スカーレット」</h3>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>他になければ、スカーレットさんの紹介するよ</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@スカーレット</div>
+                <div class='col-sm-10 serif'>「ま、なんとかなるでしょ、ね？」が口癖。お人好しすぎるのが玉に瑕　以上！</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>絆初期値の取得</h3>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>というわけで、自己紹介が終わったところで、絆を獲得してもらいます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>スカーレットさんはミルカに友情を取ります</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>こっちももちろん主君へ……(ころころ)……<b>欲情で</b></div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ほげえ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>へ、へんたいだぁ！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>マリウスはスカーレットにユウジョウ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>妙な三角関係が発生している気もしないではないですけど……</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

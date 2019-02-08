@@ -1,0 +1,1099 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ1「シミュレーション」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんやかんやあって、キミ達は学園地下にある演習施設にたどり着きました。もちろん校長先生も一緒です(チュートリアル役)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>校長きたんだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>戦力かな?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>でもこの学園の校長ならめちゃくちゃ強そう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ここはわしにまかせてさきにゆけ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>指パッチンで敵部隊全滅させないかなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そりゃまたハチャメチャなことを……</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 全員<br>
+                        [場所] 学園地下演習場、教員控室<br>
+                        [時間] 夜<br>
+                        <br>
+                        演習場に備え付けられた教員室には、演習場を管理するためのいくつかのモニターが設置されている。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「ええっと、どれだったっけなぁ……えっと……」とパネルを操作し始める校長</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「ここは数年前に閉鎖された古い演習場なんだ。施設がうまく動くかわからないから、君たち、ちょっとそこに立っていてくれ。なに、時間はかからないだろうさ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>大丈夫?ファミ通の攻略本だよ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>厚いから枕になるぞ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>校長がパネルをパチパチすると、モニターには「シミュレーション」と表示される。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と言ったところでチュートリアル防衛戦が始まります。ルール把握の状況どうでしょう、一応全員読んでくれた感じ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>読んだよ、かかってこいやあああ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ほい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>PCの項目だけ意識してれば行けると思う。じゃあさっそくやってみますか</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン1</h3>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">ターンの流れ</p>
+                        1. ターン開始<br>
+                        2. 敵軍(GM)の行動<br>
+                        3. 自軍(PL)の行動<br>
+                        4. 遭遇戦<br>
+                        5. ターン終了<br>
+                        6. ※1に戻り、繰り返す<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス(結果 = 2、2、2)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、敵ユニットの配置が終わりました、次は自軍(PL)の行動です順番は誰からでもいいよう。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>最初は何処かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それを知るためには、この行動で[情報収集]する必要があります。チュートリアルなので、怖がらずに色々試してみて</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>調査は任せよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>こっちも調査しか出来ない、交渉とかないから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあ先生が左上を情報収集しよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GO100 ちょうさ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 5 → クリティカル</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>さすが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A1ってことでいいかな……ってもうクリティカル出すの?クリティカルしたので、栄はもう1回情報収集できます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあA2</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 34 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけい、ではA1にはなにもいません。A2には敵軍ユニットが2ユニットでしたいました。戦力値はそれぞれ10です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次は餡子でいいかな、情報収集してもいいぞう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>じゃあA3で情報収集</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 25 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いいね、ではA3には戦力値10のユニットが1ついました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあこっちは手下を増やそうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>最後に、鶫の[補給]判定をどうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO67 威圧</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=67@13 → 83 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>いまいち成功しないんだよなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ミスなので、補給はできませんでしたああん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>仲間などいらん!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>じゃあ敵ね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>単騎でも戦力値やばいからなぁ、鶫は</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>なあに行動させなけりゃこっちのかちよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次に、配置フェイズに移ります。[PCおよびNPCユニットの配置] [待機]のいずれかを宣言してください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>A2へ、突撃するかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>駒移動してくれていいよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>先生一人でやれるのか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>二人でいくってこと?それとも3人?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子もA2</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>まあこっちもA2にいこう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>戦力20なら二人で余裕でしょ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>それがし進み方はまっすぐしか知らぬゆえ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあA3はこっちで潰そう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ほんとでござるかあ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あい、じゃあ全員配置完了。遭遇戦に移行します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>あんことバディでもいい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>といっても、戦力値が10ずつしかなく、PC達の基本値だけで制圧できるので、判定無しでこのターンは敵は撃破されます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、そうだ忘れてた、バディかソロか選択してください</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>先生とバディ組もう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ちょうどそんな配置だし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>鶫もそれでいい?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>いいよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>鶫は群れないのさ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけ、じゃあそれでいこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>で1ターン終わったので、全員一度防衛ラインにもどります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>2ターン目にあらためて配置するって感じね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ほうほう</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン2</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、ちょっと戦力値の高い敵がでます。ダメージ出ても、くらわなくていいです</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 1</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>敵軍配置完了。PC側の情報収集、補給をどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>まあ……A1かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>Go100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 69 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A1は戦力値20の敵がいます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>他のお二人はどうしますぅ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>A2情報</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>今度こそ補給</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 40 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子、鶫の順番でどうぞう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO67 威圧</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=67@13 → 14 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A2は10の敵が1ユニットいます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>よっしゃ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、補給のときに、どのリスト使うか選択してほしかった。すっかりスルーしてしまっていた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>リストAは判定-30、リストBは判定-60、リストCは判定-90で判定してほしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>リストがあった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>これは……先生の役かな?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>自分はAかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>今回はチュートリアルなので、OKとします。1d3と1d6してください>鶫</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>先生は多忙だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>1d3</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : (1D6) → 1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ピンゾロ!!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>鶫は、リストAで、バリケード(戦力値5)を取得しました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>またガラクタを拾ってきたのかい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ふぉ、フォローになるし。あ、アイテムはチーム共通でいいからね。おし、配置フェイズに移行します</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>どうせならバリヤードが欲しかった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ガチバトルや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まあ、わかりやすいようにマップオブジェクト置いとくわ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>先生バリケード持ってく?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>俺がバリケードだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>栄君は一応単騎でもクリティカルで命中させれば20の敵は倒せます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>こっちもA1にいこう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>それだと手数がなあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まあ次で止めればいいか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A2に行きます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なるほどなるほど……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、遭遇戦解決します。自動で迎撃できました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んで、今マスク情報なんだけど、A3に実は戦力値30の敵がいました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>30かあ</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン3</h3>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>相手は移動してこないの?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>移動するんじゃない?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ほい、配置完了。(30)の敵は防衛ラインのいずれかのスクエアに移動してます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>今からか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>多分B3だあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>30は俺が相手しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>本来は見えない情報なので、実戦ではどこのラインにいそうか把握しておいてくれるといいかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>他を頼む</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>敵がまっすぐ進軍すると仮定したら……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>というわけでC表を補給してみよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ここで補給か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>思考ルーティンはランダムダイス依存なので、僕の意思は介入しないので要注意</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>頼みますぜ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go64</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=64@12 → 87 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>なにもなかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>な、なんだとぉ!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>90やりすぎたかな……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>先生が……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>調整しときます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ちなみに―60だとどう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>交渉は138なのだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>購入判定なら+30できるけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まあ64ならこっちの威圧と変わらんし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ああ、購入判定と同じ扱いでいいよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>これは先生無双がきますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ああん、書いてないわ。情報収集はGOの情報収集ルールをベースに。補給はGOの購入判定をベースにスキルとかあててOK</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go84 それならやな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=84@16 → 25 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ま、そうすると―90でもいけそうかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、C表から、1d6をどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>終わったらB3調査してみよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子了解、鶫はどうする?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : (1D6) → 6</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>出しちゃったかぁ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>戦車……かな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>こっちも調査に使用</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、騒ぎを聞きつけた『日本国家警察OS一課強襲チーム(戦力値30)』が突入してきました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>一応A2を調べるぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 30 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あいよー、餡子、鶫の情報収集どうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>一転攻勢</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子の情報収集で30のユニットがB3に</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO50 コンピューター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 69 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まあね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、A2には敵ユニットが2ついることがわかりました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>2つks</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>B3に警察でA2にバリケード置く?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さあ、どうしましょう!配置フェイズです</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B3は警察でもいいかも</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ポリスメンは消耗品?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES、NPCユニットは全て1回遭遇戦すると消滅します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>遭遇戦が始まらない場合は、スクエアにとどまり続けます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>んでA1とA3に2人行って待機の一人が足りないところに行く感じでいいのでは?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>戦略的だな、待機の使い方もそんな感じを想定してます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>配置した瞬間に相手の戦力値が分かるの?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そのマスにいたら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んーと、?????になってるのは、配置した瞬間じゃなくて、次の遭遇戦の時に判別できる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>開けてみるまで分からない系だね。一応、戦力値はWaveごとに設定してあるから、ごまかしたりはしないことは保証する</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>分散して配置するメリットはありそう?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>足止めができないとかなしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>例えばだけど、10のやつはたとえ突破されてもMOBが1体増えるだけだから、最悪放置でもいい。そんなゲームデザイン</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>分散しないと数が足りないし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>自分がタワーディフェンスを理解してないことに気づいた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>これ突破してきたぶんがボス戦に乱入してくるって認識でいいのかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そうね、クライマックスフェイズのときに突破した戦力値/10(切り上げ)のMOBが増える</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>30が無傷で突破したら、3体増えるってことだね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>10が無傷で突破したらMOBが1体増える</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>だから、極論、全部クライマックスで落とせる自信があるなら、防衛しなくてもいい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まあモブならなんとかなるか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ふむふむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうじゃろ、なんか引っかかってることがあればどんどん聞いてくれていいよ。テストプレイみたいになっちゃったな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>チュートリアルだしポリスメン使うか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>確認だけど、敵は皆直線で移動してくるの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>NO。敵の移動は全てダイス(1d3)によって決定される</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>じゃあ戦力がまとまる事もあるってわけです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>例) A3にいた敵が1を出した場合は、B2に移動する</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>あ、ないか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>あるのか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>今A2に固まってるしね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>戦力がまとまるっていうか、複数ユニットがいても結局合計値なので、スクエア単位で考えてくれて大丈夫</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そうなの?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そういえば合計値でした</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そうだね、鶫の考え方で大丈夫</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ユニットが2つあるじゃろ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B2みてた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>この辺もわかりやすいマトリックスにしたいところだけどね、色とかにするか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さ、どうする。そろそろ決定してくれるとうれしい、決めかねてるならダイスで代表者を決めてってのもOK</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>敵がいきなりBに沸くことってあります?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>NO。必ずAラインのどこかからしか敵は増えません</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>了解です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>とりま30の敵は警察に処理させるでいいかな?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>倒した数も覚える必要があるってことね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ほっとくと、出現してから3ターンほっとくと無傷で突破しちゃうってことね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そうなるかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>一応、最初に振ってるシークレットダイスが今フィールドにいる敵の総数を示しる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>示してる。さっきは3回振ったから、3ユニットしかフィールドにいない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ありゃ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあもう敵は全部みつけてるんか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そだね、さっきはA3ノータッチだったから敵がわかんなかった感じ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ならけいさつは温存もありかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そう思ったから、A1とA3に配置の意図が分からなかったのです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>バリケードと俺なら30も行けると思うし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>自信満々じゃないすか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>4回攻撃の威力をみせてあげよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>問題はA2の戦力かなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>じゃあA2に先生と行く感じかな?それとも戦力値判明してから戦いに挑む?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>いや</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A2にバリケードもありかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>うーむ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B3にいこうか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>5回攻撃ならいけるでしょ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>確かに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>オーバーキルじゃないすかね^q^;</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>B3餡子、A2バリケードで行こう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>一マスずつの進軍なら一ターンは様子見してもいいと思う。チュートリアルだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そうね、1マスずつ進行するよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うい、栄は……いきてなさそうだし、A2に行きます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あれ、栄は温存だっけ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>男鑑定で戦力値をみてもらおう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃ、温存</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>2人温存で柔軟に対応しよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ポリスメン消費したかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おお、生きてたすまんな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>そうするか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ポリスと先生バリケードでいく?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>手に入れたの栄だし、ポリスメン放出してもいいんじゃない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあポリス面で30殺して</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>全員で残り潰すか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>バリケードは残そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>全然それでもOK</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そっちね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そうしようか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>男は度胸</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、あらためて配置しなおしてください</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>確実性ならこれがベストでしょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、戦力値がオープンしました。遭遇専処理します</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>やってやんよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>攻撃するぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 87 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B3は撃破。A2は戦力値が10残ってます。攻撃ドウゾ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 31 → クリティカル</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 91 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 27 → クリティカル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ええやん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>合計30だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>極端だなぁ、しかし。というわけで+20確定で撃破と</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>3ターン目終わり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>こうやって繰り返すのが防衛戦と、言った感じですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どないなもんじゃろ、わかんない所とか、もう少し補足いるところとかある?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>大丈夫そう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>完璧に理解したぜ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>問題なっしん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うん、ルールも整理できたし、いけると思う</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ2「襲来」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけい、ではさっそくマスターシーンから</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーン名] 襲来<br>
+                        [シーンPC] なし(マスターシーン)<br>
+                        [場所] 学園地下演習場<br>
+                        [時間] 夜<br>
+                        <br>
+                        学園地下演習場の入り口には完全武装した集団が集まっていた。<br>
+                        「どうやら、ここに逃げ込んだよう」<br>
+                        白衣の男は独り言のようにつぶやくと、武装した集団に突入の指示を出した。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>やったるで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>一方その頃のキミ達は……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>入り口にはクレイモアが埋めてあるのさ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ3「防衛戦」</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーン名] 学園地下演習場での防衛戦<br>
+                        [シーンPC] 全員<br>
+                        [場所] 学園地下演習場<br>
+                        [時間] 夜<br>
+                        <br>
+                        演習場の教員控え室に備え付けられたモニターに『警戒』の文字が映し出される。<br>
+                        「……」<br>
+                        ペロンは怯えているのか先ほどから一度も声を発していない。小刻みに身体が震えているようだった。<br>
+
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>という感じ。なんかRPなければ、進みます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「大丈夫よペロンちゃん、全てが終わったらゴールデンDXパフェ食べに行こうね」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ペロン</div><div class='col-sm-10 serif'>「う、うん」と不安そうにうなずきます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、先に聞いとこう。戦闘で敵を倒すとデータ断片っていう勝敗とは全く関係ないデータをドロップすることにしてるんだけどさ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>トロフィー要素ですか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>集めるとどんな願いでも叶う系アイテム</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES。トロフィーもそうなんだけど、無駄に長い設定集(黒幕とか事件の真相)とかが載ってるから、その場で読むか後で任意で読むかのどっちがいいかなと。GM的にはすぐに開示してもいいし、後で好きに読んどいてでもいい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ED後に読もうかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ミュージックビデオにして</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んー、後で読みでいいかな。おっけ、じゃあ改めて始めます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>情報を得ることによりトゥルーエンド迎えれるなら読みたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ルールはWEBで。展開には関係ないと思う、判断材料にもなりにくいと思う。ほんとただの事件の真相みたいな内容</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>クローン兵士の名前と血液型と遺伝子情報がわかる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>個人情報の流出</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>黒幕にお前らの考えていることはお見通しだって!言えるかも</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さあて、それはどうかな(震え声</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン1</h3>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>配置完了、PC側の準備フェイズどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>A1を調べよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>[情報収集]or[補給]ができます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あんこどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 22 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>A2に諜報活動だ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go120</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=120@24 → 52 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@演習場AI</div><div class='col-sm-10 serif'>「ガガ、ピピ、A1ユニット各員デキズ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ならA3を調べよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>各員?確認ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>まだ演習なの?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO50 コンピューター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 82 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もう本番だよ。なんかAIとかいたら楽しいかなって思って出しただけ、校長が叫んでもいいけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>さてはこのコンピュータはマックOSだな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>全然成功しねえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ChromeOSでしたーーーーー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ガラケーの画面にタッチしてそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@校長</div><div class='col-sm-10 serif'>「A2には敵が2ユニットおるぞ!」博士風</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A3はわからず</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、配置ドウゾ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「畜生、OSのアップデートが始まっちまった」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>OSに馬鹿にされてそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>A3は必然的に一体はいることになるよね。戦力分からないけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A2が強敵っぽいからそっちいくわ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>A2に全力配置だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>栄が行くなら待機でもいいか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>つぐみは行くべきでは?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そうね餡子の考え方は正解だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>というか行かないと勝てない気がする</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A3の戦力が不安だが</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>最初ならそんなに強くないか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A2にいこう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ペロンくんを配置すればええんや</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A3は餡子に任せよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>負けると数値差でダメージ受けるから気をつけて、クライマックスまで回復できないよ(予定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>戦力いくつだろペロン</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そんなに傷つけさせたいの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ペロン配置したらその時点で試合終了しちゃうよぉお^q^;</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>君は何を防衛してるんだい?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ペロンくんは最重要ターゲットだから攻撃されないはずだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ある意味男らしいかも、後のMOBはクライマックスで倒す的な</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>そのかわり連れて行かれる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>むしろペロンに銃口を突きつけたら敵の動きを止めれそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ダメージ覚悟で戦力男鑑定してもいいかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>外道</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>そこに5のバリケードがあるじゃろ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>あ、あれ残ってるの</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いいよ、空だと思われてる場所に配置するのは自由です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>戦力10なら勝てるし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>バリケード残ってないし!幻影だし!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>幻らしいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>アレが幻の……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>幻のバリケードってなんかつよそうだけどよわい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>A2に先生、鶫、A3に特攻餡子って感じ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>それでいいんじゃない?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>きっと雑魚でしょ、コンピューター探索に引っかからないぐらいだし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>爪切りの切れ味がわるくなってきた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>強かったら鶫殴ろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ファイナルアンサー?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、遭遇戦解消します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>デデドン(30)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>餡子死亡</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、A2から戦力判定してきましょか。残り10出せばA2は撃破です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>実際このパターンだと、ただの無駄足なんだよね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>仇は取ってあげるから頑張って</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子は最低でも10削れるから、次のターンにはその30の敵は20にできる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>無駄足ってことはないはず</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>とりあえず撃つね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 70 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 70 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 88 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>2回攻撃でいいのでは?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 70 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ちょっとぉおおお</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>雑魚</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>今日は調子が悪いな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>やるしかないのか……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GO30 近接</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 76 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>むりむり</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>先生低すぎない!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いやあ、楽しくなってきたなあ。10残ります、鶫と栄は軽傷ゲージ―1どうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ぐわあああああ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>RP的には一時撤退扱いです</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>サイコを見捨てて一目散だぜ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>近接振っていい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、餡子。どうぞどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO90 [近接武器]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=90@18 → 96 → ファンブル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>何もなかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これは……昨日の反動かな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>基本値10削って、20残りで次のターンになります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>A3はしょうがないとおもうんですよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>重症くらったぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>A2はおかしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おお、わすれとった、重症―1どうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>本番に弱いタイプだったか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>4回攻撃がおかしいと思うの</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>もしかして固定?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>リアルでサイコ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>だったらごめん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>選択できるぞよ、たぶん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>固定ではない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>いや趣味</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まあ、まだリカバリできるできる、がんばーれ</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン2</h3>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>今日のサイオニックヒーリングはないものと思え</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>多いですねえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>3体いるんだから2体固まってるところを確実に潰さないといけないというのに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、ごめん最後のなし。4体フィールドにいます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>まったくもう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>最大戦力50の鶫様にそんなこと言っていいのですか!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>(すみません回復してください)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>PC側の準備フェイズどうぞう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>戦力合計と攻撃回数を考えたいところ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>質問というか提案</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>というか要望</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>があるんですけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうぞどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>わたしの特性能力にマインド・リーディングってのがあって追跡/逃走に+30%つくんですよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>エリアBの判定に+30くれませんか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>進軍経路の予測的な</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、うん、ぜんぜんいいよ。疲労も消費しないあつかいでいいし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>むしろコストがない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ではB1を暴く!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうぞどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GO150</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=150@30 → 35 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>おしい……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B1には、さっきA2にいたやつがいます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>10か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お次の方どうぞ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>じゃあB2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあこっちはB3かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうぞどうぞ、フォローもあんがと</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 94 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ええやん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B2はなんかいることがわかります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあB3はいいから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>サイコはAにいけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>この時点でB3に敵はいないことが確定してるからAライン探索オススメ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあA3</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO50 コンピューター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 80 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんもいないことがわかります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>レッツ配置フェイズ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>畜生アップデートが終わらないぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あ分かるんだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>B1はまかせろーばりばり</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>失敗は戦力値がわからないけどいるかどうかはわかる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>戦力が分からないだけっぽい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ルールにかいてあるんだよなぁ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子の認識で正解</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>とりあえずB2をつぶすか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>いやB2は20だから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>あんこさんのほうがいいとおもいます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>餡子さん20出すのきつくない?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>クリティカルしかない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>酷使される餡子</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>だよね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>こっちは攻撃回数へらせば20は出せるし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあ安全策でいこうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>成功+5, クリティカル+10 って計算ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>Aは捨ててB2に二人いこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>その判断もなかなかいいと思います</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>2人行く意味は特にないぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>鶫くんに戦線を任せる不安が解消される</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>またAにつっこめと?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>何もしない場合は回復できるみたいなアクション作ろうか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>それはありがたいね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>意味はあるよ。ダイスを振る必要がなくなる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>実質重症者だし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>回復内容が気になりまする</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>重症を回復できなかったらペロンちゃんと遊んどこう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>あのトリガーハッピーは200%あるから普通に撃てば命中判定2回成功が確定なんですよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>4回撃つって言い出すから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>それな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>今回は控えるよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、配置フェイズに[PCおよびNPCユニットの配置] [待機] [治療] を加えて、1d3で1軽傷、2軽傷2、3重傷1、繰り上げナシでどうだね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>いいですな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>それだったら回復にかけたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うん、おっけ、じゃあ治療の欄を追加しときます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>鶫は一回撃つだけでいいんだよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>2回だった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>鶫くん、今回は弾丸2発だけもって出撃しなさい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>これは命令だ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>今回は回復します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんだろうニホンヘかソビエトヘっぽいんだけど……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あいよ、餡子。1d3どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>1d3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ええやん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>マジ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>やりますねえ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ペロン</div><div class='col-sm-10 serif'>ペロンが謎の力で重傷を回復した!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>漢字違うやん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>他の遭遇戦も解決します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>aneko@餡子の重症を1回復(重傷:2->3)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B1、判定無しで撃破。B2(20)鶫さん判定どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>二回だよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>3回目振ったら銃が爆発するから</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>しかたないにゃあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO102@41 銃器2回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=102@41 → 46 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO102@41 銃器2回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=102@41 → 78 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>うーむ今日はダイス目がのらないなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>謎のセーフティかかってて笑う。ではB2も無事に撃破と</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>なあに、Bラインで撃退すれば言いだけの話</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あい、3ターン目。ちなみに6ターン耐えれば、クライマックスフェイズにいけます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>でも戦力50とか出てきたら4回打たせてくれよな</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン3</h3>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 1</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>巻き添えくらいたくないから単機で行ってね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、配置完了です。準備フェイズどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>君たち先に情報収集してくれる?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B1する</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>チームワークっぽいものが生まれつつある?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 8 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>マジ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>さすが</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B2もする</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ダイス交換しよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 92 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子はもう一回情報収集できます。B1には敵がいません</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B2niha</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>敵が2ユニットいます!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GOサイコ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>補給C表しまーす</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>是即ち、悲しみなり</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go84</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=84@16 → 98 → ファンブル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>何処調べるかなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>何も得れませんでしたー!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>Aならどこでも</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>A3にするか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO50 コンピューター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 90 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>もうこのコンピューターはダメですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>せっかくの購入判定チャレンジしてくれたし、バリケード(5)でも手に入れたことにしてもいいけど、どうする</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ウイルスに感染してますよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A3には1ユニットいます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>電源入ってないんじゃない?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ずいぶんふる～い演習施設だからなぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B2に皆で突っ込もう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>バリケード(敵の死体)をてにいれたぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>1か2、くらいですかねぇ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、栄君はバリケード5を入手できたことにしてよい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>スパルタならこれで撃退するから</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>バリケードがあるなら戦力分析に使えるぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>時代考証係大激怒。では配置してどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>5って意外と大事な数値なんだよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>300の映画は2回勝利したあと矢の雨で負けたけど史実だと包囲されたあとも3回くらい勝ってる不思議</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>300みたいなぁ、おれもなぁ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>俺がB2に突っ込んでA3にバリケードで2人は待機でいいんじゃね?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>んで足りないほうに突っ込めば</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>足りないほうに突っ込むとは?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>戦力が</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>よくわからないので回復しよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>俺は最大50まで対処できるし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>処理順的にむりなんじゃ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>軽症なんだから我慢して</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>回復しまーす</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>1d3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>軽傷治療をとおりこした</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>栄は重傷以下回復してよし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>待機していいっていいなら待機するよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>それとも二人でB2にいく?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まあとりあえず待機でいいのでは</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>これさ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>戦力分からんし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>敵が10と90の組み合わせだったときって</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>鶫くんが攻撃全部ミスったとして</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>どう減るの?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>重傷1じゃないの?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>敵の減り方ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>10のグループが死ぬと信じたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>合計値で考えて、小さいものから優先してフィールドから取り除くってルーティンかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>10が死んで、90が残るって認識であってる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>オッケー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ファイナルアンサーでいいのかな。餡子は待機ね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>遭遇戦解決します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B2は20が2ユニットです。登場判定どうします?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あれバリケードは</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>配置するなら今配置していいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>バリケードはいま磨いてるから</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>こうだな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>チームで異論がなければ、続けちゃうぞ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>40でもいける?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まずは敵の戦力把握だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>理論上は不可能ではないな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>バリケードが意思を持っているかどうかだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>Bを通すのは得策ではない気もする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>きっと監視カメラが付いているに違いない、ルール上も戦力値がオープンするよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>だめだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>バリケードの強い意志を感じる!!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>B来て</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A3は80です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>えー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@バリケード5</div><div class='col-sm-10 serif'>「し、しにたくない!た、たすけて!たすけてーー!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ば、ばりけーどーーー!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>80の奴はなんどかNPCぶつけないとキツイな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ゆるさんぞ鶫イイイイイイイイイ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まさかこれがハッピーエンドフラグになっているとはまだ誰も……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>所詮奴はバリケード四天王の中でも最弱</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>がんばって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さて、どうしましょ。登場判定するなら今がチャンス</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>チームメイトを信じている</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>鶫を信じてる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>チームとはおもいたくもないが……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>登場判定ってどれだっけ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さっそく音楽性の違いが発揮されつつある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>基本P187かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>魅力x5の、対象がバディだったら+20</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>カマーン</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>失敗しろ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あたいソロや</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO80 [魅力ロール」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 31 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>あああああ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ん?今呪いの言葉が……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>なにこれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、鶫のピンチに餡子がさっそうと現れました。遭遇戦解決します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「鶫ちゃん、そのPC、おもちゃよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A3はバリケードくんの犠牲により、75に</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>残酷すぎるよお</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@バリケード5</div><div class='col-sm-10 serif'>「とまr(ry」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>人の心がないのか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>「畜生!道理でさっきから画面が動かないと思ったんだ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B2は基本値で20が1ユニットダウン。攻撃判定どうぞ、どっちからでもいいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>振ります</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあやりますか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO90 [近接武器]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=90@18 → 34 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ふつうだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>今+5</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あと15か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES、頑張れ鶫!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>3回か4回か</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>女は度胸!!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>3回で全部成功でしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>あんた男でしょ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>でも3回の成功率って68なんだよなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>中間くらいでもいい(真顔</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>51で4回の方が当たる気がする</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>138センチの男女差なんてないでしょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ん～、小学生かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>7割とか必中みたいなもんじゃん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>130だった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>お前を信じない俺を信じろ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>アニキーーーー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>信頼関係壊れる^～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO68@41 銃器3回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=68@41 → 32 → クリティカル</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO68@41 銃器3回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=68@41 → 14 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>マジ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO68@41 銃器3回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=68@41 → 22 → クリティカル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>さすが餡子やなって</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あ一人で余裕だった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>130cmって9歳並なんだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、合計35でオーバーキルだよママン……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>一緒にしたら9歳児に失礼</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン4</h3>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>わくわく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>配置完了です……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B1みよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>餡子ドウゾ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 64 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>あぶなし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>警察とか呼ばないと80はきついぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B1にはいません!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>突破されてもMOB8増えるだけだし、温存してもいいよ^^</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>とりあえずB3調べるか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>震えるね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO50 コンピューター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 100 → ファンブル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>なんだこいつ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もうこれわかんねぇな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>おもちゃって言ってんでしょ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>このポンコツがあ!動けってんだよ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B3には1ユニットいそうです</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>まあいるかどうかわかればいいからね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>いたーーー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあ補給C表</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go84</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=84@16 → 23 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : (1D6) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どんぞどんぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>お</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>パパの下僕が来る</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>鶯組の方々が駆けつけてくれたぞ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ヤクザの抗争だった……?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>これ全員でかかれば何とか行けるかな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@日比谷</div><div class='col-sm-10 serif'>「あっしらにおまかせくだせえ!しにませんから!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>「遅いわよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>25はでかいなあ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@日比谷</div><div class='col-sm-10 serif'>「へへ、刺身の相手で時間かかっちまって……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、配置フェイズどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>たしかサイコさん50は余裕だぜっていってたから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ヤクザとサイコでB3は余裕だな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>たしかに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>今の鶫運ならいける可能性はある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>じゃあ待機しとくかあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>死ねと申すか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>かぁ～、1人でなんとかしたらカットインとかはいりそうだなぁ、かっこいいんだろうなぁ～かあ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>そうだぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>重傷1だから大丈夫</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あたいたち仲間だよね!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>なんなら致命傷1にしてもいいんだぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>死亡でもよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お、そうだな(修正を用意する</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>いや困る</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>重火器くんがいないときつい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ならみんなで協力しましょうぜ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>総動員してたたく感じ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>そうだね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>あたいのコンピュータによると総動員すれば99%行けるって計算が出たよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ピンクの生物をどけてあげて!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ひどい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、遭遇戦解決します</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>鬼、悪魔、サイコ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>この鶫!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>罵倒なのかそれは</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>A3にいたのがここにいて、鴬組で25減って、残り50です。攻撃判定どうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>サイコはわかるんですけど鶫ってなんですか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>先生もいますよね?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go30</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 37 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>先生はいなかった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO90 [近接武器]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=90@18 → 37 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>同じ数値</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>連携ボーナスやな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>バディだからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>残り45</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>30減ってないですね……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>鶫が何かって言われても、あたいが鶫だとしか答えられねえぜ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>??</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>45出すしかねえなこりゃ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>超理論すき</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 49 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 87 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 27 → クリティカル</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO51@41 銃器4回攻撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=51@41 → 60 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ハードラックとダンスっちまったぜ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>面目保った感。えーっと15減って、30残りです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>3人は重症ゲージを1ずつどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>我々がただ突っ立ってるだけで10点ずつ減るのでは?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、忘れてた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>だと思ってた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>てことは……撃破じゃん?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>まじか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、無事に撃破できました!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>餡子と先生のおかげかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ヤクザも忘れないであげて</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>あとヤクザ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>一人で25削った猛者を忘れてませんか?!</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>ターン5</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えー、ちなみにまだフィールドには敵が残ってるので、続けます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>ヤクザじゃん</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>s1d3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>GardenOrder : (1D3) → 1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シークレットダイス</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>ヤクザは集団でしょ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>え?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>しかし、80は抜けると思ったんだけどなぁ、見事じゃ。準備フェイズどうぞ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ヤクザはファミリーだから個にして全、全にして個</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>補給C表しまーす</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>go84</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : D100<=84@16 → 73 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>GardenOrder : (1D6) → 5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>良い事いうね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>きたぜぬるりと</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B1調査</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>機動隊ゲットだぜ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 12 → クリティカル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>B2も</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まじ?もう一回ドウゾ。B1には戦力30が1</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GO75 [調査]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>GardenOrder : D100<=75@15 → 57 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ん?B1?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>Cラインの間違いかいや。今Cにしか敵いない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>なら残りのB3は担当しよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>え、そうなの</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>もうそこまで来てたのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>Bの75が最前線だったとおもったんですが</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>こっちもその認識だった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>まさか2マス移動……!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うん、ログ取ってるけど間違いないと思うで。B75 が出てきたタイミングで、最後のWAVEだったから間違いない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>ん?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>今5ターン目でしょ?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>さっきのが4ターン目だったんだから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>もう1波あるとおもう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>次元の超越</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あれ?間違えたかな、3WAVEで終わりの予定だったんだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まあ、そういうことならBラインでもいいや、どっちもかまわないし</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>6並くるなら6ターン目で最後の列がAにいるはず</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B2には戦力10のユニットが1います</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>B2は叩きに行こう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>とりまB3を調べよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GO50 コンピューター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 60 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>たぶんいないはずだけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>これ一回も成功しないな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B3はいないぞ～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、配置フェイズ</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>Wave3(120)</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>敵軍ユニット6 = 10 -> A2 -> B2 -> C3</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>敵軍ユニット7 = 30 -> A2 -> B2 -> C1</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>敵軍ユニット8 = 80 -> A3 -> B3 -> X</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>栄先生した?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>調達</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>補給した</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>本当はこういう動きしてたん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>警官がいるよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>そうだった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>そういえばバリケードで判明したの1グループだけだったね……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>とりあえず30はこっちで潰すか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>強すぎたから他のグループのことを完全に失念してた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>Bの捜査漏れがあったのかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そのための80強ユニット</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>もうよくわからない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>後でログ見てもいいし、とりあえず進めてこう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>さっきのwaveではB3に2グループいたってことだよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>B2に2グループかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>それは80くんのログがおかしい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>A3でバリケードとぶつかってその次にB2にきていたから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>やっぱ数字とローマ字はだめだな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>色と数字と記号とかそういうのにしよう、反省した</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>あんこと鶫はダメージうけてたっけ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>確かにさっきのwaveではBラインを一つほど調べてなかったからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>あんこは回復したか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>軽症1だな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>こっちは</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>じゃあこれで</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、遭遇戦判定します</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>じゃあ回復するか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>鶫回復どうぞ。とはいえ軽傷1なので、自動回復でOK</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@鶫</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ユニットも全撃破でOK</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>実は鶫が治療に使った薬は毒キノコスープだったのだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>こっちは瞑想しとこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おめでとう!キミ達は防衛ラインを守り切った!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@栄</div><div class='col-sm-10 serif'>なかなか新鮮なルールだったな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>割とおもしろかったかもね、タワーディフェンスは相性いいかも</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@餡子</div><div class='col-sm-10 serif'>確かに守ってる感もあったし良かった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あとは攻城戦ルールをつくれば……ガーデンオーダーR6Sが完成する……かもしれ……</div></div>
+        </section>
+    </div>
+{% endblock %}

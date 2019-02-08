@@ -1,0 +1,498 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>エンディングフェイズの始まり</h2>
+                    <p>通算2回目のGOセッションでしたが、だんだんとルールにも慣れてきましたね</p>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">サクラエノキは折ったけどあのキノコはなんだったんだ……</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">花見客でしょ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">あれは、演習林に自生するおいしいキノコです</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">「来年はここで花見をしましょうね～」</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「うん！そのときは、キノコ鍋にしようね！」とにこにこ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">エンディングフェイズは自由に演出なんだけど、やりたい人いますかね？</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">すこしだけしよう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">ここはやはり相方をねぎらうシーンかな？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">いいんちょをゼロ得から卒業させてやりたいな……委員長はいまくしゃみすべきだ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">んじゃあ、バディとソロでそれぞれ演出よろしくう！</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン1 鶫と餡子の場合</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">「無事に事件も解決したし、今日の晩ご飯も確保したし、充実した1日だったわ～」</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">食うのか……まあエノキは始末したから大丈夫だろう</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">少しなら大丈夫やろ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">「それ食うのか？お嬢？」</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">「ええ、だってこんなにおいしそうなんだもの、もちろん鶫ちゃんも食べるでしょ(ニコッ)」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">「いやいやいや、あれだ、俺はキノコとか食べねんだ……ほら不良だし。俺にはヤニと酒と肉と<b>スイーツ</b>がありゃあ問題ねえのよ！」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">野菜とか残すでしょうな、不良だから</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">(餡子の提案を断ると)お父様がすり潰しに来るぞ</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">「なに言ってるの！！<b>不良だろうが肥料だろうが>関係ないわよ～</b>。だから食べてね(はぁと)」</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">とりあえず風の力で口の中に1つ放り投げます</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">便利な風ですね……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">「ちょっ！お嬢！生は無理だって！<b>せめて焼いてくれー！</b>グアアアアアアア！！」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">口からキノコ生やして倒れます</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">「あら？やっぱり生は無理だったかしら。まあいっか♪」</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">そういって<b>家に帰ります</b></div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">おいてかえった</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">餡子の方が悪の統領っぽいぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">なんか闇抱えてますね……</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">まあ<b>組長の娘</b>だしなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">え、そうなの！？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">将来は文字通り、お嬢の下で鉄砲玉になりそうだ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">いいオチがついたでぇ……では、鶫の断末魔と餡子の笑い声を背景に、シーンは空に向かってフェードアウトしていきます</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン2 栄の場合</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">よしでは、バディ組からソロの先生に……もちろん、委員長と会話でいいんよな！？な！？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">ところでシーンかわるから疲労は回復していいよね</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">もちろん！なんか舞台に設定ある？なければ、こちらの用意したオチに巻き込まれてもらう</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">KINOKO ENDかな？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">ついでにいいんちょをレベル2～3くらいにしてもいいか？……ブレインウォッシュで一時的に乗っ取って潜在能力を安定させる的な</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">というか<b>もろ洗脳</b>だよね</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">場所は、なぜか血まみれの演習林だ。もちろん、先ほど餡子に放置され、<b>ファンガス(きのこのおばけ)化しつつある鶫</b>もいる</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「あ、ありがとう……、せんせい、あのとき血まみれになってたすけてくれて……」委員長の頬はほんのり桜色になっている気がします</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">「うんまあ……血は<b>知らない人の血</b>なんだけど……」</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">またいたずらな風ふかしとこ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">重力で盛り上げるぞー</div>
+            </div>
+
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        「あ、あのね、先生。実は私、伝えたいこ――」<br>
+                        そのとき突然、辺りに一陣の風がふいた。<br>
+                        「――っは」<br>
+                        風が鼻をかすめたのか、大きく息を吸い込む委員長。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">そこだ、特性能力《†ブレインウォッシュ》！</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">特性能力 -> DiceBot : (1D100<=100) → 62 → 成功</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>《†ブレインウォッシュ》 …… (コスト 疲労１)　〈特性能力〉で判定。エキストラひとりを自由に操る</blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">生徒を洗脳しよったでこの教師</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">たぶん栄先生なら特性能力のコントロールの仕方は知っているだろうから、この(くしゃみすると能力)発現するときの感覚を固着させよう</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「くっ……むむ？」とくしゃみをしようとした委員長は直前で動作を止める</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">おっと<b>鼻からナパーム汁</b>(爆発粘性鼻水)が</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「じゅるっ！うわ、ご、ごめんなさい、わたし……」とあわててふきふき</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">「いいか。ちょっとだけ我慢して、その感覚を自分のものにするんだ」</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「この感覚を？自分のものに……？」ときょとんとする</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">(また風ふかしたいな……)</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">銃を乱射してえな</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">どうするんだろうなこれ？</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「(この感覚……このあまずっぱい気持ちをわたしの中に……おさめる？そうか、先生……、もう他に……)」フラグがガッシャーンする音</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">ゼロ組卒業ならずか……</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「……う、うん、わかった！先生、わたし、頑張るから！！」と後ろを向いて走り去ります。その頬には、一筋の輝くものが……</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">保健室の先生に「あの子の<b>頭の中を覗いてみたんですけど、治療したほうがいい</b>です」と伝えておこう</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@委員長</div>
+                <div class="col-sm-10 serif">「わーん！きのこたくさん食べて見返してやるーーー！」</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">という委員長の声と共に、シーンはフェードアウト。エンディングテロップが始まります</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">やっぱり<b>KINOKO END</b>じゃないか！！</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">と、いうわけで、第一話「燃える校舎」おーしまい！！おつかれさま、楽しいRP・演出をありがとぅ！</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">ありがとございました！</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>エピローグ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-12">
+                    <blockquote>
+                        ―― 数日後。<br>
+                        <br>
+                        「へくちっ！」<br>
+                        ここはゼロ特1年教室、今日も委員長のくしゃみがこだまする。<br>
+                        「うわ、きたねぇなぁ、委員長……」<br>
+                        くしゃみと共に出た鼻水を見て、鶫が一歩後ずさった。<br>
+                        「じゅる……。ご、ごめん鶫ちゃん。あの日以来、くしゃみすると鼻水がでるようになっちゃって……」<br>
+                        「はい、ティッシュですよ。でも、出るのが鼻水になってよかったですね。ふふ、これも栄先生のおかげかしら」<br>
+                        ティッシュを手渡して餡子が笑う。彼女のサラサラの髪は、依然と同じように風になびいている。<br>
+                        「むぐっ！？もー、先生のことは言わないでっていってるでしょ！」<br>
+                        鼻をかもうとした委員長は、餡子のセリフで頬を赤らめながらふくれた。<br>
+                        「んー？まぁだあの先生のこと気になってんのかぁ？んんー？」<br>
+                        鶫はいじわるそうな顔をして委員長の顔を覗き込む。<br>
+                        <br>
+                        そのとき、教室のドアが音を立てて開く。教室に入って来たのは栄だった。<br>
+                        「出席を取ります、全員席に着くように」<br>
+                        教育実習生の登場で教室が少しの間あわただしくなるが、それもすぐにおさまる。<br>
+                        その様子を見届けると、栄は慣れた手つきで出席名簿を開き、名前を読み上げ始めた。<br>
+                        <br>
+                        「――次、ひの。火野ひまり」<br>
+                        「はいっ！」<br>
+                        シュビッと元気よく手を挙げた委員長の顔は、心なしか以前よりも明るいものになっているようだった。<br>
+                        「よし、それじゃ……」<br>
+                        最後の生徒の名前を呼んだ栄は、出席名簿を閉じる。そして、持ってきたプリントの束を机の上でトントンとすると、にっこりと笑った。<br>
+                        「今日は抜き打ちのテストをします」<br>
+                        教室はクラス全員の不満の声で満たされるのだった。<br>
+                        <br>
+                        学園内で噂されていたボヤ騒ぎは、いつの間にか鳴りを潜め、ゼロ特教室に今日も平和な風が吹く……。<br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="text-center">
+                            ガーデンオーダーTRPG シリーズ「ゼロ特学園生活！」<br>
+                            第1話「燃える校舎」<br>
+                            FIN.<br>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>感想戦</h2>
+                    <p>PLからの提案をうっかり見逃すスキルをなんとかしたい、今日この頃</p>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">凄惨な演習林の今後が心配</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">演習林は自己修復くらいするから大丈夫だよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">次回はキノコ人間と化した委員長と戦いそうだな</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">その時は食べてあげよう</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">委員長よりも、キノコが癒着しつつあるサイコを先生は忘れていたので置いて帰った。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">なに？！</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">去り際の擬音がネバネバー！になったら手遅れ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">あ、そうだ、経験値だけど、またあとで算出してみんなにわたすよ。よって、今回はここまででOK</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">りょうかいです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">あれ、服って常備できないの？毎回裸はいやですぜ</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">常備化は経験点支払いでそ？</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">(同日に)次のシナリオ控えてるんじゃなかったけ？だから、次回の処理にしようかなぁと思ってるんだけど＾ｑ＾</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">まあ次回やな</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">じゃあ(別のセッション部屋に)引っ越すかー</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">どろん</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>成績表！</h2>
+                    <p>後日、参加メンバーには以下のような書類が渡されたという……。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th></th>
+                                <th>藤堂 栄</th>
+                                <th>鶯 餡子</th>
+                                <th>豺虎 鶫</th>
+                            </tr>
+                            <tr>
+                                <th>セッションに最後まで参加した(5)</th>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>シナリオの目的を達成した(10)</th>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>よいロールプレイをした(1)</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>他のプレイヤーを助けた(1)</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>セッションの進行を助けた(1)</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>場所の手配、連絡を行った(2)</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>総獲得経験値</th>
+                                <td><b>18</b></td>
+                                <td><b>18</b></td>
+                                <td><b>18</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">総評：<b>大変よくできました！</b></div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

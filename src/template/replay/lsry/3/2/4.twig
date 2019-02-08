@@ -1,0 +1,623 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                    <h2><span class="section-icon"></span>戦闘フェイズ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        不思議なことに道中敵に見つかることなく、アキバラの街にたどり着いた騎士団。<br>
+                        フィギュアが置いてあるというお店の前にたどり着くと、そこには人だかりが……<br>
+                        「えぇい、どけえ、愚民どもぉ！」<br>
+                        突如大きな声がしたかと思うと、異形の怪物が後ろから現れた！
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>「我の名は、魔人ビスク。この世のすべてのフィギュアは全て私のモノ……。おとなしくそのフィギュアを全てよこしなさい」と不敵に笑います</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>なんだこの展開</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>魔族か、原住民か、判別つかない</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>「……おや？そこにいるのは、しっぽ巻いて逃げた騎士団の皆さんじゃないですか？ふふふ、これはいい？見逃してあげてもいいんですよ？ん？」と降伏を宣言してきます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>降伏する？しない？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>流石にしない</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ローマの鷲は屈さぬ！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>というところで、『この宣戦布告に対して名乗りを上げて自分の意思を示す必要がある』とある。名乗りを上げれば、正義+1点もらえるぞ！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>「買占め転売を目論む魔族め、我が名はマリウス、プラエトリアの称号にかけて、ローマ皇帝の威光にかけて、全力で立ちふさがろう！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>(盾を剣でバンバン叩くアレをしながら)</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>プラエトリアってなんだ？プラナリアの親戚？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>親衛隊だって</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>「わが名はミルカ、王女スカーレットの最愛の女性であり、円卓の一員である。わが辞書には降伏の二文字はない！いざ尋常に勝負！」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>読み返したらなんか普通だった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>普通かなぁ？</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@スカーレット</div>
+                <div class='col-sm-10 serif'>「（ん？聞き捨てならない単語もあったけど、頼もしい2人）」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>2人は、正義点数をそれぞれ1点ずつどうぞ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>「くくく、そうではくてはな！君たちも我がフィギュアコレクションの一員にしてあげよう！」と魔群をわらわら召喚するよ</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        その後、戦闘準備が行われました<br>
+                        1. 血路の確認 …… 討伐数10で20<br>
+                        2. 絆の確認 …… 1騎士あたり4<br>
+                        3. 運命点の確認 …… 1<br>
+                        4. 隊列の確認 …… 前衛ミルカ、本陣マリウスとスカーレット
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>第1サイクル</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>血路判定</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>作戦型で本陣にいるので+2。いくぞこらぁ！</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>「わたしの真の姿は『死』。つまり血路判定+1ということだああああ」説明口調</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>1d6+2 LostRoyal : (1D6+2) → 2[2]+2 → 4</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>1d6+1 LostRoyal : (1D6+1) → 1[1]+1 → 2</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>＾＾</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>イエスだね！</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>「……」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>血路判定は騎士団側に！次、声援か援護を選択可能</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>本陣にいないとできないので、私しかできない。声援をしよう……ということで正義を1点譲渡します。絆を1点獲得するけど、これは絆合計値がふえるのかな？それともミルカには絆もってるから増えないのかな？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ミルカからマリウスへの絆も付与できそうじゃないこれ。だとしたら、合計絆+1できそう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ほんとだ、じゃあミルカからマリウスに絆をとらせます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>心が温かくなる応援……！ミルカは感情表でも振ってください。絆合計値は5になりますた</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>(ころころ)……信頼で</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>「軽装歩兵よ！攻撃の要はお前たちだ！前進せよ！」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>「やっぱりマリウスはいつだって頼もしいわね。ちょっとうるさいけど」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>もはやローマの一環である</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>naki@スカーレット</div>
+                <div class='col-sm-10 serif'>「わたしは、マリウスの言ってることがたまによくわからないけど！頼もしいね！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>anekoのために解説すると、とりあえず【包囲】を0にしないと魔人にも魔群にも攻撃できないんですが、魔人か魔群のどっちかを倒しきれば勝ちなのでどちらかを狙って戦いましょう！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>まずはリアル作戦会議かな？ちょっとアネコとエビで話し合って決めて</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>evi的には血路0と魔人倒し、どっちが確実性があると思う？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>魔人の復活回数公開されてるし、2回なら魔人ボコるのが簡単だとおもう。ステータスも弱いし</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>魔人は復活の度に強化されることをお忘れなく！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ただ魔人のHPが9点だから、2回たおして18点とかんがえたら、魔群の17点を削る方が確実かな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>魔人の強化リストはP225にあるよ。復活回数+1とかもあるよ！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>(しばし悩んだのち)魔群に速力で勝負しよう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おっけぇい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>LR[1,0,1,3,1,2] LostRoyal : 3D6 => [6,5,4] => (2+1+3) => 6 | 3 chain! (4,5,6) => 9 [スペシャル]</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>スペシャルだから、高揚取得。騎士側の+4勝利。4+速力分ダメージ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>速力4で先陣だから5になって9ダメってこと？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>そうだね！じゃあ、包囲に9ダメージ入ります。なんかヒトナデで半壊したんだけど……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>次は、魔人の行動かな？1回目は包囲を17/2回復、2回目はスカーレットを攻撃</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>8回復して16</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ディーフェンス！P182　かばう。フォーム　テストゥード！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>亀戦士がでたぞおおおお</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>マリウスは魔力が得意です</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ、魔力対決かな？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>LR[1,0,1,3,1,2] LostRoyal : 3D6 => [4,5,5] => (3+1+1) => 5 | 2 chain! (4,5) => 7 [ファンブル]</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ぐぬ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>高揚解除しよう</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>LR[2,1,1,1,1,3] LostRoyal : 3D6 => [6,1,2] => (3+2+1) => 6 | 3 chain! (6,1,2) => 9 [スペシャル]</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>これはおいしい。魔軍は高揚を獲得</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>正義を使って振り直します！ここでファンブルはいたい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>LR[1,0,1,3,1,2] LostRoyal : 3D6 => [3,6,5] => (1+2+1) => 4 | 2 chain! (5,6) => 6</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ファンブルは回避して4点ダメージです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>防御型と本陣のダメージ軽減効果で4点軽減します</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>強くね！？じゃあ、ノーダメージです……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ローマ皇帝の親衛隊をなめてはいけない</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>シンエイタイコワイ……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>さすしん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>全てはローマのために！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>モノローグ……は回想持ってる人がなんかするらしい。今回はないので、隊列変更ありますか？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>隊列はこのまま行こう</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>第2サイクル</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>1d6+1 血路判定 LostRoyal : (1D6+1) → 1[1]+1 → 2</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>はあああああん！？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>これ振るまでもなく勝ってますね……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>血路は引き続き騎士団側</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>声援と援護</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>あーるーひーとー？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>しなーい</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>速力アップしよう（光翼のスキル忘れたてた</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>では、アクションフェイズ！ミルカさんどうぞ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>さっきと同じく魔群に速力で対抗</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>速力5！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>LR[1,0,1,3,1,2] LostRoyal : 3D6 => [5,1,5] => (1+1+1) => 3</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>ほふん負けた。正義使うタイミングなのかな、使います</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>LR[1,0,1,3,1,2] LostRoyal : 3D6 => [4,4,1] => (3+3+1) => 7</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>めっちゃかいぜんしちょる……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>そうだね、ダメージ+の方向で高揚を使います。先陣でプラス1があります</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>て、こてゃ包囲ダメージ10点かなぁ。残り6</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>包囲って一度0になっても回復するんです？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>わりと回復する効果はあるよ。特殊部隊にトロールが配置されてたら毎ターン1d6回復とかあるし、PC側が防御専念したら3点くらい回復する</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>魔人の行動回数1回消費で今回の場合は8回復できるから、最大で16回復できるはず</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>フランベルジュがいれば貫通できるんだけど……まあいないものはしかたない</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>白鳥族も燃やせばフランベルジュになったりしない？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>焼き鳥かなあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>次、マリウスの行動ドウゾ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>包囲を魔力でなぐります</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>魔力4</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>LR[0,1,2,1,1,3] LostRoyal : 3D6 => [4,6,5] => (1+3+1) => 5 | 3 chain! (4,5,6) => 8 [スペシャル]</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>イエア</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>えぇ……騎士団は高揚を再び取得</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>魔力3点です</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>魔群のHPはゼロだー！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>さすまり</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>じゃあ魔人の行動かなぁ？さっきと同じで、回復と本陣攻撃だ</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>c(0+8) 魔群回復 LostRoyal : 計算結果 → 8</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ディーフェンス！</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>魔力だよねぇ……</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>LR[2,1,1,1,1,3] 攻撃判定 LostRoyal : 3D6 => [5,6,5] => (1+3+1) => 5 | 2 chain! (5,6) => 7 [ファンブル]</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>LR[0,1,2,1,1,3] LostRoyal : 3D6 => [2,6,2] => (1+3+1) => 5</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>えぇ……高揚を解除して、判定は勝利かな</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>高揚していこうよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>審議拒否</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>ダメージ3……またノーダメかな？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ガキーン</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>隊列変更もなしで……おっけ～</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>第3サイクル</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔人ビスク</div>
+                <div class='col-sm-10 serif'>c(18-2) 血路毎ターン減少 LostRoyal : 計算結果 → 16</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>光翼で速力アップします。anenko@ミルカの速力が1アップ（速力 5->6）</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>「あらぶってきた」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>強い</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>どんどん早くなっていく……！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>けど魔群回復を繰り返される場合は意味を成さないのが悲しい</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>ミルカが包囲を突破してマリウスが殴るので先陣にどうぞ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>「ローマ重装軍団兵の集団戦は世界一だ！」</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>「けちらされちゃう～＞＜」</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>魔群を速力対抗します</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>LR[1,0,1,3,1,2] LostRoyal : 3D6 => [3,1,6] => (1+1+2) => 4 | 2 chain! (6,1) => 6</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>速力5</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>8ダメです</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@魔群</div>
+                <div class='col-sm-10 serif'>ジャスト0</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>高揚使って、酒歌を2点回復します</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ほい！次、マリウス～</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>血路を攻撃だ！魔力で、あと絆を5点ダメージに上乗せ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>LR[0,1,2,1,1,3] LostRoyal : 3D6 => [2,3,5] => (1+2+1) => 4 | 2 chain! (2,3) => 6</div>
+            </div>
+            <div class='row enemy'>
+                <div class='col-sm-2 name'>naki@血路</div>
+                <div class='col-sm-10 serif'>c(16-14) 血路ダメージ LostRoyal : 計算結果 → 2</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>これで、ラウンド終了の血路減少で0ですな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>naki@GM</div>
+                <div class='col-sm-10 serif'>ってわけで、血路は0になり、みなさんは無事逃走できましたとさ</div>
+            </div>
+            <div class='row system'>
+                <div class='col-sm-2 name'>system@INFO</div>
+                <div class='col-sm-10 serif'>戦闘終了！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@ミルカ</div>
+                <div class='col-sm-10 serif'>マリウスさまさまだった。スパルタクスは強いよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@マリウス</div>
+                <div class='col-sm-10 serif'>防御は最大の攻撃</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

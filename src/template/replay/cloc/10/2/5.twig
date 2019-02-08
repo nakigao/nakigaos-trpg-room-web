@@ -1,0 +1,186 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-kaeru.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>事件報告</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>じゃあ図書館に帰宅した探索者は館長のもとに向かいます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「おかえり、それで?結果はどうだったの?」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>上首尾だったなぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「大変喜んでいましたよ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>「残念ながら、力にはなれなかったっす、無念っす」とガックリと肩を落とします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「……そう、でもねえ魔女に嘘をつくのは良くないわ、あら貴方は正直ね」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>誰が嘘ついたんだ?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>マリでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>喜んでなかった?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>むしろ解決できなくてがっかりですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>正直者にはこの金のオノを……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>斧に加工しなくていいから金をくれ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>賢者の石をよこすんだよ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「まあいいわ、報酬は払いましょう……でもこれは次回への投資だと思いなさい……あんまり不甲斐ないようなら罰を与えるからそのつもりでね」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ブラック企業やん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>まあ魔女だしね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こりゃ魔女狩り大戦始まるで</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>そんなん退職するわ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>終身雇用確定だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>100歳になっても雇ってくるんですね!やったー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>動けなくなっても新薬の実験とか新魔法の実験とか色々あるから安心だよ。まあマリには最初に魔力石あげたし、ほかの2人は何がほしい?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>世界の半分</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>世界の半分は魔王にでも頼んでくださいな。報酬は才能、マジックアイテム、金のどれかだよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ゴミの間違いでしょ?結局あのアイテム何の意味あったのか最後までわからなかった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>魔力石は今度のシナリオまでに使い方考えとくよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>何も考えてなかったのもひどい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>シナリオフックとかにできそうじゃない、石</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>飛行石だからねそれ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>石を奪い合う戦いが始まりそう。とりあえず石は売ろう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>石は現実世界で売っても金にならんよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>マジックアイテムは外れだったし才能しかないな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>じゃあトムは才能だな。1d6を振ってね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D6) → 3</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>ではトムは(危機察知能力)攻撃を受けた際に集中力が上がる。回避の基本値がDEXの5倍になる を得ました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>確かに才能ほしいな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>社も才能っと</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>Cthulhu : (1D6) → 3</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>じゃあトムと一緒だね (危機察知能力)攻撃を受けた際に集中力が上がる。回避の基本値がDEXの5倍になる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいよ～</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>回避がいっきに42もふえた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>ふむこれなら次は多少戦闘しても即死はないかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どうじゃろか……当たれば死ぬしな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>COCはいつも死と隣り合わせ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@館長</div><div class='col-sm-10 serif'>「それじゃあ今日の所はかえっていいわ、また用があれば呼ぶからよろしく」そう言って館長は持っていた本を読みだし、あなた達に興味を失った様でした</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>「次はちゃんとした報酬くださいね。そうでないともう来ませんわよ」ウィンクして帰ります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>逆立ちで帰ります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>やりますねえ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そんなわけでそれぞれの日常に帰るわけですが。何かやりたい事ありますか?無ければこれでエピソード2終わりです</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ないかなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>ないねえ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>特になっしん!依頼失敗した時のエピソードってやりにくいな、なんかできることあればいいが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>では事件は解決できませんでしたが、無事に生還したという事でSAN値を1d3回復していいよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>1d3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>Cthulhu : (1D3) → 3</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>1d3 SAN回復</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@社</div><div class='col-sm-10 serif'>Cthulhu : (1D3) → 3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>1d3</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>Cthulhu : (1D3) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ここで最大値をだすのか、悪運が強いなあ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>真実は……</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>では探索者が帰宅して</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>2か月後くらいのことです</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>ふと本屋を見ると本日発売の新刊コーナーにて販売延期になっていた「異世界探偵魔術師クリスティーナの事件簿13 それは炎よりも熱く燃え盛るモノ」が売られていました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>あらすじを見てみると正に自分たちが推理していた事件の内容が書かれています</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>買いますか?買いませんか?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@トム</div><div class='col-sm-10 serif'>不要!!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>一応買うか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>サインもらって売るために</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>毎度アリー</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>印税が入るでよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>印税くれるとは太っ腹だあ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>あげないよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>まあ買ったという事は読むってことですよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>読まずに食べるシーンをやるところだった、あぶないあぶない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>白ヤギさんかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>現実なら積み本だけど、読もう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>個性忘れてそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>では内容を読むとあなた達が体験して推理したこととほぼ同じ流れで進みますね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>しかし主人公のクリスが犯人を指定したところからが変わっていました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>クリスに指摘されたのはイグニではなく……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>アクアに変わっていました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>動揺する登場人物たちの前で推理は続きます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ざわ……ざわ……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>「貴方は水を操りとある方法でゴールドスミス卿を燃やした」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>ざわつく登場人物</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>「その方法とは……収れん発火です」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>登場人物は何を言ってるのか理解できませんでしたが</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>生まれて初めて聞く単語だわ、てか!クリスさんそんな科学っぽい単語を使っちゃ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>しゅうねんかと思ってた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>「今日のような天気のいい日は特に危ないのですけれど……ようするに太陽光を利用したトリックです」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>そこで初めてアクアに動揺が走ります</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>「アクアさん、貴方は水で巨大なレンズを作りそれで太陽光を収束そして照射した」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>人じゃ無理だと思うけど</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>「恐らく火力を考えれば水鏡を使用して反射光をも利用したのでしょうね」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@???</div><div class='col-sm-10 serif'>「そんな……なにか証拠でもあるのですか!!私が旦那様をころすような」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@???</div><div class='col-sm-10 serif'>そうして泣きわめくアクアにクリスは近づくと</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>クリスはそっとアクアの涙を舐めた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@世具外クリスティーナ</div><div class='col-sm-10 serif'>「……ふむ、やはりウソ泣きですね、真水の味がします。目から水を生成するなんて器用な真似をしますね」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>kaeru@???</div><div class='col-sm-10 serif'>「な、にを」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>とまあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>こんな感じで話は進みますね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んんん、なるほどね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ちゃんと魔法使ってた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>後は犯人の自供、そして悪あがきからの魔法バトルに突入、そしてクリスの勝利で終わりです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ちなみに収れん発火は実際に水の入ったペットボトルや水槽でも起こりうるので注意するように</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>言われてみればどっかで見たことある気がしたわ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあトリックの方はこんな感じですがその他質問ありますでしょうか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>5年前にうちの会社でもあったらしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まじかよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあぶっちゃけ知ってても防ぎようがないしな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>何かの拍子に条件がそろうと発生するし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>集燃火災って覚えてたけど、収れん火災という間違いに気づけてよかった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>口頭でしか聞いたことなかったからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>俺も最近ジャンプ読んで知ったし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>可燃ごみをまとめる場所をコンテナにするという対策してたわ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>日光当たらなかったいいらしいから</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>一瞬で燃えたってのがいまいち納得いかないな、可能なのその原理で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>原理自体はどっちかというと、SFの太陽炉とかソーラーレーザーとかの方が近いかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んむなるほど、アクアの炎の柱とかそういうのはうその供述だったってことかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>じわじわ熱が集中して引火点に達したら発火するっ感じのはず</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>太陽光を複数のレンズと反射を利用して収束して打ち出す平気</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>兵器</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ほぼレーザーみたいな威力がでる上にエコな兵器らしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ファンタジーミステリーだから……ね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあね、机上の空論だけど水を自在に操れるなら光の屈折と反射も自在だしね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>そういう設定ならそうなのか、って感じかなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>そうだねアクアの証言は嘘だよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>ベランダにいたのは本当だけど</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ところで証拠はどこにあったの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>証拠はないよね魔法だし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>収れんを利用したって証拠</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>というか発言というか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>リアル知識のみで解決ってこと?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>リアル知識といえばそうだなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ということだと思ってたけど、実はなんか見落としがあったのかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>一応言っとくけど、不満とかは一切ないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>用は火を使わずに火を起こす方法を考えようみたいなノリで作ったし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>ミステリー小説なんて絶対自分の力じゃ解けないと思ってるし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>正直おれが用意した水以外で事件が成立するならそっちに切り替えてもいいかなとか思ってた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そりゃ無理だよw</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>だからアネコが前回言ってた風でなんとかなるかもってのは気になってた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>あれは、瞬間の高熱で死んだって聞いてから諦めた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>風でも火種があれば火災旋風とかで行けるかなとは思ってたけど</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>多少の火を起こせれば、部分的に酸素密度を高くすれば火柱でも何でも出せると思ってはいたから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>だから魔法石のことを聞いてた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なるほどね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>部分的に所が魔術ぽいしね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>遺体のそばで家庭用のコンロの燃えカスが見つかったって状況ならその説でも行けたな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>けど謎は深まるだけだぞソレ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>いや、魔法石が単品でも発火できるのかなって思って聞いた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>なるほどねえ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>魔力こめれば着火する魔法石みたいなものね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>まあ今回のは邪道も良いところなミステリーモドキなので許してね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まあ、カエル君が満足してるならいいかなって感じ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>不可能ではないからいい気もするけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>次回はもっとアグレッシブな冒険ものにしようっと</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@まり</div><div class='col-sm-10 serif'>CoCでアクレッシヴはこわいぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>kaeru@GM</div><div class='col-sm-10 serif'>大丈夫だよファンシーな感じにするから</div></div>
+        </section>
+    </div>
+{% endblock %}

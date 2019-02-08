@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <tr>
+                <th class="col-sm-1">ID</th>
+                <th class="col-sm-2">TITLE</th>
+                <th>DESCRIPTION</th>
+                <th class="col-sm-1">JUDGEMENT TYPE</th>
+                <th>JUDGEMENT DESCRIPTION</th>
+                <th class="col-sm-1">IS HORROR</th>
+            </tr>
+            {% for card in cards %}
+                <tr data-action="go-to-edit-card" data-url="{{ base_url }}/nvnv/card-edit/horror/scene/{{ card.id }}">
+                    <td>{{ card.id }}</td>
+                    <td>{{ card.title }}</td>
+                    <td>{{ card.description|truncate(20) }}</td>
+                    <td>{{ card.judgement_type }}</td>
+                    <td>{{ card.judgement_description|truncate(20) }}</td>
+                    <td>{{ card.is_horror }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ base_url }}/assets/js/clipboard.min.js"></script>
+    <script src="{{ base_url }}/assets/js/convert-support-tool.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ page_title }}</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>リプレイ用のコンバート処理のお共に</p>
+                <p><a href="javascript:void(0);" data-trigger="toggle-convert-descriptions">変換仕様の表示/非表示</a></p>
+            </div>
+        </div>
+        <div id="convert-descriptions" class="row" style="display: none;">
+            <div class="col-sm-12">
+                <p>仕様1: どどんとふのTEXTベースリプレイを成形</p>
+                <p>仕様2: 複数行の発言を1行ごとの発言に変更する</p>
+                <p>仕様3: Excelに流す前提なので、『:』を『 』(半角スペース4つ)に変換</p>
+                <p>仕様4: 『全角英数字スペース』を『半角英数字スペース』に変換</p>
+                <p>仕様5: 文末の『。」』を『」』に変換</p>
+                <p>仕様6: 『ダッシュ(―)』の繰り返しを『ダッシュx2(――)』に変換</p>
+                <p>仕様7: 『三点リーダー(…)』の繰り返しを『三点リーダーx2(……)』に変換</p>
+                <p>仕様8: 『・』の1回以上の繰り返しを『三点リーダーx2(……)』に変換</p>
+                <p>仕様9: 『.』の1回以上の繰り返しを『三点リーダーx2(……)』に変換</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <form id="file-form" data-url="{{ base_url }}/convert-support-tool/upload">
+                    <input type="file" id="file-form-file" name="file-form-file" />
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="button" class="btn" data-trigger="copy-to-clipboard" data-clipboard-target="#converted">こぴぺ</button>
+                <div id="converted">
+                    {% if lines is empty %}
+                        <pre>NO ENTRY</pre>
+                    {% else %}
+                        <pre>{% for line in lines %}{{ line.name }}    {{ line.serif }}{% endfor %}</pre>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

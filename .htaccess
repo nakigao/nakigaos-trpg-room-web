@@ -1,3 +1,20 @@
+<Files ~ "\.(lock|md|twig|gitignore|sql|sqlite3)">
+  deny from all
+</Files>
+
+<Files ~ "composer.json">
+  deny from all
+</Files>
+
+
+<Files ~ "Provider">
+  deny from all
+</Files>
+
+<Files ~ "Model">
+  deny from all
+</Files>
+
 <IfModule mod_rewrite.c>
 #    Options -MultiViews
     DirectoryIndex index.php

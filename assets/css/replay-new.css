@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+/* clear bootstrap border radius */
+
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* sticky footer */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+body {
+    color: #151515;
+    background-color: #FFFFFF;
+    font-family: "Noto Sans Japanese", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Margin bottom by footer height */
+    margin-bottom: 80px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 80px;
+    margin-bottom: 12px;
+    /*background-color: #f5f5f5;*/
+    text-align: center;
+}
+
+/* replay style */
+
+.row {
+    margin: 0 0 1.0em 0;
+    line-height: 30px;
+}
+
+.row.warning {
+    font-weight: bold;
+    color: #F44336;
+}
+
+.row.comment .serif blockquote {
+    /*margin-left: 1em;*/
+    /*margin-right: 1em;*/
+    /*padding: 0.5em 1em;*/
+    /*color: #333333;*/
+    /*border: 1px solid #DDDDDD;*/
+    background: no-repeat right bottom url("../img/background-gm-100x55.png");
+}
+
+.row.dice {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0.5em;
+    color: #333333;
+    border: 1px solid #DDDDDD;
+    background: no-repeat right bottom url("../img/background-dice-100x69.png");
+}
+
+.name {
+    font-size: small;
+}
+
+@media (max-width: 480px) {
+    .name {
+        text-align: left;
+    }
+
+    .serif {
+        color: #151515;
+    }
+}
+
+@media (min-width: 576px) {
+    .name {
+        text-align: left;
+    }
+
+    .serif {
+        color: #151515;
+    }
+}
+
+@media (min-width: 768px) {
+    .name {
+        text-align: right;
+    }
+
+    .serif {
+        color: inherit;
+    }
+}
+
+@media (min-width: 992px) {
+    .name {
+        text-align: right;
+    }
+
+    .serif {
+        color: inherit;
+    }
+}
+
+@media (min-width: 1200px) {
+    .name {
+        text-align: right;
+    }
+
+    .serif {
+        color: inherit;
+    }
+}
+
+hr {
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+blockquote {
+    font-size: 14px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 0;
+}
+
+blockquote p.header {
+    font-weight: bold;
+    margin: 0 0 0;
+}
+
+b {
+    font-size: large;
+    color: #F44336;
+    margin: 0 7px 0 7px;
+}
+
+span.ctag {
+    display: inline-block;
+    position: relative;
+    margin: 2px 0 2px 0;
+    width: 80px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+span.ctag.on {
+    background: rgb(92, 184, 92);
+}
+
+span.ctag.off {
+    background: rgb(204, 204, 204);
+}
+
+#replay-header {
+
+}
+
+#replay-user {
+    padding-top: 3em;
+    padding-bottom: 2em;
+    margin-bottom: 24px;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#replay-body {
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* color settings */
+
+.npc {
+    color: #212121;
+}
+
+.enemy {
+    color: #212121;
+}
+
+.system {
+    color: #555555;
+}
+
+.other {
+    color: #212121;
+}
+
+.aneko {
+    color: #2196F3;
+}
+
+.evi {
+    color: #FF9800;
+}
+
+.kaeru {
+    color: #4CAF50;
+}
+
+.naki {
+    color: #607D8B;
+}
+
+.jem {
+    color: #FF4081;
+}
+
+.sukamomo {
+    color: #7C4DFF;
+}
+
+.xino {
+    color: #FF4081;
+}
+
+.yuto {
+    color: #FF4081;
+}
+
+.bcf {
+    color: #7C4DFF;
+}
+
+/* icon settings */
+
+/*.npc .name {*/
+/*background-image: url("../img/icon/npc_200x200.png");*/
+/*}*/
+
+/*.enemy .name {*/
+/*background-image: url("../img/icon/enm_200x200.png");*/
+/*}*/
+
+/*.system .name {*/
+/*background-image: url("../img/icon/sys_200x200.png");*/
+/*}*/
+
+/*.other .name {*/
+/*background-image: url("../img/icon/unknown_200x200.png");*/
+/*}*/
+
+/*.gm .name {*/
+/*background-image: url("../img/icon/gm_200x200.png");*/
+/*}*/
+
+/*.aneko .name {*/
+/*background-image: url("../img/icon/aneko_200x200.png");*/
+/*}*/
+
+/*.evi .name {*/
+/*background-image: url("../img/icon/evi_200x200.png");*/
+/*}*/
+
+/*.kaeru .name {*/
+/*background-image: url("../img/icon/kaeru_200x200.png");*/
+/*}*/
+
+/*.naki .name {*/
+/*background-image: url("../img/icon/naki_200x200.png");*/
+/*}*/
+
+/*.jem .name {*/
+/*background-image: url("../img/icon/jem_200x200.png");*/
+/*}*/

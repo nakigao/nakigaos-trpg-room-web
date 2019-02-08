@@ -1,0 +1,201 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    <style>
+        .table {
+            font-size: x-small;
+        }
+
+        .table td input,
+        .table td textarea,
+        .table td select {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+{% endblock %}
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script>
+        var abilityChart = new Chart($('#chart-ability'), {
+            type: 'horizontalBar',
+            data: {
+                labels: ['身体', '感覚', '知力', '意志', '魅力', '行動値'],
+                datasets: [
+                    {
+                        label: '能力値',
+                        data: $('#chart-ability').data('datasets-data'),
+                        borderWidth: 1,
+                    }],
+            },
+            options: {
+                tooltips: {
+                    enabled: false,
+                },
+                scales: {
+                    xAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true,
+                                max: 30,
+                            },
+                        }],
+                },
+            },
+        });
+        var injuryChart = new Chart($('#chart-injury'), {
+            type: 'horizontalBar',
+            data: {
+                labels: ['疲労', '軽傷', '重傷', '致命傷', '死亡', '移動力'],
+                datasets: [
+                    {
+                        label: '負傷ゲージと移動力',
+                        data: $('#chart-injury').data('datasets-data'),
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                tooltips: {
+                    enabled: false,
+                },
+                scales: {
+                    xAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true,
+                                max: 10,
+                            },
+                        }],
+                },
+            },
+        });
+        var defenceChart = new Chart($('#chart-defence'), {
+            type: 'horizontalBar',
+            data: {
+                labels: ['切断', '銃弾', '衝撃', '灼熱', '冷却', '電撃'],
+                datasets: [
+                    {
+                        label: '防御力',
+                        data: $('#chart-defence').data('datasets-data'),
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                tooltips: {
+                    enabled: false,
+                },
+                scales: {
+                    xAxes: [
+                        {
+                            ticks: {
+                                beginAtZero: true,
+                                max: 20,
+                            },
+                        }],
+                },
+            },
+        });
+    </script>
+    <script src="{{ base_url }}/assets/js/clipboard.min.js"></script>
+    <script>
+        $(function() {
+            var clipboard = new Clipboard('[data-trigger="copy-to-clipboard"]');
+            clipboard.on('success', function(e) {
+            });
+            clipboard.on('error', function(e) {
+            });
+        });
+    </script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header"></h1>
+        <div class="row">
+            <div class="col-sm-3">
+                <p style="text-align: center;"><img src="{{ base_url }}/assets/img/icon/v2/enm_200x200.png" alt="" style="width: 80%; opacity: 0.1; -webkit-user-drag: none;"></p>
+            </div>
+            <div class="col-sm-9">
+                <p>ランク{{ sheet.rank }} {{ sheet.type }}{% if sheet.is_mob is not empty %}(MOB){% endif %}</p>
+                <p style="font-size: x-large">{{ sheet.name }}</p>
+                <p>
+                    {{ sheet.memo|nl2br }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <canvas id="chart-ability" data-datasets-data='[{{ sheet.sintai|default(0) }}, {{ sheet.kankaku|default(0) }}, {{ sheet.tiryoku|default(0) }}, {{ sheet.isi|default(0) }}, {{ sheet.miryoku|default(0) }}, {{ sheet.koudouti|default(0) }}]'></canvas>
+            </div>
+            <div class="col-sm-4">
+                <canvas id="chart-injury" data-datasets-data='[{{ sheet.hirou|default(0) }}, {{ sheet.keishou|default(0) }}, {{ sheet.jyuusyou|default(0) }}, {{ sheet.timeishou|default(0) }}, {{ sheet.sibou|default(0) }}, {{ sheet.idouryoku|default(0) }}]'></canvas>
+            </div>
+            <div class="col-sm-4">
+                <canvas id="chart-defence" data-datasets-data='[{{ sheet.setudan|default(0) }}, {{ sheet.jyuugeki|default(0) }}, {{ sheet.shougeki|default(0) }}, {{ sheet.shakunetu|default(0) }}, {{ sheet.reiki|default(0) }}, {{ sheet.dengeki|default(0) }}]'></canvas>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#tokusei"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="tokusei">GO{{ sheet.tokusei }} 特性能力</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#atemi"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="atemi">GO{{ sheet.atemi }} 当身</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#kinsetubuki"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="kinsetubuki">GO{{ sheet.kinsetubuki }} 近接武器</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#jyuuki"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="jyuuki">GO{{ sheet.jyuuki }} 銃器</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#tobidougu"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="tobidougu">GO{{ sheet.tobidougu }} 飛び道具</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#kaihi"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="kaihi">GO{{ sheet.kaihi }} 回避</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#tansaku"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="tansaku">GO{{ sheet.tansaku }} 探索</span></td>
+                            <td class="col-sm-1"><a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#teikou"><i class="fa fa-clipboard" aria-hidden="true"></i></a>&nbsp;<span id="teikou">GO{{ sheet.teikou }} 抵抗</span></td>
+                            <td class="col-sm-1"></td>
+                            <td class="col-sm-1"></td>
+                            <td class="col-sm-1"></td>
+                            <td class="col-sm-1"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        {% for skill in skills %}
+                            {% if skill.name is not empty %}
+                                <tr>
+                                    <td class="col-sm-2">{{ skill.name }}</td>
+                                    <td class="col-sm-5">
+                                        <a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#skill-{{ loop.index }}"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
+                                        {% if skill.hantei == 1 %}
+                                            <span id="skill-{{ loop.index }}">GO{{ sheet.tokusei }} {{ skill.name }}(特性能力)/{{ skill.taimingu }}/{{ skill.taishou }}/{{ skill.shatei }}/{% if skill.seigen is empty %}-{% else %}{{ skill.seigen }}{% endif %}/{% if skill.kosuto is empty %}-{% else %}{{ skill.kosuto }}{% endif %}/{% if skill.zokusei is empty %}-{% else %}{% if skill.zokusei == 1 %}切断{% elseif skill.zokusei == 2 %}銃弾{% elseif skill.zokusei == 3 %}衝撃{% elseif skill.zokusei == 4 %}灼熱{% elseif skill.zokusei == 5 %}冷却{% elseif skill.zokusei == 6 %}雷撃{% endif %}{% endif %}</span>
+                                        {% elseif skill.hantei == 2 %}
+                                            <span id="skill-{{ loop.index }}">GO{{ sheet.atemi }} {{ skill.name }}(当身)/{{ skill.taimingu }}/{{ skill.taishou }}/{{ skill.shatei }}/{% if skill.seigen is empty %}-{% else %}{{ skill.seigen }}{% endif %}/{% if skill.kosuto is empty %}-{% else %}{{ skill.kosuto }}{% endif %}/{% if skill.zokusei is empty %}-{% else %}{% if skill.zokusei == 1 %}切断{% elseif skill.zokusei == 2 %}銃弾{% elseif skill.zokusei == 3 %}衝撃{% elseif skill.zokusei == 4 %}灼熱{% elseif skill.zokusei == 5 %}冷却{% elseif skill.zokusei == 6 %}雷撃{% endif %}{% endif %}</span>
+                                        {% elseif skill.hantei == 3 %}
+                                            <span id="skill-{{ loop.index }}">GO{{ sheet.kinsetubuki }} {{ skill.name }}(近接武器)/{{ skill.taimingu }}/{{ skill.taishou }}/{{ skill.shatei }}/{% if skill.seigen is empty %}-{% else %}{{ skill.seigen }}{% endif %}/{% if skill.kosuto is empty %}-{% else %}{{ skill.kosuto }}{% endif %}/{% if skill.zokusei is empty %}-{% else %}{% if skill.zokusei == 1 %}切断{% elseif skill.zokusei == 2 %}銃弾{% elseif skill.zokusei == 3 %}衝撃{% elseif skill.zokusei == 4 %}灼熱{% elseif skill.zokusei == 5 %}冷却{% elseif skill.zokusei == 6 %}雷撃{% endif %}{% endif %}</span>
+                                        {% elseif skill.hantei == 4 %}
+                                            <span id="skill-{{ loop.index }}">GO{{ sheet.jyuuki }} {{ skill.name }}(銃器)/{{ skill.taimingu }}/{{ skill.taishou }}/{{ skill.shatei }}/{% if skill.seigen is empty %}-{% else %}{{ skill.seigen }}{% endif %}/{% if skill.kosuto is empty %}-{% else %}{{ skill.kosuto }}{% endif %}/{% if skill.zokusei is empty %}-{% else %}{% if skill.zokusei == 1 %}切断{% elseif skill.zokusei == 2 %}銃弾{% elseif skill.zokusei == 3 %}衝撃{% elseif skill.zokusei == 4 %}灼熱{% elseif skill.zokusei == 5 %}冷却{% elseif skill.zokusei == 6 %}雷撃{% endif %}{% endif %}</span>
+                                        {% elseif skill.hantei == 5 %}
+                                            <span id="skill-{{ loop.index }}">GO{{ sheet.tobidougu }} {{ skill.name }}(飛び道具)/{{ skill.taimingu }}/{{ skill.taishou }}/{{ skill.shatei }}/{% if skill.seigen is empty %}-{% else %}{{ skill.seigen }}{% endif %}/{% if skill.kosuto is empty %}-{% else %}{{ skill.kosuto }}{% endif %}/{% if skill.zokusei is empty %}-{% else %}{% if skill.zokusei == 1 %}切断{% elseif skill.zokusei == 2 %}銃弾{% elseif skill.zokusei == 3 %}衝撃{% elseif skill.zokusei == 4 %}灼熱{% elseif skill.zokusei == 5 %}冷却{% elseif skill.zokusei == 6 %}雷撃{% endif %}{% endif %}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td class="col-sm-5">
+                                        <a href="javascript:void(0);" data-trigger="copy-to-clipboard" data-clipboard-target="#kouka-{{ loop.index }}"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
+                                        <span id="kouka-{{ loop.index }}">{{ skill.kouka }} {{ skill.tuika }} {% if skill.zokusei == 1 %}(DCSL){% elseif skill.zokusei == 2 %}(DCBL){% elseif skill.zokusei == 3 %}(DCIM){% elseif skill.zokusei == 4 %}(DCBR){% elseif skill.zokusei == 5 %}(DCRF){% elseif skill.zokusei == 6 %}(DCEL){% endif %}</span>
+                                    </td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <hr>
+                <a href="{{ base_url }}/gror/enemy-character-sheet/edit/{{ sheet.hash }}" class="btn btn-default" role="button"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> EDIT</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,166 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ base_url }}/assets/js/mustache.min.js"></script>
+    <script src="{{ base_url }}/assets/js/nvnv.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ site_title }}</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>重複管理してないので、同じの出たらもっかい引いて。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <form name="server-information">
+                    <div class="form-group" style="display: none;">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {#<label for="xxxxx">URL</label>#}
+                                <input type="text" class="form-control" id="xxxxx" name="url" placeholder="" value="http://web-evi.sakura.ne.jp/trpg/dodontof/DodontoFServer.rb" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                                {#<label for="xxxxx">ROOM NUMBER</label>#}
+                                <input type="number" class="form-control" id="xxxxx" name="room" placeholder="" value="4" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                                {#<label for="xxxxx">PASSWORD</label>#}
+                                <input type="text" class="form-control" id="xxxxx" name="password" placeholder="NOTHING" value="" readonly>
+                            </div>
+                            <div class="col-sm-2">
+                                {#<label for="xxxxx">DICE BOT</label>#}
+                                <input type="text" class="form-control" id="xxxxx" name="dice_bot" placeholder="NOTHING" value="" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="xxxxx">君の名は。</label>
+                                <input type="text" class="form-control" id="xxxxx" name="your_name" placeholder="キミの名は" value="7743@PL">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>1. Player Character Card</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <select name="" id="" class="form-control" style="width: 80%;float:left;" data-action="select-pc-card">
+                                <option value="0">SELECT YOUR ROLE</option>
+                                {% for pc_card in pc_cards %}
+                                    <option value="{{ pc_card.id }}">{{ pc_card.role|e }}</option>
+                                {% endfor %}
+                            </select>
+                            &nbsp;<a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-character" data-card-type="introduction" data-role-name="{# via ajax #}"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="pc-card-description"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>2. Introduction Card</h3>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-introduction-card">DRAW</a>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="introduction"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                <div class="card-description" data-action="introduction-card-description"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>3. Scene Card</h3>
+                <div class="row">
+                    {% for i in 0..3 %}
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-scene-card">DRAW</a>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="scene"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="scene-card-description"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>4-1. Light Card</h3>
+                <div class="row">
+                    {% for i in 0..2 %}
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-light-card">DRAW</a>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="light"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="light-card-description"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>4-2. Darkness Card</h3>
+                <div class="row">
+                    {% for i in 0..2 %}
+                        <div class="col-sm-3">
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-darkness-card">DRAW</a>
+                            <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="darkness"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                            <div class="card-description" data-action="darkness-card-description"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>5. Climax Card</h3>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="draw-climax-card">DRAW</a>
+                <a href="javascript:void(0);" class="btn btn-default" role="button" data-action="add-message-card" data-card-type="climax"><i class="fa fa-wifi" aria-hidden="true"></i></a>
+                <div class="card-description" data-action="climax-card-description"></div>
+            </div>
+        </div>
+    </div>
+    {% verbatim %}
+    <script id="template-pc-card-description" type="x-tmpl-mustache">
+[ROLE] {{role}}<br>
+[力] {{power}} / [技] {{technic}}<br>
+[SKILL] {{skill_name}} ({{skill_timing}})<br>
+{{{skill_description}}}
+    </script>
+    <script id="template-introduction-card-description" type="x-tmpl-mustache">
+[INTRO] {{title}}<br>
+{{{description}}}
+    </script>
+    <script id="template-scene-card-description" type="x-tmpl-mustache">
+[SCENE] {{title}}<br>
+{{{description}}}<br>
+[{{judgement_type}}]<br>
+{{{judgement_description}}}
+    </script>
+    <script id="template-light-card-description" type="x-tmpl-mustache">
+[LIGHT] {{title}}<br>
+{{{description}}}<br>
+[{{effect_type}}]<br>
+{{{effect_description}}}
+    </script>
+    <script id="template-darkness-card-description" type="x-tmpl-mustache">
+[DARKN] {{title}}<br>
+{{{description}}}<br>
+[{{effect_type}}]<br>
+{{{effect_description}}}
+    </script>
+    <script id="template-climax-card-description" type="x-tmpl-mustache">
+[CLIMX] {{title}}<br>
+{{{description}}}<br>
+[DEAD OR ALIVE]<br>
+{{{judgement}}}
+    </script>
+    {% endverbatim %}
+{% endblock %}

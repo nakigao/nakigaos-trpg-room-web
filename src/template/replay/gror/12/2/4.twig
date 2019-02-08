@@ -1,0 +1,1242 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド1</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>表に軽傷点とかいれてちょーだい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>iretayo</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>イニシアチブかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 8[8]+8 → 16</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>軽装兵士君はMOBなので10固定です。そだね、イニシアチブふってちょーだー</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>==== ラウンド1 ====</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 5[5]+9 → 14</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DiceBot : (1D10+10) → 5[5]+10 → 15</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 6[6]+12 → 18</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、早いね!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、ヒョウカからどぞう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>うい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>どうするかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>セットアップしていい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、うん、いいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>疲労1でウェポンエンハンス</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 21 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あ、じゃあこっちも</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>こっちもサンダーストライクしよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>装備している武器のダメージに+ランク点。シーン終了まで。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>シーン終了までってやばいよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>Wエンハンスよし。サンストは判定してちょうだい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>コスト軽症1でアイスブランド発動</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO100 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 6 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>クリティカル祭りの人おる?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>効果はウェポンエンハンスとほぼ同じ。電撃属性付与がある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は2ポイントの疲労減少(疲労:7->5)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=90 (特性能力)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=90) → 50 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>氷で武器を作ります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うい。疲労2もらってちょうだい>ゲンゾウ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>してるよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>あと、ソロエフェクトってどのタイミングで発動するのだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、ありがとう!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>常時発動?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>電磁のは命中した場合ってあるね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>コストないし、常時発動でいいよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ソロ/バディエフェクトは対応した能力の効果がそれに変わると思えばいい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>では、常時発動する体でいきます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>全員セットアップよろし、改めてヒョウカのアクションどうぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>君たちがなんかよくわからない魔法のようなものを身にまとうのを見て、ざわついています</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>このキャラ近接武器あまり振ってないことに気づいた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>こいつら姫を狙ってるんだよな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>エンゲージしたら大丈夫でしょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>一応ね、だけど目の前に敵対勢力がいるなら、そっち優先するよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>3人いるけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>とりあえず一人潰すか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ダイアモンドダストを兵士3に使用</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>コスト疲労1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=90 (特性能力)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=90) → 33 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 10 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「おっと姫様達、あまり血とか慣れてないならあまり見ない方がいいですよ!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>避けました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>やるな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>「か、かしらぁ! こ、こいつら!?」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「あら、がん細胞のくせに生意気」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「バカ、うろたえるな! 簡単な仕事のはずなんだ、こんなのこけおどしだ!」とわめいています</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お次はグラントさん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>若頭君にクロスボウを打ち込むぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>当たっちゃったらしんじゃうだろぉ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go100 飛び道具</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 43 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 94 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>当たり!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>2d10+6+5</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (2D10+6+5) → 15[8,7]+6+5 → 26</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ダメージでかいよ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>切断です</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DCSL16</div></div>
+            <div class='row '><div class='col-sm-2 name'></div><div class='col-sm-10 serif'>GardenOrder : 負傷表</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>頭なのか胸なのかもうこれわかんねぇな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>切断防御10か……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>急所には違いあるまええ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「ま、まやかしだ! やれぇ! おめぇらあ!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>といって若頭君は、グラントにエンゲージして攻撃します</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>やだ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO120 パワースラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=120@24 → 60 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>つよい……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go35 回避</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 10 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ひどくない?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>おれのほうがつよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、ゲンゾウくん</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「へ、へへ、ちったあ楽しめそうじゃねぇか」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1君を刀で攻撃</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [近接武器]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 98 → ファンブル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>近で攻撃できたっけか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これよ^q^;</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>だめじゃないか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>至近のみですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ならエンゲージしました。じゃあ、次、軽装兵士君達の密集攻撃。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンゾウくんに、二回。ヒョウカにエンゲージして、1回</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>氷華が回復してくれるからいくら食らっても大丈夫だな!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、回復あるんだ、忘れとったわ。まいいか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 99 → ファンブル</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 1 → クリティカル</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ死ぬ前には治してあげるよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なぁにこれ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 100 → ファンブル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>医者の葛</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なにこれええええええええ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>殺意高すぎでしょ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>極端だなw</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>軽装2君が、ゲンゾウ君にクリティカル。回避判定ください</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>無理でしょこれ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 32 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけい防御貫通です。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>むりだった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>1d10+15 手に持った武器による基本的な振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 3[3]+15 → 18</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>DCSL18</div></div>
+            <div class='row '><div class='col-sm-2 name'></div><div class='col-sm-10 serif'>GardenOrder : 負傷表</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>「やれる、やれるぞ!」と勢いつきます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの重傷減少(重傷:6->5)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まだ行けるな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>クリンナップフェイズ。DOTもらってる人は、ダメージ受けてください</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それから、DOT解消判定をどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「死ぬ前に相手にも華を持たしてやらないとね」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの軽傷減少(軽傷:9->8)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO70 [抵抗力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 93 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なにこれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よしよし、いいぞ、継続ね</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド2</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 8[8]+8 → 16</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 8[8]+10 → 18</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 4[4]+9 → 13</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 4[4]+12 → 16</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>セットアップでアーマーエンハンス</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 98 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>防御力に+ランク</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>(全属性)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんだと……!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>コストは疲労1です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>伊達に表紙に乗ってる能力じゃないやね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>若頭行きます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>やっぱり盾なんだよなぁ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>2回撃ってきます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO60@120 パワースラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@120 → 96 → クリティカル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ん!?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ちゃうわ、失敗ね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>10で割って、二倍</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ああC値引き継ぎだからこうなるのか……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO60@24 パワースラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@24 → 38 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 54 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>失敬失敬。一発当たり</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+25 手に持った武器による渾身の振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+25) → 2[2]+25 → 27</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>切断か</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「そらそらあ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>こいつは、早く前線キレイにしないと、ふふふ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>DCSL18</div></div>
+            <div class='row '><div class='col-sm-2 name'></div><div class='col-sm-10 serif'>GardenOrder : 負傷表</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>いていて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いいぞいいぞ。次、グラント</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>接近されてしまうとな……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>疲労を払ってディスインテグレート</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>移動したほうがいいのでは?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 85 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>エンゲージあるんじゃない?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>運動で判定してください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>武器を破壊しゅる^^</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おけ、16*5でいいかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まじ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>運動って運動っていう技能やぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>身体かけ3だ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO48 運動</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=48@9 → 12 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>初期値マンだったか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>やりおる……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ふぅふぅ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>疲労って0になるとどうなるんでしたっけ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「武器なんて捨てて、なんてことはプロのすることじゃあないぜ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次からは、軽傷に繰り上がるらしい(質疑応答</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>軽傷繰上げしか分からない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ありがと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>つぎ、ヒョウカ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ切りますか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>兵士3に攻撃</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうぞう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=100 (近接武器)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=100) → 87 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 8 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>避けますねぇ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>こいつ強くない?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、ゲンゾウ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>さすが精錬された賊たちやな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>も～ぶだよ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1さんに攻撃させて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さんきゅーいっち</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [近接武器]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 81 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なんで?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もしかして、勝てるかもしれない(希望ライジング</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、では、軽装君達の攻撃。対象は目の前の</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>100まで振らなかったのに後悔</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 34 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 24 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 68 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>全部当たり、回避よろしく!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>上から処理しよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 10 → クリティカル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 88 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1回食らった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンゾウ君、一発当たり</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>1d10+15 手に持った武器による基本的な振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 9[9]+15 → 24</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>切断だよ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>DCSL24</div></div>
+            <div class='row '><div class='col-sm-2 name'></div><div class='col-sm-10 serif'>GardenOrder : 負傷表</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は2ポイントの重傷減少(重傷:5->3)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンちゃんヤバいよ、これえ!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「なかなかやるじゃねぇか!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>回復ほしいなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まだ致命傷が残ってるからな、焦らなくてもいい感じ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>もうちょいいけるやろ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>クリンナップフェイズ。DOTもらってる人は、ダメージ受けてください</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は3ポイントの軽傷減少(軽傷:8->5)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO70 [抵抗力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 46 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ああん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>その数字でいいんだよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と言ったところで、次回はラウンド3から。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷いたい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ああ回避降ってなかった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go60 抵抗力</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 100 → ファンブル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>^-^</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お、いかんいかん。ダイスおかしいやろ、今日!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=80</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=80) → 24 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>回避おっけーです</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>閑話休題</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんかMOBがめっちゃ頑張ってる感ある。もう全滅してる予定だったんだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>チュートリアルでがめおべらも稀にある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>逆にチュートリアルだからこそ、助かるかもしれないというGM的なあれ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ダイス次第だしな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>倒せる倒せる、いけるいける!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>PCふたりがMOBに苦戦してるとか笑えないですよ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>後ろの二人も気が気じゃないはず</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そういえば後ろの二人は手伝ってくれないのね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>確かに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>NPCは戦闘には入らない方がいいでしょ(メタ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>まあなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>NPCが全て倒したらバッドエンド突入するって本当ですか?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>設定的には、この二人はほぼほぼ一般人なので、普通に返り討ちだお^^</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ファイアヤーボールはどうしたんですか賢者殿</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まとめて薙ぎ払ってよいのならば……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>幻蔵体力お化けなのにもう重傷半分削られてる……。刀って常備化Pのわりには性能しょぼいよね……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>銃に比べるとなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>たぶんそんな変わんないんじゃないかしら。超技術の武器は別として</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>クロスボウは2d10+6だし。刀は1d10+1だっけ、かなり冷遇されてるとおもう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>+13だよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>けど近接武器ってだけで価値がある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>チェーンソーだと2D10+6なんだけどねえ、アウト判定かなと思って止めた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>その分行動値で調整してるんだろね。-2は+14前後でまとまってる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あ、そういえばクロスボウ遠距離になったの忘れてて近距離で使っちゃった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんかもってなかったけ、ゼロ距離射撃的なの</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そういうのはないぞ。狙撃は遠距離(=別エリア]を攻撃するときにペナルティがつかんだけや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お、じゃあ次からはエンゲージから外れてから打ち抜いてもらおうかしら。封鎖してないから、移動してたって言われても問題ないと思うよ。エリアEのMOB全力もありやな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>いや、エンゲージにいる=至近 エンゲージ外だけど同じエリア=近距離 だから、どうかなーって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、そうだね。ペナルティつくわ、それ。ラウンド3からは成功値半分適応でやるぞい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そういう裁定なんだっけ?遠距離武器で近距離攻撃するの、そもそもできないとおもってた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それもなんか質疑応答にあった気がする。半分でできるよ、みたいなの</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ハウスルールかディスコにおいといてくれるとうれしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>004. 不適切な射程での攻撃について 「射程:近」「射程:遠」の武器や特性能力を使用して、至近距離の対象に連続攻撃は可能。但し成功値半分</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これ足した</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>刀振り回すよりライトニングボルト打った方が威力もあるし、判定値も高いことに気づいた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>超技術装備か銃器がないとそうなっちゃうんだよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>刀はアクセサリーと思って行動するか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>実はその辺の設定も後半のシナリオで明らかになる予定なんだけど、頑張って生きのこってね!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ころされそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>レーザーライフル撃てる未来に期待しよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>……位置取りが大事なゲームのはずなんだけどやっぱAKGの戦闘ルールがよかったからちょっと残念感あるな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あれ、戦闘ルールってちょっと違うんだっけか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ルールが違うというか、GOの正統進化版というか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あー、そうなんだ。とにかく処理が大変だった覚えしかなくてさ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あのAKとプロデューサーの仕組みなしで戦闘ルールだけ移植したらそれなりに快適だとおもう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それは言えてる。けど僕だけのヒロインってのもなかなかよい。プロデューサーは見てるだけにしよう、またはスタンド的な出方をするとか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>2キャラはめんどい(暴言)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(至言)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>セットアップにしか動けないとかね。メインアクションは使えないとかね。なんかもうちょっと、コマじゃなくて、能力的な方だけにしてほしい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ねー。</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド3</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>DOTは誰もついてなかったかな。ダメージは、若頭がちょこっと重傷もらっててだけで、MOB君は無傷です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>セットアップはないからイニシアチブ振ります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>僕が軽傷をうけていたきがする</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>でもダメージ処理しておわったか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 6[6]+12 → 18</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んだんだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>キリの良い所だったはず</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>相変わらず早いね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 7[7]+10 → 17</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 5[5]+9 → 14</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>装備が貧弱だからね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 2[2]+8 → 10</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>激重フルプレートアーマーとか出そう、そうしよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あっおそい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、じゃあ、ヒョウカからあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ切り付けるしかないかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>兵士3に攻撃</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>特性でもなんでもどうぞ～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=100 (近接武器)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=100) → 57 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 81 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>当たり!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>やっと当たったよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>だめーじは部位狙いで1上昇させますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ういうい。アイスブランド出てたっけね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なお、MOBなのでダメージ表は参照しないぞう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>グラントくん生き残れるかなー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+15</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 8[8]+15 → 23</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>さらにDOT疲労2も追加で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いい出目してんねサボテンね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>死にはしないでしょ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_3</div><div class='col-sm-10 serif'>ドッと鈍い音を立てて刃に貫かれ、倒れました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「まず一人……次」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>ざわ……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>ざわ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次若頭はグラントへ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO120 パワースラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=120@24 → 88 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んー、避けられそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>いやいや……回避はそもそも……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 54 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ふふ、グラント死にそうだな^q^</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+25 手に持った武器による渾身の振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+25) → 7[7]+25 → 32</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>えーと切断だから……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>DCSL23</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[23] → 重傷2/DOT:軽傷2 | 大量出血 …… 傷は深く、そこから大量に出血する。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>いていて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>予想以上に入ってるわ、がんばれー!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、ゲンゾウ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>こっちきたら回復してあげるぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>はよMOB倒して やくめでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1君を切ろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はやくきて～はやくきて～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [近接武器]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 91 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>つぎ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ぐらんとぉ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あのニンジャはダメですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>今回に限っては皆駄目な気がする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>近接当たらない呪いにかかってるアネコ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ死ななきゃ治してあげるからグラントは頑張って</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あれ?もう10か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YESYES</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>先動いていいよう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>死なさないようにするのがナースの仕事だぞ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>疲労2点使って……ディスインテグレート</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ターミナルケアなんて仕事もある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>また武器破壊かよぉ!やめろよぉ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 87 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>しょぼいのら</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>運動で判定してね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO48 運動</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=48@9 → 12 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>機敏すぎへん?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>たしかに</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「妙な動きすると、苦しむことになるぜ、へへ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>回避の出目がすごいよいんだよね、今回</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>わん、つーは、ゲンゾにアタック</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>さすがプロの殺し屋だ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 30 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 51 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>避けるがよろしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 54 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 14 → クリティカル</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>片方当たり</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>ヒット</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>ミス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>この出目を攻撃で出して欲しい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>1d10+15 手に持った武器による基本的な振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 8[8]+15 → 23</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>実際苦しい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>DCSL23</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[23] → 重傷2/DOT:軽傷2 | 大量出血 …… 傷は深く、そこから大量に出血する。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は2ポイントの重傷減少(重傷:3->1)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>防御点ひいてひいて</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>そういえば一回も轢いてなかった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>まあ次回からにします</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>忍者だし、フンドシ一つが戦闘衣装だよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけ、次からよろぴくぅ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>クリンナップフェイズ。DOTもらってる人は、ダメージ受けてから、解消判定お願いします</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷2ぃ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>逆に目立ちそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は2ポイントの軽傷回復(軽傷:5->3)</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO60</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 79 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あっ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>文を間違えた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO70 [抵抗力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 58 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>疲労0 軽傷2 重症1 致命傷2</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>死んだなこれは……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>貴重なおじさん枠が失われつつある……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>死ぬときに選択肢だそうかな、ま、そのときになったらにします</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まだ致命傷じゃないから平気平気</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド4</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 10[10]+9 → 19</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 3[3]+8 → 11</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 9[9]+10 → 19</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>しょうがない、そろそろ本気出すか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いつぞのパワードスーツとはえらい違いだわ、やっぱファンタジーだなぁ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 6[6]+12 → 18</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おし、ゲンゾから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1さまにライトニングボルトをします</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの疲労減少(疲労:5->4)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO100 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 33 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>つよそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 26 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なんだこれ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>おや?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>告ぎどうぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>「今のは……呪文か!?」とスレスレに飛んできた雷撃に冷や汗をながしつつ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>若頭はあ、グラントを仕留めにかかります</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>二回攻撃と一回攻撃とあるけど、どっちがお好み?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>どっちでも死ぬ気がする</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「(何故こんなにあたらないんだ?この世界がおかしいのか?)」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>おけ、予定通り二回でいきやす</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO60@24 パワースラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@24 → 35 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>異世界だから重力とか違うんでしょう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO60@24 パワースラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@24 → 71 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>二回で両方外そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これはおもしろくなってきた、避けて見せるがよい!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>墓つくっといて……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>鍛錬するべきだったか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 35 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>お?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>同値成功だっけか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まじ!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>せっかく死に演出書いてたのに……(暗黒微笑</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、回避しました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、ヒョウカ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>どうするかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>これ今氷菓は敵とエンゲージしてないよね?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES、ノーマークとはこのことを言う</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>エリア移動してグラントを回復させるか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>走れ走れ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>全力移動になるから、成功率は半分になっちゃうよ!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>早くしないと死ぬぞー!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>救えるのか、ドクター!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>見殺しにする気か!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>日隠は忍者だから一人でも大丈夫だろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ナイア許すまじ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>まあこっちも危ないんですけどね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>成功率半分はネックだな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>致命傷ポイントの差でグラント有線でいいと思う</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「氷華、あんたはグラントのだんなの治療に行ってくれ」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>DOT治す手段ってクリンナップしかないんでしたっけ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「言われるまでもない、お前も死ぬなよ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「死んだら呪ってやるわ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ちょっとバディっぽいセリフでワクワクする</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>エリアHに移動してグラントにクライオサージェン使います</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=45 (特性能力)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=45) → 17 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いけるやん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>コストは疲労2</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そういえばバディでしたね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>kaeru@鏡 氷華の疲労を2点減少!(疲労:6->4)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いいぞ～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>さてどこを治すかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>重症2点と軽症1点でいいか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ありがてえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけー、回復承認。バディで回復効果ってなんかあるんだっけ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>Evi@グラントの重傷を2点減少!(重傷:4->6)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ないかな。あったらあとで教えてください</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ああ違う</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「おめぇ、そのなりして僧侶か?」と目の前で起きた奇跡に驚きます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>いやあってるか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お次はグラント!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あ余分に回復してしまった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いや、まてよ。バディエフェクトあるじゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>P161</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ほんまや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>バディにクライオ使った場合、重症1点、致命傷2点でよろしと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ランク5だから～?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じゃあ重傷を2点と軽症を3点回復できるな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>全回復だぜ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そういうことだな!? うそだぁ!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ヒロポン買わなきゃな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>グラントムーブよろり?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あれ?もうか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>今疲労2の特性つかうと軽傷1くらうでいいんだよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YES!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>まあええか鼻血出しながらディスインテグレート撃とう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 32 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>通るのでは?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>運動で</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO48 運動</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=48@9 → 67 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>だああああああああああああ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>武器破壊じゃあああああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>裸になったな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>パキンと音を立てて持っていたマチェットが根元から折れます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「……えっ?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えー、目を白黒させる頭領をしり目に、兵士たちはゲンゾウを倒す</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうやっておったんだろ、一瞬触ったのかしら……ま、いいか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 18 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 3 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これは?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ひどくない?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 48 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO80 [回避]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 64 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>両方あたり</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>ヒット</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>ヒット</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>1d10+15 手に持った武器による基本的な振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 5[5]+15 → 20</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>1d10+15 手に持った武器による基本的な振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 9[9]+15 → 24</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>2回目の攻撃は、防御無視ね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>至近～近距離だからちょっと離れてても壊せる不思議</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>DCSL16</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[16] → 軽傷4 | 胴部負傷 …… 胴部に大きな傷を受ける。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>DCSL24</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[24] → 重傷2/DOT:軽傷2 | 大量出血 …… 傷は深く、そこから大量に出血する。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いいぞいいぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>致命傷2ですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>DOTで死にます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>さらば</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>軽傷繰り上がりで、致命1点だけで大丈夫だよ。首の皮一枚だけど</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>クリンナップフェイズ。DOTもらってる人は、ダメージ受けてから、解消判定お願いします</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>2点ダメージも1点ダメージになるの?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>また戻って回復しないといけないのかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>YESYES</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO70 [抵抗力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=70@14 → 52 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷ズバー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>できればこっちのエリアに来てほしい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO60</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 15 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>お、DOTとれた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>エンゲージしてもいけるんだっけ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>いけるね。封鎖してないから、全力移動で逃げられる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>P205にわかりやすいエンゲージの表があるよん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>こっちが移動すると失敗する可能性あるしな治療</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド5</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>とりあえずセットアップしようかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>回復系の能力はハウスルールで制限かかてtませんでしたか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 1[1]+9 → 10</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 3[3]+8 → 11</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 6[6]+10 → 16</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>グラちゃんもうやる気なくしてるな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12 (イニシアチブ)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 2[2]+12 → 14</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>セットアップ撃ちます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>こっちももう諦めてる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>制限かかってるよ。一人につき一回だけ適応可能。グラントにはもう効果なし。ゲンゾウには大丈夫</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ウェポンエンハンスをバディエフェクトで氷菓に発射</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>攻撃力に+5してください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そしてわしは鼻血を追加で出す</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ほほう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ああ封鎖状態って必ずなるわけじゃないのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 32 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んだんだ、セットアップとかで壁つくるとかしないと封鎖されない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>うんまあ失敗はない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>折角治したんだから死なないでくれよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GMの塩梅か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、ゲンゾウどうぞ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>あれ、元に戻ってる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んだんだ、GMが用意してれば封鎖されるし。ヒョウカの特性能力でもできる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>すみません、行動値10です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お、じゃあ若頭だな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>若頭かかってこい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>武器ないけどどうするんだろ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>素手です……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>若頭は、折れたマチェットを投げ捨てると殴りかかってきた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>choice[g,h]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (CHOICE[G,H]) → H</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO50 当身</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 93 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>威勢が亡くなったね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あれ、エンゲージしてないのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>グラントのエンゲージ解消して、ヒョウカに隣接します</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ヒョウカに向けて放ったパンチは空を切った</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ポイ捨てされた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ほうほう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ひどいなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お次はヒョウカ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>傷つくなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>仮想距離戦闘は楽ちんでよろしい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ死にかけてるし助けに行くか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>助けて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(切実)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>待機ってできないんだっけ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>これってさ待機とかで行動順ってずらせるんだっけ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>任意の位置に遅延行動はありにするよ。ハウスルールにも書いとく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ただし、敵も同じことやってくるから気を付けてね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>なら日隠の行動の後まで待機します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>行動値10まで落としておいてください。では次グラント</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>命が惜しければ全力でここまで来るんだ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>モブに射撃するのと若頭攻撃するのどっちがいいかなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>モブに射撃するのと若頭攻撃するのどっちがいいかなあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>二発。。。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>連続攻撃していこ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>エリアEに全力移動します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、成功率半分でどうぞう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>特性能力でプラズマフレア……範囲はゲンゾーを除いた近距離。コストは軽傷1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>範囲攻撃できたの!?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO50</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 84 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>やったぜ。</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>実はできたのだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次は、ゲンゾウとヒョウカのどっちか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>カモンゲンゾウ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>Hまで全力移動して若頭にライトニングボルトするかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>行きがけの駄賃だ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>成功率ハーフアンドハーフでどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「旦那、すまねえ少し交替してもらうぜ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO50 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 67 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの疲労減少(疲労:4->3)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>あのさあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>kれグラントの死亡フラグでは?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>¥q¥;</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「次から次へとぉ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、軽装兵士はグラント君に襲い掛かります</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 7 → クリティカル</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 69 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>クリティカル定期</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ふふ、やらかしたな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>オイオイオイ死んだわあいつ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ファ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いきなり精鋭部隊送ってきたのかな?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>回避も半分になるのかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、考えてなかったな。うーん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>どうだっけ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>メインアクションが半分になる感じだから、回避は通常判定でよしとします</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>らじゃり</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 35 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>go35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 11 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>クリティカルだけもらおう!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やるじゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>くう、出目いいのになぁ!</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>1d10+15 手に持った武器による基本的な振り下ろし攻撃 (DCSL)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15) → 3[3]+15 → 18</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>クリティカルはしょうがない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>MOBだからやさしいな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>DCSL18</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[18] → 重傷1/DOT:軽傷1 | 腕部負傷 …… 腕に大きな傷を受ける。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>こっちには殺意満タンだったぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さぁ、どうなるどうなる、オラわくわくすっぞ</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>クリンナップフェイズ。DOTもらってる人は、ダメージ受けてから、解消判定お願いします</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>回復は……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お、忘れてた!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ヒョウカさんどうぞ～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>クライオサージェンで回復ー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=90 (特性能力)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=90) → 46 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>治療はどうするかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ありがてえありがてえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO60</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 74 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>さっさと戦闘終了させてほしいんじゃが……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷0重症1致命傷2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>粛々とグラント用の描写を描くGMの図</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>この場合致命傷を回復するよりも重症を多めに治した方がいいのだろうか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>繰り上がり1ダメ固定と考えると重い方から回復するのがいいと思う</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じゃ重傷1致命傷1でいいかい?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ゲンゾーのほうがやばくてわろうた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いいと思う。それなら重傷2でも変わらないけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ここまで2回攻撃ずっと受けてたからね、かたいよゲンゾウは</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>重傷2ならおまけで軽症も1回復できる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なんならクリティカル5回ぐらい受けてる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>軽減してなかったから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>じゃあそれでいこう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>では重症2軽症1の回復で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うい、回復承認</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は2ポイントの重傷回復(重傷:0->2)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの軽傷回復(軽傷:0->1)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>すぐ死にそう</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド6</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 9[9]+10 → 19</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>もう6ターン目か</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12 (イニシアチブ)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 4[4]+12 → 16</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 5[5]+8 → 13</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 8[8]+9 → 17</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>5回連続外してるのか……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>珍しく長期戦だよね。火力の問題かなぁ、要調整カモ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ワカピーから</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>choice[g,h]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (CHOICE[G,H]) → H</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>鍛錬がたりないのか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>というか当たれば1げきだからダイス目だよなあ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ヒョウカにパンチ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO50 当身</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 88 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>おっとこっちか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「うらぁ! ちくしょぉ!」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>二人いてMOBを1体しか倒せないパーティーがあるらしい(おこ)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お次は、ゲンゾ=サン</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「その程度の攻撃が当たるとでも?愚かな男ね」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ライト忍グボルトするぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>若頭にね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>何その名前かっこいい……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO100 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 52 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの疲労減少(疲労:3->2)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 57 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>あたったあああああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>2d10+5*3 [ライトニングボルト 電撃 単 近 疲労1]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (2D10+5*3) → 8[4,4]+5*3 → 23</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>平均値かな……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>何気に電撃初めて鴨</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>もう雷斗忍具墓流屠に解明しようぜ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「忍法雷遁の術だ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>改名</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DCEL18</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    電撃[18] → 重傷1/マヒ | 脚部感電 …… 電流により脚がしびれ、動けなくなる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あー……マヒかぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>それを設定すると、PC変換がもっとあほになっちゃう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、グラント</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>スタンもあるよ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>へぇ!? あああ、そうかあああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ソロエフェクトで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>若頭まだぴんぴんしてるじゃん……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いつものパターンがありそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>グラタンはねぇ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>変身したい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>エンゲージ離脱してぇ……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>エリア離脱してぇ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>できまぁす!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>リアル鬼ごっこが始まるんです……?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>どうみてもエリアBにいかれてゲームオーバーなんだよなぁ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>エンゲージ離脱してプラズマするか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ちょっとそこは演出考えたから、逃げてもらっていいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 72 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>とっくに逃げてそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、遅かったわ。プラズマァ!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>バルコニーの下に飛び降りればいける>とっくに逃げる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ここで一網打尽ですよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 17 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 92 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>2d10+10</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (2D10+10) → 12[4,8]+10 → 22</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>ヒット</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1が出目がすごすぎない?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>灼熱……関係ないかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>攻撃属性なんだっけ、それ。火?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じつはアイツがリーダーなんじゃ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_2</div><div class='col-sm-10 serif'>「あ、あぐああ……!」と燃えながらバルコニーの下に落ちていきました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お次はヒョウカ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>グラントは大丈夫そうだから若頭をボコるか</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「(ファイアボール、いや違う。なんじゃあの魔術系統は……!)」とプラズマフレアみて</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>若頭を切ります</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=100 (近接武器)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=100) → 66 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>避けて見せるっ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 61 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>だめじゃあああ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「火遁じゃ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>このパーティ忍者しかいないのかよぉ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「旦那の火遁はいつみてもCOOLだぜ!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>よそ見してたらしにそう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+15+5</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15+5) → 7[7]+15+5 → 27</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>部位狙いね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いたそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>先に通常で出します</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DCSL17</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[17] → 重傷1/DOT:軽傷1 | 腕部負傷 …… 腕に大きな傷を受ける。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>一個上がって、腹部に切り裂き。重傷2</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「う、くそっ。いてぇ……」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>DOT疲労2もどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ああ、コオリせんせい……^q^</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>はグラントに斬りかかると</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「さすがは異世界ね、人間にしては丈夫ね……バラして体を調べたいわね」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 54 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 30 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>いいねえ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やるじゃない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ここにきてグラント覚醒</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>どっかの忍者も見習って欲しい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>命を賭けた甲斐があるってものだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まじぃ!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>クリンナップフェイズ。DOTもらってる人は、ダメージ受けてから、解消判定お願いします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO50 抵抗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 77 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷1が内蔵に響くぜ……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DOT継続</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO60</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 80 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>継続ゥ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>一緒に苦しもうや……(微笑み</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド7</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 2[2]+9 → 11</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 4[4]+8 → 12</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 8[8]+10 → 18</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12 (イニシアチブ)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 5[5]+12 → 17</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もう高速パンチ出すマンみたいになってる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>若頭元気だねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>逃げてもいい?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>行動値0まで遅らせていい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、うん、行動遅延はいいよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>choice[g,h]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (CHOICE[G,H]) → H</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>再びヒョウカにへろへろパンチ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO50 当身</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 41 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>よし、いいぞ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ほう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=80</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=80) → 68 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>何気に初ダメかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>通れば、だ……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d5+6 けんかぱんち/衝撃 (DCIM)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D5+6) → 1[1]+6 → 7</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あーあー^q^</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>あ、フリーアクションでマヒ解消しました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>0だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ひどいひどすぎる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>シリコン製の胸で緩衝された</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>オーダージャケットで7防御</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「女に手を上げるとは見下げ果てた男だ……貴様は生きたまま切刻んで標本にしてやろう」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>許されない</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>なんでグラントはゲロゲロに弱らせたボスを元気なやつらに任せて死地に赴いたのだろう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>それを聞いて、汚い言葉でののしり始めました。もうダメじゃな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、ヒョウカ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じゃあ有言実行と行きますか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=100 (近接武器)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=100) → 31 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 17 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やるじゃない</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>やりますねぇ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>このハゲええええ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「へっへ、へっへっへ……」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>遅延行為が好きすぎ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次、ゲンゾ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ライトニングボルト</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>若頭</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO100 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 91 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これワンチャン避けれるぞ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 14 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>回避が成功しなければ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>シュッ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの疲労減少(疲労:2->1)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「オレだって、やればできる!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>グラントへ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「アンタ、もしかして忍者か!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO80 スラッシュ(近接武器)/MAIN/単/至近/-/-/切断</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=80@16 → 69 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>グラントーーーー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO35</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=35@7 → 23 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>おや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もうこれ……!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>グラントいつのまにか致命傷1になってる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>グラント!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そのうち死ぬぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>あ、遠距離攻撃持ってた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>軽傷治療スプレーもったいない気がするけど死ぬよなぁこれ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>使うか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>プシュー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>良い判断だと思う</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シロノ</div><div class='col-sm-10 serif'>「(不思議な道具……)」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えー、クリンナップフェイズ。DOTもらってる人は、ダメージ受けてから、解消判定お願いします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO50 抵抗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 29 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>疲労2解消!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>さて、ラウンド8ですが……。どうすっかな、DOTでグラント死にそうっちゃ死にそうだが、大勢は決しているのは事実</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>時間はあるから、グダグダ続けてよければ、続けますけど、どうします?>ALL</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GMの判断に任します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>もう終わりでいいやーってなら、最後に各員演出戦闘してトドメさしてもらおうかと思う</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO60</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 55 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>任せる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おまかせ2票</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>かえるくん、どう?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあキャラクター的には皆殺しにしたいんですがね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>おうまさかの判断</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>若頭捕食シーンを所望してそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>コワイい!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ次で仕留められるでしょう、そろそろダイスの流れもくるはず</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけ、じゃあトドメさしてもらいましょう!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やるか</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド8</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 7[7]+9 → 16</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 8[8]+8 → 16</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 2[2]+10 → 12</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>うああ、でめぇ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12 (イニシアチブ)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 3[3]+12 → 15</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ういうい、ゲンゾ、グラ。どっちからでもいいよ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>兵士に遠距離攻撃したほうがいい?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>グラントが仕留めたいなら若頭に攻撃するけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>いやべつに仕留めたいとかはないかな……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンゾ戦闘可能範囲がすごいね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>というか近距離攻撃がプラズマしかないからつらい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>じゃあ1くんにレールガンショット</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GO100 [特性能力]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 60 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>怪しいぞ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>aneko@日隠 幻蔵は1ポイントの疲労減少(疲労:1->0)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GO30 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>GardenOrder : D100<=30@6 → 57 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「ダンナァ!手助けするぜ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>うがああ、あたりいい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>2d10+5*3 [レールガンショット 銃弾 単 至近～遠距離 疲労1]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (2D10+5*3) → 10[6,4]+5*3 → 25</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>風穴あきますね、くぉれは……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「レイガァァン!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>伊達にあの世は見てない、とか啖呵きりそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@軽装兵士_1</div><div class='col-sm-10 serif'>自分の胸に開いた大きな穴を見てから、ズジャリと倒れ伏しました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>エリアBのシロノ達に当たる可能性も……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シロノ達はしゃがんで怯えてるから大丈夫</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>こわいこわい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>グラントかしらん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>若頭にクロスボウ撃つかなー</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GO100</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 92 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 66 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>うそぉん、最初のいきおいどうしたぁあん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>2d10+6+5</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (2D10+6+5) → 4[3,1]+6+5 → 15</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>切断です</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DCSL5</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    切断[5] → 軽傷1 | 切り傷 …… 皮膚が切り裂かれる。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>来てるねえ流れが</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「く、くそがぁ……!」とにらみつける</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>スロースターターだった……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ヒョウカさんーの番</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>そろそろ首を刎ねますかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=100 (近接武器)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=100) → 96 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>やバス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>出目が怪しいぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おやおや?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 17 → 成功</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>もう気が狂う</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>出目が良い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>若頭のマッハパンチ!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>4割を外さないできる男</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO50 当身</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 18 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=80</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=80) → 90 → 失敗</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>choice[g,h]</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (CHOICE[G,H]) → H</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ヒョウカだったわ、あ、ありがと</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d5+6 まっはぱんち/衝撃 (DCIM)</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D5+6) → 3[3]+6 → 9</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>DCIM2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    衝撃[2] → 軽傷1 | 打撲 …… 攻撃を受けた箇所がどす黒く腫れ上がる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>内出血ぅ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「なぜだ、なぜ勝てねぇ! こんなはずじゃあ!」半狂乱状態です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「全く往生際の悪いモルモットね……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>DOTはなし</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ラウンド9</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>セットアップフェイズ、イニシアティブどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いたそう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>1d10+10 イニシアティブ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : (1D10+10) → 5[5]+10 → 15</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>疲労切れたから切っていくか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+9 [行動値]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+9) → 3[3]+9 → 12</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+12 (イニシアチブ)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+12) → 6[6]+12 → 18</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ここまできたら実質勝ちでしょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>バーストとか使って処理処理しちゃって!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>致命傷が……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>1d10+8</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : (1D10+8) → 8[8]+8 → 16</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ヒョウカどうぞ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なぁに、致命傷はバディが肩代わりできる!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いないです……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そんなぁ;;</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ここで決める</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d100<=100 (近接武器)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=100) → 7 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>シロノがバディになってくれる可能性が……?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GO40 回避</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : D100<=40@8 → 51 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GOでふろう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>ひっとぉ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>せやな、クリティカルだなそれ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>せやなクリティカルや</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>部位狙いとオーバーブーストで</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>オバブしたら勝ち確でしょ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1d10+15+5+10</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D10+15+5+10) → 5[5]+15+5+10 → 35</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>首を刎ねちゃうぞー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ところで氷華は何で攻撃しているのだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>アイスブランドかな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>DCRF35</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>GardenOrder : 負傷表    冷却[35] → 致命傷1/DOT:疲労2 | 全身凍結 …… 全身が凍りづけになる。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>せやな自作の氷の武器</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>オバブしてるなら、マックス40かな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>切断です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>切断も一緒かな。脊椎損傷!?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あくまで氷で作った武器何で</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>もう二度と立ち上がれないねぇ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ああ、付与じゃなくて作成のほうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>イエス</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>致命傷2、放心、すたん、まひ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンゾウにラスト一発決めてもらおうかしら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>演出戦闘でもいいから、これが最後の一撃にします。避けないので、カッコヨク決めてどうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>kaeru@鏡 氷華の致命傷を1点減少!(致命傷:3->2)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「恨みはねえが、死んでもらうぜ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>一応振るの?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>というか生け捕りにして情報はかせようよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>慈悲はない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>振っても振らなくてもいいよ。ダイスは演出結果に反映させてくれればいいかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ダメージぐらい振るか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1d10+13+5 [刀 サンダーストライク使用時 近接 電撃 単 至近]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : (1D10+13+5) → 1[1]+13+5 → 19</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>1じゃないか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>^^</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>電撃なんで……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「せめて部下達と安らかに眠りな」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なんか首取れた</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>紫電一閃。ゲンゾウの刀が稲妻のように走り、若頭の頭と胴体は切り離された。スポーンッ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>その顔で首が取れたのか……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なんか笑える、雑コラでありそう</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>戦闘終了!</div></div>
+            <div class='row system'><div class='col-sm-2 name'>system@INFO</div><div class='col-sm-10 serif'>テッテレー、君たちは戦闘に勝利した!</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>戦闘終わって</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「出来れば敵ではなく、味方として会いたかったぜ……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>激戦だったもんなぁ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あ、死体は回収しますね。色々使い道があるし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>すまないがカニバリズムはNG</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>医者だってば!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、うん、いいよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「シロノ……、わしら、助かった、のかのう?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シロノ</div><div class='col-sm-10 serif'>「え、ええ、生きてます」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と、見事賊を切り倒したキミたちを見ながら言う。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シロノ</div><div class='col-sm-10 serif'>「エルフの王国、第一王女シロノ。あなた方に感謝の意を表明します」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>シロノは、まだ震える足で立ち上がって、スカートのすそをつまんでお辞儀した。</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シロノ</div><div class='col-sm-10 serif'>「命を救ってくれて、本当にありがとう。クリスタルオウナーの旅人たち」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんかRPあればどうぞう。なければ、エンディングフェイズになりまーす</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>血がブッシャーしてるけど元気だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>割と元気なのヒョウカだけじゃんね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ほぼ無傷だな。ボスのパンチでできたアザは氷で冷やしてますけど</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「なんとか撃破しましたが、奴ら相当の腕の立つ賊でした。敵ながら敬意を表したいところです」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>死体は診療所の一室に運んでその部屋は氷漬けにして保存しますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>保存してもいいけど、この地を離れると効果きれちゃうかもよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>というかその行為に何の意味が……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>死者を弄んで楽しいですか……?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>貴重な異世界人の死体だからね、医療の発展に使わないと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>その辺のスラム街にゴロゴロあるよぉ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>生み出した後の氷って普通の物質じゃないのか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>なおさら早く溶けそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>魔法的な氷なら永続できると思うけど、普通の氷は溶けちゃうんじゃないかな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>やっぱサイコカエルの考えることはわからんな!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>氷も大量にあれば解けまいて</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>謎理論。氷が惑星の極地（北極圏とか）並みにあるってことかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、エンディングいくだっちゃ</div></div>
+        </section>
+    </div>
+{% endblock %}

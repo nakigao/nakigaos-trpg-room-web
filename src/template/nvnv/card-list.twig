@@ -1,0 +1,44 @@
+{% set requestUri = global.getRequest.getRequestUri() %}
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ base_url }}/assets/js/mustache.min.js"></script>
+    <script src="{{ base_url }}/assets/js/nvnv.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ page_title }}</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav nav-pills">
+                    <li class="nav-item {% if requestUri matches '(/pc/)' %}active{% endif %}">
+                        <a class="nav-link" href="{{ base_url }}/nvnv/card-list/horror/pc">PC</a>
+                    </li>
+                    <li class="nav-item {% if requestUri matches '(/introduction/)' %}active{% endif %}">
+                        <a class="nav-link" href="{{ base_url }}/nvnv/card-list/horror/introduction">INTRODUCTION</a>
+                    </li>
+                    <li class="nav-item {% if requestUri matches '(/scene/)' %}active{% endif %}">
+                        <a class="nav-link" href="{{ base_url }}/nvnv/card-list/horror/scene">SCENE</a>
+                    </li>
+                    <li class="nav-item {% if requestUri matches '(/light/)' %}active{% endif %}">
+                        <a class="nav-link" href="{{ base_url }}/nvnv/card-list/horror/light">LIGHT</a>
+                    </li>
+                    <li class="nav-item {% if requestUri matches '(/darkness/)' %}active{% endif %}">
+                        <a class="nav-link" href="{{ base_url }}/nvnv/card-list/horror/darkness">DARKNESS</a>
+                    </li>
+                    <li class="nav-item {% if requestUri matches '(/climax/)' %}active{% endif %}">
+                        <a class="nav-link" href="{{ base_url }}/nvnv/card-list/horror/climax">CLIMAX</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% if requestUri matches '(/pc/)' %}{% include 'nvnv/card-list-pc.twig' %}{% endif %}
+        {% if requestUri matches '(/introduction/)' %}{% include 'nvnv/card-list-introduction.twig' %}{% endif %}
+        {% if requestUri matches '(/scene/)' %}{% include 'nvnv/card-list-scene.twig' %}{% endif %}
+        {% if requestUri matches '(/light/)' %}{% include 'nvnv/card-list-light.twig' %}{% endif %}
+        {% if requestUri matches '(/darkness/)' %}{% include 'nvnv/card-list-darkness.twig' %}{% endif %}
+        {% if requestUri matches '(/climax/)' %}{% include 'nvnv/card-list-climax.twig' %}{% endif %}
+    </div>
+{% endblock %}

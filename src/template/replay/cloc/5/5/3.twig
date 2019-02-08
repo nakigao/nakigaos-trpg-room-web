@@ -1,0 +1,1365 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-aneko.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>フェイズ1</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>今回ですが、行動をイニシ順で宣言してもらおうと思います</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>取れる行動ってなぁに？＞GM</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>マップ上のアイテムは全部調べれます。あと、部屋全体を見渡す行動も出来ます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「ところで……ここは？」と辺りを見渡します</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>砂金の山と……</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あったかいやきとりのパックと、キンキンに冷えたビール？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ここはTEIAIだった？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では辺りを見渡すと</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">部屋4</p>
+                        部屋の両端（１と３に続く３マスの所）にドアがある<br>
+                        中央に向かって一つドアがある、そのドアの隣には「COUTION！」と書いた看板がある<br>
+                        あとは下に瓶、箱、砂金の山がある
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>室内なのに池があｒのか？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>君の家にはないの？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>池くらいあるよなぁ！？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>家は砂漠だから……てか中央って池の中入ってくってこと？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>あれ、実は部屋なんです……＜池</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>わろりんちょ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>どういうことだってばよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なぁに妄想力を鍛えてあればこのくらい平気平気</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>今回３人いるので色々不親切設計です、たぶん全部指示していくと直ぐ終わる。さて、動いていきましょうか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>まあ大体わかった</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「よくはわかりませんが、せっかくですから、皆さんで朝ごはんにしましょう！出口は……あっちかしら」とドアAに行きます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>行動的だな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>このドア開くんけ？あとなんかオブジェクトあるけど、これらはなんだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ではドアAのところにいくと横に張り紙があるのが分かります、読まなくてもいいです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「なになに……？」もちろん読む</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>読むと片目がつぶれます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ぐぅおおおおお！ぬかったわあああああ！って世紀末覇王並みに叫ぶ</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">部屋4の張り紙</p>
+                        このハウスはある条件を達成しないと一生出ることが出来ないらしい。<br>
+                        それは死んでも……だ。<br>
+                        俺は一体いつになったら出ることが出来るのだろうか……。<br>
+                        <br>
+                        そのメモの横には、血文字の正の字が書いていた。８本ほど書かれている。<br>
+                        また、ドアの下に、ドアに向かって矢印が書かれているタイルがある。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「ハウス……？出られない……？」と首傾げ。ドアに手をかけます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ではクリスは一人で移動しますか？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>開くか開かないか確認だけ、できないなら振り向いて「これなんでしょう？」って2人に聞く</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ドアは開きます。では次、いかりくん。勇猛に捜索してください</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>箱を開けよう、箱は開けるものだ、開けるために置かれる</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">部屋4の箱</p>
+                        見た感じパイナップルっぽい金属の何かが1個あります<br>
+                        たぶん見た人は大体こう思います……「手榴弾！？」<br>
+                        そして箱のふたの裏側にこういった張り紙がある……「殺傷力はないよ♡」
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>投擲とかないんですけど、どうやって黒土にぶつければいいんだ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>手に持っててもらってピンを抜くだけさ、簡単簡単</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>なるほど、それなら自殺だな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>神に仇名すものは罰を与えるぞ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>じゃあポケットにいれとこ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>殺傷力のない金属の物体かぁ、何につかうんだこれ……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>なんだろうねえ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>困ったらアイディアを振ったらヒントが振ってきます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>それはありがたい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>特に言及しない場合、周知はしてないと判断します。では次は神</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>じゃあ砂金の山にダイブします</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「金！これこそ神の私に相応しい」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>あやしい粉まみれ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「フハハハハハハ！！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>意外と深く、あなたは埋もれてしまいました。誰か助けてあげないと、キット彼は死んでしまうでしょう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>じゃあ次の人いこう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>クロールで脱出できないかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>黒土君は１d６を振ってください</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>1d6 Cthulhu : (1D6) → 5</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>流石の出目だ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では５ダメージ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>何のダメージだ！？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>あなたはもう少しで窒息死するところでした。ところで砂金は持って行きますか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ポケットに入るだけ砂金を詰め込みます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>了解です。ダメージ食らってね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>さっそくHPが減る……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>残りライフ2</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>あと少し</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>フェイズ2</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ではクリスかな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>あ、この灰色のやつが矢印パネルってことか。んじゃあ、問題なく開くなら、ガチャっといくわ。1人でOK</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「出口、出口っと……」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>クリが次の部屋に入ると、その部屋は少し蒸し暑く、体感的には30度を超えていました</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>俺の部屋かな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>そして暑いと思うと同時に、ドアがひとりでに閉まってしまいました。では聞き耳判定をどうぞ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>1d10<=9 Cthulhu : (1d10<=9) → 6 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>クリスはその超人的な聴覚でドアの「しまりまーす」という声が聞き取れました。こわい？こわくない？正気度チェック(0/1)をお願いします</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>aneko@ドア</div>
+                <div class='col-sm-10 serif'>「しまりまーす」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「あ、はーい……ってぇ！？」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ファミマの入店音みたいなもんかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>やさCドアだ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>誰もいないのに声がするのはコワイ！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>1d10<=9 Cthulhu : (1D10<=9) → 1 → 成功</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>成功してしまった……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>クリスにとっては普通のことでした</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「ま、普通かしらね……けど、困ったわ」とドアをどんどんして終わり</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>む、開かないのか？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>メタい目線だとどういうドアかはわかるけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では次はいかりくん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>なんだろうこの瓶</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>なにやら透明の液体が入ってます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ジュース？ヨーグリーナ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ふたを開けて臭いをかいで見ますか？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>うんでも、あれ、手でパタパタやるやつで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>はいでは、きついアルコール臭がしました。保健室のことを思い出したかもしれません</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ほーポケットにいれとこう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ウォッカかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ラベルとかには何も書いてないよね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>そもそもラベルがありません</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ふむふむ……？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>未成年じゃなくてよかった</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>これは舐めてみるべきでは？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では舐めますか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>イカリ君ならやってくれる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>まあいつでも舐めれますから……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>次どうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>まあじゃあＢの方の扉が開くか確かめます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>あきません</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ほう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ドアの下のほうには……何もありません</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>当たり前だよなぁ！？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>カギがかかってる感じ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>不思議な力であきません</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>これは……怖い体験なのでは？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ほうほう、神だからこの程度は日常茶飯事</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>みんなクリスを放っておくんですね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>気持ち的には箱の中身と瓶はささっと回収して向かいたいけど、ターン制だからね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>結果一方通行ってことかぁ？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ぐるぐるしてんでしょ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>4の部屋で行き止まりの可能性もあるでよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>その場合は池に行けだな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>結局真ん中の部屋が一番怪しいわけよ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>それは全部周ってからのお楽しみ。同じ場所に集まって話し合うという選択肢も作ることにします、ターン経過なしでね</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>フェイズ3</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>誰からだっけ、クリスからか……周囲見回すだけで、終わりにしとくわ。合流を待つ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>はい、では部屋の様子を</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">部屋1</p>
+                        目の前に食器棚らしきもの<br>
+                        その奥に天井からぶら下がっているロープ<br>
+                        部屋の奥に箱、鏡<br>
+                        部屋2の部屋に続くドア<br>
+                        中央に向かうドア
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>まーた箱かぁ……基本的な構造は同じかなぁ、やっぱり</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では、次いかりくん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>箱をあけにいくぜーーー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>箱の中には真っ白いラベルが貼られたスプレー缶がありました。そして間の底部には、「缶重量100g」と書いてあります</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>果汁100%。ポケットにいれておこう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ポケットがもうパンパンだぜ？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>４次元なのかな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では黒</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>神と呼んでくれ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>そんなに神に会いたいの？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>クトゥルフ系統は勘弁</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>これ、何の卓か知ってます？……ところで1の部屋の探索はもういいんですか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>もうないでしょ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>いや、一応聞こうと思ってね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>中央への扉は気になる、開きそう？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ふむ、真ん中の扉が開くかどうか試すか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>扉の横には「COUTION!」と書かれていますがいいですか？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>英語よめないからなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>聞き耳していい？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>それはドアを開けてからですか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>開ける前に</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ドアが厚いせいか何も聞こえませんでした</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>じゃあ開けるぞ。そーっと開けるぞ1cmくらい、音がしないようにゆっくりと少しだけ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では空けた瞬間に中から恐ろしい速さで何かが突っ込んできました</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>すぐ閉めます、これはあかん奴や</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>神は高速飛行物体なんぞ恐れはしない！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>あなたはその恐ろしい物体を見たと同時に絶命してしまいました</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>わろりんちょ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>オイオイオイ死んだわアイツ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>回避を振らせてよおおお</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>というところで皆さんの視界がいきなり真っ暗になりました。そして目が覚めると……最初いた位置に戻っていました。死んだはずの黒ですが何事もなかったかのように佇んでいます。ただ、先ほどの記憶は鮮明に覚えています。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>黒は正気度チェックをお願いします</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>1d10<=5 (正気度(現在)) Cthulhu : (1D10<=5) → 7 → 失敗</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ちなみにですが、先ほど秘話機能使ってkaeruくんに何かを見せたので悪しからず。では1d3減少です。あと、黒くんはクトゥルフ神話を1プラスしてください</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>この数値で1d3はきついなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>1d3 Cthulhu : (1D3) → 2</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「やはり私は神だった！神は死なない」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>いかりがポケットに入れたものは？元に戻ってるの？＞GM</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>とったものは全部そのまま持っています。本当は戻したいけど面倒だしね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ぐへへ、仮に黒土くんのせいでアイテムロストとかだったら切れるわ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>人体の位置が戻っただけってことか、物体に起こった現象は基本的には巻き戻らないって認識でいいんかな？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>はい。例外もあります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>それだと、例えば正の字の数が変わってたりした場合は、戻った時点でGMが通知してくれたりするの？それとも、いちいち調べなおし？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>何か変わっていたら自動的にお知らせします</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>お、そりゃ親切。調べなおす心配もないのは嬉しい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>えー、超常現象を体験したほかの二人は正気度チェックをお願いします</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>1d10<=5 (正気度(現在)) Cthulhu : (1D10<=5) → 5 → 成功</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>1d10<=9 (正気度(現在)) Cthulhu : (1D10<=9) → 7 → 成功</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>皆さんにとっては日常茶飯事だったのでむしろ興奮しています。</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「これは……夢なのかしら……？わたくし、さっき別の部屋に……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>「また気絶しちまったなあ。疲れてんのか誰かの仕業か……」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>一人になったところで明けたのは非常に運がよかったですね。黒くんは会ったことを話しても言いし話さなくてもいい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>聞きたい？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>べつに</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>判断は任せる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>まあキャラ的には話すでしょうね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>つぶしあうのか……いいでしょう。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>SANが減らないようにマイルドに話すよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>判断は任せたからなーーー！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>任せて大丈夫かよぉ？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なんだかんだ言って、カエル君はゲーム得意だし信頼して大丈夫（曇りのない目</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>SAN値を減らす話をしたいなら説得を振ってください。減らしたくないなら皆は面白がって終わります。仮にもホラー好きの集まり……だったような……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>下手な話じゃ通じないってことさ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>じゃあ説得をふるぞ、説得は得意なんだ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>1d10<=9 Cthulhu : (1D10<=9) → 7 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「あの扉の向こうには化け物がいる！半ポリプ上で全く異質の恐ろしい生物！彼らは部分的にしか物質ではなく、翼もないのに空を飛ぶ」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>怖くないイントネーションで喋るぞ。正直この説明で怖がることは不可能だと思う</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>（そのときクリスの脳内に衝撃走る！）</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>話し手はあほっぽいけど、中身はとても現実味を帯びていその内容を聞いた皆さんは正気度チェックしてください</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>1d10<=9 (正気度(現在)) Cthulhu : (1D10<=9) → 9 → 成功</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>1d10<=5 (正気度(現在)) Cthulhu : (1D10<=5) → 6 → 失敗</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>文章を読み間違えてるぽいな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ぽいね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ああ、そういうことか！？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>こっちが書き間違えたかと思って見直してきましたよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>カエル君を信じてるよ（曇りのない目</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ミスったな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>どむまい、ぼくもよくやる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>なかったことにしてもいいですよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>無かった事にしよう、正直すまんかった</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では皆さんは笑い話と思いながら聞きました</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「なんてことがあってさあＨＡＨＡＨＡ」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>「あはは、おもしろいですね、ホラーですね、それ！」とコロコロと笑います</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>「ポリプ状とか言われてもイメージわかないぜ」</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>フェイズ4</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>さて、部屋1に移動しますか？それともまた真ん中の扉開ける？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>移動だ！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>本棚あああああああああああああああああああああああああああああああああああああああああ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>ホンダーナ！を調べよう！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>食器棚らしきものです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>本棚じゃねぇ！？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>食器ダーナ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ソウダーナ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>包丁を装備しよう</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>包丁は食器じゃなくて調理器具じゃないですかね（冷静</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">部屋1の食器棚</p>
+                        食器<br>
+                        はかり
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>はかりをポケットに入れよう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ポケットの中はパンパンだぜ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>残念ながら入りませんでした</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>じゃあ背負うよ……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>持って行きますか？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>持っていけるのか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>そりゃもちろん</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>じゃあ持っていこう、こいつは大事なはかりだ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ただし両手がふさがります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>んじゃ、はかりはクリスが持つってことで</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>OK、はかりは普通にもてます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>んじゃ、両手にはかりをもって終了</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>私のパンチが一番弱いんで私が持とうかとおもっていたけど、まあいいや。食器はなんか重要かなあ……いらない気がするな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>食器って調査項目なん？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>食器とはかりがあるっていってたから、GMが極限まで無駄を省いた描写をしているなら調査項目だ。そうでないなら……謎だ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>実際この食器棚不自然だし動かしたらなんかあるかもね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>おお、動かすってのはいい案かもな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>動かすならSTRで振ってくださいね</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>はかりとられたし、鏡でもみよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>鏡に向かってお前は誰だって話しかけてよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>後でね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>やったあ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では鏡を見ると、鏡からにゅっと手が出てきます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ひえぇ……</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>握手します。トモダチ　コワクナーイヨ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>引っ張られています。このままだと……お二人はどうしますか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>鏡を割ります</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>強硬手段やな！？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>神はなんか死に直結しそうな行動ばかりするなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>それが早くない？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ブレイクは普通、最終手段じゃない？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ああ、腕に攻撃のほうがいいか。格闘高いし。腕のひじのあたりを蹴ります。うまくいけば関節を破壊できる</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では格闘をどうぞ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>1d10<=9 (格闘 Cthulhu : (1D10<=9) → 3 → 成功</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「ゴッドキック！！」</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>技名がすごいかっこわるい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>ではその蹴りはなぞの手にヒットし、その手は鏡の中に返って行きました</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ナイスデース！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>かわいい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>なんとSANチェックはないです</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>よくある出来事だよね、そういえば先日もそんなことがあったし</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>むしろ普段は我々が引き込む側だしね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>こわいなあ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>「助かったぜ、えーと……ハジメマシテさん」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「神なら当然の事さ。さあ皆で私を称えよ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>完全に一人だけ頭おかしいんだよなあ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>化け物見たら可笑しくもなるよ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>見る前から変わってないじゃん</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>まあホラー映画にもムードメーカーはいるし</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>みなさんが謎の腕を撃退してしばらくすると……鏡に何か文字が浮かび上がっています</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">鏡に浮かんだ文字</p>
+                        冷えることにより、見える真実がある
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>(意味深</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>ひえー</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>一体何のことなんでしょうかね？では、ばんばん調べていきましょう。ちなみにこの部屋は少し蒸し暑いです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>だったら服を脱ぐだろうな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>君は今裸なのかい？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>もちろん</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>防御力が落ちますなぁ！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では受けるダメージが+1されます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>でも熱くなりにくくなりますよね？というか服の防御力高いな</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>レディの前で徐に脱ぎだす。紳士だな！</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>フェイズ5</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>クリスからいきますか。</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>中央扉はリスキィだからなぁ……ロープを調査。なにで調べるんだっけ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>見る限り、天井からぶら下がっている麻のロープです。引くか、引かないかのアクションが出来ます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>じゃあ引く（ぐいっ）</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>(躊躇ないな！？)ではロープを引くと……あっ、皆さんこの時点で目星をお願いします</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@クリス</div>
+                <div class='col-sm-10 serif'>1d10<=8 (目星) Cthulhu : (1D10<=8) → 10 → 失敗</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>1d10<=7 Cthulhu : (1D10<=7) → 8 → 失敗</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>1d10<=9 (目星) Cthulhu : (1D10<=9) → 4 → 成功</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>目星全員8以上もあるんか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>あぶないあぶない</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>必須技能だしね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では、猪狩だけ「中央に続くドアと思われるドアの隙間から、光が漏れているのに気づきます」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>「あの扉から光が漏れているな」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>そしてその光は、しばらくすると消えてしまいました。時間にすると３０秒はかかっていないと思われます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>何らかの仕掛けのスイッチと考えるのが普通かぁ……？おわり</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>あ、ひっぱったから光ったのか</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>電球のスイッチかな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>なるほどね、じゃあ僕が引っ張ってるから黒土くんいってくれるかな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>隣の部屋かな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ペかっと光った中央の扉に行くんだよぉ！！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>ドアCってさ、またデンジャーって書いてるの？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>はい、かいてます</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>んなもん開けるかあ！！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>わたしは→のドアいこう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では2の部屋。みんな行きます？それとも黒土は一人で中央に行きます？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>行くよ。中央にはいかないよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ターン回ってきたら2の部屋に移動しようかな</div>
+            </div>
+
+
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>この2の部屋に入ると先ほどの部屋に比べたら涼しいです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>エアコンきいてる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>もう調べていいのかい？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>はい、ばんばんいってもいいですよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>箱を開けるぞい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>では箱の中にはプラスチックで作られた瓶が入っていました(https://www.kokugo.co.jp/shop/goods/goods.asp?goods=101-5840602)こんなの</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>サプリメント入ってそう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>問題は中身だ、中身を調べるぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>中身は何もないようです。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>「しけてるなあ」がっかりします</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>容量も1Lでいいのけ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>容量に関してはよく分かりません。普段目にする５００ｍｌのペットボトルより背は低いですが円の大きさは倍ぐらいありそうです。実は容量が正確に分かる手段があります</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@真黒土</div>
+                <div class='col-sm-10 serif'>砂金を詰めてはかりに乗せればいいさ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>んまあね、部屋4にいってからやろう</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>aneko@GM</div>
+                <div class='col-sm-10 serif'>それで何が分かります？＜砂金をつめて</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@猪狩上篭</div>
+                <div class='col-sm-10 serif'>深淵でも見えるんじゃない</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

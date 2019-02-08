@@ -1,0 +1,38 @@
+{# base layout 2 - fix top and left sidebar #}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% include 'meta.twig' %}
+    <title>{% block title %}{{ page_title }} | {{ site_title }}{% endblock %}</title>
+    <link href="{{ base_url }}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/font-face.css" rel="stylesheet" >
+    <link href="{{ base_url }}/assets/css/layout.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/site.css" rel="stylesheet">
+    {% block stylesheet %}{% endblock %}
+</head>
+<body>
+{% include 'navbar-top.twig' %}
+<div class="container-fluid" style="margin-top:6px;">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            {% block left %}{% endblock %}
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            {% block body %}{% endblock %}
+            <div class="row" style="margin-top: 1.5em;">
+                <div class="col-sm-12">
+                    <p>Copyright (C) 2016-{{ "now"|date("Y") }} <a href="https://twitter.com/nakigao">@nakigao</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ base_url }}/assets/js/jquery.min.js"></script>
+<script src="{{ base_url }}/assets/js/jquery.jsonp.min.js"></script>
+<script src="{{ base_url }}/assets/js/bootstrap.min.js"></script>
+<script src="{{ base_url }}/assets/js/site.js"></script>
+{% block javascripts %}{% endblock %}
+{% include 'user-local-access-analyze.twig' %}
+</body>
+</html>

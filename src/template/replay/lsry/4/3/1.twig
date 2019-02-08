@@ -1,0 +1,178 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/lostroyal-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-aneko.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>※未編集</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そういや、キャラってメイクするん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>新キャラではないですよ、足跡を変えるだけです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃあキャラ思い出さねば……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>どんなキャラだったか……騎士王に俺はなる!だったか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>タケヤリで突く、ただそれだけだ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>結局前回の姫様どうなったんだっけ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>どうもなってないよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>そうだっけか?俺に王位を譲って隠居した気がしてた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>名前負けペンギン</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>俺はまだ王でいいんですね?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>めっちゃ偏った</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>P.158みてね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>9d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>LostRoyal : (9D6) → 32[2,2,2,3,3,4,4,6,6] → 32</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>前回の勲章点数ってどうなってたっけ。そろそろ成長関係できる気がするんだけども</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>寛容さがまるでなくなってしまった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>処理してあるなら、ログ見た方が早そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>勲章は……覚えてないですね……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>最後に言った記憶はあります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>わしの合計が2点になっている</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>初回はペンギンで2回めはベル</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>MVP</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>以外で増えるっけ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>累計3かな、だとすれば……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>EPクリア毎とMVPだけですね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>じゃあ私以外は3ですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>あと、メモにも追加したのですが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>追加ルール(ルルブⅡから)・各騎士は行為判定時を除く、任意のタイミングで、宣誓ハンドアウトの宣誓値分を 任意の名誉点に追加することができる。・宣誓値は、対立するプレイヤーに1を足した値になる。(前回までは対立するプレイヤー分だった)・墓標ルール(前回から)。墓標の数だけ「酒と歌」を追加する。現在は3。 前回は2でした。1人……誰がいなくなったんでしょうね?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>追加ルールがあります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>酒歌の初期値が墓の数だけあがるのか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>正義って初期値になるんだっけ引き継ぐんだっけ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>3点ってことは新しい能力とってもいいの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>いいですよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>正義は……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>これって汎用からとれるんだっけ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>調べよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>愛用の武具能力アップ、酒歌振り直し、足跡振り直し、宣誓削除</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>わたしのキャラメイクは完璧です!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>取れる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>ありがとう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>正義初期化するかどうかはルルブ1ではわからないから</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ルルブ2かエラッタ調べてください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>おねがいします</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>なんでもしますから……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>だね。正義は毎回初期化でいいんじゃないかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>ならば汎用能力の九重の指南を取ります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>初期化にしますね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>じゃ1にしとこ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>なんかこのキャンペーン</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ボレミアがヒロインしてる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>本当は前回で退場する予定だったんだけどね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>1d6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>LostRoyal : (1D6) → 6</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>酒げっとだぜ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>やるやない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>[成長報告]武具値(武力+1) 2 -> 3特殊能力取得(勲章点-3) 宴の達人</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>成長報告はこんなもんかな。あとは……足跡初期化かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>伝説の幹事</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>宴の達人強いですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>自分のが4点に増えるのは嬉しいよね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>自分が行った場合に4点って</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>他人が行った場合っていうのが意味分かんないんだけど</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>どういう状況なんだろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>感じよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>もしかして娯楽シーンのパートナーに選ばれたら酒歌ふたりとも貰えるんです????</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>チームBUFF効果かな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>あそういうこと</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>ありがたい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>7d6 足跡</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>LostRoyal : (7D6) → 23[1,2,2,3,4,5,6] → 23</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>1d6 酒歌</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>LostRoyal : (1D6) → 5</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お、いいね、バランスもいいぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ウイ、初期化完了</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>プロテインおいしい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>終わったかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>一応ルール見返してください</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>こっちも怪しいので、その時そのときでもいいですがね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>とりあえず始めますか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んだんだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>フィーリングで合わせます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おーっ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>よっしゃあ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>かかってこい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>滅多打ちにしてやる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>では</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>EP.2「守るべきもの、失うもの」はじまり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>OP</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>タイトルから漂うバットエンド臭</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>と宣誓ハンドアウト</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>Ep.2 ……ボレミアが魔人に攫われたとの報告を受けた矢先、街に魔軍が襲撃し、子供が攫われてしまう。サラ姫一行は葛藤の末、子供の救出を先決した。子供は無事救出できた一行であるが、ボレミアのことが気になってしょうがないサラ姫。まだ約束の刻は来てないといえ、今から向かってもどう考えても間に合わない。だからといって見捨てるわけにはいかない。しかし、明らかに罠と分かっているところに疲弊した軍を率いていくべきなのだろうか……?それとも少しでも群を強化していくべきか……?サラ姫にまた重い決断がゆだねられている</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>確かに不穏だなぁ^q^;</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なるほど……確かに悩ましい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>今回の宣誓はハンドアウトは</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>A「約束の刻には間に合わないが、すぐにボレミアの救出に向かう」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>B「墜陽城に行く前に戦力強化をしたい。かつての仲間を探そう」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>ほうほう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@サラ王女</div><div class='col-sm-10 serif'>「いったいどうしたらいいの……」おろおろ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>「約束の刻」ってなんでしたっけ?(確認</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>メモ欄のEp1で確認願います</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あいよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>物理的にはもう間に合いません</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ボレミアがなんかなっちゃうらしい時刻ってことかな。で、それは間に合わないと……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>AかBか宣言してくださいね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>間に合わないなら行く必要すらない気もする</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>確かにな、けどほら、仮に亡骸であったとしても姫の気持ちを考えると……</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ドンチャン騒ぎしてたら間に合わなくなってしまった。。。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>そんな考えでいいのかい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>まあ思うところに誓ってください</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>というわけで……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>王だからさ、時には見捨てるよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>王はサラなので……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>今はね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ベル</div><div class='col-sm-10 serif'>「姫!姫の御心のままにしたいことをすればいいんです!そのために我らをお遣いください!」とA支持</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>サラ姫大好きなのでBですよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>ぶれない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>「姫様悩んでいる時間こそが勿体ない、最速で駆け抜けましょう!」Aで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>じゃあAの宣誓値が2、Bが3になります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>めちゃつよい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>幸運はどっちにいくんだっけ……そもそも幸運ってなんか意味あるんだっけ……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@サラ王女</div><div class='col-sm-10 serif'>「ボレミア……まっててね」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>毎回私が孤立している気がする</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@サラ王女</div><div class='col-sm-10 serif'>円卓判定の時荷役立ちます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>幸運は円卓判定のときに同値だったら持ってる方が勝つ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なるへそ、ありがとう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@サラ王女</div><div class='col-sm-10 serif'>P.169</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>3人PLだから、1人どうしても孤立しちゃうよな</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>aneko@サラ王女</div><div class='col-sm-10 serif'>3.0でもいいのよ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>仕方ないね、男女で対立してるのリアルっぽいよね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あれ?3v0ってありなんかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>難易度が上がりそう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>まあ影響点的には私トップだったきがするから!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>いきなりエンディング行きそうよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>影響点は消えました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ヴァルキリウォークは宣誓点の高い方へ、か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>絆は残ってます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>消える……だと……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>というか何も書いてない……様な気がする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>とりあえずOP終わり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>さて、魔城に向けて進軍するたびが始まります</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>これはもう教導シーンスルーですわ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>影響点は姫様の考え方とかに影響するはず(RP的に)。記憶点は毎回初期化</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>じゃないかな、たぶん</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>そっすね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このゲームの最終的な勝利条件がいまいちだけど、育てることに主眼があるはず……だから影響点は大事なような気もするが、なんかフレーバーで落ち着いてるような気もする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>確かにそうですね……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>忘れるのもおかしいですもんね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GM次第ってやつ!頑張れ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>多分最後のEPで影響点+500とかもらえるんでしょ?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>素敵!</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>evi@クヮイン教導aneko@GM これにて理想像がペンギンからクヮインになったnaki@PL いいぞいいぞ!evi@クヮイン ピースアンドラブevi@クヮイン ラブアンドピース</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>こんな会話してた</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@クヮイン</div><div class='col-sm-10 serif'>俺めっちゃうれしそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>わろちゃ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@キング</div><div class='col-sm-10 serif'>キングは悲しそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>影響点は……残します</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいね+1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>aneko@GM</div><div class='col-sm-10 serif'>影響点=理想像みたいな感じですかね</div></div>
+        </section>
+    </div>
+{% endblock %}

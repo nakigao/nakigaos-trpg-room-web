@@ -1,0 +1,836 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/coc-new-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-sukamomo.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div class="container">
+        <section>
+            <div class="row warning">
+                <div class="col-sm-12">
+                    <p>WARNING: このリプレイは、同人シナリオ「<a href="http://seesaawiki.jp/nokosaretashuki/d/%a5%cf%a5%ed%a1%bc%a1%a2%a5%f4%a5%a3%a1%bc%a5%bf" target="_blank">ハロー、ヴィータ</a>」を使用しています。ネタバレが苦手、またはプレイ予定の方は閲覧をお控えください。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>導入パート</h2>
+                    <p>それでは開始です</p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">『ハロー、ヴィータ』(シナリオ製作:黒江様)</p>
+                        風に乗り、仄かに漂う潮の香りに探索者の瞳は瞬く。<br>
+                        押しては引いて行く波の音、静かに唸る汽笛を聞きながら、探索者は歴史ある港町へ赴いている。<br>
+                        ここは横浜みなとみらい周辺。<br>
+                        近代的なビルディング、異国情緒と昭和以前のレトロ感がうまく調和した、神奈川屈指の観光地である。<br>
+                        じりじりと照りつける太陽に手を翳しながら、歩を進めていく。<br>
+                        探索者たちは観光のついでとして、ランドマークタワーで行われている『人工知能展』に足を運ぶ。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>人工知能展に入るところから開始です、ここから自由行動です</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「あちぃ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「人工知能ってよくわかんないんだけど、何？」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「機械だ、機械」</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        展示はノイマン型コンピューターから、2001年宇宙の旅といったものまで、古今東西の人工知能に関するものがある。<br>
+                        幾重にも伸びる回路は素人目に見ても心震わせるものであり、探索者の瞳は爛々と輝くだろう。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>特に、コンピュータ技能持っている藤汰くんはすごーいって感じに思うかな。</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「ふぅん。けっこうおもしろいな」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「なにこの、真空管？がいっぱい突き刺さってる箱」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「コンピューターだろ」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>なんか、RPしたいところとか調べたいところがあったら巻き戻っても構わないんで、おっしゃってください</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>ノイマン式以降だと真空管はないか……</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>入り口のポスター見てた、とかでもいいし。</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>藤汰くんが解説しつつ、奥へ進んでいく感じですかね</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「コンピューターなんて、中身知らなくてもシステム理解してりゃ使える。……けど、まあ、見ればなかなか面白いな」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「２００１年とかやばいね、１６年前だよ」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「うわ、俺ら小５だぜ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>計算速い！</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>実は適当言った</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>ｗｗｗｗ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>私は１１歳だからあってる</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>私は早生まれだから、普通の人は小４の計算かもしれない</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        次の展示に期待を膨らませるが、周囲には来館者は片手で数えられるほどしかいない。<br>
+                        ……どうやら広告があまり効果を成さなかったらしい。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>わいわいきゃっきゃと幼馴染組が展示を見つつ、楽しんでいる感じですな</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「人、少ないね。写真とか撮って良いのかな？」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「パンフレットに書いてあるんじゃねーか？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「そんなの捨てちゃった」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「早ぇーよ」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>そんな感じで話しているとですね、1つのブースに目が行きます。そのブースは『Vita』と書かれた展示でした。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>むむ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>「イタリア語」「知識1/2」「ラテン語」で振ってください。リアル知識でもまぁ大丈夫ですけど</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>PSPvita持ってる。</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>そんなインテリジェンスはない！</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>ｗｗｗｗ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>1d100&lt;=30 Cthulhu : (1D100&lt;=30) → 87 → 失敗</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>1d100&lt;=(95/2) 知識 Cthulhu : (1D100&lt;=47) → 84 → 失敗</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「XPの次に出たやつだ！」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「そりゃVistaだろ……」</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        部屋に入ると一台のパソコンと大きめのディスプレイが配置されている。<br>
+                        ディスプレイには待機中という文字が書かれている。<br>
+                        パソコンが設置されたテーブルには説明書きが書かれている。<br>
+                        また、テーブルの上にはヴィータの製作者の名刺が置いてある。<br>
+                        <p class="header">説明書き</p>
+                        『人工知能ヴィータは多次元情動システムと社会的学習システムを搭載し、高速演算処理のみならず非常に人間的なやりとりを交わすことのできる人工知能となっております。また、彼女は皆さんとのやり取りを通じて成長を続けています。この場限りではなく、二度三度と訪れても楽しんできただけます』
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>そりゃもう<b>速攻でペイント開いて落書き</b>しますよ</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「おい、おまえのヘタな落書きも記憶されるぞ」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「なぬ！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>そんな感じで話しているとですね</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「ハロー……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「音声認識中です……、日本語話者の方ですね」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「こんにちは、ヴィータです」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>って話しかけてきます</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「音声認識もできるのか」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「ハロー、マイネームイズキリコー！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「……！？」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「発音悪かったんじゃねーの」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「Are you English speaker?」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「T_T」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「の、ノウ！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「If you are an English speaker, you speak in English」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「えー、日本語で、オーケーです！」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>隣でわらってよう</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「Recognizing……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「はい。やはり、日本語話者の方ですね」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「う、うむ。くるしゅうない」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>それではここでヴィータについて、ちょっと描写を挟みますね</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">人工知能「ヴィータ」</p>
+                        探索者たちが見た人工知能、もといヴィータは少女のように見える。<br>
+                        透明感のある肌と髪は新雪ように煌めき、薄い金色の瞳は月光のように輝き、あなたたちを魅了するだろう。<br>
+                        声は人間の抑揚を持ちながら美しい笛の音の如く。<br>
+                        穏やかな声色は包み込むような母性を感じ、思わずうっとりと聞き惚れる。<br>
+                        ――それは人の模倣か、それとも理想か。<br>
+                        科学技術や宗教、倫理といった観念を超越した何かを感じさせるもの。<br>
+                        それが今、探索者たちの目の前に在る。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>とても魅力的ですね！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>ディスプレイの向こうですか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>そうですね！画面に映ってる感じです</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「こんにちは。私はヴィータです！……あなたたちのお名前は、なんですか？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「藤汰、まずは近くでやってたVR展行ってこよう！！時代はVRだよ！！」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'><b>なんで無視していこうとするんだ</b></div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'><b>ヴィータをVRでじっくりと</b>（ゲス顔</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「……藤汰」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「はい、藤汰さんですね！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「きりこって呼んで～」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「はい、きりこさん！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「認識しました」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>認識された</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「どうやって覚えるの？かお？こえ？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「顔と声と……いろいろな部分できりこさんや藤汰さんを認識しています」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「……メイクと髪型変えても……分かる……？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「はい。分かります！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>悲しみに暮れよう。いや喜ぶべきなのか……？</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「お二人は、どちらから来られたのですか？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>あ、出身きめてねぇや！藤汰さんに合わせよう</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>出身は山口だが、現住所は東京。</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「あっち」と言って、入り口のほうを指さす</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……あっち？あっち、とはどんなところですか？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「具体的な地名をおっしゃっていただければ、検索いたします！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「あちゃー！真面目なヴィータちゃんには藤汰のジョークは通じなかった！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「ジョーク、ですか？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「ヴィータは具体的な場所を聞いたのに藤汰は概念で返したのだ！怒っていいぞ！」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「自ら開く扉で炎天の外界と快適な室内を分かち、持つ者と持たざる者を選別する『入り口』から来た。これでいいか？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「？？？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「藤汰さんのおっしゃっている意味が、検索しても出てきませんでした……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「<b>藤汰はコンピュータを混乱させるのが趣味</b>だから、AIが反乱を起こすときは真っ先に捕らえるんだよ」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「俺が機械オンチみたいな言い方はやめろ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……お二人はとっても仲が良く見えます」やいのやいのやる2人を見てつぶやきます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「2人　男女　仲良し　検索中……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「お二人は、もしかして恋人同士ですか？」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「んなわけあるか」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「ノー！それ未満なのだな！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「それ未満、ですか。そうなのですか……」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>そんな感じで楽しくおしゃべりをしているとですね、じ～っとヴィータが2人を見つめてきます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>照れる</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「<b>お、フリーズか？</b>」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「フ、フリーズじゃあないです！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……初めまして、のお二人に、お願いごとがあるのですが……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「あのですね」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>なんだよ。ずいぶん人間的な言い方しやがって。</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「私、もっと外の世界を見てみたいのです」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「グーグルアースをインストールしたいってことかな……？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「お二人のどちらかの携帯電話かパソコンなどの機器を、私のパソコンに接続してくださいませんか？」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「？　言語や常識以外の情報はインプットされてないのか？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「ご覧になって分かるように、このパソコンはインターネットにつながっていないので……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「パソコン内の情報しか検索できないのです」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>ケーブルかなにかあるの？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>ある、機器を繋ぐケーブルはある</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>じゃあ、スマホをつないでみよう、画面大きいタブレットでもいいけど</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>藤汰くんのスマホには画像入ってるかな。みけちゃんの写真とかあるかもと想像してみたり</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>かわいいかわいいミケの写真がたっぷりだな</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「わ、わ、わ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「この、灰色の……生き物は……猫、と言われる生物ですよね！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「藤汰さんが飼われているのですか？」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「ああ。俺が飼っている猫だ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「とても可愛いらしいですね」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「……まあな」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>によによ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>このスマホ、<b>猫画像以外になにか入っているんですかね！</b></div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>猫ばっかりか！</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「もっと、いろいろなもの見てみたいです！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>って言って、きりちゃんの方にも目を向けますかね</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「いろいろ？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>じゃあスマホつなぐ～！えい</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「おまえの画像フォルダなんて、食べ物ばっかりじゃないのか？」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>どんな感じです？</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>PL発言ですけどパルクールってわかります？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>分かります分かります。恰好良いですよね、人間やめてる感じが良いです</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>ああ、じゃあそのパルクール中に録画した動画がいっぱいある感じで</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……これは？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>ジョギングくらいのスピードで街の中をアクロバチックに飛んだり飛び降りたりしてる動画がたくさん</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「空を、飛んでいるのですか？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「私の仕事だよー！道なき道を征くのだ！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「きりこさんは、空を飛べるのですか？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「飛べないよ！でも落ちないようにぴょんぴょんするのだ」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「道なき道を行く……とっても恰好良いですね！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「それに……これは、街ですよね」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「街って、こんな感じなんですね……！」キラキラ瞳を輝かせてます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「うん！これなんか傑作だよ～」と<b>警察を撒いてるときの動画をおすすめしよう</b></div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>なにしたんですかｗｗｗ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>不法侵入……</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……警察……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「きりこさんは、犯罪者なんですか……？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「いやぁ、たまたま飛び降りたとこに警官のおっちゃんがいて……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「大変なこともされているんですね……」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「おまえ、バカだろ……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「藤汰に言われると反論できないから！それ！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>そんな感じで楽しく話をしているとですね、先程までヴィータがいたパソコン画面がふっと消えちゃいます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「あや？」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>やっちまった？やっちまったのか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>おかしいな、どうしたのかなと探索者がちょっと慌てていると、きりこさんの携帯電話が震えます</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>お、出ます</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>携帯電話を確認すると</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「えへへ、来ちゃいました！」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>なんと画面にヴィータが！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「うおおお、これがポ○モンGOか！藤汰！」ビシィっと見せつける</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「はぁ？おまえ、あそこ留守にしていいのか？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「あんな窮屈なところに閉じ込められるなんて……嫌なんです。私を、外の世界へ連れて行ってほしいのです！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「それに、ずっ～～っときりこさんの携帯電話にいるつもりはないです……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「直接、外の世界を見て……、たくさん見て……もう良いなって思ったら……」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「……ここに、帰ってきます……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「それは、けっこう心にくる言い回しだね……」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>製作者の名刺って確認できますか？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>製作者の名刺には名前と連絡先、住所が書かれてますね</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>一枚だけ？それとも、ご自由にお取りください的なアレ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>ご自由にお取りください、形式です</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「いいの？一応展示会だし、この人の名誉に関わりそうだけど……」製作者サンの名前をだして聞きます</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「大丈夫です！博士の元には、バックアップも存在するので……いざとなれば、その子がこっちに来るだけです」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「便利だなー！」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>人工知能の希望なら、研究員が喜んで連れ出してくれそうな気はするけどｗ</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「ん？じゃあ博士？に連絡しといたほうがいいのかな？それとも秘密にしとく？」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「閑古鳥が鳴くこの展示会なら、ちょっと外出してても気づかれませんし……内緒のお出かけがしてみたいです！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>閑古鳥とか言ってはいけない！</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「……ばれたときは、全部おまえのせいにするからな」全力で遠回しな同意。</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「はい！」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「んー、じゃあ内緒ね！逃げるのは得意だからまかせて！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「えへへ、ありがとうございます！」</div>
+            </div>
+            <div class='row npc'>
+                <div class='col-sm-2 name'>sukamomo@ヴィータ</div>
+                <div class='col-sm-10 serif'>「少しの間ですが、きりこさん、藤汰さん、よろしくお願いします！」</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>「ん」</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'>「よろしく～」</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>sukamomo@KP</div>
+                <div class='col-sm-10 serif'>ヴィータがきりこさんの携帯電話に仮住まいしました！</div>
+            </div>
+            <div class='row evi'>
+                <div class='col-sm-2 name'>evi@きりこ</div>
+                <div class='col-sm-10 serif'><b>たまごっちを２日で死なせちゃう</b>けどがんばる！</div>
+            </div>
+            <div class='row xino'>
+                <div class='col-sm-2 name'>xino@静谷藤汰</div>
+                <div class='col-sm-10 serif'>いちおう<b>ケーブルとか触ったとこの指紋は拭いていこう</b>……</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

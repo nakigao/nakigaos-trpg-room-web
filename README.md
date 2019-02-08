@@ -1,20 +1,32 @@
 
-nakigao's TRPG room
+NAKIGAO TRPG ARCHIVES
 ===
 
 SORRY, WEB RESOURCES ARE JAPANESE VERSION ONLY...
 
 This is resource for my personal web site.
 
-[nakigao's TRPG room](http://nakigao.webcrow.jp/)
+[NAKIGAO TRPG ARCHIVES](http://nakigao.webcrow.jp/)
 
 Main contents for web site is below.
 
 - TRPG REPLAYS
-    - A no Mahoujin Next Generation v4
-    - Garden Order TRPG
-    - Sword World 2.0
 - TRPG GM SUPPORT TOOLS
-    - For Dodontof API utilities
+
+## WEB SERVER SETUP
+
+1. Change directory to http root
+2. Get source code via Git
+3. Download [Composer](https://getcomposer.org/)
+4. `php composer.phar install`
+5. Access to `/index`
+
+## REFERENCES
+
+[PHP: Hypertext Preprocessor](http://php.net/)
+
+[Homepage \- Silex \- The PHP micro\-framework based on the Symfony Components](https://silex.sensiolabs.org/)
+
+[Bootstrap · The world's most popular mobile\-first and responsive front\-end framework\.](http://getbootstrap.com/)
 
 Thanks.

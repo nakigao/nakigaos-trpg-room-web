@@ -1,0 +1,494 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>自由行動その一</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あい、では、これからのシーンの進め方なんですけど。例のごとく自由行動を取ってもらおうかと思います。一人二回くらいかな。姫たちがグリーンゴールドの街に出発する数日の間、暇になるので城下を散歩したり、気になる謎を考えてみたりしてね、という試みです。一つ普段と違うことがあって、『サブイベント』という形で、本筋に必須ではない要素を引っ張りだしてあります。やることないなーって人がいたら選択してみてください</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>逆にやることある人いるのかしら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そだね、やることある人から順番にいこうかな。なければランダムピックします</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>とりあえず自分は病人やけが人を探すだろうな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ふむふむ、わかった。一般的な～っていうメモがあるから、場所も指定してくれると助かる。該当箇所がなければ、適当に描写してくれてOK</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ病院的な施設を探すだろうな。異世界にも医者はいるのだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>抜歯は床屋さんがやってたみたいだよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>魔術があると医療が発達しないのがファンタジーのお約束。そこで現代医療知識による内政チートですよ</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>氷華の場合</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んじゃあ、病院……診療所みたいなところがあるね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>あるんだ。医療レベルはどんなものかな?やっぱり治癒魔法的な?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>中世の診療所ってのは、教会が慈善活動でやってる治らない病気の収容施設みたいな感じのところです。この世界でも変わらず</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>それは腕が鳴りますね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>Pathfinder準拠なら魔術的なサービスを受けるのはものすごい金がかかるからな……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、そうだね高位の治癒魔法はポンポン打てないんだったわ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@重い病気の人</div><div class='col-sm-10 serif'>「げっほ、ごっほ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じゃあ患者達の様子を見て憤りますね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「なんだこの環境は!医療を舐めているのか!!責任者を出しなさい!!!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>不衛生な環境に患者たちは押し込められ、治るものも治らない、そんな気配がします</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>とりあえず院長先生に殴り込みじゃああああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>初戦闘かな?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「なんだい、お手伝いかい! ちょっと、こっちきとくれ、ベッド移動に人手がたりないんだよ!」と、腕っぷしの太いシスターが出てきます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「そんな汚いベッドに患者を乗せるつもりか!貴様!!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「贅沢は敵さね。ここは、貴族様の来るところじゃないんだよ。手伝う気がないなら、帰った帰った」とシッシとされます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>まあ、賞味ベッドがあるかどうかも微妙だけどな。床でござ敷いてうーうーいってる患者がたくさんいる感じ。野戦病棟みたいなイメージかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「贅沢だと!こんな環境では治るものも治らないだろう、どけ!!私が治療する」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>なんか聞いてて怖くなってきたけど別に疫病が流行ってるとかじゃないですよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ペストくらいはあるんじゃないかな。すぐに罹患するとかそういう話にはしないけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>とりあえず清潔な布で汚れを落としてアルコールで除菌するぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>アルコールの入手判定かな～。購入判定ください。なんか代わりのものが見つかるかも。補正は-20%くらいでよろ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>手持ちの医療きっとじゃダメ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>消費するなら、医療キット1個消費で、目の前の患者が一人助けられる。消費しますか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>患者は重症かな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そだね、重症。もう死んじゃいそうなくらい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ならば使わざるを得ないな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えらい、それでこそドクターだ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@重い病気の人</div><div class='col-sm-10 serif'>「おお……、ありがとう、ありがとう……」と何度も感謝を述べています</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「あんた……。一体、何者だい」と目を丸くしてみています</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「おい!そこのシスターとりあえずここの患者のカルテを全部みせろ!!私がいる以上全員救うぞ」とりあえず患者を一通りみてトリアージが必要だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>トリアージはいいけど、貧困層の患者さんがたーくさんいるから、一日仕事になっちゃうかもよ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「紙なんて高級品ありゃしないよ! 患者の顔見て、判断しな!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「紙が無ければ木の板でもなんでもいい、今度から記録は残せ!こっちは命がかかってるんだ」じゃあまあ一日かけてトリアージと治療をするでしょうね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「はん、あたしゃ字がかけないんだよ!」識字率の問題とかもね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>なるほどね落ち着いたら字を教えるか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>きみ定住するの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、ヒョウカと腕っぷしシスターは、一日かけて、診療所のみなさんに精一杯の医療を施しました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>幻蔵の場合</h3>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>ところで今って通貨とか何か持ってるんですかね?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>良いことを聞いてくれた。この世界で流通しているお金は一切持ってません</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>国王のコネがあるから大丈夫っしょ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>なんせお金のない世界から来たからね我々</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そういうこと、ほしいものがあれば購入判定に成功することである程度のものは手に入るでしょう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>やろうと思ったことが出来なくなった。やっぱり自己鍛錬でもするか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>モンスターでも退治しにいく?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>兵舎と兵器庫にでもいってみよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい、では兵舎。エルフの国の兵科は、やっぱり弓兵が多いみたいだね。エルヴンボウっていう、とてもつよーい弓を生産できるらしい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>エルフは種族武器として曲刀がありますな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、そうなんだシミターみたいなもん?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>だね。エルヴン・カーヴ・ブレード(エルフの曲刀)は基本的に長いシミターといった形状をしているが、刃はより薄く、とても珍しい武器である。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>曲げるて楽器にできそうな武器をイメージしている</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@マッチョ</div><div class='col-sm-10 serif'>「お、おい! キミ!」とマッチョなエルフに声をかけられます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「何か派手そうな刀剣とかは無いかな」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>宝物殿とかにならあるかも>派手な刀剣</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「む?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@マッチョ</div><div class='col-sm-10 serif'>「キミ! なんか武術とかやってるでしょ! わかる、わかるよ!」とペタペタと触ってきます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@マッチョ</div><div class='col-sm-10 serif'>ひとしきり触った後に、うん、と大きくうなずいて、キミの背中をバーンと叩きます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「(鎧を触って分かるのか?)まあやってはいるな」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@マッチョ</div><div class='col-sm-10 serif'>「よし、決まり! 我が部隊の前衛に決まり! さあ、中に入って、みんなに紹介するから!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「異世界でコネを作るのもおもしろいかもしれない。是非紹介してくれ!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>今更だが普通に異世界を受け入れてるな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>見た目がなんかもう異世界だしな、ゲンゾウは</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@マッチョ</div><div class='col-sm-10 serif'>「よーし、いいぞー! 今日からキミも兄弟だ!」と盛大に笑いながらマッチョひしめく兵舎に入っていきました……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんかやりたいことあった? 勝手に巻き込んだけど、オチ聞いてなかったわ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>グルメ旅をしたかったんだけど金が無いからあきらめた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ああ、グルメかぁ。兵隊料理でも食べる? 謎の木のみをすりつぶしてスパイシーにした、エルフカレーっぽい何かがあるよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>孤独のグルメをしよう。取りあえず終わりで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>グラントの場合、サブイベント「大賢者はお金がない」</h3>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ランダムなやつで</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 任意<br>
+                        [季節・天気・時間] 春、晴れ、昼<br>
+                        [場所] エルフの王国、市内、食料品店の前<br>
+                        　食料品店の前を通りかかると、どこかで見たことのある赤い尖がり帽子が目についた。あれは、大賢者アステルだ。<br>
+                        　なにやら真剣なまなざしで、食料品店をのぞいている。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「(真剣なまなざし)」</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「やあ賢者殿。買い出しですかな?」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「しっ! 話しかけるでない、今ちょうど、いいところなんじゃ」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　アステルの視線の先には、飴細工のような物を引き延ばしてペロペロキャンディにしている職人の姿があった。<br>
+                        　職人が飴をニューッと伸ばすと、アステルの背伸びもニューッと伸びる。職人が飴を細工し終えると、ほうっと恍惚とした表情をする。<br>
+                        <br>
+                        　しばらくそうやって繰り返してから、アステルは大きくため息をついて、食料品店から離れた。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「なんじゃ、グラントだったか。お主、あれどう思う?」と飴細工を指さします</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「ふむ……なんであれ職人技というのは見事なもの。あの菓子も美しゅうございますな」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「そうじゃろ、そうじゃろ～」と自分の事のように喜んでいる</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>そしてため息を一つ。「はあ、でもなあ……。わし、今月のお小遣いがもうないのじゃ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>パカッと、がま口財布を開くと、確かに中身は何もなかった</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「わし、あれ大好物なんじゃ。見るだけで我慢しようと思っておったんじゃが……。はあ、たべたいのう、たべたいのう……」とチラチラとキミと店舗の方を交互に見ています</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>お小遣いせいなのか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>孫の好感度アップイベントかな?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「はっはっは、賢者殿といえど菓子の誘惑には勝てませぬか。もし、店主。そちらを頂けぬだろうか」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@店主</div><div class='col-sm-10 serif'>「あいよ! 特殊な材料で作った一級品、1GPだよ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と言ったところで、購入判定。ちなみに1GPは、日本円にして一万円くらいです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>1万円の飴……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>お金なくても購入判定でいけたのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>他に使いどころがないっていう、購入判定</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ところでこの世界の素材ってわしら理解できるの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>基本的にはわかる、でいいんじゃないかな。何したいのかにもよる</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「店主殿、ひとつ、ちょっとした賭けをしませぬか」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@店主</div><div class='col-sm-10 serif'>「賭け? なんだい、うちの女房でもかけるかい!」がははと笑います</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「その"特殊な材料"を私が言い当てる事ができたらもう一つ頂きたい……無論、レシピは他言しないとも」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@店主</div><div class='col-sm-10 serif'>「へぇ、あんたにこれがわかるかねぇ。いいよ、当ててみな!」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@店主</div><div class='col-sm-10 serif'>知識判定かなぁ? 他に代替技能あるなら言ってみて</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>でまあ物質転移だから手に触れたものの素材や構造が一瞬で把握できるんですけど……判定いる?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>その技能の扱い、ちょっと困ってるんだよな。んー、よし、特性判定してもらおうかな。成功したらOK</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=100@20 → 16 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おいおい、あいつクリティカルだわ。んじゃあ、グラントの脳内には、深い森の中で巨大なハチが食人植物の花の蜜を集めているシーンが浮かんだよ。それがメインの材料みたいです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>やりますねえ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「(ふむ……やはり砂糖や糖蜜の類は普及しておらぬようだな……)」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>たしかに、砂糖の抽出っていつごろできたんだろ。インドとの交易のときか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>砂糖といってもさとうきびとてんさいがあるからなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>じゃあ、言い当てたていで進めちゃうよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@店主</div><div class='col-sm-10 serif'>「お、おいおい、よくわかったな。しかたねぇ、かけはオレの負けだ。ほらよ、もってきな!」と飴を二本もくれました</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「ありがとう、店主殿。さあ、賢者殿。私もおこぼれに預かりましょう」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「おお～、すごいのう、おぬし、すごいのう!」と興奮気味です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>これ地球なら事案ものだな</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>?</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「ありがとなのじゃあ!」とさっそくほおばりました。「おいしい、あまい、おいしい……」ととても満足げにしています</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>好感度上がっちゃいますねぇ……他にあれば、つけたしてくれていいよ</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>これでいいんじゃないかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>はい。では、その日の夜、言いつけを破って飴を食べちゃったことがバレたアステルは、シロノに小一時間説教されましたとさ(チャンチャン</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>なにやってんだこいつ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>自由行動その二</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ほい、では次のプロットくーださい。自由行動その2になります。バディっぽいの見てみたいんだけどなぁ、なんかいいイベント思い浮かばない?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>バディかあ、確かにあんまり絡んでないような</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ぶっちゃけ地味あんど地味で組み合わせは微妙だからな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんか事件か題材がいるよね、今回のシナリオはPC同士が絡むの難しい感はある。もうしわけにゃい</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>氷華の場合</h3>
+                </div>
+            </div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>病院の改革だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>では、ヒョウカの大改造ビフォーアフターから</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「なんだい、あんた、また手伝いにきてくれたのかい!」ずいぶんとフレンドリーな感じになりました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「ええ、私の目が黒いうちはこの病院も患者達も見捨てられないから」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>今回は手土産に石鹸や綺麗なシーツと紙を持ってこよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>石鹸は科学反応必要なはず。繊維から作る紙も化学反応が……。というか、羊皮紙なら手に入る。代替品を持って行ったってことで進めます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>りょーかい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「はは～、このご時世に立派なもんだよ」と感心しています</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>何れは自分たちで作れるように指導しよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>石鹸は苛性ソーダと脂肪を煮詰めて冷やすだけやで</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>まあ植物油とかで作る方法とかあった気がするね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>かせいそーだ? しぼう?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>石灰と動物の脂肪を煮詰めるのだ……! なおスーパー重労働の模様</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ああ、なるほど? それくらいならできるってことにするか。では、続けて……</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「そいで、今日は何しに来たんだい。また患者の大移動でもするのかい?」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「この建物は環境が悪すぎる、このままでは患者に悪影響を及ぼす、すぐに建物内の清掃を行うわ」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「掃除ねぇ。さっそく動けそうな患者見繕ってきてやるよ!」とドタドタと奥に走っていきました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「さて、それでは掃除(オペ)を始めますか……」手袋をはめながら建物にはいろう。ここを拠点にする勢いで改造しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>これまた一日がかりで、ピッカピカにできました。掃除しただけだと、あれだから何か手に入れたことにするわ。屋根裏部屋から、なんか箱を入手したみたいな。中身は考えとくから、次回以降に公開したい</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「それ(箱)、あんたにやるよ。どうせロクなもの、入ってやしないだろうけどね」と豪快に笑いました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「ありがとう、大事に使わせてもらうわ」少し笑うけどマスク越しだから気が付かないかも</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>笑える、だと……!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>基本的に笑わないけど、敵を倒すときと、患者を救った時は笑いますね</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シスター</div><div class='col-sm-10 serif'>「おや、あんたもそんな顔できるんだね。笑ってた方がべっぴんさんだよ!」と言ってフェードアウト</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>ゆがんだ性癖だなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>どんな世界にも物好きはいる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>グラントの場合</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ネクスト、グラント</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そういえば護衛任務?って馬車かなんか護衛するんですか?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そだね、二頭立ての馬車とカバードワゴンで1週間くらいの道のりだよ。あ、グラントは自転車持ってたし、それもついでに転移してきたってことでいいよ。なおデータ的な利点はないので、ネタとして使って欲しい</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>じゃあ馬車とワゴンを分析して安全性のチェックでもするか……? 面白みは……ない!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>わい、馬車の構造とか描写できないよぉ^q^</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>強度とか設定されてるならバフかけれないかなーって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あ、なるほど、いいかもね。バフか。永久BUFFってどうなんだろね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>車体を改造するとか</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>MADMAXみたいにするか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>確かに元には戻らないかもしれないな。車の構造知ってるか判定いただきましょう……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>スパイクつけよう</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>そのための機械修理……!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>馬車改造シーンとか見たことないわ、やってもいいかもね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>馬もついでに改造しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>生体改造は無理だろうなぁ、さすがに</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>車輪の状態とかサスペンションの具合を確認して整備不足なところを直す感じで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あー、掃除も運動とか振ってもらえばよかったな(反省。じゃあ、機械修理とか振って達成値出してみて</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 57 → 失敗</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>あらら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>あらあ、まあ失敗にはならないでしょう。では、グラントの見立ててでは、特におかしなところはなさそうだなと思いました。スパイクつける?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>つけない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>んでは、カーゴをはじめ馬車の整備は完璧でっす!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>幻蔵の場合</h3>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ランダムピックでいいかしらん……(コロコロ)……『対峙』</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>戦闘以外なら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>戦闘は……だいじぶだとおもう</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] 任意<br>
+                        [季節・天気・時間] 春、曇り空、昼<br>
+                        [場所] エルフの王国、場内、中庭<br>
+                        　試験交流都市『グリーンゴールド』への出発を数日後に控えたシロノ姫は、中庭で会いたくない人物と対峙していた。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ゲンゾウは、ここに居合わせてる感じでお願いします</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「なんか面白いことおきないかな～」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ベラス</div><div class='col-sm-10 serif'>「これはこれは、姫様に大賢者様、ご機嫌麗しく」</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　慇懃無礼に挨拶をするこの男の名前は『ベラス』。<br>
+                        　黒派、つまり戦争を推進する派閥の中心的な人物であり、このエルフの王国の軍務大臣だ。彼は、ここ数年のうちに、その卓越した政治手腕を武器に、王宮内で一、二を争うほどの発言権を獲得していた。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ま、この人、シロノさんたちの敵ってことね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>エルフっぽくねえなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よく気が付いた。実はハーフエルフ(ヒューマンの血が濃い)です</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ベラス</div><div class='col-sm-10 serif'>「おや、こちらの方は?」ベラスは、ゲンゾウに『今』気がついたかのように大げさに驚いてみせた。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「これはこれは、私日隠幻蔵といいます。最近付き人になったばかりで……以後お見知りおきを」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>といいながらビームで地面にサインしよう。手が滑ったらべラスのところにビームが飛ぶかもしれない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ここで暗殺未遂は色々まずい。シロノの立場的な意味で。んじゃあ、そのビームを見て、ぎょっとします</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ベラス</div><div class='col-sm-10 serif'>「もしや、これは、大賢者殿? この方は、あの研究の?」とアステルに聞きます</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>アステルは静かにうなずきました</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「(あの研究……?)」取りあえず肩膝ついておこう</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        「はは、はははは! これはこれは、まだあの研究を続けていたのですか! いや、失敬、あまりにも無駄な努力を。よもや、千年に一人の大魔導士と謳われたシロノ姫の父君、あの方でもなしえなかった禁忌の魔法を? 一切の魔法が使えない弟子である『大賢者様』が?」<br>
+                        　声を押し殺して笑う。<br>
+                        「なるほど。おお、なるほど、その成果が、この方ですか」<br>
+                        　ベラスはまるで珍獣でも見るかのようにキミ達を見ていたが、すぐに興味をなくしたようだった。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「(ここで感情的になると、相手の思う壺だな。とりあえず黙っておこう)」とりあえず姿が無くなるまで肩膝ついたポーズを維持しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>えらい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>えらいな、私ならバラしてたな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>シロノ達の立場と言うのもあるからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>それを理解してくれるのはありがーたい</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        「べラス殿!」<br>
+                        　今まで耐えていたシロノが、急に大きな声をあげる。<br>
+                        「わたくしは、もう今までの、何もできない人形ではありません。それに、この方を笑うことは、許しません!」<br>
+                        　べラスはその鋭い目を細めてから、口元をわずかにあげた。<br>
+                        「これはこれは、そうですか、失礼いたしました」こほんと咳払い。<br>
+                        　それでは、と続けて、べラスはシロノとアステルの横を通り過ぎ、数歩進んだところでピタリと止まった。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「(白派と黒派だっけか……嫌だねえ、派閥ってモンは)」</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@ベラス</div><div class='col-sm-10 serif'>「おっと、私としたことが、忘れておりました。姫様――」べラスは、振り向かずにシロノの背中に問う。「昨晩の『白い獣』のお味は、お気に召しましたかな?」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>美味しく食べてたよね</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        　とたんに血の気の引いたような顔になったシロノは、その場に膝をついた。そして、口元に手を当てて、たまらずえずいてしまう。アステルはそんなシロノの背中をさすってやることしかできなかった。<br>
+                        　べラスは勝ち誇ったかのように軍靴の音を響かせて、中庭を後にしていった。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>(シーンエンド)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ごめん、読むだけになっちゃったけど、このシーンやりたかったんだ。追加にRPなんかあるかい?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>まあひとつぐらい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「正直あんた達のどちらが正しいかはまだ分からない。だが安心して下さい。少なくても私は貴方の為に命を賭す覚悟はありますよ。そういう契約ですからね。せいぜいこき使ってください」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>武士道かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>武士道は熱いなぁ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>あくまでも契約として従うみたいな感じ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シロノ</div><div class='col-sm-10 serif'>「ゲ、ゲンゾウ様。ありがとう、ありがとうございます……！」と苦しそうにしながら言いました</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン5</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>なんやかんや過ごした後、明日はいよいよ出発の日。といった場面です</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] マスターシーン<br>
+                        [季節・天気・時間] 春、曇りのち小雨、夜<br>
+                        [場所] エルフの王国、場内、展望バルコニー<br>
+                        <br>
+                        　場内の上階にある展望バルコニー、夜風に金色の髪をなびかせながら、シロノ姫は眼下に広がる幻想都市『アイアダーラ』の街並みを眺めていた。<br>
+                        <br>
+                        「どうしたのじゃ、シロノ。湯冷めしてしまうぞ」<br>
+                        　部屋の方からアステルが顔を出す。タオルのようなもので髪の毛についた水滴をクシャクシャと乾かしていた。<br>
+                        「アステル、見て、この国。これからわたくしたちが守り抜こうとしているものよ」<br>
+                        <br>
+                        　アステルはバルコニーの手すりのところまでやってきて、シロノと同じように眼下を眺める。しばらくしてから、独り言のようにつぶやいた。<br>
+                        「……不安なのかの？」<br>
+                        　シロノは何も応えなかった。冷たい風が彼女のほほをなでる。<br>
+                        「安心するのじゃ、シロノにはわしがついておるぞ」<br>
+                        　ぐいっと胸をはるアステル。<br>
+                        「それに、あやつらは、師匠……シロノの父上が持っていた古の書物にあった『聖石持ち（クリスタルオウナー）』なのじゃろ？　だったら安心すれば良い、あやつらは、硬い田舎パン一つでも力を貸してくれるような『良い』やつらじゃぞ」<br>
+                        　たぶん、と最後の方は声が小さくなってしまっていたが、アステルはキミ達の顔を思い出して微笑んでいた。<br>
+                        「そうね、きっと……」<br>
+                        　シロノ姫は、自分に言い聞かせるように星空の見えない夜空を見上げた。
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン6</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>その直後の場面です</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] マスターシーン<br>
+                        [季節・天気・時間] 春、曇りのち小雨、夜<br>
+                        [場所] エルフの王国、場内、展望バルコニー<br>
+                        <br>
+                        「いい夜だな」 <br>
+                        　不意に聞こえた声に、二人は急いで振り向く。そこには、黒い頭巾で顔を隠した数人の盗賊が立っていた。手にはロウソクの光を反射して鈍く光る大型のマチェット。 <br>
+                        <br>
+                        「なっ、警備はどうしたというのじゃ！？」 <br>
+                        「落ち着いてアステル。助けを呼べば――」 <br>
+                        「助けはこねぇよ」 <br>
+                        　シロノの声を遮って中心にいた男は言い放つ。頭巾の上からでも、にやついているのがわかった。 <br>
+                        <br>
+                        「――まさか、サイレンスの結界か！」 <br>
+                        「さすがは大賢者様。あんたらの声は、どう頑張っても周りには聞こえないようになってるはずだぜ」 <br>
+                        「このような広範囲な術式、一体誰が用意したというんじゃ！　しかも城内の者に悟られずに準備できるはずが……！」 <br>
+                        「詳しくは知らねぇよ。だがな、この城内には、あんたたちに味方してくれる物好きな奴はそう多くはいねぇと思うぜ」 <br>
+                        　それを聞いたアステルは、ファイアボールを封印した指輪を構え、一歩前に出た。 <br>
+                        「おっと、そんなおもちゃみたいなもんはしまった方がいいぜ、大賢者様。オレたちはノーとは言えない交渉に来ただけさ」 <br>
+                        <br>
+                        　ポツリポツリと降って来た雨粒が、シロノとアステルの頬に当たった。 <br>
+                        「選びな、明日『グリーンゴールド』へ出発しないか、ここでオレたちに殺されるか」
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ごめん、もうちょい付き合って</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>おk</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン7</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>そのまた直後の場面です</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        [シーンPC] マスターシーン<br>
+                        [季節・天気・時間] 春、曇りのち小雨、夜<br>
+                        [場所] エルフの王国、場内、展望バルコニー<br>
+                        <br>
+                        「わたくしは……」<br>
+                        　シロノは声を絞り出す。あまりの恐怖で足が震えているのは誰の目にも明らかだった。<br>
+                        　だが――<br>
+                        <br>
+                        「わたくしは、エルフ王国第一王女シロノ！　いかに高い壁が目の前に立ちふさがろうとも！　自身の立てた誓い、必ず成し遂げてみせますッ！」<br>
+                        <br>
+                        　誰の助けも来ない絶望の淵であっても、その目に宿るシロノの意思は、恐怖にすくんではいなかった。<br>
+                        「そうかい。ご立派な最期だった、と伝えとくぜ……殺れッ！」<br>
+                        　合図を待っていた賊が、一斉に襲いかかる――<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>と言った感じで、姫たちが大ピンチだー、大変だー!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>嫌な事件だったね……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>終わってしまうの^q^;</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>皆は何処にいるの?</div></div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">プレイヤーアクション</p>
+                        　登場判定ダイスを振ってもらう。全員ソロ扱い。達成値が低い順に、優先的にどこに登場するか選択することができる。<br>
+                        　かっちょいいセリフと一緒に助けに入る、みたいなシーンをやりたいがための前置きだったのだ。<br>
+                        　配置1: シロノの目の前<br>
+                        　配置2: アステルの目の前<br>
+                        　配置3: 賊の背後
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>登場判定ってなんだっけ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>魅力かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>魅力x5だね</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>GardenOrder : D100<=60@12 → 14 → 成功</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>つよい……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>GardenOrder : D100<=50@10 → 1 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>わろた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>かった</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>それもう隣りにいたでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>いたよ。むしろ分身の術で1から3パターンを網羅しよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>GardenOrder : (1D100<=70) → 92 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ヤベーイ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>ヒョウカだけ、バルコニーに着地失敗して落下する?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>ヒーローは遅れてやってくるから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>遅刻した人のいいわけだからそれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>決める優先順位は、ゲンゾウ、グラント、ヒョウカの順番ね。シロノとアステルの前に出る場合は、エリアEに。賊の背後からは、エリアHから出ることができます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「か弱い女性二人を多勢で泣かすとは許せねえな」と言いながら攻撃を刀ではじきながら登場しよう。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>お、良いね、そんな感じそんな感じ</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@シロノ</div><div class='col-sm-10 serif'>「ゲンゾウ様!?」と突然の登場に驚きます</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>「安心しな姫様。こんな賊なんて俺らに掛かれば大して……あれ他の二人は?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>次は、グラントかな。どこに出る?</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>Hで。かっこいいシーン……若頭くんの足元に矢を撃ち込んで登場しようか。なんかこいつだけ前に進めてないし</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「くっ! どういうことだ、話が違う!」と矢を見て毒づきます</div></div>
+            <div class='row evi'><div class='col-sm-2 name'>evi@グラント</div><div class='col-sm-10 serif'>「奇襲というにはお粗末なことだ。背後は頂いたよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>よし、ラストバシッと決めてくれ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>じゃあ突如空気が冷え込みます、若頭たちは背筋に寒気を覚えるでしょう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@幻蔵</div><div class='col-sm-10 serif'>こっちも背筋凍ろう</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@若頭</div><div class='col-sm-10 serif'>「な、なんだお!?」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「貴様ら人に刃物を向けるとは何事だ、刃物の扱いも知らないガキどもが、貴様らのような社会のガンは私が切除してやろう」ナイフを構え、冷気を纏いながら現れました</div></div>
+            <div class='row npc'><div class='col-sm-2 name'>naki@アステル</div><div class='col-sm-10 serif'>「ヒョウカ! 助けにきてくれたんじゃな!」と涙目で言います</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@氷華</div><div class='col-sm-10 serif'>「そうね、命を救うのが私の仕事だから。――これより、クズの切除手術を行う!!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>naki@GM</div><div class='col-sm-10 serif'>おっけい! ではクライマックスいきましょー!</div></div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,334 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/akgn-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-evi.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div class="container">
+        <section>
+            <div class="row warning">
+                <div class="col-sm-12">
+                    <p>WARNING: このリプレイは、公式シナリオ「ブラッドシアター」を使用しています。ネタバレが苦手、またはプレイ予定の方は閲覧をお控えください。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>トレーラー</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        都内某所、資金難で差し押さえられた撮影スタジオがあった。<br>
+                        ひとりの映画監督を目指した男の夢の残骸だ。<br>
+                        この場所で、映画が撮影されていた。<br>
+                        男の夢、タナトスによって紡がれるエロス、死と生の映像。<br>
+                        それは血にまみれた殺人ビデオ。<br>
+                        映画監督は、夢を失ったアーティスト、快楽に憑かれた殺人鬼、そして他者の死から力を得るエース。<br>
+                        これらが同一化された結果、恐るべき血の宴が始まっていた。<br>
+                        果たしてAキラーと担当Pは、この死に取り憑かれたエースを排除できるだろうか。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>以上が今回のシナリオ概要です</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>サンプルだったのね</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ふんむふんむ……</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ちなみにシナリオの舞台は都内某所のオフィスビルらしいです。なおいきなりオフィスビルの外から始まる模様</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>話が早い！？</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>全国ツアー目指すかー</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>オリコン１位目指すか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>オリコンって今時価値があるのか……？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>価値はないけどカネが入るし</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャラクターメイク</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ひとまず共有メモのはじめにをご覧ください。ざくっと世界観とキャラクターシートのURLかいてます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>どーれどれ……</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>とりあえず見ました。AKG48つくるぞつくるぞ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあと４０人作って下さい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>キャラメイクの時点で挫折しそう……48</div>
+            </div>
+
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>トレーラー読んだらお好きなハンドアウトをお選び下さい</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>３かな</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>すーぐ闇属性</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>もちろん他のでもいいよ、相方がニンジャだから選んだだけだし</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>戦場カメラマンになろう</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>特に異論はないんだけどね、すきなのやろう</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>nakiさんはどれしたい？</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>残り物でいいかな、電子レンジさんする</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>相方のAキラーも選べますけど、ハンドアウトのままでいいかな</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>いいよ</div>
+            </div>
+
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>(セリフサンプルを見て)キョウはお姉ちゃんですからっていうセリフ大丈夫なのかな（一抹の不安</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>京香は年長組なのです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>いいんでないかい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>これPに対して言う言葉でしょ？つまり……？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>とおもったら１３歳じゃん！</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>もう設定崩壊しそうなんだけどぉ！</div>
+            </div>
+
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>JOKER所属のPCたちは一応コードネームを持ってます。なので本名とべつにそれも考えて下さい、なくてもいいです</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>コードネームどうしようかなあ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>コードネームで呼び合うか……雰囲気でるじゃん。なんかハッカーっぽいコードネームないかなぁ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>コードネームはその他にでも書いとく？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>まあ空いてるとこにでも適当に。AKの方はパートナー名とプレイヤー名以外は埋まってます。PCのほうは↑の３行とライフパスが未決定です</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>ライフパスライフパス～、振っていいけ？</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>ちょっと他のことしてるので、anekoのライフパスの結果もだれか教えてあげて下さい</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>お任せあれぇ、ディー１００でよろちく</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>1d100+1d100+1d100+1d100 AceKillerGene : (1D100+1D100+1D100+1D100) → 65[65]+63[63]+52[52]+94[94] → 274</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">猫村勝男のライフパス</p>
+                        経歴　ストーキング　エースによく狙われている。その理由はGMと相談する　隠密+5<br>
+                        出自　軍事関係者　親は軍人だった。サバイバルのため軍事訓練を受けている　隠密+5<br>
+                        経験　医療技術者　医者として勤めていた。あるいは医療技術を学んでいた　※治療<br>
+                        邂逅　探究　エースあるいはエースキラー。その存在には謎が多い。パートナーと一緒なら踏み込んでいけるかもしれない<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>ありがとうございます</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>(適当にコロコロ……)</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>(無言でにコロコロ……)</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2 name"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        時は流れ……
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@口車之男</div>
+                <div class='col-sm-10 serif'>とりあえず完成</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@ケイ</div>
+                <div class='col-sm-10 serif'>同じく完成！</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@猫村勝男</div>
+                <div class='col-sm-10 serif'>こっちも大丈夫です……(kaeru君のキャラ)コードネーム長いですね</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>長いですね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>呼ぶときは縮めて「ライ」か「のりＰ」でいいよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>コードネームとは</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>そういう君は猫とでも呼べばいいのかねえ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>猫村さんおるやん</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>あとはねー、このゲーム自分のPCと自分のヒロインとでイチャイチャするという手酌プレイが辛い所なんで、PC１のAキラーのRPはPC2が担当、って感じにしたいんですがいいですか？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>いいよ</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>全然OK</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>はい</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>じゃあ相沢みさおのRPはnakigao、三上京香はkaeru、常磐巴はanekoで</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>女子力が試されるね。(kaeru君のキャラは)闇の交渉人殿～ってよぼ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>✟闇✟殿～</div>
+            </div>
+            <div class='row aneko'>
+                <div class='col-sm-2 name'>aneko@PL</div>
+                <div class='col-sm-10 serif'>§YAMI§殿～</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>なんてCOOLなんだ！うらやましい！！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>その方が長くなってんじゃねえか</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>これプレイ予定で3日とってるけど、かかるかなあ……かからないかも</div>
+            </div>
+            <div class='row naki'>
+                <div class='col-sm-2 name'>naki@PL</div>
+                <div class='col-sm-10 serif'>一応初心者卓だからなぁ……？</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>俺の交渉で初手クリアしてやんよ</div>
+            </div>
+            <div class='row gm'>
+                <div class='col-sm-2 name'>evi@GM</div>
+                <div class='col-sm-10 serif'>自己紹介とかはオープニングの中でおいおいやってもらいましょう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class='col-sm-2 name'>kaeru@PL</div>
+                <div class='col-sm-10 serif'>おｋ</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

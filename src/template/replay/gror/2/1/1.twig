@@ -1,0 +1,683 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>キャンペーン予告</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        ここは極東のとある地域にある学園都市。<br>
+                        君たちはその都市の中でも、最も古くからある魔輝銀会私立学園高等部(マキギンカイ シリツガクエン コウトウブ)の生徒だ。<br>
+                        それもただの生徒ではない。<br>
+                        オーダー科ゼロ特別クラス、通称『ゼロ特』。<br>
+                        君はそのクラスに属することを許された、選ばれし生徒なのだ。<br>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>やっぱ学園モノやりたいよね！</h2>
+                    <p>現代モノといえば、学園モノ。異論は認める</p>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">学園ログイン！</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">飲み物の準備もええかー</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">ええでー</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">飲み物はそのうち</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">おｋ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">じゃ、はじめます！</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">どんどん、ぱふぱふ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">よろしくお願いします</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">よろしくお願いします</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">ぷりぷり</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>トレーラー</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <blockquote>
+                        君は、学園都市にある私立魔輝銀会高等学校に今年から入学した高校1年生だ。<br>
+                        入学の際に行われたオーダー認定ランク試験により、君は『オーダー科ゼロ特別クラス』に所属することが決定した。<br>
+                        理由？それは、君が一番わかっているだろう？<br>
+                        <br>
+                        さて、入学式もあわただしく終わり、ひと段落着いたころ、君は『校舎のボヤ騒ぎ』の噂を耳にする。<br>
+                        <br>
+                        「また校舎でボヤ騒ぎだってよ？」<br>
+                        「今年に入ってからもう6度目だってね」<br>
+                        「なんでも、ボヤ騒ぎのあった現場で不思議な共通点があるんだって！」<br>
+                        「えー、やだー、それって……」<br>
+                        <br>
+                        ―― キーンコーン、カーンコーン。<br>
+                        声は、授業開始を伝える予鈴の音によってかき消された。
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="text-center">
+                            ガーデンオーダーTRPG シリーズ「ゼロ特学園生活！」<br>
+                            第1話「燃える校舎」<br>
+                            その絆、ゼロをも凌駕し、平和をつかめ！
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                    <h2><span class="section-icon"></span>セッションインフォ</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-12">
+                    <blockquote>
+                        [予定時間] 6時間(3時間x2)<br>
+                        [推奨PL人数] 3 - 4人<br>
+                        [難易度] easy<br>
+                        [セッション傾向] 探索、戦闘、非PvP
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>プリプレイ</h2>
+                    <p>事前にキャラクターを作成してもらってたので、細かい設定の調整です</p>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">事前にトレーラーを出してなかったんだけど、今回はみんなの大好きな学園物だよ！君たちPCは、全員ゼロ特別クラスの生徒さんです。おめでとう</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">学校名が読めません先生</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">マキギンカイガクエンと読みます。ちょっとミスリル会だとあんまりだと思ったので……</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">入学して間もないよね？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">1年未満ですなどう考えても</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">そうだね、入学して1か月くらい経ってます。やっと、高校生になれてきたくらいがいいな</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">1か月。稼働日にして20日未満。</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>職業病。</blockquote>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">なにかの比喩なのかと思ってトレーラー見たら、リアルボヤだった</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif"><b>ボヤ6件のうち半分は俺のせい</b>かもしれんな。タバコの火を消していなかった気がする(※鶫は不良設定)</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">これは……炎上エンドかあ。<b>風の力で炎上の手助け</b>をしよう</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">じゃあ消防署に連絡をしよう……はい鎮火</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">あれ……シナリオと学園がすでに崩壊しそう……</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">今回も真面目キャラです。はい</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">炎上の手助けがマジメと申すのか！！</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">PCはPLに逆らえない</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">今回は不真面目キャラです(いつもの</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">さて、世界観の共通認識は大丈夫そう？一応、学園都市にある高校の生徒って設定なんだけど……</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">はい生徒です(※栄は教育実習生の設定</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">大丈夫。今年齢が決まった。<b>あとヒロインです</b></div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">もーまんたい！どこからどう見ても学生です</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">身長おいくつでしたっけ、鶫さん……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif"><b>130cmです</b></div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">130は……</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">高校(生という設定)はどこへいった</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">安心してください……小学校も併設しておりますので……</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif"><b>高校生だよ！</b></div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">こっから鶫と餡子はバディになるのかぁ……(※事前の話し合いでバディになると言ってました)</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">バディやめたい</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">んま、世界観に問題なさそうだから、次、キャラクターのハンドアウトいくね！</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">シナリオハンドアウト「藤堂 栄(トウドウ サカエ)」</p>
+                        [キャラクター背景] ゼロ特別クラスに何らかの関係を持つオーダーである<br>
+                        [コードネーム] ※任意(なくてもいいです)<br>
+                        [キャラクターの欠点] ※任意
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">シナリオハンドアウト「豺虎 鶫(サイコ ツグミ)」</p>
+                        [キャラクター背景] ゼロ特別クラスに何らかの関係を持つオーダーである<br>
+                        [コードネーム] ※任意(なくてもいいです)<br>
+                        [キャラクターの欠点] ※任意
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">シナリオハンドアウト「鶯 餡子(ウグイス アンコ)」</p>
+                        [キャラクター背景] ゼロ特別クラスに何らかの関係を持つオーダーである<br>
+                        [コードネーム] ※任意(なくてもいいです)<br>
+                        [キャラクターの欠点] ※任意
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">全部一緒です。では、皆さんはフレーバー特徴である「キャラクターの欠点」っての決めてください、お願いします！</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">キャラクターの欠点について</p>
+                        ぶっちゃけゼロ特の生徒は、<b>「ド」がつくほどの問題児であり、学園のトラブルメーカー</b>です。<br>
+                        こんな欠点があったがゆえに、ゼロ特に所属することになった、というような面白い理由を考えてください。<br>
+                        ただし、犯罪的なものはダメです(例えば、人を殺すのが趣味とか)、ダークサイドには堕ちないでください。<br>
+                        思いつかなかったり、考えるのがめんどくさい場合は言ってください。
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">……そろそろゼロ特別クラスってどんなクラスかわかってきました？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif"><b>問題児隔離教室</b></div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif"><b>社会適合性ゼロクラス</b>か</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">なるほど、なら自分はキャラ設定にある通りで</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">すでに何度かチームを組んで仕事を行っているが、敵だけでなく味方も見境なしに攻撃する為すぐにチームは解散になってしまう問題児。周りからは「フレンドリーファイア」「狂犬」「不吉を告げる女」などのあだ名で恐れられている。</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">という事で周りの被害を考えないので、ここにぶち込まれました</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">そう！だから、鶫が一番このクラスに適正が高い</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">すごいいやな適正だなあ</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">なんで餡子がはいっているのだ？</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">それは、設定から考えれば、例えば「やさしすぎた」からとかになるかな</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">優しいって罪なのね</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">それで『オーダーとしての素質はすごく高いんだけど、欠点があるから、オーダー認定されない人』みたいな。今回は、そういうキャラクターでやってもらう……と。伝わったかしら？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">なるほどね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">それは得意だ任せてくれ……一度<b>教室で機関銃を乱射してみたかった</b>んだあ</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">OK！(忘れないとは言っていない)</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">どうしてもやだー！ってなら、全然やんなくてもいいからね</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">キャラ像的に難しい気がしてきた</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">ワイニートちゃうもん！</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">先生じゃなかったの？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">教育実習生なので大学生だね、実習でこのクラスとか難易度ハードすぎる</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">いいポジションでしょう？鶫のハンドリングは、栄君にかかっているといっても過言ではない……はず</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">不良を更生させる熱血教師キャラが出来そうなシチュエーションじゃん</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">先生とバディ組むか</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">欠点が思い浮かばなかったら、こっちで適当に当てるよ</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">とりあえずキャラ設定どおり、戦闘能力がないのに衝動的に【カバーリング】してしまうというところで。</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">異常なほど過保護　こんな感じ？</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">なんかイメージわかないけど、そんなんだね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">イメージなんて後からついてくるさ</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">どちらかというと衝動的独断専行みたいなイメージがあるよ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ああ、じゃあ驚異的な独断専行でいこう</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">驚異的な！？まあ記憶喪失を不幸の一部に組み込むってことで、不幸でええよ</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">欠点は常識知らずとかでもいいかな、医者の娘だし(偏見)</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">あ、いいね、そういうの。かわいいってか、くそう、ヒロインまっしぐらじゃないか！</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">パンがなければ餡子を食べればいいじゃない！！</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">おいアンパン買って来いよ！とか言いたいな</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">買ってきましたー……口にズドン</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">では、まとめ……</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">PC達の欠点</p>
+                        藤堂 栄(トウドウ サカエ) …… 驚異の不幸体質<br>
+                        豺虎 鶫(サイコ ツグミ) …… 驚異の不良<br>
+                        鶯 餡子(ウグイス アンコ) …… 驚異の常識知らず
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">フレーバーのつもりだから、あんまり意識しないでもいいよ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">何て個性的なクラスでしょう、教師も大喜びだな</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">超高校生級の不良か</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">では次に……バディスタイルの決定。前と同じで、誰と誰がバディ組んで、誰がソロか決めてほしいな</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">まあ……生徒同士でするのがいいのかねえ</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">どうするかなあ。ソロの方が火力は上がるが、ろーるぷれい的にバディで行きましょう</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">不良の不を取り除いてしんぜよう</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">取り除くか</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">ついでに良も取り除こう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">いいね、委員長vs不良ってお約束だし</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">栄くんはソロで</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">PC達のバディスタイル選択</p>
+                        バディスタイル …… 鶫&餡子<br>
+                        ソロスタイル …… 栄
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">よろしくね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">夜露死苦</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">学園でも有名なデコボココンビ的な感じ</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">また今日もコンビニ弁当</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">次～、PC間コネクションの決定。今回も1d100でいきましょーう</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">じゃあ餡子に……(ダイスコロコロ)</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">じゃあ鶫に……(ダイスコロコロ)</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">誰かに入れ込むのもあれだけどしかたがない……(ランダムチョイス)で鶫に……(ダイスコロコロ)</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">PC間コネクション</p>
+                        鶫は、餡子を恩人だと感じている<br>
+                        餡子は、鶫を仲間だと感じている<br>
+                        栄は、鶫を苦手だと感じている
+                    </blockquote>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">いい子や……ただバディが残念なだけで</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">唯一のダチなのかな</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">たぶん<b>両極端にボッチ</b>だったんだろうな、君ら</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">(餡子は)常識がなさ過ぎて危ない娘と思われていたんだね……(相対的に見ると)栄は普通すぎるね</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">この異常な学園で普通なのが凄いのかも</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">好感度ナンバーワンを君たちが争い、僕は共感度ナンバーワンをもらうよ</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">では、プリプレイの最後に、PCの一言自己紹介でもしておわりにしまーす</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>PC一言自己紹介「藤堂 栄(トウドウ サカエ)」</h3>
+                </div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">じゃあ赴任挨拶で「藤堂 栄(トウドウ サカエ)です。オーダーとして目覚めてしまったら、辛いことも沢山あると思います。戦うことは苦手だけど、頑張って皆さんをサポートします。短い間ですがよろしくお願いします！」と言っておくぞ。設定はとくにいじってない。</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@生徒A</div>
+                <div class="col-sm-10 serif">「きゃー、なんか、栄先生って、ちょっといけてなぁい？」</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@生徒B</div>
+                <div class="col-sm-10 serif">「きゃー、けど幸薄そうだよねぇ」と聞こえた気がしました。</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>PC一言自己紹介「豺虎 鶫(サイコ ツグミ)」</h3>
+                </div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">「オレは豺虎 鶫(サイコ ツグミ)、この学園でもてっぺんとるつもりなんで、そこんとこ夜露死苦！」設定は餡子に関するものを増やしました</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@生徒達</div>
+                <div class="col-sm-10 serif">「(ざわ……ざわ……)」</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@生徒C</div>
+                <div class="col-sm-10 serif">「(あいつか？中等部の狂犬……)」</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@生徒D</div>
+                <div class="col-sm-10 serif">「(し、あまり目を合わせるな……)」</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif"><b>ていへんをとる</b>……？(難聴)</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <h3>PC一言自己紹介「鶯 餡子(ウグイス アンコ)」</h3>
+                </div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">では、自己紹介で「最初この部屋は物置と思ったのですが、ここが教室なんですね。少し動きづらいですが、よろしくお願いします。名前ですか？餡子です。鶯 餡子(ウグイス アンコ)です」</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">お嬢様やああああ</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">あ。<b>天然腹グロ</b>になった。</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">腹グロ要素ある？</div>
+            </div>
+            <div class='row npc'>
+                <div class="col-sm-2 name">naki@生徒達</div>
+                <div class="col-sm-10 serif">「ANKO！ANKO！ANKO！」と熱烈的な餡子ファンから声援が飛んだ気がしました</div>
+            </div>
+            <div class='row evi'>
+                <div class="col-sm-2 name">evi@栄</div>
+                <div class="col-sm-10 serif">親衛隊までいる</div>
+            </div>
+            <div class='row kaeru'>
+                <div class="col-sm-2 name">kaeru@鶫</div>
+                <div class="col-sm-10 serif">すでに(ヒロインとしての)差をつけられてしまった</div>
+            </div>
+            <div class='row aneko'>
+                <div class="col-sm-2 name">aneko@餡子</div>
+                <div class="col-sm-10 serif">周りに笑顔で手を振ります……女子にいじめられそう</div>
+            </div>
+            <div class='row gm'>
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">次はいよいよオープニングフェイズいくよー！</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

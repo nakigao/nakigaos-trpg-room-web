@@ -1,0 +1,649 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/sww2-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-evi.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>※未編集</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃはじめます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>前回は死の淵でギリギリのバトルをしました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>花は強敵でしたね……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>一回死んだ記憶がある</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>死屍累々だった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>前の卓でも死に掛けた記憶がある</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>パンジーには気をつけよう!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>パンジーの花言葉は死の香り</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>へー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>忘れよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ちなみにレベル5で剣のかけらも入れてないので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ボスとしては少し弱いかな～くらいの気持ちだった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>強くなってね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>素のHPだったのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>前回はぎとりまで終わってます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そして水源を確保しました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あのモンスターの最大の特徴は花びらの数が任意だということだ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>イラストにあわせて4つにしました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>君たちの秘密基地にも水がやってきた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>4つは多かった可能性</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>喜べ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>セージがいないのが悪い</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>わーい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>何でいないのだろうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>ヒャッハーミズダーーー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「こ、ここを……野営地とする!!」と倒れながら言います</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>満身創痍だなあ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>回復しようにもMPがない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ま、もう敵もいないでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>クッキングしたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>帰還する?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ホームへ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>飯を食えばHPが回復するはず</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>いい出汁がありますねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>しません</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いや飯によるけど</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>ホームってどこ?ここ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>最初の場所</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>あそこはほこりっぽいからなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>貴公、もしやあの骨で出汁を取ろうとしておるのでは……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>安置なのかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>出汁はだいじですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ゴミ捨て場と勘違いされて上から生ごみが振ってくる可能性はある</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>それ以外に何があるのでしょうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>地割れ跡なんだよなぁ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>とりあえず睡眠をとればMP回復するから治療も出来るよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>現地住民は、地面に穴が空いてたらゴミを放る これマメ知識</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そのゴミで生き抜くんですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たくましい!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>天から恵みやね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まあ地割れ跡のあの場所以外では</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>煙が逃げていかないので火が焚けないんじゃないかなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そこんとこどうおもいます?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>たしかぁに……燻されたルルディが出来上がってしまう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>火を起こす手段があるの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>むしろ無いと困りそうだけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>冒険者セットに火打石くらいはいってたと思う</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>入ってるね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>とりあえず鍋が簡単で良いと思う</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダメならこのフルプレートアーマーに石をぶち当てて火種とする……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>酒なら持ってるよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>よかったよかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>よかったよかった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>アルコール度数はいかほどか?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>下戸だから3</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>水に火をつけるようなものだ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>なんで下戸なのにもちあるいてるんだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ビールの栄養価は高い</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ドワーフのたしなみだよなぁ?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>アイテムに水という項目がなかったからね、仕方ないね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>水袋に入ってるでしょ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>水袋高いねん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>あれって入ってるの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はいっとるわい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>とりあえず睡眠?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>水の入ってない水袋の価値とは</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>なんだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>このゲームの睡眠って見張りとかいるんだっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いたほうがいいけど今回はいなくてもよいと断言しよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>食事ルールはどうなるんだい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>飯ィは消費するアイテムを宣言してくれたらよいです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>文字通り死んだように眠る一行……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ということはエールはどこに入っているんだろうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>とりあえず今は保存食でしのいで、回復してから奥を探索でいいのでは?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そりゃ……瓶に入ってなければ、口に含んでるに決まっているでしょう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ジョッキでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>納得</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>シナリオ終了時に栄養素が偏ってると、パラメータ変化になにか不都合が起こりそうなんだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>そうだね＜保存食</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>可能であれば食事は新鮮でおいしいものを……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>偏ってる場合はまだいいんですけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>明らかに足りない時は……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>フフ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これはダンジョンで飯を作るゲームなのだ!SWではない!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そうです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>今ある材料で作れるものはなんだ!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>と、シナリオギミックをくんでみる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>葉っぱの葉っぱ添え</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ドロップしたのはつると葉っぱ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あとは……300Gする赤い実もある</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>赤い果実があるじゃない、きっと林檎のようなものなのだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>果実は食えるけどツルとか花びらってどうなんだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2個しかないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>花弁さんは毒あったけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>たべたい?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>毒見、どうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>リンゴ料理といえば……焼きリンゴかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>パーティ全員に効果でいいんじゃない。めんどくさいしょ数の処理いれると……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>毒って煮込んだら消えないかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>お前らは同じ飯を食うんだよ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>便利だなぁ～</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>今日のメニューは焼きリンゴでいいかな?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>エールで煮たらなんかおいしくなるでしょ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>そのためのエール</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「まずはつると葉っぱと果実を水でよく洗う……」じゃぶじゃぶ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「旦那、このエールは使えないかい?」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「じゃあ火をおこしますねえ」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>懐から出そう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>マジでビールで煮込むのか!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>野菜の酒蒸しとか普通じゃん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>煮込目ばなんでも食えるのだ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>GMのお許しが出たぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「煮込みに使おう、繊維が柔らかくなる(たぶん」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ベルギー料理にカルボナードという牛肉をビールで煮たものもある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いたってふつうだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>なら肉をよこしなさい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>肉で使うなら野菜でも使うよなあ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>肉と遭遇するエリアにいってないんだもん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ないですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「チビッと残して、景気づけにもなる!」(はわわ、こんなものもってるなんてキャロライナ殿しゅごい※恍惚</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>キッチンドランク</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「いい匂いがしたきたぜ～」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「聞いたことがあります、みんなで持ち寄ったものを煮込む料理!闇鍋!!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>これ料理のダイスとか降るの?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ああそうだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>一般技能の補足をします</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>EXのP144に載ってる一般技能を</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>5レベル分取得してよいです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>一般技能の最大レベルは5です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なんかルルディさんとか1レベルずつ5個とってるけど</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>無作為!ゆるせる!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>ああ5つ取れるのかと思ってた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>レベルがあるのか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>してないなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ダイス振ろう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>1d2+2d6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>SwordWorld2.0 : (1D2+2D6) → 2[2]+2[1,1] → 4</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>じゃあコック3、ナース2を取ろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>お料理判定は1d20+[器用度]+[知力]+[冒険者レベル]+[GMが最適だとおもう一般技能レベル]にしよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>1d2+2d6</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (1D2+2D6) → 2[2]+2[1,1] → 4</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>choice[上,下]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (CHOICE[上,下]) → 上</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6) → 5[1,4] → 5</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「何を隠そう私はドラッグメイカーである」(突然</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>カタカナ語とかわかんないよ～～～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>って人はいってください</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>コーティザンってなに?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>高級娼婦</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>男なのに!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ハイレベル風俗嬢</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>じゃあドクターにしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>レベル5ね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>使いやすい調理道具セットって料理判定に+される?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>するー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>ドラッグメイカーLv5取得した>GM</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>難易度は10+食材のレベルにしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>どこに書いたらいい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>メモ欄にでもかいといて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>今回はブラッディーペタルだから……コックかドラッグメイカー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>難易度は15</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お高いですなぁ……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>使いやすい調理道具セットの加点っていくつ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>るるぶよんで!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>+1だって</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>そうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>じゃあ自分が振るのが1番かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>こっちがふろう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、全員振るんじゃないのね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ん～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>D&Dの協力判定を導入しましょう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、いいじゃん。せっかくだからみんなでやりたいね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>メインで判定する人が1人</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>協力する人は何人でもよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>協力する人は目標値-2の値を出せば</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>メインで判定する人の達成値に+2できる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ということでどうでしょうか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>異議なし異議なし!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>今回は協力者は難易度13で判定する</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>自分はボーナスだけで12あります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>器用と知力とかグラランの本領発揮だよなぁ!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>1,2なんてでないよなあ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>この世界ピンゾロがあるので一応ふるかふらないかはきめてください</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ふろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>どうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>こっちはボーナス15かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>じゃあルルがメインがいいのかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>どっちでもいいよ12なら大して変わらないし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>じゃあ協力を振ります</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>じゃあメインを振ります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>1d20+2+2+5+5>=13 料理協力判定+ドラッグメイカー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (1D20+2+2+5+5>=13) → 20[20]+2+2+5+5 → 34 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>d20+4+3+5+</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>めちゃくちゃ料理美味いおっさんだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あれ?これ合ってる?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>1d20+4+3+5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (1D20+4+3+5) → 6[6]+4+3+5 → 18</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>クッキングパパかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>出目20わろた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>1d20+3+3+5+3+1 お料理判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (1D20+3+3+5+3+1) → 13[13]+3+3+5+3+1 → 28</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>2d6ですね!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>僕の勘違いでした</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>この世界は2d6でした</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>振り直し</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>2d6+2+2+5+5>=13 料理協力判定+ドラッグメイカー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+2+2+5+5>=13) → 10[6,4]+2+2+5+5 → 24 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>20面ダイスはありませんでした</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>つよい……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>協力+2どうぞ～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>1d20+4+3+5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (1D20+4+3+5) → 20[20]+4+3+5 → 32</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6+4+3+5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+4+3+5) → 7[6,1]+4+3+5 → 19</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2d6+3+3+5+3+1+4 お料理判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+3+3+5+3+1+4) → 9[6,3]+3+3+5+3+1+4 → 28</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ちょっとボーナス多すぎ感</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ちょっと急造ルールだからどうなるか心配だったけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そうだね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次から難易度を</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>すべての食材のレベル合計にしよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>難易度調整できるし、それはいいかもしれないな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>よし、無難に成功だぜ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次回からはブラッディペタルの花と実を1つずつ使うなら5+5で10加算みたいな感じ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ふむむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>では結果はシナリオ終了時にお伝えします</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「おお、おいしそうであるな!ルルディ殿、これは何という名前の料理なのですか!?」と目をキラキラさせよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>消費したのはつると実を1つずつですか?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あとエールか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あと葉っぱ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>OK</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ドロップ品更新しときます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あ伝え忘れてたけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ドロップ品で食材ってついてるやつは売ってもお金にはならないので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>よろしく</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「ダークナヴェです、これを一緒に食べればみんな仲間になれるそうですよお」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「ほんとぉ?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>全体的にアクが強そうだなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>実も薬になるから苦味がありそうだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「ほんとーですよ、エルフは嘘をつきませんので」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まぁ……葉っぱだからなぁ……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>灰汁は取ってくれてるよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>さすがやで</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>灰汁には薬効があるから傷ついてる人には率先して食べさせよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「うん!おいしい!このパンジーおいしいですぞ!」嘘をつかないエルフを見ながら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そういえばパンジーだったなこいつ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>エルフが言うんだからパンジーに決まってる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「懐かしいわねえ、エルフはみんなパンジーを食べて育ったのよお」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>「パンジーのエール煮」の食レポ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「私もよくパンジーを加えて通学したなあ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>融合し、た……?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さて……SWの寝る処理ってどうするんだっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>何時間だったかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、水が来てる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>リノベーションってやつだよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>これ食レポした方がいいのか?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>シーン制じゃあなかなか見られない光景</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>レポした方が雰囲気出る</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>じゃあしようか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>レポしておいしそうだったら経験点をあげよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いや……すげえ不味そうでもいいや</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>10円拾いそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「質素な料理だが、意外と深みがある味がある。月に一回は食べたくなる味がするな。俺は好き……嫌いじゃないぜ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>6時間寝たらHPが2割、MPが全快だって</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2割……安い……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>こっちはおきててもいいかも</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>MPないし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「煮込んだエールはエネルギーの効率が極めてよく、レース前に愛飲するエルフも多いとか。それに特大の赤い果実これも極めて即効性の高いエネルギー食、つるも添えて栄養バランスもいい。大したものですね」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>おじやじゃないので……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>救命wが10個あるからそれでかいふくしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>www</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>おじやみたいなものでしょう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>草を煮詰めたおじや……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>クレイさんのレポもたのしみ～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>え、さっきしたじゃない。パンジーおいしいって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エネルギー効率最低だよね野菜だけって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあキャロライナに経験点250点をおまけします</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>野草鍋はレンジャー部隊の基本食とか聞いたことはある。あと、根っこがあればベスト</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>わーい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>さて……シナリオ的にはこのまま終了するか残りを探索するか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>どっちでもいいですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ルルディさんは!?ルルディさんにはないんですかぁ!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>起きたら探索するつもりですよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>何故に!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かなしいなぁ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ぼくがリアルで鼻で笑ってしまったので</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>とりあえず6時間休憩……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はいどうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「Zzz……」お腹がいっぱいになったので割れた樽の中で寝ます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そこもいずれ木材になる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>寝床が!寝床が!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>7回復します</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>naki@クレイ の HP を +7 結果:(HP:1->8)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>こっちは5かな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>w食べよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の HP を +5 結果:(HP:15->20)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>k10</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.10c[10] → 2D:[6,1]=7 → 3</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>睡眠にまさる回復があるのか?このPT</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>k10</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.10c[10] → 2D:[2,5]=7 → 3</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>んでMP全開だから全員回復させようか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はい、よろしく～</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んー……けどMP温存した方がいい気もする</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>aneko@キャロライナのHPを6回復(HP:1->7)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まあいいか、回復してもらっちゃお☆</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>えーと効率がいいのはどっちだ?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やってみればわかるさ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>キャロライナの草回復は6前後って感じか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>とりあえずじゃあヒールヲーターを使うか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>今のところ一回で3かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>レンジャーじゃないと草は非効率ですなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>そういえばそんな技能があったね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>こんなに回復低かったっけと思ってた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>クレイにヒールウォーターの水を飲ませるよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>自分レンジャー持ってるから、こっちが草使った方がいいかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「起き掛けの水はお通じによいですなぁ!」ぐびび</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>いってよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>???「この水を飲むと身体の調子が良くなって頭もすっきりするよ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>嘘つきじゃない???を信じてしまう!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K10[13]+5+3 ヒールウォーター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.10+8 → 2D:[6,6]=12 → 7+8 → 15</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>おお</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>15点回復だ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、6ゾロじゃない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>naki@クレイ の HP を +15 結果:(HP:8->23)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>もう一杯いる?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>もう一声!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の MP を -2 結果:(MP:0->0)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>こっちもほしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>いや、草で言いか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の MP を -2 結果:(MP:41->39)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>いや草が勿体ないよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K10[13]+5+3 ヒールウォーター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.10+8 → 2D:[2,2]=4 → 1+8 → 9</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>僕も草が勿体無いと思うなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>MP-2って安いなぁ。戦闘中は使えない系の魔法?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>naki@クレイ の HP を +9 結果:(HP:23->32)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>回復の水を召喚する魔法だから、戦闘中は飲む動作がいる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>主動作ね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の MP を -2 結果:(MP:39->37)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ミズゥ、くれよー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あと接触だからダブル前衛のきみたちにはつらい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>あげる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>主動さかぁ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「さすがルルディ殿の御水ですぞ!先ほどまでちぎれかけていた腕もすっかり治りましたぞ!」と腕をぐるんぐるんします</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>キャロにも水をかけよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K10[13]+5+3 ヒールウォーター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.10+8 → 2D:[4,4]=8 → 4+8 → 12</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の MP を -2 結果:(MP:37->35)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ありがてえ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>aneko@キャロライナ の HP を +12 結果:(HP:7->19)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>aneko@キャロライナのHPを12回復(HP:19->30)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>ああ余計な事してしまったすまん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「この水うまいな!さっきの料理は何打単だ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>aneko@キャロライナ の HP を -12 結果:(HP:30->18)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>生気が座れた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>もう一杯で全開かな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K10[13]+5+3 ヒールウォーター</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.10+8 → 2D:[2,3]=5 → 2+8 → 10</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>aneko@キャロライナ の HP を +1 結果:(HP:18->19)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の MP を -2 結果:(MP:35->33)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>こういうのもっとシステム化してほしいよね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>aneko@キャロライナのHPを10回復(HP:19->29)</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ありがてえ、ありがてえ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>とりあえずこんなものでいいかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ばっちし、回復係いるのはありがとぅあい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>右行こ右!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いくかー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>また探索しよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「みんなお水をしっかり飲んでねえ、1日20Lは飲まないといけないんだから」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>せっかくだからね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>いこうか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>上の水路の部屋の右もありそうよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ああそこはなんもないです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>見えない壁にぶつかってしまった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>かなしみ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あ、遠景がない……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>この広さ、ドラゴン級の大物がいる気配がする!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>幻のドラゴンステーキのチャンス!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ワッザ!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>遠くに見えるのは……地底都市!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>というだけのフロア</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>都市部から出る光化学スモッグにより酸性雨が振っている街……?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>地底人がいそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ここで捕食コマンドを選択すると肉との戦闘が始まりますけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>それ以外にはなにもないです</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「こ、これは……」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>めくるめく冒険の世界が広がっていそうなのに、肉か……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>最初のシナリオに期待しすぎですね!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>肉がくいてえよお</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>肉食いねえ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「※捕食する」ぴこりん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあ肉が飛んできます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「ミートインカミーーーング!カバアアア!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>と思ったら蝙蝠じゃないか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>これあかん奴やん</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@肉_1</div><div class='col-sm-10 serif'>「キーキー」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>けど名前肉だよ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>ウイルスたっぷりの肉なんか食えるか!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>さっきもパンジーだったし……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>魔物知識判定しよ^^</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>こうもり君に謝って</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2d6+1+3+1 セージ[知力]:魔物知識</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+1+3+1) → 8[5,3]+1+3+1 → 13</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>大丈夫?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>知ってました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「私だってやればできるんです!!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>下にはりました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「あれは肉蝙蝠です」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「ルルディが言うなら間違いないな!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>やっぱ←におきました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>とおすぎた</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「肉……蝙蝠?肉?蝙蝠?」と混乱している</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>後ろに恐怖のパンジー軍団が控えてるように見えて一瞬ちびった</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>先制ふる?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>おねがいします</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>どんどんどうぞ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>カモン</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6+5+4 スカウト[敏捷]:先制</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+5+4) → 6[1,5]+5+4 → 15</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>パンジーに寄生されたコウモリにしようかな……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そっちが先攻だな</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@肉_1</div><div class='col-sm-10 serif'>わーわー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やめちぇください!死んでしまいます!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>とりあえず魔法ぶち込もうか?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、どうぞどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>丸焼きにしてあげて!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>何がいいかな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「料理長!ウェルダンで!」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「ちゃんとウイルスは殺菌してくれよな!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「キャロライナ殿、腹に入ればみな同じです!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「では強火で行きましょう!!」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>カオスショット拡大で肉全部に</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「ノロウィルスは怖いんだぞ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>コウモリを撫でるとブワーーーっとノミが飛んでいくシーンが見れるらしいですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「確かに!!」力強くうなづく</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2d6+5+3 フェアリーテイマー[魔力]:行使判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+5+3) → 9[4,5]+5+3 → 17</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2d6+5+3 フェアリーテイマー[魔力]:行使判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+5+3) → 9[3,6]+5+3 → 17</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2d6+5+3 フェアリーテイマー[魔力]:行使判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+5+3) → 3[2,1]+5+3 → 11</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ノミだって貴重なたんぱく源だからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>全部ぬけました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>たくましいなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>カオスショットって燃えるのか……?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K20[10]+5+3 カオスショット</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.20c[10]+8 → 2D:[1,6]=7 → 5+8 → 13</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K20[10]+5+3 カオスショット</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.20c[10]+8 → 2D:[1,6]=7 → 5+8 → 13</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>K20[10]+5+3 カオスショット</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.20c[10]+8 → 2D:[5,5 5,4]=10,9 → 8,7+8 → 1回転 → 23</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ぎゃあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>くるくる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいぞいいぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>肉_1 の HP を -13 結果:(HP:0->0)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>kaeru@ルルディ・ネライダ の MP を -12 結果:(MP:33->21)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>肉_2 の HP を -13 結果:(HP:0->0)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「肉が……闇色に!?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>肉_3 の HP を -24 結果:(HP:0->0)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>HP20だった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>残り7が二匹</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>目指せワンターンキル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>2d6+5+3 ファイター[器用]:命中力</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+5+3) → 7[1,6]+5+3 → 15</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あたりますねぇ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>K38[10]+9+4+1 フランベルジュ2H+《全力攻撃》+《武器習熟》の攻撃!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.38c[10]+14 → 2D:[4,6 6,1]=10,7 → 11,8+14 → 1回転 → 33</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「下ごしらえは終わりね」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ぐわあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ミートボールになるぅ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>これはミンチですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>やりますねえ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>肉_1 の HP を -33 結果:(HP:7->0)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ヘッドショット!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ダガーでいけるのかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>防護点0です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>噛みつくという選択肢もある。直接捕食するのです</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6+3+4 フェンサー[器用]:命中力</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+3+4) → 4[3,1]+3+4 → 11</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>弱点抜かれてるから当たる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>11か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>同値回避ですね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@肉_1</div><div class='col-sm-10 serif'>いきのこったぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>ぱおーん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>なんと!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>降参しなさいにくぅ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>どっちにしようかなー</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@肉_1</div><div class='col-sm-10 serif'>choice[kure,kyaro]</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@肉_1</div><div class='col-sm-10 serif'>SwordWorld2.0 : (CHOICE[KURE,KYARO]) → KYARO</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>キャロに11で攻撃!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>回避どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>別に残してしまっても構わんのだろう?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6+3+4+1+1 フェンサー[敏捷+防具回避修正]:回避力</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+3+4+1+1) → 9[5,4]+3+4+1+1 → 18</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>お残しはゆるしまへんでー!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そちらの版です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「あぶなし!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>†キャロライナ†のリベンジ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>みんな4レベルあたりでまとめてくると思ってたら5レベルなんだもんなぁ……つらいよなぁ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>キャロライナさん!!決めて!!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>純な方がなんか強そうじゃん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>セージいないけどね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>いくぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6+3+4 フェンサー[器用]:命中力</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+3+4) → 9[4,5]+3+4 → 16</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あたるぅ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>あたたたた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>K3[9]+4+1 ダガーの攻撃!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : KeyNo.3c[9]+5 → 2D:[4,4]=8 → 3+5 → 8</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>スライスされた</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>余裕だね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ナイスデース</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>3枚卸し</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>剥ぎ取りどうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふって～ふって～</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>がんばろう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d+1 [戦利品判定]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+1) → 10[5,5]+1 → 11</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d+1 [戦利品判定]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+1) → 10[6,4]+1 → 11</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d+1 [戦利品判定]</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+1) → 8[3,5]+1 → 9</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>わーい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、出目いい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>紫色の石がたくさん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>……なんだろうこの石</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>石、食えないんだけど!</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>胆石</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>公式リプレイにレンガを食べるグラスランナーがいたな</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ゴーレムか何か?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>こっちにもいるぞグラスランナー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>公式が可笑しい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>というかダンジョン飯でも食ってたなレンが</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>エルフも石ぐらい食べるでしょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>城壁とか土とか下着とか食べてました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ドロップ品更新OK</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>コウモリの肉が3つも手に入ったよ!やったね!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>籠城経験ありますねそのキャラ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったやったああ、肉だよぉ!</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>嬉しいから数珠つなぎにして首から吊り下げておこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>気になる人は戦慄のトリプルクラウン上下巻を読もう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>クレイの知性を下げよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>蛮族扱いされてしまう!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>さっそく肉を食うか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>シナリオ終わる前に食べときたいね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まああとは食う以外ないんで</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それは……今か!!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>料理しましょう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>クッキングだ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>しちゃおうしちゃおう。能力はさっきと同じ?</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「ルルディ殿、こんなにグチャグチャになりましたぞ～」とモザイク的な何かを差し出す</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ためしに使用した食材のレベル合計にしてみよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>何使いますか?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「あらまあ、じゃあハンバーグか知らねえ」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>コックでいいんじゃないかなぁ、純粋なお肉だし。黒魔術的なのでもよさそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>肉だけ?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>取りあえず葉っぱを添えれば臭みを消せるのでは?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>エールを使おう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>アルコールとりすぎいいい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>しかし、おいしそうな組み合わせ!</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>じゃあそれで作るか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はっぱってまだあるんだっけ?肉、エール、葉っぱでいこう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>救命草も使おう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>GMヒールウォーターとか料理に使えない?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>やっぱやめた</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>体に良さそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>回復効果のあるアイテムはめんどいのでつかえない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そもそも時間制限ある魔法な気もする</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>じゃあエールと肉と発破で作りますか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあ難易度17のコックで判定してみてください</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>みんなで協力して作ろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ひくいなー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>2d6+2+2+5>=13 料理協力判定</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+2+2+5>=13) → 9[4,5]+2+2+5 → 18 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>協力しよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>+2どうぞう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>2d6+4+3+5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+4+3+5) → 7[6,1]+4+3+5 → 19</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>では+4で</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>2d6+3+3+5+3+1+4 お料理判定</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>SwordWorld2.0 : (2D6+3+3+5+3+1+4) → 12[6,6]+3+3+5+3+1+4 → 31</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>無駄クリおおいですね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>やべえもの作っちゃった</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>これはボーナスあるやろうなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあ「コウモリ肉と葉物のエール煮」ができました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>なんかイギリス人なみに煮込んでばっかなんだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>貧弱な食文化だ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>うま……そう?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>食レポしろ(強要)</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>食レポハラスメント……!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>クソ美味そうかクソ不味そうのどっちかで優勝したらいいんですよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>「トリ肉団子鍋はエルフの冬には欠かせない一品です、今回は具も出汁も全部代用品ですがそこは腕と愛情でカバーしましたので安心して食べてくださいね」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>「食べる前は臭みが強すぎて、吐き気を催したが、エールで煮込むことにより臭みがなくなった。だからといって味がいいわけでもない。手間かけて残飯を作った気分だ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>実際蝙蝠の肉はゴムのような触感らしいが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>8時間くらい煮込んだら柔らかくなるんじゃない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「先ほどまで硬かった肉が、まるで春になった雪が溶けるような、それは口の中に春が訪れたかのような繊細な舌触り……」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@クレイ</div><div class='col-sm-10 serif'>「そして……パンジーの葉とエールによって絶妙にバランスがとられたこの味。これは……、うまい!」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>はあ、頑張った……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>味覚の差がでてきた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>クレイさんに不味そう大賞</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>250点</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うまそうだろぅおぉ!?</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>不味そうなのか……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なんか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>クソ硬かったけど噛み続けてたら現実逃避してる感じが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>印象的でした</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@キャロライナ</div><div class='col-sm-10 serif'>現状を楽しんでるのかな?</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@ルルディ</div><div class='col-sm-10 serif'>贅沢は敵だししょうがないね</div></div>
+        </section>
+    </div>
+{% endblock %}

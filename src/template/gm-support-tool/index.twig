@@ -1,0 +1,326 @@
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    <link href="{{ base_url }}/assets/css/palette-color-picker.css" rel="stylesheet">
+    <link href="{{ base_url }}/assets/css/gm-support-tool.css" rel="stylesheet">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ base_url }}/assets/js/palette-color-picker-custom.min.js"></script>
+    <script src="{{ base_url }}/assets/js/gm-support-tool.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">TRPG GM SUPPORT TOOLS FOR DodontoF API</h1>
+        <div>Ver.1.46.00用</div>
+        <section>
+            {#<div class="row">#}
+            {#<div class="col-sm-12">#}
+            {#<button class="btn btn-default" type="button" style="">IMPORT ※未実装</button>#}
+            {#<button class="btn btn-default" type="button" style="">EXPORT ※未実装</button>#}
+            {#</div>#}
+            {#</div>#}
+            <br>
+            <div id="dodontof-messages">
+                <pre style="width: 100%; height: 120px;">no messages...</pre>
+            </div>
+            <br>
+            <form id="common-form" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">URL</div>
+                            <input type="text" class="form-control" id="url" value="http://web-evi.sakura.ne.jp/trpg/dodontof/DodontoFServer.rb">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">ROOM#</div>
+                            <input type="number" class="form-control" id="room-number" value="5">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">PASS</div>
+                            <input type="text" class="form-control" id="room-password">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">DICE</div>
+                            <select class="form-control select-color" id="dice-bot">
+                                <option value="" class="">&nbsp;-&nbsp;</option>
+                                {% for diceBot in diceBotList %}
+                                    {% if diceBot[2] == true %}
+                                        <option value="{{ diceBot[0] }}" class="">{{ diceBot[1] }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form id="talk-form-system" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <input disabled type="text" class="form-control" id="talk-name-system" value="system@INFO">
+                    </div>
+                    <div class="col-sm-1">
+                        <input id="talk-color-system" name="talk-color-system" type="text" data-role="color-picker" value="212121" style="display: none;">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <textarea class="form-control" id="talk-message-system" rows="3" placeholder="messages"></textarea>
+                            <span class="input-group-btn"><button class="btn btn-default" type="button" style="height:74px">Go!</button></span>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="talk-message-webif-system" value="talk">
+            </form>
+
+            <form id="talk-form-gm" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="talk-name-gm" value="naki@GM">
+                    </div>
+                    <div class="col-sm-1">
+                        <input id="talk-color-gm" name="talk-color-gm" type="text" data-role="color-picker" value="212121" style="display: none;">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="talk-message-gm" value="" placeholder="messages">
+                            <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="talk-message-webif-gm" value="talk">
+            </form>
+
+            <form id="talk-form-pl" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="talk-name-pl" value="naki@PL">
+                    </div>
+                    <div class="col-sm-1">
+                        <input id="talk-color-pl" name="talk-color-pl" type="text" data-role="color-picker" value="212121" style="display: none;">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="talk-message-pl" value="" placeholder="messages">
+                            <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="talk-message-webif-pl" value="talk">
+            </form>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation"><a href="#set-room-info" data-toggle="tab">部屋情報</a></li>
+                        <li role="presentation"><a href="#add-character" data-toggle="tab">キャラ追加</a></li>
+                        <li role="presentation"><a href="#add-memo" data-toggle="tab">メモ追加</a></li>
+                        <li role="presentation" class="active"><a href="#talk" data-toggle="tab">会話</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <br>
+                <div class="tab-pane fade" id="set-room-info">
+                    <form id="set-room-info-form" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">counter</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="set-room-info-counter" value="疲労,軽傷,重傷,致命傷,*行動済,*死亡">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">chatTab</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="set-room-info-chat-tab" value="メイン,雑談">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">roomName</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="set-room-info-room-name" value="ガーデンオーダー(ボッチ卓)">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">outerImage</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="set-room-info-outer-image">
+                                    <option value="true">TRUE</option>
+                                    <option value="false" selected>FALSE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">game</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="set-room-info-game" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">visit</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="set-room-info-visit">
+                                    <option value="true">TRUE</option>
+                                    <option value="false" selected>FALSE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">callback</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="set-room-info-callback" value="">
+                            </div>
+                        </div>
+                        <button class="btn btn-default" type="button">更新</button>
+                        <input type="hidden" id="set-room-info-webif" value="setRoomInfo">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="add-character">
+                    <form id="add-character-form" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">name</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-name" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">counters</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-counters" value="疲労:99,軽傷:99,重傷:99,致命傷:99,*行動済:0,*死亡:0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">info</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-info" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">x</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="add-character-x" value="0">
+                            </div>
+                            <label class="col-sm-1 control-label">y</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="add-character-y" value="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">size</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="add-character-size" value="1">
+                            </div>
+                            <label class="col-sm-1 control-label">initiative</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="add-character-initiative" value="0">
+                            </div>
+                            <label class="col-sm-1 control-label">rotation</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="add-character-rotation" value="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">image</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-image" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">statusAlias</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-status-alias" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">dogTag</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="add-character-dog-tag" value="">
+                            </div>
+                            <label class="col-sm-1 control-label">draggable</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" id="add-character-draggable">
+                                    <option value="true" selected>TRUE</option>
+                                    <option value="false">FALSE</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-1 control-label">isHide</label>
+                            <div class="col-sm-3">
+                                <select class="form-control" id="add-character-is-hide">
+                                    <option value="true" selected>TRUE</option>
+                                    <option value="false">FALSE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">url</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-url" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">callback</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-character-callback" value="">
+                            </div>
+                        </div>
+                        <button class="btn btn-default" type="button">追加</button>
+                        <input type="hidden" id="add-character-webif" value="addCharacter">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="add-memo">
+                    <form id="add-memo-form" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">message</label>
+                            <div class="col-sm-7">
+                                <div class="input-group">
+                                    <textarea class="form-control" id="add-memo-message" rows="5" cols="80"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">callback</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="add-memo-callback" value="">
+                            </div>
+                        </div>
+                        <button class="btn btn-default" type="button">追加</button>
+                        <input type="hidden" id="add-memo-webif" value="addMemo">
+                    </form>
+                </div>
+
+                <div class="tab-pane fade in active" id="talk">
+                    {% for index in 1..5 %}
+                        <form id="talk-form-{{ index }}" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id=talk-name-{{ index }}" value="" placeholder="name">
+                                </div>
+                                <div class="col-sm-1">
+                                    <input id="talk-color-{{ index }}" name="talk-color-{{ index }}" type="text" data-role="color-picker" value="212121" style="display: none;">
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="talk-message-{{ index }}" value="" placeholder="messages">
+                                        <span class="input-group-btn"><button class="btn btn-default" type="button">Go!</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="talk-message-webif-{{ index }}" value="talk">
+                        </form>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,1329 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-evi.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/pc-common.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ　シーン1 状況を把握</h2>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ミドルフェイズです。まずは何が起こっているかを明らかにしてもらわなければならない。指定シーンプレイヤーはキュリオベンダーさんで、事件について把握してもらおう</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>まかせろー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>P187。とりあえず一緒に出たい人と、舞台裏に回って買い物したい人いますか</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、出ます。ちなみに市街地、駅周辺どちらですかね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あ、そこは住宅街の駅って感じで一緒に考えてたや</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>アンチマテリアル持ってるから特に舞台裏行く必要もなかった僕も出ようかなと思ったけどバディだからアレか</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>では自分は買い物でいいかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>シーンプレイヤーのキュリオベンダー以外で登場する人は能力値の魅力成功率で判定してね。P188、登場判定の修正</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go50 GardenOrder   D100<=50@10 → 42 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃ出よっかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go90 GardenOrder   D100<=90@18 → 61 → 成功</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ソロスタイルだと誰のシーンの登場判定でも+10%つく</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>100%やん。じゃぁ僕がソロだとどこにでも現れるのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そうだね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>時と場所を超えてどこにでも現れる</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おそるべし</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>重力使うから仕方ない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なんなら幼少期の記憶にも紛れ込んでくる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>重力すごい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>回想シーンにさらっと混ざってる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>そんなの絶対笑う</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではキュリオベンダー主体でエフェメラルブルーが同行している。そんなシーンです</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>アムネシアさんもいるぞ!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>おっとそうだった。カタカナのうちすぎで指が満足していた</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>この駅前はあれかな、事件現場とかかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>シーンの演出事態はわりと好き勝手やっていいです</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>賑わってる駅前通りみたいな</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>住宅街の駅らしいから、通勤時間とかじゃないかぎりそこまで人通りは激しくないかも</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>早朝とかだと賑わってないかもしれない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>人がワシワシ通るけどふと路地裏に目を向けるとkeep outな感じ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>なるほ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ワシワシ。ではキープアウトの黄色いテープを乗り越えて現場検証してみよう</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「なにがあるか”観て”みましょう」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ダイレクトにきた</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>警察に話は通ってるんでしたっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>通ってないんだな～</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>まじかよ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>洗脳しちゃえよ(手が早い</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃあ、事後承諾を得るということで</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>私は通行人から情報抜きますかねー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>事後承諾が(ブレインウォッシュにより)確約されたPT</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>さっと覗いていこう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>キュリオさん先どぞー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>調査関連の技能低いからすること無いな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>キュリオベンダーは観察か調査かな～ どっちでも</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃあ観察に《スーパーセンス》を足して100にしよう。センスがいいので観察力にすぐれているのだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>これが一代で財を成した者の視点か……。いちおうファンブルとクリティカルの可能性があるので振ってみてください</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 25 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いいですねぇ!クリティカルすると追加情報がでたりでなかったりするぞ。というわけでエフェメラルブルーは……調査か威圧、交渉かな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ僕は駅周辺の地形とかを見て怪しいアレとかないか見て回りますスナイパー的に</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ん、ではサイオニックパワーを交渉に組み合わせで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あ、僕RPが薄味なんで濃い目にしたいときはセルフサービスで</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>利用許可でます?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>天才経営者と思考読める人の組み合わせってとんでもないな!!もちろんいいですぞ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あざます。マインド・リーディング含めますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>(アムネシアには観察か追跡/逃走をふらせよう)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(それなんか見つけちゃうやつじゃないか。失敗するけど)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go90 GardenOrder   D100<=90@18 → 1 → クリティカル</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>さすが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>boku no dodontof ga hakking sareta</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>なぁにそれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>サイコロを調教するのがうまい。ついでだしアムネシアも振ってから処理しよう、いけいけ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>いけいけ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>失敗するの確信するのやめて。観察に能力使える気がしないのでそのままで振るます</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go60 GardenOrder   D100<=60@12 → 36 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ふっ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではまず数値的な処理。反オーダー意識からくる不審者ポイント(隠しパラメータ)が1点減って-1になりました。これは!!クリティカルの恩恵(その1)!!!です!!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>私だな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>無意識で洗脳してるやん</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>印象をよくする能力……!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>使うか悩んだがやはりか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あとはみんなの成功具合を混ぜて……。明るい時間や明るい場所では事件が発生していないし、関連のありそうな目撃証言などもない。それから、深夜に拳銃の発砲音のようなものを聞いたという話もありました</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>物騒ねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>追加情報は……「犯人の姿を見たという証言が一切ない」かな。こんなもんです</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>忍者じゃないか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>日本の闇にニンジャあり</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「これはテッポウカメレオンの仕業だな」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「テッポウカメレオン?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>テッポウカメレオン……!</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「伸びる舌の代わりに口から硬い弾を発射する巨大なカメレオンがこの街のどこかにいるかもしれない」ぜったいいないぞ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「……あぁ……」(冗談ですね)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「ふむ。こりゃ夜のほうが情報ありそうだな。……カメレオン?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まさかの害獣駆除案件だったとは</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「だんだん彼女のことが分かってきました。ともかく、目撃情報が一切ないということは、出てくるのは人通りの少ない時間帯でしょうね」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>とりあえず事件発生時刻が日が落ちたあとに偏ってるらしいので、張り込みをやるならその時間かな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「夜に張り込むとするか、お嬢さんがた」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「了解です。いつの間にか居なくなっていたけど、リヒトさんどうしたんだろう……」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「さてな。彼なりのやり方があるのさ。きっと」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>暗視装置かペンライト買っておくと使えるかもしれない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>買いに行けるの……?　そんなわけで舞台裏にいこう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>リヒトさん出番じゃ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>これ購入したやつって他人にわたせます?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>わたせるよー、というわけで威圧か交渉のどちらかで買い物をするか、昼寝してよい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>じゃあペンライト狙いで、威圧ですかねー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ペンライトの購入修正はプラマイゼロだから指定の技能でそのままgoしてください</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go48 GardenOrder   D100<=48@9 → 37 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>店員を脅してペンライトをゲットした</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>強盗じゃん……(威圧60)</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>「必要そうなんでな……貰っていくぜ」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>草</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>強奪してるやんけ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ペンライト屋さんかわいそう</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>隠しパラメーター下がっちゃうw</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>本日都内のホームセンターでペンライト1本が盗難されました</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>犯人はオーダーだったと証言しており……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ひどい偏見だ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>「威圧の仕方がまるでオーダーの方でした。オーダーに強盗されました。許せません」というツイートはバズらなかったので不審者ポイントは変動しませんでした、あんしん。以上でシーン切り上げます</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ　シーン2 張り込み作戦</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>方向性としては夜間に張り込みかな。よし、アムネシアをシーンプレイヤーにしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アムネシア流のイケてるなんかいい感じのシーンが見れるぞ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>なにそれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>一緒に登場するひとー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ほいほい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>しないー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>するかなー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>出る人登場判定だー。ここでペンライトをわたしてもよい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ペンライトの効果は同じ場所にいる人全員におよぶから、暗視装置よりも便利説がある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>戦闘中はエンゲージ内限定なので接近戦する人がもってればいいかな程度</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>まぁ光波干渉のパッシブで自分いらないので渡しちゃいましょう。アムネシアにわたします～</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ライフルで狙撃する時にペンライトで明るくするとか流石に無理そうではある</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「ペンライト?確かに真っ暗ですしね……ありがとうございます」</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>「俺には必要ない品物だしな……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>視力10.0</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>渡すために買ったイケメンじゃないか。あ、強盗した</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エフェメラさんが持つのが一番無難というか一番攻撃が集中しそうというか</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>もらったものを渡すのは流石にね?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>いいのよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあペンライトの処遇はこのへんで</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ペンライトは消耗品?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>回復アイテム以外は消耗しない。乗り物はある意味消耗品</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>草 りょです</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go60 GardenOrder   D100<=60@12 → 25 → 成功</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go85 GardenOrder   D100<=85@17 → 41 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>夜の駅周辺、さてどんな感じのシーンにするかね?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>私は観察、交渉辺りで調べようかなって感じです。もしくは抜けそうな情報攻める</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>重力だと探索関連ほんま何していいかわからんぞ……人通りすくなさそうだし飛ぶか。飛んで周囲の状況見れるくらいの暗さですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なんと街灯がたくさんある、すばらしい</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>見上げたらバレそうで草</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>出来ればコンピューターで監視カメラ見たいですね。あーでもハッキング持ってないから成功値半分か……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ僕はグラビティゼロ使って飛んで周囲見て回る感じで。これ特性使ったときの疲労とかってイニシアティブ表の疲労をへらす感じです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ほんとは減らすべきだけど疲労はシーン終了で回復するから戦闘のとき以外はいいよ。なんかふわふわ浮いてるイメージだけど屋根伝いの忍者アクションかもしれない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>なんせ隠密72やぞ。コンピュータはなんか最初に端末持ってないとPC使える場所探さないとっぽい?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>リヒト君シナリオ読んだ???ってくらいシナリオの例文と同じ行動しようとしてる</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>マジか  光波干渉持ちは電波は可視化できるのでまぁ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>蛍くん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ネカフェでハッキングできてもいいじゃない、ファンタジーだもの</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>通信端末の上位互換の携行端末みたいなノートPCのような何かがあるらしい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>情報多そうなので50%にかけて、コンピューターでお願いします。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ申告順に……。エフェメラは保留のほうがいいかな、アムネシアは観察で</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ですね、待機してます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>リヒトはこんぷーたーでいこう!いけいけ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go60 GardenOrder   D100<=60@12 → 10 → クリティカル</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>有能。隠密72仕事して(飛びながら</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>不審者すぎて不審者ポイントが減った</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>やばい、パスワードが12345だとバレてしまう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>この卓ちょろい女神さまだな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>特技の≪推測≫を使用します。で、半減だから</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go100/2 GardenOrder   D100<=50@20 → 47 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>今の所失敗をみていない……あっ(フラグ立ててしまった顔)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そのフラグ脚が笑ってますよ。先に描写しようか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>事件現場の監視カメラの映像を違法視聴すると、被害者が何者かに襲われる瞬間、陽炎のように景色が揺らいだようにみえました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アムネシアも現在進行系で攻撃される民間人を見つけてしまおう。突然なにもない空間が一瞬揺らいだと思ったら、人が倒れました。ナムアミダブツ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>相手ネフィリムだと特定出来てる感じです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>十中八九ネフィリムですね!　クリティカルしたしここからエフェメラルブルーの行動をしてもよい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>現在進行系ならもう危ないだろうし狙撃したいんですけども</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>狙撃ok!!!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ふむ。アムネシアさんから連絡受けて駆けつけることは可能?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>かけつけてよいぞ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>みんながんばえー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>では駆けつけたがガイシャの様子は?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>くらいから命中半減とかあるんかいの</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>暗闇状態を適応してすべての判定を技能値半分で行う にしよう。駆けつける前に狙撃を処理する</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>へい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ではとりあえず逃げてる民間人を見て急いで連絡してから狙撃をすることにします。半分って切り捨て?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>切り捨て!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>りょです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>(敵透明なんだよなっておもったけどペンライトで相殺したことにしよ、すごいぞペンライト)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「……あれは?襲われてる!?ネフィリム……!」(連絡してから狙撃体制に入る)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go52 GardenOrder   D100<=52@10 → 70 → 失敗</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アンチマテリアルライフルによる空中狙撃姿勢は反動を抑えられず失敗!!ナムサン!!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ぶっちゃけ重さはとにかく反動とかどうすんだろうなーってずっと思ってたよ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ジャムった!?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>1発目だしそれはないな!!!(うるさいミリオタ)。公害レベルの爆音と外した弾でコンクリート壁が崩れてしまったくらいですかね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>公害やん……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>しかし!!!そこには!!!!突撃するチームメンバーがいるのだ!!!!!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「大丈夫か!?」えー、まだ敵らしきものいます?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>逃走/追跡と捜索の両方に成功してみよう!　道路の修理も必要かもしれない……</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>捜索にサイオニックパワー組み合わせたいです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>よろしい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「エフェメラルブルーさん。ネフィリムらしきモノに追われている民間人が居ます。狙撃を試みたのですが、暗くてよく見えず外してしまいました」(着地しながら)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go60 GardenOrder   D100<=60@12 → 60 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>リヒトさんも駆けつけないと</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>マインド・リーディング込追跡</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go70 GardenOrder   D100<=70@14 → 57 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>リヒトはネカフェで見てはいけない動画みてるから</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>バディ……</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>報告資料まとめてるんだよ……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>尻拭いさせてすまないねぇリヒトさんや……追跡半減しないのん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>せやった。ぬか喜びをさせてしまった……</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、失敗or振り直し</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>失敗したら1メインアクションだけさせてあげようとおもっていたので、正体不明のなにかに攻撃をするか、とどまって普通の情報収集をするか、選んでください</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>デジカメあるんで撮影はありですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>便利ツールマンだった!!　ok</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>判定いれます?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ……写真術で……ないので……写真術ないので……観察かな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>一応〈芸術 写真〉あります</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>観察に適応してよい。芸術って+30だっけ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>観察85に30足しになりますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあそれの半分で</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>そんでもって半減?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>115/2か85/2のあと30足しか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>115の半分切り捨てで!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go115/2 GardenOrder   D100<=57@23 → 3 → クリティカル</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>1ケタァ……</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ごめんてw</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エフェメラルブルーが撮影した動画には「視えない何かがいる様子」と、「一瞬だけ、人間にはできない速度で走る服を着たヒトガタのもの」が映ったのだ。この動画は……バズらない……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>民間人は、民間人さんはどうなったんですか</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>確かに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>choice[dead,alive] GardenOrder   (CHOICE[DEAD,ALIVE]) → DEAD</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>死んだ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ショッジョムッギョ!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>えっ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>これもマッポーの一側面</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ニッポンの闇を見てしまったのだ、生きるか殺されるかだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>そりゃ現在進行系で追われてるところを撮影してたらね?まぁ僕外したんですけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあ真面目なことを言うと一般人は1ダメージ入ったら死ぬので</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>死体の処理ってどうなります?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>被害者が出てしまった代わりにわりと決定打ゲットした気がした</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>正直近くにアンチマテリアルライフルの弾が着弾したらコンクリートとかで普通に死にそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>死体どうしたい?　(激ウマギャグ)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>そりゃもう闇の組織よろしく隠蔽工作でしょうコンクリートとかも</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>清濁合わせ排水口に流そうとしている</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ネフィリムや我々の存在はとくに秘匿されてるようなものでもないので隠蔽工作いらないのでは</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そうですね。ファンブルしてないから大丈夫!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>まぁ警察バリにバッジだして聞き込むらしいですしね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なあに不審者と不審者が喧嘩しただけさ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>まあ処理班呼んで事後処理ですな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>では名もなき死体には医師より死亡診断書が発行され司法解剖待ちの列に並んでもらおう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エージェントさん……</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>「くそっ……また被害者が……」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「私がしっかり当てていれば……すみません」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「きみのせいじゃないさ、落ち込むな」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>このへんで舞台裏を処理しよう</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>どこかの舞台裏</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>キュリオベンダー先生の仕入れ講座</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>なにか欲しいものがある人はいるかな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>魅力の暴力</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>なければパワードスーツ作るけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>DIY派だった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>暗視装置(切実)。パワードスーツでええんじゃないでしょうか</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>パワードスーツにも暗視装置が内蔵されてるので</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>わーすごーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>パワードスーツ着る?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>アイアンマンみたいな見た目になりそうなので大丈夫です!!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>その昔CRYSISってゲームがあってねぇ……</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>自分は大丈夫かな</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>私もとくにいるのないかな</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>はい。交渉100+調達30+ソロスタイル10+スーパーセンス30-パワードスーツ80で90になる</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go90 GardenOrder   D100<=90@18 → 44 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まずご家庭にあるパワードスーツを着用します</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>交渉は驚くほどスムーズに進んだ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>どこに売ってるんだ……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>彼女の行動値は……もう……</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>自家製パワードスーツか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>自社製かもしれないし</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「こちらは契約書」「領収書」「同意書」「違約金の支払いに関する契約書」「随意契約書」「サインを」「サインを」「サインを」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ポンポンポン</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>行動値は2になったけど、切断属性とかの防御力は20になったので</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>タンクやん</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>生半可な攻撃は通らないぞ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ハードボイルドな刑事「こういう闇取引のうらには精神投影ヤローがいるんだ。俺は詳しいんだ」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>肉壁や</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>テクノロジーの鎧</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>俺はやってない!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次は情報整理用のシーンを挟んでいこうとおもいます</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ　シーン3</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ、やるぞーーー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>いえーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ワーワー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>グワーッ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>前回は透明なわるいやつが死体を一つ増やした……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>謎のダメージうけてる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>襲われてるところをビデオで撮影するツイッター民</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ダイスが荒ぶったなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>たくさんクリティカルがでて不審者ポイントも-2だ。ミドルフェイズの3シーン目……というか情報整理時間いる?的なきもちですがいる?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>どちらでも</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>情報整理するとお給料上がるならやろうかな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>調達したいものあるなら?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>お給料はあがらないが舞台裏ができる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>現状なんか見つけて外したけど録画したぜ!くらいの認識</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>だいたいそんなもんだな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>夜になるなら暗視装置だけほしいので舞台裏だけいきたいですね</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ネフェリム特定はまだ出来ないかな?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>次のシーンでわかるんじゃない(多分</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>相手に追手がいるのバレたなーくらい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>フム、ではこれまでの情報から敵を特定できるか判定するシーンにしよう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>シーンプレイヤーは任意なので誰でもいいけど最低でも誰か一人決めてください</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(役立たず)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>頭良さそうな年長組</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>知力13ある(並)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ほら、知力とは別の経験のようなアレが……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>カリスマ溢れてる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>というか今気づいたけど僕キュリオさんと全く同じステータスだ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>にてる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>判定したい人がでて買い物したい人がでない、くらいのきもちで決めてくれ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、じゃあ前回シーンプレイヤーやってないからやりたい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>どうぞどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>どうぞどうぞ。一緒に出る人いるかな、一人だけかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>僕どうせ役立たずなのと暗視装置ほしいので</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃあせっかくだし出ようかな。前のシーンで張り込みに参加してなかったので、情報共有しながら整理すると自然な感じになる</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>にゃるほど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>見た目が国家予算働いてそうになってますけど、たった一晩でなにが……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>パワードスーツ(魅力18)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>アイアン●ンみたいなみためになってるの突っ込みたい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>つよそう(こなみかん)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではエフェメラルブルーとキュリオベンダーで……場所やら時間やらはなんかいい感じの時間と場所です</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>いいかんじになった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>朝昼夜かすらわからないの草</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ふわふわしている</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>じゃあオフィス的なあれ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エージェントさん提供</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ高層ビルの60階くらいのチョーイケてる会議室にいます</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エージェントさんの株をあげるな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>一晩で日経平均株価がぐちゃぐちゃにされたんだ、いったい誰の仕業なのか……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>こわいねえ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「キュリオさん、現場で怪しいやつの撮影に成功したんだが、今までの情報からヒットするネフィリムを調べてくれないか?」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「お、よく撮れてるねえ」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>買い物以外でもつよつよなポジションになったちんぴんやさん</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「人型で、服を着ているネフィリム?」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ひとまずキュリオさんに調べてもらうスタイル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>しかも透明だ……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「こいつ光波干渉のオーダーなんじゃないの?」いぶかしげ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>(がたっ)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(私は……人を●そうと……)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「そんな気はするんだ。データベースにあるかい?」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「あまり期待しないでよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>調査か観察かなー。知識 ネフィリムのせてよい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>わーい。じゃあ調査+知識でふろう……観察のほうだった</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 82 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>では今までに得た情報と映像を確認して記憶を辿ったところ、GARDENのデータベースには載ってないなぁと思った。ただ特に気になったのは、敵の衣服に銃弾を受けたような痕があることと、そのわりにピンピンしてる。ゲーム的に言えば銃弾属性につよそう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(おわったじゃん)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>なるほど</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>まずいのでは</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「なので、いつもよりたくさん弾が必要になりそう。3発で殺せるところを300発くらい撃ち込む必要があるかも」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そういえば拳銃の発砲音が聞こえたという話もあったし、警察の拳銃程度では効かないのではというかんじ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「なるほどな。だが我々には力がある。件の犯人には制裁を与えねばな」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>せんせー、犯人の居場所について調べたい。追跡辺りでいけますか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>暴力is正義。よいでしょう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>サイオニックパワー使っても大丈夫かな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ok!!!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>マインド・リーディング込で100</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 17 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なんだこいつ3回目だぞ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>女神さまに戦闘で裏切られそうで怖い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>その成功の恩恵は次のシーンにパスしよう、なので舞台裏をします</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>買い物組ー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ僕暗視装置を手に入れるために店員を脅します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>暗視装置屋さん「ひー」</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>≪クレパスキュラーレイ≫を威圧に適応してもいいですか? 後光的な感じで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>後光……!</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ピカー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>シュールだから良し</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>もう相手に若干重力加えながら脅します(ロウ・オブ・グラビティを威圧に追加します)。りひとさんさきどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>暗視装置屋さん「くッ……とんでもない"圧"を感じるッ……!!」</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go78 GardenOrder   D100<=78@15 → 91 → 失敗</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>草</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あら</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>後光が通用しない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>光増幅型だとリヒトフラッシュで目潰しされそうだ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>軽傷回復スプレー必要そうなので脅します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>軽傷回復スプレーが目に入ったらどうなるんだろう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>視力が回復する</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>軽傷回復スプレー屋さん「ひー(殺虫剤シューーー)」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go70 GardenOrder   D100<=70@14 → 55 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これクリティカルしたらどうなるんだろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>購入判定はクリティカルないかなあ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「ごめんなさい、必要なので。ガーデンにツケておいて下さい!」人の家を漁る勇者ですら店ではお金払うのに……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>では無事に買い物がおわる。よかったよかった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>無事に</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ　シーン4</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エフェメラルブルーが敵を追跡する。遭遇地点から逃げていった方向にむけて調査しに行く感じかなあ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>じゃあ自動的にシーンプレイヤーかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあそうね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>では僕も暗視装置を手に入れて合流する方向で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>登場は全員にしよう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>おういえ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ほいほい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>シュタッ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>なら判定いらぬな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>日没頃の駅から少し離れたところ。なんか駅前なのに生き残ってる八百屋とか理髪店とかあるような通りの脇道から、何かが近づいてくる気配に気づくかどうか。回避か観察で全員振ってみよう</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>暗闇判定?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>暗闇ではない</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>おけです</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>パワードスーツのメタルマンじみたヘルメットの内側で目を青くしながら観察</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 61 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(キュリオベンダーさん、あの格好なんなんだろう……)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>マインズ・アイは使用可能ですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いいけどコストがかかります</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>思考を読むらしいので不意打ちだとどうなのかな、と。コストは疲労なので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>このまま戦闘に入るので減らしてね!ってこと</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>草</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(察してた)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>なるほどw</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃあスーパーセンスの分へらした</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>じゃあ観察にしときます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そうか、後出しになってしまってあれだけど、成功したら戦闘開始のとき配置をある程度選べます。失敗したら選ばせてあげない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁしないとね</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go85 GardenOrder   D100<=85@17 → 44 → 成功</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>特技の推測を観察にあわせますー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いいぞ～～</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go56 GardenOrder   D100<=56@11 → 1 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>やりすぎ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>クリどうしましょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>クリティカルは戦闘が始まったらイイコトさせてあげよう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>こう、周囲に重力の力場的なアレを張って周囲をサーチしてる的なソレで観察にロウ・オブ・グラビティを追加してもいいですか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アムネシア>ok</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>では観察60に+30%で</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go90 GardenOrder   D100<=90@18 → 67 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>やるじゃないか……。じゃあちょっと戦闘準備するので、しばしご歓談ください</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>がやがや</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>キュリオさんパワードスーツ分の行動値減ってないかも?</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>2にした</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>いざとなったら脱ぎ捨てるやつ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>そういえばオーダージャケットが1個余ったけど、欲しい人いる?　カジュアルウェアより硬いよ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>レジスティブ着てるからいいかなあ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>重力あやつれるなら普段着とおなじ感覚で着れる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>もらえるならもらっておこうか精神(普段着で参戦中)</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃああげるー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>え、行動値低減って装備毎なんです?</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃない?　ちがった、合計からって書いてあった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>説明が装備品の行動値の合計をなので違いそう。まぁでも流石に紙だしね!</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>でも遠距離から攻撃するなら、防御力より行動値のほうが大切かも知れない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>正直そう思って紙防御だったりする。でもダメージがどういうものなのか分かってないので紙で食らうとヤバいのではとか思ってる。まぁ着替える場所も無いし、とりあえず貰っておく流れで今回は行こうとおもうます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>よおし</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>わるいやつw</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おーワルだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>何の成果も得られなさそうな敵だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ……だれもドジ踏んでくれなかったので……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>「なかなか鋭いじゃないか」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「喋った……?ネフィリムではない?」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>「我々は先進的なのだ。お前達、特にそこの男。先日は私の食事の邪魔をしてくれたな……せっかく仕留めたところだったのに。食いっぱぐれて腹がへっているし、お前達がいなくなれば一石二鳥だ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>戦闘にはいるぞーーー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>りょ</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ　戦闘</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エリアD、E、G、Hの好きなところに配置してください</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>わるいやつと同じエンゲージに配置してもいいかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「美味しい銃弾を食わせてあげますよ……ネフィリム!」(距離を取りながら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エンゲージはだめー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>同じエリアはok</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃあ同じエリアで我慢</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>いまこのさんにんはDにおるの?</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ステルス中</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>わかんないと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>敵側はB、D、E、Fのどこかでステルス配置……だけどリヒトがクリティカルしたのでEだけみえてます</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あぁそれでさっきの会話あったのか</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>誰かにステルスかけたい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密状態の敵に攻撃されると</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ではFいきま</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>回避が半分になる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密状態の敵を見つけるには</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>フリーアクションで捜索をしてください</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>今していいやつなのんそれ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>隠密とかステルスとか操作kうとか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>自分のターンでやってね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>捜索!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ですよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>それと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>特殊ルールですけど周囲に一般人がいるので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>攻撃の対象が範や周のものをつかうと巻き込んでしまって不審者ポイントが1上がります</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ステルスはセットアッププロセスにかけられた記憶</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>無いので問題ない(でもアンチマテリアルライフル)</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ロケラン持ってきてないから関係ないな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>まだセットアップですらないからね、多分</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>僕Hでいいですか?</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>まあそうねw  自分もE行きます</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>コマ動かすのどこだっけ?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>DEGH</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>↑のPCsのとこにあるやつを直接ドラッグして</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>初期配置はF行けないかな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>でけた、あざます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>うむー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、なおす</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>DEGHじゃないのん?初期配置</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>Dいきま</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>タンクなのでタウンティングしておこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ほうほう～～～～～</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>よし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>挑発されちゃう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>タウントほしい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>セルとかブロリーみたいな足音を立てて</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>わるいやつの正面にパワードスーツが現れる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ドチュッドチュッドチュッドチュッ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>わるいやつやん</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「狩人が狩られることもある。かかってきなよ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>強者のオーラだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではこっちも確定してるので</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>(この人私達と同じランクなんですか?)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>戦闘開始します</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おなじおなじ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まずはセットアッププロセス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>タイミングがセットアップの特性能力とかが使えます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>つかうひとー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>なし</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>《†スローモー》つかう</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>先制値きめてからではないんです?</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>コスト軽傷1で特性能力で判定</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>たぶんどっちからやってもバグらないはず……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>バグこわい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>先制値みてからヘイストするかキメたいので……</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>先に先制値きめます?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>一応先制値先ですかね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そうするかー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ただヘイストってイニシアチブロールに修正を加えてそれがおわったら状態解除なので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>適応されるのは次のセットアッププロセスになるんだけどね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ1d10+行動値でふってください</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1d10+2 イニシアティブ GardenOrder   (1D10+2) → 10[10]+2 → 12</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>出目はつよい</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>1D10+10 GardenOrder   (1D10+10) → 3[3]+10 → 13</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>1d10+8 GardenOrder   (1D10+8) → 6[6]+8 → 14</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>1D10+8 GardenOrder   (1D10+8) → 6[6]+8 → 14</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>敵はMOBなので一律11</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>上から殴れるね!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ヘイスト開幕意味ないのか……必要なくない……?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ずっとヘイストほしいけどね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>リヒトとアムネシアが同値だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>どっちが先に動くか決めてね</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ステルスかけたいので先いいです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あ、キュリオベンダーのスローモー判定してください</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ええですよー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go100 スローモー GardenOrder   D100<=100@20 → 94 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あと僕も自分にヘイストかけます</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>あっぶね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ファンブルなんてでないやろーーーwwwwって思ってるとこういう値が出てヒョってなる</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>というかセットアッププロセスで使ってよろしい? とりあえず自分に</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>せふせふ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>〈特性能力〉に割り振るポイントケチってもいいことないと実感した</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>よろしいよ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 66 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>僕も自分にグラビティコントロール使用します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ステルスは疲労2か</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>疲労2ですです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>判定してー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 76 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>意思やっぱ大事だったかもしれない(残り2の疲労を見ながら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>もう疲労困憊</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではリヒトのターンから</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>逆に軽傷とかからコスト払えるの強い気がしてきた</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>メインで≪バディエフェクト≫、アムネシアに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>戦場からどんどん人がいなくなっていく……</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 77 → 成功</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>これ敵との距離どうなってます?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>近距離ですね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>しゅごーい距離関係ないんだステルス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ステルスはフリーアクションでもできるけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>メインアクションでもいいかい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あ、フリーで≪バディエフェクト≫に変更してもらえませんか……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>メインアクションでいいのかい!!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>バディエフェクトはメインアクションでは?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>だった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あーそうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ステルスを使うわけじゃないんだよな……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ほとんど同じ文章なのに細部が異なるの罠だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ごめんねメインアクションだわ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あ、無理ですねこれ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>この隠密判定の成功率ってなんだろう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>撃った後またフリーで隠密で100%!!とかできるのん?</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>移動したりするときに隠密が解除されないかどうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>敵に捜索されたときに敵側の捜索と隠密で対決判定するから</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>判定しないといけないのだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁほぼ見つからないと</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>これもうなにもすること無いのでは……?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ペンライトあればつかえたねぇ……といった感じ?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>移動と被捜索時の対抗手段だね>隠密+30</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>リヒトはメインアクションしたからもうほとんど出来ることはない</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>じゃあ 次どうぞ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ僕か</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>とりあえずフリーアクションで暗視装置ONにします</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>キュイーン</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これ3人は見えてないから捜索的なことしないと狙えないんですよね?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>うむー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ見えてるエビを普通に射撃します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>マフラー(エビ素材)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これは成功率射撃でいいんですよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>銃器だねー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>そうそう、銃器</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go105 GardenOrder   D100<=105@21 → 97 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ほげぇ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あぶな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>では回避をします</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ふふふ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 [回避] GardenOrder   D100<=20@4 → 3 → クリティカル</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>＼(^o^)/</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>わああーーー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>おいw</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>草</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>この悪いやつ、只者じゃない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ちなみに隠密とかで回避半減ってしました?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>音速の弾道を完全に読み切った</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あっ半減してなかった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>といってもクリティカルじゃなくなるだけだから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあ避けるよね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ダメなのか……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>やっぱしこれ命中高くても良いこと無いな?次から連続攻撃しよ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>今回半減してるかちゃんと指差し確認しなきゃ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあアムネシアは隠密が解除されて終わりかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次はイニシアチブ値13のエフェメラルブルーだ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>サイオニックパワーって捜索に組み合わせていけますか</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>読み取りって見えてなくてもいけるんだろうか</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>思考の網的ななんか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>心理的に隠れてそうな場所をうんたらかんたら的あれでいけそうだからよし</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>自分への敵意のむき的なソレ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>いろいろできる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>屁理屈をこねろ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>マインズアイしてたから合計で疲労-2していま6かな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、でも結局隠密だから半減か</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>みなさん疲労を減らさない</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>紙に書いてた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エフェメラさんだけ僕が減らしてるけどほかは自分でへらしておられる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密対象の捜索は半減しなーい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なのでふつうに捜索してください</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>半減なし了解です</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go60 GardenOrder   D100<=60@12 → 38 → 成功</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「隠れても無駄だぞ。そこかっ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>でまあ隠密が捜索できるかどうかは対決判定っていったんですけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>共有メモにかいてるようにめんどくさいんで捜索成功したらバレます</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>どれを探すかみたいな宣言っていらないのん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エリアDか</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>choice[2,3] GardenOrder   (CHOICE[2,3]) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なんといっぴきかくれていたぞ!!!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>もうこれで2匹いるのわかったな(メタい)</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「まず一匹見つけたぞ!」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ2</div><div class='col-sm-10 serif'>「(><;)」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>可愛いな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>かわいい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>かわいくても殺さないといけないからつらい仕事だよ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>スローモーだしワンチャンまとめて倒しちゃって下さいアイアン●ン</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あ、エリア外だった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そういえばTRPGで可愛い敵倒したこと無いな……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>慈悲深い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>捜索はフリーアクションなんでまだまだエフェメラれるよ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>というか捜索はフリーアクションかな?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>え、他エリアも捜索していいの</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>メインアクション消費するなら追加の捜索ならしてもいいかなー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これ同じエリアに居なかったら無駄捜索でおしまい!ってことです?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>メインやる予定なかったんで捜索しま</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>どのエリア捜索するか指定したらそこを捜索させてあげよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>指定しなかったら自分がいるエリアにかってに変更する</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>おうけい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>捜索どうぞー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>くくく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>敵が何をしてくるかわからないから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>どこらへんにいるかもわかるまい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>くくく</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>choice</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>こっからB捜索も出来る?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>できる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>でもそうするとそこにいるもうひとりからふいうちをくらう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、そうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>イルカドウカワカンナイデショー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>範囲攻撃まずいし殴っとくか</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>マインドブラストいきます、対象同エリアの敵さん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ひー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>わる2かな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 49 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>2番くんは視えてるからふつうに</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>わるもの2の意</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>それはわからない</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、ソロエフェクトで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>コストは軽傷1だね</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ミス、ソロエフェクト宣言いるのか</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ソロエフェクトはパッシブ感</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エフェメラルブルー (軽傷 6->5) (5)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ソロエフェクトはたぶん宣言しなくても勝手に発動してる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そうじゃないやつもいるかもしれないけど</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>僕のとかコストいるからね</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>文章的にパッシブだと思ってた、てなわけで放心あたえます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>特性能力を強化する系はパッシブかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ところでこれ重症とか軽傷とか減っても特にペナルティとか受けないのん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ2</div><div class='col-sm-10 serif'>go20 GardenOrder   D100<=20@4 → 65 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>とくにペナルティはないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>回避失敗したのでダメージをちょうだい</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>1D10+10 GardenOrder   (1D10+10) → 6[6]+10 → 16</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>HP1でもピンピンしてるFPSの兵士だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>修正値が10だって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>MOBのHPは10だ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>即死だ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>防御貫通しますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>わるいやつ2は脳みそが弾けてしにました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次はキュリオベンダーだ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「さよならだ」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>負傷表の使い方がイマイチわかっていない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>出たダメージがたとえば22だったら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>攻撃した属性の負傷表の20～22のところが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>実際相手に与える影響だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ただ今回の敵はMOB(雑魚戦)なので</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>負傷表はP271</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ですよね。今回だと軽傷3をくらうだけってわけではないんです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>負傷表システムそのものを使わずにHP制にしている</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>揺らしてないのに勝手にゆらゆらし始めた</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>とまった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>マ?部位狙い何の意味もない?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ゆらゆらする方とゆらゆらしない方が登録されてるかも</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>MOB戦では特に使いみちないね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>今回の仕様で、本来だと軽傷3ダメだけだったってことです?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>部位狙いって宣言いるっぽいよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ボスとかPC側のダメージは負傷表を使って処理するので</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>さっきちょっと失敗したっておもった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>きみたちが攻撃を受けていたら軽傷3だった</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>とりあえずわるいやつに突撃してエンゲージしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ひー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>そうするとボスとかだと100ダメージ出そうが致命傷2とかって理解であってるのかな</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ホークアイ連続攻撃します</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>コストは疲労1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あってるあってる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>きなさい!!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>把握ですー、色々聞いてもうしわけない</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>85@22</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go85@22 GardenOrder   D100<=85@22 → 72 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いいよーGMも勘違いしてるかもしれんので</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1発目命中</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>2発目もふっちゃってください</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go85@22 GardenOrder   D100<=85@22 → 81 → 成功</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>あたった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>よけてやるぜよけてやるぜよけてやるぜ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 [回避] GardenOrder   D100<=20@4 → 12 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 [回避]</div></div>
+            <div class='row '><div class='col-sm-2 name'></div><div class='col-sm-10 serif'> GardenOrder   D100<=20@4 → 58 → 失敗</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>1発よけた</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>がんばるねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>1つ目はお互い成功してるけどこっちの出目のほうが低いので回避成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>2つ目はふつうに当たりました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ダメージください</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これやっぱ回避とかあんまし高くても意味ないやつやな?出目勝負になるし</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1d10+18 GardenOrder   (1D10+18) → 8[8]+18 → 26</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>50くらいあればなんとなくオッケーなきがする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>銃弾属性で26ダメージ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゅうだんにつよいとは</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>このEviの銃弾防御は19なので</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>どれくらい硬いのかなー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>7ダメージ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>つよかった</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>かった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>Evi@わるいやつ (死亡 10->3) (3)</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「よく生きてたね。えらいぞー」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>かたいねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>どうでもいいけどMOBってHP1の雑魚の集団だから本来なら7人死んだことになる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>殴ったほうが強かったやつだってシックスセンスさんは能力の攻撃とかないんだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>HP減るにつれて攻撃力とか下がりそうなモブ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあイニシアチブ11の処理</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>キュリオベンダーが目の前にいるから殴ろう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>この人タンクだからな……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go60 [吸血(当身)] GardenOrder   D100<=60@12 → 73 → 失敗</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>きゃー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>かぷかぷ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>出来なかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次は3番</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エフェメラルブルーがいるので血を吸わせてもらおう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>こいこい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>こいは草</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>至近攻撃なのでエンゲージして……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go60 [吸血(当身)] GardenOrder   D100<=60@12 → 19 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>カプカプ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密からの攻撃なので回避が半減します</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>死んだな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>敵の移動に隠密解除判定ないんです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>移動ってエリア移動だから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>今回はエリアを移動してないのだー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あ、なるほど</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>マインズ・アイ使用いいですかー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いいぞー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go70+30/2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>おっと</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go50 GardenOrder   D100<=50@10 → 32 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>goコマンドは計算式つかえないので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>なるなる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>/2は連続攻撃用でクリ率へらないっぽいしね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あとマインズアイは判定なしでコストだけ払えばいいから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>特性能力判定はしなくて大丈夫</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>というわけで回避どうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>したのかもしかして</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>今の+30%してたし回避のつもりでは?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ、いまの回避だよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあこっちの出目が小さいので回避失敗で</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>このエビ強い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>1d5+15 [切断] GardenOrder   (1D5+15) → 5[5]+15 → 20</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>ガブガブチューチュー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>出目が強い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>切断防御は4かな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>レジスティブ着てるから16</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>うむ、4あるね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>DCSL16 GardenOrder   負傷表 切断[16] → 軽傷4 | 胴部負傷 …… 胴部に大きな傷を受ける。</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>お腹おいしい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>結構な重症</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これ僕くらったらあかんやつやん……(普段着)</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>くくく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>最後4は</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ぜんぶ避ければ大丈夫</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エリア移動しよう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>回避ひくいので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>このMOB隠れる気がないな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 [隠密] GardenOrder   D100<=20@4 → 58 → 失敗</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>隠密低いの草</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>バレたけど移動しよう</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>消えてるのに20しかないのかわいそう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>なんか来た</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>全力移動で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ん?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密維持のためにメインアクションで隠密判定するから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なにもできん……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隣に到着して終わりだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>隠密維持しなければいいのでは</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>何したかったんだw</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>血を吸いたかった……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではクリンナッププロセス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>といっても誰もDOT受けてないのですることないはず</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これ今隠密しなければ殴られてたってことでOKです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>えっと</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密状態でエリアEからHに移動しようとして</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>隠密維持のために隠密をメインアクションで振ったので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>せっかく移動してきたもののメインアクションがないのでなにもできなかった</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あ、隠密で見つかると隠密は維持しないととかそういうのかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>隠密移動で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>はあく!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>これでラウンド終了</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次またセットアッププロセスにもどりますけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>45分まで休憩しようか</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>トイレ休憩</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ほいほい</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はーい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>このゲームダメージが負傷表を参照するので</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エンゲージと離脱あたりがよく分かってないな……(ルルブ読みながら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>思ったより痛くないな～～～っておもってるとゲージがなくなっててアレ……苦戦してないこれ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ってなる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>コストで払う時は大したことないのに食らうととたんにDOT貰う仕様だぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>SW2.0の熟練戦闘でいうところの乱戦状態とかが分かればアレだよ!!って言えるんだけど</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>当たるときつい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>簡易でしたまる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>一つのエリアで剣士と剣士が戦っているとして</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ガンガン打ち合ってる状態がエンゲージ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>間合いを図ってるけどいつでも飛びかかれるのが同一エリアで非エンゲージ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>って感じかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>僕が一度エンゲージされると銃使えずに離脱→突入の無限ループ?一応重力アタックあるけど</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>アイアンマンが助けに来るよ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>まぁ飛んで逃げるつもりだったんですけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>離脱に失敗してボコボコにされるか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>同一エリアから抜けられなくて、相手もフリーだったらすぐエンゲージに引きずり込まれる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エンゲージ状態から1行動でエリアでられるんです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>飛行状態だったら全力移動でできるかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ふむふむ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>で飛んで逃げると命中半減と</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>移動値が2ないとだめか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>離脱に1移動値いるから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>飛行しててもむりか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>PCは移動値増やす手段今のところ無いはずだし</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>乗り物も移動の役にたたない……?</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>p.224に隠密状態での移動での隠密判定フリーアクションって書いてあるけどどうなんです?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>バイクは飾りです</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おしゃれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>メインプロセスのフリーアクションをメインアクションだと勝手に読み違えてた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なぐれたじゃん……!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあしょうがないや</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>了解ですー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>指摘たすかります。時間だ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エンゲージの位置に関わらずってあるけど離脱の流れいるんかな……いるなら飛行わりと役立たずやな……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いまいち説明がよくわからないんだよな>飛行状態の離脱関係</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>では再開しますー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>セットアッププロセス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>イニシアチブロールをどうぞ!</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1d10+2 GardenOrder   (1D10+2) → 3[3]+2 → 5</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>パワードスーツのバッテリーが</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>まぁそもそも数十m飛んでるのに殴られる状況がわからないしね……とりあえず飛行クソザコな流れでやるしかないか</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>1D10+10 GardenOrder   (1D10+10) → 10[10]+10 → 20</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>1d10+8 GardenOrder   (1D10+8) → 9[9]+8 → 17</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>1d10+13 GardenOrder   (1D10+13) → 7[7]+13 → 20</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>先制ガチ勢がいますねぇ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>セットアップでやるアクションはあるかな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>バディエフェクトかけられます?</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>一応スローモー使っておこうかな</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>たぶん撃つことなく終わるけど</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go100 スローモー GardenOrder   D100<=100@20 → 66 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>バディエフェクトどうぞー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ちなみにEのエビ●した後フリーで隠密で隠れられますか</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 99 → ファンブル</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>a</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>よよよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>コストを払って</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ついでに不審者ポイントがあがって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>何もできなかった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>攻撃したあとに隠密チャレンジはオッケー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>あの人、敵と同じ能力使ってるわ……不審よ……ヒソヒソ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ステルス合戦</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>「能力の暴発……うっ……(幼いころの記憶がよみがえる)」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>かわいそう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>SAN値チェック</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ほかになければアムネシアかエフェメラルブルーのどちらかが先に行動してください</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ぶるーさん先にどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>リヒトおいしいなぁ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ほいさ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>「マインドブラストされると確殺なんですけど」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>では目の前の輩に精神攻撃</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>「ぎゃああ」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 99 → ファンブル</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>wwww</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>あっ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>草</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ファンブル感染</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>というかあの人あぶないでしょ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ファンブルファンブル……ファンブルファンブル……</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>嫌な予感ってあたるよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>マインドブラスト2回めで4軽傷うけてるから</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>クリティカルで稼いだ不審者ポイントがどんどん溶けてく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>軽傷ゲージが0かな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ところでエリアの間に封鎖ってあるのがよく分かってないんですけど</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>封鎖ってエリアに適用するものじゃないんです?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあAとCとIは使わないからエリアごと潰してるようなもんだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>DとGの間は行き来できないほうが楽しいなあっておもって</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>通れないくらいの認識かな?銃は撃てる?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>撃てるよー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>因みに飛んでたら通れる?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>だめだめ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ペッ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>飛んだら航空自衛隊ががスクランブルしてくる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エンゲージって至近ですよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ではアムネシアの番</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>エンゲージは至近</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>フリーまだでは?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>目の前の敵に近のグラビティ撃ってから隠密はできる?というか目の前の人今隠密してるのかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>おっとごめん、フリーアクションなにかある?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>エンゲージ中に隠密出来るのか、からだけど。隠密のところには出来ないとは書いてないけども</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いないかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アムネシアいってしまおう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あい。目の前の人隠密してるんですっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>特性能力全部グラビティついてるからどれかな</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>グラビティフィスト、直接攻撃するやつです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>Hの敵は隠密してないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>メインアクションしてフリーアクションだからその行動は可能</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あとグラビティフィストは近距離だから撃ってもエンゲージするわけではない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ですよね。もし外してその後エンゲージになった時とか隠密できるのかなって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>至近だったらエンゲージしないとあてられないけどね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>できるー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>隠密有能か</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>んじゃぁとりあえずエビ4にグラビティフィストします</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go100 GardenOrder   D100<=100@20 → 97 → 成功</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>あぶない</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これは……また……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>でも隠密出来るか状況かどうかはGMの裁量なんだよな</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>せふせふ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>っぽいんで一応聞いた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>高めをキープしている</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>まあ初戦なのであまあまモードでいこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>とりあえず回避</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 GardenOrder   D100<=20@4 → 53 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>こいよ!!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>2d10+15 GardenOrder   (2D10+15) → 10[3,7]+15 → 25</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>くくく</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あ、衝撃です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>私の衝撃防御は9だ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>bye</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アスファルトのシミになりました</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ぐろーい</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「近づいて勝ちだと思いましたか……!」(近くのコンクリブロックをぶつけながら)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ではフリーで隠密します</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ガツンガツン</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>判定どうぞ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>go72 GardenOrder   D100<=72@14 → 33 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>消えた</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ターンエンド</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次はリヒトだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あ、やっぱり移動</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>オウ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>Gに移動できますか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>どうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あらためてリヒト</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>こんどこそターンエンド(カードゲーマー相手だと却下されるやつ)</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ほいほい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>つじつまがあってればいいです</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>悪い奴3に≪レーザーショット≫します</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>成功率半減でいいのかな?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>レーザーショットか</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>狙撃ないから半減するのか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いや最大射程が近距離だから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>別エリアいけたっけ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>レーザーショット遠までいける</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ほんとだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>しつれいしつれい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>狙撃がないから半減でok!!</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ほいほい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go50 GardenOrder   D100<=50@10 → 28 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>当てていくぅ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 [回避] GardenOrder   D100<=20@4 → 67 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>うわーん</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ボロがでてきた</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>レーザーポインタ使えばペナないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>誰がロボじゃ!!</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>二回は無理では?</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>便利だな～光波干渉</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>併用は多分できるんじゃないかな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>まぁ当たれば無問題</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>レーザーポインタもコスト払えば使える便利スキル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ダメージ頂戴</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>2d10+15 GardenOrder   (2D10+15) → 10[5,5]+15 → 25</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>くくく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>わたしの灼熱防御は3だ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>よわい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>炭になりました</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>二人分死んだ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>さよなら</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>「これが俺の、レールガン!!」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ブルーさんはお礼いって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>弾当ててない人がえらそうだ</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「感謝するよ」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>モノぶつければいいんだよ思想</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ほかに行動はあるかな</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>隠密判定します</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>アンチマテリアルライフルで砕いたコンクリートの破片を重力操作で操って攻撃する</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>回りくどい……!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>計画通り</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>OKならですが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>オッケー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>go70 GardenOrder   D100<=70@14 → 82 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>もうコンクリートブロック持ち歩きなさい!!</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ターンエンド</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>頭かくして尻を隠してません</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>不自然なダンボール箱が現れました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>きっとうまく隠れたことでしょう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>隠れたつもり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>最後のひと噛み咲かせてみせる</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>「さて、次はどこにキスしてくれるんだい?」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あ、この人遅いんだった</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おそいぞー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go60 [当身] GardenOrder   D100<=60@12 → 44 → 成功</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>パワードスーツなんて着たらジェットのような何かで早そうなもんだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じつは戦闘用じゃなくて工業用なのかもしれない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>回避おねがいします</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>じゃあ回避+アンティシペイション</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>パチモン掴ませやがりましたね</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go84 GardenOrder   D100<=84@16 → 68 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いける……!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>殆どとおらなさそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>1d5+15 (切断) GardenOrder   (1D5+15) → 3[3]+15 → 18</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>防御力は20でーす</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>ガブガブチューチュー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>歯が折れました</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>カンッ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>これはパワードスーツの油圧用油……!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>というか最大値でも0ダメで草</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>かなしみ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>リンゲル液</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>キュリオベンダーさんだ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ホークアイ連続攻撃します</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go85@22 GardenOrder   D100<=85@22 → 9 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>よわいものいじめだーーー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>しんだ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go85@22 GardenOrder   D100<=85@22 → 39 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>オワー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 GardenOrder   D100<=20@4 → 59 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>go20 GardenOrder   D100<=20@4 → 75 → 失敗</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>しんだ。すいーつ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>1発目防御貫通2発目通常ヒット</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1d10+18 GardenOrder   (1D10+18) → 7[7]+18 → 25</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1d0+18</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>1d0</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>は草</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>1d10+18</div></div>
+            <div class='row '><div class='col-sm-2 name'></div><div class='col-sm-10 serif'> GardenOrder   (1D10+18) → 5[5]+18 → 23</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ダイス真っ黒なんだ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>虚無のダイス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>25+4mo</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>PDWで正中線を割られて2つになりました</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>妖刀PDW</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>職人的ワザマエにより不審者ポイントが下がる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>通行人からは割れるような拍手だ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>もう目立つなとかいうの誰も考えてない</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>銃剣だった……?</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>チェーンソーが付属してるやつかも</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>正当防衛です(キリッ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>結局敵の正体わかってないというw</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>パーソナルをディフェンスするウェポンだからね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>死体をガーデンに送ればなんとかなるでしょう</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>持ち物漁ったら免許証とかもってるかも</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>ポケットがさがさ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>@戦闘終了……君たちに襲いかかってきた敵ー吸血鬼たちはほとんどが殲滅され、生き残った少数はばらばらと逃げ出した。その中で、一際おおがらな個体が工場地帯の方へ去っていったのを君たちは確認した。</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「いかにもなボスっぽいのが工業地帯の方に逃げていきましたね」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>バッチリ撮影したZE</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>というわけで敵のデータはります</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>「敵は吸血鬼だったか」</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「キュリオベンダーさんに噛み付いたかと思ったら歯が折れてましたけどね」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>左上の共有メモにはりました</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「通りで夜間しか情報がないわけだ」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>融合兵かなにかかと思ったが違ったか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>設定的には融合兵みたいなものかも</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>プレイヤーたちの一幕</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>あとはクライマックスフェイズのボス戦だけだ</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>時間的に来週ですかね</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>土曜だけで終わりそうだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>うむー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>戦闘はやはりかかるなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>回復とかしたいかもだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>次回の頭に舞台裏なしのシーンを1個いれるので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そこでやってもらおう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>了解です!</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>舞台裏ないのに回復できるのん?</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>普通にミドルってことかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>舞台裏というか購入判定なしか</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>クライマックスの直前にいれるのはありっぽい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>お買い物禁止の追加シーン</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>サービスシーン</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>サービスシーン</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>禁じられた買い食い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>応急手当で判定したほうが回復するひともいるから</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>まあGMがいいと言うなら有り難く回復タイム頂こう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>軽症埋まったの痛いし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いちおう前に自分のとこで回したときはボス戦で3時間だったので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>来週の土曜日4時間でおわるんじゃないかなーとおもう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>ほえー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>ほうほう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>にゃる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>慣れてる人で3時間である</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>こっちが先制とってすべての攻撃クリティカルで当てれば</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>もっと早く追われる!</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>終われる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>お気づきであろうか。この少女まだ銃弾を1発も当ててないのである</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@わるいやつ</div><div class='col-sm-10 serif'>ぼくもそれする</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>放心状態でなにもさせない!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>3回くらい銃撃でロールしていたきがする</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>クリじゃないと銃弾ほぼ通らないの痛い</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>やはり武器をコンクリートブロックに持ち替えるべき</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>アンチマテリアルライフルさんならさっきのくらいは即死だから……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>当たれば……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>一発1000円だって</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>3000円無駄打ちしてる</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>パーソナルデータ「貧窮」</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>諭吉つかお</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「3発も無駄打ちしてしまいました……今週の食費が……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ラーメン5食分</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>お金ないのにどうしてそんなでかい銃買っちゃったの‥‥?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>お金を全部対ネフィリムに注ぎ込んでいる設定(貧窮を見て決めた)</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>キュリオお姉さんに任せればなんとかなりそう</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>「仕方ありませんね、終わったらご飯奢りますよ」</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>なんとかしてあげようとしたら</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>自分で買うって言われたので</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>そっかーっとなりました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なあに売れば金になる(金の概念はない)</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>自分の武器は自分で買いたいあるある</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>「ごはっ……祝勝会ですね、それなら仕方ないです。ご一緒します」</div></div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>ミドルフェイズ　シーン5</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>じゃあ、つづきをやるぞー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>えいえいおー</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>いえーい</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>おー</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>やっはー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>物損事故をおこさないように</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>きをつけましょう</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>むりです</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ご安全に!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>皆さんは完璧な市民なのでこれまでのあらすじなどなくてもすべて把握していると確信していますが</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>指差し確認大事</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>もちろんです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>念の為述べておくと闇討ちしてる吸血鬼を闇討ちしようとして闇討ちされたのを撃退したところです</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>幸福は義務</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>余裕でしたね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アンブッシュ2回というシツレイ許されざる</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>軽症埋まったなあ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そんで親玉っぽいのを追いかけてボス戦にはいるんだけど</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>その前に治療するためだけのシーンを1個いれます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>応急手当のほうが回復しそうな人は登場して舞台裏の待機でいいやって人は舞台裏で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>いいかんじに治療してください</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ポイントふってなくても40%で回復するし</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>お買い物できないシーンらしいし</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>登場判定いりますか</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>登場しておこう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>判定いらないよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>きみが主役だ!君も?じゃあ君も主役だ!</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>はい、じゃあ出ますー</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>軽傷1点と疲労だけなので舞台裏で大丈夫ですー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>完璧なダメージコントロールだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>これ舞台裏1点しか回復しないのね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>そうなんです</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>アイアム軽傷治癒スプレー2本持ってるマン</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>パワードスーツで怪我されたら治療めんどくさそうだ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>スプレー使っておいてもいいのかしら</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>アイテムを使っても良い</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>可能な限りリソース残したいしまずは応急手当てかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>なんなら重症治療キットとか今しか使うチャンスない(使うとなくなるけど)</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ舞台裏で1点回復しつつ疲労かいふくスプレーも使って4ポイント回復する</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>わたしもエフェメラルブルーに対して応急手当しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>舞台裏でアイテムはあれだけどどうせフリーアクションで使えるしいいか</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>とりあえず自己回復からします</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>出来ないんだったらええけど</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>疲労って今回だと自動回復しない感じです?</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>あ、シーン変わると回復するんだっけそういえば</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>場合によりけりですかね</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>さすがに自己回復にサイオニックパワーは違う気がするので素振りしま</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>スプレー一本飲むくらいいつでもできるでしょ</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>サイオニックヒールが自己暗示なんだし使える気もするけどどうせ100%か</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>go65 GardenOrder   D100<=65@13 → 51 → 成功</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>1回復</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>応急手当ふるぞー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>go40 GardenOrder   D100<=40@8 → 25 → 成功</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>もう1点追加</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>スプレー1本分になった</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>あざます!</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>便利だなー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>疲労はシーン変わると自動回復だからすでに回復しているといえる</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>どうするかな、スプレー使っておきますかさすがに……</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>じゃぁ全快ですわ</div></div>
+            <div class='row pc9'><div class='col-sm-2 name'>リヒト</div><div class='col-sm-10 serif'>了解ですー</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>それがいい</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>こっちのスプレーも1本エフェメラルブルーに使用しておきます</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>これで元気になるはず</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>では手持ちのスプレー使って2回復しときま</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>2点とか見てるとサイオニックヒールが以下にぶっ壊れてるかわかるな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>ひんしがげんきになるからね</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>ランク+2ってどう考えても1シナリオ1回じゃないと</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>おかしなことになる</div></div>
+            <div class='row pc3'><div class='col-sm-2 name'>エフェメラルブルー</div><div class='col-sm-10 serif'>疲労2でやっていい回復量ではないよねw</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>重症には2ポイントかかったりするんでだいたい重症2と軽傷3とか重症1と軽傷5とかですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>みんな全快か</div></div>
+            <div class='row pc1'><div class='col-sm-2 name'>アムネシア</div><div class='col-sm-10 serif'>もともと疲労しかしていなかった</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>わたしは軽傷が1減ってる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi</div><div class='col-sm-10 serif'>かすり傷やん……</div></div>
+            <div class='row pc5'><div class='col-sm-2 name'>キュリオベンダー</div><div class='col-sm-10 serif'>コストで食らった軽傷なので実質無傷</div></div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,766 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/akgn-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-evi.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div class="container">
+        <section>
+            <div class="row warning">
+                <div class="col-sm-12">
+                    <p>WARNING: このリプレイは、公式シナリオ「ブラッドシアター」を使用しています。ネタバレが苦手、またはプレイ予定の方は閲覧をお控えください。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>※未編集</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃクライマックスフェイズ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>あってた？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>クライマックスフェイズ　シーン    新作撮影開始　シーンプレイヤー    口車</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>島澄栄二郎は撮影の準備をしている。彼に心酔している佐々木真紀は、状況を全く疑っていない。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>　スタジオには血の匂いが充満していた。そんな中、花のような笑顔を浮かべる少女。撮影は開始された。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ということで</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ほうほう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>佐々木真紀の解体ショーや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>Tフラグが6以上なら撮影は開始されてるんですが</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>撮影の準備って一人でやってるの？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>打倒ササキマキ！覚悟しろ！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>現在3なのでまだ準備中だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>一人です</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>監督がカメラ回して、出演して演出もしてるのか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>大変だな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エースの体力は尋常じゃないから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>一人でなんでも出来る</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>戦力でいうと３２ある</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>つよい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なお今回は戦力値は使わない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>そうなの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>省略戦闘のときはヤクザと同じように戦力値で判定するんですが</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ボス戦なんで省略しません</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なのでつかわないのだ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>巴に隠密を使ってマキを救出させたいけどできるかな？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>むりかなあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>無理なのか……じゃあマキは諦めるしかないな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>諦めが良いですね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>だって100％人質にされるじゃん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ボスだからそんな姑息な発想はない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>なんと</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>じゃあ正面から突撃するか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>とにかく異常者だから、普通の感覚じゃないのは間違いない（ご都合主義</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ただしい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>「そこまでだ変態殺人鬼！お前は完全に包囲されている大人しくお縄に着きなさい」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>拡声器で話しかけよう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>「何だお前達。邪魔をするな。死にゆく彼女は美しい。この美しさを永遠にするんだ」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>「何を血迷いごとを……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>シーンに登場しているので拡声器はいらないです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>「黙れ！お前みたいな売れない３流監督はどうせゴミみたいな作品しか作れないんだ」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あ皆さんキズナポイントどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>1d10ね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>1d10    AceKillerGene : (1D10) → 1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>あえて室内で拡声器を使う人間です僕は</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>1d10 三上京香 キズナチャレンジ    AceKillerGene : (1D10) → 5</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ひどし</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>1d10    AceKillerGene : (1D10) → 1</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>うああああああああ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>京香はレベル５に突入したなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>40たまったからLv4到達かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>Lv4が満了してLv5到達ですね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>戦力＋３</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いみねえ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>かなしみ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>さて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エースである島澄に対面した一般人である口車くんは</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>SANチェックだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>なんやて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>意志の半分でどうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>目を塞ぎますよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>うるせえ、振れ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK35    AceKillerGene : D100<=35@7 → 22 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>えー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エースは特別なカリスマ能力とかなんか便利な対人能力があるので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エースに対して一般人のPCが何かするときはすべての判定を半分の値でおこないます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>以上</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>では上のバトルフィールドに配置しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>初期配置はこうです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エネミーのデータって公開するんだっけ……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>しなさそうだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>戦闘についてはガーデンオーダーとほぼ同じなんで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>特に説明しなくても大丈夫ですかね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>がんばる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>まあ何とかなるでしょう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃ戦闘ルールP204</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ほいさっさ～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まずはセットアッププロセス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>P208</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>キャラクターの登場と未行動への移行はカットして</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>先生値の決定</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>1d10+行動値を各キャラクター振って下さい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これAKの値なんだっけ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>それともPの値？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>1d10+8    AceKillerGene : (1D10+8) → 10[10]+8 → 18</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AKのもPのも</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>意識体はいらんのよな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>出来ることあんまりないけど</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>1d10+19 先制値    AceKillerGene : (1D10+19) → 10[10]+19 → 29</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>装備で行動値変動してるから気をつけて！</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>1d10+9    AceKillerGene : (1D10+9) → 10[10]+9 → 19</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>めちゃすばやい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>1d10+5    AceKillerGene : (1D10+5) → 5[5]+5 → 10</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>1d10+9-5 先制値判定    AceKillerGene : (1D10+9-5) → 1[1]+9-5 → 5</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d10+11    AceKillerGene : (1D10+11) → 1[1]+11 → 12</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>1d10+12-1 先制値判定    AceKillerGene : (1D10+12-1) → 5[5]+12-1 → 16</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>こいつは本当にニンジャなのだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>小太刀の使い手なだけで別にニンジャではない</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>みさおー８だ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>猫はー７</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>イニシアチブ値にいれて</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>なおしました</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃではつぎ特技やスキル・アイテムの使用</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>タイミングがセットアップのスキルとかあればどうぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>こっちはあります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>なし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>なし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ないかも</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>なんかあるっけなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>《スナッフショット》コストなしセットアッププロセス。シーンに登場している選択したキャラクターすべてを対象とする（意識体も対象にできる）このエネミーの（観察）と対象の（威圧）で判定を行う。勝利した場合、対象に[DOT:重症1]を与える。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>画面越しに重症を食らえーーー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>ないな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まずはPCから処理しようか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>威圧で対抗してください</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>対エースなんで半分の値になります</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>AK98 [威圧判定]    AceKillerGene : D100<=98@19 → 6 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK100    AceKillerGene : D100<=100@20 → 57 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>あ、半ぶんか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK21    AceKillerGene : D100<=21@4 → 82 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まあ成功だからいいよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>むりやで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>口車くんはDOT:重症1ね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK21 威圧(半分)    AceKillerGene : D100<=21@4 → 32 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ケイくんにもあげる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>つぎはAKたち</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>こっちは半分にならないです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK30    AceKillerGene : D100<=30@6 → 11 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK42 威圧    AceKillerGene : D100<=42@8 → 60 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>AK30    AceKillerGene : D100<=30@6 → 73 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>失敗した人にはDOT:重症1を</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>これでセットアップは終了</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>つぎはメインプロセス</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>島澄ちゃんからか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>えっと……D-3にいる人全員に《フラッシュファイア》</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK100    AceKillerGene : D100<=100@20 → 88 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>回避どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>何で皆固まっているのだろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>シナリオ製作者に聞いて</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK70 [回避判定]    AceKillerGene : D100<=70@14 → 89 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK35 回避     AceKillerGene : D100<=35@7 → 37 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>うそやん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK30 回避    AceKillerGene : D100<=30@6 → 53 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK70 回避判定(回避)    AceKillerGene : D100<=70@14 → 94 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ついてないなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ふるわないね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>攻撃力は1D10+12の灼熱です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>1d10+12    AceKillerGene : (1D10+12) → 3[3]+12 → 15</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やっぱデータが多いから管理が大変だわ、このゲーム</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>だねえ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>-4して、11点もらいます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>灼熱属性の防御だけ引いてDCBRyyどうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>DCBR11    AceKillerGene : 負傷表    灼熱[11] → 軽傷３／放心 ｜ 恐怖 …… 燃え上がる炎に恐怖を感じ、身体がすくんで動きが止まる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あと[放心]のデバフが追加でついてくる</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ういうい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>DCBR13    AceKillerGene : 負傷表    灼熱[13] → 軽傷３／放心 ｜ 恐怖 …… 燃え上がる炎に恐怖を感じ、身体がすくんで動きが止まる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>コストは疲労３</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>DCBR15    AceKillerGene : 負傷表    灼熱[15] → 軽傷３／ＤＯＴ    軽傷1 ｜ 発火 …… 衣服や身体の一部に火が燃え移る。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>軽傷8 -> 5</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ボスのイニシアチブ表はダメージ分を足していくことにしよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>島澄さん終わり！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>うーん、達成値1/2はいたいなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次は口車くん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>DCBR11    AceKillerGene : 負傷表    灼熱[11] → 軽傷３／放心 ｜ 恐怖 …… 燃え上がる炎に恐怖を感じ、身体がすくんで動きが止まる。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ふむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>これけっこう良いダメージ与えてるけど、囲んでボコられると思うとこわい</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>出来る事って声援ぐらいだよなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>多勢に無勢だよね実際</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ふくろだたきにされるう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>とりあえず下がるぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>降参してもいいんだよ？（心の声）</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>で巴に声援を送る</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まだ２ターン目までの行動は書いてあるから……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK70 声援    AceKillerGene : D100<=70@14 → 40 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>やったぜ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>「巴！君に決めた！！」</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>2d10    AceKillerGene : (2D10) → 11[1,10] → 11</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>この出目の差よ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あと３点あればなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>マックスだったのに</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次の人でいいかな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ＧＭが1ｄ10許可くれたらいけるぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あげない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>キレッキレの動きで声援を送っても？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ネタが重複してる、減点</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>次の人どうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>んじゃあ、キョウカに声援</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>実況楽しみ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK110 声援判定(スーパーハッカー、コスト疲労2)    AceKillerGene : D100<=110@22 → 21 → クリティカル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>やるやん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>スーパーハッカーすごい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>1d10+1d10+5 声援効果(クリティカル、スーパーハッカー)    AceKillerGene : (1D10+1D10+5) → 7[7]+4[4]+5 → 16</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>計算合ってる？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あってる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>限界突破や……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>「信じてるぞ、キョウカ！」とインカム越しに、声援終わり。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>巴ちゃんのばん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>疲労3->1</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>Pのメンタルが</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>攻撃しよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>移動して紅バチを使用</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK100 攻撃    AceKillerGene : D100<=100@20 → 96 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>やめないか！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 63 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あたるー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>当たったあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d5+19+10    AceKillerGene : (1D5+19+10) → 3[3]+19+10 → 32</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>32の衝撃で</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そういえば変な武器もってたな！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>衝撃は得意だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM23    AceKillerGene : 負傷表    衝撃[23] → 重傷1／スロウ    −5 ｜ 脚部骨折 …… 攻撃が足に命中し、骨折する。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ボキ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>何だと</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>いたそう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>武器変えた方がいいか</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ダメージの+10ってどっからでてきたんだ？</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>紅バチの効果</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>なるほど、スキルか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ぬ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そのスキルは+1d10だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>+10ではない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>本当だ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>1d10    AceKillerGene : (1D10) → 2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>8へった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM15    AceKillerGene : 負傷表    衝撃[15] → 軽傷３／ＤＯＴ    疲労３ ｜ ボディーブロー …… 腹部に直撃。痛みが継続し、体力を奪う。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>部位狙い適応できるから、1個あげとこ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>そうか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>部位習い覚えてたな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>上げるぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあ一個上の表</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM17    AceKillerGene : 負傷表    衝撃[17] → 軽傷４／スタン ｜ 痛打 …… 胴部や脚部などに打撃を受ける。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スタンかぁ……もったいないな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次の方どうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>栄次郎にグレネード打ちます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>MISAOだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>グレネードランチャーのポンッて飛び出したやつ直撃するだけで頭蓋骨陥没するらしいですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>グレネードの対象指定ってイマイチいみわかんないよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>こわいね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>S+だから</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>スクエアにいるみなさん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK100 [銃器判定]    AceKillerGene : D100<=100@20 → 77 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>対象指定スキルがあった気がする、この娘</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>精密爆破で選べるから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>実はとんでもない才能なのではないだろうか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>チートや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 44 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>回避できず</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>1d5+18 [グレネードランチャー]衝撃    AceKillerGene : (1D5+18) → 2[2]+18 → 20</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>衝撃はとくいだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>さっき防御したからばれてるけど衝撃防御９です</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>その場合のダメージ表</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCBL11    AceKillerGene : 負傷表    銃弾[11] → 軽傷４／スロウ    −３ ｜ 胴部負傷 …… 胴部に銃弾をくらう。痛みで動きが鈍くなる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>部位狙いとかスキルとか使うならどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>うーん、しょぼいなあ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>スタンはもうついてるから、何もないです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>戦闘中に武器の変更ってできる？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>スタンショットはスタンついてる相手には別効果ですよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>おお、そうなんだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>軽傷３＋か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>グレートソードは他の武器を装備不可だから装備してないはずなので無理</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ほう、そういう効果だったか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>選んだの君だからな！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>まあ終わりです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なしか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあ軽傷４とスロウ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>お次の方</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>4D, 4Cと移動して、通常攻撃のアサルトライフルを島澄栄二郎へ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK100 命中判定(銃器+部位狙い)    AceKillerGene : D100<=100@20 → 95 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ストレートに痛い</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 9 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>やるやん。行動終了</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>大剣もグレポンも避けられないけどアサルトライフルは避けた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>最後の人</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>「(今のは、牽制……！)」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>スーパーバイザーはこのタイミングで使えるの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>声援ですよね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>使えますよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>成功率か</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いけんじゃないかな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>これはね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>これってどのぐらい継続するのかね？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>味方キャラクターの判定に割り込んでバフかける形になるので</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>他人の行動にあわせてつかうものですね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>失敗したタイミングとかでも使えそう？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>判定の前に宣言する感じですね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これスキル指定がないから疲労4もコストあるんだな、結構強いかも</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ここは待機しよう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>どんな判定でも＋２０％の底上げをする</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ではクリナップ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK40 抵抗力    AceKillerGene : D100<=40@8 → 75 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK50 抵抗力    AceKillerGene : D100<=50@10 → 9 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>抵抗力で判定をして成功すればDOTがきえます</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>きえなかったらダメージをうけます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>これは半分になるの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>京香絶好調かよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>重傷4->3, DOT継続</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>重傷5->4, DOT解消, 放心解消</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>これは別にならない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エースに対する判定ではないので</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>DOTはダメージ入ってから、解消判定かも。順番しっかり描いてあるわ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK70 抵抗    AceKillerGene : D100<=70@14 → 64 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ほんとだ、先に負傷受けてからか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 66 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>そして巴に幻惑する舌を使います</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>GOのとき、これミスってたんだなぁ、反省反省</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>口車の重症DOTと軽傷DOTってどうすればいいんだろう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK70    AceKillerGene : D100<=70@14 → 37 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>失敗したらどうなるんでしたっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>負傷はひとまとめになる感じだし抵抗力判定に成功したら一括で消えるんかなこれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>失敗したらDOTが継続する</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>YES</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>じゃなくて放心の効果</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあ口車くんは重症１点と軽傷１点</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>放心はターン終わるから勝手に回復する</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>幻惑する舌OK</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>終わったかな？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>２ターン目入りますぞーーー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ケイとキョウはOK</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>今のところは大丈夫そう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>kaeruは大丈夫かな</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>おｋ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>hoi</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>では２ターン目</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>なんか長期戦になりそう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ここで３−Gフラグのかずだけヤクザが登場</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>１……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>増援か！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>逃げられたのかな？</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@雑魚</div><div class='col-sm-10 serif'>ossu</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ではイニシアチブ判定です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>そうかぁ、退路から湧いてきたかぁ＾ｑ＾</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ってそこかよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>セットアップなし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>セットアップなし</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>なんて強そうな風貌なんだー</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>1d10+15-5 先制値判定    AceKillerGene : (1D10+15-5) → 1[1]+15-5 → 11</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>1d10+13-1 先制値判定    AceKillerGene : (1D10+13-1) → 4[4]+13-1 → 16</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>島澄君はスロウが-3ついてるから……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>こっちもセットないです</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>1d10+19-3 先制値    AceKillerGene : (1D10+19-3) → 9[9]+19-3 → 25</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>絶好調だぜ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>やべえ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>1d10+6    AceKillerGene : (1D10+6) → 6[6]+6 → 12</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>1d10-2 [行動値]    AceKillerGene : (1D10-2) → 6[6]-2 → 4</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d10+11    AceKillerGene : (1D10+11) → 5[5]+11 → 16</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@雑魚</div><div class='col-sm-10 serif'>これねー、思ったより準備大事だわー</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@雑魚</div><div class='col-sm-10 serif'>1d10+5    AceKillerGene : (1D10+5) → 5[5]+5 → 10</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>1d10 [行動値]    AceKillerGene : (1D10) → 7</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>イニシアチブ表は更新されたかな</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>《スナッフショット》！威圧で対抗してください。半分ね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK100    AceKillerGene : D100<=100@20 → 9 → クリティカル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>全員だっけ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>うん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あん？！クリティカルぅ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK15 威圧(半分)    AceKillerGene : D100<=15@3 → 9 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK42 威圧    AceKillerGene : D100<=42@8 → 14 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>目にうつるもの全てどころか目に写ってない意識体も全て</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>無駄クリ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ケイさんがグロ慣れしてきた……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>作戦タイムとか欲しかったら言ってね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ただ叩くのみ！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>失敗するとDOT重症です</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>AK49 [威圧判定]    AceKillerGene : D100<=49@9 → 46 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK30 [威圧]    AceKillerGene : D100<=30@6 → 49 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>9以下でないとなぁ！</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK21    AceKillerGene : D100<=21@4 → 73 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK30     AceKillerGene : D100<=30@6 → 30 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>前回の重症が残ってる人は重症が２にレベルアップするぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、そうか！？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ではメインフェイズ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>巴にパンチ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK100    AceKillerGene : D100<=100@20 → 57 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>対クリティカルだから命中しちゃうのか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>普通にパンチなのか</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK30 回避    AceKillerGene : D100<=30@6 → 21 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ケイは大丈夫じゃないかなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>パンチよけられた……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>悲しみ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次の人どうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>避けれるとはおもってなかった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>防御側もクリティカル出さないといけない。そのうえで、値が小さいなら勝ち</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>なんか自信ないダイスあったら言ってね。スーパーバイザーするから</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>疲労回復材1使用、終わり</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>疲労1 -> 4</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>P180にかいてあったか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ヒロポン</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>巴の番が飛ばされてるかも</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>「やっぱコレだぜぇ……」恍惚</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、ほんとだ、ごめんね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>おう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あぁ～キクキク</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>忘れてた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>キズナ減らすぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>紅バチで攻撃</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>疲労がポンッと飛ぶ薬</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>あ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>これって100％超えてたら２回攻撃できる？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>できるできる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>対象    S＋　対象S□以外の武器と</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>別エリアからの攻撃でなければ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>分割して撃てます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ならば鼓舞を使用して命中を30％アップ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>スーパーバイザーもくれ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>やだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>やる気か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まさかの拒否</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>はい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>これって判定いります？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>宣言だけで使える　ってかいてある</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>これで150％半分の75％で２回攻撃</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>じゃあ使います</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK75 攻撃    AceKillerGene : D100<=75@15 → 22 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>「巴くん！ガッツだぞ！」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>疲労ー4</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK75 攻撃    AceKillerGene : D100<=75@15 → 2 → クリティカル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいぞ＾～これ＾～</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なんかいたそうなんだけど大丈夫これ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 43 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>クリッター</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 4 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ぐおおお</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>こいや</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ふぁっ！？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これは高度な戦いですね……</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>一応両方あたってる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>クリティカルってなんだっけ？２倍？</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>防御無視か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>防御貫通</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>防御点無視</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>まず一回目</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>バイザーの価値よ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d5+19+1d10 グレートソード    AceKillerGene : (1D5+19+1D10) → 2[2]+19+4[4] → 25</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>２回目防御無視</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d5+19+1d10 グレートソード    AceKillerGene : (1D5+19+1D10) → 1[1]+19+7[7] → 27</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>１がみえますねえ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>1でー5だしなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM16    AceKillerGene : 負傷表    衝撃[16] → 軽傷３／ＤＯＴ    疲労３ ｜ ボディーブロー …… 腹部に直撃。痛みが継続し、体力を奪う。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>軽傷が振り切ったから重症だ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>つぎ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM27    AceKillerGene : 負傷表    衝撃[27] → 重傷1／マヒ、スタン ｜ 大転倒 …… 激しい衝撃によって、負傷すると共に大きく体勢を崩す。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>本命は２発目だ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ボディブローか……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>おもったより微妙</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>あ部位狙いも載せます</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>足早いからマヒスタンが全く意味ないっていうこれ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM29    AceKillerGene : 負傷表    衝撃[29] → 重傷２／放心 ｜ 脳震盪 …… 脳が大きく揺さぶられ、意識が飛びそうになる。</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>毎回部位狙いを忘れてしまう、一つ繰り上げで</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ほげー</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>重症2はいいね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>放心、これはいたい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あ、スタンは意味あるか、回避値に補正</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>繰り上がったんでスタンはどこかへいった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>放心はスタンの上位互換さ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>うむ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>でもスタンと放心が合わさると……痛くない？痛い？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>解脱できそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ああ、そっか重複するのかその二つ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ダメージ処理はおわり</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ケイくんさっきやったんで、口車君どうぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>応援かなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>きいやあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>いや雑魚を殴るか</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ところで応援って何で振るんです？</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>殴っていいのこいつ？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>いいよ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>魅力×５だよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ありがとう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>kaeruさん優しい！</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK103 当身     AceKillerGene : D100<=103@20 → 10 → クリティカル</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@雑魚</div><div class='col-sm-10 serif'>やめろー死人が出るぞ！</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>クリティカルかあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ようクリティカル出ますなぁ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@雑魚</div><div class='col-sm-10 serif'>AK30    AceKillerGene : D100<=30@6 → 20 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>出目いいですね</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@雑魚</div><div class='col-sm-10 serif'>(///)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>俺の組技って元々防御無視なんだけど、この場合クリティカルってどうなるの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>防御を無視する</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>相手との絆があがる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>それはクロスカウンターが発生したときだけです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>1d5+9    AceKillerGene : (1D5+9) → 2[2]+9 → 11</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>11の衝撃</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM11    AceKillerGene : 負傷表    衝撃[11] → 軽傷２、疲労２ ｜ 平衡感覚喪失 …… 衝撃で三半規管にダメージを受ける。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>声援は意思x5っぽいぞ(P202</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM10    AceKillerGene : 負傷表    衝撃[10] → 軽傷1／マヒ ｜ 転倒 …… 衝撃で転倒する。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>こっちだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>えっと……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>「エキストラは寝ててくださいねっと」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>死にました</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>弱すぎない？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>かわいそうに……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>もう二度と動くことはないでしょう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>名に恥じないキャラであった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>つぎKYOUKA</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>毛布を掛けてあげよう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>5Bに移動して、通常攻撃のアサルトライフルを島澄栄二郎へ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>「きっと死ぬほど疲れてたんでしょうね」</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK100 命中判定(銃器+部位狙い)    AceKillerGene : D100<=100@20 → 43 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 14 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あたらんなぁ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>終わり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>銃弾のほうが避けていく</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>MISAO！</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>グレネード栄次郎狙い</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK100 [銃器判定]    AceKillerGene : D100<=100@20 → 53 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 75 → 失敗</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>ぐわああ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>1d5+18 [グレネードランチャー]衝撃    AceKillerGene : (1D5+18) → 5[5]+18 → 23</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM14    AceKillerGene : 負傷表    衝撃[14] → 軽傷３／ＤＯＴ    疲労３ ｜ ボディーブロー …… 腹部に直撃。痛みが継続し、体力を奪う。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ボディーブローや！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>おもたすぎる一撃</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>さっきからボディばかり狙われてる</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>最後猫さん</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>これは後々効いてくるでしょうねぇ（解説風</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>やることないや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>すでに重症ゲージが殴られてますからね</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>応急手当が活躍しない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>じゃあクリナップ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そりゃ現場にいないからね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>戦場に居ない男</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あいつは帰ったよ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>後衛してる場合じゃないね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DOTダメージをどうぞ！そして抵抗力判定をどうぞ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK40 [抵抗力]    AceKillerGene : D100<=40@8 → 45 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK40 抵抗力    AceKillerGene : D100<=40@8 → 9 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK50 抵抗力    AceKillerGene : D100<=50@10 → 89 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK70     AceKillerGene : D100<=70@14 → 17 → 成功</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>AK70    AceKillerGene : D100<=70@14 → 72 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>重傷4->3, DOT解消</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>重傷4->3, DOT継続</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>このボス</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>妖怪２たりない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>全体DOTがダメージソースとかヤケクソなデータしてるなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>この大味感嫌いだぜ！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>処理が終わったら教えてください</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>自作すればよかったのに</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>毒で死んでいくポケモンの気持ちが分かる</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>おわりました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>んむ、データが多いから仕方ない</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>軽々しく次作とかいうんじゃあああああない</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>終わり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>セットアップ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>セットアップなし</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>セットアップなし</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>1d10+19 先制値    AceKillerGene : (1D10+19) → 8[8]+19 → 27</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>1d10+13-1 先制値判定    AceKillerGene : (1D10+13-1) → 4[4]+13-1 → 16</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>1d10+15-5 先制値判定    AceKillerGene : (1D10+15-5) → 10[10]+15-5 → 20</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>1d10-2 [行動値]    AceKillerGene : (1D10-2) → 5[5]-2 → 3</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>1d10 [行動値]    AceKillerGene : (1D10) → 2</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>1d10+6    AceKillerGene : (1D10+6) → 2[2]+6 → 8</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>《スナッフショット》こいつコストないんだぜええええ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>お、キョウカ走ったなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK100    AceKillerGene : D100<=100@20 → 79 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d10+11    AceKillerGene : (1D10+11) → 3[3]+11 → 14</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK30 [威圧]    AceKillerGene : D100<=30@6 → 71 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>AK98 [威圧判定]    AceKillerGene : D100<=98@19 → 53 → 成功</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK15 威圧(半分)    AceKillerGene : D100<=15@3 → 3 → クリティカル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK42 威圧    AceKillerGene : D100<=42@8 → 68 → 失敗</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>AK21    AceKillerGene : D100<=21@4 → 25 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ケイさんグロ耐性付きすぎじゃないですかねぇ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>重症３になった</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK30    AceKillerGene : D100<=30@6 → 52 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>確かに……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>戦場から来た男が画面外で死にそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>あれ？重複するんだっけDOT</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>しますよ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>負傷はどんどん重くなる</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>きっとケイはグロ動画を見るのが趣味だから</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>みさおが３です</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ああ……見逃してたわ。キョウカが2かなたぶん</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>もう負けそうにないしザルでいいや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>よくないけどいいや</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>えっと……チンピラが全滅した場合の行動</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>佐々木真紀を人質にして遠距離攻撃を行う</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>なんてひきょうなんだー</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>やっぱり人質にするんじゃないですかあああ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>巴に道具投げ！</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>AK100    AceKillerGene : D100<=100@20 → 53 → 成功</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>強い</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK30 回避    AceKillerGene : D100<=30@6 → 34 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>1d10+12 銃弾    AceKillerGene : (1D10+12) → 3[3]+12 → 15</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>９か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>そっすね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCBLです</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>DCBL9    AceKillerGene : 負傷表    銃弾[9] → 軽傷３ ｜ 腕部貫通 …… 銃弾が腕を貫く。痛みはあるが動作に支障はない。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>支障ないのか……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>あ足りないや</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>２しかないから１は重症かな</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>支障あった</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>えらいこっちゃあ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>腕の骨が折れた</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>＜イベント＞このあと島澄君は逃走を試みます。狙撃や部位狙いで阻むことが出来ます＜/イベント></div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>男性はいつになっても見栄を張りたい生き物なんです</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次の人どうぞ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>5Aに移動して、通常攻撃のアサルトライフルを島澄栄二郎へ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>巴は女の子だぞおおお</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>hai</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>AK100 命中判定(銃器+部位狙い)    AceKillerGene : D100<=100@20 → 74 → 成功</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK40    AceKillerGene : D100<=40@8 → 60 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>あたったったあああ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やっとあったかぁ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>次いつ当たるかわからないから、オドバースト(ダメージアップ)使います</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ひ</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>（やめて）</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>負傷表決定ステップで+10ね。致命傷はケイが受ける</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>了解</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>1d10+15 アサルトライフル(銃弾)    AceKillerGene : (1D10+15) → 4[4]+15 → 19</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>追加で……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>キズナMAXスキル「花雷」(コストKP4, 電撃付与, DOT:軽症2付与)</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>そういえばそういうのあったね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>やめちくり</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>結果、雷撃属性で19点。防御点ひいたのち、+10して、部位狙いで1個上げて</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>雷はああああ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>苦手でぇえす</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCEL26    AceKillerGene : 負傷表    電撃[26] → 重傷２／スタン、マヒ ｜ 大感電 …… 電流によって身体中がしびれ、動けなくなる。</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいんじゃなぁい？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>真紀ちゃん大丈夫かなあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>「あ！皆さん何も見てませんね！雷出るとか漫画じゃないんですから！」この世界だと内緒らしい</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>重傷3->2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>重症がうまったから致命傷に一個ふります</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@三上京香</div><div class='col-sm-10 serif'>KP-4</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>まだまだ落ちそうにないねぇ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>スタンと麻痺とDOT2か</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>次の人</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ケイ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>AK110 声援判定(スーパーハッカー、コスト疲労2)    AceKillerGene : D100<=110@22 → 7 → クリティカル</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ええ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>へっへ、むだおおすぎ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>1d10+1d10+5 声援効果(クリティカル、スーパーハッカー)    AceKillerGene : (1D10+1D10+5) → 3[3]+7[7]+5 → 15</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>絆レベル累計８くらいいってそう</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>50からスタックしないのもったいない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>終わり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まだまだ撃てますねぇ！！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>疲労4->2</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>大丈夫されるのも時間の問題……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>巴さん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ここで仕留めよう</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>移動して紅バチ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>きいやあ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>重傷減らしちゃってるけど、致命傷ー1の間違いだわ、ごめんね</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>鼓舞を使うぞ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>スーパーバイザーも可能ならほしい</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>しょうがないにゃあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>キャー猫さ～ん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>「すーばい」</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>パートナーを一切応援しない男</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>さっきと同じ２回攻撃</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>みさおグレちゃいます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK75 攻撃    AceKillerGene : D100<=75@15 → 3 → クリティカル</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>いいじゃん</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>AK75 攻撃    AceKillerGene : D100<=75@15 → 29 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>避けろってか</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AC20</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK20    AceKillerGene : D100<=20@4 → 46 → 失敗</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>すごい堅そう</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK20    AceKillerGene : D100<=20@4 → 21 → 失敗</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>フルプレート戦士みたいになってしまった</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>当たりますねぇ！！</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>さらに小戸バーストも載せるぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>どこ？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>小戸がバーストしそう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>北海道</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>まず１回目</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>福岡</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>大雨で壊滅したところに台風まで襲来してるのにバーストさせるなんて</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d5+19+1d10+10 グレートソード    AceKillerGene : (1D5+19+1D10+10) → 1[1]+19+1[1]+10 → 31</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ひどすぎない？</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ド外道の所業</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>防御無視ね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM31    AceKillerGene : 負傷表    衝撃[31] → 重傷２／放心 ｜ 脳震盪 …… 脳が大きく揺さぶられ、意識が飛びそうになる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>致命傷１点だ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>1が二個見えるような……</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>出目も酷い</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>1d5+19+1d10 グレートソード    AceKillerGene : (1D5+19+1D10) → 4[4]+19+9[9] → 32</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>防御無視分だと思えば(震え</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>バーストしないほうがつよい……？</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>コストは口車が払いますね</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM23    AceKillerGene : 負傷表    衝撃[23] → 重傷1／スロウ    −5 ｜ 脚部骨折 …… 攻撃が足に命中し、骨折する。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>致命傷が減るよー減る減る</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>両足折れたね</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>死亡ゲージいくつだー</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>まだ生きてます</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@常磐巴</div><div class='col-sm-10 serif'>骨折しすぎ、まだ骨残ってるの？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>エースも大変だなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>猫村さん</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>死ねない苦しみ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ヒビが入っても骨折だし、多少はね？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>猫は何もしない</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>スロウ入ったのは嬉しいなぁ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ニャーン</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>MISAO</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>この人素の行動値１９だから先手とらせる気がないんだとおもう</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>グレラン栄次郎プレゼント</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ひどくなぁい？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>AK100 [銃器判定]    AceKillerGene : D100<=100@20 → 65 → 成功</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>きなさい</div></div>
+            <div class='row enemy'><div class='col-sm-2 name'>evi@島澄栄二郎</div><div class='col-sm-10 serif'>AK20    AceKillerGene : D100<=20@4 → 90 → 失敗</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@相沢みさお</div><div class='col-sm-10 serif'>1d5+18 [グレネードランチャー]衝撃    AceKillerGene : (1D5+18) → 3[3]+18 → 21</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ひゅーい</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM12    AceKillerGene : 負傷表    衝撃[12] → 軽傷２、疲労２ ｜ 平衡感覚喪失 …… 衝撃で三半規管にダメージを受ける。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>致命傷ですねぇ！！</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ちくせう、逃がしたかぁ！？</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>ではクリナップ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DOT軽傷２があるので……</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>死亡した</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>やったぜ。</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>ふはは</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>ボディブローが効いたか</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>グレートソードでボディーブローされたり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>グレネードランチャーで三半規管をやられたり</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>脳震盪をおこしたりした結果</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>同情をしないぞ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>軽傷で死にました</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>囲んで叩くは実際ツヨイ</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>脳震盪はですねえ一見大丈夫に見えて実は後から死ぬんですねえ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>２点ってどんなんだろう</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM5    AceKillerGene : 負傷表    衝撃[5] → 軽傷1 ｜ 打撲 …… 攻撃を受けた箇所がどす黒く腫れ上がる。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM8    AceKillerGene : 負傷表    衝撃[8] → 軽傷1／マヒ ｜ 転倒 …… 衝撃で転倒する。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>DCIM12    AceKillerGene : 負傷表    衝撃[12] → 軽傷２、疲労２ ｜ 平衡感覚喪失 …… 衝撃で三半規管にダメージを受ける。</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>けっこう痛そうだ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>頭がぐちゃぐちゃになって死んだ</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>三半規管好きだなあ</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>君たちが成し遂げたのだ……</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@ケイ</div><div class='col-sm-10 serif'>「……やったか？」インカムごし</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>もうミンチだよ</div></div>
+            <div class='row naki'><div class='col-sm-2 name'>naki@PL</div><div class='col-sm-10 serif'>ササキマキはどうなったんだ？エンディングいく？</div></div>
+            <div class='row aneko'><div class='col-sm-2 name'>aneko@猫村勝男</div><div class='col-sm-10 serif'>「ふう……」</div></div>
+            <div class='row gm'><div class='col-sm-2 name'>evi@GM</div><div class='col-sm-10 serif'>なんで衝撃属性ばっかりなんだ！</div></div>
+            <div class='row kaeru'><div class='col-sm-2 name'>kaeru@口車之男</div><div class='col-sm-10 serif'>「ミッションコンプリートってね」</div></div>
+        </section>
+    </div>
+{% endblock %}

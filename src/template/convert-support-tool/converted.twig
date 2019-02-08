@@ -1,0 +1,5 @@
+{% if lines is empty %}
+    <pre id="converted">NO ENTRY</pre>
+{% else %}
+    <pre id="converted">{% for line in lines %}{{ line.name }}    {{ line.serif }}{% endfor %}</pre>
+{% endif %}

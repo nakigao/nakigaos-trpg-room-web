@@ -1,0 +1,782 @@
+{% extends 'layout-replay.twig' %}
+{#{% block title %}{% endblock %}#}
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/go-common.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/css/gm-naki.css">
+{% endblock %}
+{#{% block javascripts %}{% endblock %}#}
+{% block body %}
+    <div id="replay-body" class="container">
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>探索フェイズの代わり</h2>
+                    <p>普通にRPしてるやん？ミドルフェイズ突入です。とはいっても、情報探索フェイズになる予定だったので、大幅に割愛！</p>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">以下の情報がベインから提供されました。</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">シマを荒らしているやつら</p>
+                        どうやら秘密組織「HHH(トリプルエイチ)」の一組織らしい
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">「HHH(トリプルエイチ)」の一組織？</p>
+                        表向きは銀行を営んでいるのだが、その金庫にあるものはあやしげな取引をして稼いだものらしい。<br>
+                        しかもそれが、依頼元のマフィアの資金源から奪ったものなのだという。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">「痛い目」</p>
+                        銀行にある金庫から盗めるだけ盗んできてほしい<br>
+                        やつらの資金源を奪ってしまうんだ！<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">侵入経路</p>
+                        定期的に見張りが交代する時間がある。<br>
+                        そのスキをついて、裏口から入るといいだろう。<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">金庫のセキュリティ</p>
+                        金庫の鍵は、電子セキュリティがかかっている<br>
+                        セキュリティセンターは銀行の中にある<br>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">脱出経路</p>
+                        ベインが手配してくれたヘリコプターで屋上から脱出する
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">質問タイム!</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">通信端末ってみんな持ってるの？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">うん、もってるよ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">都合により偶然故障する</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">ジャミングされる</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">使われちゃ困るときに……ってことね</div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン1</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ほんで、セッションの流れとしては、みんなで銀行強盗してきてもらいたいんだけど……</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">もちろん夜にだよね？業務時間内は迷惑だからなあ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">なんて社会派のホクストン……昼でも夜でもいいよ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">特性能力で壁を壊して脱出とかできる？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">できるよ！判定は必要だけどね＞壁破壊</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">なるほど、じゃあいざとなったら方法はあるわけだな</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ある程度口プロレスしてくれていいよ、面白い発想だったら採用したい</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ここに<b>持ってないC4</b>が……</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">よし、氷の階段を作って屋上に侵入するぞ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">楽しそうな絵だね</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ただし<b>勾配</b></div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">つるん♪</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ズザー！ザリザリザリ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">※鳴り響くサイレン、止まらぬ血</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">スーツクリーニングしたばっかりなのに！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">GAME OVER</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">強化した肉体で壁も上れるし、金庫だって素手で開けちゃうもんね！</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">なお判定値は……</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ウルフひとりでよさそうだなあ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">じゃあ<b>外で体育座り</b>してよう</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">銀行の隣に建物はありますか？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">そうだな、ビルみたいなのがあることにしよう</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">建物間の距離はどのくらいです？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ターゲットの銀行は、屋上にヘリが止まれるくらい高くて大きいです。建物間の距離は、大きな道を挟んでいるので、車10台分くらいはなれてます</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">隣に建物なかったな……</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ないね……</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">アドリブだから許して……（メタ</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">計画破綻した</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>ゆるひてやぁ……</blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">あ、計画あるなら先に提案してくれ、せっかくだから積極的に採用したい。あと、購入判定とかも言ったら成功にするわ、どうせミドルでやったでしょう ってことで</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ここにハンググライダーがある(ちなみに持っていません</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">だめじゃないか</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">俺は自分の肉体しか使わないから必要ないな</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ダラスはウルフを一方的に使うだけなので問題ないですよ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">バディとはいったいなんだったのか……＾ｑ＾</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">やっぱり<b>(氷で)壁に階段</b>を作っていこう</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">意表をついて屋上に</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">ふむふむ……特性技能(発現)判定で成功したら階段作っていいよ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">金庫は何階なんだ？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">金庫は最上階付近にあります</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">成功値はどうなるの？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">判定基準とか実はないのね。だから、自分の判定値で成功したら作っていいよ。特に対抗はしません</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>
+                        何気にセッション中初めての判定タイム、何を考えて何やっていいのかわかんなくて焦った(笑<br>
+                        ちなみに特性能力で何ができて何ができないのか、明確な判断基準がないみたいです。判断基準みたいなものがあるといいんだけどなぁ……けど自由度が……さじ加減が難しいですね。<br>
+                        今回は、ノリ重視でいいかなと思って、裁定してます。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">氷の階段(発現)判定 -> DiceBot : (1D100<=90) → 90 → 成功</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">すごいね、ギリギリ成功だ。じゃあ、ホクストンが氷の階段を……どこまで作ったの？</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">最上階の窓ふきんまで</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">そこまで作りました＞ALL</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">というか時間はどうなったっけ？</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">現状の状況確定</p>
+                        時間は夜<br>
+                        ホクストンが氷で最上階の窓ふきんまで階段を作った
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">真昼にしたらあほだしなあ</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">これを昇るのに、ホクストン以外は＜運動＞で判定して成功してください。昇れないとちょっと時間がかかって、セキュリティに気が付かれる危険性が上がります</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ウルフは四足歩行だから登るの怖そうだ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">運動判定 -> DiceBot : (1D100<=36) → 89 → 失敗</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">じゃあ、ダラスはなんかつるつるしてうまく登れない！RPどうぞ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">じゃあ<b>頭から転落</b>します。ごろごろ、グキキ</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「（ダラスーーーーー！！）」心の中で叫ぶ</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>見事なフラグ回収、おいしいなぁ……</blockquote>
+                </div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">こういうときって能力使えるの？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">うん、使えるよ～。疲労ゲージのマスがいくつか埋まるけどね。ちなみに、疲労はフェイズ終了ごとに全回復する仕様なので、おそれずバンバンつかっていただきたい</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">フィジカルエンハンスで身体能力を強化！</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">フィジカルエンハンス発現判定 -> DiceBot : (1D100<=90) → 74 → 成功</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">運動判定 -> DiceBot : (1D100<=84) → 53 → 成功</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">俊敏な動きで階段をワイルドに上っていきます</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">では、ウルフはなんなく階段を上って合流したよ！遅れて、ダラスも合流しました！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「ウルフ、えらいぞ！！」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">「ふっ、たわいなし」</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">シャベッタァァ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif"><b>びっくりして数発撃ってしまった</b>けど問題ないな</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif"><b>問題しかないぞ</b></div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン2</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">んでは、窓から侵入した君たちの目の前には、重厚な金庫が鎮座していました！（超短縮</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">重厚な金庫</p>
+                        重厚な金庫には似つかわしくない小さなパスワード入力用の端末がついている
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">では開けます</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">そうはいかんぞ！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">簡単に開いたらつまらないぞ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">まさか……金庫のほうから開いてくれるというのか？</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ようこそいらっしゃいましたー　パカー</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>えぇ……（ドン引き</blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">(無理矢理の軌道修正)知恵を絞って、このパスワード入力用端末をなんとかしてください＞ALL</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">じゃあ交渉します、あるいは威圧します</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">RPどうぞ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">「<b>ひらけごま</b>」</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ぱかー</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">だめです＾ｑ＾</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ここでプレコグニション(SWの最狂魔法)してGMに「開け方教えて下さい」と聞くか。。。</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">だめです＾ｑ＾</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">よし、身体能力を強化して<b>金庫を破壊します</b></div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">「ダラス！ここは俺に任せちゃあくれないか？」</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">ウルフガンバ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">がんばれ！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">氷結使いだと、金庫に疲労を蓄積させて開けさせることしかできない……</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif"><b>毎朝味噌汁をかけて</b>錆びさせるか</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">これって普通に攻撃のダメージとかじゃあ壊れないの？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">扉の耐久値は特に設定ないです。つまりダメージだと破壊はできないです</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">了解。さっきのフィジカルエンハンスってまだかかってる？</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">かかってる判定でいいよー＞フィジカルエンハンス</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">これ、ウルフが先に壊れるパターンじゃ……</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">じゃあ扉に手をかけてこじ開けようとします</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">金庫の抵抗判定 -> DiceBot : (1D100) → 69</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">＜運動＞判定で69以下で成功でいいです</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">一応、なんとかしないといけないのは「金庫」じゃなくて「パスワード入力用端末」らしいが……</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>そう……そうなんだが……（涙</blockquote>
+                </div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">運動判定 -> DiceBot : (1D100) → 3 → 成功(<b>クリティカル</b>)</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">やるじゃない</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">GM「<b>ハンドルがもげました</b>」</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">(クリティカルってあんたぁ……)じゃあ、ウルフが頑張って開けたらグギギギギっといって金庫が開いちゃいました！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「ウルフよくやった、帰ったら骨付き肉をあげるぞ！！」</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">「ただし3回回ってワン！したらな」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">「A5の肉を頼むぜ」</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">A4の半分でいいのか</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>プリンタ用紙じゃない！！</blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「やっぱドックフードな」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">なんでペット扱いしてるんだ！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">え？オオカミでしょ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">コードネームがな</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">本名はドッグだよ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">本名はタイガーがいいな</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">科が違うぞ</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">犬じゃねえよ</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">ワンワン！</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">犬が猫に勝てると思ってるのか！！</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">犬扱いするとキレルって設定にしよう</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>脱線中なう＾ｑ＾</blockquote>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><span class="section-icon"></span>シーン3</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">金庫の中身</p>
+                        金庫の中にはうずたかくつまれた金塊や、新札がいくつもの束になっておいてある
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">あ、金塊を貰おう</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「やった、大金持ちだ！！」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">札束をもらおう</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>まるで食玩についてたオマケのラムネを思い出したかのように本筋に戻ってくれるPLの鑑</blockquote>
+                </div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">胸ポケットにいれたら　1回だけ守ってくれそう</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">「こいつはでかいシノギになりそうだな」</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">むしろしのぎの一部ですけど。みんな～アディ○スのスポーツバッグだぞ～つめこめ～</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">(なぜアディ○スなのだろう……)んでは、みんなが思い思いにブツを盗んでいると……</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        <p class="header">セキュリティアラーム</p>
+                        けたたましくサイレンが鳴った。<br>
+                        どうやらセキュリティに気が付かれたようだ。
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">よって、サイレンがウーウー言い始めます</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">「ここは<b>ウルフが囮</b>になる」</div>
+            </div>
+            <div class="row comment">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10 serif">
+                    <blockquote>バディ……？</blockquote>
+                </div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「やばい、ずらかすぞ！！」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">「ここにもう用はないしな」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">ワイルドに去りましょう</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">んでは、一番最初に動いたダラス君は……</div>
+            </div>
+            <div class="row system">
+                <div class="col-sm-2 name">system@INFO</div>
+                <div class="col-sm-10">
+                    <blockquote>
+                        ふと地響きに似た振動と音を感じる。<br>
+                        キミ達が神経を研ぎ澄ますと、それは金庫がある部屋の壁から感じることができた。<br>
+                        <br>
+                        ――KABOOOOOOM!!!<br>
+                        <br>
+                        耳をつんざく音と共に、大きな影が姿を現した！
+                    </blockquote>
+                </div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">先頭にいたダラスは全力で逃げます！サヨナラ！</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">逃げ道はその衝撃でふさがっちゃうんです＾＾</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif">呆然としました</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">戦闘かな</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">変身ポーズをとります</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">キャラ変わってんよー(※とあるSWセッションのキャラになってる)</div>
+            </div>
+            <div class="row evi">
+                <div class="col-sm-2 name">evi@ダラス</div>
+                <div class="col-sm-10 serif"><b>無敵に変身ベルトは故障</b>しました</div>
+            </div>
+            <div class="row aneko">
+                <div class="col-sm-2 name">aneko@ホクストン</div>
+                <div class="col-sm-10 serif">「どうやらやるしかなさそうだな……」</div>
+            </div>
+            <div class="row kaeru">
+                <div class="col-sm-2 name">kaeru@ウルフ</div>
+                <div class="col-sm-10 serif">「おもしれえ、退屈してたところだ」</div>
+            </div>
+            <div class="row gm">
+                <div class="col-sm-2 name">naki@GM</div>
+                <div class="col-sm-10 serif">クライマックスフェイズ突入のこと！</div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

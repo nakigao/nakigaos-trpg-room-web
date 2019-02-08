@@ -1,0 +1,20 @@
+{% set requestUri = global.getRequest.getRequestUri() %}
+{% extends 'layout-1column.twig' %}
+{% block stylesheet %}
+    {#<link href="{{ base_url }}/assets/css/xxxxx.css" rel="stylesheet">#}
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ base_url }}/assets/js/mustache.min.js"></script>
+    <script src="{{ base_url }}/assets/js/nvnv.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">{{ page_title }}</h1>
+        {% if requestUri matches '(/pc/)' %}{% include 'nvnv/card-edit-pc.twig' %}{% endif %}
+        {% if requestUri matches '(/introduction/)' %}{% include 'nvnv/card-edit-introduction.twig' %}{% endif %}
+        {% if requestUri matches '(/scene/)' %}{% include 'nvnv/card-edit-scene.twig' %}{% endif %}
+        {% if requestUri matches '(/light/)' %}{% include 'nvnv/card-edit-light.twig' %}{% endif %}
+        {% if requestUri matches '(/darkness/)' %}{% include 'nvnv/card-edit-darkness.twig' %}{% endif %}
+        {% if requestUri matches '(/climax/)' %}{% include 'nvnv/card-edit-climax.twig' %}{% endif %}
+    </div>
+{% endblock %}
